@@ -14,9 +14,30 @@ import {
   Copy
 } from "lucide-react";
 import pcHeroImg from "@assets/generated_images/pc_remote_support_hero_background_with_desk_setup.png";
+import remoteControlImg from "@assets/generated_images/remote_control_mouse_and_keyboard_icon.png";
+import fileTransferImg from "@assets/generated_images/fast_file_transfer_progress_icon.png";
+import multiSessionImg from "@assets/generated_images/multiple_monitor_session_management_icon.png";
 
 export default function Product() {
   const { openModal } = useModal();
+
+  const specialFeatures = [
+    {
+      title: "편리한 원격제어",
+      desc: "마우스와 키보드를 제어하여 고객의 pc를 직접 제어할 수 있습니다. 복잡한 문제도 상담사가 직접 해결할 수 있어 고객 만족도가 높습니다.",
+      image: remoteControlImg
+    },
+    {
+      title: "빠른 파일 전송",
+      desc: "드래그 앤 드롭 기능으로 고객의 컴퓨터에 간편하게 파일을 전송할 수 있습니다. 패치파일 , 매뉴얼 , 설치 프로그램 등을 즉시 공유할 수 있습니다.",
+      image: fileTransferImg
+    },
+    {
+      title: "멀티세션 관리",
+      desc: "여러 고객을 동시에 지원하면서 세션 간 빠르게 전환이 가능합니다. 효율적인 상담 운영을 통해 생산성을 높이세요",
+      image: multiSessionImg
+    }
+  ];
 
   const features = [
     {
@@ -124,44 +145,33 @@ export default function Product() {
       <section className="py-24 bg-slate-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900">압도적인 전문 기능</h2>
-            <p className="text-slate-500 text-lg max-w-2xl mx-auto">전문 기술 지원에 특화된 다양한 도구들을 경험해보세요.</p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900">[Desktop Edition만의 특별한 기능]</h2>
+            <p className="text-slate-500 text-lg max-w-2xl mx-auto">PC 원격지원을 더욱 강력하게 만드는 전문 기능들</p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all">
-              <div className="h-48 bg-slate-200 flex items-center justify-center">
-                 <MousePointer2 size={64} className="text-slate-400 opacity-20" />
+            {specialFeatures.map((feature, i) => (
+              <div key={i} className="group relative aspect-square rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-2xl transition-all cursor-pointer bg-white">
+                <img 
+                  src={feature.image} 
+                  alt={feature.title} 
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-slate-900/0 group-hover:bg-slate-900/80 transition-all duration-300 flex flex-col justify-center items-center p-8 text-center opacity-0 group-hover:opacity-100">
+                  <h3 className="text-2xl font-bold mb-4 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                    {feature.title}
+                  </h3>
+                  <p className="text-white/90 text-sm leading-relaxed transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">
+                    {feature.desc}
+                  </p>
+                </div>
+                <div className="absolute bottom-6 left-6 right-6 group-hover:hidden transition-all">
+                  <div className="bg-white/90 backdrop-blur-sm px-4 py-2 rounded-lg inline-block border border-slate-100">
+                    <span className="font-bold text-slate-900">{feature.title}</span>
+                  </div>
+                </div>
               </div>
-              <div className="p-8">
-                <h3 className="text-xl font-bold mb-3">고속 원격 제어</h3>
-                <p className="text-slate-500 text-sm leading-relaxed mb-4">
-                  자체 개발 코덱으로 끊김 없는 고해상도 원격 제어가 가능합니다. 실제 앞에 앉아있는 것 같은 빠른 반응 속도를 보장합니다.
-                </p>
-              </div>
-            </div>
-            <div className="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all">
-              <div className="h-48 bg-slate-200 flex items-center justify-center">
-                 <Copy size={64} className="text-slate-400 opacity-20" />
-              </div>
-              <div className="p-8">
-                <h3 className="text-xl font-bold mb-3">파일 및 클립보드 공유</h3>
-                <p className="text-slate-500 text-sm leading-relaxed mb-4">
-                  패치 파일이나 가이드를 즉각 전송하고, 텍스트나 복사한 내용을 서로 공유하여 상담 시간을 획기적으로 단축합니다.
-                </p>
-              </div>
-            </div>
-            <div className="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all">
-              <div className="h-48 bg-slate-200 flex items-center justify-center">
-                 <Users size={64} className="text-slate-400 opacity-20" />
-              </div>
-              <div className="p-8">
-                <h3 className="text-xl font-bold mb-3">협업 지원(다중 접속)</h3>
-                <p className="text-slate-500 text-sm leading-relaxed mb-4">
-                  고난도 이슈 발생 시 다른 상담원이 세션에 참여하여 함께 화면을 보며 문제를 해결할 수 있는 협업 환경을 지원합니다.
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
