@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Download as DownloadIcon, Monitor, Apple } from "lucide-react";
+import { Download as DownloadIcon, Monitor, Apple, Smartphone, Globe } from "lucide-react";
 import downloadHeroImg from "@assets/generated_images/modern_abstract_blue_gradient_background_for_download_page_hero_section.png";
 
 export default function Download() {
