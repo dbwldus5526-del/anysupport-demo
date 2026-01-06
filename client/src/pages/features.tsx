@@ -140,20 +140,10 @@ export default function Features() {
                     </div>
                     <div className="text-left">
                       <h2 className="text-2xl font-black text-slate-900">{group.title}</h2>
-                      <p className="text-slate-500 font-bold text-sm mt-1">{group.summary}</p>
+                      <p className="text-slate-500 font-bold text-sm mt-1 whitespace-nowrap">{group.summary}</p>
                     </div>
                   </div>
                   
-                  <div className="flex flex-wrap gap-x-6 gap-y-2 md:justify-end md:items-center flex-1">
-                    {group.items.slice(0, 3).map((item, i) => (
-                      <div key={i} className="flex items-center gap-2">
-                        <CheckCircle2 className="text-primary/60" size={16} />
-                        <span className="font-bold text-slate-700 text-sm">{item.title}</span>
-                      </div>
-                    ))}
-                    <p className="text-primary/40 text-xs font-black italic">... 외 {group.items.length - 3}개 기능</p>
-                  </div>
-
                   <div className="md:pl-6 md:border-l border-slate-200 flex items-center gap-3 min-w-[140px] justify-end">
                     <span className="font-black text-primary text-sm whitespace-nowrap">
                       {expandedCategory === idx ? '상세 접기' : '자세히 보기'}
