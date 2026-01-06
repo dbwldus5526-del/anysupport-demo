@@ -3,7 +3,7 @@ import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronRight, ChevronDown } from "lucide-react";
 import { useModal } from "@/context/ModalContext";
-import logo from "@assets/애니서포트--new-log_1767678194580.png";
+import logo from "@assets/애니서포트--new-log_1767681624073.png";
 import { cn } from "@/lib/utils";
 import {
   NavigationMenu,

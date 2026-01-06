@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import logo from "@assets/generated_images/minimalist_tech_logo_for_anysupport.png";
+import logo from "@assets/애니서포트--new-log_1767681624073.png";
 
 export function Footer() {
   return (
@@ -7,9 +7,8 @@ export function Footer() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12 mb-16">
           <div className="col-span-2 lg:col-span-2">
-            <Link href="/" className="flex items-center gap-2 mb-6">
-              <img src={logo} alt="AnySupport" className="w-8 h-8 opacity-80" />
-              <span className="font-bold text-xl tracking-tighter opacity-80">AnySupport</span>
+            <Link href="/" className="flex items-center gap-2 mb-6 group">
+              <img src={logo} alt="AnySupport" className="h-8 md:h-10 w-auto object-contain" />
             </Link>
             <p className="text-slate-500 text-sm leading-relaxed max-w-sm">
               AnySupport는 기업의 디지털 전환을 지원하는 최고의 원격 기술지원 솔루션입니다. 
