@@ -400,11 +400,10 @@ export default function Pricing() {
           </div>
         </div>
       </section>
-
       {/* Trust Section */}
       <section className="py-24 bg-slate-900 text-white">
         <div className="container mx-auto px-4 md:px-6 text-center">
-          <h2 className="md:text-5xl mb-16 text-[36px] font-bold">이미 많은 글로벌 기업이 함께하고 있습니다</h2>
+          <h2 className="md:text-5xl mb-16 text-[42px] font-medium">이미 많은 글로벌 기업이 함께하고 있습니다</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-12 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
             {/* Logos could go here */}
             {['SAMSUNG', 'LG', 'HYUNDAI', 'SK', 'NAVER', 'KAKAO'].map((logo, i) => (
