@@ -37,34 +37,34 @@ export default function Download() {
 
             <div className="grid md:grid-cols-2 gap-8">
               {/* Windows Card */}
-              <div className="flex flex-col p-10 rounded-[2rem] bg-white border border-slate-100 shadow-xl shadow-slate-200/50 transition-all hover:-translate-y-1 hover:shadow-2xl">
-                <div className="flex items-start gap-6 mb-10">
-                  <div className="w-16 h-16 rounded-2xl bg-[#0078D4] flex items-center justify-center text-white shrink-0 shadow-lg shadow-[#0078D4]/20">
-                    <Monitor size={36} />
+              <div className="flex flex-col p-8 rounded-xl bg-white border border-slate-200 shadow-sm transition-all hover:shadow-md">
+                <div className="flex items-center gap-5 mb-8">
+                  <div className="w-14 h-14 rounded-lg bg-[#004481] flex items-center justify-center text-white shrink-0">
+                    <Monitor size={28} />
                   </div>
-                  <div className="pt-1">
-                    <h4 className="text-xl font-black text-slate-900 mb-2">Windows 상담사용 프로그램</h4>
-                    <p className="text-slate-400 text-sm font-bold tracking-tight">Windows 7 / 8 / 10 / 11 지원</p>
+                  <div>
+                    <h4 className="text-lg font-bold text-slate-900">Windows 상담사용 프로그램</h4>
+                    <p className="text-slate-400 text-xs font-medium">Windows 7 / 8 / 10 / 11 지원</p>
                   </div>
                 </div>
-                <Button size="lg" className="w-full h-14 rounded-2xl bg-slate-900 hover:bg-slate-800 text-white font-black text-lg gap-2">
-                  <DownloadIcon size={20} /> 다운로드
+                <Button size="lg" className="w-full h-12 rounded-lg bg-[#002868] hover:bg-[#001d4d] text-white font-bold text-sm gap-2">
+                  <DownloadIcon size={16} /> 다운로드
                 </Button>
               </div>
 
               {/* macOS Card */}
-              <div className="flex flex-col p-10 rounded-[2rem] bg-white border border-slate-100 shadow-xl shadow-slate-200/50 transition-all hover:-translate-y-1 hover:shadow-2xl">
-                <div className="flex items-start gap-6 mb-10">
-                  <div className="w-16 h-16 rounded-2xl bg-slate-900 flex items-center justify-center text-white shrink-0 shadow-lg shadow-slate-900/20">
-                    <Apple size={36} />
+              <div className="flex flex-col p-8 rounded-xl bg-white border border-slate-200 shadow-sm transition-all hover:shadow-md">
+                <div className="flex items-center gap-5 mb-8">
+                  <div className="w-14 h-14 rounded-lg bg-[#004481] flex items-center justify-center text-white shrink-0">
+                    <Apple size={28} />
                   </div>
-                  <div className="pt-1">
-                    <h4 className="text-xl font-black text-slate-900 mb-2">macOS 상담사용 프로그램</h4>
-                    <p className="text-slate-400 text-sm font-bold tracking-tight">macOS 10.12 이상 지원</p>
+                  <div>
+                    <h4 className="text-lg font-bold text-slate-900">macOS 상담사용 프로그램</h4>
+                    <p className="text-slate-400 text-xs font-medium">macOS 10.12 이상 지원</p>
                   </div>
                 </div>
-                <Button size="lg" className="w-full h-14 rounded-2xl bg-slate-900 hover:bg-slate-800 text-white font-black text-lg gap-2">
-                  <DownloadIcon size={20} /> 다운로드
+                <Button size="lg" className="w-full h-12 rounded-lg bg-[#002868] hover:bg-[#001d4d] text-white font-bold text-sm gap-2">
+                  <DownloadIcon size={16} /> 다운로드
                 </Button>
               </div>
             </div>
