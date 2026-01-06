@@ -173,6 +173,82 @@ export default function Product() {
           </div>
         </div>
       </section>
+      {/* Connection Process Section */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900">원격지원 연결 프로세스</h2>
+            <p className="text-slate-500 text-lg max-w-2xl mx-auto">간편하고 안전한 4단계 연결 과정을 통해 즉각적인 지원을 시작하세요.</p>
+          </div>
+
+          <div className="relative">
+            {/* Connection Line (Desktop) */}
+            <div className="hidden lg:block absolute top-1/2 left-0 w-full h-0.5 bg-slate-100 -translate-y-1/2 z-0" />
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
+              {[
+                {
+                  step: "STEP 01",
+                  title: "원격지원 요청",
+                  icon: <ArrowRight className="text-primary" size={32} />,
+                  desc: "상담원이 고객에게 원격지원 요청을 전달합니다. 이메일, 문자, 안내 페이지 등 다양한 방식으로 연결이 가능합니다.",
+                  points: ["고객 주도 접속 (보안)", "사전 인증 기반 연결"]
+                },
+                {
+                  step: "STEP 02",
+                  title: "고객 인증 및 동의",
+                  icon: <ShieldCheck className="text-primary" size={32} />,
+                  desc: "고객은 접속 코드 입력 또는 버튼 클릭으로 원격지원에 동의하고 연결을 시작합니다.",
+                  points: ["무단 접속 방지", "기업 보안 정책 준수"]
+                },
+                {
+                  step: "STEP 03",
+                  title: "실시간 원격지원 진행",
+                  icon: <Monitor className="text-primary" size={32} />,
+                  desc: "화면 공유, 원격 제어, 음성/영상 연결을 통해 실시간으로 문제를 해결합니다.",
+                  types: ["PC 원격 제어", "모바일 화면 가이드", "영상 기반 상담"]
+                },
+                {
+                  step: "STEP 04",
+                  title: "지원 종료 및 이력 관리",
+                  icon: <FileText className="text-primary" size={32} />,
+                  desc: "원격지원 종료 후 접속 이력과 상담 기록이 자동으로 저장됩니다.",
+                  points: ["상담 이력 관리", "운영 및 품질 분석 가능"]
+                }
+              ].map((item, i) => (
+                <div key={i} className="flex flex-col h-full bg-white">
+                  <div className="mb-6 relative">
+                    <div className="w-16 h-16 rounded-2xl bg-primary/5 flex items-center justify-center border border-primary/10 relative z-10 bg-white">
+                      {item.icon}
+                    </div>
+                    <div className="absolute -top-3 -right-3 text-slate-200 font-black text-4xl opacity-50 z-0">
+                      {i + 1}
+                    </div>
+                  </div>
+                  
+                  <div className="flex-1">
+                    <span className="text-primary font-bold text-sm tracking-tighter mb-2 block">{item.step}</span>
+                    <h3 className="text-xl font-bold mb-4 text-slate-900">{item.title}</h3>
+                    <p className="text-slate-500 text-sm leading-relaxed mb-6">
+                      {item.desc}
+                    </p>
+                    
+                    <div className="space-y-2">
+                      {(item.points || item.types).map((point, idx) => (
+                        <div key={idx} className="flex items-center gap-2 text-xs font-bold text-slate-700 bg-slate-50 px-3 py-2 rounded-lg border border-slate-100">
+                          <CheckCircle2 size={14} className="text-primary" />
+                          {point}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-primary text-white">
         <div className="container mx-auto px-4 md:px-6 text-center">
