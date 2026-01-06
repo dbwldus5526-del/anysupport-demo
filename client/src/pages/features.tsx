@@ -127,15 +127,15 @@ export default function Features() {
         </div>
         
         <div className="container mx-auto px-4 md:px-6">
-          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          <div className="flex flex-col gap-6 max-w-5xl mx-auto">
             {featureGroups.map((group, idx) => (
               <div key={idx} className="flex flex-col">
                 <div 
                   onClick={() => toggleCategory(idx)}
-                  className={`p-10 rounded-[2.5rem] bg-slate-50 border transition-all duration-500 flex flex-col h-full cursor-pointer hover:shadow-xl ${expandedCategory === idx ? 'border-primary shadow-lg ring-1 ring-primary/20' : 'border-slate-100'}`}
+                  className={`p-8 md:p-10 rounded-[2.5rem] bg-slate-50 border transition-all duration-500 flex flex-col md:flex-row md:items-center gap-8 cursor-pointer hover:shadow-xl ${expandedCategory === idx ? 'border-primary shadow-lg ring-1 ring-primary/20' : 'border-slate-100'}`}
                 >
-                  <div className="flex items-center gap-5 mb-6">
-                    <div className={`w-16 h-16 rounded-2xl flex items-center justify-center shadow-lg transition-all duration-300 ${expandedCategory === idx ? 'bg-primary text-white scale-110 shadow-primary/30' : 'bg-white text-primary shadow-slate-200'}`}>
+                  <div className="flex items-center gap-6 flex-1">
+                    <div className={`w-16 h-16 rounded-2xl flex items-center justify-center shadow-lg transition-all duration-300 flex-shrink-0 ${expandedCategory === idx ? 'bg-primary text-white scale-110 shadow-primary/30' : 'bg-white text-primary shadow-slate-200'}`}>
                       <group.icon size={32} />
                     </div>
                     <div className="text-left">
@@ -144,38 +144,44 @@ export default function Features() {
                     </div>
                   </div>
                   
-                  <div className="space-y-3 mb-8 flex-grow text-left">
+                  <div className="flex flex-wrap gap-x-6 gap-y-2 md:justify-end md:items-center flex-1">
                     {group.items.slice(0, 3).map((item, i) => (
-                      <div key={i} className="flex items-center gap-3">
-                        <CheckCircle2 className="text-primary/60" size={18} />
-                        <span className="font-bold text-slate-700">{item.title}</span>
+                      <div key={i} className="flex items-center gap-2">
+                        <CheckCircle2 className="text-primary/60" size={16} />
+                        <span className="font-bold text-slate-700 text-sm">{item.title}</span>
                       </div>
                     ))}
-                    <p className="text-primary/40 text-sm font-black pl-7 italic">... 외 {group.items.length - 3}개 기능</p>
+                    <p className="text-primary/40 text-xs font-black italic">... 외 {group.items.length - 3}개 기능</p>
                   </div>
 
-                  <div className="pt-6 border-t border-slate-200 flex justify-between items-center">
-                    <span className="font-black text-primary text-lg">
-                      {expandedCategory === idx ? '상세 내용 접기' : '자세히 보기'}
+                  <div className="md:pl-6 md:border-l border-slate-200 flex items-center gap-3 min-w-[140px] justify-end">
+                    <span className="font-black text-primary text-sm whitespace-nowrap">
+                      {expandedCategory === idx ? '상세 접기' : '자세히 보기'}
                     </span>
-                    {expandedCategory === idx ? <ChevronUp className="text-primary" /> : <ChevronDown className="text-primary" />}
+                    {expandedCategory === idx ? <ChevronUp className="text-primary" size={20} /> : <ChevronDown className="text-primary" size={20} />}
                   </div>
                 </div>
 
                 {/* Expanded Content (Accordion) */}
-                <div className={`overflow-hidden transition-all duration-500 ease-in-out ${expandedCategory === idx ? 'max-h-[1000px] opacity-100 mt-6' : 'max-h-0 opacity-0'}`}>
-                  <div className="bg-slate-900 rounded-[2rem] p-10 text-white shadow-2xl">
-                    <h3 className="text-2xl font-bold mb-8 border-b border-white/10 pb-4 flex items-center gap-3">
-                      <group.icon className="text-primary" size={24} /> {group.title} 상세 리스트
-                    </h3>
-                    <div className="grid gap-6">
+                <div className={`overflow-hidden transition-all duration-500 ease-in-out ${expandedCategory === idx ? 'max-h-[1000px] opacity-100 mt-4' : 'max-h-0 opacity-0'}`}>
+                  <div className="bg-slate-900 rounded-[2.5rem] p-8 md:p-12 text-white shadow-2xl mx-2">
+                    <div className="flex items-center justify-between mb-10 border-b border-white/10 pb-6">
+                      <h3 className="text-2xl font-bold flex items-center gap-4">
+                        <div className="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center">
+                          <group.icon className="text-primary" size={24} />
+                        </div>
+                        {group.title} 전체 기능
+                      </h3>
+                      <div className="hidden md:block h-[1px] flex-1 mx-8 bg-gradient-to-r from-white/10 to-transparent" />
+                    </div>
+                    <div className="grid md:grid-cols-2 gap-6">
                       {group.items.map((item, i) => (
-                        <div key={i} className="flex gap-5 p-6 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors group/item">
-                          <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center flex-shrink-0 group-hover/item:bg-primary transition-colors">
+                        <div key={i} className="flex gap-5 p-6 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-primary/30 transition-all group/item">
+                          <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover/item:bg-primary transition-all duration-300">
                             {item.icon ? <item.icon size={24} className="text-primary group-hover/item:text-white" /> : <CheckCircle2 size={24} className="text-primary group-hover/item:text-white" />}
                           </div>
                           <div>
-                            <h4 className="font-bold text-lg mb-1">{item.title}</h4>
+                            <h4 className="font-bold text-lg mb-1 group-hover/item:text-primary transition-colors">{item.title}</h4>
                             <p className="text-slate-400 text-sm leading-relaxed">{item.desc}</p>
                           </div>
                         </div>
