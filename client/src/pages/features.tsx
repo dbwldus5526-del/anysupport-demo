@@ -18,7 +18,12 @@ import {
   Settings2,
   Users,
   FileText,
-  Smartphone
+  Smartphone,
+  Share2,
+  Printer,
+  PenTool,
+  Info,
+  RefreshCw
 } from "lucide-react";
 import featuresHeroImg from "@assets/generated_images/modern_digital_dashboard_showing_various_remote_support_features_and_statistics.png";
 
@@ -128,6 +133,41 @@ export default function Features() {
           </div>
         </div>
       </section>
+      {/* Advanced Features Section - 4x2 Grid */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900 font-black">고급 기능</h2>
+            <p className="text-slate-500 text-lg max-w-2xl mx-auto font-medium">
+              더욱 전문적인 원격지원을 위한 고급 기능들
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+            {[
+              { title: "실시간 화면 공유", desc: "고객의 화면을 실시간으로 공유하고 제어할 수 있습니다.", icon: Share2 },
+              { title: "파일 전송", desc: "상담 중 필요한 파일을 즉시 전송하고 수신할 수 있습니다.", icon: FileUp },
+              { title: "원격 프린팅", desc: "고객 PC에서 직접 문서를 인쇄할 수 있습니다.", icon: Printer },
+              { title: "채팅 및 음성", desc: "텍스트 채팅과 음성 통화로 원활한 소통이 가능합니다.", icon: MessageSquare },
+              { title: "녹화 기능", desc: "상담 내용을 녹화하여 교육 및 품질 관리에 활용합니다.", icon: Video },
+              { title: "화이트보드", desc: "화면에 그림을 그리며 직관적으로 설명할 수 있습니다.", icon: PenTool },
+              { title: "시스템 정보", desc: "고객 PC의 상세한 시스템 정보를 확인할 수 있습니다.", icon: Info },
+              { title: "원격 재부팅", desc: "고객 PC를 원격으로 재부팅하고 자동으로 재연결됩니다.", icon: RefreshCw }
+            ].map((item, i) => (
+              <div key={i} className="p-10 rounded-3xl bg-white border border-slate-200 hover:shadow-2xl hover:border-primary/20 transition-all duration-300 group flex flex-col items-start shadow-sm">
+                <div className="w-14 h-14 rounded-2xl bg-primary/5 text-primary flex items-center justify-center mb-8 group-hover:bg-primary group-hover:text-white transition-all duration-300">
+                  <item.icon size={28} />
+                </div>
+                <h3 className="text-xl font-bold mb-4 text-slate-900 group-hover:text-primary transition-colors leading-tight">{item.title}</h3>
+                <p className="text-slate-500 text-sm leading-relaxed font-medium">
+                  {item.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Core Features Summary - 4x2 Grid */}
       <section className="py-24 bg-slate-50 border-y border-slate-100">
         <div className="container mx-auto px-4 md:px-6">
