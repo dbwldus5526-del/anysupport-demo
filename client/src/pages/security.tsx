@@ -180,29 +180,91 @@ export default function Security() {
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary to-transparent" />
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">고객 신뢰를 위한 설계 철학</h2>
-            <p className="text-primary font-bold text-xl">편의성과 보안의 균형</p>
-          </div>
-          
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-white/5 border border-white/10 p-10 rounded-3xl backdrop-blur-md">
-              <p className="text-2xl font-bold text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">고객 신뢰를 최우선으로 설계된 원격지원</h2>
+            <div className="max-w-3xl mx-auto space-y-4">
+              <p className="text-xl md:text-2xl font-medium leading-relaxed">
+                편리함을 위해 보안을 희생하지 않고<br className="hidden md:block" />
+                보안을 위해 사용성을 포기하지 않습니다.
+              </p>
+              <p className="text-primary font-bold text-lg opacity-80">
                 “쉽지만 위험하지 않은 원격지원”
               </p>
-              <div className="grid md:grid-cols-3 gap-8">
+            </div>
+          </div>
+          
+          <div className="max-w-5xl mx-auto">
+            <div className="bg-white/5 border border-white/10 p-8 md:p-12 rounded-[2rem] backdrop-blur-md">
+              <div className="text-center mb-12">
+                <span className="inline-block px-4 py-1 rounded-full bg-primary/20 text-primary text-xs font-black tracking-widest uppercase mb-4">
+                  3 STEP TRUST DESIGN
+                </span>
+              </div>
+
+              <div className="flex flex-col gap-8">
                 {[
-                  { title: "고객 동의 중심", desc: "사용자의 명시적 허가 없이는 절대 접속할 수 없는 철저한 동의 구조" },
-                  { title: "기업 운영 기준", desc: "까다로운 기업 보안 가이드를 준수하며 관리 기능을 강화한 설계" },
-                  { title: "전 과정 통제", desc: "접속부터 종료, 사후 이력 관리까지 모든 과정을 관리자가 통제 가능" }
+                  { 
+                    step: "01", 
+                    title: "사전 통제", 
+                    subtitle: "고객 동의 없이는 시작되지 않음",
+                    cardTitle: "고객 동의 중심",
+                    desc: "사용자의 명시적 허가 없이는 절대 접속할 수 없는 철저한 동의 구조",
+                    icon: ShieldCheck
+                  },
+                  { 
+                    step: "02", 
+                    title: "진행 통제", 
+                    subtitle: "기업 정책 기준으로 연결 관리",
+                    cardTitle: "기업 운영 기준",
+                    desc: "까다로운 기업 보안 가이드와 내부 정책을 준수하며 실시간으로 연결을 관리하는 설계",
+                    icon: ShieldAlert
+                  },
+                  { 
+                    step: "03", 
+                    title: "사후 추적", 
+                    subtitle: "모든 과정이 기록되고 감사 가능",
+                    cardTitle: "전 과정 통제",
+                    desc: "접속부터 종료, 사후 이력 관리까지 모든 과정이 기록되어 문제 발생 시 추적이 가능",
+                    icon: History
+                  }
                 ].map((item, i) => (
-                  <div key={i} className="text-center">
-                    <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-4 border border-primary/30">
-                      <ShieldAlert className="text-primary" size={24} />
+                  <div key={i} className="relative flex flex-col md:flex-row items-start gap-8 p-8 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all group">
+                    {/* Step Indicator */}
+                    <div className="flex-shrink-0 flex flex-col items-center">
+                      <span className="text-4xl font-black text-primary/40 group-hover:text-primary transition-colors mb-2">
+                        {item.step}
+                      </span>
+                      <div className="w-px h-12 bg-gradient-to-b from-primary/40 to-transparent hidden md:block" />
                     </div>
-                    <h4 className="font-bold text-lg mb-2">{item.title}</h4>
-                    <p className="text-sm text-slate-400 leading-relaxed">{item.desc}</p>
+
+                    {/* Content Section */}
+                    <div className="flex-grow">
+                      <div className="flex items-center gap-3 mb-2">
+                        <h4 className="text-xl font-bold text-white">{item.title}</h4>
+                        <span className="px-2 py-0.5 rounded bg-primary/20 text-primary text-[10px] font-bold">
+                          {item.subtitle}
+                        </span>
+                      </div>
+                      
+                      <div className="mt-4 grid md:grid-cols-[1fr_2fr] gap-6 items-center">
+                        <div className="flex items-center gap-4">
+                          <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center border border-primary/30">
+                            <item.icon className="text-primary" size={24} />
+                          </div>
+                          <span className="font-bold text-lg text-white/90">{item.cardTitle}</span>
+                        </div>
+                        <p className="text-sm text-slate-400 leading-relaxed">
+                          {item.desc}
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 ))}
+              </div>
+
+              <div className="mt-12 text-center">
+                <p className="text-slate-500 text-sm font-medium">
+                  애니서포트는 원격지원 전 과정을 투명하게 통제하여 기업의 소중한 정보를 보호합니다.
+                </p>
               </div>
             </div>
           </div>
