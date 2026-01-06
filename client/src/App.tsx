@@ -6,6 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
 import { Home } from "@/pages/home";
 import Product from "@/pages/product";
+import MobileProduct from "@/pages/mobile-product";
 import Solution from "@/pages/solution";
 import Pricing from "@/pages/pricing";
 import Download from "@/pages/download";
@@ -24,8 +25,8 @@ function Router() {
           <Route path="/" component={Home} />
           <Route path="/product" component={Product} />
           <Route path="/product/pc" component={Product} />
-          <Route path="/product/mobile" component={Product} />
-          <Route path="/product/video" component={Product} />
+          <Route path="/product/mobile" component={MobileProduct} />
+          <Route path="/product/video" component={Home} />
           <Route path="/solution" component={Solution} />
           <Route path="/solution/intro" component={Solution} />
           <Route path="/solution/security" component={Solution} />
