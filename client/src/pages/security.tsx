@@ -262,7 +262,7 @@ export default function Security() {
               </div>
 
               <div className="mt-12 text-center">
-                <p className="text-slate-500 text-sm font-medium">
+                <p className="text-sm font-medium text-[#97a2b8]">
                   애니서포트는 원격지원 전 과정을 투명하게 통제하여 기업의 소중한 정보를 보호합니다.
                 </p>
               </div>
