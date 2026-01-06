@@ -88,11 +88,11 @@ export default function Pricing() {
         
         <div className="container mx-auto px-4 md:px-6 relative z-10 text-center">
           <div className="max-w-3xl mx-auto">
-            <h1 className="text-4xl md:text-6xl font-black mb-6 leading-tight">
+            <h1 className="mb-6">
               합리적인 가격으로<br />
               <span className="text-primary text-glow">비즈니스 가치를 높이세요</span>
             </h1>
-            <p className="text-lg md:text-xl text-slate-300 mb-4 font-medium leading-relaxed">
+            <p className="hero-description mb-4">
               귀사의 규모와 필요에 맞는 최적의 플랜을 선택하세요.<br className="hidden md:block" />
               모든 플랜은 14일 무료 체험이 가능합니다.
             </p>
@@ -184,9 +184,9 @@ export default function Pricing() {
       {/* Comparison Table Section */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-black mb-4 text-slate-900">제품별 상세 기능 비교</h2>
-            <p className="text-slate-500 text-lg font-medium">애니서포트 클라우드형 제품의 기능을 카테고리별로 확인해 보세요.</p>
+          <div className="text-center mb-16 pt-12">
+            <h2 className="mb-4">제품별 상세 기능 비교</h2>
+            <p className="section-description">애니서포트 클라우드형 제품의 기능을 카테고리별로 확인해 보세요.</p>
           </div>
 
           <div className="max-w-[1200px] mx-auto space-y-12">
@@ -316,10 +316,10 @@ export default function Pricing() {
       {/* FAQ Section */}
       <section className="py-24 bg-slate-50">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 pt-12">
             <span className="text-primary font-bold tracking-widest uppercase mb-2 block">FAQ</span>
-            <h2 className="text-3xl md:text-5xl font-black mb-4 text-slate-900">무엇을 도와드릴까요?</h2>
-            <p className="text-slate-500 text-lg font-medium">자주 묻는 질문에 대한 답변을 확인하세요</p>
+            <h2 className="mb-4">무엇을 도와드릴까요?</h2>
+            <p className="section-description">자주 묻는 질문에 대한 답변을 확인하세요</p>
           </div>
 
           <div className="max-w-4xl mx-auto space-y-4">
