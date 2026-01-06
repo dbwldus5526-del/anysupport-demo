@@ -313,6 +313,94 @@ export default function Pricing() {
           </div>
         </div>
       </section>
+      {/* FAQ Section */}
+      <section className="py-24 bg-slate-50">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="text-center mb-16">
+            <span className="text-primary font-bold tracking-widest uppercase mb-2 block">FAQ</span>
+            <h2 className="text-3xl md:text-5xl font-black mb-4 text-slate-900">무엇을 도와드릴까요?</h2>
+            <p className="text-slate-500 text-lg font-medium">자주 묻는 질문에 대한 답변을 확인하세요</p>
+          </div>
+
+          <div className="max-w-4xl mx-auto space-y-4">
+            {[
+              {
+                q: "1. 애니서포트 상담원 1계정 가격은 얼마 입니까?",
+                a: (
+                  <div className="space-y-4">
+                    <p>애니서포트 서비스제품(SaaS)은 1년 선납 기준으로 아래와 같습니다.</p>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div className="bg-white p-4 rounded-xl border border-slate-200">
+                        <p className="font-bold text-slate-900 mb-2">[PC 에디션]</p>
+                        <p className="text-sm text-slate-600">Basic: 100만원 (VAT 별도)</p>
+                        <p className="text-sm text-slate-600">Premium: 132만원 (VAT 별도)</p>
+                      </div>
+                      <div className="bg-white p-4 rounded-xl border border-slate-200">
+                        <p className="font-bold text-slate-900 mb-2">[Mobile 에디션]</p>
+                        <p className="text-sm text-slate-600">Android/iOS: 290만원 (VAT 별도)</p>
+                      </div>
+                      <div className="bg-white p-4 rounded-xl border border-slate-200">
+                        <p className="font-bold text-slate-900 mb-2">[Video 에디션]</p>
+                        <p className="text-sm text-slate-600">영상상담: 387만원 (VAT 별도)</p>
+                      </div>
+                    </div>
+                    <div className="bg-primary/5 p-4 rounded-xl border border-primary/10">
+                      <p className="font-bold text-primary mb-2 text-sm">[참고]</p>
+                      <ul className="text-xs text-slate-600 space-y-1 list-disc pl-4">
+                        <li>1계정당 동시 접속자 수는 BASIC(3명), PREMIUM/MOBILE/VIDEO(10명)입니다.</li>
+                        <li>상기 금액은 1년 선납 기준이며, 월 단위 결제는 위 표의 월 금액을 참고해주세요.</li>
+                      </ul>
+                    </div>
+                  </div>
+                )
+              },
+              {
+                q: "2. 무료 체험은 어떻게 신청하나요?",
+                a: "홈페이지 우측 상단의 \"무료 체험\" 버튼을 클릭하여 간단한 정보 입력 후 즉시 시작할 수 있습니다. 신용카드 등록 없이 14일간 모든 기능을 체험하실 수 있습니다."
+              },
+              {
+                q: "3. 플랜 변경은 언제든지 가능한가요?",
+                a: "네, 언제든지 플랜 변경이 가능합니다. 업그레이드 시 즉시 적용되며, 다운그레이드 시 다음 결제 주기부터 적용됩니다."
+              },
+              {
+                q: "4. 환불 정책은 어떻게 되나요?",
+                a: "서비스 이용 후 7일 이내에는 100% 환불이 가능합니다. 그 이후에는 남은 기간에 대해 일할 계산하여 환불해드립니다."
+              },
+              {
+                q: "5. 동시 접속자 수가 부족할 경우 어떻게 하나요?",
+                a: "상위 플랜으로 업그레이드하시거나, 추가 라이선스를 구매하실 수 있습니다. 자세한 사항은 고객센터로 문의해주세요."
+              },
+              {
+                q: "6. 결제 방법은 어떤 것들이 있나요?",
+                a: "신용카드, 계좌이체, 법인카드 결제가 가능합니다. 연간 결제 시 세금계산서도 발행해드립니다."
+              }
+            ].map((item, i) => (
+              <div key={i} className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                <button 
+                  className="w-full px-8 py-6 text-left flex items-center justify-between group"
+                  onClick={(e) => {
+                    const content = e.currentTarget.nextElementSibling;
+                    const icon = e.currentTarget.querySelector('.chevron');
+                    if (content) {
+                      content.classList.toggle('hidden');
+                      icon?.classList.toggle('rotate-180');
+                    }
+                  }}
+                >
+                  <span className="text-lg font-bold text-slate-900 group-hover:text-primary transition-colors">{item.q}</span>
+                  <div className="chevron transition-transform duration-300">
+                    <ArrowRight className="text-slate-400 rotate-90" size={20} />
+                  </div>
+                </button>
+                <div className="px-8 pb-8 text-slate-600 font-medium leading-relaxed hidden border-t border-slate-50 pt-6">
+                  {item.a}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Trust Section */}
       <section className="py-24 bg-slate-900 text-white">
         <div className="container mx-auto px-4 md:px-6 text-center">
