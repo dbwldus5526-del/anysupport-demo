@@ -3,7 +3,7 @@ import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronRight } from "lucide-react";
 import { useModal } from "@/context/ModalContext";
-import logo from "@assets/generated_images/minimalist_tech_logo_for_anysupport.png";
+import logo from "@assets/애니서포트--new-log_1767678194580.png";
 import { cn } from "@/lib/utils";
 
 const NAV_ITEMS = [
@@ -31,15 +31,20 @@ export function Header() {
     else document.body.style.overflow = "unset";
   }, [isMobileMenuOpen]);
 
+  const handleLogoClick = () => {
+    if (window.location.pathname === "/") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
   return (
     <header className={cn(
       "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-      isScrolled ? "bg-white/95 backdrop-blur-md border-b shadow-sm py-3" : "bg-transparent py-5"
+      isScrolled ? "bg-white/95 backdrop-blur-md border-b shadow-sm py-3" : "bg-white/80 backdrop-blur-sm py-5"
     )}>
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2 group">
-          <img src={logo} alt="AnySupport" className="w-8 h-8 md:w-10 md:h-10 object-contain" />
-          <span className="font-bold text-xl md:text-2xl tracking-tighter">AnySupport</span>
+        <Link href="/" onClick={handleLogoClick} className="flex items-center gap-2 group">
+          <img src={logo} alt="AnySupport" className="h-8 md:h-10 w-auto object-contain" />
         </Link>
 
         <nav className="hidden md:flex items-center gap-10">
