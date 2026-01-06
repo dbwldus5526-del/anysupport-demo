@@ -128,7 +128,7 @@ export default function Security() {
             <p className="text-slate-500 text-lg">기업 환경에 최적화된 철저한 보안 체계</p>
           </div>
           
-          <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-px bg-slate-200 border border-slate-200 rounded-3xl overflow-hidden shadow-sm">
+          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-px bg-slate-200 border border-slate-200 rounded-3xl overflow-hidden shadow-sm">
             {[
               {
                 title: "접속 보안",
