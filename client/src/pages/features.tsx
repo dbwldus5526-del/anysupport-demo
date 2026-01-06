@@ -89,11 +89,12 @@ export default function Features() {
       summary: "기업 환경에 최적화된 철저한 보안과 협업 기능을 제공합니다.",
       icon: ShieldCheck,
       items: [
-        { title: "강력한 보안 인증", desc: "256bit AES 암호화 및 다중 보안 인증을 지원합니다.", icon: ShieldCheck },
-        { title: "다중 상담원 접속", desc: "한 명의 고객을 여러 상담원이 동시에 지원할 수 있습니다.", icon: Users },
-        { title: "세션 권한 제어", desc: "기능별 사용 권한을 세밀하게 제어하여 보안을 강화합니다.", icon: Settings2 },
-        { title: "고객 동의 기반 접속", desc: "사용자의 명시적 허가 없이는 접속이 불가능한 구조입니다.", icon: ShieldCheck },
-        { title: "IP 제한 설정", desc: "허가된 IP 대역에서만 접속 가능하도록 통제합니다.", icon: Globe }
+        { title: "상담원 초대", desc: "고객과 상담원의 원격지원 전담 도중 제 3의 상담원을 초대해 고객에게 제어할 수 있습니다.", icon: Users },
+        { title: "세션 전달", desc: "독점 다른 상담원에게 현재 진행중인 상담세션을 전달할 수 있습니다.", icon: Send },
+        { title: "블랙스크린", desc: "원격지 고객의 화면을 다른 사용자들이 보지 못하도록 차단으로 시켜 제게 제어할 시간 때 할 수 있습니다.", icon: Monitor },
+        { title: "인증번호 입력", desc: "6자리의 숫자 외 인증을 땅으로 생성하여, 허니 언론 양쪽으로 단 번 만의 숫자를 수 입력 설정하여 입장의 제공을 검인식으로 자세합니다.", icon: Lock },
+        { title: "고객PC화면이 \"원격지원 중\" 표시", desc: "고객 안심기능으로 버튼에게 원격지원이 종료돼 이라는기 표시합니다.", icon: Monitor },
+        { title: "접속중 고객 동의", desc: "화면 제어나 위해 먼저 고객에게 원격제어 동의를 요청할 수 있습니다. 고객이 승인한 답변에서만 원격제어가 시작되며, 고객 PC 를 보호할 수 있습니다.", icon: CheckCircle2 }
       ]
     },
     {
