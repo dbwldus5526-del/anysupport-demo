@@ -21,7 +21,7 @@ import {
   Building2,
   Database
 } from "lucide-react";
-import heroImage from "@assets/generated_images/b2b_saas_hero_background_for_remote_support.png";
+import heroImage from "@assets/generated_images/clean_professional_b2b_saas_hero_background.png";
 import pcSupportImg from "@assets/generated_images/pc_remote_support_professional_image.png";
 import mobileSupportImg from "@assets/generated_images/mobile_remote_support_app_interface.png";
 import videoSupportImg from "@assets/generated_images/video-based_remote_support_concept.png";
