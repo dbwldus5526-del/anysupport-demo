@@ -41,11 +41,14 @@ export default function Features() {
       summary: "원격지원에 필요한 필수 기능을 가장 안정적으로 제공합니다.",
       icon: Monitor,
       items: [
-        { title: "고성능 원격 제어", desc: "지연 없는 실시간 화면 제어와 빠른 응답 속도를 제공합니다.", icon: Monitor },
-        { title: "화면 공유", desc: "고객의 화면을 실시간으로 공유하고 제어할 수 있습니다.", icon: Share2 },
-        { title: "파일 전송", desc: "상담 중 필요한 파일을 즉시 전송하고 수신할 수 있습니다.", icon: FileUp },
-        { title: "멀티 모니터 지원", desc: "고객의 여러 모니터 화면을 동시에 확인하고 전환할 수 있습니다.", icon: Monitor },
-        { title: "클립보드 공유", desc: "상담원과 고객 간의 텍스트 및 이미지 복사/붙여넣기를 지원합니다.", icon: FileText }
+        { title: "화면 공유", desc: "원격지에 있는 PC의 화면을 실시간으로 공유합니다.", icon: Share2 },
+        { title: "원격 제어", desc: "키보드와 마우스 제어를 통해 원격지 PC의 모든 기능을 사용할 수 있도록 지원합니다.", icon: Monitor },
+        { title: "파일 전송 (Drag & Drop)", desc: "Drag & Drop, Ctrl-C & V, 양방향 파일 전송을 구현한 상담원 PC와 원격 제어하여 전송 기능입니다.", icon: FileUp },
+        { title: "실시간 채팅", desc: "고객과 상담원 간의 실시간 채팅을 지원합니다. 채팅 내용은 저장되어 관리 가능합니다.", icon: MessageSquare },
+        { title: "그리기", desc: "고객의 PC 화면에 직접 그림을 그려 선택한 만큼 클릭하거나 구역을 지정하는 등 양방향 실시간 제공이 가능합니다.", icon: PenTool },
+        { title: "멀티모니터 지원", desc: "복수의 디스플레이 장치를 사용하는 고객의 환경에 대해서도 상담원이 모든 화면을 살펴 지원이 가능합니다.", icon: Monitor },
+        { title: "재부팅 후 자동 재접속", desc: "고객 PC를 재부팅한 후에 자동으로 재접속합니다.", icon: RefreshCw },
+        { title: "안전모드 원격지원", desc: "안전모드에서 원격 지원이 가능하며, 재부팅 후 안전모드로 진입하는 기능을 제공합니다.", icon: ShieldCheck }
       ]
     },
     {
