@@ -7,7 +7,7 @@ export function Home() {
   const { openModal } = useModal();
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col">
       {/* 1. Hero Section */}
       <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 bg-slate-50 overflow-hidden">
         <div className="container mx-auto px-4 md:px-6 relative z-10">
