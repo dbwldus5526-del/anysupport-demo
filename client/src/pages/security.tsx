@@ -104,7 +104,7 @@ export default function Security() {
             <h1 className="text-4xl md:text-6xl font-black mb-6 leading-tight">
               보안성과 안전성
             </h1>
-            <p className="text-xl md:text-2xl font-bold text-primary mb-6">
+            <p className="text-xl md:text-2xl font-bold mb-6 text-[#ffffff]">
               기업 환경을 고려한 보안 설계
             </p>
             <p className="text-lg text-slate-300 mb-4 max-w-2xl mx-auto leading-relaxed">
@@ -119,7 +119,6 @@ export default function Security() {
           </div>
         </div>
       </section>
-
       {/* 6대 보안 핵심 섹션 (Grid Layout) */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
@@ -174,10 +173,8 @@ export default function Security() {
           </div>
         </div>
       </section>
-
       {/* Main Security Sections (Detailed View - keeping some for context or removing if redundant) */}
       {/* I will remove the original repeating sections to keep it clean as requested by the grid layout */}
-
       {/* Philosophy Section */}
       <section className="py-24 bg-slate-900 text-white overflow-hidden relative">
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary to-transparent" />
@@ -211,7 +208,6 @@ export default function Security() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 md:px-6 text-center">
