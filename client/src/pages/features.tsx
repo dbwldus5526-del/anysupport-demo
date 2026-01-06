@@ -26,7 +26,8 @@ import {
   Info,
   RefreshCw,
   ChevronDown,
-  ChevronUp
+  ChevronUp,
+  History
 } from "lucide-react";
 import featuresHeroImg from "@assets/generated_images/modern_digital_dashboard_showing_various_remote_support_features_and_statistics.png";
 
