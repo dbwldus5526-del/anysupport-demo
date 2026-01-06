@@ -17,9 +17,9 @@ export default function Download() {
         </div>
         
         <div className="container mx-auto px-4 md:px-6 relative z-10">
-          <h1 className="mb-6">다운로드 및 실행</h1>
-          <h2 className="mb-8 text-white">원하는 방식을 선택하세요</h2>
-          <p className="hero-description max-w-3xl mx-auto">
+          <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight">다운로드 및 실행</h1>
+          <h2 className="text-2xl md:text-4xl font-black mb-8">원하는 방식을 선택하세요</h2>
+          <p className="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto font-medium leading-relaxed">
             상담사와 고객 각각에게 최적화된 프로그램과 앱을 제공합니다.<br />
             Windows, macOS, iOS, Android, 그리고 설치 없는 웹버전까지 모두 지원합니다.
           </p>

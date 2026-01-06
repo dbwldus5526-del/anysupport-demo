@@ -51,19 +51,19 @@ export function Home() {
         
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="max-w-3xl">
-            <h1 className="mb-6">
+            <h1 className="text-4xl md:text-6xl font-black text-slate-900 leading-[1.1] mb-6">
               기업 상담과 지원을<br />
               <span className="text-primary">빠르고 안전하게</span>
             </h1>
-            <p className="hero-description mb-10 max-w-2xl">
+            <p className="text-lg md:text-xl text-slate-600 mb-10 max-w-2xl font-medium leading-relaxed">
               고객 상담·IT 지원·운영 지원을 하나로 연결하는<br className="hidden md:block" />
               기업용 원격지원 SaaS 애니서포트
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" onClick={openModal} className="h-14 px-10 cta-text shadow-xl shadow-primary/20">
+              <Button size="lg" onClick={openModal} className="h-14 px-10 text-lg font-bold shadow-xl shadow-primary/20">
                 무료체험 시작하기 <ArrowRight className="ml-2" />
               </Button>
-              <Button variant="outline" size="lg" onClick={() => scrollToSection('what-is-remote')} className="h-14 px-10 cta-text bg-white/80 backdrop-blur-sm border-slate-200">
+              <Button variant="outline" size="lg" onClick={() => scrollToSection('what-is-remote')} className="h-14 px-10 text-lg font-bold bg-white/80 backdrop-blur-sm border-slate-200">
                 제품 자세히 보기
               </Button>
             </div>
@@ -74,11 +74,11 @@ export function Home() {
       {/* 2. 원격지원이란 무엇인가 */}
       <section id="what-is-remote" className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="text-center mb-16 pt-12">
+          <div className="text-center mb-16">
             <span className="text-primary font-bold text-xs tracking-widest uppercase mb-3 block">REMOTE SUPPORT</span>
-            <h2 className="mb-6">원격지원(Remote Support)이란?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-slate-900">원격지원(Remote Support)이란?</h2>
             <p className="text-primary font-bold text-lg mb-2">현장 방문 없이 온라인으로 문제를 즉각 해결하는 기술</p>
-            <p className="section-description max-w-2xl mx-auto">
+            <p className="text-slate-500 font-medium leading-relaxed max-w-2xl mx-auto">
               애니서포트는 상담원이 고객의 PC나 모바일 화면을 공유받아<br className="hidden md:block" />
               직접 제어함으로써 장애를 진단하고 해결하는 기업용 전문 서비스입니다.
             </p>
@@ -120,8 +120,8 @@ export function Home() {
                 <div className="w-14 h-14 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-6">
                   <card.icon size={28} />
                 </div>
-                <h3 className="mb-3">{card.title}</h3>
-                <p className="card-description">
+                <h4 className="text-xl font-bold mb-3">{card.title}</h4>
+                <p className="text-slate-500 text-sm font-medium leading-relaxed">
                   {card.desc}
                 </p>
               </div>
@@ -139,9 +139,9 @@ export function Home() {
       {/* 3. 왜 원격지원 애니서포트인가 (신뢰 요소) */}
       <section className="py-24 bg-slate-50">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="text-center mb-16 pt-12">
-            <h2 className="mb-4">왜 애니서포트인가요?</h2>
-            <p className="section-description max-w-2xl mx-auto">기업이 신뢰할 수 있는 압도적인 기술력과 안정성</p>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">왜 애니서포트인가요?</h2>
+            <p className="text-slate-500 max-w-2xl mx-auto text-lg">기업이 신뢰할 수 있는 압도적인 기술력과 안정성</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
