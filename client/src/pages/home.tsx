@@ -21,7 +21,10 @@ import {
   Building2,
   Database
 } from "lucide-react";
-import heroImage from "@assets/generated_images/saas_dashboard_abstract_hero_visualization.png";
+import heroImage from "@assets/generated_images/b2b_saas_hero_background_for_remote_support.png";
+import pcSupportImg from "@assets/generated_images/pc_remote_support_professional_image.png";
+import mobileSupportImg from "@assets/generated_images/mobile_remote_support_app_interface.png";
+import videoSupportImg from "@assets/generated_images/video-based_remote_support_concept.png";
 
 export function Home() {
   const { openModal } = useModal();
@@ -36,31 +39,33 @@ export function Home() {
   return (
     <div className="flex flex-col">
       {/* 1. Hero Section */}
-      <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 bg-slate-50 overflow-hidden">
+      <section className="relative min-h-[600px] flex items-center pt-20 pb-20 overflow-hidden bg-white">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src={heroImage} 
+            alt="AnySupport Background" 
+            className="w-full h-full object-cover object-right opacity-80"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-transparent lg:w-2/3" />
+        </div>
+        
         <div className="container mx-auto px-4 md:px-6 relative z-10">
-          <div className="flex flex-col lg:flex-row items-center gap-16">
-            <div className="flex-1 text-center lg:text-left">
-              <h1 className="text-4xl md:text-6xl font-black text-slate-900 leading-[1.1] mb-6">
-                기업 상담과 지원을<br />
-                <span className="text-primary">빠르고 안전하게</span>
-              </h1>
-              <p className="text-lg md:text-xl text-slate-600 mb-10 max-w-2xl mx-auto lg:mx-0 font-medium leading-relaxed">
-                고객 상담·IT 지원·운영 지원을 하나로 연결하는<br className="hidden md:block" />
-                기업용 원격지원 SaaS 애니서포트
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Button size="lg" onClick={openModal} className="h-14 px-10 text-lg font-bold shadow-xl shadow-primary/20">
-                  무료체험 시작하기 <ArrowRight className="ml-2" />
-                </Button>
-                <Button variant="outline" size="lg" onClick={() => scrollToSection('what-is-remote')} className="h-14 px-10 text-lg font-bold bg-white border-slate-200">
-                  제품 자세히 보기
-                </Button>
-              </div>
-            </div>
-            <div className="flex-1 w-full max-w-[600px] lg:max-w-none">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-200 bg-white">
-                <img src={heroImage} alt="AnySupport Dashboard" className="w-full h-auto object-cover" />
-              </div>
+          <div className="max-w-3xl">
+            <h1 className="text-4xl md:text-6xl font-black text-slate-900 leading-[1.1] mb-6">
+              기업 상담과 지원을<br />
+              <span className="text-primary">빠르고 안전하게</span>
+            </h1>
+            <p className="text-lg md:text-xl text-slate-600 mb-10 max-w-2xl font-medium leading-relaxed">
+              고객 상담·IT 지원·운영 지원을 하나로 연결하는<br className="hidden md:block" />
+              기업용 원격지원 SaaS 애니서포트
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button size="lg" onClick={openModal} className="h-14 px-10 text-lg font-bold shadow-xl shadow-primary/20">
+                무료체험 시작하기 <ArrowRight className="ml-2" />
+              </Button>
+              <Button variant="outline" size="lg" onClick={() => scrollToSection('what-is-remote')} className="h-14 px-10 text-lg font-bold bg-white/80 backdrop-blur-sm border-slate-200">
+                제품 자세히 보기
+              </Button>
             </div>
           </div>
         </div>
@@ -166,14 +171,14 @@ export function Home() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             {[
-              { icon: Laptop, title: "PC 지원", desc: "Windows, macOS, Linux 지원" },
-              { icon: Smartphone, title: "Mobile 지원", desc: "Android, iOS 실시간 제어" },
-              { icon: Video, title: "Video 지원", desc: "현장 영상 기반 원격 가이드" }
+              { image: pcSupportImg, title: "PC 지원", desc: "Windows, macOS, Linux 지원" },
+              { image: mobileSupportImg, title: "Mobile 지원", desc: "Android, iOS 실시간 제어" },
+              { image: videoSupportImg, title: "Video 지원", desc: "현장 영상 기반 원격 가이드" }
             ].map((item, i) => (
               <div key={i} className="overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm flex flex-col group hover:shadow-md transition-shadow">
-                <div className="aspect-[4/3] bg-slate-50 flex items-center justify-center relative">
-                   <item.icon size={64} className="text-primary/20 group-hover:text-primary/40 transition-colors" />
-                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/5 to-transparent" />
+                <div className="aspect-[4/3] overflow-hidden relative">
+                   <img src={item.image} alt={item.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent opacity-60" />
                 </div>
                 <div className="p-8 text-center border-t border-slate-50">
                   <h3 className="text-xl font-bold mb-2">{item.title}</h3>
