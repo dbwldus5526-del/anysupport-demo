@@ -184,6 +184,139 @@ export default function Pricing() {
         </div>
       </section>
 
+      {/* Comparison Table Section */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-black mb-4 text-slate-900">제품별 상세 기능 비교</h2>
+            <p className="text-slate-500 text-lg font-medium">애니서포트 클라우드형 제품의 기능을 카테고리별로 확인해 보세요.</p>
+          </div>
+
+          <div className="max-w-[1200px] mx-auto space-y-12">
+            {[
+              {
+                id: 1,
+                title: "원격제어 & 연결",
+                subtitle: "기본적으로 얼마나 잘 원격으로 붙고 제어되나요?",
+                rows: [
+                  { name: "마우스 / 키보드 제어", basic: true, premium: true, mobile: true, video: true },
+                  { name: "멀티모니터 지원", basic: true, premium: true, mobile: true, video: true },
+                  { name: "화면 제어", basic: true, premium: true, mobile: true, video: true },
+                  { name: "화질 조절", basic: true, premium: true, mobile: true, video: true },
+                  { name: "블랙스크린", basic: true, premium: true, mobile: true, video: true },
+                  { name: "안전모드 재부팅 후 자동 재접속", basic: true, premium: true, mobile: true, video: true },
+                  { name: "자동 재접속", basic: true, premium: true, mobile: true, video: true },
+                  { name: "상담원 화면 전송", basic: true, premium: true, mobile: true, video: true },
+                ]
+              },
+              {
+                id: 2,
+                title: "커뮤니케이션 & 협업",
+                subtitle: "고객과 어떻게 소통하고 설명하나요?",
+                rows: [
+                  { name: "채팅", basic: true, premium: true, mobile: true, video: true },
+                  { name: "음성 채팅", basic: true, premium: true, mobile: true, video: true },
+                  { name: "실시간 화상 상담", basic: false, premium: false, mobile: false, video: true },
+                  { name: "양방향 그리기", basic: true, premium: true, mobile: true, video: true },
+                  { name: "레이저 포인트 기능", basic: true, premium: true, mobile: true, video: true },
+                  { name: "URL 전송", basic: true, premium: true, mobile: true, video: true },
+                  { name: "상담원 초대 / 연결", basic: true, premium: true, mobile: true, video: true },
+                ]
+              },
+              {
+                id: 3,
+                title: "파일 & 데이터 전송",
+                subtitle: "파일은 어떻게 주고받나요?",
+                rows: [
+                  { name: "양방향 파일 전송", basic: true, premium: true, mobile: true, video: true },
+                  { name: "Drag & Drop", basic: true, premium: true, mobile: true, video: true },
+                  { name: "Ctrl+C / Ctrl+V 파일 전송", basic: true, premium: true, mobile: true, video: true },
+                  { name: "파일 보내기", basic: true, premium: true, mobile: true, video: true },
+                  { name: "파일 전송 사이즈", basic: "무제한", premium: "무제한", mobile: "무제한", video: "무제한" },
+                  { name: "클립보드", basic: true, premium: true, mobile: true, video: true },
+                ]
+              },
+              {
+                id: 4,
+                title: "모바일 & 멀티 디바이스",
+                subtitle: "PC 말고 모바일도 되나요?",
+                rows: [
+                  { name: "모바일 제어", basic: false, premium: false, mobile: true, video: true },
+                  { name: "상담원 화면 전송(모바일)", basic: false, premium: false, mobile: true, video: true },
+                  { name: "화면 캡쳐(모바일 포함)", basic: true, premium: true, mobile: true, video: true },
+                ]
+              },
+              {
+                id: 5,
+                title: "상담 관리 & 운영",
+                subtitle: "상담사/관리자는 뭘 관리할 수 있나요?",
+                rows: [
+                  { name: "세션 수 관리", basic: "3개", premium: "10개", mobile: "10개", video: "10개" },
+                  { name: "상담원 지정성", basic: true, premium: true, mobile: true, video: true },
+                  { name: "사용 통계 보기", basic: true, premium: true, mobile: true, video: true },
+                  { name: "고객 페이지 로고 변경", basic: true, premium: true, mobile: true, video: true },
+                ]
+              },
+              {
+                id: 6,
+                title: "기록 · 진단 · 시스템",
+                subtitle: "문제 분석과 기록은 어떻게 하나요?",
+                rows: [
+                  { name: "화면 녹화", basic: true, premium: true, mobile: true, video: true },
+                  { name: "화면 캡쳐", basic: true, premium: true, mobile: true, video: true },
+                  { name: "시스템 / 프로세스 정보 보기", basic: true, premium: true, mobile: true, video: true },
+                ]
+              }
+            ].map((category) => (
+              <div key={category.id} className="overflow-hidden rounded-3xl border border-slate-200 shadow-sm">
+                <div className="bg-primary p-6 text-white">
+                  <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
+                    <div>
+                      <div className="flex items-center gap-3 mb-1">
+                        <span className="flex items-center justify-center w-6 h-6 rounded-full bg-white text-primary text-xs font-black">
+                          {category.id}
+                        </span>
+                        <h3 className="text-xl font-black">{category.title}</h3>
+                      </div>
+                      <p className="text-white/80 text-sm font-bold">{category.subtitle}</p>
+                    </div>
+                    <div className="grid grid-cols-4 gap-4 text-center min-w-[400px] hidden md:grid">
+                      {["BASIC", "PREMIUM", "MOBILE", "Video"].map((name) => (
+                        <span key={name} className="text-[10px] font-black tracking-widest opacity-80">{name}</span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+                <div className="bg-white">
+                  {category.rows.map((row, idx) => (
+                    <div key={idx} className={`grid grid-cols-1 md:grid-cols-[1fr_400px] items-center border-b border-slate-100 last:border-0 hover:bg-slate-50 transition-colors`}>
+                      <div className="p-5 pl-8 text-slate-700 font-bold text-[15px]">
+                        {row.name}
+                      </div>
+                      <div className="grid grid-cols-4 gap-4 p-5 text-center bg-slate-50/30 md:bg-transparent">
+                        {[row.basic, row.premium, row.mobile, row.video].map((val, i) => (
+                          <div key={i} className="flex justify-center items-center">
+                            {typeof val === "boolean" ? (
+                              val ? (
+                                <CheckCircle2 className="text-primary" size={20} />
+                              ) : (
+                                <span className="text-slate-300 font-bold">-</span>
+                              )
+                            ) : (
+                              <span className="text-slate-900 font-black text-sm">{val}</span>
+                            )}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Trust Section */}
       <section className="py-24 bg-slate-900 text-white">
         <div className="container mx-auto px-4 md:px-6 text-center">
