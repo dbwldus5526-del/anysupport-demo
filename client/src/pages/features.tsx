@@ -163,9 +163,9 @@ export default function Features() {
                 </div>
 
                 {/* Expanded Content (Accordion) */}
-                <div className={`overflow-hidden transition-all duration-500 ease-in-out ${expandedCategory === idx ? 'max-h-[1000px] opacity-100 mt-4' : 'max-h-0 opacity-0'}`}>
-                  <div className="bg-slate-900 rounded-[2.5rem] p-8 md:p-12 text-white shadow-2xl mx-2">
-                    <div className="flex items-center justify-between mb-10 border-b border-white/10 pb-6">
+                <div className={`overflow-hidden transition-all duration-500 ease-in-out ${expandedCategory === idx ? 'max-h-[600px] opacity-100 mt-4' : 'max-h-0 opacity-0'}`}>
+                  <div className="bg-slate-900 rounded-[2.5rem] p-8 md:p-12 text-white shadow-2xl mx-2 h-full flex flex-col max-h-[580px]">
+                    <div className="flex items-center justify-between mb-10 border-b border-white/10 pb-6 flex-shrink-0">
                       <h3 className="text-2xl font-bold flex items-center gap-4">
                         <div className="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center">
                           <group.icon className="text-primary" size={24} />
@@ -174,7 +174,7 @@ export default function Features() {
                       </h3>
                       <div className="hidden md:block h-[1px] flex-1 mx-8 bg-gradient-to-r from-white/10 to-transparent" />
                     </div>
-                    <div className="grid md:grid-cols-2 gap-6">
+                    <div className="grid md:grid-cols-2 gap-6 overflow-y-auto pr-4 custom-scrollbar">
                       {group.items.map((item, i) => (
                         <div key={i} className="flex gap-5 p-6 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-primary/30 transition-all group/item">
                           <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover/item:bg-primary transition-all duration-300">
