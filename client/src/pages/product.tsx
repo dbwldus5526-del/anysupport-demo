@@ -97,7 +97,6 @@ export default function Product() {
           </div>
         </div>
       </section>
-
       {/* Summary Section */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
@@ -140,12 +139,11 @@ export default function Product() {
           </div>
         </div>
       </section>
-
       {/* Detailed Features Cards */}
       <section className="py-24 bg-slate-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900">[Desktop Edition만의 특별한 기능]</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900">Desktop Edition만의 특별한 기능</h2>
             <p className="text-slate-500 text-lg max-w-2xl mx-auto">PC 원격지원을 더욱 강력하게 만드는 전문 기능들</p>
           </div>
           
@@ -175,7 +173,6 @@ export default function Product() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-primary text-white">
         <div className="container mx-auto px-4 md:px-6 text-center">
