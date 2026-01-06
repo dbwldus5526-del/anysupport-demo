@@ -79,7 +79,7 @@ export default function Features() {
             <h1 className="text-4xl md:text-6xl font-black mb-6 leading-tight">
               다양한 기능
             </h1>
-            <p className="text-xl md:text-2xl font-bold text-primary mb-6">
+            <p className="text-xl md:text-2xl mb-6 text-[#ffffff] font-medium">
               운영 효율을 극대화하는 스마트한 도구들
             </p>
             <p className="text-lg text-slate-300 mb-4 max-w-2xl mx-auto leading-relaxed">
@@ -94,7 +94,6 @@ export default function Features() {
           </div>
         </div>
       </section>
-
       {/* Feature Groups Grid */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
@@ -126,7 +125,6 @@ export default function Features() {
           </div>
         </div>
       </section>
-
       {/* Special Power Features (Dark) */}
       <section className="py-24 bg-slate-900 text-white">
         <div className="container mx-auto px-4 md:px-6 text-center">
@@ -155,7 +153,6 @@ export default function Features() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-24 bg-white text-center">
         <div className="container mx-auto px-4">
