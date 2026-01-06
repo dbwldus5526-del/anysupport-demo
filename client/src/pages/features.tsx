@@ -102,6 +102,41 @@ export default function Features() {
           </div>
         </div>
       </section>
+      {/* Core Features Summary - 4x2 Grid */}
+      <section className="py-24 bg-slate-50 border-y border-slate-100">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900 font-black">핵심 기능 요약</h2>
+            <p className="text-slate-500 text-lg max-w-2xl mx-auto font-medium">
+              애니서포트가 제공하는 8가지 핵심 기능을 한눈에 확인하세요.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+            {[
+              { title: "빠른 원격 연결", desc: "3초 이내 즉시 연결되는 초고속 원격 지원 기술", icon: Zap },
+              { title: "강력한 보안", desc: "256bit AES 암호화 및 다중 보안 인증", icon: ShieldCheck },
+              { title: "글로벌 지원", desc: "전세계 어디서나 안정적인 원격지원", icon: Globe },
+              { title: "24/7 상담", desc: "연중무휴 동시 다중 고객 상담 가능", icon: Clock },
+              { title: "다중 상담원", desc: "한 명의 상담원이 최대 10명 동시 상담", icon: Users },
+              { title: "상담 기록", desc: "모든 상담 내역 자동 저장 및 분석", icon: FileText },
+              { title: "화상 상담", desc: "HD 화질의 실시간 비디오 상담", icon: Video },
+              { title: "모바일 지원", desc: "Android, iOS 모바일 기기 원격 제어", icon: Smartphone }
+            ].map((item, i) => (
+              <div key={i} className="p-10 rounded-3xl bg-white border border-slate-200 hover:shadow-2xl hover:border-primary/20 transition-all duration-300 group flex flex-col items-start shadow-sm">
+                <div className="w-14 h-14 rounded-2xl bg-primary/5 text-primary flex items-center justify-center mb-8 group-hover:bg-primary group-hover:text-white transition-all duration-300">
+                  <item.icon size={28} />
+                </div>
+                <h3 className="text-xl font-bold mb-4 text-slate-900 group-hover:text-primary transition-colors leading-tight">{item.title}</h3>
+                <p className="text-slate-500 text-sm leading-relaxed font-medium">
+                  {item.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Feature Groups Grid */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
@@ -133,6 +168,7 @@ export default function Features() {
           </div>
         </div>
       </section>
+
       {/* Advanced Features Section - 4x2 Grid */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
@@ -153,41 +189,6 @@ export default function Features() {
               { title: "화이트보드", desc: "화면에 그림을 그리며 직관적으로 설명할 수 있습니다.", icon: PenTool },
               { title: "시스템 정보", desc: "고객 PC의 상세한 시스템 정보를 확인할 수 있습니다.", icon: Info },
               { title: "원격 재부팅", desc: "고객 PC를 원격으로 재부팅하고 자동으로 재연결됩니다.", icon: RefreshCw }
-            ].map((item, i) => (
-              <div key={i} className="p-10 rounded-3xl bg-white border border-slate-200 hover:shadow-2xl hover:border-primary/20 transition-all duration-300 group flex flex-col items-start shadow-sm">
-                <div className="w-14 h-14 rounded-2xl bg-primary/5 text-primary flex items-center justify-center mb-8 group-hover:bg-primary group-hover:text-white transition-all duration-300">
-                  <item.icon size={28} />
-                </div>
-                <h3 className="text-xl font-bold mb-4 text-slate-900 group-hover:text-primary transition-colors leading-tight">{item.title}</h3>
-                <p className="text-slate-500 text-sm leading-relaxed font-medium">
-                  {item.desc}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Core Features Summary - 4x2 Grid */}
-      <section className="py-24 bg-slate-50 border-y border-slate-100">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900 font-black">핵심 기능 요약</h2>
-            <p className="text-slate-500 text-lg max-w-2xl mx-auto font-medium">
-              애니서포트가 제공하는 8가지 핵심 기능을 한눈에 확인하세요.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-            {[
-              { title: "빠른 원격 연결", desc: "3초 이내 즉시 연결되는 초고속 원격 지원 기술", icon: Zap },
-              { title: "강력한 보안", desc: "256bit AES 암호화 및 다중 보안 인증", icon: ShieldCheck },
-              { title: "글로벌 지원", desc: "전세계 어디서나 안정적인 원격지원", icon: Globe },
-              { title: "24/7 상담", desc: "연중무휴 동시 다중 고객 상담 가능", icon: Clock },
-              { title: "다중 상담원", desc: "한 명의 상담원이 최대 10명 동시 상담", icon: Users },
-              { title: "상담 기록", desc: "모든 상담 내역 자동 저장 및 분석", icon: FileText },
-              { title: "화상 상담", desc: "HD 화질의 실시간 비디오 상담", icon: Video },
-              { title: "모바일 지원", desc: "Android, iOS 모바일 기기 원격 제어", icon: Smartphone }
             ].map((item, i) => (
               <div key={i} className="p-10 rounded-3xl bg-white border border-slate-200 hover:shadow-2xl hover:border-primary/20 transition-all duration-300 group flex flex-col items-start shadow-sm">
                 <div className="w-14 h-14 rounded-2xl bg-primary/5 text-primary flex items-center justify-center mb-8 group-hover:bg-primary group-hover:text-white transition-all duration-300">
