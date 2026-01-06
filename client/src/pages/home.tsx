@@ -69,78 +69,75 @@ export function Home() {
       {/* 2. 원격지원이란 무엇인가 */}
       <section id="what-is-remote" className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">원격지원(Remote Support)이란?</h2>
-            <p className="text-primary font-bold text-lg mb-2">현장 방문 없이 온라인으로 문제를 즉각 해결하는 기술</p>
-            <p className="text-slate-500 max-w-2xl mx-auto font-medium">
-              애니서포트는 상담원이 고객의 PC나 모바일 화면을 공유받아<br className="hidden md:block" />
-              직접 제어함으로써 장애를 진단하고 해결하는 기업용 전문 서비스입니다.
-            </p>
-          </div>
+          <div className="max-w-5xl mx-auto">
+            <div className="mb-12 text-left">
+              <span className="text-primary font-bold text-xs tracking-widest uppercase mb-3 block">REMOTE SUPPORT</span>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-slate-900">원격지원(Remote Support)이란?</h2>
+              <p className="text-primary font-bold text-lg mb-2">현장 방문 없이 온라인으로 문제를 즉각 해결하는 기술</p>
+              <p className="text-slate-500 font-medium leading-relaxed max-w-2xl">
+                애니서포트는 상담원이 고객의 PC나 모바일 화면을 공유받아<br className="hidden md:block" />
+                직접 제어함으로써 장애를 진단하고 해결하는 기업용 전문 서비스입니다.
+              </p>
+            </div>
 
-          <div className="flex flex-col lg:flex-row items-center gap-12 mb-16 max-w-5xl mx-auto">
-            <div className="flex-1 space-y-6">
-              <h3 className="text-2xl font-bold text-slate-900">비즈니스 효율을 극대화하는 연결</h3>
-              <p className="text-slate-600 leading-relaxed font-medium">
-                물리적 거리의 한계를 넘어 실시간으로 고객의 불편을 해소합니다. 
-                단순한 화면 공유를 넘어 보안이 검증된 채널을 통해 기업의 중요한 자산을 보호하며 지원 업무를 수행할 수 있습니다.
-              </p>
-              <ul className="space-y-3">
-                {['이동 시간 및 비용의 90% 절감', '첫 번째 콜에서의 문제 해결률 상승', '고객 만족도 및 브랜드 신뢰도 향상'].map((item, i) => (
-                  <li key={i} className="flex items-center gap-2 text-slate-700 font-bold">
-                    <CheckCircle2 size={18} className="text-primary" /> {item}
-                  </li>
-                ))}
-              </ul>
+            <div className="flex flex-col lg:flex-row items-center gap-12 mb-16">
+              <div className="flex-1 space-y-6">
+                <h3 className="text-2xl font-bold text-slate-900">비즈니스 효율을 극대화하는 연결</h3>
+                <p className="text-slate-600 leading-relaxed font-medium">
+                  물리적 거리의 한계를 넘어 실시간으로 고객의 불편을 해소합니다. 
+                  단순한 화면 공유를 넘어 보안이 검증된 채널을 통해 기업의 중요한 자산을 보호하며 지원 업무를 수행할 수 있습니다.
+                </p>
+                <ul className="space-y-3">
+                  {['이동 시간 및 비용의 90% 절감', '첫 번째 콜에서의 문제 해결률 상승', '고객 만족도 및 브랜드 신뢰도 향상'].map((item, i) => (
+                    <li key={i} className="flex items-center gap-2 text-slate-700 font-bold">
+                      <CheckCircle2 size={18} className="text-primary" /> {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="flex-1 w-full bg-slate-50 rounded-2xl p-8 border border-slate-100 flex items-center justify-center relative overflow-hidden">
+                <div className="grid grid-cols-3 gap-4 items-center w-full max-w-sm">
+                  <div className="flex flex-col items-center gap-2">
+                    <div className="w-16 h-16 rounded-full bg-white shadow-md flex items-center justify-center text-primary"><Headphones size={32} /></div>
+                    <span className="text-xs font-bold text-slate-500">상담원</span>
+                  </div>
+                  <div className="flex flex-col items-center justify-center">
+                      <div className="h-0.5 w-full bg-slate-200 relative">
+                        <div className="absolute inset-0 bg-primary animate-pulse" />
+                      </div>
+                      <span className="text-[10px] font-bold text-primary mt-2 uppercase tracking-tighter">Secure Link</span>
+                  </div>
+                  <div className="flex flex-col items-center gap-2">
+                    <div className="w-16 h-16 rounded-full bg-white shadow-md flex items-center justify-center text-slate-400"><Monitor size={32} /></div>
+                    <span className="text-xs font-bold text-slate-500">고객</span>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="flex-1 w-full bg-slate-50 rounded-2xl p-8 border border-slate-100 flex items-center justify-center relative overflow-hidden">
-               <div className="grid grid-cols-3 gap-4 items-center w-full max-w-sm">
-                 <div className="flex flex-col items-center gap-2">
-                   <div className="w-16 h-16 rounded-full bg-white shadow-md flex items-center justify-center text-primary"><Headphones size={32} /></div>
-                   <span className="text-xs font-bold text-slate-500">상담원</span>
-                 </div>
-                 <div className="flex flex-col items-center justify-center">
-                    <div className="h-0.5 w-full bg-slate-200 relative">
-                       <div className="absolute inset-0 bg-primary animate-pulse" />
-                    </div>
-                    <span className="text-[10px] font-bold text-primary mt-2 uppercase tracking-tighter">Secure Link</span>
-                 </div>
-                 <div className="flex flex-col items-center gap-2">
-                   <div className="w-16 h-16 rounded-full bg-white shadow-md flex items-center justify-center text-slate-400"><Monitor size={32} /></div>
-                   <span className="text-xs font-bold text-slate-500">고객</span>
-                 </div>
-               </div>
-            </div>
-          </div>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <div className="p-8 rounded-2xl border border-slate-100 bg-white shadow-sm hover:shadow-md transition-shadow">
-              <div className="w-12 h-12 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center mb-6"><Activity size={24} /></div>
-              <h4 className="text-xl font-bold mb-3">무엇을 하는가?</h4>
-              <p className="text-slate-500 text-sm font-medium leading-relaxed">
-                고객의 이탈 없이 즉각적인 장애 진단, 소프트웨어 설정, 시스템 복구 등 전문적인 기술 지원 서비스를 제공합니다.
-              </p>
+            <div className="grid md:grid-cols-3 gap-8 mb-12">
+              {[
+                { icon: Activity, title: "무엇을 하는가?", desc: "고객의 이탈 없이 즉각적인 장애 진단, 소프트웨어 설정, 시스템 복구 등 전문적인 기술 지원 서비스를 제공합니다." },
+                { icon: Zap, title: "어떻게 작동하는가?", desc: "복잡한 설치 과정 없이 생성된 접속 번호 입력만으로 보안 세션이 연결되며, 브라우저나 앱을 통해 실시간 제어가 시작됩니다." },
+                { icon: Building2, title: "왜 필요한가?", desc: "기업의 지원 비용을 획기적으로 낮추고 상담 생산성을 높이며, 대면 지원의 물리적 제약을 극복하기 위해 필수적입니다." }
+              ].map((card, i) => (
+                <div key={i} className="p-8 rounded-2xl border border-slate-100 bg-white shadow-sm hover:shadow-subtle transition-shadow">
+                  <div className="w-12 h-12 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-6">
+                    <card.icon size={24} />
+                  </div>
+                  <h4 className="text-xl font-bold mb-3">{card.title}</h4>
+                  <p className="text-slate-500 text-sm font-medium leading-relaxed">
+                    {card.desc}
+                  </p>
+                </div>
+              ))}
             </div>
-            <div className="p-8 rounded-2xl border border-slate-100 bg-white shadow-sm hover:shadow-md transition-shadow">
-              <div className="w-12 h-12 rounded-lg bg-green-50 text-green-600 flex items-center justify-center mb-6"><Zap size={24} /></div>
-              <h4 className="text-xl font-bold mb-3">어떻게 작동하는가?</h4>
-              <p className="text-slate-500 text-sm font-medium leading-relaxed">
-                복잡한 설치 과정 없이 생성된 접속 번호 입력만으로 보안 세션이 연결되며, 브라우저나 앱을 통해 실시간 제어가 시작됩니다.
-              </p>
-            </div>
-            <div className="p-8 rounded-2xl border border-slate-100 bg-white shadow-sm hover:shadow-md transition-shadow">
-              <div className="w-12 h-12 rounded-lg bg-purple-50 text-purple-600 flex items-center justify-center mb-6"><Building2 size={24} /></div>
-              <h4 className="text-xl font-bold mb-3">왜 필요한가?</h4>
-              <p className="text-slate-500 text-sm font-medium leading-relaxed">
-                기업의 지원 비용을 획기적으로 낮추고 상담 생산성을 높이며, 대면 지원의 물리적 제약을 극복하기 위해 필수적입니다.
-              </p>
-            </div>
-          </div>
 
-          <div className="text-center">
-            <Button variant="outline" size="lg" onClick={() => scrollToSection('connection-process')} className="font-bold border-slate-200 text-slate-700 hover:bg-slate-50">
-              원격지원 작동 방식 자세히 보기
-            </Button>
+            <div className="text-left">
+              <Button variant="outline" size="lg" onClick={() => scrollToSection('connection-process')} className="font-bold border-slate-200 text-slate-700 hover:bg-slate-50">
+                원격지원 작동 방식 자세히 보기
+              </Button>
+            </div>
           </div>
         </div>
       </section>
