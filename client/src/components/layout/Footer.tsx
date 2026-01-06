@@ -3,64 +3,49 @@ import logo from "@assets/generated_images/minimalist_tech_logo_for_anysupport.p
 
 export function Footer() {
   return (
-    <footer className="bg-slate-50 border-t border-slate-200 pt-16 pb-8">
+    <footer className="bg-slate-50 border-t border-slate-200 pt-20 pb-10">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12 mb-16">
           <div className="col-span-2 lg:col-span-2">
-            <Link href="/" className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-lg overflow-hidden bg-primary/10 p-1">
-                 <img src={logo} alt="AnySupport Logo" className="w-full h-full object-contain" />
-              </div>
-              <span className="font-heading font-bold text-xl text-foreground">
-                AnySupport
-              </span>
+            <Link href="/" className="flex items-center gap-2 mb-6">
+              <img src={logo} alt="AnySupport" className="w-8 h-8 opacity-80" />
+              <span className="font-bold text-xl tracking-tighter opacity-80">AnySupport</span>
             </Link>
-            <p className="text-muted-foreground text-sm max-w-sm leading-relaxed mb-6">
-              The enterprise standard for secure remote support. 
-              Helping teams connect, support, and solve problems from anywhere in the world.
+            <p className="text-slate-500 text-sm leading-relaxed max-w-sm">
+              AnySupport는 기업의 디지털 전환을 지원하는 최고의 원격 기술지원 솔루션입니다. 
+              전 세계 어디서든 빠르고 안전한 연결을 제공합니다.
             </p>
           </div>
-          
           <div>
-            <h4 className="font-heading font-bold mb-4">Product</h4>
-            <ul className="space-y-3 text-sm text-muted-foreground">
-              <li><Link href="/features" className="hover:text-primary transition-colors">Features</Link></li>
-              <li><Link href="/security" className="hover:text-primary transition-colors">Security</Link></li>
-              <li><Link href="/integrations" className="hover:text-primary transition-colors">Integrations</Link></li>
-              <li><Link href="/download" className="hover:text-primary transition-colors">Download</Link></li>
+            <h4 className="font-bold mb-6">제품</h4>
+            <ul className="space-y-4 text-sm text-slate-500">
+              <li><Link href="/product">주요기능</Link></li>
+              <li><Link href="/security">보안센터</Link></li>
+              <li><Link href="/download">다운로드</Link></li>
             </ul>
           </div>
-
           <div>
-            <h4 className="font-heading font-bold mb-4">Resources</h4>
-            <ul className="space-y-3 text-sm text-muted-foreground">
-              <li><Link href="/blog" className="hover:text-primary transition-colors">Blog</Link></li>
-              <li><Link href="/case-studies" className="hover:text-primary transition-colors">Case Studies</Link></li>
-              <li><Link href="/help" className="hover:text-primary transition-colors">Help Center</Link></li>
-              <li><Link href="/api" className="hover:text-primary transition-colors">API Docs</Link></li>
+            <h4 className="font-bold mb-6">고객지원</h4>
+            <ul className="space-y-4 text-sm text-slate-500">
+              <li><Link href="/help">도움말</Link></li>
+              <li><Link href="/notice">공지사항</Link></li>
+              <li><Link href="/contact">문의하기</Link></li>
             </ul>
           </div>
-
           <div>
-            <h4 className="font-heading font-bold mb-4">Company</h4>
-            <ul className="space-y-3 text-sm text-muted-foreground">
-              <li><Link href="/about" className="hover:text-primary transition-colors">About Us</Link></li>
-              <li><Link href="/careers" className="hover:text-primary transition-colors">Careers</Link></li>
-              <li><Link href="/contact" className="hover:text-primary transition-colors">Contact</Link></li>
-              <li><Link href="/privacy" className="hover:text-primary transition-colors">Privacy</Link></li>
+            <h4 className="font-bold mb-6">회사</h4>
+            <ul className="space-y-4 text-sm text-slate-500">
+              <li><Link href="/about">회사소개</Link></li>
+              <li><Link href="/careers">인재채용</Link></li>
+              <li><Link href="/privacy">개인정보처리방침</Link></li>
             </ul>
           </div>
         </div>
-
-        <div className="border-t border-slate-200 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-xs text-muted-foreground text-center md:text-left">
-            © {new Date().getFullYear()} AnySupport Inc. All rights reserved.
-          </p>
-          <div className="flex items-center gap-6">
-             {/* Social icons placeholders */}
-             <div className="w-5 h-5 bg-slate-200 rounded-full" />
-             <div className="w-5 h-5 bg-slate-200 rounded-full" />
-             <div className="w-5 h-5 bg-slate-200 rounded-full" />
+        <div className="pt-8 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-6">
+          <p className="text-xs text-slate-400 font-medium">© {new Date().getFullYear()} AnySupport. All rights reserved.</p>
+          <div className="flex gap-4">
+             <div className="w-8 h-8 rounded-full bg-slate-200" />
+             <div className="w-8 h-8 rounded-full bg-slate-200" />
           </div>
         </div>
       </div>

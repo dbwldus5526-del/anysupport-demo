@@ -7,11 +7,11 @@ import logo from "@assets/generated_images/minimalist_tech_logo_for_anysupport.p
 import { cn } from "@/lib/utils";
 
 const NAV_ITEMS = [
-  { label: "Product", href: "/product" },
-  { label: "Solutions", href: "/solutions" },
-  { label: "Pricing", href: "/pricing" },
-  { label: "Download", href: "/download" },
-  { label: "Support", href: "/support" },
+  { label: "제품", href: "/product" },
+  { label: "솔루션", href: "/solutions" },
+  { label: "가격", href: "/pricing" },
+  { label: "다운로드", href: "/download" },
+  { label: "고객지원", href: "/support" },
 ];
 
 export function Header() {
@@ -21,112 +21,61 @@ export function Header() {
   const [location] = useLocation();
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
+    const handleScroll = () => setIsScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Lock body scroll when mobile menu is open
   useEffect(() => {
-    if (isMobileMenuOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "unset";
-    }
-    return () => {
-      document.body.style.overflow = "unset";
-    };
+    if (isMobileMenuOpen) document.body.style.overflow = "hidden";
+    else document.body.style.overflow = "unset";
   }, [isMobileMenuOpen]);
 
   return (
-    <header
-      className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b",
-        isScrolled
-          ? "bg-background/80 backdrop-blur-md border-border/50 py-3 shadow-sm"
-          : "bg-transparent border-transparent py-5"
-      )}
-    >
+    <header className={cn(
+      "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
+      isScrolled ? "bg-white/95 backdrop-blur-md border-b shadow-sm py-3" : "bg-transparent py-5"
+    )}>
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
-        {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group">
-          <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg overflow-hidden bg-primary/10 flex items-center justify-center transition-transform group-hover:scale-105">
-             <img src={logo} alt="AnySupport Logo" className="w-full h-full object-contain p-1" />
-          </div>
-          <span className="font-heading font-bold text-xl md:text-2xl text-foreground tracking-tight">
-            AnySupport
-          </span>
+          <img src={logo} alt="AnySupport" className="w-8 h-8 md:w-10 md:h-10 object-contain" />
+          <span className="font-bold text-xl md:text-2xl tracking-tighter">AnySupport</span>
         </Link>
 
-        {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-10">
           {NAV_ITEMS.map((item) => (
-            <Link 
-              key={item.href} 
-              href={item.href}
-              className={cn(
-                "text-sm font-medium transition-colors hover:text-primary",
-                location === item.href
-                  ? "text-primary font-semibold"
-                  : "text-muted-foreground"
-              )}
-            >
+            <Link key={item.href} href={item.href} className={cn(
+              "text-sm font-semibold transition-colors hover:text-primary",
+              location === item.href ? "text-primary" : "text-foreground/80"
+            )}>
               {item.label}
             </Link>
           ))}
         </nav>
 
-        {/* Desktop CTA */}
-        <div className="hidden md:flex items-center gap-4">
-          <Button variant="ghost" className="font-medium text-muted-foreground hover:text-foreground">
-            Login
-          </Button>
-          <Button onClick={openModal} className="font-semibold shadow-lg shadow-primary/20">
-            Start Free Trial
-          </Button>
+        <div className="hidden md:flex items-center gap-3">
+          <Button variant="ghost" className="font-semibold text-foreground/70">로그인</Button>
+          <Button onClick={openModal} className="font-bold px-6 shadow-md">무료체험 신청</Button>
         </div>
 
-        {/* Mobile Menu Toggle */}
-        <button
-          className="md:hidden p-2 text-foreground"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          aria-label="Toggle menu"
-        >
-          {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+        <button className="md:hidden p-2" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
-      {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
-        <div className="fixed inset-0 top-[60px] z-40 bg-background flex flex-col p-6 md:hidden animate-in slide-in-from-top-5 fade-in duration-200">
-          <nav className="flex flex-col gap-6 text-lg">
+        <div className="fixed inset-0 top-[60px] z-50 bg-white flex flex-col p-6 md:hidden overflow-y-auto">
+          <nav className="flex flex-col gap-4">
             {NAV_ITEMS.map((item) => (
-              <Link 
-                key={item.href} 
-                href={item.href}
-                className="flex items-center justify-between py-2 border-b border-border/50 font-medium text-foreground/80"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
+              <Link key={item.href} href={item.href} onClick={() => setIsMobileMenuOpen(false)} className="flex items-center justify-between py-4 border-b border-slate-100 text-lg font-bold">
                 {item.label}
-                <ChevronRight className="w-4 h-4 text-muted-foreground" />
+                <ChevronRight size={20} className="text-slate-400" />
               </Link>
             ))}
           </nav>
-          <div className="mt-auto flex flex-col gap-4 pb-8">
-            <Button variant="outline" className="w-full justify-center text-base py-6">
-              Login
-            </Button>
-            <Button 
-              className="w-full justify-center text-base py-6 shadow-xl shadow-primary/20"
-              onClick={() => {
-                setIsMobileMenuOpen(false);
-                openModal();
-              }}
-            >
-              Start Free Trial
-            </Button>
+          <div className="mt-auto pt-10 pb-20 flex flex-col gap-4">
+            <Button variant="outline" className="h-14 text-lg font-bold">로그인</Button>
+            <Button onClick={() => { setIsMobileMenuOpen(false); openModal(); }} className="h-14 text-lg font-bold">무료체험 신청</Button>
           </div>
         </div>
       )}
