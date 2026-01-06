@@ -29,7 +29,10 @@ import {
   ChevronUp,
   History,
   Lock,
-  Palette
+  Palette,
+  Phone,
+  Send,
+  Star
 } from "lucide-react";
 import featuresHeroImg from "@assets/generated_images/modern_digital_dashboard_showing_various_remote_support_features_and_statistics.png";
 
@@ -70,7 +73,15 @@ export default function Features() {
         { title: "원격프린팅", desc: "원격지원 중 공유한 문서에 대해 파일 전송 없이 고객의 PC 에서 출력이 가능합니다.", icon: Printer },
         { title: "소리전송", desc: "상담원은 문제에 있는 고객 PC 소리를 실시간으로 들을 수 있습니다.", icon: Mic },
         { title: "시스템 정보보기", desc: "원격지PC의 상세한 시스템 정보를 체크합니다. 이를 통해 문제 원인 파악 방향을 파악 분석할 수 있도록 지원합니다.", icon: Info },
-        { title: "프로세스 정보보기", desc: "원격지 PC에서 실행중 프로세스를 관리할 수 있습니다. 문제가 되는 프로그램을 삭제하거나 강제종료 할 수도 있습니다.", icon: Settings2 }
+        { title: "프로세스 정보보기", desc: "원격지 PC에서 실행중 프로세스를 관리할 수 있습니다. 문제가 되는 프로그램을 삭제하거나 강제종료 할 수도 있습니다.", icon: Settings2 },
+        { title: "상담원 화면 전송 / 제어", desc: "상담원의 화면을 고객에게 전송하여 보여주거나 역으로 제어하게 할 수도 제어받게 할 수 있습니다.", icon: Phone },
+        { title: "작업 관리자 실행 (Ctrl+Alt+Del)", desc: "전 법칙 클릭으로 작업 관리자를 실행하거나 시스템을 재부팅할 때 사용할 수 있습니다.", icon: Settings2 },
+        { title: "URL전송", desc: "고객 PC에 자동으로 URL를 전송하여 자동으로 웹브라우저를 통해 실행합니다.", icon: Send },
+        { title: "즐겨찾기 (로그, 프로그램, URL)", desc: "자주 사용되는 페이지나 로그, 프로그램 경로를 전송하여 자동으로 실행합니다.", icon: Star },
+        { title: "환경설정", desc: "내도록 및 고객 PC 사양에 따라 전송 속도의 최대 품질 등을 설정할 수 있습니다.", icon: Settings2 },
+        { title: "화면설정", desc: "고객의 PC 화면 자유도를 전송받아 50%, 75% 등의 비율로 관련에게 조정이 가능합니다.", icon: Share2 },
+        { title: "해상도변경", desc: "고객의 상담의 PC 간에 화면 범위상 다른 경우, 자유도를 원활하게하여 상담원의 화면에 맞게 경합니다.", icon: Monitor },
+        { title: "클립보드", desc: "클립보드는 동기 고객에게 전달하고자 하는 내용을 복사해서 전송할 수 있습니다.", icon: FileText }
       ]
     },
     {
