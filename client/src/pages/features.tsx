@@ -15,7 +15,10 @@ import {
   MessageSquare,
   FileUp,
   BarChart3,
-  Settings2
+  Settings2,
+  Users,
+  FileText,
+  Smartphone
 } from "lucide-react";
 import featuresHeroImg from "@assets/generated_images/modern_digital_dashboard_showing_various_remote_support_features_and_statistics.png";
 
@@ -125,34 +128,42 @@ export default function Features() {
           </div>
         </div>
       </section>
-      {/* Special Power Features (Dark) */}
-      <section className="py-24 bg-slate-900 text-white">
-        <div className="container mx-auto px-4 md:px-6 text-center">
-          <div className="mb-16">
-            <span className="text-primary font-black tracking-widest uppercase text-sm mb-4 block">POWER FEATURES</span>
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">운영을 위한 기능 중심 설계</h2>
-            <p className="text-slate-400 text-lg max-w-2xl mx-auto">
-              애니서포트는 단순한 제어 도구가 아닙니다. 기업의 워크플로우를 이해하고 상담원의 편의성을 고려합니다.
+      {/* Core Features Summary - 4x2 Grid */}
+      <section className="py-24 bg-slate-50 border-y border-slate-100">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900 font-black">핵심 기능 요약</h2>
+            <p className="text-slate-500 text-lg max-w-2xl mx-auto font-medium">
+              애니서포트가 제공하는 8가지 핵심 기능을 한눈에 확인하세요.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
             {[
-              { title: "세션 기록 및 통계", desc: "모든 상담 이력을 투명하게 관리하고 데이터화합니다.", icon: Clock },
-              { title: "관리 대시보드", desc: "실시간 연결 현황과 지표를 직관적으로 파악합니다.", icon: LayoutDashboard },
-              { title: "맞춤형 환경 설정", desc: "기업의 보안 정책과 브랜드에 맞게 기능을 커스터마이징합니다.", icon: Settings2 }
+              { title: "빠른 원격 연결", desc: "3초 이내 즉시 연결되는 초고속 원격 지원 기술", icon: Zap },
+              { title: "강력한 보안", desc: "256bit AES 암호화 및 다중 보안 인증", icon: ShieldCheck },
+              { title: "글로벌 지원", desc: "전세계 어디서나 안정적인 원격지원", icon: Globe },
+              { title: "24/7 상담", desc: "연중무휴 동시 다중 고객 상담 가능", icon: Clock },
+              { title: "다중 상담원", desc: "한 명의 상담원이 최대 10명 동시 상담", icon: Users },
+              { title: "상담 기록", desc: "모든 상담 내역 자동 저장 및 분석", icon: FileText },
+              { title: "화상 상담", desc: "HD 화질의 실시간 비디오 상담", icon: Video },
+              { title: "모바일 지원", desc: "Android, iOS 모바일 기기 원격 제어", icon: Smartphone }
             ].map((item, i) => (
-              <div key={i} className="p-10 rounded-3xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors group">
-                <div className="w-16 h-16 rounded-2xl bg-primary/20 text-primary flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
-                  <item.icon size={32} />
+              <div key={i} className="p-10 rounded-3xl bg-white border border-slate-200 hover:shadow-2xl hover:border-primary/20 transition-all duration-300 group flex flex-col items-start shadow-sm">
+                <div className="w-14 h-14 rounded-2xl bg-primary/5 text-primary flex items-center justify-center mb-8 group-hover:bg-primary group-hover:text-white transition-all duration-300">
+                  <item.icon size={28} />
                 </div>
-                <h3 className="text-xl font-bold mb-3">{item.title}</h3>
-                <p className="text-slate-400 text-sm leading-relaxed">{item.desc}</p>
+                <h3 className="text-xl font-bold mb-4 text-slate-900 group-hover:text-primary transition-colors leading-tight">{item.title}</h3>
+                <p className="text-slate-500 text-sm leading-relaxed font-medium">
+                  {item.desc}
+                </p>
               </div>
             ))}
           </div>
         </div>
       </section>
+
+      {/* CTA Section */}
       {/* CTA Section */}
       <section className="py-24 bg-white text-center">
         <div className="container mx-auto px-4">
