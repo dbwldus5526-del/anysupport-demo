@@ -102,11 +102,12 @@ export default function Features() {
       summary: "상담 데이터를 체계적으로 관리하고 인사이트를 도출합니다.",
       icon: BarChart3,
       items: [
-        { title: "관리자 대시보드", desc: "전체 상담 현황과 상담원 활동을 한눈에 파악하고 관리합니다.", icon: LayoutDashboard },
-        { title: "상세 통계 리포트", desc: "상담 시간, 횟수 등 다양한 데이터를 분석하여 보고서로 제공합니다.", icon: BarChart3 },
-        { title: "상담 이력 관리", desc: "과거 상담 내역을 체계적으로 보관하고 간편하게 조회합니다.", icon: History },
-        { title: "세션 녹화", desc: "모든 과정을 영상으로 기록하여 교육 및 감사에 활용합니다.", icon: Video },
-        { title: "시스템 정보 확인", desc: "고객 PC의 상세 사양과 상태를 실시간으로 확인합니다.", icon: Info }
+        { title: "관리자 페이지", desc: "상담원 계정을 생성 및 수정, 제거할 수 있는 관리자 페이지를 제공합니다.", icon: LayoutDashboard },
+        { title: "상담원 통계", desc: "전체유형별, 기간별, 월별, 일별, 시간별, 상담원별 등 상담내역에 대해 상세한 통계 자료를 제공합니다.", icon: BarChart3 },
+        { title: "고객 접속페이지 수정 / 설정", desc: "고객 접속 페이지를 고객이 스스로 변경할 수 있도록 하는 기능을 제공합니다.", icon: Settings2 },
+        { title: "고객 만족도 조사", desc: "원격지원 후의 고객만족도를 조사할 수 있는 설문조사 기능을 제공합니다.", icon: CheckCircle2 },
+        { title: "상담 일지", desc: "상담내역 및 정애내용을 상세하게 기록하여 저장 및 관리를 할 수 있는 기능을 제공합니다.", icon: FileText },
+        { title: "원격지원 기록 관리", desc: "시작 / 종료 시간 및 원격지원 시간 등 상세내역을 저장하며, Excel 파일로 다운로드 할 수 있는 기능을 제공합니다.", icon: FileText }
       ]
     }
   ];
