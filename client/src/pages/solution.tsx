@@ -19,6 +19,7 @@ import {
   FileText
 } from "lucide-react";
 import solutionHeroImg from "@assets/generated_images/professional_enterprise_remote_support_solution_hero_background.png";
+import { Link } from "wouter";
 
 export default function Solution() {
   const { openModal } = useModal();
@@ -61,36 +62,6 @@ export default function Solution() {
         </div>
       </section>
 
-      {/* 2. 보안성과 안전성 */}
-      <section className="py-24 bg-white border-y border-slate-100">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="max-w-4xl mx-auto">
-            <div className="flex flex-col items-center text-center mb-16">
-              <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-6">
-                <ShieldCheck size={32} />
-              </div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">보안성과 안전성</h2>
-              <p className="text-xl text-slate-700 font-semibold">기업이 요구하는 보안 기준을 기본으로 설계했습니다.</p>
-            </div>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-              {[
-                { title: "SSL/TLS 암호화 통신", icon: Lock },
-                { title: "접속 기록 및 로그 관리", icon: FileText },
-                { title: "관리자 권한 분리", icon: Settings },
-                { title: "IP 제한 / 세션 제어", icon: ShieldCheck },
-                { title: "고객 동의 기반 접속", icon: CheckCircle2 },
-                { title: "이중 보안 인증", icon: Database }
-              ].map((item, i) => (
-                <div key={i} className="p-6 rounded-xl bg-slate-50 border border-slate-100 flex flex-col items-center text-center gap-3">
-                  <item.icon className="text-primary" size={24} />
-                  <span className="font-bold text-slate-800 text-sm">{item.title}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* 3. 다양한 기능 */}
       <section className="py-24 bg-slate-900 text-white">
         <div className="container mx-auto px-4 md:px-6">
@@ -98,7 +69,7 @@ export default function Solution() {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">다양한 기능</h2>
             <p className="text-slate-400 text-lg">단순한 원격 제어가 아닌 운영을 위한 기능 중심 설계</p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-16">
             {[
               { title: "원격 제어", icon: Monitor },
               { title: "화면 공유", icon: Globe },
@@ -112,6 +83,13 @@ export default function Solution() {
                 <span className="font-bold">{item.title}</span>
               </div>
             ))}
+          </div>
+          <div className="flex justify-center">
+            <Link href="/solution/features">
+              <Button size="lg" className="h-14 px-10 text-lg font-bold border-2 border-primary/20 bg-transparent hover:bg-primary/10 text-white transition-all">
+                기능 더 자세히 보기 <ArrowRight className="ml-2" size={20} />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
