@@ -71,6 +71,71 @@ export default function Download() {
           </div>
         </div>
       </section>
+      {/* Customer Launcher Section */}
+      <section className="py-24 bg-white border-t border-slate-100">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="max-w-6xl mx-auto">
+            <div className="mb-12">
+              <h3 className="text-2xl md:text-3xl font-black mb-3 text-slate-900">고객용 원격지원 런처</h3>
+              <p className="text-slate-500 font-bold">상담사가 안내한 인증번호를 입력하여 원격지원을 받습니다.</p>
+            </div>
+
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
+              {[
+                { name: "Windows", desc: "고객용 런처", icon: <Monitor size={24} />, color: "#004481", btn: "다운로드" },
+                { name: "macOS", desc: "고객용 런처", icon: <Apple size={24} />, color: "#004481", btn: "다운로드" },
+                { name: "Android", desc: "고객용 앱", icon: <Smartphone size={24} />, color: "#004481", btn: "Google Play" },
+                { name: "iOS", desc: "고객용 앱", icon: <Smartphone size={24} />, color: "#004481", btn: "App Store" },
+              ].map((item, i) => (
+                <div key={i} className="flex flex-col items-center p-8 rounded-xl bg-white border border-slate-200 shadow-sm text-center">
+                  <div className={`w-14 h-14 rounded-xl flex items-center justify-center text-white mb-6`} style={{ backgroundColor: item.color }}>
+                    {item.icon}
+                  </div>
+                  <h4 className="text-lg font-bold text-slate-900 mb-1">{item.name}</h4>
+                  <p className="text-slate-400 text-xs font-bold mb-8">{item.desc}</p>
+                  <Button variant="outline" className="w-full border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white font-bold h-10 rounded-lg text-xs">
+                    {item.btn}
+                  </Button>
+                </div>
+              ))}
+            </div>
+
+            {/* Web Version Banner */}
+            <div className="relative rounded-[2rem] bg-gradient-to-r from-[#001d4d] to-[#004481] p-12 md:p-16 text-center text-white overflow-hidden shadow-2xl shadow-blue-900/20">
+              <div className="relative z-10">
+                <h3 className="text-2xl md:text-3xl font-black mb-6">설치 없이 브라우저에서도 바로 원격지원을 받을 수 있습니다!</h3>
+                <p className="text-white/80 font-medium mb-10 max-w-2xl mx-auto leading-relaxed">
+                  다운로드가 어려운 환경에서도 웹 브라우저만 있으면<br />
+                  상담사가 안내한 인증번호를 입력하여 즉시 원격지원을 받으실 수 있습니다.
+                </p>
+                <Button size="lg" className="bg-white text-[#001d4d] hover:bg-slate-100 font-black px-8 h-14 rounded-xl gap-2 shadow-lg">
+                  <Globe size={20} /> 웹에서 바로 원격지원 받기
+                </Button>
+              </div>
+            </div>
+
+            {/* Mobile Experience Section */}
+            <div className="mt-24 text-center">
+              <h4 className="text-xl font-bold text-slate-900 mb-8">모바일에서도 애니서포트를 경험하세요</h4>
+              <div className="flex justify-center gap-4">
+                <button className="h-14 px-6 bg-black rounded-xl border border-white/10 flex items-center gap-3 transition-transform hover:scale-105">
+                  <div className="text-white text-left">
+                    <p className="text-[10px] uppercase font-bold text-white/60">GET IT ON</p>
+                    <p className="text-lg font-black leading-none">Google Play</p>
+                  </div>
+                </button>
+                <button className="h-14 px-6 bg-black rounded-xl border border-white/10 flex items-center gap-3 transition-transform hover:scale-105">
+                  <Apple className="text-white" size={28} />
+                  <div className="text-white text-left">
+                    <p className="text-[10px] uppercase font-bold text-white/60">Download on the</p>
+                    <p className="text-lg font-black leading-none">App Store</p>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
