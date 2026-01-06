@@ -5,6 +5,11 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
 import { Home } from "@/pages/home";
+import Product from "@/pages/product";
+import Solution from "@/pages/solution";
+import Pricing from "@/pages/pricing";
+import Download from "@/pages/download";
+import Support from "@/pages/support";
 import { ModalProvider } from "@/context/ModalContext";
 import { GetStartedModal } from "@/components/modals/GetStartedModal";
 import { Header } from "@/components/layout/Header";
@@ -17,19 +22,19 @@ function Router() {
       <main>
         <Switch>
           <Route path="/" component={Home} />
-          <Route path="/product" component={Home} />
-          <Route path="/product/pc" component={Home} />
-          <Route path="/product/mobile" component={Home} />
-          <Route path="/product/video" component={Home} />
-          <Route path="/solution" component={Home} />
-          <Route path="/solution/intro" component={Home} />
-          <Route path="/solution/security" component={Home} />
-          <Route path="/solution/features" component={Home} />
-          <Route path="/solution/guide" component={Home} />
-          <Route path="/solution/environment" component={Home} />
-          <Route path="/pricing" component={Home} />
-          <Route path="/download" component={Home} />
-          <Route path="/support" component={Home} />
+          <Route path="/product" component={Product} />
+          <Route path="/product/pc" component={Product} />
+          <Route path="/product/mobile" component={Product} />
+          <Route path="/product/video" component={Product} />
+          <Route path="/solution" component={Solution} />
+          <Route path="/solution/intro" component={Solution} />
+          <Route path="/solution/security" component={Solution} />
+          <Route path="/solution/features" component={Solution} />
+          <Route path="/solution/guide" component={Solution} />
+          <Route path="/solution/environment" component={Solution} />
+          <Route path="/pricing" component={Pricing} />
+          <Route path="/download" component={Download} />
+          <Route path="/support" component={Support} />
           <Route component={NotFound} />
         </Switch>
       </main>
