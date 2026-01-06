@@ -39,12 +39,12 @@ export function Home() {
   return (
     <div className="flex flex-col">
       {/* 1. Hero Section */}
-      <section className="relative min-h-[600px] flex items-center pt-20 pb-20 overflow-hidden bg-white">
+      <section className="relative min-h-[90vh] flex items-center pt-20 pb-20 overflow-hidden bg-white">
         <div className="absolute inset-0 z-0">
           <img 
             src={heroImage} 
             alt="AnySupport Background" 
-            className="w-full h-full object-cover object-right opacity-80"
+            className="w-full h-full object-cover object-center opacity-80"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-transparent lg:w-2/3" />
         </div>
