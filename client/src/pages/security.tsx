@@ -240,7 +240,7 @@ export default function Security() {
                     <div className="flex-grow">
                       <div className="flex items-center gap-3 mb-2">
                         <h4 className="text-xl font-bold text-white">{item.title}</h4>
-                        <span className="px-2 py-0.5 rounded bg-primary/20 text-primary text-[10px] font-bold">
+                        <span className="px-2 py-0.5 rounded bg-primary/20 text-primary font-bold text-[14px]">
                           {item.subtitle}
                         </span>
                       </div>
