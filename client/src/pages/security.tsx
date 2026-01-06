@@ -180,7 +180,7 @@ export default function Security() {
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary to-transparent" />
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">6. 고객 신뢰를 위한 설계 철학</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">고객 신뢰를 위한 설계 철학</h2>
             <p className="text-primary font-bold text-xl">편의성과 보안의 균형</p>
           </div>
           
