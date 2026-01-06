@@ -131,32 +131,32 @@ export default function Security() {
           <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-px bg-slate-200 border border-slate-200 rounded-3xl overflow-hidden shadow-sm">
             {[
               {
-                title: "🔐 접속 보안",
+                title: "접속 보안",
                 desc: "허가된 연결만 통제된 접근을 통해 무단 접속을 완벽하게 차단합니다.",
                 icon: UserCheck
               },
               {
-                title: "🔒 데이터 보안",
+                title: "데이터 보안",
                 desc: "모든 통신 구간을 SSL/TLS로 암호화하여 데이터 유출을 방지합니다.",
                 icon: Lock
               },
               {
-                title: "👤 권한 관리",
+                title: "권한 관리",
                 desc: "상담원과 관리자의 역할을 명확히 분리하여 접근 권한을 제한합니다.",
                 icon: Key
               },
               {
-                title: "📄 로그 관리",
+                title: "로그 관리",
                 desc: "모든 원격지원 세션 이력을 기록하여 투명한 감사 추적을 지원합니다.",
                 icon: History
               },
               {
-                title: "🏢 기업 대응",
+                title: "기업 대응",
                 desc: "SaaS 및 온프레미스 등 기업별 보안 정책에 맞춤형 도입이 가능합니다.",
                 icon: Building2
               },
               {
-                title: "🛡 설계 철학",
+                title: "설계 철학",
                 desc: "사용자 편의성과 기업 보안의 균형을 맞춘 안심 설계 원칙을 준수합니다.",
                 icon: ShieldAlert
               }
