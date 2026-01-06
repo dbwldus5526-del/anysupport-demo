@@ -27,7 +27,9 @@ import {
   RefreshCw,
   ChevronDown,
   ChevronUp,
-  History
+  History,
+  Lock,
+  Palette
 } from "lucide-react";
 import featuresHeroImg from "@assets/generated_images/modern_digital_dashboard_showing_various_remote_support_features_and_statistics.png";
 
@@ -48,7 +50,12 @@ export default function Features() {
         { title: "그리기", desc: "고객의 PC 화면에 직접 그림을 그려 선택한 만큼 클릭하거나 구역을 지정하는 등 양방향 실시간 제공이 가능합니다.", icon: PenTool },
         { title: "멀티모니터 지원", desc: "복수의 디스플레이 장치를 사용하는 고객의 환경에 대해서도 상담원이 모든 화면을 살펴 지원이 가능합니다.", icon: Monitor },
         { title: "재부팅 후 자동 재접속", desc: "고객 PC를 재부팅한 후에 자동으로 재접속합니다.", icon: RefreshCw },
-        { title: "안전모드 원격지원", desc: "안전모드에서 원격 지원이 가능하며, 재부팅 후 안전모드로 진입하는 기능을 제공합니다.", icon: ShieldCheck }
+        { title: "안전모드 원격지원", desc: "안전모드에서 원격 지원이 가능하며, 재부팅 후 안전모드로 진입하는 기능을 제공합니다.", icon: ShieldCheck },
+        { title: "방화벽 / 프록시 / 사설망 터널링", desc: "방화벽, 프록시, IP 공유기 이용한 사설 IP로 구성되어 있는 환경에 자동으로 호환이 되어 신속하게 지원이 가능합니다.", icon: Globe },
+        { title: "마우스/키보드 잠금", desc: "운용자의 실수를 막아 고객의 마우스 키보드 ON/OFF를 설정할 수 있습니다.", icon: Lock },
+        { title: "트루컬러지원", desc: "애니서포트는 2, 4, 16, 256, True Color를 지원합니다. 또한 화질지원 도수 해상도 변경도 가능합니다.", icon: Palette },
+        { title: "고객 프로그램 미설치 (Non-ActiveX)", desc: "고객은 ActiveX 외 별도의 프로그램 설치 과정 없이 간편하게 원격지원 연결이 가능합니다. 또한 설치가 끝난 후에는 모든 관련 프로그램을 제거합니다.", icon: Settings2 },
+        { title: "멀티브라우저 지원", desc: "IE 및 모든 웹 브라우저를 지원합니다. (IE, Chrome, Firefox, Opera, Safari 등)", icon: Globe }
       ]
     },
     {
