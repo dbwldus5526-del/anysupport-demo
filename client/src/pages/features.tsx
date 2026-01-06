@@ -32,7 +32,8 @@ export default function Features() {
 
   const featureGroups = [
     {
-      title: "원격 제어 및 공유",
+      title: "기본 기능",
+      summary: "원격지원의 가장 핵심적인 기본 기능들",
       icon: Monitor,
       items: [
         { title: "고성능 원격 제어", desc: "지연 없는 실시간 화면 제어와 빠른 응답 속도를 제공합니다." },
@@ -41,25 +42,28 @@ export default function Features() {
       ]
     },
     {
-      title: "커뮤니케이션 도구",
-      icon: MessageSquare,
-      items: [
-        { title: "양방향 음성/영상", icon: Video, desc: "텍스트 너머의 생생한 소통으로 상담 효율을 극대화합니다." },
-        { title: "실시간 채팅", icon: MessageSquare, desc: "지원 도중 끊김 없는 메시지 교환이 가능합니다." },
-        { title: "시스템 사운드 공유", icon: Mic, desc: "고객 PC의 소리를 상담원 쪽에서도 실시간으로 확인합니다." }
-      ]
-    },
-    {
-      title: "파일 및 데이터 관리",
-      icon: FileUp,
+      title: "부가 기능",
+      summary: "상담 환경을 풍부하게 만드는 다양한 도구",
+      icon: Zap,
       items: [
         { title: "드래그 앤 드롭 전송", desc: "파일을 끌어다 놓는 것만으로 대용량 파일도 빠르게 전송합니다." },
-        { title: "세션 녹화", desc: "모든 원격지원 과정을 영상으로 기록하여 교육 및 사후 검증에 활용합니다." },
+        { title: "양방향 음성/영상", desc: "텍스트 너머의 생생한 소통으로 상담 효율을 극대화합니다." },
         { title: "클립보드 공유", desc: "상담원과 고객 간의 텍스트 및 이미지 복사/붙여넣기를 지원합니다." }
       ]
     },
     {
-      title: "관리 및 통계",
+      title: "협업·보안",
+      summary: "안전하고 효율적인 팀 협업 환경 구축",
+      icon: ShieldCheck,
+      items: [
+        { title: "강력한 보안 인증", desc: "256bit AES 암호화 및 다중 보안 인증을 지원합니다." },
+        { title: "다중 상담원 접속", desc: "한 명의 고객을 여러 상담원이 동시에 지원할 수 있습니다." },
+        { title: "세션 권한 제어", desc: "기능별 사용 권한을 세밀하게 제어하여 보안을 강화합니다." }
+      ]
+    },
+    {
+      title: "관리·통계",
+      summary: "체계적인 데이터 관리와 성과 분석",
       icon: BarChart3,
       items: [
         { title: "관리자 대시보드", desc: "전체 상담 현황과 상담원 활동을 한눈에 파악하고 관리합니다." },
@@ -71,7 +75,7 @@ export default function Features() {
 
   return (
     <div className="flex flex-col">
-      {/* Hero Section - Matching Security Page Style */}
+      {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden bg-slate-900 text-white">
         <div className="absolute inset-0 z-0">
           <img 
@@ -102,7 +106,48 @@ export default function Features() {
           </div>
         </div>
       </section>
-      {/* Core Features Summary - 4x2 Grid */}
+
+      {/* 1. Category Cards Section */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4 md:px-6 text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-4">카테고리별 주요 기능</h2>
+          <p className="text-slate-500 font-medium">네 가지 핵심 영역으로 구분된 효율적인 도구 세트</p>
+        </div>
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            {featureGroups.map((group, idx) => (
+              <div key={idx} className="p-10 rounded-[2.5rem] bg-slate-50 border border-slate-100 hover:shadow-2xl transition-all duration-500 flex flex-col h-full group">
+                <div className="flex items-center gap-5 mb-6">
+                  <div className="w-16 h-16 rounded-2xl bg-primary text-white flex items-center justify-center shadow-lg shadow-primary/20 group-hover:scale-110 transition-transform">
+                    <group.icon size={32} />
+                  </div>
+                  <div className="text-left">
+                    <h2 className="text-2xl font-black text-slate-900">{group.title}</h2>
+                    <p className="text-primary font-bold text-sm">{group.summary}</p>
+                  </div>
+                </div>
+                
+                <div className="space-y-4 mb-10 flex-grow text-left">
+                  {group.items.slice(0, 3).map((item, i) => (
+                    <div key={i} className="flex items-center gap-3">
+                      <CheckCircle2 className="text-primary/60" size={18} />
+                      <span className="font-bold text-slate-700">{item.title}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="pt-6 border-t border-slate-200 text-left">
+                  <Button variant="ghost" className="p-0 h-auto font-black text-primary hover:text-primary/80 hover:bg-transparent group/btn">
+                    자세히 보기 <ArrowRight className="ml-2 group-hover/btn:translate-x-1 transition-transform" size={18} />
+                  </Button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 2. Core Features Summary - 4x2 Grid */}
       <section className="py-24 bg-slate-50 border-y border-slate-100">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
@@ -137,43 +182,11 @@ export default function Features() {
         </div>
       </section>
 
-      {/* Feature Groups Grid */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="grid lg:grid-cols-2 gap-12">
-            {featureGroups.map((group, idx) => (
-              <div key={idx} className="p-8 rounded-[2.5rem] bg-slate-50 border border-slate-100 hover:shadow-xl transition-all duration-500">
-                <div className="flex items-center gap-4 mb-10">
-                  <div className="w-14 h-14 rounded-2xl bg-primary text-white flex items-center justify-center shadow-lg shadow-primary/20">
-                    <group.icon size={28} />
-                  </div>
-                  <h2 className="text-2xl font-black text-slate-900">{group.title}</h2>
-                </div>
-                
-                <div className="space-y-6">
-                  {group.items.map((item, i) => (
-                    <div key={i} className="flex gap-4 p-5 rounded-2xl bg-white border border-slate-100 group hover:border-primary/30 transition-all">
-                      <div className="mt-1">
-                        <CheckCircle2 className="text-primary" size={20} />
-                      </div>
-                      <div>
-                        <h4 className="font-bold text-slate-900 mb-1 group-hover:text-primary transition-colors">{item.title}</h4>
-                        <p className="text-sm text-slate-500 leading-relaxed font-medium">{item.desc}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Advanced Features Section - 4x2 Grid */}
+      {/* 3. Advanced Features Section - 4x2 Grid */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900 font-black">고급 기능</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900 font-black">상세 기능 확장</h2>
             <p className="text-slate-500 text-lg max-w-2xl mx-auto font-medium">
               더욱 전문적인 원격지원을 위한 고급 기능들
             </p>
@@ -204,7 +217,6 @@ export default function Features() {
         </div>
       </section>
 
-      {/* CTA Section */}
       {/* CTA Section */}
       <section className="py-24 bg-white text-center">
         <div className="container mx-auto px-4">
