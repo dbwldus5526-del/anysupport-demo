@@ -17,9 +17,16 @@ function Router() {
       <main>
         <Switch>
           <Route path="/" component={Home} />
-          {/* For prototype, map all main nav links to Home since it's a landing page */}
           <Route path="/product" component={Home} />
-          <Route path="/solutions" component={Home} />
+          <Route path="/product/pc" component={Home} />
+          <Route path="/product/mobile" component={Home} />
+          <Route path="/product/video" component={Home} />
+          <Route path="/solution" component={Home} />
+          <Route path="/solution/intro" component={Home} />
+          <Route path="/solution/security" component={Home} />
+          <Route path="/solution/features" component={Home} />
+          <Route path="/solution/guide" component={Home} />
+          <Route path="/solution/environment" component={Home} />
           <Route path="/pricing" component={Home} />
           <Route path="/download" component={Home} />
           <Route path="/support" component={Home} />
