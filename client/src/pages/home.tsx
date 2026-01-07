@@ -292,26 +292,87 @@ export function Home() {
       </section>
       {/* 3. 왜 원격지원 애니서포트인가 (신뢰 요소) */}
       <section className="py-24 bg-slate-50">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-[25px] md:text-4xl font-bold mb-4">왜 애니서포트인가요?</h2>
-            <p className="text-slate-500 max-w-2xl mx-auto text-[14px] md:text-lg">기업이 신뢰할 수 있는 압도적인 기술력과 안정성</p>
-          </div>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              { icon: Zap, title: "안정성", desc: "99.9% 연결 성공률 보장" },
-              { icon: ShieldCheck, title: "보안", desc: "금융권 수준의 암호화 기술" },
-              { icon: Building2, title: "기업 도입 사례", desc: "1,000+ 글로벌 기업 도입" },
-              { icon: Activity, title: "운영 신뢰성", desc: "24/365 중단 없는 모니터링" }
-            ].map((item, i) => (
-              <div key={i} className="bg-white p-6 sm:p-8 rounded-2xl border border-slate-100 shadow-sm text-center">
-                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary mx-auto mb-4 sm:mb-6">
-                  <item.icon size={24} className="sm:w-7 sm:h-7" />
+        <div className="container mx-auto px-4 md:px-6 max-w-6xl">
+          <div className="flex flex-col lg:flex-row gap-16 items-center">
+            {/* Left side: Content */}
+            <div className="lg:w-1/2">
+              <h2 className="text-[25px] md:text-4xl font-bold mb-6 leading-tight">왜 애니서포트인가요?</h2>
+              <p className="text-slate-600 text-lg mb-8 leading-relaxed">
+                기업이 신뢰할 수 있는 압도적인 기술력과 안정성으로<br className="hidden md:block" />
+                원격 지원의 새로운 기준을 제시합니다.
+              </p>
+              
+              <ul className="space-y-6 mb-10">
+                {[
+                  { title: "검증된 신뢰성", desc: "국내외 1,200+ 기업이 매일 사용하는 안정적인 솔루션" },
+                  { title: "타협 없는 보안", desc: "금융권 수준의 End-to-End 암호화 및 다중 인증 체계" },
+                  { title: "효율적인 운영", desc: "관리 비용 절감과 상담원 생산성 극대화를 위한 설계" }
+                ].map((item, i) => (
+                  <li key={i} className="flex gap-4">
+                    <div className="mt-1 w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <div className="w-2 h-2 rounded-full bg-primary" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-slate-900 mb-1">{item.title}</h4>
+                      <p className="text-slate-500 text-sm">{item.desc}</p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+              
+              <Button 
+                variant="outline" 
+                onClick={() => scrollToSection('use-cases')}
+                className="font-bold border-slate-200 text-slate-600 hover:text-primary hover:border-primary"
+              >
+                고객 도입 사례 보기 <ArrowRight className="ml-2 w-4 h-4" />
+              </Button>
+            </div>
+
+            {/* Right side: 2x2 Grid */}
+            <div className="lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {[
+                { 
+                  icon: Zap, 
+                  title: "압도적 안정성", 
+                  desc: "끊김 없는 연결로 상담 지연을 최소화합니다.",
+                  badges: ["99.9% 성공률", "저대역폭 최적화"]
+                },
+                { 
+                  icon: ShieldCheck, 
+                  title: "금융권 보안", 
+                  desc: "가장 엄격한 보안 규정을 준수하며 보호합니다.",
+                  badges: ["AES-256", "SSL/TLS"]
+                },
+                { 
+                  icon: Activity, 
+                  title: "운영 투명성", 
+                  desc: "모든 활동은 기록되어 사후 감사가 가능합니다.",
+                  badges: ["감사로그", "녹화 기능"]
+                },
+                { 
+                  icon: Clock, 
+                  title: "중단 없는 지원", 
+                  desc: "글로벌 인프라로 언제 어디서나 접속 가능합니다.",
+                  badges: ["24/365", "글로벌 IDC"]
+                }
+              ].map((item, i) => (
+                <div key={i} className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-all group">
+                  <div className="w-10 h-10 rounded-xl bg-primary/5 flex items-center justify-center text-primary mb-4 group-hover:scale-110 transition-transform">
+                    <item.icon size={20} />
+                  </div>
+                  <h3 className="text-lg font-bold mb-2 text-slate-900">{item.title}</h3>
+                  <p className="text-slate-500 text-xs leading-relaxed mb-4">{item.desc}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {item.badges.map((badge, bi) => (
+                      <span key={bi} className="px-2 py-1 bg-slate-50 text-[10px] font-bold text-slate-400 rounded-md border border-slate-100">
+                        {badge}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-                <h3 className="text-base sm:text-lg font-bold mb-1 sm:mb-2">{item.title}</h3>
-                <p className="text-slate-500 text-xs sm:text-sm font-medium">{item.desc}</p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -455,7 +516,9 @@ export function Home() {
         </div>
       </section>
       {/* 9. 산업별 최적화 솔루션 */}
-      <UseCasesLogos />
+      <section id="use-cases">
+        <UseCasesLogos />
+      </section>
       {/* 10. 서비스 도입 방식 선택 */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
