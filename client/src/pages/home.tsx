@@ -73,6 +73,8 @@ function Counter({ value, duration = 2, suffix = "" }: { value: string, duration
   );
 }
 
+import UseCasesLogos from "@/components/sections/UseCasesLogos";
+
 export function Home() {
   const { openModal } = useModal();
 
@@ -346,28 +348,7 @@ export function Home() {
         </div>
       </section>
       {/* 9. 산업별 최적화 솔루션 */}
-      <section className="py-24 bg-slate-50">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-[25px] md:text-4xl font-bold mb-4">산업별 환경에 최적화된 원격지원</h2>
-            <p className="text-slate-500 max-w-2xl mx-auto text-[14px] md:text-lg">국내외 주요 기업들이 애니서포트를 선택한 이유</p>
-          </div>
-          <div className="mb-12">
-            <div className="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm overflow-hidden">
-              <img 
-                src={companyLogos} 
-                alt="Partner Companies" 
-                className="w-full h-auto opacity-80 hover:opacity-100 transition-opacity duration-500"
-              />
-            </div>
-          </div>
-          <div className="text-center">
-            <Button variant="outline" onClick={openModal} className="font-bold border-slate-300">
-              활용 사례 자세히 보기
-            </Button>
-          </div>
-        </div>
-      </section>
+      <UseCasesLogos />
       {/* 10. 서비스 도입 방식 선택 */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
