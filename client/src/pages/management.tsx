@@ -173,7 +173,7 @@ export default function Management() {
               {
                 title: "01. 원격지원 세션관리",
                 desc: "인증번호 생성 버튼을 누르면 인증번호가 생성되며, 최대 10개의 인증번호를 생성할 수 있습니다.\n\n6자리의 접속 인증 번호는 랜덤으로 생성되며, 하나의 인증 번호로 단 한 번의 접속을 할 수 있게 설정하여 임의의 재접속을 원천적으로 차단합니다.\n\n고객이 접속인증번호를 입력하면 고객의 PC에 자동으로 연결되며, 설정을 통하여 자동접속 여부를 결정할 수 있습니다.",
-                image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=1200",
+                image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=1200",
                 badge: "Session Control"
               },
               {
