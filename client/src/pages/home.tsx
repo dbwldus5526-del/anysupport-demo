@@ -386,9 +386,9 @@ export function Home() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             {[
-              { image: pcSupportImg, title: "PC 지원", desc: "Windows, macOS, Linux 지원", href: "/solution/pc" },
-              { image: mobileSupportImg, title: "Mobile 지원", desc: "Android, iOS 실시간 제어", href: "/solution/mobile" },
-              { image: videoSupportImg, title: "Video 지원", desc: "현장 영상 기반 원격 가이드", href: "/solution/video" }
+              { image: pcSupportImg, title: "PC 지원", desc: "Windows, macOS, Linux 지원", href: "/product/pc" },
+              { image: mobileSupportImg, title: "Mobile 지원", desc: "Android, iOS 실시간 제어", href: "/product/mobile" },
+              { image: videoSupportImg, title: "Video 지원", desc: "현장 영상 기반 원격 가이드", href: "/product/video" }
             ].map((item, i) => (
               <Link key={i} href={item.href} data-testid={`link-solution-${item.title}`}>
                 <div className="overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm flex flex-col group hover:shadow-md transition-shadow cursor-pointer h-full">
