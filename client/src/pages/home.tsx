@@ -73,6 +73,113 @@ function Counter({ value, duration = 2, suffix = "" }: { value: string, duration
   );
 }
 
+// Custom Icon Components based on the requested design style
+const DesignIcon = ({ type }: { type: string }) => {
+  const baseClasses = "w-12 h-12 relative flex items-center justify-center";
+  
+  if (type === "chat") {
+    return (
+      <div className={baseClasses}>
+        <div className="absolute inset-0 bg-blue-100 rounded-xl" />
+        <div className="absolute bottom-2 right-2 w-6 h-6 bg-blue-500 rounded-lg flex items-center justify-center shadow-sm">
+          <div className="w-3 h-0.5 bg-white rounded-full" />
+        </div>
+        <MessageSquare className="text-blue-600 relative z-10" size={24} />
+      </div>
+    );
+  }
+  
+  if (type === "control") {
+    return (
+      <div className={baseClasses}>
+        <div className="absolute inset-0 bg-orange-100 rounded-xl" />
+        <div className="absolute top-1 right-1 w-4 h-4 bg-orange-500 rounded-full border-2 border-white" />
+        <Zap className="text-orange-600 relative z-10" size={24} />
+      </div>
+    );
+  }
+
+  if (type === "file") {
+    return (
+      <div className={baseClasses}>
+        <div className="absolute inset-0 bg-green-100 rounded-xl" />
+        <div className="absolute inset-2 border-2 border-green-500/20 rounded-lg border-dashed" />
+        <FileText className="text-green-600 relative z-10" size={24} />
+      </div>
+    );
+  }
+
+  if (type === "record") {
+    return (
+      <div className={baseClasses}>
+        <div className="absolute inset-0 bg-purple-100 rounded-xl rotate-3" />
+        <div className="absolute inset-0 bg-purple-50 rounded-xl -rotate-3" />
+        <Clock className="text-purple-600 relative z-10" size={24} />
+      </div>
+    );
+  }
+
+  if (type === "multi") {
+    return (
+      <div className={baseClasses}>
+        <div className="absolute inset-0 bg-cyan-100 rounded-full" />
+        <div className="absolute -top-1 -right-1 w-5 h-5 bg-cyan-500 rounded-full flex items-center justify-center text-[10px] text-white font-bold">+</div>
+        <Users className="text-cyan-600 relative z-10" size={24} />
+      </div>
+    );
+  }
+
+  if (type === "monitor") {
+    return (
+      <div className={baseClasses}>
+        <div className="absolute inset-0 bg-indigo-100 rounded-xl shadow-inner" />
+        <Monitor className="text-indigo-600 relative z-10" size={24} />
+      </div>
+    );
+  }
+
+  if (type === "lock") {
+    return (
+      <div className={baseClasses}>
+        <div className="absolute inset-0 bg-red-100 rounded-2xl" />
+        <div className="absolute bottom-1 right-1 w-4 h-4 bg-red-500 rounded-md" />
+        <Lock className="text-red-600 relative z-10" size={24} />
+      </div>
+    );
+  }
+
+  if (type === "diag") {
+    return (
+      <div className={baseClasses}>
+        <div className="absolute inset-0 bg-amber-100 rounded-xl" />
+        <div className="absolute inset-3 bg-amber-500/10 rounded-full animate-ping" />
+        <Activity className="text-amber-600 relative z-10" size={24} />
+      </div>
+    );
+  }
+
+  if (type === "browser") {
+    return (
+      <div className={baseClasses}>
+        <div className="absolute inset-0 bg-sky-100 rounded-xl" />
+        <div className="absolute top-2 left-2 w-2 h-2 bg-sky-400 rounded-full" />
+        <Globe className="text-sky-600 relative z-10" size={24} />
+      </div>
+    );
+  }
+
+  if (type === "log") {
+    return (
+      <div className={baseClasses}>
+        <div className="absolute inset-0 bg-slate-100 rounded-xl border border-slate-200" />
+        <Database className="text-slate-600 relative z-10" size={24} />
+      </div>
+    );
+  }
+
+  return <Activity size={24} />;
+};
+
 import UseCasesLogos from "@/components/sections/UseCasesLogos";
 
 export function Home() {
@@ -249,20 +356,20 @@ export function Home() {
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 mb-12 max-w-6xl mx-auto">
             {[
-              { icon: MessageSquare, title: "채팅/메시지" },
-              { icon: Zap, title: "화면 제어" },
-              { icon: FileText, title: "파일 전송" },
-              { icon: Clock, title: "상담 기록" },
-              { icon: Users, title: "다중 접속" },
-              { icon: Monitor, title: "듀얼 모니터" },
-              { icon: Lock, title: "권한 관리" },
-              { icon: Activity, title: "시스템 진단" },
-              { icon: Globe, title: "브라우저 제어" },
-              { icon: Database, title: "로그 분석" }
+              { type: "chat", title: "채팅/메시지" },
+              { type: "control", title: "화면 제어" },
+              { type: "file", title: "파일 전송" },
+              { type: "record", title: "상담 기록" },
+              { type: "multi", title: "다중 접속" },
+              { type: "monitor", title: "듀얼 모니터" },
+              { type: "lock", title: "권한 관리" },
+              { type: "diag", title: "시스템 진단" },
+              { type: "browser", title: "브라우저 제어" },
+              { type: "log", title: "로그 분석" }
             ].map((item, i) => (
               <div key={i} className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex flex-col items-center gap-4 hover:border-primary/50 transition-colors group">
-                <div className="w-12 h-12 rounded-full bg-slate-50 flex items-center justify-center group-hover:bg-primary/5 transition-colors">
-                  <item.icon size={24} className="text-primary" />
+                <div className="group-hover:scale-110 transition-transform duration-300">
+                  <DesignIcon type={item.type} />
                 </div>
                 <span className="font-bold text-slate-800 text-sm">{item.title}</span>
               </div>
