@@ -97,7 +97,7 @@ export default function UseCasesLogos() {
                   <img
                     src={logo.path}
                     alt={`${logo.name} 로고`}
-                    className="max-h-16 w-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300 opacity-60 group-hover:opacity-100"
+                    className="max-h-16 w-full object-contain transition-all duration-300"
                     onError={(e) => {
                       const target = e.target as HTMLImageElement;
                       target.src = `https://placehold.co/200x80/f8fafc/64748b?text=${logo.name}`;
