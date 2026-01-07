@@ -285,7 +285,7 @@ export function Home() {
             </div>
             <div>
               <div className="font-black mb-2 text-[#121212] text-[45px]">50,000+</div>
-              <div className="text-slate-500 font-bold">도입 기업 수</div>
+              <div className="text-slate-500 font-bold">하루 평균 고객지원수</div>
             </div>
             <div>
               <div className="font-black mb-2 text-[#121212] text-[45px]">100만+</div>
