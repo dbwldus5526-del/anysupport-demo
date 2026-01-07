@@ -87,7 +87,7 @@ export default function Guide() {
       title: "고객의 상담요청",
       summary: "고객이 콜센터 또는 헬프 데스크를 통해 연락",
       description: "고객과의 통화만으로는 상황파악이 안되거나 설명이 길어져 답답하실때 고객에게 신속하게 대응하지 못하고 계실때 먼저 고객에게 원격지원을 권유하실 수 있습니다.",
-      image: "/attached_assets/2_1767771415681.png"
+      image: "/guide/step-01.png"
     },
     {
       id: "02",
@@ -95,7 +95,7 @@ export default function Guide() {
       title: "상담원 로그인",
       summary: "전달받으신 ID, PW를 사용하여 로그인 합니다.",
       description: "01. 홈페이지를 통해 로그인 하신 후 프로그램을 실행합니다.\n02. 원격지원을 자주 이용하시는 PC라면 설치파일을 통해 웹페이지 접속없이 바로 프로그램을 실행 접속합니다.",
-      image: "/attached_assets/howto-normal-02-kr_new_1767771431029.png"
+      image: "/guide/step-02.png"
     },
     {
       id: "03",
@@ -103,7 +103,7 @@ export default function Guide() {
       title: "세션연결시도",
       summary: "세션번호생성 후 접속페이지 URL과 함께 고객에게 전달",
       description: "상담원은 원격지원 프로그램에서 고객의 확인을 위한 암호화 된 세션번호를 생성, 접속할 원격지원 홈페이지(988.co.kr/ 전용 URL)과 함께 세션번호를 유/무선 상으로 고객에게 전달합니다.",
-      image: "/attached_assets/howto-normal-03-kr_new_1767771449038.png"
+      image: "/guide/step-03.png"
     },
     {
       id: "04",
@@ -111,7 +111,7 @@ export default function Guide() {
       title: "고객접속페이지 열기",
       summary: "인터넷창을 열어 988.co.kr에 접속합니다.",
       description: "상담원의 안내에 따라 전달받으신 고객접속 전용 URL 또는 988.co.kr 에 접속합니다.",
-      image: "/attached_assets/img-isc01-03_1767771470812.png"
+      image: "/guide/step-04.png"
     },
     {
       id: "05",
@@ -119,7 +119,7 @@ export default function Guide() {
       title: "접속 인증번호 입력",
       summary: "상담원으로부터 전달받은 6자리 번호를 입력합니다.",
       description: "상담원에게 전달받으신 세션번호를 입력하시면 원격지원이 연결됩니다. 전용 URL의 경우 인증번호 입력방식, 번호 클릭(단 한번의 클릭으로 접속) 두가지 방식 중 택1 또는 둘 다 이용하실 수 있습니다.",
-      image: "/attached_assets/2image_1767771588546.png"
+      image: "/guide/step-05.png"
     },
     {
       id: "06",
@@ -127,7 +127,7 @@ export default function Guide() {
       title: "원격제어 시작",
       summary: "고객의 PC에 접속해서 원격지원을 수행합니다.",
       description: "화면공유, 파일송수신, 캔버스 기능, 키보드 / 마우스 제어, 실시간 채팅, 멀티모니터, 음성채팅, 세션전달 등 애니서포트의 다양한 기능을 이용하여 고객의 고민을 해결합니다.",
-      image: "/attached_assets/ChatGPT_Image_2025년_6월_2일_오후_02_53_09_1767771623894.png"
+      image: "/guide/step-06.png"
     }
   ];
 
