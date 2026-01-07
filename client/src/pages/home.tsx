@@ -200,9 +200,9 @@ export function Home() {
           <img 
             src={heroImage} 
             alt="AnySupport Background" 
-            className="w-full h-full object-cover object-center opacity-80"
+            className="w-full h-full object-cover object-right-bottom opacity-80"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-transparent lg:w-2/3" />
+          <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent lg:w-3/4" />
         </div>
         
         <div className="container mx-auto px-4 md:px-6 relative z-10">
