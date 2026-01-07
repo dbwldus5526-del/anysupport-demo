@@ -284,7 +284,7 @@ export function Home() {
               <div className="text-slate-500 font-bold">누적 지원 건수</div>
             </div>
             <div>
-              <div className="text-5xl font-black mb-2 text-[#121212]">1,200+</div>
+              <div className="font-black mb-2 text-[#121212] text-[45px]">50,000+</div>
               <div className="text-slate-500 font-bold">도입 기업 수</div>
             </div>
             <div>
