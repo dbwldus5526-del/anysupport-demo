@@ -29,9 +29,8 @@ import mobileSupportImgOriginal from "@assets/generated_images/mobile_remote_sup
 import pcSupportImg from "@assets/uibg-pc_new_1767775521573.png";
 import mobileSupportImg from "@assets/uibg-mobile_NEW_1767775657450.png";
 import videoSupportImg from "@assets/uibg-video_new_1767775875384.png";
+import customerImg from "@assets/고객접속페이지_1767775938862.png";
 import companyLogos from "@assets/기업로고new_1767749031414.png";
-import sessionImg from "@assets/관리자페이지__원격지원_세션관리_1767774669198.png";
-import customerImg from "@assets/howto-normal-01_복사본_1767775321934.png";
 import { Link, useLocation } from "wouter";
 
 function Counter({ value, duration = 2, suffix = "" }: { value: string, duration?: number, suffix?: string }) {
@@ -189,9 +188,16 @@ import UseCasesLogos from "@/components/sections/UseCasesLogos";
 
 export function Home() {
   const { openModal } = useModal();
-  const [activeDevice, setActiveDevice] = useState("pc");
+  const [activeDevice, setActiveDevice] = useState("agent");
 
   const deviceViewItems = [
+    {
+      id: "agent",
+      label: "상담원 프로그램",
+      title: "전용 상담원 프로그램",
+      desc: "전문 상담원을 위한 통합 제어 도구로 업무 효율성을 극대화합니다.",
+      image: sessionImg
+    },
     {
       id: "pc",
       label: "PC",
@@ -212,13 +218,6 @@ export function Home() {
       title: "Video 원격지원",
       desc: "현장 상황을 영상으로 공유하며 실시간 화상 가이드를 제공합니다.",
       image: videoSupportImg
-    },
-    {
-      id: "agent",
-      label: "상담원 프로그램",
-      title: "전용 상담원 프로그램",
-      desc: "전문 상담원을 위한 통합 제어 도구로 업무 효율성을 극대화합니다.",
-      image: sessionImg
     },
     {
       id: "customer",
