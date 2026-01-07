@@ -31,7 +31,7 @@ import mobileSupportImg from "@assets/uibg-mobile_NEW_1767775657450.png";
 import videoSupportImg from "@assets/uibg-video_new_1767775875384.png";
 import customerImg from "@assets/고객접속페이지_1767776199142.png";
 import companyLogos from "@assets/기업로고new_1767749031414.png";
-import sessionImg from "@assets/관리자페이지__원격지원_세션관리_1767774669198.png";
+import sessionImg from "@assets/상담원프로그램._1767776278541.png";
 import { Link, useLocation } from "wouter";
 
 function Counter({ value, duration = 2, suffix = "" }: { value: string, duration?: number, suffix?: string }) {
