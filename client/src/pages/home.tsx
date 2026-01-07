@@ -25,7 +25,7 @@ import {
 import { motion, useInView } from "framer-motion";
 import heroImage from "@assets/hero1_1767765900169.png";
 import pcSupportImg from "@assets/uibg-pc_new_1767775521573.png";
-import mobileSupportImg from "@assets/generated_images/mobile_remote_support_app_interface.png";
+import mobileSupportImg from "@assets/uibg-mobile_NEW_1767775657450.png";
 import videoSupportImg from "@assets/generated_images/video-based_remote_support_concept.png";
 import companyLogos from "@assets/기업로고new_1767749031414.png";
 import sessionImg from "@assets/관리자페이지__원격지원_세션관리_1767774669198.png";
