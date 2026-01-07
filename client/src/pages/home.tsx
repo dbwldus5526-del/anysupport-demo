@@ -309,7 +309,7 @@ export function Home() {
               <ShieldCheck size={40} />
             </div>
             <h2 className="md:text-4xl font-bold mb-6 text-[25px]">강력한 기술력과 타협 없는 보안</h2>
-            <p className="text-slate-400 mb-10 text-[13px]">
+            <p className="text-slate-400 mb-10 text-[14px]">
               자체 개발한 최적화 코덱으로 저대역폭에서도 끊김 없는 원격 제어를 구현했습니다.<br className="hidden md:block" />
               종단간 암호화(E2E)와 다중 보안 인증으로 기업의 엄격한 보안 요구 수준을 완벽하게 충족합니다.
             </p>
