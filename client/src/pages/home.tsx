@@ -468,9 +468,11 @@ export function Home() {
             ))}
           </div>
           <div className="text-center">
-            <Button variant="ghost" onClick={openModal} className="font-bold text-primary hover:bg-primary/5">
-              사용 방법 자세히 보기 <ArrowRight className="ml-2 w-4 h-4" />
-            </Button>
+            <Link href="/solution/guide">
+              <Button variant="ghost" className="font-bold text-primary hover:bg-primary/5">
+                사용 방법 자세히 보기 <ArrowRight className="ml-2 w-4 h-4" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

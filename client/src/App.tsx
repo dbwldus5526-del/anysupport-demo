@@ -10,6 +10,7 @@ import Product from "@/pages/product";
 import MobileProduct from "@/pages/mobile-product";
 import VideoProduct from "@/pages/video-product";
 import Solution from "@/pages/solution";
+import Guide from "@/pages/guide";
 import Security from "@/pages/security";
 import Features from "@/pages/features";
 import Pricing from "@/pages/pricing";
@@ -46,7 +47,7 @@ function Router() {
           <Route path="/solution/intro" component={Solution} />
           <Route path="/solution/security" component={Security} />
           <Route path="/solution/features" component={Features} />
-          <Route path="/solution/guide" component={Solution} />
+          <Route path="/solution/guide" component={Guide} />
           <Route path="/solution/environment" component={Solution} />
           <Route path="/pricing" component={Pricing} />
           <Route path="/download" component={Download} />
