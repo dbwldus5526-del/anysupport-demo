@@ -102,15 +102,33 @@ export default function Guide() {
       </section>
 
       {/* 6-Step Usage Guide Section */}
-      <section className="py-24 border-b border-slate-100">
+      <section className="py-24 border-b border-slate-100 bg-white">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 max-w-7xl mx-auto relative">
             {usageSteps.map((step, i) => (
-              <div key={i} className="flex flex-col items-center group">
-                <div className="w-full aspect-square bg-[#0c2b5e] rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-blue-900/20 group-hover:-translate-y-2 transition-transform duration-300">
-                  <step.icon className="text-white w-1/2 h-1/2" />
+              <div key={i} className="flex flex-col items-center group relative">
+                {/* Connector Arrow (Desktop) */}
+                {i < usageSteps.length - 1 && (
+                  <div className="hidden lg:block absolute top-12 -right-4 translate-x-1/2 z-20">
+                    <ArrowRight className="text-slate-200" size={24} />
+                  </div>
+                )}
+                
+                <div className="relative mb-6">
+                  {/* Step Badge */}
+                  <div className="absolute -top-2 -left-2 bg-primary text-white text-[10px] font-black px-2 py-1 rounded-md z-30 shadow-lg">
+                    STEP {i + 1}
+                  </div>
+                  
+                  {/* Icon Container with Layered Design */}
+                  <div className="w-24 h-24 relative flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                    <div className="absolute inset-0 bg-blue-50 rounded-[2rem] rotate-6 group-hover:rotate-12 transition-transform duration-500" />
+                    <div className="absolute inset-0 bg-blue-600 rounded-[2rem] -rotate-3 shadow-xl shadow-blue-600/20 group-hover:rotate-0 transition-transform duration-500" />
+                    <step.icon className="text-white relative z-10 w-10 h-10" strokeWidth={1.5} />
+                  </div>
                 </div>
-                <h3 className="text-slate-800 font-bold text-[15px] text-center leading-tight whitespace-pre-wrap">
+
+                <h3 className="text-slate-900 font-black text-sm text-center leading-tight whitespace-pre-wrap max-w-[120px]">
                   {step.title}
                 </h3>
               </div>
