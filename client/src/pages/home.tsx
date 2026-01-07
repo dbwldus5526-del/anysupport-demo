@@ -23,7 +23,7 @@ import {
   Database
 } from "lucide-react";
 import { motion, useInView } from "framer-motion";
-import heroImage from "@assets/section1_image1_1767765770901.png";
+import heroImage from "@assets/hero1_1767765900169.png";
 import pcSupportImg from "@assets/generated_images/pc_remote_support_professional_image.png";
 import mobileSupportImg from "@assets/generated_images/mobile_remote_support_app_interface.png";
 import videoSupportImg from "@assets/generated_images/video-based_remote_support_concept.png";
@@ -202,7 +202,7 @@ export function Home() {
             alt="AnySupport Background" 
             className="w-full h-full object-cover object-right-bottom opacity-80"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent lg:w-3/4" />
+          <div className="absolute inset-0 bg-gradient-to-r from-white via-white/40 to-transparent lg:w-1/2" />
         </div>
         
         <div className="container mx-auto px-4 md:px-6 relative z-10">
