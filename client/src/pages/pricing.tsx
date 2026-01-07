@@ -301,7 +301,7 @@ export default function Pricing() {
                                 <span className="text-slate-300 font-bold">-</span>
                               )
                             ) : (
-                              <span className="text-slate-900 font-black text-sm">{val}</span>
+                              <span className="font-black text-sm text-[#2563eb]">{val}</span>
                             )}
                           </div>
                         ))}
