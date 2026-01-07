@@ -206,7 +206,7 @@ export default function Management() {
                   </div>
                 </div>
                 <div className="flex-1 w-full">
-                  <div className="rounded-3xl overflow-hidden shadow-2xl border border-slate-100 bg-slate-100 aspect-[16/10]">
+                  <div className="rounded-3xl overflow-hidden border border-slate-100 bg-slate-100 aspect-[16/10]">
                     <img 
                       src={item.image} 
                       alt={item.title} 
