@@ -493,7 +493,7 @@ export function Home() {
         </div>
       </section>
       {/* 8. 성과와 지표 (숫자로 증명) */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-[#0f172b]">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-12 text-center">
             <div>
