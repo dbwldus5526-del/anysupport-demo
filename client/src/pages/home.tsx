@@ -28,6 +28,8 @@ import pcSupportImg from "@assets/generated_images/pc_remote_support_professiona
 import mobileSupportImg from "@assets/generated_images/mobile_remote_support_app_interface.png";
 import videoSupportImg from "@assets/generated_images/video-based_remote_support_concept.png";
 import companyLogos from "@assets/기업로고new_1767749031414.png";
+import sessionImg from "@assets/관리자페이지__원격지원_세션관리_1767774669198.png";
+import customerImg from "@assets/image_1767775019814.png";
 import { Link } from "wouter";
 
 function Counter({ value, duration = 2, suffix = "" }: { value: string, duration?: number, suffix?: string }) {
@@ -185,6 +187,45 @@ import UseCasesLogos from "@/components/sections/UseCasesLogos";
 
 export function Home() {
   const { openModal } = useModal();
+  const [activeDevice, setActiveDevice] = useState("pc");
+
+  const deviceViewItems = [
+    {
+      id: "pc",
+      label: "PC",
+      title: "PC 원격지원",
+      desc: "강력한 원격 제어와 파일 전송 기능을 PC 환경에서 경험하세요.",
+      image: pcSupportImg
+    },
+    {
+      id: "mobile",
+      label: "Mobile",
+      title: "Mobile 원격지원",
+      desc: "스마트폰 화면 공유와 실시간 가이드를 통해 모바일 이슈를 즉각 해결합니다.",
+      image: mobileSupportImg
+    },
+    {
+      id: "video",
+      label: "Video",
+      title: "Video 원격지원",
+      desc: "현장 상황을 영상으로 공유하며 실시간 화상 가이드를 제공합니다.",
+      image: videoSupportImg
+    },
+    {
+      id: "agent",
+      label: "상담원 프로그램",
+      title: "전용 상담원 프로그램",
+      desc: "전문 상담원을 위한 통합 제어 도구로 업무 효율성을 극대화합니다.",
+      image: sessionImg
+    },
+    {
+      id: "customer",
+      label: "고객접속 페이지",
+      title: "심플한 고객 접속",
+      desc: "복잡한 설치 없이 브라우저에서 바로 접속 번호만으로 지원을 받습니다.",
+      image: customerImg
+    }
+  ];
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -442,6 +483,7 @@ export function Home() {
               </div>
             ))}
           </div>
+
           <div className="text-center">
             <Link href="/solution/features">
               <Button size="lg" className="font-bold shadow-lg">
@@ -451,6 +493,68 @@ export function Home() {
           </div>
         </div>
       </section>
+
+      {/* 5.1 Device Support Toggle Section */}
+      <section className="py-24 bg-white border-y border-slate-50">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-black text-slate-900 mb-4 leading-tight">
+              환경은 달라도, 지원은 하나로 완성됩니다
+            </h2>
+            <p className="text-slate-500 max-w-2xl mx-auto text-lg font-medium">
+              PC·모바일·웹 환경을 아우르는 통합 원격 지원 기술
+            </p>
+          </div>
+
+          <div className="flex flex-wrap justify-center gap-3 mb-12">
+            {deviceViewItems.map((device) => (
+              <button
+                key={device.id}
+                onClick={() => setActiveDevice(device.id)}
+                className={`px-6 py-2.5 rounded-full text-sm font-bold transition-all duration-300 border ${
+                  activeDevice === device.id
+                    ? "bg-primary text-white border-primary shadow-lg shadow-primary/20"
+                    : "bg-white text-slate-500 border-slate-200 hover:border-primary hover:text-primary"
+                }`}
+              >
+                {device.label}
+              </button>
+            ))}
+          </div>
+
+          <div className="max-w-5xl mx-auto">
+            <div className="relative rounded-[2.5rem] overflow-hidden bg-slate-900 shadow-2xl p-4 md:p-8 aspect-[16/10] flex items-center justify-center">
+              <motion.div 
+                key={activeDevice}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4 }}
+                className="w-full h-full relative"
+              >
+                <img 
+                  src={deviceViewItems.find(d => d.id === activeDevice)?.image} 
+                  alt="Device View" 
+                  className="w-full h-full object-cover rounded-2xl opacity-90"
+                />
+                <div className="absolute bottom-12 left-12 right-12 text-white z-10">
+                  <h3 className="text-2xl md:text-3xl font-bold mb-2">
+                    {deviceViewItems.find(d => d.id === activeDevice)?.title}
+                  </h3>
+                  <p className="text-white/80 text-lg">
+                    {deviceViewItems.find(d => d.id === activeDevice)?.desc}
+                  </p>
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-60" />
+              </motion.div>
+            </div>
+            <p className="mt-8 text-center text-slate-400 text-sm flex items-center justify-center gap-2">
+              <span className="inline-block w-4 h-4 bg-yellow-400 rounded-full flex items-center justify-center text-[10px] text-white">💡</span>
+              이미지 상단의 버튼을 클릭하여 각 환경에 대한 상세 화면을 확인하세요
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* 6. 원격 연결 프로세스 (4단계) */}
       <section id="connection-process" className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
