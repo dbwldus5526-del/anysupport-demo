@@ -27,36 +27,43 @@ export default function Solution() {
   return (
     <div className="flex flex-col">
       {/* 1. 애니서포트 소개 Hero */}
-      <section className="relative pt-32 pb-20 overflow-hidden bg-slate-50">
+      <section className="relative min-h-[80vh] flex items-center pt-32 pb-20 overflow-hidden bg-slate-900 text-white">
+        {/* Background Image with Overlay */}
+        <div className="absolute inset-0 z-0">
+          <img 
+            src={solutionHeroImg} 
+            alt="Solution Background" 
+            className="w-full h-full object-cover opacity-60" 
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/80 to-transparent" />
+        </div>
+
         <div className="container mx-auto px-4 md:px-6 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="max-w-2xl">
+          <div className="grid lg:grid-cols-1 gap-12 items-center">
+            <div className="max-w-3xl">
               <span className="text-primary font-bold text-[10px] md:text-sm tracking-widest uppercase mb-4 block">ANY SUPPORT SOLUTION</span>
-              <h1 className="text-3xl md:text-5xl font-black text-slate-900 mb-6 leading-tight">
+              <h1 className="text-4xl md:text-6xl font-black text-white mb-6 leading-tight">
                 고객과 기업을 잇는<br />
                 <span className="text-primary">최고의 원격지원 SaaS</span>
               </h1>
-              <p className="text-lg md:text-xl font-bold text-slate-800 mb-4">
-                애니서포트는 고객 상담, IT 지원, 운영 지원을 하나로 연결하는 기업용 원격지원 SaaS입니다.
+              <p className="text-lg md:text-2xl font-bold text-slate-200 mb-8 leading-relaxed">
+                애니서포트는 고객 상담, IT 지원, 운영 지원을 하나로 연결하는<br className="hidden md:block" /> 기업용 원격지원 SaaS입니다.
               </p>
-              <div className="space-y-4 mb-8">
+              <div className="grid md:grid-cols-2 gap-x-8 gap-y-4 mb-10">
                 {[
                   "기업 환경에 최적화된 원격지원 솔루션",
                   "보안·관리·확장성 중심 설계",
                   "국내 기업 환경에 맞춘 기술 지원"
                 ].map((item, i) => (
-                  <div key={i} className="flex items-center gap-3 text-slate-600 font-medium">
-                    <CheckCircle2 className="text-primary" size={20} />
+                  <div key={i} className="flex items-center gap-3 text-slate-300 font-bold">
+                    <CheckCircle2 className="text-primary shrink-0" size={22} />
                     {item}
                   </div>
                 ))}
               </div>
-              <Button size="lg" onClick={openModal} className="h-14 px-8 font-bold text-lg shadow-lg">
-                도입 문의하기 <ArrowRight className="ml-2" />
+              <Button size="lg" onClick={openModal} className="h-16 px-10 font-black text-xl shadow-2xl shadow-primary/20 group">
+                도입 문의하기 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
-            </div>
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-200 aspect-video">
-              <img src={solutionHeroImg} alt="Solution Background" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
