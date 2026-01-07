@@ -420,22 +420,25 @@ export function Home() {
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 mb-12 max-w-6xl mx-auto">
             {[
-              { type: "chat", title: "채팅/메시지" },
-              { type: "control", title: "화면 제어" },
-              { type: "file", title: "파일 전송" },
-              { type: "record", title: "상담 기록" },
-              { type: "multi", title: "다중 접속" },
-              { type: "monitor", title: "듀얼 모니터" },
-              { type: "lock", title: "권한 관리" },
-              { type: "diag", title: "시스템 진단" },
-              { type: "browser", title: "브라우저 제어" },
-              { type: "log", title: "로그 분석" }
+              { type: "chat", title: "채팅/메시지", desc: "실시간 양방향 채팅 지원" },
+              { type: "control", title: "화면 제어", desc: "빠르고 끊김없는 원격 제어" },
+              { type: "file", title: "파일 전송", desc: "드래그 앤 드롭 대용량 전송" },
+              { type: "record", title: "상담 기록", desc: "전 과정 자동 녹화 및 저장" },
+              { type: "multi", title: "다중 접속", desc: "동시 여러 대의 PC 지원" },
+              { type: "monitor", title: "듀얼 모니터", desc: "다중 모니터 완벽 대응" },
+              { type: "lock", title: "권한 관리", desc: "상세한 사용자 접근 제어" },
+              { type: "diag", title: "시스템 진단", desc: "하드웨어 및 프로세스 분석" },
+              { type: "browser", title: "브라우저 제어", desc: "특정 웹페이지 원격 지원" },
+              { type: "log", title: "로그 분석", desc: "상세 세션 로그 리포트" }
             ].map((item, i) => (
-              <div key={i} className="bg-white p-6 rounded-xl border border-slate-100 flex flex-col items-center gap-4 transition-colors">
-                <div>
+              <div key={i} className="bg-white p-6 rounded-xl border border-slate-100 flex flex-col items-center text-center gap-3 transition-colors">
+                <div className="mb-2">
                   <DesignIcon type={item.type} />
                 </div>
-                <span className="font-bold text-slate-800 text-sm">{item.title}</span>
+                <div className="flex flex-col gap-1">
+                  <span className="font-bold text-slate-800 text-sm">{item.title}</span>
+                  <p className="text-[11px] text-slate-500 leading-tight">{item.desc}</p>
+                </div>
               </div>
             ))}
           </div>
