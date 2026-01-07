@@ -284,11 +284,11 @@ export function Home() {
               <div className="text-slate-500 font-bold">누적 지원 건수</div>
             </div>
             <div>
-              <div className="text-5xl font-black text-primary mb-2">1,200+</div>
+              <div className="text-5xl font-black mb-2 text-[#121212]">1,200+</div>
               <div className="text-slate-500 font-bold">도입 기업 수</div>
             </div>
             <div>
-              <div className="text-5xl font-black text-primary mb-2">99.9%</div>
+              <div className="text-5xl font-black mb-2 text-[#121212]">99.9%</div>
               <div className="text-slate-500 font-bold">연결 성공률</div>
             </div>
           </div>
