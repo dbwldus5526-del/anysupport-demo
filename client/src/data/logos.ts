@@ -93,7 +93,7 @@ export const logos: Logo[] = [
   { id: 64, name: "김천시", category: "공공", path: logoGimcheon },
   { id: 65, name: "대법원", category: "공공", path: logoSupremeCourt },
   { id: 66, name: "법무부", category: "공공", path: logoMoj },
-  { id: 67, name: "서울특별시", category: "공공", path: logoSeoulCity },
+  { id: 67, name: "서울특별시", category: "공공", path: "@assets/서울특별시@2x_1767763176435.png" },
   { id: 68, name: "조달청", category: "공공", path: logoPps },
   { id: 69, name: "통계청", category: "공공", path: logoKostat },
   { id: 70, name: "통일부", category: "공공", path: logoUnikorea },
