@@ -278,10 +278,10 @@ export function Home() {
       {/* 8. 성과와 지표 (숫자로 증명) */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-12 text-center">
             <div>
-              <div className="font-black mb-2 text-[#121212] text-[45px]">6,000만+</div>
-              <div className="text-slate-500 font-bold">애니서포트 사용 기업</div>
+              <div className="font-black mb-2 text-[#121212] text-[45px]">1,200+</div>
+              <div className="text-slate-500 font-bold">국내외 도입 기업수</div>
             </div>
             <div>
               <div className="font-black mb-2 text-[#121212] text-[45px]">50,000+</div>
@@ -290,6 +290,10 @@ export function Home() {
             <div>
               <div className="font-black mb-2 text-[#121212] text-[45px]">100만+</div>
               <div className="text-slate-500 font-bold">한달 평균 원격연결수</div>
+            </div>
+            <div>
+              <div className="font-black mb-2 text-[#121212] text-[45px]">99.9%</div>
+              <div className="text-slate-500 font-bold">연결 성공률</div>
             </div>
           </div>
         </div>
