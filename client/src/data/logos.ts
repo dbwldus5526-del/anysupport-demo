@@ -62,6 +62,16 @@ export const logos: Logo[] = [
   { id: 56, name: "SK C&C", category: "글로벌/대기업", path: logoSkCnc },
   { id: 57, name: "삼성SDS", category: "글로벌/대기업", path: logoSamsungSds },
   { id: 58, name: "삼성디스플레이", category: "글로벌/대기업", path: logoSamsungDisplay },
+  { id: 46, name: "KDB산업은행", category: "글로벌/대기업", path: logoKdbBank },
+  { id: 45, name: "한화생명", category: "글로벌/대기업", path: logoHanwha },
+  { id: 39, name: "DreamSecurity", category: "글로벌/대기업", path: logoDreamSec },
+  { id: 50, name: "KORAIL", category: "글로벌/대기업", path: logoKorail },
+  { id: 49, name: "메리츠증권", category: "글로벌/대기업", path: logoMeritz },
+  { id: 53, name: "SK telecom", category: "글로벌/대기업", path: logoSkTel },
+  { id: 61, name: "미래에셋", category: "글로벌/대기업", path: logoMiraeAsset },
+  { id: 71, name: "LG U+", category: "글로벌/대기업", path: logoLguPlus },
+  { id: 62, name: "하나금융그룹", category: "글로벌/대기업", path: logoHanaFinancial },
+  { id: 37, name: "11번가", category: "글로벌/대기업", path: logo11st },
 
   // 국내 주요 기업
   { id: 37, name: "11번가", category: "국내 주요 기업", path: logo11st },
