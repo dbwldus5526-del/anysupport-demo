@@ -25,10 +25,35 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
+import sessionImg from "@/assets/관리자페이지__원격지원_세션관리_1767774669198.png";
+import monitoringImg from "@/assets/관리자페이지__실시간_다중모니터링_1767774713959.png";
+import historyImg from "@/assets/관리자페이지__원격지원_기록관리_1767774508620.png";
+
 const heroImage = "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=2426&ixlib=rb-4.0.3";
 
 export default function Management() {
   const { openModal } = useModal();
+
+  const managementFeatures = [
+    {
+      title: "01. 원격지원 세션관리",
+      desc: "인증번호 생성 버튼을 누르면 인증번호가 생성되며, 최대 10개의 인증번호를 생성할 수 있습니다.\n\n6자리의 접속 인증 번호는 랜덤으로 생성되며, 하나의 인증 번호로 단 한 번의 접속을 할 수 있게 설정하여 임의의 재접속을 원천적으로 차단합니다.\n\n고객이 접속인증번호를 입력하면 고객의 PC에 자동으로 연결되며, 설정을 통하여 자동접속 여부를 결정할 수 있습니다.",
+      image: sessionImg,
+      badge: "Session Control"
+    },
+    {
+      title: "02. 실시간 다중 모니터링",
+      desc: "국내 유일 다중 모니터링 지원 기능으로 유지보수 및 패치 작업시 진행 상황을 실시간으로 모니터링 하여 신속하고 편리한 작업이 가능합니다.\n\n복수의 디스플레이 장치를 사용하는 고객의 환경에 대해서도 상담원이 모든 화면을 쉽게 자신의 PC처럼 볼 수 있습니다.",
+      image: monitoringImg,
+      badge: "Multi Monitoring"
+    },
+    {
+      title: "03. 원격지원 기록관리",
+      desc: "기록관리 기능으로 고객에 대한 기록을 남길 수 있으며 통계자료로 활용이 가능합니다.\n\n시작 / 종료 시간 및 원격지원 시간 등 상세내역을 저장하며, Excel 파일로 다운로드 할 수 있는 기능을 제공합니다.\n\n또한 지원 후의 고객만족도를 조사할 수 있는 설문조사 기능을 제공하여 효율적인 고객관리가 가능합니다.",
+      image: historyImg,
+      badge: "History & Report"
+    }
+  ];
 
   return (
     <div className="flex flex-col">
@@ -169,26 +194,7 @@ export default function Management() {
           </div>
 
           <div className="grid grid-cols-1 gap-16 max-w-6xl mx-auto">
-            {[
-              {
-                title: "01. 원격지원 세션관리",
-                desc: "인증번호 생성 버튼을 누르면 인증번호가 생성되며, 최대 10개의 인증번호를 생성할 수 있습니다.\n\n6자리의 접속 인증 번호는 랜덤으로 생성되며, 하나의 인증 번호로 단 한 번의 접속을 할 수 있게 설정하여 임의의 재접속을 원천적으로 차단합니다.\n\n고객이 접속인증번호를 입력하면 고객의 PC에 자동으로 연결되며, 설정을 통하여 자동접속 여부를 결정할 수 있습니다.",
-                image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=1200",
-                badge: "Session Control"
-              },
-              {
-                title: "02. 실시간 다중 모니터링",
-                desc: "국내 유일 다중 모니터링 지원 기능으로 유지보수 및 패치 작업시 진행 상황을 실시간으로 모니터링 하여 신속하고 편리한 작업이 가능합니다.\n\n복수의 디스플레이 장치를 사용하는 고객의 환경에 대해서도 상담원이 모든 화면을 쉽게 자신의 PC처럼 볼 수 있습니다.",
-                image: "https://images.unsplash.com/photo-1551288049-bbda48658a7d?auto=format&fit=crop&q=80&w=1200",
-                badge: "Multi Monitoring"
-              },
-              {
-                title: "03. 원격지원 기록관리",
-                desc: "기록관리 기능으로 고객에 대한 기록을 남길 수 있으며 통계자료로 활용이 가능합니다.\n\n시작 / 종료 시간 및 원격지원 시간 등 상세내역을 저장하며, Excel 파일로 다운로드 할 수 있는 기능을 제공합니다.\n\n또한 지원 후의 고객만족도를 조사할 수 있는 설문조사 기능을 제공하여 효율적인 고객관리가 가능합니다.",
-                image: "https://images.unsplash.com/photo-1454165833762-02651d58d93c?auto=format&fit=crop&q=80&w=1200",
-                badge: "History & Report"
-              }
-            ].map((item, i) => (
+            {managementFeatures.map((item, i) => (
               <div key={i} className={`flex flex-col ${i % 2 === 1 ? 'lg:flex-row-reverse' : 'lg:flex-row'} gap-12 items-center`}>
                 <div className="flex-1 space-y-6">
                   <div className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest">
@@ -204,7 +210,7 @@ export default function Management() {
                     <img 
                       src={item.image} 
                       alt={item.title} 
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-contain bg-white p-4"
                     />
                   </div>
                 </div>
