@@ -6,12 +6,27 @@ import {
   Globe,
   Settings,
   Headphones,
-  ArrowRight
+  ArrowRight,
+  User,
+  LogIn,
+  Link,
+  Monitor,
+  Hash,
+  Activity
 } from "lucide-react";
 import solutionHeroImg from "@assets/generated_images/professional_enterprise_remote_support_solution_hero_background.png";
 
 export default function Guide() {
   const { openModal } = useModal();
+
+  const usageSteps = [
+    { title: "고객의 상담요청", icon: User },
+    { title: "상담원 로그인", icon: LogIn },
+    { title: "세션연결 시도", icon: Link },
+    { title: "고객 접속 페이지 열기", icon: Monitor },
+    { title: "접속인증번호 입력", icon: Hash },
+    { title: "원격제어 시작", icon: Activity },
+  ];
 
   const sections = [
     {
@@ -66,7 +81,7 @@ export default function Guide() {
   ];
 
   return (
-    <div className="flex flex-col min-h-screen bg-slate-50">
+    <div className="flex flex-col min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative min-h-[40vh] flex items-center pt-32 pb-20 overflow-hidden bg-slate-900 text-white">
         <div className="absolute inset-0 z-0">
@@ -79,15 +94,37 @@ export default function Guide() {
         </div>
 
         <div className="container mx-auto px-4 md:px-6 relative z-10 text-center">
-          <h1 className="text-4xl md:text-6xl font-black text-white mb-6">사용자 매뉴얼</h1>
-          <p className="text-lg md:text-xl text-slate-300 font-medium max-w-2xl mx-auto">
-            필요한 매뉴얼을 다운받아 확인하세요.
+          <h1 className="text-4xl md:text-6xl font-black text-white mb-6 leading-tight">사용 방법 안내입니다.</h1>
+          <p className="text-lg md:text-xl text-slate-300 font-medium max-w-4xl mx-auto leading-relaxed">
+            고객님의 애니서포트 사용에 감사드리며, 순차적으로 따라하시면 애니서포트를 쉽게 이용하실 수 있습니다.
           </p>
         </div>
       </section>
 
-      {/* Content Section */}
-      <section className="py-20">
+      {/* 6-Step Usage Guide Section */}
+      <section className="py-24 border-b border-slate-100">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 max-w-7xl mx-auto">
+            {usageSteps.map((step, i) => (
+              <div key={i} className="flex flex-col items-center group">
+                <div className="w-full aspect-square bg-[#0c2b5e] rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-blue-900/20 group-hover:-translate-y-2 transition-transform duration-300">
+                  <step.icon className="text-white w-1/2 h-1/2" />
+                </div>
+                <h3 className="text-slate-800 font-bold text-[15px] text-center leading-tight whitespace-pre-wrap">
+                  {step.title}
+                </h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* User Manual Download Section */}
+      <section className="py-24 bg-slate-50/50">
+        <div className="container mx-auto px-4 md:px-6 text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-4">상세 사용자 매뉴얼</h2>
+          <p className="text-slate-500 font-bold">필요한 매뉴얼을 다운받아 확인하세요.</p>
+        </div>
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid md:grid-cols-2 gap-8 max-w-7xl mx-auto">
             {sections.map((section, idx) => (
@@ -137,3 +174,4 @@ export default function Guide() {
     </div>
   );
 }
+
