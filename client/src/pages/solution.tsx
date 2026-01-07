@@ -31,12 +31,12 @@ export default function Solution() {
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="max-w-2xl">
-              <span className="text-primary font-bold text-sm tracking-widest uppercase mb-4 block">ANY SUPPORT SOLUTION</span>
-              <h1 className="text-4xl md:text-5xl font-black text-slate-900 mb-6 leading-tight">
+              <span className="text-primary font-bold text-[10px] md:text-sm tracking-widest uppercase mb-4 block">ANY SUPPORT SOLUTION</span>
+              <h1 className="text-3xl md:text-5xl font-black text-slate-900 mb-6 leading-tight">
                 고객과 기업을 잇는<br />
                 <span className="text-primary">최고의 원격지원 SaaS</span>
               </h1>
-              <p className="text-xl font-bold text-slate-800 mb-4">
+              <p className="text-lg md:text-xl font-bold text-slate-800 mb-4">
                 애니서포트는 고객 상담, IT 지원, 운영 지원을 하나로 연결하는 기업용 원격지원 SaaS입니다.
               </p>
               <div className="space-y-4 mb-8">
@@ -66,8 +66,8 @@ export default function Solution() {
       <section className="py-24 bg-slate-900 text-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">다양한 기능</h2>
-            <p className="text-slate-400 text-lg">단순한 원격 제어가 아닌 운영을 위한 기능 중심 설계</p>
+            <h2 className="text-[25px] md:text-4xl font-bold mb-4">다양한 기능</h2>
+            <p className="text-slate-400 text-[14px] md:text-lg">단순한 원격 제어가 아닌 운영을 위한 기능 중심 설계</p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-16">
             {[
@@ -98,8 +98,8 @@ export default function Solution() {
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">사용 방법</h2>
-            <p className="text-slate-500">누구나 바로 사용 가능한 간편한 프로세스</p>
+            <h2 className="text-[25px] md:text-4xl font-bold mb-4">사용 방법</h2>
+            <p className="text-slate-500 text-[14px] md:text-base">누구나 바로 사용 가능한 간편한 프로세스</p>
           </div>
           <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-8">
             <div className="flex-1 space-y-6">
@@ -138,8 +138,8 @@ export default function Solution() {
       <section className="py-24 bg-slate-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">사용 환경</h2>
-            <p className="text-slate-500">기업의 환경에 맞춰 유연하게 도입하세요.</p>
+            <h2 className="text-[25px] md:text-4xl font-bold mb-4">사용 환경</h2>
+            <p className="text-slate-500 text-[14px] md:text-base">기업의 환경에 맞춰 유연하게 도입하세요.</p>
           </div>
           <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
             <div className="bg-white p-10 rounded-3xl border border-slate-200 shadow-sm">

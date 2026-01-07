@@ -82,13 +82,13 @@ export default function MobileProduct() {
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/20 text-primary border border-primary/30 mb-6">
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-              <span className="text-xs font-bold tracking-wider uppercase">Mobile IT Support</span>
+              <span className="text-[10px] md:text-xs font-bold tracking-wider uppercase">Mobile IT Support</span>
             </div>
-            <h1 className="text-4xl md:text-6xl font-black mb-6 leading-tight">
+            <h1 className="text-3xl md:text-6xl font-black mb-6 leading-tight">
               모바일 환경에서도<br />
               <span className="text-primary text-glow">정확하고 직관적인 지원</span>
             </h1>
-            <p className="text-lg md:text-xl text-slate-300 mb-10 max-w-2xl font-medium leading-relaxed">
+            <p className="text-[14px] md:text-xl text-slate-300 mb-10 max-w-2xl font-medium leading-relaxed">
               모바일 앱 사용 가이드부터 금융 상담까지, 비대면 고객 응대에 최적화된<br className="hidden md:block" />
               애니서포트 Mobile 원격지원을 경험해 보세요.
             </p>
@@ -106,11 +106,11 @@ export default function MobileProduct() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
+              <h2 className="text-[25px] md:text-4xl font-bold text-slate-900 mb-6 leading-tight">
                 고객의 손끝까지 닿는<br />
                 <span className="text-primary">실시간 모바일 가이드</span>
               </h2>
-              <p className="text-lg text-slate-600 mb-8 leading-relaxed">
+              <p className="text-[14px] md:text-lg text-slate-600 mb-8 leading-relaxed">
                 모바일 환경은 PC보다 더 직관적이고 빠른 대응이 필요합니다. 애니서포트는 
                 고객의 이탈 없이 실시간 화면 공유와 터치 포인트 가이드를 통해 
                 최상의 모바일 경험을 제공합니다.
@@ -155,8 +155,8 @@ export default function MobileProduct() {
       <section className="py-24 bg-slate-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900">[Mobile Edition만의 특별한 기능]</h2>
-            <p className="text-slate-500 text-lg max-w-2xl mx-auto">모바일 원격지원을 더욱 강력하게 만드는 전문 기능들</p>
+            <h2 className="text-[25px] md:text-4xl font-bold mb-4 text-slate-900">[Mobile Edition만의 특별한 기능]</h2>
+            <p className="text-slate-500 text-[14px] md:text-lg max-w-2xl mx-auto">모바일 원격지원을 더욱 강력하게 만드는 전문 기능들</p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
@@ -190,8 +190,8 @@ export default function MobileProduct() {
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900">모바일 원격지원 연결 프로세스</h2>
-            <p className="text-slate-500 text-lg max-w-2xl mx-auto">간편하고 안전한 4단계 연결 과정을 통해 즉각적인 지원을 시작하세요.</p>
+            <h2 className="text-[25px] md:text-4xl font-bold mb-4 text-slate-900">모바일 원격지원 연결 프로세스</h2>
+            <p className="text-slate-500 text-[14px] md:text-lg max-w-2xl mx-auto">간편하고 안전한 4단계 연결 과정을 통해 즉각적인 지원을 시작하세요.</p>
           </div>
 
           <div className="relative">

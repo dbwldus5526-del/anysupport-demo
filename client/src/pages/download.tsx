@@ -17,9 +17,9 @@ export default function Download() {
         </div>
         
         <div className="container mx-auto px-4 md:px-6 relative z-10">
-          <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight">다운로드 및 실행</h1>
-          <h2 className="text-2xl md:text-4xl font-black mb-8">원하는 방식을 선택하세요</h2>
-          <p className="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto font-medium leading-relaxed">
+          <h1 className="text-3xl md:text-5xl font-black mb-6 tracking-tight">다운로드 및 실행</h1>
+          <h2 className="text-[25px] md:text-4xl font-black mb-8">원하는 방식을 선택하세요</h2>
+          <p className="text-[14px] md:text-xl text-slate-300 max-w-3xl mx-auto font-medium leading-relaxed">
             상담사와 고객 각각에게 최적화된 프로그램과 앱을 제공합니다.<br />
             Windows, macOS, iOS, Android, 그리고 설치 없는 웹버전까지 모두 지원합니다.
           </p>
@@ -31,8 +31,8 @@ export default function Download() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-6xl mx-auto">
             <div className="mb-12">
-              <h3 className="text-2xl md:text-3xl font-black mb-3 text-slate-900">상담사용 원격지원 프로그램</h3>
-              <p className="text-slate-500 font-bold">고객을 지원하고 인증번호를 발급하는 상담사용 프로그램입니다.</p>
+              <h3 className="text-xl md:text-3xl font-black mb-3 text-slate-900">상담사용 원격지원 프로그램</h3>
+              <p className="text-slate-500 font-bold text-sm md:text-base">고객을 지원하고 인증번호를 발급하는 상담사용 프로그램입니다.</p>
             </div>
 
             <div className="grid md:grid-cols-2 gap-8">
@@ -76,8 +76,8 @@ export default function Download() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-6xl mx-auto">
             <div className="mb-12">
-              <h3 className="text-2xl md:text-3xl font-black mb-3 text-slate-900">고객용 원격지원 런처</h3>
-              <p className="text-slate-500 font-bold">상담사가 안내한 인증번호를 입력하여 원격지원을 받습니다.</p>
+              <h3 className="text-xl md:text-3xl font-black mb-3 text-slate-900">고객용 원격지원 런처</h3>
+              <p className="text-slate-500 font-bold text-sm md:text-base">상담사가 안내한 인증번호를 입력하여 원격지원을 받습니다.</p>
             </div>
 
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
@@ -103,8 +103,8 @@ export default function Download() {
             {/* Web Version Banner */}
             <div className="relative rounded-[2rem] bg-gradient-to-r from-[#001d4d] to-[#004481] p-12 md:p-16 text-center text-white overflow-hidden shadow-2xl shadow-blue-900/20">
               <div className="relative z-10">
-                <h3 className="text-2xl md:text-3xl font-black mb-6">설치 없이 브라우저에서도 바로 원격지원을 받을 수 있습니다!</h3>
-                <p className="text-white/80 font-medium mb-10 max-w-2xl mx-auto leading-relaxed">
+                <h3 className="text-xl md:text-3xl font-black mb-6">설치 없이 브라우저에서도 바로 원격지원을 받을 수 있습니다!</h3>
+                <p className="text-white/80 font-medium mb-10 max-w-2xl mx-auto leading-relaxed text-sm md:text-base">
                   다운로드가 어려운 환경에서도 웹 브라우저만 있으면<br />
                   상담사가 안내한 인증번호를 입력하여 즉시 원격지원을 받으실 수 있습니다.
                 </p>

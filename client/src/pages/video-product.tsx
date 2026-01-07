@@ -80,13 +80,13 @@ export default function VideoProduct() {
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/20 text-primary border border-primary/30 mb-6">
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-              <span className="text-xs font-bold tracking-wider uppercase">Video Remote Support</span>
+              <span className="text-[10px] md:text-xs font-bold tracking-wider uppercase">Video Remote Support</span>
             </div>
-            <h1 className="text-4xl md:text-6xl font-black mb-6 leading-tight">
+            <h1 className="text-3xl md:text-6xl font-black mb-6 leading-tight">
               얼굴을 보며 직접 해결하는<br />
               <span className="text-primary text-glow">실시간 영상 원격지원</span>
             </h1>
-            <p className="text-lg md:text-xl text-slate-300 mb-10 max-w-2xl font-medium leading-relaxed">
+            <p className="text-[14px] md:text-xl text-slate-300 mb-10 max-w-2xl font-medium leading-relaxed">
               복잡한 설명이 필요 없는 직관적인 영상 상담으로<br className="hidden md:block" />
               고객의 문제를 더욱 따뜻하고 신속하게 해결하세요.
             </p>
@@ -104,11 +104,11 @@ export default function VideoProduct() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
+              <h2 className="text-[25px] md:text-4xl font-bold text-slate-900 mb-6 leading-tight">
                 음성과 화면을 동시에 연결하는<br />
                 <span className="text-primary">가장 인간적인 기술 지원</span>
               </h2>
-              <p className="text-lg text-slate-600 mb-8 leading-relaxed">
+              <p className="text-[14px] md:text-lg text-slate-600 mb-8 leading-relaxed">
                 텍스트와 화면 제어만으로는 부족한 경우가 있습니다. 애니서포트 Video 원격지원은 
                 상담원과 고객이 실시간으로 얼굴을 마주하며 소통함으로써 
                 기술 지원을 넘어선 고객 감동을 실현합니다.
@@ -146,8 +146,8 @@ export default function VideoProduct() {
       <section className="py-24 bg-slate-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900">[Video Edition만의 특별한 기능]</h2>
-            <p className="text-slate-500 text-lg max-w-2xl mx-auto">영상 기반 원격지원을 더욱 풍성하게 만드는 전문 기능들</p>
+            <h2 className="text-[25px] md:text-4xl font-bold mb-4 text-slate-900">[Video Edition만의 특별한 기능]</h2>
+            <p className="text-slate-500 text-[14px] md:text-lg max-w-2xl mx-auto">영상 기반 원격지원을 더욱 풍성하게 만드는 전문 기능들</p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
@@ -181,8 +181,8 @@ export default function VideoProduct() {
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900">영상 원격지원 연결 프로세스</h2>
-            <p className="text-slate-500 text-lg max-w-2xl mx-auto">설치 없이 즉시 연결되는 4단계 영상 지원 과정을 확인하세요.</p>
+            <h2 className="text-[25px] md:text-4xl font-bold mb-4 text-slate-900">영상 원격지원 연결 프로세스</h2>
+            <p className="text-slate-500 text-[14px] md:text-lg max-w-2xl mx-auto">설치 없이 즉시 연결되는 4단계 영상 지원 과정을 확인하세요.</p>
           </div>
 
           <div className="relative">

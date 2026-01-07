@@ -101,13 +101,13 @@ export default function Security() {
         
         <div className="container mx-auto px-4 md:px-6 relative z-10 text-center">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-6xl font-black mb-6 leading-tight">
+            <h1 className="text-3xl md:text-6xl font-black mb-6 leading-tight">
               보안성과 안전성
             </h1>
-            <p className="text-xl md:text-2xl font-bold mb-6 text-[#ffffff]">
+            <p className="text-lg md:text-2xl font-bold mb-6 text-[#ffffff]">
               기업 환경을 고려한 보안 설계
             </p>
-            <p className="text-lg text-slate-300 mb-4 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-[14px] md:text-lg text-slate-300 mb-4 max-w-2xl mx-auto leading-relaxed">
               애니서포트는 원격지원 과정 전반에 걸쳐<br />
               기업이 요구하는 보안 기준을 기본으로 적용합니다.
             </p>
@@ -123,8 +123,8 @@ export default function Security() {
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">애니서포트 6대 보안 핵심</h2>
-            <p className="text-slate-500 text-lg">기업 환경에 최적화된 철저한 보안 체계</p>
+            <h2 className="text-[25px] md:text-4xl font-bold text-slate-900 mb-4">애니서포트 6대 보안 핵심</h2>
+            <p className="text-slate-500 text-[14px] md:text-lg">기업 환경에 최적화된 철저한 보안 체계</p>
           </div>
           
           <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-px bg-slate-200 border border-slate-200 rounded-3xl overflow-hidden shadow-sm">

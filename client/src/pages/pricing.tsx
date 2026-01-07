@@ -88,11 +88,11 @@ export default function Pricing() {
         
         <div className="container mx-auto px-4 md:px-6 relative z-10 text-center">
           <div className="max-w-3xl mx-auto">
-            <h1 className="text-4xl md:text-6xl font-black mb-6 leading-tight">
+            <h1 className="text-3xl md:text-6xl font-black mb-6 leading-tight">
               합리적인 가격으로<br />
               <span className="text-primary text-glow">비즈니스 가치를 높이세요</span>
             </h1>
-            <p className="text-lg md:text-xl text-slate-300 mb-4 font-medium leading-relaxed">
+            <p className="text-base md:text-xl text-slate-300 mb-4 font-medium leading-relaxed">
               귀사의 규모와 필요에 맞는 최적의 플랜을 선택하세요.<br className="hidden md:block" />
               모든 플랜은 14일 무료 체험이 가능합니다.
             </p>
@@ -185,8 +185,8 @@ export default function Pricing() {
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-black mb-4 text-slate-900">제품별 상세 기능 비교</h2>
-            <p className="text-slate-500 text-lg font-medium">애니서포트 클라우드형 제품의 기능을 카테고리별로 확인해 보세요.</p>
+            <h2 className="text-[25px] md:text-4xl font-black mb-4 text-slate-900">제품별 상세 기능 비교</h2>
+            <p className="text-slate-500 text-[14px] md:text-lg font-medium">애니서포트 클라우드형 제품의 기능을 카테고리별로 확인해 보세요.</p>
           </div>
 
           <div className="max-w-[1200px] mx-auto space-y-12">
@@ -317,9 +317,9 @@ export default function Pricing() {
       <section className="py-24 bg-slate-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
-            <span className="text-primary font-bold tracking-widest uppercase mb-2 block">FAQ</span>
-            <h2 className="text-3xl md:text-5xl font-black mb-4 text-slate-900">무엇을 도와드릴까요?</h2>
-            <p className="text-slate-500 text-lg font-medium">자주 묻는 질문에 대한 답변을 확인하세요</p>
+            <span className="text-primary font-bold tracking-widest uppercase mb-2 block text-xs">FAQ</span>
+            <h2 className="text-[25px] md:text-5xl font-black mb-4 text-slate-900">무엇을 도와드릴까요?</h2>
+            <p className="text-slate-500 text-[14px] md:text-lg font-medium">자주 묻는 질문에 대한 답변을 확인하세요</p>
           </div>
 
           <div className="max-w-4xl mx-auto space-y-4">
@@ -403,7 +403,7 @@ export default function Pricing() {
       {/* Trust Section */}
       <section className="py-24 bg-slate-900 text-white">
         <div className="container mx-auto px-4 md:px-6 text-center">
-          <h2 className="md:text-5xl mb-16 text-[42px] font-medium">이미 많은 글로벌 기업이 함께하고 있습니다</h2>
+          <h2 className="text-[25px] md:text-5xl mb-16 font-medium">이미 많은 글로벌 기업이 함께하고 있습니다</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-12 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
             {/* Logos could go here */}
             {['SAMSUNG', 'LG', 'HYUNDAI', 'SK', 'NAVER', 'KAKAO'].map((logo, i) => (

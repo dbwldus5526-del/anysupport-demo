@@ -79,13 +79,13 @@ export default function Product() {
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/20 text-primary border border-primary/30 mb-6">
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-              <span className="text-xs font-bold tracking-wider uppercase">Enterprise IT Support</span>
+              <span className="text-[10px] md:text-xs font-bold tracking-wider uppercase">Enterprise IT Support</span>
             </div>
-            <h1 className="text-4xl md:text-6xl font-black mb-6 leading-tight">
+            <h1 className="text-3xl md:text-6xl font-black mb-6 leading-tight">
               기업 내 IT 이슈를<br />
               <span className="text-primary text-glow">가장 빠르고 안전하게</span>
             </h1>
-            <p className="text-lg md:text-xl text-slate-300 mb-10 max-w-2xl font-medium leading-relaxed">
+            <p className="text-[14px] md:text-xl text-slate-300 mb-10 max-w-2xl font-medium leading-relaxed">
               사내 PC부터 외부 현장까지, 전문가의 손길이 필요한 모든 곳을<br className="hidden md:block" />
               애니서포트 PC 원격지원으로 즉각 해결하세요.
             </p>
@@ -102,11 +102,11 @@ export default function Product() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
+              <h2 className="text-[25px] md:text-4xl font-bold text-slate-900 mb-6 leading-tight">
                 복잡한 IT 장애,<br />
                 <span className="text-primary">단 한 번의 연결</span>로 해결됩니다.
               </h2>
-              <p className="text-lg text-slate-600 mb-8 leading-relaxed">
+              <p className="text-[14px] md:text-lg text-slate-600 mb-8 leading-relaxed">
                 기업 환경에서는 사소한 PC 장애도 생산성 저하로 이어집니다. 애니서포트는 
                 현장 방문 없이도 상담원이 고객의 PC 화면을 직접 제어하며 문제를 진단하고 
                 해결할 수 있는 최적의 환경을 제공합니다.
@@ -143,8 +143,8 @@ export default function Product() {
       <section className="py-24 bg-slate-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900">Desktop Edition만의 특별한 기능</h2>
-            <p className="text-slate-500 text-lg max-w-2xl mx-auto">PC 원격지원을 더욱 강력하게 만드는 전문 기능들</p>
+            <h2 className="text-[25px] md:text-4xl font-bold mb-4 text-slate-900">Desktop Edition만의 특별한 기능</h2>
+            <p className="text-slate-500 text-[14px] md:text-lg max-w-2xl mx-auto">PC 원격지원을 더욱 강력하게 만드는 전문 기능들</p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
@@ -177,8 +177,8 @@ export default function Product() {
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900">원격지원 연결 프로세스</h2>
-            <p className="text-slate-500 text-lg max-w-2xl mx-auto">간편하고 안전한 4단계 연결 과정을 통해 즉각적인 지원을 시작하세요.</p>
+            <h2 className="text-[25px] md:text-4xl font-bold mb-4 text-slate-900">원격지원 연결 프로세스</h2>
+            <p className="text-slate-500 text-[14px] md:text-lg max-w-2xl mx-auto">간편하고 안전한 4단계 연결 과정을 통해 즉각적인 지원을 시작하세요.</p>
           </div>
 
           <div className="relative">
