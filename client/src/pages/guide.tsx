@@ -80,6 +80,57 @@ export default function Guide() {
     }
   ];
 
+  const detailedSteps = [
+    {
+      id: "01",
+      target: "고객",
+      title: "고객의 상담요청",
+      summary: "고객이 콜센터 또는 헬프 데스크를 통해 연락",
+      description: "고객과의 통화만으로는 상황파악이 안되거나 설명이 길어져 답답하실때 고객에게 신속하게 대응하지 못하고 계실때 먼저 고객에게 원격지원을 권유하실 수 있습니다.",
+      image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200"
+    },
+    {
+      id: "02",
+      target: "상담원",
+      title: "상담원 로그인",
+      summary: "전달받으신 ID, PW를 사용하여 로그인 합니다.",
+      description: "01. 홈페이지를 통해 로그인 하신 후 프로그램을 실행합니다.\n02. 원격지원을 자주 이용하시는 PC라면 설치파일을 통해 웹페이지 접속없이 바로 프로그램을 실행 접속합니다.",
+      image: "https://images.unsplash.com/photo-1549923746-c50264f39a18?q=80&w=1200"
+    },
+    {
+      id: "03",
+      target: "상담원",
+      title: "세션연결시도",
+      summary: "세션번호생성 후 접속페이지 URL과 함께 고객에게 전달",
+      description: "상담원은 원격지원 프로그램에서 고객의 확인을 위한 암호화 된 세션번호를 생성, 접속할 원격지원 홈페이지(988.co.kr/ 전용 URL)과 함께 세션번호를 유/무선 상으로 고객에게 전달합니다.",
+      image: "https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1200"
+    },
+    {
+      id: "04",
+      target: "고객",
+      title: "고객접속페이지 열기",
+      summary: "인터넷창을 열어 988.co.kr에 접속합니다.",
+      description: "상담원의 안내에 따라 전달받으신 고객접속 전용 URL 또는 988.co.kr 에 접속합니다.",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200"
+    },
+    {
+      id: "05",
+      target: "고객",
+      title: "접속 인증번호 입력",
+      summary: "상담원으로부터 전달받은 6자리 번호를 입력합니다.",
+      description: "상담원에게 전달받으신 세션번호를 입력하시면 원격지원이 연결됩니다. 전용 URL의 경우 인증번호 입력방식, 번호 클릭(단 한번의 클릭으로 접속) 두가지 방식 중 택1 또는 둘 다 이용하실 수 있습니다.",
+      image: "https://images.unsplash.com/photo-1555421689-491a97ff2040?q=80&w=1200"
+    },
+    {
+      id: "06",
+      target: "상담원",
+      title: "원격제어 시작",
+      summary: "고객의 PC에 접속해서 원격지원을 수행합니다.",
+      description: "화면공유, 파일송수신, 캔버스 기능, 키보드 / 마우스 제어, 실시간 채팅, 멀티모니터, 음성채팅, 세션전달 등 애니서포트의 다양한 기능을 이용하여 고객의 고민을 해결합니다.",
+      image: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=1200"
+    }
+  ];
+
   return (
     <div className="flex flex-col min-h-screen bg-white">
       {/* Hero Section */}
@@ -101,7 +152,7 @@ export default function Guide() {
         </div>
       </section>
 
-      {/* 6-Step Usage Guide Section */}
+      {/* 6-Step Usage Guide Section (Quick Overview) */}
       <section className="py-24 border-b border-slate-100 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 max-w-7xl mx-auto relative">
@@ -131,6 +182,46 @@ export default function Guide() {
                 <h3 className="text-slate-900 font-black text-sm text-center leading-tight whitespace-pre-wrap max-w-[120px]">
                   {step.title}
                 </h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Detailed Step-by-Step Section */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="max-w-7xl mx-auto space-y-32">
+            {detailedSteps.map((step, i) => (
+              <div key={i} className={`flex flex-col lg:items-center gap-12 lg:gap-20 ${i % 2 === 1 ? 'lg:flex-row-reverse' : 'lg:flex-row'}`}>
+                {/* Text Content */}
+                <div className="flex-1">
+                  <div className="inline-block px-3 py-1 bg-slate-800 text-white text-xs font-bold rounded mb-6">
+                    {step.target}
+                  </div>
+                  <div className="flex items-start gap-8 border-b border-slate-100 pb-8 mb-8">
+                    <span className="text-6xl md:text-8xl font-black text-slate-200 leading-none">{step.id}</span>
+                    <div>
+                      <h3 className="text-2xl md:text-3xl font-black text-slate-900 mb-2">{step.title}</h3>
+                      <p className="text-lg md:text-xl font-bold text-slate-800 leading-snug">{step.summary}</p>
+                    </div>
+                  </div>
+                  <p className="text-slate-600 text-base md:text-lg font-medium leading-relaxed whitespace-pre-line">
+                    {step.description}
+                  </p>
+                </div>
+                
+                {/* Image Content */}
+                <div className="flex-1">
+                  <div className="relative rounded-3xl overflow-hidden shadow-2xl group">
+                    <img 
+                      src={step.image} 
+                      alt={step.title} 
+                      className="w-full h-full object-cover aspect-[4/3] group-hover:scale-105 transition-transform duration-700" 
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-tr from-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </div>
+                </div>
               </div>
             ))}
           </div>
