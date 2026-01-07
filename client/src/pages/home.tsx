@@ -28,7 +28,7 @@ import pcSupportImgOriginal from "@assets/generated_images/pc_remote_support_pro
 import mobileSupportImgOriginal from "@assets/generated_images/mobile_remote_support_app_interface.png";
 import pcSupportImg from "@assets/uibg-pc_new_1767775521573.png";
 import mobileSupportImg from "@assets/uibg-mobile_NEW_1767775657450.png";
-import videoSupportImg from "@assets/generated_images/video-based_remote_support_concept.png";
+import videoSupportImg from "@assets/uibg-video-detail_1767775793332.png";
 import companyLogos from "@assets/기업로고new_1767749031414.png";
 import sessionImg from "@assets/관리자페이지__원격지원_세션관리_1767774669198.png";
 import customerImg from "@assets/howto-normal-01_복사본_1767775321934.png";
