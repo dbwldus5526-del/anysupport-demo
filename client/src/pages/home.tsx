@@ -188,7 +188,7 @@ export function Home() {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">왜 애니서포트인가요?</h2>
             <p className="text-slate-500 max-w-2xl mx-auto text-lg">기업이 신뢰할 수 있는 압도적인 기술력과 안정성</p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               { icon: Zap, title: "안정성", desc: "99.9% 연결 성공률 보장" },
               { icon: ShieldCheck, title: "보안", desc: "금융권 수준의 암호화 기술" },
@@ -325,7 +325,7 @@ export function Home() {
       {/* 8. 성과와 지표 (숫자로 증명) */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-12 text-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-12 text-center">
             <div>
               <Counter value="1200" suffix="+" />
               <div className="text-slate-500 font-bold">국내외 도입 기업수</div>
