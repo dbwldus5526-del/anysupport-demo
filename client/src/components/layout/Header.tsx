@@ -203,10 +203,7 @@ export function Header() {
                 <NavigationMenuItem key={item.href}>
                   {item.subItems ? (
                     <>
-                      <NavigationMenuTrigger className={cn(
-                        "bg-transparent font-semibold hover:bg-transparent data-[state=open]:bg-transparent",
-                        location.startsWith(item.href) ? "text-primary" : "text-foreground/80"
-                      )}>
+                      <NavigationMenuTrigger className="group inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 transition-colors hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[state=open]:text-accent-foreground data-[state=open]:hover:bg-accent data-[state=open]:focus:bg-accent group bg-transparent font-semibold hover:bg-transparent data-[state=open]:bg-transparent text-foreground/80 text-[16px]">
                         {item.label}
                       </NavigationMenuTrigger>
                       <NavigationMenuContent>
