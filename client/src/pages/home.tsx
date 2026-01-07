@@ -27,6 +27,7 @@ import heroImage from "@assets/generated_images/professional_support_agent_assis
 import pcSupportImg from "@assets/generated_images/pc_remote_support_professional_image.png";
 import mobileSupportImg from "@assets/generated_images/mobile_remote_support_app_interface.png";
 import videoSupportImg from "@assets/generated_images/video-based_remote_support_concept.png";
+import companyLogos from "@assets/기업로고new_1767749031414.png";
 
 function Counter({ value, duration = 2, suffix = "" }: { value: string, duration?: number, suffix?: string }) {
   const [count, setCount] = useState(0);
@@ -351,12 +352,14 @@ export function Home() {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">산업별 환경에 최적화된 원격지원</h2>
             <p className="text-slate-500 max-w-2xl mx-auto text-lg">국내외 주요 기업들이 애니서포트를 선택한 이유</p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 opacity-40 grayscale mb-12">
-            {[1,2,3,4,5,6].map(i => (
-              <div key={i} className="flex items-center justify-center p-4">
-                <Building2 size={48} />
-              </div>
-            ))}
+          <div className="mb-12">
+            <div className="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm overflow-hidden">
+              <img 
+                src={companyLogos} 
+                alt="Partner Companies" 
+                className="w-full h-auto opacity-80 hover:opacity-100 transition-opacity duration-500"
+              />
+            </div>
           </div>
           <div className="text-center">
             <Button variant="outline" onClick={openModal} className="font-bold border-slate-300">
