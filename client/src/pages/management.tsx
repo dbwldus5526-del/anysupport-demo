@@ -164,35 +164,57 @@ export default function Management() {
       <section className="py-24 bg-white overflow-hidden">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">원격지원 운영 시나리오</h2>
-            <p className="text-slate-500 text-lg">정책 설정부터 성과 분석까지 이어지는 완벽한 순환 구조</p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">주요 관리 기능 상세</h2>
+            <p className="text-slate-500 text-lg">실제 운영 환경에 최적화된 관리 도구의 상세 설명입니다.</p>
           </div>
 
-          <div className="relative max-w-5xl mx-auto">
-            <div className="absolute top-1/2 left-0 w-full h-0.5 bg-slate-100 -translate-y-1/2 hidden lg:block" />
-            <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 relative z-10">
-              {[
-                { step: "01", title: "정책 설정", desc: "기업 가이드에 맞는 보안 및 기능 권한을 정의합니다." },
-                { step: "02", title: "배포/적용", desc: "설정된 정책이 모든 상담원에게 실시간으로 일괄 적용됩니다." },
-                { step: "03", title: "모니터링", desc: "대시보드를 통해 실시간 운영 현황을 실시간 관리합니다." },
-                { step: "04", title: "감사/리포트", desc: "저장된 데이터를 기반으로 컴플라이언스를 검증합니다." }
-              ].map((item, i) => (
-                <div key={i} className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm relative text-center">
-                  <div className="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-black text-xl mb-6 mx-auto shadow-lg shadow-primary/30">
-                    {item.step}
+          <div className="grid grid-cols-1 gap-16 max-w-6xl mx-auto">
+            {[
+              {
+                title: "01. 원격지원 세션관리",
+                desc: "인증번호 생성 버튼을 누르면 인증번호가 생성되며, 최대 10개의 인증번호를 생성할 수 있습니다.\n\n6자리의 접속 인증 번호는 랜덤으로 생성되며, 하나의 인증 번호로 단 한 번의 접속을 할 수 있게 설정하여 임의의 재접속을 원천적으로 차단합니다.\n\n고객이 접속인증번호를 입력하면 고객의 PC에 자동으로 연결되며, 설정을 통하여 자동접속 여부를 결정할 수 있습니다.",
+                image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=1200",
+                badge: "Session Control"
+              },
+              {
+                title: "02. 실시간 다중 모니터링",
+                desc: "국내 유일 다중 모니터링 지원 기능으로 유지보수 및 패치 작업시 진행 상황을 실시간으로 모니터링 하여 신속하고 편리한 작업이 가능합니다.\n\n복수의 디스플레이 장치를 사용하는 고객의 환경에 대해서도 상담원이 모든 화면을 쉽게 자신의 PC처럼 볼 수 있습니다.",
+                image: "https://images.unsplash.com/photo-1551288049-bbda48658a7d?auto=format&fit=crop&q=80&w=1200",
+                badge: "Multi Monitoring"
+              },
+              {
+                title: "03. 원격지원 기록관리",
+                desc: "기록관리 기능으로 고객에 대한 기록을 남길 수 있으며 통계자료로 활용이 가능합니다.\n\n시작 / 종료 시간 및 원격지원 시간 등 상세내역을 저장하며, Excel 파일로 다운로드 할 수 있는 기능을 제공합니다.\n\n또한 지원 후의 고객만족도를 조사할 수 있는 설문조사 기능을 제공하여 효율적인 고객관리가 가능합니다.",
+                image: "https://images.unsplash.com/photo-1454165833762-02651d58d93c?auto=format&fit=crop&q=80&w=1200",
+                badge: "History & Report"
+              }
+            ].map((item, i) => (
+              <div key={i} className={`flex flex-col ${i % 2 === 1 ? 'lg:flex-row-reverse' : 'lg:flex-row'} gap-12 items-center`}>
+                <div className="flex-1 space-y-6">
+                  <div className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest">
+                    {item.badge}
                   </div>
-                  <h3 className="text-xl font-bold mb-3">{item.title}</h3>
-                  <p className="text-slate-500 text-sm leading-relaxed">
+                  <h3 className="text-3xl font-bold text-slate-900">{item.title}</h3>
+                  <div className="text-slate-600 leading-relaxed whitespace-pre-wrap">
                     {item.desc}
-                  </p>
+                  </div>
                 </div>
-              ))}
-            </div>
+                <div className="flex-1 w-full">
+                  <div className="rounded-3xl overflow-hidden shadow-2xl border border-slate-100 bg-slate-100 aspect-[16/10]">
+                    <img 
+                      src={item.image} 
+                      alt={item.title} 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* 5. 보안/컴플라이언스 */}
+      {/* 5. 운영 시나리오 (타임라인) */}
       <section className="py-24 bg-slate-900 text-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
