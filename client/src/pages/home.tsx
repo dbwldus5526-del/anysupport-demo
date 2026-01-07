@@ -281,7 +281,7 @@ export function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
             <div>
               <div className="font-black mb-2 text-[#121212] text-[45px]">6,000만+</div>
-              <div className="text-slate-500 font-bold">누적 지원 건수</div>
+              <div className="text-slate-500 font-bold">애니서포트 사용 기업</div>
             </div>
             <div>
               <div className="font-black mb-2 text-[#121212] text-[45px]">50,000+</div>
