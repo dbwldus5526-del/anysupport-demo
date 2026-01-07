@@ -497,7 +497,7 @@ export function Home() {
       <section className="py-24 bg-white border-y border-slate-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
-            <h2 className="md:text-5xl font-black text-slate-900 mb-4 text-[36px]">
+            <h2 className="md:text-5xl text-slate-900 mb-4 text-[36px] font-bold">
               환경은 달라도, 지원은 하나로 완성됩니다
             </h2>
             <p className="text-slate-500 max-w-2xl mx-auto text-lg font-medium">
