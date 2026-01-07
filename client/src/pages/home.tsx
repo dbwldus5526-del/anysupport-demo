@@ -67,7 +67,7 @@ function Counter({ value, duration = 2, suffix = "" }: { value: string, duration
     : Math.floor(count).toLocaleString();
 
   return (
-    <div ref={ref} className="font-black mb-1 md:mb-2 text-[#121212] text-[32px] sm:text-[38px] md:text-[45px]">
+    <div ref={ref} className="font-black mb-1 md:mb-2 text-[32px] sm:text-[38px] md:text-[45px] text-[#ffffff]">
       {displayValue}{suffix}
     </div>
   );
