@@ -237,7 +237,7 @@ export function Header() {
         </nav>
 
         <div className="hidden md:flex items-center gap-3 shrink-0">
-          <Button variant="ghost" className="font-semibold text-foreground/70">로그인</Button>
+          <Button variant="ghost" className="font-semibold text-foreground/70 text-[16px]">로그인</Button>
           <Button onClick={openModal} className="font-bold px-6 shadow-md">무료체험 신청</Button>
         </div>
 
