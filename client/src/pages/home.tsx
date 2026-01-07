@@ -195,12 +195,12 @@ export function Home() {
               { icon: Building2, title: "기업 도입 사례", desc: "1,000+ 글로벌 기업 도입" },
               { icon: Activity, title: "운영 신뢰성", desc: "24/365 중단 없는 모니터링" }
             ].map((item, i) => (
-              <div key={i} className="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm text-center">
-                <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary mx-auto mb-6">
-                  <item.icon size={28} />
+              <div key={i} className="bg-white p-6 sm:p-8 rounded-2xl border border-slate-100 shadow-sm text-center">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary mx-auto mb-4 sm:mb-6">
+                  <item.icon size={24} className="sm:w-7 sm:h-7" />
                 </div>
-                <h3 className="text-lg font-bold mb-2">{item.title}</h3>
-                <p className="text-slate-500 text-sm font-medium">{item.desc}</p>
+                <h3 className="text-base sm:text-lg font-bold mb-1 sm:mb-2">{item.title}</h3>
+                <p className="text-slate-500 text-xs sm:text-sm font-medium">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -224,9 +224,9 @@ export function Home() {
                    <img src={item.image} alt={item.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent opacity-60" />
                 </div>
-                <div className="p-8 text-center border-t border-slate-50">
-                  <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                  <p className="text-slate-500 text-sm font-medium">{item.desc}</p>
+                <div className="p-6 sm:p-8 text-center border-t border-slate-50">
+                  <h3 className="text-lg sm:text-xl font-bold mb-1 sm:mb-2">{item.title}</h3>
+                  <p className="text-slate-500 text-xs sm:text-sm font-medium">{item.desc}</p>
                 </div>
               </div>
             ))}
@@ -328,19 +328,19 @@ export function Home() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-12 text-center">
             <div>
               <Counter value="1200" suffix="+" />
-              <div className="text-slate-500 font-bold">국내외 도입 기업수</div>
+              <div className="text-slate-500 text-xs sm:text-sm md:text-base font-bold">국내외 도입 기업수</div>
             </div>
             <div>
               <Counter value="50000" suffix="+" />
-              <div className="text-slate-500 font-bold">하루 평균 고객지원수</div>
+              <div className="text-slate-500 text-xs sm:text-sm md:text-base font-bold">하루 평균 고객지원수</div>
             </div>
             <div>
               <Counter value="100" suffix="만+" />
-              <div className="text-slate-500 font-bold">한달 평균 원격연결수</div>
+              <div className="text-slate-500 text-xs sm:text-sm md:text-base font-bold">한달 평균 원격연결수</div>
             </div>
             <div>
               <Counter value="99.9" suffix="%" />
-              <div className="text-slate-500 font-bold">연결 성공률</div>
+              <div className="text-slate-500 text-xs sm:text-sm md:text-base font-bold">연결 성공률</div>
             </div>
           </div>
         </div>
