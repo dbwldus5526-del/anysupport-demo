@@ -431,8 +431,8 @@ export function Home() {
               { type: "browser", title: "브라우저 제어" },
               { type: "log", title: "로그 분석" }
             ].map((item, i) => (
-              <div key={i} className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex flex-col items-center gap-4 hover:border-primary/50 transition-colors group">
-                <div className="group-hover:scale-110 transition-transform duration-300">
+              <div key={i} className="bg-white p-6 rounded-xl border border-slate-100 flex flex-col items-center gap-4 transition-colors">
+                <div>
                   <DesignIcon type={item.type} />
                 </div>
                 <span className="font-bold text-slate-800 text-sm">{item.title}</span>
