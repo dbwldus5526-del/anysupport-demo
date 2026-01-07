@@ -386,20 +386,22 @@ export function Home() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             {[
-              { image: pcSupportImg, title: "PC 지원", desc: "Windows, macOS, Linux 지원" },
-              { image: mobileSupportImg, title: "Mobile 지원", desc: "Android, iOS 실시간 제어" },
-              { image: videoSupportImg, title: "Video 지원", desc: "현장 영상 기반 원격 가이드" }
+              { image: pcSupportImg, title: "PC 지원", desc: "Windows, macOS, Linux 지원", href: "/solution/pc" },
+              { image: mobileSupportImg, title: "Mobile 지원", desc: "Android, iOS 실시간 제어", href: "/solution/mobile" },
+              { image: videoSupportImg, title: "Video 지원", desc: "현장 영상 기반 원격 가이드", href: "/solution/video" }
             ].map((item, i) => (
-              <div key={i} className="overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm flex flex-col group hover:shadow-md transition-shadow">
-                <div className="aspect-[4/3] overflow-hidden relative">
-                   <img src={item.image} alt={item.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent opacity-60" />
+              <Link key={i} href={item.href} data-testid={`link-solution-${item.title}`}>
+                <div className="overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm flex flex-col group hover:shadow-md transition-shadow cursor-pointer h-full">
+                  <div className="aspect-[4/3] overflow-hidden relative">
+                    <img src={item.image} alt={item.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent opacity-60" />
+                  </div>
+                  <div className="p-6 sm:p-8 text-center border-t border-slate-50 flex-1">
+                    <h3 className="text-lg sm:text-xl font-bold mb-1 sm:mb-2 group-hover:text-primary transition-colors">{item.title}</h3>
+                    <p className="text-slate-500 text-xs sm:text-sm font-medium">{item.desc}</p>
+                  </div>
                 </div>
-                <div className="p-6 sm:p-8 text-center border-t border-slate-50">
-                  <h3 className="text-lg sm:text-xl font-bold mb-1 sm:mb-2">{item.title}</h3>
-                  <p className="text-slate-500 text-xs sm:text-sm font-medium">{item.desc}</p>
-                </div>
-              </div>
+              </Link>
             ))}
           </div>
           <div className="text-center">
