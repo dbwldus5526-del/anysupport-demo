@@ -167,8 +167,11 @@ export function Header() {
                   )}
                 </div>
                 
-                {item.subItems && openMobileMenus.includes(item.label) && (
-                  <div className="bg-slate-50 rounded-lg mb-4 overflow-hidden">
+                {item.subItems && (
+                  <div className={cn(
+                    "bg-slate-50 rounded-lg overflow-hidden transition-all duration-300 ease-in-out",
+                    openMobileMenus.includes(item.label) ? "max-h-[500px] mb-4 opacity-100" : "max-h-0 opacity-0"
+                  )}>
                     {item.subItems.map((sub) => (
                       <Link 
                         key={sub.href} 
