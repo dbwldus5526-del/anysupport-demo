@@ -70,7 +70,6 @@ export function Home() {
           </div>
         </div>
       </section>
-
       {/* 2. 원격지원이란 무엇인가 */}
       <section id="what-is-remote" className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
@@ -135,7 +134,6 @@ export function Home() {
           </div>
         </div>
       </section>
-
       {/* 3. 왜 원격지원 애니서포트인가 (신뢰 요소) */}
       <section className="py-24 bg-slate-50">
         <div className="container mx-auto px-4 md:px-6">
@@ -161,7 +159,6 @@ export function Home() {
           </div>
         </div>
       </section>
-
       {/* 4. 다양한 환경과 기기 지원 */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
@@ -194,7 +191,6 @@ export function Home() {
           </div>
         </div>
       </section>
-
       {/* 5. 애니서포트 핵심 기능 */}
       <section id="features" className="py-24 bg-slate-50">
         <div className="container mx-auto px-4 md:px-6">
@@ -230,7 +226,6 @@ export function Home() {
           </div>
         </div>
       </section>
-
       {/* 6. 원격 연결 프로세스 (4단계) */}
       <section id="connection-process" className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
@@ -259,7 +254,6 @@ export function Home() {
           </div>
         </div>
       </section>
-
       {/* 7. 기술력 & 보안 */}
       <section className="py-24 bg-slate-900 text-white">
         <div className="container mx-auto px-4 md:px-6">
@@ -281,13 +275,12 @@ export function Home() {
           </div>
         </div>
       </section>
-
       {/* 8. 성과와 지표 (숫자로 증명) */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
             <div>
-              <div className="text-5xl font-black text-primary mb-2">5,000만+</div>
+              <div className="text-5xl font-black mb-2 text-[#121212]">5,000만+</div>
               <div className="text-slate-500 font-bold">누적 지원 건수</div>
             </div>
             <div>
@@ -301,7 +294,6 @@ export function Home() {
           </div>
         </div>
       </section>
-
       {/* 9. 산업별 최적화 솔루션 */}
       <section className="py-24 bg-slate-50">
         <div className="container mx-auto px-4 md:px-6">
@@ -323,7 +315,6 @@ export function Home() {
           </div>
         </div>
       </section>
-
       {/* 10. 서비스 도입 방식 선택 */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
@@ -355,7 +346,6 @@ export function Home() {
           </div>
         </div>
       </section>
-
       {/* 11. 무료체험 CTA (마무리 섹션) */}
       <section className="py-24 bg-primary text-white overflow-hidden relative">
         <div className="absolute top-0 right-0 w-1/3 h-full bg-white/5 skew-x-12 transform translate-x-1/2" />
