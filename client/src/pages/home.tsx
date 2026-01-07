@@ -522,28 +522,19 @@ export function Home() {
           </div>
 
           <div className="max-w-5xl mx-auto">
-            <div className="relative rounded-[2.5rem] overflow-hidden bg-slate-900 shadow-2xl p-4 md:p-8 aspect-[16/10] flex items-center justify-center">
+            <div className="relative overflow-hidden aspect-[16/10] flex items-center justify-center">
               <motion.div 
                 key={activeDevice}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4 }}
-                className="w-full h-full relative"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5 }}
+                className="w-full h-full"
               >
                 <img 
                   src={deviceViewItems.find(d => d.id === activeDevice)?.image} 
                   alt="Device View" 
-                  className="w-full h-full object-cover rounded-2xl opacity-90"
+                  className="w-full h-full object-cover rounded-2xl shadow-xl"
                 />
-                <div className="absolute bottom-12 left-12 right-12 text-white z-10">
-                  <h3 className="text-2xl md:text-3xl font-bold mb-2">
-                    {deviceViewItems.find(d => d.id === activeDevice)?.title}
-                  </h3>
-                  <p className="text-white/80 text-lg">
-                    {deviceViewItems.find(d => d.id === activeDevice)?.desc}
-                  </p>
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-60" />
               </motion.div>
             </div>
             <p className="mt-8 text-center text-slate-400 text-sm flex items-center justify-center gap-2">
