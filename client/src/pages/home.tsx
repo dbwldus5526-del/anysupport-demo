@@ -1,3 +1,4 @@
+import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { useModal } from "@/context/ModalContext";
 import { 
@@ -21,10 +22,55 @@ import {
   Building2,
   Database
 } from "lucide-react";
+import { motion, useInView } from "framer-motion";
 import heroImage from "@assets/generated_images/professional_support_agent_assisting_remotely_with_soft_blend_hero_background.png";
 import pcSupportImg from "@assets/generated_images/pc_remote_support_professional_image.png";
 import mobileSupportImg from "@assets/generated_images/mobile_remote_support_app_interface.png";
 import videoSupportImg from "@assets/generated_images/video-based_remote_support_concept.png";
+
+function Counter({ value, duration = 2, suffix = "" }: { value: string, duration?: number, suffix?: string }) {
+  const [count, setCount] = useState(0);
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  
+  const numericValue = parseFloat(value.replace(/[^0-9.]/g, ''));
+  const isDecimal = value.includes('.');
+  const decimalPlaces = isDecimal ? value.split('.')[1].length : 0;
+
+  useEffect(() => {
+    if (isInView) {
+      let start = 0;
+      const end = numericValue;
+      const totalFrames = duration * 60;
+      let frame = 0;
+
+      const counter = setInterval(() => {
+        frame++;
+        const progress = frame / totalFrames;
+        const currentCount = end * (1 - Math.pow(1 - progress, 3)); 
+        
+        setCount(currentCount);
+
+        if (frame === totalFrames) {
+          clearInterval(counter);
+          setCount(end);
+        }
+      }, 1000 / 60);
+
+      return () => clearInterval(counter);
+    }
+  }, [isInView, numericValue, duration]);
+
+  const displayValue = isDecimal 
+    ? count.toFixed(decimalPlaces) 
+    : Math.floor(count).toLocaleString();
+
+  return (
+    <div ref={ref} className="font-black mb-2 text-[#121212] text-[45px]">
+      {displayValue}{suffix}
+    </div>
+  );
+}
 
 export function Home() {
   const { openModal } = useModal();
@@ -280,19 +326,19 @@ export function Home() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12 text-center">
             <div>
-              <div className="font-black mb-2 text-[#121212] text-[45px]">1,200+</div>
+              <Counter value="1200" suffix="+" />
               <div className="text-slate-500 font-bold">국내외 도입 기업수</div>
             </div>
             <div>
-              <div className="font-black mb-2 text-[#121212] text-[45px]">50,000+</div>
+              <Counter value="50000" suffix="+" />
               <div className="text-slate-500 font-bold">하루 평균 고객지원수</div>
             </div>
             <div>
-              <div className="font-black mb-2 text-[#121212] text-[45px]">100만+</div>
+              <Counter value="100" suffix="만+" />
               <div className="text-slate-500 font-bold">한달 평균 원격연결수</div>
             </div>
             <div>
-              <div className="font-black mb-2 text-[#121212] text-[45px]">99.8%</div>
+              <Counter value="99.9" suffix="%" />
               <div className="text-slate-500 font-bold">연결 성공률</div>
             </div>
           </div>
