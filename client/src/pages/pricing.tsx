@@ -402,7 +402,7 @@ export default function Pricing() {
         </div>
       </section>
       {/* Trust Section */}
-      <section className="py-24 bg-slate-900 text-white overflow-hidden">
+      <section className="py-24 text-white overflow-hidden bg-[#ffffff]">
         <div className="container mx-auto px-4 md:px-6 text-center mb-12">
           <h2 className="text-[25px] md:text-5xl font-medium">이미 많은 글로벌 기업이 함께하고 있습니다</h2>
         </div>
