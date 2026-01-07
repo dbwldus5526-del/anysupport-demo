@@ -16,6 +16,7 @@ import {
   Monitor
 } from "lucide-react";
 import pricingHeroImg from "@assets/generated_images/modern_b2b_saas_pricing_page_hero_background.png";
+import LogoCarousel from "@/components/sections/LogoCarousel";
 
 export default function Pricing() {
   const { openModal } = useModal();
@@ -401,18 +402,11 @@ export default function Pricing() {
         </div>
       </section>
       {/* Trust Section */}
-      <section className="py-24 bg-slate-900 text-white">
-        <div className="container mx-auto px-4 md:px-6 text-center">
-          <h2 className="text-[25px] md:text-5xl mb-16 font-medium">이미 많은 글로벌 기업이 함께하고 있습니다</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-12 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
-            {/* Logos could go here */}
-            {['SAMSUNG', 'LG', 'HYUNDAI', 'SK', 'NAVER', 'KAKAO'].map((logo, i) => (
-              <div key={i} className="flex items-center justify-center font-black text-2xl tracking-tighter">
-                {logo}
-              </div>
-            ))}
-          </div>
+      <section className="py-24 bg-slate-900 text-white overflow-hidden">
+        <div className="container mx-auto px-4 md:px-6 text-center mb-12">
+          <h2 className="text-[25px] md:text-5xl font-medium">이미 많은 글로벌 기업이 함께하고 있습니다</h2>
         </div>
+        <LogoCarousel />
       </section>
     </div>
   );
