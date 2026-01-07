@@ -440,9 +440,11 @@ export function Home() {
             ))}
           </div>
           <div className="text-center">
-            <Button size="lg" onClick={openModal} className="font-bold shadow-lg">
-              애니서포트 기능 자세히 보기
-            </Button>
+            <Link href="/solution/features">
+              <Button size="lg" className="font-bold shadow-lg">
+                애니서포트 기능 자세히 보기
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
