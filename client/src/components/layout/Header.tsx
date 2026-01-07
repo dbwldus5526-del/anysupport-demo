@@ -235,7 +235,7 @@ export function Header() {
                         location === item.href ? "text-primary" : "text-foreground/80"
                       )}>
                         {item.label}
-                      </NavigationMenuLink>
+                      </Link>
                     </NavigationMenuLink>
                   )}
                 </NavigationMenuItem>
