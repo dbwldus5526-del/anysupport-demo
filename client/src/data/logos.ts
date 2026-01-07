@@ -19,7 +19,7 @@ import logoWaterwall from "@assets/waterwall@2x_1767762701055.png";
 import logoBohun from "@assets/국가보훈처@2x_1767762701056.png";
 import logoDefense from "@assets/국방과학연구@2x_1767762701056.png";
 
-// New logos
+// New logos 1
 import logoFss from "@assets/금감원@2x_1767763176433.png";
 import logoMoef from "@assets/기획재정부@2x_1767763176433.png";
 import logoGimcheon from "@assets/김천시@2x_1767763176434.png";
@@ -38,6 +38,12 @@ import logoPps from "@assets/조달청@2x_1767763176437.png";
 import logoKostat from "@assets/통계청@2x_1767763176437.png";
 import logoUnikorea from "@assets/통일부@2x_1767763176438.png";
 import logoHanaFinancial from "@assets/하나금융@2x_1767763176438.png";
+
+// New logos 2
+import logoKedi from "@assets/한국교육개발@2x_1767763259885.png";
+import logoKospo from "@assets/한국남부발전@2x_1767763259885.png";
+import logoEwp from "@assets/한국동서발전@2x_1767763259886.png";
+import logoBok from "@assets/한국은행@2x_1767763259886.png";
 
 export interface Logo {
   id: number;
@@ -77,6 +83,7 @@ export const logos: Logo[] = [
   { id: 60, name: "금융감독원", category: "금융", path: logoFss },
   { id: 61, name: "미래에셋", category: "금융", path: logoMiraeAsset },
   { id: 62, name: "하나금융그룹", category: "금융", path: logoHanaFinancial },
+  { id: 75, name: "한국은행", category: "금융", path: logoBok },
 
   // 공공
   { id: 50, name: "KORAIL", category: "공공", path: logoKorail },
@@ -90,6 +97,9 @@ export const logos: Logo[] = [
   { id: 68, name: "조달청", category: "공공", path: logoPps },
   { id: 69, name: "통계청", category: "공공", path: logoKostat },
   { id: 70, name: "통일부", category: "공공", path: logoUnikorea },
+  { id: 72, name: "한국교육개발원", category: "공공", path: logoKedi },
+  { id: 73, name: "한국남부발전", category: "공공", path: logoKospo },
+  { id: 74, name: "한국동서발전", category: "공공", path: logoEwp },
 
   // 통신
   { id: 53, name: "SK telecom", category: "통신", path: logoSkTel },
