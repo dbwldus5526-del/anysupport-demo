@@ -289,7 +289,7 @@ export function Home() {
             </div>
             <div>
               <div className="font-black mb-2 text-[#121212] text-[45px]">100만+</div>
-              <div className="text-slate-500 font-bold">연결 성공률</div>
+              <div className="text-slate-500 font-bold">한달 평균 원격연결수</div>
             </div>
           </div>
         </div>
