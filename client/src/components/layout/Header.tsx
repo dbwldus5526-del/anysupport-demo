@@ -5,6 +5,7 @@ import { Menu, X, ChevronRight, ChevronDown } from "lucide-react";
 import { useModal } from "@/context/ModalContext";
 import logo from "@assets/애니서포트--new-log_1767681624073.png";
 import { cn } from "@/lib/utils";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -55,8 +56,11 @@ export function Header() {
   }, []);
 
   useEffect(() => {
-    if (isMobileMenuOpen) document.body.style.overflow = "hidden";
-    else document.body.style.overflow = "unset";
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
   }, [isMobileMenuOpen]);
 
   const handleLogoClick = () => {
@@ -138,61 +142,99 @@ export function Header() {
         </button>
       </div>
 
-      {isMobileMenuOpen && (
-        <div className="fixed inset-0 top-[60px] z-50 bg-white flex flex-col p-6 md:hidden overflow-y-auto">
-          <nav className="flex flex-col">
-            {NAV_ITEMS.map((item) => (
-              <div key={item.href} className="border-b border-slate-100">
-                <div 
-                  className="flex items-center justify-between py-4 cursor-pointer"
-                  onClick={() => item.subItems ? toggleMobileSubmenu(item.label) : setIsMobileMenuOpen(false)}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <>
+            {/* Background Overlay */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="fixed inset-0 bg-black/40 z-[60] md:hidden"
+            />
+            
+            {/* Half-Sheet Menu */}
+            <motion.div
+              initial={{ y: "100%" }}
+              animate={{ y: 0 }}
+              exit={{ y: "100%" }}
+              transition={{ type: "spring", damping: 25, stiffness: 200 }}
+              className="fixed bottom-0 left-0 right-0 bg-white rounded-t-[24px] z-[70] md:hidden h-[60vh] flex flex-col shadow-2xl overflow-hidden"
+            >
+              {/* Sheet Header */}
+              <div className="flex items-center justify-between px-6 py-4 border-b border-slate-100 shrink-0">
+                <span className="text-lg font-bold">Menu</span>
+                <button 
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="p-2 hover:bg-slate-100 rounded-full transition-colors"
                 >
-                  {item.subItems ? (
-                    <span className="text-lg font-bold">{item.label}</span>
-                  ) : (
-                    <Link href={item.href} className="text-lg font-bold w-full">
-                      {item.label}
-                    </Link>
-                  )}
-                  {item.subItems ? (
-                    <ChevronDown 
-                      size={20} 
-                      className={cn(
-                        "text-slate-400 transition-transform",
-                        openMobileMenus.includes(item.label) && "rotate-180"
-                      )} 
-                    />
-                  ) : (
-                    <ChevronRight size={20} className="text-slate-400" />
-                  )}
-                </div>
-                
-                {item.subItems && (
-                  <div className={cn(
-                    "bg-slate-50 rounded-lg overflow-hidden transition-all duration-300 ease-in-out",
-                    openMobileMenus.includes(item.label) ? "max-h-[500px] mb-4 opacity-100" : "max-h-0 opacity-0"
-                  )}>
-                    {item.subItems.map((sub) => (
-                      <Link 
-                        key={sub.href} 
-                        href={sub.href} 
-                        onClick={() => setIsMobileMenuOpen(false)}
-                        className="block py-3 px-6 text-slate-600 font-medium border-b border-white last:border-0 hover:text-primary"
-                      >
-                        {sub.label}
-                      </Link>
-                    ))}
-                  </div>
-                )}
+                  <X size={20} className="text-slate-500" />
+                </button>
               </div>
-            ))}
-          </nav>
-          <div className="mt-auto pt-10 pb-20 flex flex-col gap-4">
-            <Button variant="outline" className="h-14 text-lg font-bold">로그인</Button>
-            <Button onClick={() => { setIsMobileMenuOpen(false); openModal(); }} className="h-14 text-lg font-bold">무료체험 신청</Button>
-          </div>
-        </div>
-      )}
+
+              {/* Sheet Content (Scrollable) */}
+              <div className="flex-1 overflow-y-auto px-6 py-2">
+                <nav className="flex flex-col">
+                  {NAV_ITEMS.map((item) => (
+                    <div key={item.href} className="border-b border-slate-50 last:border-0">
+                      <div 
+                        className="flex items-center justify-between py-4 cursor-pointer"
+                        onClick={() => item.subItems ? toggleMobileSubmenu(item.label) : setIsMobileMenuOpen(false)}
+                      >
+                        {item.subItems ? (
+                          <span className="text-base font-bold text-slate-800">{item.label}</span>
+                        ) : (
+                          <Link href={item.href} className="text-base font-bold text-slate-800 w-full">
+                            {item.label}
+                          </Link>
+                        )}
+                        {item.subItems ? (
+                          <ChevronDown 
+                            size={18} 
+                            className={cn(
+                              "text-slate-400 transition-transform duration-300",
+                              openMobileMenus.includes(item.label) && "rotate-180"
+                            )} 
+                          />
+                        ) : (
+                          <ChevronRight size={18} className="text-slate-400" />
+                        )}
+                      </div>
+                      
+                      {item.subItems && (
+                        <div className={cn(
+                          "bg-slate-50/50 rounded-xl overflow-hidden transition-all duration-300 ease-in-out",
+                          openMobileMenus.includes(item.label) ? "max-h-[500px] mb-4 opacity-100 py-2" : "max-h-0 opacity-0"
+                        )}>
+                          {item.subItems.map((sub) => (
+                            <Link 
+                              key={sub.href} 
+                              href={sub.href} 
+                              onClick={() => setIsMobileMenuOpen(false)}
+                              className="block py-3 px-6 text-slate-600 text-sm font-semibold hover:text-primary transition-colors"
+                            >
+                              {sub.label}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </nav>
+              </div>
+
+              {/* Sheet Footer (Buttons) */}
+              <div className="p-6 bg-slate-50/30 border-t border-slate-100 shrink-0 flex flex-col gap-3">
+                <div className="grid grid-cols-2 gap-3">
+                  <Button variant="outline" className="h-12 font-bold border-slate-200">로그인</Button>
+                  <Button onClick={() => { setIsMobileMenuOpen(false); openModal(); }} className="h-12 font-bold shadow-md">무료체험 신청</Button>
+                </div>
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
     </header>
   );
 }
