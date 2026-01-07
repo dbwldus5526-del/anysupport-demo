@@ -520,7 +520,7 @@ export function Home() {
         <UseCasesLogos />
       </section>
       {/* 10. 서비스 도입 방식 선택 */}
-      <section className="py-24 bg-[#eff7feb8]">
+      <section className="py-24 bg-[#f8fafc]">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
             <h2 className="text-[25px] md:text-4xl font-bold mb-4">서비스 도입 방식 선택</h2>
