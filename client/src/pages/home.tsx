@@ -30,7 +30,7 @@ import videoSupportImg from "@assets/generated_images/video-based_remote_support
 import companyLogos from "@assets/기업로고new_1767749031414.png";
 import sessionImg from "@assets/관리자페이지__원격지원_세션관리_1767774669198.png";
 import customerImg from "@assets/image_1767775019814.png";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 
 function Counter({ value, duration = 2, suffix = "" }: { value: string, duration?: number, suffix?: string }) {
   const [count, setCount] = useState(0);
