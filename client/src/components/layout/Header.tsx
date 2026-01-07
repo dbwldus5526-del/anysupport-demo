@@ -190,10 +190,7 @@ export function Header() {
   };
 
   return (
-    <header className={cn(
-      "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-      isScrolled ? "bg-white/95 backdrop-blur-md border-b shadow-sm py-3" : "bg-white/80 backdrop-blur-sm py-5"
-    )}>
+    <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 backdrop-blur-sm py-5 bg-[#ffffff]">
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         <Link href="/" onClick={handleLogoClick} className="flex items-center gap-2 group shrink-0">
           <img src={logo} alt="AnySupport" className="h-8 md:h-10 w-auto object-contain" />
@@ -260,7 +257,6 @@ export function Header() {
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
-
       <MobileMenuSheet 
         isOpen={isMobileMenuOpen} 
         onClose={() => setIsMobileMenuOpen(false)} 
