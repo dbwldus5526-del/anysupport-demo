@@ -29,7 +29,7 @@ import mobileSupportImgOriginal from "@assets/generated_images/mobile_remote_sup
 import pcSupportImg from "@assets/uibg-pc_new_1767775521573.png";
 import mobileSupportImg from "@assets/uibg-mobile_NEW_1767775657450.png";
 import videoSupportImg from "@assets/uibg-video_new_1767775875384.png";
-import customerImg from "@assets/고객접속페이지_1767776199142.png";
+import customerImg from "@assets/uibg-customer_new_1767776369054.png";
 import companyLogos from "@assets/기업로고new_1767749031414.png";
 import sessionImg from "@assets/상담원프로그램._1767776278541.png";
 import { Link, useLocation } from "wouter";
