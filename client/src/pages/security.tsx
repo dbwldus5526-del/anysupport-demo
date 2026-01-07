@@ -200,7 +200,7 @@ export default function Security() {
                 </span>
               </div>
 
-              <div className="flex flex-col gap-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:flex lg:flex-col gap-8">
                 {[
                   { 
                     step: "01", 
@@ -238,17 +238,17 @@ export default function Security() {
 
                     {/* Content Section */}
                     <div className="flex-grow">
-                      <div className="flex items-center gap-3 mb-2">
+                      <div className="flex flex-col sm:flex-row sm:items-center gap-3 mb-2">
                         <h4 className="text-xl font-bold text-white">{item.title}</h4>
-                        <span className="px-2 py-0.5 rounded bg-primary/20 font-bold text-[14px] text-[#96b3eb]">
+                        <span className="inline-block px-2 py-0.5 rounded bg-primary/20 font-bold text-[12px] text-[#96b3eb] whitespace-nowrap">
                           {item.subtitle}
                         </span>
                       </div>
                       
-                      <div className="mt-4 grid md:grid-cols-[1fr_2fr] gap-6 items-center">
+                      <div className="mt-4 flex flex-col gap-4">
                         <div className="flex items-center gap-4">
-                          <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center border border-primary/30">
-                            <item.icon className="text-primary" size={24} />
+                          <div className="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center border border-primary/30 shrink-0">
+                            <item.icon className="text-primary" size={20} />
                           </div>
                           <span className="font-bold text-lg text-white/90">{item.cardTitle}</span>
                         </div>
