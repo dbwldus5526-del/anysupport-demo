@@ -23,7 +23,7 @@ import {
   Database
 } from "lucide-react";
 import { motion, useInView } from "framer-motion";
-import heroImage from "@assets/hero_1767765617766.png";
+import heroImage from "@assets/hero_1767765703674.png";
 import pcSupportImg from "@assets/generated_images/pc_remote_support_professional_image.png";
 import mobileSupportImg from "@assets/generated_images/mobile_remote_support_app_interface.png";
 import videoSupportImg from "@assets/generated_images/video-based_remote_support_concept.png";
