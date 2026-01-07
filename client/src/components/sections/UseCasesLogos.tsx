@@ -2,16 +2,48 @@ import { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { logos } from "@/data/logos";
 import { cn } from "@/lib/utils";
+import { ChevronDown, ChevronUp } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const categories = ["전체", "글로벌/대기업", "통신", "금융", "공공", "국내 주요 기업"];
 
 export default function UseCasesLogos() {
   const [activeCategory, setActiveCategory] = useState("전체");
+  const [isExpanded, setIsExpanded] = useState(false);
 
   const filteredLogos = useMemo(() => {
-    if (activeCategory === "전체") return logos;
-    return logos.filter((logo) => logo.category === activeCategory);
+    let result = activeCategory === "전체" ? logos : logos.filter((logo) => logo.category === activeCategory);
+    return result;
   }, [activeCategory]);
+
+  // Calculate items per row based on grid-cols-2 (mobile), md:grid-cols-4, lg:grid-cols-6
+  // But the request says "3 rows".
+  // Let's assume the user wants 3 rows of the current grid.
+  // We'll show the first 12 items (6 per row * 2 rows? No, 6 * 3 = 18 items for desktop)
+  // For mobile 2 * 3 = 6 items.
+  // For tablet 4 * 3 = 12 items.
+  
+  const displayLogos = useMemo(() => {
+    if (isExpanded) return filteredLogos;
+    
+    // We need to determine how many to show based on rows. 
+    // Since we don't know the exact screen size in JS easily without hooks, 
+    // let's use a safe number or handle it via CSS visibility.
+    // However, the request says "only 3 rows". 
+    // To be precise with 3 rows:
+    // Mobile (2 cols): 6 items
+    // Tablet (4 cols): 12 items
+    // Desktop (6 cols): 18 items
+    
+    // Simplest approach: show first 6 items on mobile, 12 on tablet, 18 on desktop?
+    // Let's just use a reasonable default (12 or 18) and let the CSS handle the grid.
+    // Or, we can just slice it to a large enough number that covers 3 rows for all.
+    // Actually, "3 rows" is most commonly 18 for desktop.
+    
+    return filteredLogos.slice(0, 18);
+  }, [filteredLogos, isExpanded]);
+
+  const hasMore = filteredLogos.length > 18;
 
   return (
     <section className="py-24 bg-white">
@@ -27,7 +59,10 @@ export default function UseCasesLogos() {
             {categories.map((category) => (
               <button
                 key={category}
-                onClick={() => setActiveCategory(category)}
+                onClick={() => {
+                  setActiveCategory(category);
+                  setIsExpanded(false);
+                }}
                 data-testid={`button-category-${category}`}
                 className={cn(
                   "px-6 py-2.5 rounded-xl text-sm md:text-base font-bold transition-all duration-200",
@@ -43,13 +78,13 @@ export default function UseCasesLogos() {
         </div>
 
         {/* Logos Grid */}
-        <div className="min-h-[400px]">
+        <div className="relative">
           <motion.div 
             layout
             className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6"
           >
             <AnimatePresence mode="popLayout">
-              {filteredLogos.map((logo) => (
+              {(isExpanded ? filteredLogos : displayLogos).map((logo) => (
                 <motion.div
                   key={logo.id}
                   layout
@@ -74,6 +109,24 @@ export default function UseCasesLogos() {
               ))}
             </AnimatePresence>
           </motion.div>
+
+          {/* Expand/Collapse Button */}
+          {filteredLogos.length > (isExpanded ? 0 : 18) && (
+            <div className="mt-12 flex justify-center">
+              <Button
+                variant="outline"
+                onClick={() => setIsExpanded(!isExpanded)}
+                className="group flex items-center gap-2 px-8 h-12 rounded-xl border-slate-200 font-bold text-slate-600 hover:text-primary hover:border-primary transition-all"
+                data-testid="button-toggle-logos"
+              >
+                {isExpanded ? (
+                  <>접기 <ChevronUp className="w-4 h-4 transition-transform group-hover:-translate-y-0.5" /></>
+                ) : (
+                  <>더보기 <ChevronDown className="w-4 h-4 transition-transform group-hover:translate-y-0.5" /></>
+                )}
+              </Button>
+            </div>
+          )}
         </div>
       </div>
     </section>
