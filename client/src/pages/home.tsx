@@ -280,7 +280,7 @@ export function Home() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
             <div>
-              <div className="text-5xl font-black mb-2 text-[#121212]">5,000만+</div>
+              <div className="font-black mb-2 text-[#121212] text-[45px]">6,000만+</div>
               <div className="text-slate-500 font-bold">누적 지원 건수</div>
             </div>
             <div>
