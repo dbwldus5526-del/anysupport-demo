@@ -493,12 +493,11 @@ export function Home() {
           </div>
         </div>
       </section>
-
       {/* 5.1 Device Support Toggle Section */}
       <section className="py-24 bg-white border-y border-slate-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-black text-slate-900 mb-4 leading-tight">
+            <h2 className="md:text-5xl font-black text-slate-900 mb-4 text-[36px]">
               환경은 달라도, 지원은 하나로 완성됩니다
             </h2>
             <p className="text-slate-500 max-w-2xl mx-auto text-lg font-medium">
@@ -554,7 +553,6 @@ export function Home() {
           </div>
         </div>
       </section>
-
       {/* 6. 원격 연결 프로세스 (4단계) */}
       <section id="connection-process" className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
