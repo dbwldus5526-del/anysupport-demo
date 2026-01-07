@@ -409,7 +409,7 @@ export function Home() {
         </div>
       </section>
       {/* 5. 애니서포트 핵심 기능 */}
-      <section id="features" className="py-24 bg-[#eff7feb8]">
+      <section id="features" className="py-24 bg-[#f8fafc]">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
             <h2 className="text-[25px] md:text-4xl font-bold mb-4">애니서포트 핵심 기능</h2>
