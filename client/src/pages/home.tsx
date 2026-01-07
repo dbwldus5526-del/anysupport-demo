@@ -80,7 +80,7 @@ const DesignIcon = ({ type }: { type: string }) => {
   if (type === "chat") {
     return (
       <div className={baseClasses}>
-        <div className="absolute inset-0 bg-blue-100 rounded-xl" />
+        <div className="absolute inset-0 bg-blue-50 rounded-xl" />
         <div className="absolute bottom-2 right-2 w-6 h-6 bg-blue-500 rounded-lg flex items-center justify-center shadow-sm">
           <div className="w-3 h-0.5 bg-white rounded-full" />
         </div>
@@ -92,9 +92,9 @@ const DesignIcon = ({ type }: { type: string }) => {
   if (type === "control") {
     return (
       <div className={baseClasses}>
-        <div className="absolute inset-0 bg-orange-100 rounded-xl" />
-        <div className="absolute top-1 right-1 w-4 h-4 bg-orange-500 rounded-full border-2 border-white" />
-        <Zap className="text-orange-600 relative z-10" size={24} />
+        <div className="absolute inset-0 bg-sky-50 rounded-xl" />
+        <div className="absolute top-1 right-1 w-4 h-4 bg-sky-500 rounded-full border-2 border-white" />
+        <Zap className="text-sky-600 relative z-10" size={24} />
       </div>
     );
   }
@@ -102,9 +102,9 @@ const DesignIcon = ({ type }: { type: string }) => {
   if (type === "file") {
     return (
       <div className={baseClasses}>
-        <div className="absolute inset-0 bg-green-100 rounded-xl" />
-        <div className="absolute inset-2 border-2 border-green-500/20 rounded-lg border-dashed" />
-        <FileText className="text-green-600 relative z-10" size={24} />
+        <div className="absolute inset-0 bg-indigo-50 rounded-xl" />
+        <div className="absolute inset-2 border-2 border-indigo-500/20 rounded-lg border-dashed" />
+        <FileText className="text-indigo-600 relative z-10" size={24} />
       </div>
     );
   }
@@ -112,9 +112,9 @@ const DesignIcon = ({ type }: { type: string }) => {
   if (type === "record") {
     return (
       <div className={baseClasses}>
-        <div className="absolute inset-0 bg-purple-100 rounded-xl rotate-3" />
-        <div className="absolute inset-0 bg-purple-50 rounded-xl -rotate-3" />
-        <Clock className="text-purple-600 relative z-10" size={24} />
+        <div className="absolute inset-0 bg-blue-50 rounded-xl rotate-3" />
+        <div className="absolute inset-0 bg-blue-100/30 rounded-xl -rotate-3" />
+        <Clock className="text-blue-700 relative z-10" size={24} />
       </div>
     );
   }
@@ -122,7 +122,7 @@ const DesignIcon = ({ type }: { type: string }) => {
   if (type === "multi") {
     return (
       <div className={baseClasses}>
-        <div className="absolute inset-0 bg-cyan-100 rounded-full" />
+        <div className="absolute inset-0 bg-cyan-50 rounded-full" />
         <div className="absolute -top-1 -right-1 w-5 h-5 bg-cyan-500 rounded-full flex items-center justify-center text-[10px] text-white font-bold">+</div>
         <Users className="text-cyan-600 relative z-10" size={24} />
       </div>
@@ -132,8 +132,8 @@ const DesignIcon = ({ type }: { type: string }) => {
   if (type === "monitor") {
     return (
       <div className={baseClasses}>
-        <div className="absolute inset-0 bg-indigo-100 rounded-xl shadow-inner" />
-        <Monitor className="text-indigo-600 relative z-10" size={24} />
+        <div className="absolute inset-0 bg-blue-100/50 rounded-xl shadow-inner" />
+        <Monitor className="text-blue-800 relative z-10" size={24} />
       </div>
     );
   }
@@ -141,9 +141,9 @@ const DesignIcon = ({ type }: { type: string }) => {
   if (type === "lock") {
     return (
       <div className={baseClasses}>
-        <div className="absolute inset-0 bg-red-100 rounded-2xl" />
-        <div className="absolute bottom-1 right-1 w-4 h-4 bg-red-500 rounded-md" />
-        <Lock className="text-red-600 relative z-10" size={24} />
+        <div className="absolute inset-0 bg-slate-100 rounded-2xl" />
+        <div className="absolute bottom-1 right-1 w-4 h-4 bg-blue-600 rounded-md" />
+        <Lock className="text-blue-900 relative z-10" size={24} />
       </div>
     );
   }
@@ -151,9 +151,9 @@ const DesignIcon = ({ type }: { type: string }) => {
   if (type === "diag") {
     return (
       <div className={baseClasses}>
-        <div className="absolute inset-0 bg-amber-100 rounded-xl" />
-        <div className="absolute inset-3 bg-amber-500/10 rounded-full animate-ping" />
-        <Activity className="text-amber-600 relative z-10" size={24} />
+        <div className="absolute inset-0 bg-sky-50 rounded-xl" />
+        <div className="absolute inset-3 bg-sky-500/10 rounded-full animate-ping" />
+        <Activity className="text-sky-700 relative z-10" size={24} />
       </div>
     );
   }
@@ -161,9 +161,9 @@ const DesignIcon = ({ type }: { type: string }) => {
   if (type === "browser") {
     return (
       <div className={baseClasses}>
-        <div className="absolute inset-0 bg-sky-100 rounded-xl" />
-        <div className="absolute top-2 left-2 w-2 h-2 bg-sky-400 rounded-full" />
-        <Globe className="text-sky-600 relative z-10" size={24} />
+        <div className="absolute inset-0 bg-blue-50 rounded-xl" />
+        <div className="absolute top-2 left-2 w-2 h-2 bg-blue-400 rounded-full" />
+        <Globe className="text-blue-600 relative z-10" size={24} />
       </div>
     );
   }
@@ -171,8 +171,8 @@ const DesignIcon = ({ type }: { type: string }) => {
   if (type === "log") {
     return (
       <div className={baseClasses}>
-        <div className="absolute inset-0 bg-slate-100 rounded-xl border border-slate-200" />
-        <Database className="text-slate-600 relative z-10" size={24} />
+        <div className="absolute inset-0 bg-slate-50 rounded-xl border border-blue-100" />
+        <Database className="text-blue-500 relative z-10" size={24} />
       </div>
     );
   }
