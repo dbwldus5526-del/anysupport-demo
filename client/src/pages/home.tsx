@@ -67,7 +67,7 @@ function Counter({ value, duration = 2, suffix = "" }: { value: string, duration
     : Math.floor(count).toLocaleString();
 
   return (
-    <div ref={ref} className="font-black mb-2 text-[#121212] text-[45px]">
+    <div ref={ref} className="font-black mb-1 md:mb-2 text-[#121212] text-[32px] sm:text-[38px] md:text-[45px]">
       {displayValue}{suffix}
     </div>
   );
@@ -98,11 +98,11 @@ export function Home() {
         
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-6xl font-black text-slate-900 leading-[1.1] mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-black text-slate-900 leading-[1.1] mb-6">
               기업 상담과 지원을<br />
               <span className="text-primary">빠르고 안전하게</span>
             </h1>
-            <p className="text-lg md:text-xl text-slate-600 mb-10 max-w-2xl font-medium leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl text-slate-600 mb-10 max-w-2xl font-medium leading-relaxed">
               고객 상담·IT 지원·운영 지원을 하나로 연결하는<br className="hidden md:block" />
               기업용 원격지원 SaaS 애니서포트
             </p>
@@ -122,9 +122,9 @@ export function Home() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
             <span className="text-primary font-bold text-xs tracking-widest uppercase mb-3 block">REMOTE SUPPORT</span>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-slate-900">원격지원(Remote Support)이란?</h2>
-            <p className="text-primary font-bold text-lg mb-2">현장 방문 없이 온라인으로 문제를 즉각 해결하는 기술</p>
-            <p className="text-slate-500 font-medium leading-relaxed max-w-2xl mx-auto">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 text-slate-900">원격지원(Remote Support)이란?</h2>
+            <p className="text-primary font-bold text-base sm:text-lg mb-2">현장 방문 없이 온라인으로 문제를 즉각 해결하는 기술</p>
+            <p className="text-slate-500 font-medium leading-relaxed max-w-2xl mx-auto text-sm sm:text-base">
               애니서포트는 상담원이 고객의 PC나 모바일 화면을 공유받아<br className="hidden md:block" />
               직접 제어함으로써 장애를 진단하고 해결하는 기업용 전문 서비스입니다.
             </p>
@@ -403,8 +403,8 @@ export function Home() {
       <section className="py-24 bg-primary text-white overflow-hidden relative">
         <div className="absolute top-0 right-0 w-1/3 h-full bg-white/5 skew-x-12 transform translate-x-1/2" />
         <div className="container mx-auto px-4 md:px-6 text-center relative z-10">
-          <h2 className="text-3xl md:text-5xl font-bold mb-8">지금  14일간 무료로 사용해보세요</h2>
-          <p className="text-lg md:text-xl opacity-90 mb-12 max-w-2xl mx-auto font-medium">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-8">지금  14일간 무료로 사용해보세요</h2>
+          <p className="text-base sm:text-lg md:text-xl opacity-90 mb-12 max-w-2xl mx-auto font-medium">
             별도의 결제 정보 입력 없이 즉시 무료 체험이 가능합니다.<br />
             최고의 원격 지원 기술을 직접 경험해보세요.
           </p>
