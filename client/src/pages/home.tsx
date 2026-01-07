@@ -472,7 +472,7 @@ export function Home() {
         </div>
       </section>
       {/* 7. 기술력 & 보안 */}
-      <section className="py-24 bg-slate-900 text-white">
+      <section className="py-24 bg-slate-900 text-white pt-[70px] pb-[70px]">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-block p-3 rounded-full bg-primary/20 text-primary mb-6">
