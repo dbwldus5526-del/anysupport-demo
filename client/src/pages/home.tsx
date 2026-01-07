@@ -185,8 +185,8 @@ export function Home() {
       <section className="py-24 bg-slate-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">왜 애니서포트인가요?</h2>
-            <p className="text-slate-500 max-w-2xl mx-auto text-lg">기업이 신뢰할 수 있는 압도적인 기술력과 안정성</p>
+            <h2 className="text-[25px] md:text-4xl font-bold mb-4">왜 애니서포트인가요?</h2>
+            <p className="text-slate-500 max-w-2xl mx-auto text-[14px] md:text-lg">기업이 신뢰할 수 있는 압도적인 기술력과 안정성</p>
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {[
@@ -210,8 +210,8 @@ export function Home() {
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">환경과 기기에 제한 없는 원격지원</h2>
-            <p className="text-slate-500 max-w-2xl mx-auto text-lg">어떤 환경에서도 고객과 연결될 수 있습니다.</p>
+            <h2 className="text-[25px] md:text-4xl font-bold mb-4">환경과 기기에 제한 없는 원격지원</h2>
+            <p className="text-slate-500 max-w-2xl mx-auto text-[14px] md:text-lg">어떤 환경에서도 고객과 연결될 수 있습니다.</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             {[
@@ -242,8 +242,8 @@ export function Home() {
       <section id="features" className="py-24 bg-slate-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">애니서포트 핵심 기능</h2>
-            <p className="text-slate-500 max-w-2xl mx-auto text-lg">효율적인 지원을 위한 강력한 도구 모음</p>
+            <h2 className="text-[25px] md:text-4xl font-bold mb-4">애니서포트 핵심 기능</h2>
+            <p className="text-slate-500 max-w-2xl mx-auto text-[14px] md:text-lg">효율적인 지원을 위한 강력한 도구 모음</p>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 mb-12 max-w-6xl mx-auto">
             {[
@@ -277,8 +277,8 @@ export function Home() {
       <section id="connection-process" className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">간편한 4단계 연결 프로세스</h2>
-            <p className="text-slate-500 max-w-2xl mx-auto text-lg">누구나 1분 안에 원격 지원을 시작할 수 있습니다.</p>
+            <h2 className="text-[25px] md:text-4xl font-bold mb-4">간편한 4단계 연결 프로세스</h2>
+            <p className="text-slate-500 max-w-2xl mx-auto text-[14px] md:text-lg">누구나 1분 안에 원격 지원을 시작할 수 있습니다.</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
             {[
@@ -349,8 +349,8 @@ export function Home() {
       <section className="py-24 bg-slate-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">산업별 환경에 최적화된 원격지원</h2>
-            <p className="text-slate-500 max-w-2xl mx-auto text-lg">국내외 주요 기업들이 애니서포트를 선택한 이유</p>
+            <h2 className="text-[25px] md:text-4xl font-bold mb-4">산업별 환경에 최적화된 원격지원</h2>
+            <p className="text-slate-500 max-w-2xl mx-auto text-[14px] md:text-lg">국내외 주요 기업들이 애니서포트를 선택한 이유</p>
           </div>
           <div className="mb-12">
             <div className="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm overflow-hidden">
@@ -372,8 +372,8 @@ export function Home() {
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">서비스 도입 방식 선택</h2>
-            <p className="text-slate-500 max-w-2xl mx-auto text-lg">귀사의 규모와 환경에 맞는 플랜을 선택하세요.</p>
+            <h2 className="text-[25px] md:text-4xl font-bold mb-4">서비스 도입 방식 선택</h2>
+            <p className="text-slate-500 max-w-2xl mx-auto text-[14px] md:text-lg">귀사의 규모와 환경에 맞는 플랜을 선택하세요.</p>
           </div>
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             <div className="p-10 rounded-2xl border border-slate-200 hover:border-primary transition-all bg-white shadow-sm flex flex-col">
