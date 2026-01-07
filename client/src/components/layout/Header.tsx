@@ -36,7 +36,6 @@ const NAV_ITEMS = [
       { label: "다양한 기능", href: "/solution/features" },
       { label: "원격지원 관리", href: "/solution/management" },
       { label: "사용 방법", href: "/solution/guide" },
-      { label: "사용 환경", href: "/solution/environment" },
     ]
   },
   { label: "가격", href: "/pricing" },
