@@ -92,12 +92,12 @@ export default function UseCasesLogos() {
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.9 }}
                   transition={{ duration: 0.2 }}
-                  className="group relative flex items-center justify-center p-4 bg-white border border-slate-100 rounded-2xl transition-all duration-300 hover:shadow-xl hover:shadow-slate-200/50 hover:border-primary/20 h-24"
+                  className="group relative flex items-center justify-center p-2 bg-white border border-slate-100 rounded-2xl transition-all duration-300 hover:shadow-xl hover:shadow-slate-200/50 hover:border-primary/20 h-24"
                 >
                   <img
                     src={logo.path}
                     alt={`${logo.name} 로고`}
-                    className="max-h-12 w-full object-contain transition-all duration-300"
+                    className="max-h-16 w-full object-contain transition-all duration-300"
                     onError={(e) => {
                       const target = e.target as HTMLImageElement;
                       target.src = `https://placehold.co/200x80/f8fafc/64748b?text=${logo.name}`;
