@@ -13,6 +13,7 @@ import Solution from "@/pages/solution";
 import Guide from "@/pages/guide";
 import Security from "@/pages/security";
 import Features from "@/pages/features";
+import Management from "@/pages/management";
 import Pricing from "@/pages/pricing";
 import Download from "@/pages/download";
 import Support from "@/pages/support";
@@ -47,6 +48,7 @@ function Router() {
           <Route path="/solution/intro" component={Solution} />
           <Route path="/solution/security" component={Security} />
           <Route path="/solution/features" component={Features} />
+          <Route path="/solution/management" component={Management} />
           <Route path="/solution/guide" component={Guide} />
           <Route path="/solution/environment" component={Solution} />
           <Route path="/pricing" component={Pricing} />

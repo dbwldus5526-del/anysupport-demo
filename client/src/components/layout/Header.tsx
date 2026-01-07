@@ -34,6 +34,7 @@ const NAV_ITEMS = [
       { label: "애니서포트 소개", href: "/solution/intro" },
       { label: "보안성과 안전성", href: "/solution/security" },
       { label: "다양한 기능", href: "/solution/features" },
+      { label: "원격지원 관리", href: "/solution/management" },
       { label: "사용 방법", href: "/solution/guide" },
       { label: "사용 환경", href: "/solution/environment" },
     ]
