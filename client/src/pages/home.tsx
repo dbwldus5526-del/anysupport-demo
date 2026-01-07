@@ -28,6 +28,7 @@ import pcSupportImg from "@assets/generated_images/pc_remote_support_professiona
 import mobileSupportImg from "@assets/generated_images/mobile_remote_support_app_interface.png";
 import videoSupportImg from "@assets/generated_images/video-based_remote_support_concept.png";
 import companyLogos from "@assets/기업로고new_1767749031414.png";
+import { Link } from "wouter";
 
 function Counter({ value, duration = 2, suffix = "" }: { value: string, duration?: number, suffix?: string }) {
   const [count, setCount] = useState(0);
@@ -533,9 +534,11 @@ export function Home() {
                 월/연 단위 결제로 즉시 사용 가능한 표준 서비스입니다.<br />
                 중소·중견기업 고객에게 추천합니다.
               </p>
-              <Button size="lg" onClick={openModal} className="w-full font-bold">
-                가격 페이지 보기
-              </Button>
+              <Link href="/pricing" data-testid="link-pricing">
+                <Button size="lg" className="w-full font-bold">
+                  가격 페이지 보기
+                </Button>
+              </Link>
             </div>
             <div className="p-10 rounded-2xl border border-slate-200 hover:border-primary transition-all bg-white shadow-sm flex flex-col">
               <h3 className="text-2xl font-bold mb-4">솔루션 / 연동형 제품</h3>
