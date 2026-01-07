@@ -400,7 +400,7 @@ export function Home() {
       <section className="py-24 bg-primary text-white overflow-hidden relative">
         <div className="absolute top-0 right-0 w-1/3 h-full bg-white/5 skew-x-12 transform translate-x-1/2" />
         <div className="container mx-auto px-4 md:px-6 text-center relative z-10">
-          <h2 className="text-3xl md:text-5xl font-bold mb-8">지금 바로 애니서포트를 사용해보세요</h2>
+          <h2 className="text-3xl md:text-5xl font-bold mb-8">지금 바로 14일간 무료로 사용해보세요</h2>
           <p className="text-lg md:text-xl opacity-90 mb-12 max-w-2xl mx-auto font-medium">
             별도의 결제 정보 입력 없이 즉시 무료 체험이 가능합니다.<br />
             최고의 원격 지원 기술을 직접 경험해보세요.
