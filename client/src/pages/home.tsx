@@ -26,6 +26,7 @@ import { motion, useInView } from "framer-motion";
 import heroImage from "@assets/hero1_1767765900169.png";
 import pcSupportImgOriginal from "@assets/generated_images/pc_remote_support_professional_image.png";
 import mobileSupportImgOriginal from "@assets/generated_images/mobile_remote_support_app_interface.png";
+import videoSupportImgOriginal from "@assets/generated_images/video-based_remote_support_concept.png";
 import pcSupportImg from "@assets/uibg-pc_new_1767775521573.png";
 import mobileSupportImg from "@assets/uibg-mobile_NEW_1767775657450.png";
 import videoSupportImg from "@assets/uibg-video_new_1767775875384.png";
@@ -431,7 +432,7 @@ export function Home() {
             {[
               { image: pcSupportImgOriginal, title: "PC 지원", desc: "Windows, macOS, Linux 지원", href: "/product/pc" },
               { image: mobileSupportImgOriginal, title: "Mobile 지원", desc: "Android, iOS 실시간 제어", href: "/product/mobile" },
-              { image: videoSupportImg, title: "Video 지원", desc: "현장 영상 기반 원격 가이드", href: "/product/video" }
+              { image: videoSupportImgOriginal, title: "Video 지원", desc: "현장 영상 기반 원격 가이드", href: "/product/video" }
             ].map((item, i) => (
               <Link key={i} href={item.href} data-testid={`link-solution-${item.title}`}>
                 <div className="overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm flex flex-col group hover:shadow-md transition-shadow cursor-pointer h-full">
