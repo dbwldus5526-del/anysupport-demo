@@ -28,6 +28,7 @@ import {
 import sessionImg from "@assets/관리자페이지__원격지원_세션관리_1767774669198.png";
 import monitoringImg from "@assets/관리자페이지__실시간_다중모니터링_1767774713959.png";
 import historyImg from "@assets/관리자페이지__원격지원_기록관리_1767774508620.png";
+import { Link } from "wouter";
 
 const heroImage = "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=2426&ixlib=rb-4.0.3";
 

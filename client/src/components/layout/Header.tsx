@@ -7,6 +7,10 @@ import logo from "@assets/애니서포트--new-log_1767681624073.png";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
 import { createPortal } from "react-dom";
+import { useMutation } from "@tanstack/react-query";
+import { apiRequest } from "@/lib/queryClient";
+import { useToast } from "@/hooks/use-toast";
+import { insertInquirySchema } from "@shared/schema";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -14,7 +18,6 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 
 const NAV_ITEMS = [
@@ -158,8 +161,55 @@ export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openMobileMenus, setOpenMobileMenus] = useState<string[]>([]);
-  const { openModal } = useModal();
+  const { isOpen, closeModal, openModal } = useModal();
   const [location] = useLocation();
+  const { toast } = useToast();
+
+  const mutation = useMutation({
+    mutationFn: async (data: any) => {
+      const res = await apiRequest("POST", "/api/inquiries", data);
+      return res.json();
+    },
+    onSuccess: () => {
+      toast({
+        title: "신청 완료",
+        description: "문의가 정상적으로 접수되었습니다. 곧 연락드리겠습니다.",
+      });
+      closeModal();
+    },
+    onError: (error: Error) => {
+      toast({
+        title: "오류 발생",
+        description: error.message || "문의 전송 중 오류가 발생했습니다.",
+        variant: "destructive",
+      });
+    },
+  });
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    const data = {
+      name: formData.get("name") as string,
+      email: formData.get("email") as string,
+      company: formData.get("company") as string,
+      phone: formData.get("phone") as string,
+      content: formData.get("content") as string,
+      type: "trial",
+    };
+
+    const result = insertInquirySchema.safeParse(data);
+    if (!result.success) {
+      toast({
+        title: "입력 오류",
+        description: "모든 필수 항목을 올바르게 입력해주세요.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    mutation.mutate(data);
+  };
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
