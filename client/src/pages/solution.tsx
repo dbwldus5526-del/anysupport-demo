@@ -274,7 +274,7 @@ export default function Solution() {
             <div className="flex-1 bg-slate-50 p-10 rounded-3xl border border-slate-100 flex flex-col items-center text-center">
               <div className="text-5xl mb-6">🚀</div>
               <h3 className="text-2xl font-bold mb-4">설치 없는 원격지원</h3>
-              <p className="text-slate-600 mb-8 font-medium">
+              <p className="mb-8 text-[18px] font-normal text-[#666]">
                 복잡한 설치 없이 브라우저에서 바로!
                 <br />
                 언제 어디서나 즉각적인 고객 응대가 가능합니다.
