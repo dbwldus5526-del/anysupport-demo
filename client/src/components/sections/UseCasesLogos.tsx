@@ -64,12 +64,7 @@ export default function UseCasesLogos() {
                   setIsExpanded(false);
                 }}
                 data-testid={`button-category-${category}`}
-                className={cn(
-                  "px-6 py-2.5 rounded-xl text-sm md:text-base font-bold transition-all duration-200",
-                  activeCategory === category
-                    ? "bg-white text-primary shadow-sm ring-1 ring-slate-200"
-                    : "text-slate-500 hover:text-slate-900 hover:bg-white/50"
-                )}
+                className="px-6 py-2.5 rounded-xl text-sm md:text-base font-bold transition-all duration-200 hover:text-slate-900 hover:bg-white/50 text-[#333]"
               >
                 {category}
               </button>
