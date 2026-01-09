@@ -75,7 +75,7 @@ export default function Download() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-6xl mx-auto">
             <div className="mb-12">
-              <h3 className="text-xl md:text-3xl font-black mb-3 text-slate-900">고객용 원격지원 런처</h3>
+              <h3 className="text-xl md:text-3xl mb-3 text-[#333] font-bold">고객용 원격지원 런처</h3>
               <p className="text-slate-500 font-bold text-sm md:text-base">상담사가 안내한 인증번호를 입력하여 원격지원을 받습니다.</p>
             </div>
 
