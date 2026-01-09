@@ -728,7 +728,7 @@ export default function Cases() {
                 <p className="text-sm text-slate-600 mb-2 font-medium">
                   {effect.desc}
                 </p>
-                <p className="text-slate-400 text-[13px]">
+                <p className="text-[#666] text-[18px] font-normal">
                   {effect.details}
                 </p>
               </div>
