@@ -100,7 +100,7 @@ export default function Download() {
             </div>
 
             {/* Web Version Banner */}
-            <div className="relative rounded-[2rem] bg-gradient-to-r from-[#001d4d] to-[#004481] p-12 md:p-16 text-center text-white overflow-hidden shadow-2xl shadow-blue-900/20">
+            <div className="relative rounded-[2rem] bg-gradient-to-r from-[#001d4d] to-[#004481] p-12 md:p-16 text-center text-white overflow-hidden shadow-2xl shadow-blue-900/20 pt-[57px] pb-[57px]">
               <div className="relative z-10">
                 <h3 className="md:text-3xl mb-6 text-[36px] font-bold">설치 없이 브라우저에서도 바로 원격지원을 받을 수 있습니다!</h3>
                 <p className="text-white/80 mb-10 max-w-2xl mx-auto md:text-base font-normal text-[18px]">
