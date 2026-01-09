@@ -370,7 +370,7 @@ export function Home() {
       <section id="features" className="py-24 bg-[#f8fafc]">
         <div className="max-w-[1280px] w-full mx-auto px-4 sm:px-6 lg:px-10">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+            <h2 className="lg:text-4xl font-bold mb-4 text-[#333] text-[40px]">
               효율적인 지원을 위한 핵심적인 기능
             </h2>
             <p className="text-[#666] max-w-2xl mx-auto text-[18px]"></p>
