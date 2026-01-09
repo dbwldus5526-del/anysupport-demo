@@ -110,7 +110,7 @@ export default function Solution() {
                   <div className="w-20 h-20 rounded-full bg-white shadow-lg flex items-center justify-center text-primary border border-slate-50">
                     <Headphones size={36} />
                   </div>
-                  <span className="text-sm font-bold text-slate-600">
+                  <span className="text-[18px] font-medium text-[#333]">
                     상담원
                   </span>
                 </div>
