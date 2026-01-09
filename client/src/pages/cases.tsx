@@ -760,7 +760,7 @@ export default function Cases() {
                 <h3 className="text-xl font-bold mb-4">{feature.title}</h3>
                 <ul className="space-y-2">
                   {feature.items.map((item, j) => (
-                    <li key={j} className="flex items-center gap-2 text-slate-300 text-sm">
+                    <li key={j} className="flex items-center gap-2 text-slate-300 text-[18px]">
                       <CheckCircle size={14} className="text-green-400" />
                       {item}
                     </li>
