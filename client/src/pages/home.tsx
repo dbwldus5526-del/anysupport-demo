@@ -85,7 +85,7 @@ function Counter({
   return (
     <div
       ref={ref}
-      className="font-black mb-1 md:mb-2 sm:text-[28px] md:text-[32px] text-[#333] text-[40px]"
+      className="font-black mb-1 md:mb-2 text-[43px]"
       style={{ color: textColor }}
     >
       {displayValue}
@@ -629,31 +629,31 @@ export function Home() {
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6 text-center text-[#333]">
             <div>
               <Counter value="6000" suffix="+" textColor="#333" />
-              <div className="sm:text-xs md:text-sm font-normal text-[16px] text-[#666]">
+              <div className="font-normal text-[18px] text-[#666]">
                 국내외 도입 기업수
               </div>
             </div>
             <div>
               <Counter value="60000" suffix="+" textColor="#333" />
-              <div className="sm:text-xs md:text-sm text-[#666] font-normal text-[18px]">
+              <div className="font-normal text-[18px] text-[#666]">
                 하루 평균 고객지원수
               </div>
             </div>
             <div>
               <Counter value="93" suffix="%" textColor="#333" />
-              <div className="sm:text-xs md:text-sm text-[#666] text-[16px] font-normal">
+              <div className="font-normal text-[18px] text-[#666]">
                 원격지원 해결율
               </div>
             </div>
             <div>
               <Counter value="95" suffix="%" textColor="#333" />
-              <div className="sm:text-xs md:text-sm font-normal text-[#666] text-[16px]">
+              <div className="font-normal text-[18px] text-[#666]">
                 고객만족도 증가
               </div>
             </div>
             <div>
               <Counter value="175" suffix="억원" textColor="#333" />
-              <div className="sm:text-xs md:text-sm text-[#666] text-[16px] font-normal">
+              <div className="font-normal text-[18px] text-[#666]">
                 누적 비용 절감액
               </div>
             </div>
