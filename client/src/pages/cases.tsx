@@ -21,6 +21,15 @@ import {
   Server,
   Globe,
   Network,
+  Monitor,
+  Headphones,
+  Flame,
+  ArrowDown,
+  ArrowLeftRight,
+  User,
+  HardDrive,
+  Smartphone,
+  Video,
 } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -328,42 +337,135 @@ export default function Cases() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4 }}
-              className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto"
+              className="max-w-6xl mx-auto"
             >
-              {/* Left: Scenario Info */}
-              <div className="bg-slate-50 rounded-2xl p-8">
-                <h3 className="text-xl font-bold text-primary mb-2">
-                  {currentScenario.subtitle}
-                </h3>
-                <p className="text-slate-600 mb-6">
-                  {currentScenario.description}
-                </p>
-
-                <div className="space-y-3 mb-6">
-                  <h4 className="font-bold text-slate-800">보안 포인트</h4>
-                  {currentScenario.securityPoints.map((point, i) => (
-                    <div key={i} className="flex items-center gap-3 text-sm">
-                      <CheckCircle size={16} className="text-green-500" />
-                      <span>{point}</span>
-                    </div>
-                  ))}
+              {/* Visual Flow Diagram */}
+              <div className="bg-slate-50 rounded-2xl p-8 mb-8 border border-slate-100">
+                <div className="text-center mb-6">
+                  <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-bold rounded-full mb-2">
+                    시나리오
+                  </span>
+                  <h3 className="text-xl font-bold text-slate-800">
+                    {currentScenario.subtitle}
+                  </h3>
+                  <p className="text-slate-500 text-sm mt-2">{currentScenario.description}</p>
                 </div>
 
-                <div className="p-4 bg-blue-50 rounded-xl border border-blue-100">
-                  <p className="text-sm text-blue-700">
-                    <strong>누가:</strong> 상담원/운영자
-                    <br />
-                    <strong>어디에:</strong> {currentScenario.id === "internet" ? "인터넷망 고객 PC" : currentScenario.id === "internal" ? "내부망/연계 시스템" : "DMZ/내부 서버"}
-                    <br />
-                    <strong>무엇을:</strong> 실시간 원격 지원 및 장애 해결
-                  </p>
+                {/* Flow Diagram */}
+                <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 py-6">
+                  {/* Step 1: 상담원 */}
+                  <div className="flex flex-col items-center">
+                    <div className="w-20 h-20 bg-blue-100 rounded-2xl flex items-center justify-center mb-2 border-2 border-blue-200">
+                      <Headphones size={36} className="text-blue-600" />
+                    </div>
+                    <span className="text-sm font-bold text-slate-700">상담원</span>
+                    <span className="text-xs text-slate-400">원격지원 시작</span>
+                  </div>
+
+                  <ArrowRight className="text-slate-300 hidden md:block" size={32} />
+                  <ArrowDown className="text-slate-300 md:hidden" size={32} />
+
+                  {/* Step 2: 보안/방화벽 */}
+                  <div className="flex flex-col items-center">
+                    <div className="w-20 h-20 bg-orange-100 rounded-2xl flex items-center justify-center mb-2 border-2 border-orange-200 relative">
+                      <Shield size={36} className="text-orange-600" />
+                      <div className="absolute -top-1 -right-1 w-5 h-5 bg-green-500 rounded-full flex items-center justify-center">
+                        <CheckCircle size={12} className="text-white" />
+                      </div>
+                    </div>
+                    <span className="text-sm font-bold text-slate-700">보안 인증</span>
+                    <span className="text-xs text-slate-400">
+                      {currentScenario.id === "internet" ? "암호화 연결" : currentScenario.id === "internal" ? "접근 승인" : "DMZ 통과"}
+                    </span>
+                  </div>
+
+                  <ArrowRight className="text-slate-300 hidden md:block" size={32} />
+                  <ArrowDown className="text-slate-300 md:hidden" size={32} />
+
+                  {/* Step 3: 네트워크/서버 */}
+                  <div className="flex flex-col items-center">
+                    <div className="w-20 h-20 bg-slate-100 rounded-2xl flex items-center justify-center mb-2 border-2 border-slate-200">
+                      {currentScenario.id === "internet" ? (
+                        <Globe size={36} className="text-slate-600" />
+                      ) : currentScenario.id === "internal" ? (
+                        <Network size={36} className="text-slate-600" />
+                      ) : (
+                        <Server size={36} className="text-slate-600" />
+                      )}
+                    </div>
+                    <span className="text-sm font-bold text-slate-700">
+                      {currentScenario.id === "internet" ? "인터넷망" : currentScenario.id === "internal" ? "내부망" : "DMZ 구간"}
+                    </span>
+                    <span className="text-xs text-slate-400">
+                      {currentScenario.id === "internet" ? "공용 네트워크" : currentScenario.id === "internal" ? "사내 시스템" : "보안 구역"}
+                    </span>
+                  </div>
+
+                  <ArrowRight className="text-slate-300 hidden md:block" size={32} />
+                  <ArrowDown className="text-slate-300 md:hidden" size={32} />
+
+                  {/* Step 4: 대상 기기 */}
+                  <div className="flex flex-col items-center">
+                    <div className="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center mb-2 border-2 border-primary/20">
+                      {currentScenario.id === "internet" ? (
+                        <Monitor size={36} className="text-primary" />
+                      ) : currentScenario.id === "internal" ? (
+                        <Laptop size={36} className="text-primary" />
+                      ) : (
+                        <HardDrive size={36} className="text-primary" />
+                      )}
+                    </div>
+                    <span className="text-sm font-bold text-slate-700">
+                      {currentScenario.id === "internet" ? "고객 PC" : currentScenario.id === "internal" ? "직원 단말" : "내부 서버"}
+                    </span>
+                    <span className="text-xs text-slate-400">원격 제어</span>
+                  </div>
+                </div>
+
+                {/* Security Points & Info */}
+                <div className="grid md:grid-cols-2 gap-6 mt-6">
+                  <div className="bg-white rounded-xl p-5 border border-slate-100">
+                    <h4 className="font-bold text-slate-800 mb-3 flex items-center gap-2">
+                      <Shield size={18} className="text-primary" />
+                      보안 포인트
+                    </h4>
+                    <div className="space-y-2">
+                      {currentScenario.securityPoints.map((point, i) => (
+                        <div key={i} className="flex items-center gap-2 text-sm">
+                          <CheckCircle size={14} className="text-green-500" />
+                          <span className="text-slate-600">{point}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="bg-blue-50 rounded-xl p-5 border border-blue-100">
+                    <h4 className="font-bold text-blue-800 mb-3 flex items-center gap-2">
+                      <Users size={18} className="text-blue-600" />
+                      지원 대상
+                    </h4>
+                    <div className="space-y-2 text-sm text-blue-700">
+                      <div className="flex items-center gap-2">
+                        <Headphones size={14} />
+                        <strong>누가:</strong> 상담원/운영자
+                      </div>
+                      <div className="flex items-center gap-2">
+                        {currentScenario.id === "internet" ? <Monitor size={14} /> : currentScenario.id === "internal" ? <Network size={14} /> : <Server size={14} />}
+                        <strong>어디에:</strong> {currentScenario.id === "internet" ? "인터넷망 고객 PC" : currentScenario.id === "internal" ? "내부망/연계 시스템" : "DMZ/내부 서버"}
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <ArrowLeftRight size={14} />
+                        <strong>무엇을:</strong> 실시간 원격 지원 및 장애 해결
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
 
-              {/* Right: Case Logos */}
+              {/* Case Logos Grid */}
               <div className="bg-white rounded-2xl border border-slate-200 p-8">
                 <h3 className="text-lg font-bold mb-6 text-center">대표 사례</h3>
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                   {currentScenario.cases.slice(0, 8).map((caseItem, i) => (
                     <div
                       key={i}
