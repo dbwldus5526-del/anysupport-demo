@@ -337,7 +337,7 @@ export default function Solution() {
                 <div className="flex items-center gap-4 p-4 rounded-xl bg-slate-50">
                   <Building2 className="text-primary" size={24} />
                   <div>
-                    <h4 className="font-bold text-slate-900">온프레미스</h4>
+                    <h4 className="font-bold text-[#333] text-[18px]">온프레미스</h4>
                     <p className="text-xs text-slate-500">
                       기업 내 인프라 직접 설치 (문의 필요)
                     </p>
