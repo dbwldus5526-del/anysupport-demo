@@ -264,9 +264,9 @@ export function Home() {
           <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent lg:w-3/4" />
         </div>
 
-        <div className="container mx-auto px-4 md:px-6 relative z-10">
+        <div className="max-w-[1280px] w-full mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
           <div className="max-w-3xl">
-            <h1 className="text-3xl sm:text-4xl md:text-6xl font-black text-slate-900 leading-[1.1] mb-6">
+            <h1 className="text-3xl lg:text-4xl md:text-6xl font-black text-slate-900 leading-[1.1] mb-6">
               고객과 상담사사이
               <br />
               <span className="text-primary">애니서포트가 있습니다</span>
@@ -298,12 +298,12 @@ export function Home() {
       </section>
       {/* 다양한 환경과 기기 지원 */}
       <section className="py-24 bg-white pt-[154px] pb-[154px]">
-        <div className="container mx-auto px-4 md:px-6">
+        <div className="max-w-[1280px] w-full mx-auto px-4 sm:px-6 lg:px-10">
           <div className="text-center mb-16">
-            <h2 className="text-[25px] md:text-4xl font-bold mb-4">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
               환경과 기기에 제한 없는 원격지원
             </h2>
-            <p className="text-slate-500 max-w-2xl mx-auto text-[14px] md:text-lg">
+            <p className="text-slate-500 max-w-2xl mx-auto sm:text-base">
               어떤 환경에서도 고객과 연결될 수 있습니다.
             </p>
           </div>
@@ -334,7 +334,7 @@ export function Home() {
                 data-testid={`link-solution-${item.title}`}
               >
                 <div className="overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm flex flex-col group hover:shadow-md transition-shadow cursor-pointer h-full">
-                  <div className="aspect-[4/3] overflow-hidden relative">
+                  <div className="h-56 sm:h-64 overflow-hidden relative">
                     <img
                       src={item.image}
                       alt={item.title}
@@ -343,10 +343,10 @@ export function Home() {
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent opacity-60" />
                   </div>
                   <div className="p-6 sm:p-8 text-center border-t border-slate-50 flex-1">
-                    <h3 className="text-lg sm:text-xl font-bold mb-1 sm:mb-2 group-hover:text-primary transition-colors">
+                    <h3 className="text-lg lg:text-2xl font-bold mb-1 sm:mb-2 group-hover:text-primary transition-colors">
                       {item.title}
                     </h3>
-                    <p className="text-slate-500 text-xs sm:text-sm font-medium">
+                    <p className="text-slate-500 sm:text-base font-medium">
                       {item.desc}
                     </p>
                   </div>
@@ -368,12 +368,12 @@ export function Home() {
       </section>
       {/* 5. 애니서포트 핵심 기능 */}
       <section id="features" className="py-24 bg-[#f8fafc]">
-        <div className="container mx-auto px-4 md:px-6">
+        <div className="max-w-[1280px] w-full mx-auto px-4 sm:px-6 lg:px-10">
           <div className="text-center mb-16">
-            <h2 className="text-[25px] md:text-4xl font-bold mb-4">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
               효율적인 지원을 위한 핵심적인 기능
             </h2>
-            <p className="text-slate-500 max-w-2xl mx-auto text-[14px] md:text-lg"></p>
+            <p className="text-slate-500 max-w-2xl mx-auto sm:text-base"></p>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 mb-12 max-w-6xl mx-auto">
             {[
@@ -458,12 +458,12 @@ export function Home() {
       </section>
       {/* 5.1 Device Support Toggle Section */}
       <section className="py-24 bg-white border-y border-slate-50">
-        <div className="container mx-auto px-4 md:px-6">
+        <div className="max-w-[1280px] w-full mx-auto px-4 sm:px-6 lg:px-10">
           <div className="text-center mb-16">
-            <h2 className="md:text-5xl text-slate-900 mb-4 font-bold text-[36px]">
+            <h2 className="text-3xl lg:text-4xl text-slate-900 mb-4 font-bold">
               환경은 달라도, 지원은 하나로 완성됩니다
             </h2>
-            <p className="text-slate-500 max-w-2xl mx-auto text-lg font-medium">
+            <p className="text-slate-500 max-w-2xl mx-auto sm:text-base font-medium">
               PC·모바일·웹 환경을 아우르는 통합 원격 지원 기술
             </p>
           </div>
@@ -514,12 +514,12 @@ export function Home() {
       </section>
       {/* 6. 원격 연결 프로세스 (4단계) */}
       <section id="connection-process" className="py-24 bg-white">
-        <div className="container mx-auto px-4 md:px-6">
+        <div className="max-w-[1280px] w-full mx-auto px-4 sm:px-6 lg:px-10">
           <div className="text-center mb-16">
-            <h2 className="text-[25px] md:text-4xl font-bold mb-4">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
               간편한 4단계 연결로 시간과 비용을 단축하세요
             </h2>
-            <p className="text-slate-500 max-w-2xl mx-auto text-[14px] md:text-lg">
+            <p className="text-slate-500 max-w-2xl mx-auto sm:text-base">
               누구나 1분 안에 원격 지원을 시작할 수 있습니다.
             </p>
           </div>
@@ -576,12 +576,12 @@ export function Home() {
       </section>
       {/* 7. 기술력 & 보안 */}
       <section className="py-24 bg-slate-900 text-white pt-[70px] pb-[70px]">
-        <div className="container mx-auto px-4 md:px-6">
+        <div className="max-w-[1280px] w-full mx-auto px-4 sm:px-6 lg:px-10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-block p-3 rounded-full bg-primary/20 text-primary mb-6">
               <ShieldCheck size={40} />
             </div>
-            <h2 className="md:text-4xl font-bold mb-6 text-[25px]">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-6">
               강력한 기술력과 타협 없는 보안
             </h2>
             <p className="text-slate-400 text-lg mb-10 leading-relaxed">
@@ -615,7 +615,7 @@ export function Home() {
       </section>
       {/* 8. 성과와 지표 (숫자로 증명) */}
       <section className="py-24 bg-[#0f172b] pt-[70px] pb-[70px]">
-        <div className="container mx-auto px-4 md:px-6">
+        <div className="max-w-[1280px] w-full mx-auto px-4 sm:px-6 lg:px-10">
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6 text-center">
             <div>
               <Counter value="6000" suffix="+" />
@@ -656,18 +656,18 @@ export function Home() {
       </section>
       {/* 10. 서비스 도입 방식 선택 */}
       <section className="py-24 bg-[#f8fafc]">
-        <div className="container mx-auto px-4 md:px-6">
+        <div className="max-w-[1280px] w-full mx-auto px-4 sm:px-6 lg:px-10">
           <div className="text-center mb-16">
-            <h2 className="text-[25px] md:text-4xl font-bold mb-4">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
               서비스 도입 방식 선택
             </h2>
-            <p className="text-slate-500 max-w-2xl mx-auto text-[14px] md:text-lg">
+            <p className="text-slate-500 max-w-2xl mx-auto sm:text-base">
               귀사의 규모와 환경에 맞는 플랜을 선택하세요.
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             <div className="p-10 rounded-2xl border border-slate-200 hover:border-primary transition-all bg-white shadow-sm flex flex-col">
-              <h3 className="text-2xl font-bold mb-4">구독형 제품 (SaaS)</h3>
+              <h3 className="text-xl lg:text-2xl font-bold mb-4">구독형 제품 (SaaS)</h3>
               <p className="text-slate-500 mb-8 flex-1">
                 월/연 단위 결제로 즉시 사용 가능한 표준 서비스입니다.
                 <br />
@@ -680,7 +680,7 @@ export function Home() {
               </Link>
             </div>
             <div className="p-10 rounded-2xl border border-slate-200 hover:border-primary transition-all bg-white shadow-sm flex flex-col">
-              <h3 className="text-2xl font-bold mb-4">솔루션 / 연동형 제품</h3>
+              <h3 className="text-xl lg:text-2xl font-bold mb-4">솔루션 / 연동형 제품</h3>
               <p className="text-slate-500 mb-8 flex-1">
                 기존 상담 시스템(CRM/KMS)과 연계 가능한 맞춤형 솔루션입니다.
                 <br />
@@ -701,8 +701,8 @@ export function Home() {
       {/* 11. 무료체험 CTA (마무리 섹션) */}
       <section className="py-24 bg-primary text-white overflow-hidden relative">
         <div className="absolute top-0 right-0 w-1/3 h-full bg-white/5 skew-x-12 transform translate-x-1/2" />
-        <div className="container mx-auto px-4 md:px-6 text-center relative z-10">
-          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-8">
+        <div className="max-w-[1280px] w-full mx-auto px-4 sm:px-6 lg:px-10 text-center relative z-10">
+          <h2 className="text-3xl lg:text-4xl font-bold mb-8">
             지금 14일간 무료로 사용해보세요
           </h2>
           <p className="text-base sm:text-lg md:text-xl opacity-90 mb-12 max-w-2xl mx-auto font-medium">
