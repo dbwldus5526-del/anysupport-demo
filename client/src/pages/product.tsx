@@ -118,7 +118,7 @@ export default function Product() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-[25px] md:text-4xl font-bold text-slate-900 mb-6 leading-tight">
+              <h2 className="text-[25px] md:text-4xl font-bold mb-6 leading-tight text-[#333]">
                 복잡한 IT 장애,
                 <br />
                 <span className="text-primary">단 한 번의 연결</span>로
