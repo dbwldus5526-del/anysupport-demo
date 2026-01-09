@@ -627,7 +627,7 @@ export default function Cases() {
                       key={i}
                       className="p-4 bg-slate-50 rounded-xl border border-slate-100 hover:border-primary/30 transition-colors text-[18px] text-[#333]"
                     >
-                      <div className="font-bold text-slate-800 mb-1 text-sm">
+                      <div className="font-bold mb-1 text-[18px] text-[#333]">
                         {caseItem.logo}
                       </div>
                       <p className="text-xs text-slate-500 leading-tight">
