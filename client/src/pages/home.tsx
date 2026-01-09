@@ -553,7 +553,7 @@ export function Home() {
                 <span className="text-primary/20 text-5xl font-black absolute top-4 right-6">
                   {item.step}
                 </span>
-                <h3 className="text-lg font-bold mb-2 relative z-10">
+                <h3 className="text-lg font-bold mb-2 relative z-10 text-[#333]">
                   {item.title}
                 </h3>
                 <p className="text-[#666] text-[18px] relative z-10">
