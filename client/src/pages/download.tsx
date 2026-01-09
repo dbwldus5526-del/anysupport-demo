@@ -117,7 +117,7 @@ export default function Download() {
             <div className="mt-24 text-center">
               <h4 className="font-bold mb-8 text-[36px] text-[#333]">모바일에서도 애니서포트를 경험하세요</h4>
               <div className="flex justify-center gap-4">
-                <button className="h-14 px-6 bg-black rounded-xl border border-white/10 flex items-center gap-3 transition-transform hover:scale-105">
+                <button className="h-14 px-6 bg-black rounded-xl border border-white/10 flex items-center gap-3 transition-transform hover:scale-105 pl-[55px] pr-[55px]">
                   <div className="text-white text-left">
                     <p className="text-[10px] uppercase font-bold text-white/60">GET IT ON</p>
                     <p className="font-black text-[24px]">Google Play</p>
