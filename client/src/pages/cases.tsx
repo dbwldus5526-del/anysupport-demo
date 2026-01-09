@@ -250,7 +250,6 @@ export default function Cases() {
           </div>
         </div>
       </section>
-
       {/* Section B: Performance Metrics */}
       <section className="py-20 bg-white border-y border-slate-100">
         <div className="container mx-auto px-4 md:px-6">
@@ -290,7 +289,6 @@ export default function Cases() {
           </div>
         </div>
       </section>
-
       {/* Section C: Scenario Tabs */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
@@ -385,7 +383,6 @@ export default function Cases() {
           )}
         </div>
       </section>
-
       {/* Section D: Industry Filter + Cases Grid */}
       <section className="py-24 bg-slate-50">
         <div className="container mx-auto px-4 md:px-6">
@@ -444,7 +441,6 @@ export default function Cases() {
           </div>
         </div>
       </section>
-
       {/* Section E: Implementation Effects */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
@@ -470,7 +466,7 @@ export default function Cases() {
                 <p className="text-sm text-slate-600 mb-2 font-medium">
                   {effect.desc}
                 </p>
-                <p className="text-xs text-slate-400 leading-relaxed">
+                <p className="text-slate-400 text-[13px]">
                   {effect.details}
                 </p>
               </div>
@@ -478,7 +474,6 @@ export default function Cases() {
           </div>
         </div>
       </section>
-
       {/* Section F: Security Control Tower */}
       <section className="py-24 bg-slate-900 text-white">
         <div className="container mx-auto px-4 md:px-6">
@@ -522,7 +517,6 @@ export default function Cases() {
           </div>
         </div>
       </section>
-
       {/* Section G: Bottom CTA */}
       <section className="py-20 bg-slate-50">
         <div className="container mx-auto px-4 md:px-6">
