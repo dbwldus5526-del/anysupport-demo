@@ -124,7 +124,7 @@ export default function Product() {
                 <span className="text-primary">단 한 번의 연결</span>로
                 해결됩니다.
               </h2>
-              <p className="text-[14px] md:text-lg text-slate-600 mb-8 leading-relaxed">
+              <p className="text-lg text-[#666] mb-8 leading-relaxed font-normal">
                 기업 환경에서는 사소한 PC 장애도 생산성 저하로 이어집니다.
                 애니서포트는 현장 방문 없이도 상담원이 고객의 PC 화면을 직접
                 제어하며 문제를 진단하고 해결할 수 있는 최적의 환경을
@@ -179,7 +179,7 @@ export default function Product() {
             <h2 className="text-[25px] md:text-4xl font-bold mb-4 text-[#333]">
               고성능 원격지원의 새로운 기준
             </h2>
-            <p className="text-slate-500 text-[14px] md:text-lg max-w-3xl mx-auto">
+            <p className="text-[#666] text-lg max-w-3xl mx-auto font-normal">
               웹 기반 솔루션으로 복잡한 설치 없이 <span className="text-primary font-bold">10초 이내 연결</span>.<br className="hidden md:block" />
               최첨단 보안과 무제한 파일 전송으로 가장 빠르게 목적지에 도달합니다.
             </p>
@@ -362,7 +362,7 @@ export default function Product() {
             <h2 className="text-[25px] md:text-4xl font-bold mb-4 text-slate-900">
               원격지원 연결 프로세스
             </h2>
-            <p className="text-slate-500 text-[14px] md:text-lg max-w-2xl mx-auto">
+            <p className="text-[#666] text-lg max-w-2xl mx-auto font-normal">
               간편하고 안전한 4단계 연결 과정을 통해 즉각적인 지원을 시작하세요.
             </p>
           </div>

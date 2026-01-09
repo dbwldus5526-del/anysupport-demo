@@ -648,7 +648,7 @@ export default function Cases() {
             <h2 className="text-2xl md:text-4xl font-bold mb-4">
               업종별 도입 사례
             </h2>
-            <p className="text-slate-500">
+            <p className="text-[#666] text-lg font-normal">
               다양한 산업군에서 애니서포트를 활용하고 있습니다
             </p>
           </div>
@@ -706,7 +706,7 @@ export default function Cases() {
             <h2 className="text-2xl md:text-4xl font-bold mb-4">
               도입 효과 (업무 성과)
             </h2>
-            <p className="text-slate-500">
+            <p className="text-[#666] text-lg font-normal">
               애니서포트 도입으로 기대할 수 있는 효과
             </p>
           </div>

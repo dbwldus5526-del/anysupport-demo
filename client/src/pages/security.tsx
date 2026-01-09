@@ -124,7 +124,7 @@ export default function Security() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
             <h2 className="text-[25px] md:text-4xl font-bold text-slate-900 mb-4">애니서포트 6대 보안 핵심</h2>
-            <p className="text-slate-500 text-[14px] md:text-lg">기업 환경에 최적화된 철저한 보안 체계</p>
+            <p className="text-[#666] text-lg font-normal">기업 환경에 최적화된 철저한 보안 체계</p>
           </div>
           
           <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-px bg-slate-200 border border-slate-200 rounded-3xl overflow-hidden shadow-sm">
@@ -165,7 +165,7 @@ export default function Security() {
                   <section.icon size={32} />
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-3">{section.title}</h3>
-                <p className="text-slate-600 leading-relaxed text-sm max-w-xs">
+                <p className="text-[#666] leading-relaxed text-lg font-normal max-w-xs">
                   {section.desc}
                 </p>
               </div>

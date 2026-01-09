@@ -264,7 +264,7 @@ export default function PricingComparison() {
             <h2 className="text-2xl md:text-4xl font-bold mb-4 text-slate-900">
               도입 방식 진단
             </h2>
-            <p className="text-slate-500 text-lg max-w-2xl mx-auto">
+            <p className="text-[#666] text-lg max-w-2xl mx-auto font-normal">
               5가지 질문으로 우리 조직에 맞는 최적의 도입 방식을 찾아보세요.
             </p>
           </div>
@@ -375,7 +375,7 @@ export default function PricingComparison() {
             <h2 className="text-2xl md:text-4xl font-bold mb-4 text-slate-900">
               한눈에 보는 3가지 도입 옵션
             </h2>
-            <p className="text-slate-500 text-lg max-w-2xl mx-auto">
+            <p className="text-[#666] text-lg max-w-2xl mx-auto font-normal">
               조직의 환경과 요구사항에 맞는 최적의 방식을 선택하세요.
             </p>
           </div>
@@ -429,7 +429,7 @@ export default function PricingComparison() {
             <h2 className="text-2xl md:text-4xl font-bold mb-4 text-slate-900">
               도입 방식 상세 비교
             </h2>
-            <p className="text-slate-500 text-lg max-w-2xl mx-auto">
+            <p className="text-[#666] text-lg max-w-2xl mx-auto font-normal">
               각 도입 방식의 주요 특징을 한눈에 비교해 보세요.
             </p>
           </div>
@@ -481,7 +481,7 @@ export default function PricingComparison() {
             <h2 className="text-2xl md:text-4xl font-bold mb-4 text-slate-900">
               공통 제공 보안 체계
             </h2>
-            <p className="text-slate-500 text-lg max-w-2xl mx-auto">
+            <p className="text-[#666] text-lg max-w-2xl mx-auto font-normal">
               어떤 도입 방식을 선택하든 동일하게 제공되는 보안 기능
             </p>
           </div>
@@ -493,7 +493,7 @@ export default function PricingComparison() {
                   <feature.icon size={24} className="text-primary" />
                 </div>
                 <h4 className="font-bold text-slate-900 mb-1">{feature.title}</h4>
-                <p className="text-sm text-slate-500">{feature.desc}</p>
+                <p className="text-lg text-[#666] font-normal">{feature.desc}</p>
               </div>
             ))}
           </div>

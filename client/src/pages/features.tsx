@@ -149,7 +149,7 @@ export default function Features() {
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6 text-center mb-16">
           <h2 className="text-[25px] md:text-4xl font-black text-slate-900 mb-4">카테고리별 상세 기능</h2>
-          <p className="text-slate-500 font-medium text-[14px] md:text-lg">각 카드를 클릭하여 애니서포트의 강력한 도구들을 자세히 살펴보세요.</p>
+          <p className="text-[#666] font-normal text-lg">각 카드를 클릭하여 애니서포트의 강력한 도구들을 자세히 살펴보세요.</p>
         </div>
         
         <div className="container mx-auto px-4 md:px-6">
@@ -215,7 +215,7 @@ export default function Features() {
       <section className="py-24 bg-slate-50 border-y border-slate-100">
         <div className="container mx-auto px-4 md:px-6 text-center mb-16">
           <h2 className="text-[25px] md:text-4xl font-bold mb-4 text-slate-900 font-black">핵심 기능 요약</h2>
-          <p className="text-slate-500 text-[14px] md:text-lg max-w-2xl mx-auto font-medium">
+          <p className="text-[#666] text-lg max-w-2xl mx-auto font-normal">
             전체 서비스의 8가지 주요 강점을 한눈에 확인하세요.
           </p>
         </div>
@@ -237,7 +237,7 @@ export default function Features() {
                   <item.icon size={28} />
                 </div>
                 <h3 className="text-xl font-bold mb-4 text-slate-900 group-hover:text-primary transition-colors leading-tight">{item.title}</h3>
-                <p className="text-slate-500 text-sm leading-relaxed font-medium">
+                <p className="text-[#666] text-lg leading-relaxed font-normal">
                   {item.desc}
                 </p>
               </div>
@@ -251,7 +251,7 @@ export default function Features() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
             <h2 className="text-[25px] md:text-4xl font-bold mb-4 text-slate-900 font-black">고급 기능</h2>
-            <p className="text-slate-500 text-[14px] md:text-lg max-w-2xl mx-auto font-medium">
+            <p className="text-[#666] text-lg max-w-2xl mx-auto font-normal">
               더욱 전문적인 원격지원을 위한 고급 기능들
             </p>
           </div>
@@ -272,7 +272,7 @@ export default function Features() {
                   <item.icon size={28} />
                 </div>
                 <h3 className="text-xl font-bold mb-4 text-slate-900 group-hover:text-primary transition-colors leading-tight">{item.title}</h3>
-                <p className="text-slate-500 text-sm leading-relaxed font-medium">
+                <p className="text-[#666] text-lg leading-relaxed font-normal">
                   {item.desc}
                 </p>
               </div>
