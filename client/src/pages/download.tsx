@@ -31,7 +31,7 @@ export default function Download() {
           <div className="max-w-6xl mx-auto">
             <div className="mb-12">
               <h3 className="text-xl md:text-3xl font-black mb-3 text-slate-900">상담사용 원격지원 프로그램</h3>
-              <p className="text-slate-500 font-bold text-sm md:text-base">고객을 지원하고 인증번호를 발급하는 상담사용 프로그램입니다.</p>
+              <p className="md:text-base font-normal text-[#666] text-left text-[18px]">고객을 지원하고 인증번호를 발급하는 상담사용 프로그램입니다.</p>
             </div>
 
             <div className="grid md:grid-cols-2 gap-8">
