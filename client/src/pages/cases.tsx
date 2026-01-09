@@ -249,7 +249,7 @@ export default function Cases() {
               ].map((badge, i) => (
                 <div
                   key={i}
-                  className="flex items-center gap-2 px-4 py-2 bg-white/10 rounded-lg text-sm font-medium"
+                  className="flex items-center gap-2 px-4 py-2 bg-white/10 rounded-lg font-medium text-[18px]"
                 >
                   <CheckCircle size={16} className="text-green-400" />
                   {badge}
