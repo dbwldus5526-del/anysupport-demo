@@ -263,7 +263,7 @@ export default function Solution() {
                     {item.step}
                   </span>
                   <div>
-                    <h4 className="font-bold text-slate-900 mb-1">
+                    <h4 className="font-bold mb-1 text-[18px] text-[#333]">
                       {item.title}
                     </h4>
                     <p className="text-[18px] text-[#666]">{item.desc}</p>
