@@ -85,7 +85,7 @@ function Counter({
   return (
     <div
       ref={ref}
-      className="font-black mb-1 md:mb-2 sm:text-[28px] md:text-[32px] text-[41px]"
+      className="font-black mb-1 md:mb-2 sm:text-[28px] md:text-[32px] text-[#333] text-[40px]"
       style={{ color: textColor }}
     >
       {displayValue}
