@@ -83,7 +83,7 @@ function Counter({
   return (
     <div
       ref={ref}
-      className="font-black mb-1 md:mb-2 text-[32px] sm:text-[38px] md:text-[45px] text-[#ffffff]"
+      className="font-black mb-1 md:mb-2 text-[24px] sm:text-[28px] md:text-[32px] text-[#ffffff]"
     >
       {displayValue}
       {suffix}
@@ -611,34 +611,34 @@ export function Home() {
       {/* 8. 성과와 지표 (숫자로 증명) */}
       <section className="py-24 bg-[#0f172b] pt-[70px] pb-[70px]">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-12 text-center">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6 text-center">
             <div>
               <Counter value="1200" suffix="+" />
-              <div className="text-slate-500 text-xs sm:text-sm md:text-base font-bold">
+              <div className="text-slate-500 text-[10px] sm:text-xs md:text-sm font-bold">
                 국내외 도입 기업수
               </div>
             </div>
             <div>
               <Counter value="50000" suffix="+" />
-              <div className="text-slate-500 text-xs sm:text-sm md:text-base font-bold">
+              <div className="text-slate-500 text-[10px] sm:text-xs md:text-sm font-bold">
                 하루 평균 고객지원수
               </div>
             </div>
             <div>
               <Counter value="100" suffix="만+" />
-              <div className="text-slate-500 text-xs sm:text-sm md:text-base font-bold">
+              <div className="text-slate-500 text-[10px] sm:text-xs md:text-sm font-bold">
                 한달 평균 원격연결수
               </div>
             </div>
             <div>
-              <Counter value="175" suffix="억원" />
-              <div className="text-slate-500 text-xs sm:text-sm md:text-base font-bold">
-                방문고객 및 서비스처리 비용절감
+              <Counter value="99.9" suffix="%" />
+              <div className="text-slate-500 text-[10px] sm:text-xs md:text-sm font-bold">
+                연결 성공률
               </div>
             </div>
             <div>
               <Counter value="175" suffix="억원" />
-              <div className="text-slate-500 text-xs sm:text-sm md:text-base font-bold">
+              <div className="text-slate-500 text-[10px] sm:text-xs md:text-sm font-bold">
                 누적 비용 절감액
               </div>
             </div>
