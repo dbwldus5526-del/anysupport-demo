@@ -46,7 +46,7 @@ export default function UseCasesLogos() {
   const hasMore = filteredLogos.length > 18;
 
   return (
-    <section className="py-24 bg-white">
+    <section className="py-24 bg-white pt-[62px] pb-[62px]">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-12">
           <h2 className="md:text-4xl mb-4 font-bold text-[40px] text-[#333]">산업별 환경에 최적화된 원격지원</h2>
