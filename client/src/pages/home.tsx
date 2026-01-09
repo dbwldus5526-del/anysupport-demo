@@ -297,7 +297,7 @@ export function Home() {
         </div>
       </section>
       {/* 다양한 환경과 기기 지원 */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-white pt-[154px] pb-[154px]">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
             <h2 className="text-[25px] md:text-4xl font-bold mb-4">
