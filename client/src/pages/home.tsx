@@ -83,7 +83,7 @@ function Counter({
   return (
     <div
       ref={ref}
-      className="font-black mb-1 md:mb-2 text-[24px] sm:text-[28px] md:text-[32px] text-[#ffffff]"
+      className="font-black mb-1 md:mb-2 sm:text-[28px] md:text-[32px] text-[#ffffff] text-[41px]"
     >
       {displayValue}
       {suffix}
