@@ -617,7 +617,7 @@ export function Home() {
         </div>
       </section>
       {/* 8. 성과와 지표 (숫자로 증명) */}
-      <section className="py-24 bg-white pt-[70px] pb-[70px]">
+      <section className="py-24 bg-white pt-[92px] pb-[92px]">
         <div className="max-w-[1280px] w-full mx-auto px-4 sm:px-6 lg:px-10">
           <div className="text-center mb-12">
             <h2 className="text-[40px] font-bold text-[#333] mb-4 leading-[1.2]">
