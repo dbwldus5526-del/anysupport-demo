@@ -75,7 +75,7 @@ export default function Download() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-6xl mx-auto">
             <div className="mb-12">
-              <h3 className="md:text-3xl mb-3 text-[#333] font-bold text-[36px]">고객용 원격지원 런처</h3>
+              <h3 className="text-[36px] mb-3 text-[#333] font-bold">고객용 원격지원 런처</h3>
               <p className="md:text-base text-[18px] text-[#666] font-normal">상담사가 안내한 인증번호를 입력하여 원격지원을 받습니다.</p>
             </div>
 
@@ -103,7 +103,7 @@ export default function Download() {
             <div className="relative rounded-[2rem] bg-gradient-to-r from-[#001d4d] to-[#004481] p-12 md:p-16 text-center text-white overflow-hidden shadow-2xl shadow-blue-900/20">
               <div className="relative z-10">
                 <h3 className="text-xl md:text-3xl font-black mb-6">설치 없이 브라우저에서도 바로 원격지원을 받을 수 있습니다!</h3>
-                <p className="text-white/80 font-medium mb-10 max-w-2xl mx-auto leading-relaxed text-sm md:text-base">
+                <p className="text-white/80 mb-10 max-w-2xl mx-auto md:text-base font-normal text-[18px]">
                   다운로드가 어려운 환경에서도 웹 브라우저만 있으면<br />
                   상담사가 안내한 인증번호를 입력하여 즉시 원격지원을 받으실 수 있습니다.
                 </p>
