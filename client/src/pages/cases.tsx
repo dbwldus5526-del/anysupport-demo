@@ -289,7 +289,7 @@ export default function Cases() {
               <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
                 <Users size={32} className="text-primary" />
               </div>
-              <div className="text-5xl md:text-6xl font-black text-slate-900 mb-2">95<span className="text-3xl">%</span></div>
+              <div className="text-5xl md:text-6xl font-black mb-2 text-[#333]">95<span className="text-3xl">%</span></div>
               <div className="text-xl font-bold text-slate-700 mb-2">고객만족도</div>
               <p className="text-sm text-slate-500">
                 원격지원 AnySupport를 사용했을 때
