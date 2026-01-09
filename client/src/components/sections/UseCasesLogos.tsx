@@ -49,7 +49,7 @@ export default function UseCasesLogos() {
     <section className="py-24 bg-white">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-12">
-          <h2 className="text-[25px] md:text-4xl font-black text-slate-900 mb-4">산업별 환경에 최적화된 원격지원</h2>
+          <h2 className="text-[25px] md:text-4xl text-slate-900 mb-4 font-bold">산업별 환경에 최적화된 원격지원</h2>
           <p className="text-slate-500 text-[14px] md:text-lg font-medium">다양한 산업 분야의 리딩 기업들이 애니서포트와 함께하고 있습니다.</p>
         </div>
 
