@@ -310,7 +310,7 @@ export default function Product() {
                 <div className="flex items-center gap-3 bg-white/5 rounded-xl p-4 border border-white/10">
                   <EyeOff size={20} className="text-primary shrink-0" />
                   <div>
-                    <div className="font-bold text-sm">12건 보안 특허 보유</div>
+                    <div className="font-bold text-[18px]">12건 보안 특허 보유</div>
                     <div className="text-xs text-slate-400">화면 부분 차단 기술 등 독보적 보안</div>
                   </div>
                 </div>
