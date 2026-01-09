@@ -348,7 +348,7 @@ export default function Cases() {
                   <h3 className="text-xl font-bold text-slate-800">
                     {currentScenario.subtitle}
                   </h3>
-                  <p className="text-slate-500 text-sm mt-2">{currentScenario.description}</p>
+                  <p className="mt-2 text-[18px] text-[#666]">{currentScenario.description}</p>
                 </div>
 
                 {/* Internet Scenario Flow */}
