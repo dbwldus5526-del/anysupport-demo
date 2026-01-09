@@ -15,6 +15,7 @@ import Security from "@/pages/security";
 import Features from "@/pages/features";
 import Management from "@/pages/management";
 import Pricing from "@/pages/pricing";
+import PricingComparison from "@/pages/pricing-comparison";
 import Download from "@/pages/download";
 import Support from "@/pages/support";
 import { ModalProvider } from "@/context/ModalContext";
@@ -52,6 +53,7 @@ function Router() {
           <Route path="/solution/guide" component={Guide} />
           <Route path="/solution/environment" component={Solution} />
           <Route path="/pricing" component={Pricing} />
+          <Route path="/pricing/comparison" component={PricingComparison} />
           <Route path="/download" component={Download} />
           <Route path="/support" component={Support} />
           <Route component={NotFound} />
