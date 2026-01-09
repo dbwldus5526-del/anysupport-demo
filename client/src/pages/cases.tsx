@@ -316,11 +316,7 @@ export default function Cases() {
               <button
                 key={scenario.id}
                 onClick={() => setActiveScenario(scenario.id)}
-                className={`px-6 py-3 rounded-full text-sm font-bold transition-all duration-300 border ${
-                  activeScenario === scenario.id
-                    ? "bg-primary text-white border-primary shadow-lg"
-                    : "bg-white text-slate-600 border-slate-200 hover:border-primary hover:text-primary"
-                }`}
+                className="px-6 py-3 rounded-full font-bold transition-all duration-300 border bg-white text-slate-600 border-slate-200 hover:border-primary hover:text-primary text-[18px]"
               >
                 {scenario.id === "internet" && <Globe className="inline mr-2 w-4 h-4" />}
                 {scenario.id === "internal" && <Network className="inline mr-2 w-4 h-4" />}
