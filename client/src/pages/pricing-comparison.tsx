@@ -254,7 +254,6 @@ export default function PricingComparison() {
           </div>
         </div>
       </section>
-
       {/* Quiz Section */}
       <section id="quiz-section" className="py-24 bg-slate-50">
         <div className="container mx-auto px-4 md:px-6">
@@ -369,7 +368,6 @@ export default function PricingComparison() {
           </div>
         </div>
       </section>
-
       {/* 3 Options Cards */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
@@ -390,7 +388,7 @@ export default function PricingComparison() {
               >
                 <div className={cn("h-2 bg-gradient-to-r", option.color)} />
                 <div className="p-8">
-                  <div className={cn("w-14 h-14 rounded-xl bg-gradient-to-br flex items-center justify-center mb-6", option.color)}>
+                  <div className="w-14 h-14 rounded-xl bg-gradient-to-br flex items-center justify-center mb-6 from-slate-700 to-slate-800 text-[#1868fd]">
                     <option.icon size={28} className="text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-slate-900 mb-2">
@@ -424,7 +422,6 @@ export default function PricingComparison() {
           </div>
         </div>
       </section>
-
       {/* Comparison Table */}
       <section className="py-24 bg-slate-50">
         <div className="container mx-auto px-4 md:px-6">
@@ -477,7 +474,6 @@ export default function PricingComparison() {
           </div>
         </div>
       </section>
-
       {/* Security Features */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
@@ -503,7 +499,6 @@ export default function PricingComparison() {
           </div>
         </div>
       </section>
-
       {/* Industry Recommendations */}
       <section className="py-24 bg-slate-900 text-white">
         <div className="container mx-auto px-4 md:px-6">
@@ -569,7 +564,6 @@ export default function PricingComparison() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-primary text-white">
         <div className="container mx-auto px-4 md:px-6 text-center">
