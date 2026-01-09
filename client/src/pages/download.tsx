@@ -43,7 +43,7 @@ export default function Download() {
                   </div>
                   <div>
                     <h4 className="text-lg font-bold text-slate-900">Windows 상담사용 프로그램</h4>
-                    <p className="text-slate-400 text-xs font-medium">Windows 7 / 8 / 10 / 11 지원</p>
+                    <p className="text-[18px] font-normal text-[#666]">Windows 7 / 8 / 10 / 11 지원</p>
                   </div>
                 </div>
                 <Button size="lg" className="w-full h-12 rounded-lg bg-[#002868] hover:bg-[#001d4d] text-white font-bold text-sm gap-2">
@@ -92,7 +92,7 @@ export default function Download() {
                   </div>
                   <h4 className="text-lg font-bold text-slate-900 mb-1">{item.name}</h4>
                   <p className="mb-8 text-[18px] font-normal text-[#666]">{item.desc}</p>
-                  <Button variant="outline" className="w-full border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white font-bold h-10 rounded-lg text-xs">
+                  <Button variant="outline" className="w-full border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white h-10 rounded-lg text-[18px] font-medium">
                     {item.btn}
                   </Button>
                 </div>
@@ -107,7 +107,7 @@ export default function Download() {
                   다운로드가 어려운 환경에서도 웹 브라우저만 있으면<br />
                   상담사가 안내한 인증번호를 입력하여 즉시 원격지원을 받으실 수 있습니다.
                 </p>
-                <Button size="lg" className="bg-white text-[#001d4d] hover:bg-slate-100 font-black px-8 h-14 rounded-xl gap-2 shadow-lg">
+                <Button size="lg" className="bg-white text-[#001d4d] hover:bg-slate-100 px-8 h-14 rounded-xl gap-2 shadow-lg text-[18px] font-semibold">
                   <Globe size={20} /> 웹에서 바로 원격지원 받기
                 </Button>
               </div>
