@@ -50,7 +50,7 @@ export default function UseCasesLogos() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-12">
           <h2 className="md:text-4xl mb-4 font-bold text-[40px] text-[#333]">산업별 환경에 최적화된 원격지원</h2>
-          <p className="text-slate-500 text-[14px] md:text-lg font-medium">다양한 산업 분야의 리딩 기업들이 애니서포트와 함께하고 있습니다.</p>
+          <p className="text-[14px] md:text-lg font-medium text-[#666]">다양한 산업 분야의 리딩 기업들이 애니서포트와 함께하고 있습니다.</p>
         </div>
 
         {/* Category Tabs */}
