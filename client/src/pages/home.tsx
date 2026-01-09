@@ -39,10 +39,12 @@ function Counter({
   value,
   duration = 2,
   suffix = "",
+  textColor = "#ffffff",
 }: {
   value: string;
   duration?: number;
   suffix?: string;
+  textColor?: string;
 }) {
   const [count, setCount] = useState(0);
   const ref = useRef(null);
@@ -83,7 +85,8 @@ function Counter({
   return (
     <div
       ref={ref}
-      className="font-black mb-1 md:mb-2 sm:text-[28px] md:text-[32px] text-[#ffffff] text-[41px]"
+      className="font-black mb-1 md:mb-2 sm:text-[28px] md:text-[32px] text-[41px]"
+      style={{ color: textColor }}
     >
       {displayValue}
       {suffix}
@@ -614,36 +617,43 @@ export function Home() {
         </div>
       </section>
       {/* 8. 성과와 지표 (숫자로 증명) */}
-      <section className="py-24 bg-[#0f172b] pt-[70px] pb-[70px]">
+      <section className="py-24 bg-white pt-[70px] pb-[70px]">
         <div className="max-w-[1280px] w-full mx-auto px-4 sm:px-6 lg:px-10">
+          <div className="text-center mb-12">
+            <h2 className="text-[40px] font-bold text-[#333] mb-4">
+              26년의 원격지원
+              <br />
+              숫자와 성과가 증명합니다
+            </h2>
+          </div>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6 text-center">
             <div>
-              <Counter value="6000" suffix="+" />
-              <div className="sm:text-xs md:text-sm font-normal text-[16px] text-[#bac6d6]">
+              <Counter value="6000" suffix="+" textColor="#333" />
+              <div className="sm:text-xs md:text-sm font-normal text-[16px] text-[#666]">
                 국내외 도입 기업수
               </div>
             </div>
             <div>
-              <Counter value="60000" suffix="+" />
-              <div className="sm:text-xs md:text-sm text-[#bac6d6] text-[16px] font-normal">
+              <Counter value="60000" suffix="+" textColor="#333" />
+              <div className="sm:text-xs md:text-sm text-[#666] text-[16px] font-normal">
                 하루 평균 고객지원수
               </div>
             </div>
             <div>
-              <Counter value="93" suffix="%" />
-              <div className="sm:text-xs md:text-sm text-[#bac6d6] text-[16px] font-normal">
+              <Counter value="93" suffix="%" textColor="#333" />
+              <div className="sm:text-xs md:text-sm text-[#666] text-[16px] font-normal">
                 원격지원 해결율
               </div>
             </div>
             <div>
-              <Counter value="95" suffix="%" />
-              <div className="sm:text-xs md:text-sm font-normal text-[#bac6d6] text-[16px]">
+              <Counter value="95" suffix="%" textColor="#333" />
+              <div className="sm:text-xs md:text-sm font-normal text-[#666] text-[16px]">
                 고객만족도 증가
               </div>
             </div>
             <div>
-              <Counter value="175" suffix="억원" />
-              <div className="sm:text-xs md:text-sm text-[#bac6d6] text-[16px] font-normal">
+              <Counter value="175" suffix="억원" textColor="#333" />
+              <div className="sm:text-xs md:text-sm text-[#666] text-[16px] font-normal">
                 누적 비용 절감액
               </div>
             </div>
