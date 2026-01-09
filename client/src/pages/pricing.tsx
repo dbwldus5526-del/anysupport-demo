@@ -116,7 +116,7 @@ export default function Pricing() {
               />
             </div>
             <span className={`text-lg font-bold transition-colors ${isAnnual ? 'text-primary' : 'text-slate-400'}`}>
-              연간 <span className="text-sm font-black text-green-500 ml-1">(20% 할인)</span>
+              연간 <span className="font-black text-green-500 ml-1 text-[18px]">(20% 할인)</span>
             </span>
           </div>
         </div>
