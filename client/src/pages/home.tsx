@@ -676,7 +676,7 @@ export function Home() {
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            <div className="p-10 rounded-2xl border border-slate-200 hover:border-primary transition-all flex flex-col bg-[#ffffff]">
+            <div className="p-10 rounded-2xl border border-slate-200 hover:border-primary transition-all flex flex-col bg-[#f7f8fc]">
               <h3 className="text-xl lg:text-2xl font-bold mb-4 text-[#333]">구독형 제품 (SaaS)</h3>
               <p className="text-[#666] mb-8 flex-1 text-[18px]">
                 월/연 단위 결제로 즉시 사용 가능한 표준 서비스입니다.
