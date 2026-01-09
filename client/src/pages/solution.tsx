@@ -316,7 +316,7 @@ export default function Solution() {
                 </div>
                 <div className="flex justify-between p-3 border-b border-slate-50">
                   <span className="text-[#333] font-extrabold text-[18px]">Browser</span>
-                  <span className="font-medium">Chrome / Edge / Safari</span>
+                  <span className="text-[#666] text-[18px] font-normal">Chrome / Edge / Safari</span>
                 </div>
               </div>
             </div>
