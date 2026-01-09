@@ -725,7 +725,7 @@ export default function Cases() {
                   {effect.title.replace(effect.highlight, "")}
                   <span className="text-primary">{effect.highlight}</span>
                 </div>
-                <p className="mb-2 font-medium text-[#333] text-[18px]">
+                <p className="mb-2 text-[#333] text-[18px] font-semibold">
                   {effect.desc}
                 </p>
                 <p className="text-[#666] text-[18px] font-normal">
