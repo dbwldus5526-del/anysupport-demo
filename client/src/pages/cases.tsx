@@ -351,76 +351,236 @@ export default function Cases() {
                   <p className="text-slate-500 text-sm mt-2">{currentScenario.description}</p>
                 </div>
 
-                {/* Flow Diagram */}
-                <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 py-6">
-                  {/* Step 1: 상담원 */}
-                  <div className="flex flex-col items-center">
-                    <div className="w-20 h-20 bg-blue-100 rounded-2xl flex items-center justify-center mb-2 border-2 border-blue-200">
-                      <Headphones size={36} className="text-blue-600" />
+                {/* Internet Scenario Flow */}
+                {currentScenario.id === "internet" && (
+                  <div className="py-6">
+                    {/* Top: 상담원 그룹 */}
+                    <div className="flex justify-center gap-4 md:gap-8 mb-6">
+                      {["A사", "B사", "C사"].map((company, i) => (
+                        <div key={i} className="flex flex-col items-center">
+                          <div className="px-3 py-1 bg-primary text-white text-xs font-bold rounded-full mb-2">
+                            {company}
+                          </div>
+                          <div className="w-16 h-16 md:w-20 md:h-20 bg-blue-50 rounded-xl border-2 border-dashed border-blue-200 flex items-center justify-center">
+                            <div className="flex items-center gap-1">
+                              <Headphones size={20} className="text-blue-600" />
+                              <Monitor size={16} className="text-blue-400" />
+                            </div>
+                          </div>
+                          <span className="text-xs font-bold text-slate-600 mt-1">상담원</span>
+                        </div>
+                      ))}
                     </div>
-                    <span className="text-sm font-bold text-slate-700">상담원</span>
-                    <span className="text-xs text-slate-400">원격지원 시작</span>
-                  </div>
 
-                  <ArrowRight className="text-slate-300 hidden md:block" size={32} />
-                  <ArrowDown className="text-slate-300 md:hidden" size={32} />
+                    {/* 화살표 */}
+                    <div className="flex justify-center gap-8 md:gap-16 mb-6">
+                      <ArrowDown size={24} className="text-slate-300" />
+                      <ArrowDown size={24} className="text-slate-300" />
+                      <ArrowDown size={24} className="text-slate-300" />
+                    </div>
 
-                  {/* Step 2: 보안/방화벽 */}
-                  <div className="flex flex-col items-center">
-                    <div className="w-20 h-20 bg-orange-100 rounded-2xl flex items-center justify-center mb-2 border-2 border-orange-200 relative">
-                      <Shield size={36} className="text-orange-600" />
-                      <div className="absolute -top-1 -right-1 w-5 h-5 bg-green-500 rounded-full flex items-center justify-center">
-                        <CheckCircle size={12} className="text-white" />
+                    {/* Middle: 지원 유형 */}
+                    <div className="flex justify-center gap-3 md:gap-6 mb-6">
+                      <div className="flex flex-col items-center p-3 md:p-4 bg-white rounded-xl border border-slate-200 w-28 md:w-36">
+                        <Globe size={28} className="text-blue-500 mb-2" />
+                        <span className="text-[10px] md:text-xs font-bold text-slate-700 text-center">홈페이지</span>
+                        <span className="text-[10px] md:text-xs text-slate-400 text-center">이용문의</span>
+                      </div>
+                      <div className="flex flex-col items-center p-3 md:p-4 bg-white rounded-xl border border-slate-200 w-28 md:w-36">
+                        <Lock size={28} className="text-orange-500 mb-2" />
+                        <span className="text-[10px] md:text-xs font-bold text-slate-700 text-center">암호화모듈</span>
+                        <span className="text-[10px] md:text-xs text-slate-400 text-center">PC보안 설치문의</span>
+                      </div>
+                      <div className="flex flex-col items-center p-3 md:p-4 bg-white rounded-xl border border-slate-200 w-28 md:w-36">
+                        <Laptop size={28} className="text-green-500 mb-2" />
+                        <span className="text-[10px] md:text-xs font-bold text-slate-700 text-center">서비스</span>
+                        <span className="text-[10px] md:text-xs text-slate-400 text-center">이용문의</span>
                       </div>
                     </div>
-                    <span className="text-sm font-bold text-slate-700">보안 인증</span>
-                    <span className="text-xs text-slate-400">
-                      {currentScenario.id === "internet" ? "암호화 연결" : currentScenario.id === "internal" ? "접근 승인" : "DMZ 통과"}
-                    </span>
-                  </div>
 
-                  <ArrowRight className="text-slate-300 hidden md:block" size={32} />
-                  <ArrowDown className="text-slate-300 md:hidden" size={32} />
-
-                  {/* Step 3: 네트워크/서버 */}
-                  <div className="flex flex-col items-center">
-                    <div className="w-20 h-20 bg-slate-100 rounded-2xl flex items-center justify-center mb-2 border-2 border-slate-200">
-                      {currentScenario.id === "internet" ? (
-                        <Globe size={36} className="text-slate-600" />
-                      ) : currentScenario.id === "internal" ? (
-                        <Network size={36} className="text-slate-600" />
-                      ) : (
-                        <Server size={36} className="text-slate-600" />
-                      )}
+                    {/* 화살표 */}
+                    <div className="flex justify-center mb-6">
+                      <ArrowDown size={24} className="text-slate-300" />
                     </div>
-                    <span className="text-sm font-bold text-slate-700">
-                      {currentScenario.id === "internet" ? "인터넷망" : currentScenario.id === "internal" ? "내부망" : "DMZ 구간"}
-                    </span>
-                    <span className="text-xs text-slate-400">
-                      {currentScenario.id === "internet" ? "공용 네트워크" : currentScenario.id === "internal" ? "사내 시스템" : "보안 구역"}
-                    </span>
-                  </div>
 
-                  <ArrowRight className="text-slate-300 hidden md:block" size={32} />
-                  <ArrowDown className="text-slate-300 md:hidden" size={32} />
-
-                  {/* Step 4: 대상 기기 */}
-                  <div className="flex flex-col items-center">
-                    <div className="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center mb-2 border-2 border-primary/20">
-                      {currentScenario.id === "internet" ? (
-                        <Monitor size={36} className="text-primary" />
-                      ) : currentScenario.id === "internal" ? (
-                        <Laptop size={36} className="text-primary" />
-                      ) : (
-                        <HardDrive size={36} className="text-primary" />
-                      )}
+                    {/* Bottom: 고객 */}
+                    <div className="flex justify-center">
+                      <div className="px-6 py-4 bg-primary/10 rounded-2xl border-2 border-primary/20 flex items-center gap-4">
+                        <div className="flex items-center gap-2">
+                          <Monitor size={28} className="text-primary" />
+                          <Smartphone size={24} className="text-primary" />
+                        </div>
+                        <div>
+                          <div className="text-sm font-bold text-primary">고객 (인터넷망)</div>
+                          <div className="text-xs text-slate-500">PC·모바일 이용고객</div>
+                        </div>
+                      </div>
                     </div>
-                    <span className="text-sm font-bold text-slate-700">
-                      {currentScenario.id === "internet" ? "고객 PC" : currentScenario.id === "internal" ? "직원 단말" : "내부 서버"}
-                    </span>
-                    <span className="text-xs text-slate-400">원격 제어</span>
                   </div>
-                </div>
+                )}
+
+                {/* Internal Network Scenario Flow */}
+                {currentScenario.id === "internal" && (
+                  <div className="py-6">
+                    {/* Top: 상담원 그룹 */}
+                    <div className="flex justify-center gap-4 md:gap-8 mb-6">
+                      {["A사", "B사", "C사"].map((company, i) => (
+                        <div key={i} className="flex flex-col items-center">
+                          <div className="px-3 py-1 bg-sky-500 text-white text-xs font-bold rounded-full mb-2">
+                            {company}
+                          </div>
+                          <div className="w-16 h-16 md:w-20 md:h-20 bg-sky-50 rounded-xl border-2 border-dashed border-sky-200 flex items-center justify-center">
+                            <div className="flex items-center gap-1">
+                              <Headphones size={20} className="text-sky-600" />
+                              <Monitor size={16} className="text-sky-400" />
+                            </div>
+                          </div>
+                          <span className="text-xs font-bold text-slate-600 mt-1">상담원</span>
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* 화살표 */}
+                    <div className="flex justify-center gap-8 md:gap-16 mb-6">
+                      <ArrowDown size={24} className="text-slate-300" />
+                      <ArrowDown size={24} className="text-slate-300" />
+                      <ArrowDown size={24} className="text-slate-300" />
+                    </div>
+
+                    {/* Middle: 연계 시스템 */}
+                    <div className="flex justify-center gap-3 md:gap-6 mb-6">
+                      <div className="flex flex-col items-center p-3 md:p-4 bg-white rounded-xl border border-slate-200 w-28 md:w-36">
+                        <GraduationCap size={28} className="text-purple-500 mb-2" />
+                        <span className="text-[10px] md:text-xs font-bold text-slate-700 text-center">수강생/직원</span>
+                        <span className="text-[10px] md:text-xs text-slate-400 text-center">전용 단말기</span>
+                      </div>
+                      <div className="flex flex-col items-center p-3 md:p-4 bg-white rounded-xl border border-slate-200 w-28 md:w-36">
+                        <Network size={28} className="text-blue-500 mb-2" />
+                        <span className="text-[10px] md:text-xs font-bold text-slate-700 text-center">공급솔루션</span>
+                        <span className="text-[10px] md:text-xs text-slate-400 text-center">서비스 연계</span>
+                      </div>
+                      <div className="flex flex-col items-center p-3 md:p-4 bg-white rounded-xl border border-slate-200 w-28 md:w-36">
+                        <Factory size={28} className="text-slate-600 mb-2" />
+                        <span className="text-[10px] md:text-xs font-bold text-slate-700 text-center">공장관리</span>
+                        <span className="text-[10px] md:text-xs text-slate-400 text-center">운영시스템</span>
+                      </div>
+                    </div>
+
+                    {/* 화살표 */}
+                    <div className="flex justify-center mb-6">
+                      <ArrowDown size={24} className="text-slate-300" />
+                    </div>
+
+                    {/* Bottom: 고객 */}
+                    <div className="flex justify-center">
+                      <div className="px-6 py-4 bg-sky-50 rounded-2xl border-2 border-sky-200 flex items-center gap-4">
+                        <div className="flex items-center gap-2">
+                          <Monitor size={28} className="text-sky-600" />
+                          <Smartphone size={24} className="text-sky-500" />
+                        </div>
+                        <div>
+                          <div className="text-sm font-bold text-sky-700">고객 (내외부망)</div>
+                          <div className="text-xs text-slate-500">PC·모바일 이용고객</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {/* DMZ Scenario Flow */}
+                {currentScenario.id === "dmz" && (
+                  <div className="py-6">
+                    {/* Purpose Banner */}
+                    <div className="flex justify-center mb-6">
+                      <div className="px-4 py-2 bg-slate-100 rounded-lg border border-slate-200">
+                        <span className="text-xs font-bold text-slate-500 mr-2">Purpose</span>
+                        <span className="text-xs text-slate-700">고객사 내부망 접속 승인프로세스를 통한 시스템 접근 보안성 강화</span>
+                      </div>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 gap-6">
+                      {/* Left: 외부 IT협력업체 */}
+                      <div className="flex flex-col items-center">
+                        <div className="w-full max-w-xs">
+                          <div className="flex items-center gap-3 p-4 bg-amber-50 rounded-xl border border-amber-200 mb-4">
+                            <div className="w-12 h-12 bg-amber-100 rounded-lg flex items-center justify-center">
+                              <User size={24} className="text-amber-700" />
+                            </div>
+                            <div>
+                              <div className="text-sm font-bold text-amber-800">외부 IT협력업체</div>
+                              <div className="text-xs text-amber-600">유지보수 엔지니어</div>
+                            </div>
+                          </div>
+
+                          {/* 방화벽 */}
+                          <div className="flex items-center justify-center gap-2 mb-4">
+                            <div className="flex-1 h-px bg-slate-300"></div>
+                            <div className="w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center border border-red-200">
+                              <Flame size={20} className="text-red-500" />
+                            </div>
+                            <div className="flex-1 h-px bg-slate-300"></div>
+                          </div>
+
+                          {/* 프로세스 단계 */}
+                          <div className="space-y-3">
+                            <div className="flex items-start gap-3 p-3 bg-white rounded-lg border border-slate-200">
+                              <div className="w-6 h-6 bg-primary text-white rounded-full flex items-center justify-center text-xs font-bold shrink-0">2</div>
+                              <div>
+                                <div className="text-xs font-bold text-slate-700">원격세션 연결</div>
+                                <div className="text-[10px] text-slate-500">제어 주체: 고객사 / 제어 대상: 유지보수업체</div>
+                              </div>
+                            </div>
+                            <div className="flex items-start gap-3 p-3 bg-white rounded-lg border border-slate-200">
+                              <div className="w-6 h-6 bg-primary text-white rounded-full flex items-center justify-center text-xs font-bold shrink-0">3</div>
+                              <div>
+                                <div className="text-xs font-bold text-slate-700">접속 승인 시, 고객사 직원 PC화면에 대한 제어권 이양</div>
+                                <div className="text-[10px] text-slate-500">제어 주체: 유지보수업체 / 제어 대상: 고객사</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Right: 내부망 구조 */}
+                      <div className="p-4 bg-red-50 rounded-xl border-2 border-red-200">
+                        <div className="text-center text-xs font-bold text-red-700 mb-3">내부망 (업무망)</div>
+                        <div className="p-3 bg-yellow-50 rounded-lg border border-yellow-200 mb-3">
+                          <div className="text-center text-xs font-bold text-yellow-800 mb-2">고객사 내부서버</div>
+                          <div className="grid grid-cols-2 gap-2">
+                            <div className="flex items-center gap-2 p-2 bg-white rounded border border-slate-200">
+                              <Server size={16} className="text-slate-600" />
+                              <span className="text-[10px] text-slate-600">기간계 서버</span>
+                            </div>
+                            <div className="flex items-center gap-2 p-2 bg-white rounded border border-slate-200">
+                              <HardDrive size={16} className="text-slate-600" />
+                              <span className="text-[10px] text-slate-600">원격지원 서버</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="p-3 bg-green-50 rounded-lg border border-green-200">
+                          <div className="text-center text-xs font-bold text-green-800 mb-2">DMZ</div>
+                          <div className="flex items-center justify-center gap-2 p-2 bg-white rounded border border-slate-200">
+                            <Server size={16} className="text-green-600" />
+                            <span className="text-[10px] text-slate-600">원격지원 서버</span>
+                          </div>
+                          <div className="flex items-center justify-center mt-2">
+                            <div className="flex items-center gap-2 px-3 py-1.5 bg-blue-50 rounded-full border border-blue-200">
+                              <div className="w-5 h-5 bg-primary text-white rounded-full flex items-center justify-center text-[10px] font-bold">1</div>
+                              <span className="text-[10px] text-blue-700">내부PC-내부망 서버 연결 (터미널 등)</span>
+                            </div>
+                          </div>
+                        </div>
+                        {/* 고객사 직원 */}
+                        <div className="flex justify-center mt-4">
+                          <div className="flex items-center gap-2 px-4 py-2 bg-white rounded-lg border border-slate-200">
+                            <Monitor size={20} className="text-slate-600" />
+                            <span className="text-xs font-bold text-slate-700">고객사 직원</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
 
                 {/* Security Points & Info */}
                 <div className="grid md:grid-cols-2 gap-6 mt-6">
