@@ -53,7 +53,7 @@ const NAV_ITEMS = [
     href: "/pricing",
     subItems: [
       { label: "도입 방식 비교", href: "/pricing/comparison" },
-      { label: "요금제 안내(ASP/솔루션)", href: "/pricing/plans" },
+      { label: "요금제 안내(ASP/솔루션)", href: "/pricing" },
     ]
   },
   { label: "다운로드", href: "/download" },
