@@ -25,7 +25,6 @@ export default function Download() {
           </p>
         </div>
       </section>
-
       {/* Counselor Program Section */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
@@ -92,7 +91,7 @@ export default function Download() {
                     {item.icon}
                   </div>
                   <h4 className="text-lg font-bold text-slate-900 mb-1">{item.name}</h4>
-                  <p className="text-slate-400 text-xs font-bold mb-8">{item.desc}</p>
+                  <p className="text-slate-400 font-bold mb-8 text-[18px]">{item.desc}</p>
                   <Button variant="outline" className="w-full border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white font-bold h-10 rounded-lg text-xs">
                     {item.btn}
                   </Button>

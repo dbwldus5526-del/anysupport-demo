@@ -283,7 +283,7 @@ export function Home() {
               <Button
                 size="lg"
                 onClick={openModal}
-                className="h-14 px-10 text-lg font-bold shadow-xl shadow-primary/20"
+                className="h-14 px-10 text-lg font-bold"
               >
                 무료체험 시작하기 <ArrowRight className="ml-2" />
               </Button>
@@ -291,7 +291,7 @@ export function Home() {
                 variant="outline"
                 size="lg"
                 onClick={() => scrollToSection("features")}
-                className="h-14 px-10 text-lg font-bold bg-white/80 backdrop-blur-sm border-slate-200"
+                className="h-14 px-10 text-lg font-bold bg-[#f7f8fc] border border-slate-200"
               >
                 제품 자세히 보기
               </Button>
@@ -336,7 +336,7 @@ export function Home() {
                 href={item.href}
                 data-testid={`link-solution-${item.title}`}
               >
-                <div className="overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm flex flex-col group hover:shadow-md transition-shadow cursor-pointer h-full">
+                <div className="overflow-hidden rounded-2xl border border-slate-200 bg-[#f7f8fc] flex flex-col group hover:border-primary/30 transition-colors cursor-pointer h-full">
                   <div className="h-56 sm:h-64 overflow-hidden relative">
                     <img
                       src={item.image}
@@ -433,7 +433,7 @@ export function Home() {
             ].map((item, i) => (
               <div
                 key={i}
-                className="bg-white p-6 rounded-xl border border-slate-100 flex flex-col items-center text-center gap-3 transition-colors"
+                className="bg-[#f7f8fc] p-6 rounded-xl border border-slate-200 flex flex-col items-center text-center gap-3 transition-colors"
               >
                 <div className="mb-2">
                   <DesignIcon type={item.type} />
@@ -452,7 +452,7 @@ export function Home() {
 
           <div className="text-center">
             <Link href="/solution/features">
-              <Button size="lg" className="text-[18px] font-semibold shadow-lg">
+              <Button size="lg" className="text-[18px] font-semibold">
                 애니서포트 기능 자세히 보기
               </Button>
             </Link>
@@ -478,8 +478,8 @@ export function Home() {
                 onClick={() => setActiveDevice(device.id)}
                 className={`px-6 py-2.5 rounded-full text-sm font-bold transition-all duration-300 border ${
                   activeDevice === device.id
-                    ? "bg-primary text-white border-primary shadow-lg shadow-primary/20"
-                    : "bg-white text-slate-500 border-slate-200 hover:border-primary hover:text-primary"
+                    ? "bg-primary text-white border-primary"
+                    : "bg-[#f7f8fc] text-slate-500 border-slate-200 hover:border-primary hover:text-primary"
                 }`}
               >
                 {device.label}
@@ -501,7 +501,7 @@ export function Home() {
                     deviceViewItems.find((d) => d.id === activeDevice)?.image
                   }
                   alt="Device View"
-                  className="w-full h-full object-cover rounded-2xl shadow-xl"
+                  className="w-full h-full object-cover rounded-2xl border border-slate-200"
                 />
               </motion.div>
             </div>
@@ -676,7 +676,7 @@ export function Home() {
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            <div className="p-10 rounded-2xl border border-slate-200 hover:border-primary transition-all bg-white shadow-sm flex flex-col">
+            <div className="p-10 rounded-2xl border border-slate-200 hover:border-primary transition-all bg-[#f7f8fc] flex flex-col">
               <h3 className="text-xl lg:text-2xl font-bold mb-4 text-[#333]">구독형 제품 (SaaS)</h3>
               <p className="text-[#666] mb-8 flex-1 text-[18px]">
                 월/연 단위 결제로 즉시 사용 가능한 표준 서비스입니다.
@@ -689,7 +689,7 @@ export function Home() {
                 </Button>
               </Link>
             </div>
-            <div className="p-10 rounded-2xl border border-slate-200 hover:border-primary transition-all bg-white shadow-sm flex flex-col">
+            <div className="p-10 rounded-2xl border border-slate-200 hover:border-primary transition-all bg-[#f7f8fc] flex flex-col">
               <h3 className="text-xl lg:text-2xl font-bold mb-4 text-[#333]">솔루션 / 연동형 제품</h3>
               <p className="text-[#666] mb-8 flex-1 text-[18px]">
                 기존 상담 시스템(CRM/KMS)과 연계 가능한 맞춤형 솔루션입니다.
@@ -724,7 +724,7 @@ export function Home() {
             size="lg"
             variant="secondary"
             onClick={openModal}
-            className="h-16 px-12 text-xl font-bold shadow-2xl bg-white text-primary hover:bg-slate-100"
+            className="h-16 px-12 text-xl font-bold bg-[#f7f8fc] text-primary hover:bg-slate-100 border border-slate-200"
           >
             무료체험 시작하기
           </Button>
