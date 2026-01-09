@@ -452,7 +452,7 @@ export function Home() {
 
           <div className="text-center">
             <Link href="/solution/features">
-              <Button size="lg" className="font-bold shadow-lg">
+              <Button size="lg" className="text-[18px] font-semibold shadow-lg">
                 애니서포트 기능 자세히 보기
               </Button>
             </Link>
