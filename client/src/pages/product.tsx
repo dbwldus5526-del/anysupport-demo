@@ -176,7 +176,7 @@ export default function Product() {
               <Zap size={16} />
               <span className="text-xs font-bold tracking-wider uppercase">Desktop Edition</span>
             </div>
-            <h2 className="text-[25px] md:text-4xl font-bold mb-4 text-slate-900">
+            <h2 className="text-[25px] md:text-4xl font-bold mb-4 text-[#666]">
               고성능 원격지원의 새로운 기준
             </h2>
             <p className="text-slate-500 text-[14px] md:text-lg max-w-3xl mx-auto">
