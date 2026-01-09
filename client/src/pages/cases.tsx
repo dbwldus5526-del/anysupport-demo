@@ -581,7 +581,7 @@ export default function Cases() {
                 {/* Security Points & Info */}
                 <div className="grid md:grid-cols-2 gap-6 mt-6">
                   <div className="bg-white rounded-xl p-5 border border-slate-100">
-                    <h4 className="font-bold text-slate-800 mb-3 flex items-center gap-2">
+                    <h4 className="font-bold text-slate-800 mb-3 flex items-center gap-2 text-[18px]">
                       <Shield size={18} className="text-primary" />
                       보안 포인트
                     </h4>
@@ -596,7 +596,7 @@ export default function Cases() {
                   </div>
 
                   <div className="bg-blue-50 rounded-xl p-5 border border-blue-100">
-                    <h4 className="font-bold text-blue-800 mb-3 flex items-center gap-2">
+                    <h4 className="font-bold text-blue-800 mb-3 flex items-center gap-2 text-[18px]">
                       <Users size={18} className="text-blue-600" />
                       지원 대상
                     </h4>
