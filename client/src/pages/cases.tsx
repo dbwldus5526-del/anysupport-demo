@@ -353,7 +353,7 @@ export default function Cases() {
 
                 {/* Internet Scenario Flow */}
                 {currentScenario.id === "internet" && (
-                  <div className="py-6">
+                  <div className="py-6 text-[18px] text-[#666]">
                     {/* Top: 상담원 그룹 */}
                     <div className="flex justify-center gap-4 md:gap-8 mb-6">
                       {["A사", "B사", "C사"].map((company, i) => (
