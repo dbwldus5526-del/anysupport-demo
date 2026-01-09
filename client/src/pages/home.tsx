@@ -266,12 +266,12 @@ export function Home() {
 
         <div className="max-w-[1280px] w-full mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
           <div className="max-w-3xl">
-            <h1 className="lg:text-4xl md:text-6xl font-black mt-[0px] mb-[0px] text-[65px] text-[#333]">
-              고객과 상담사사이
+            <h1 className="lg:text-4xl md:text-6xl font-black mt-[0px] mb-[20px] text-[65px] text-[#333] leading-tight">
+              고객과 상담사 사이
               <br />
-              <span className="text-primary">애니서포트가 있습니다</span>
+              <span className="block mt-4 text-primary">애니서포트가 있습니다</span>
             </h1>
-            <p className="sm:text-lg md:text-xl mb-10 max-w-2xl text-[24px] font-normal text-[#333]">
+            <p className="sm:text-lg md:text-xl mb-10 max-w-2xl text-[24px] font-normal text-[#333] mt-6">
               고객 상담·IT 지원·운영 지원을 하나로 연결하는
               <br className="hidden md:block" />
               기업용 원격지원 SaaS 애니서포트
@@ -502,7 +502,7 @@ export function Home() {
                 />
               </motion.div>
             </div>
-            <p className="mt-8 text-center text-slate-400 text-sm flex items-center justify-center gap-2">
+            <p className="mt-8 text-center flex items-center justify-center gap-2 text-[18px] text-[#888]">
               <span className="inline-block w-4 h-4 bg-yellow-400 rounded-full flex items-center justify-center text-[10px] text-white">
                 💡
               </span>
