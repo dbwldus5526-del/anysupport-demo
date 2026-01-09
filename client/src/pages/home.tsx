@@ -637,7 +637,7 @@ export function Home() {
             </div>
             <div>
               <Counter value="95" suffix="%" />
-              <div className="text-slate-500 text-[10px] sm:text-xs md:text-sm font-bold">
+              <div className="sm:text-xs md:text-sm font-normal text-[#bac6d6] text-[16px]">
                 고객만족도 증가
               </div>
             </div>
