@@ -159,7 +159,7 @@ export default function Solution() {
                   <card.icon size={28} />
                 </div>
                 <h4 className="text-xl font-bold mb-3">{card.title}</h4>
-                <p className="text-slate-500 text-sm font-medium leading-relaxed">
+                <p className="text-[18px] font-normal text-[#666]">
                   {card.desc}
                 </p>
               </div>
