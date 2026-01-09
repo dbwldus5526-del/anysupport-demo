@@ -439,7 +439,7 @@ export function Home() {
                   <DesignIcon type={item.type} />
                 </div>
                 <div className="flex flex-col gap-1">
-                  <span className="font-bold text-slate-800 text-sm">
+                  <span className="text-[18px] text-[#333] font-semibold">
                     {item.title}
                   </span>
                   <p className="text-slate-500 text-[18px] font-normal">
