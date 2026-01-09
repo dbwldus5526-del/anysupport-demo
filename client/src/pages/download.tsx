@@ -123,7 +123,7 @@ export default function Download() {
                     <p className="font-black text-[24px]">Google Play</p>
                   </div>
                 </button>
-                <button className="h-14 px-6 bg-black rounded-xl border border-white/10 flex items-center gap-3 transition-transform hover:scale-105">
+                <button className="h-14 px-6 bg-black rounded-xl border border-white/10 flex items-center gap-3 transition-transform hover:scale-105 pl-[55px] pr-[55px]">
                   <Apple className="text-white" size={28} />
                   <div className="text-white text-left">
                     <p className="text-[10px] uppercase font-bold text-white/60">Download on the</p>
