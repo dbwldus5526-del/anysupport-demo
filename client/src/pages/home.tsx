@@ -611,7 +611,7 @@ export function Home() {
       {/* 8. 성과와 지표 (숫자로 증명) */}
       <section className="py-24 bg-[#0f172b] pt-[70px] pb-[70px]">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-6 md:gap-12 text-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-12 text-center">
             <div>
               <Counter value="1200" suffix="+" />
               <div className="text-slate-500 text-xs sm:text-sm md:text-base font-bold">
@@ -631,15 +631,15 @@ export function Home() {
               </div>
             </div>
             <div>
-              <Counter value="99.9" suffix="%" />
+              <Counter value="175" suffix="억원" />
               <div className="text-slate-500 text-xs sm:text-sm md:text-base font-bold">
-                연결 성공률
+                방문고객 및 서비스처리 비용절감
               </div>
             </div>
             <div>
-              <Counter value="99.9" suffix="%" />
+              <Counter value="175" suffix="억원" />
               <div className="text-slate-500 text-xs sm:text-sm md:text-base font-bold">
-                연결 성공률
+                누적 비용 절감액
               </div>
             </div>
           </div>
