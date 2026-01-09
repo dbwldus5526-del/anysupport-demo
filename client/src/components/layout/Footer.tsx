@@ -17,7 +17,7 @@ export function Footer() {
           </div>
           <div>
             <h4 className="font-bold mb-6">제품</h4>
-            <ul className="space-y-4 text-slate-500 text-[18px]">
+            <ul className="space-y-4 text-slate-500 text-[14px]">
               <li><Link href="/solution/features">주요기능</Link></li>
               <li><Link href="/solution/management">원격지원 관리</Link></li>
               <li><Link href="/solution/security">보안센터</Link></li>
