@@ -746,7 +746,7 @@ export default function Cases() {
             <h2 className="text-2xl md:text-4xl font-bold mb-4">
               보안 관제탑
             </h2>
-            <p className="text-slate-400 max-w-2xl mx-auto">
+            <p className="text-slate-400 max-w-2xl mx-auto text-[18px]">
               접근 통제부터 감사·추적까지, 엔터프라이즈급 보안을 제공합니다
             </p>
           </div>
