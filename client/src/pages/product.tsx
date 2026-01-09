@@ -139,7 +139,7 @@ export default function Product() {
                 ].map((item, i) => (
                   <li
                     key={i}
-                    className="flex items-center gap-3 text-slate-700 font-semibold"
+                    className="flex items-center gap-3 text-slate-700 font-medium"
                   >
                     <CheckCircle2 className="text-primary shrink-0" size={24} />
                     {item}
@@ -445,7 +445,6 @@ export default function Product() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-primary text-white">
         <div className="container mx-auto px-4 md:px-6 text-center">
