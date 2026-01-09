@@ -58,7 +58,7 @@ export default function Download() {
                     <Apple size={28} />
                   </div>
                   <div>
-                    <h4 className="text-lg font-bold text-slate-900">macOS 상담사용 프로그램</h4>
+                    <h4 className="text-lg font-bold text-[#333]">macOS 상담사용 프로그램</h4>
                     <p className="text-[#666] font-normal text-[18px]">macOS 10.12 이상 지원</p>
                   </div>
                 </div>
