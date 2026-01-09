@@ -394,15 +394,15 @@ export default function PricingComparison() {
                   <h3 className="text-xl font-bold text-slate-900 mb-2">
                     {option.title}
                   </h3>
-                  <p className="text-primary font-medium text-sm mb-4">
+                  <p className="text-primary font-medium text-[18px] mb-4">
                     {option.tagline}
                   </p>
-                  <p className="text-slate-500 text-sm mb-6">
+                  <p className="text-[#666] text-[18px] mb-6">
                     <span className="font-semibold text-slate-700">적합 대상:</span> {option.suitable}
                   </p>
                   <ul className="space-y-3 mb-6">
                     {option.features.map((feature, fi) => (
-                      <li key={fi} className="flex items-center gap-2 text-sm text-slate-600">
+                      <li key={fi} className="flex items-center gap-2 text-[18px] text-[#666]">
                         <CheckCircle2 size={16} className="text-primary shrink-0" />
                         {feature}
                       </li>
