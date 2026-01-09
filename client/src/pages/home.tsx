@@ -684,7 +684,7 @@ export function Home() {
                 중소·중견기업 고객에게 추천합니다.
               </p>
               <Link href="/pricing" data-testid="link-pricing">
-                <Button size="lg" className="w-full font-bold">
+                <Button size="lg" className="w-full font-semibold text-[18px]">
                   가격 페이지 보기
                 </Button>
               </Link>
@@ -700,7 +700,7 @@ export function Home() {
                 size="lg"
                 variant="outline"
                 onClick={openModal}
-                className="w-full font-bold border-primary text-primary"
+                className="w-full text-[18px] font-semibold border-primary text-primary"
               >
                 솔루션 문의하기
               </Button>

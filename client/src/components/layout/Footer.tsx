@@ -3,7 +3,7 @@ import logo from "@assets/애니서포트--new-log_1767681624073.png";
 
 export function Footer() {
   return (
-    <footer className="bg-slate-50 border-t border-slate-200 pt-[10px] pb-[10px]">
+    <footer className="bg-slate-50 border-t border-slate-200 mt-[0px] mb-[0px] pt-[65px] pb-[65px]">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12 mt-[4px] mb-[4px]">
           <div className="col-span-2 lg:col-span-2">
