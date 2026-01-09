@@ -303,7 +303,7 @@ export function Home() {
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
               환경과 기기에 제한 없는 원격지원
             </h2>
-            <p className="text-slate-500 max-w-2xl mx-auto text-[18px]">
+            <p className="text-[#666] max-w-2xl mx-auto text-[18px]">
               어떤 환경에서도 고객과 연결될 수 있습니다.
             </p>
           </div>
@@ -346,7 +346,7 @@ export function Home() {
                     <h3 className="text-lg lg:text-2xl font-bold mb-1 sm:mb-2 group-hover:text-primary transition-colors">
                       {item.title}
                     </h3>
-                    <p className="text-slate-500 text-[18px] font-medium">
+                    <p className="text-[#666] text-[18px]">
                       {item.desc}
                     </p>
                   </div>
@@ -373,7 +373,7 @@ export function Home() {
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
               효율적인 지원을 위한 핵심적인 기능
             </h2>
-            <p className="text-slate-500 max-w-2xl mx-auto text-[18px]"></p>
+            <p className="text-[#666] max-w-2xl mx-auto text-[18px]"></p>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 mb-12 max-w-6xl mx-auto">
             {[
@@ -463,7 +463,7 @@ export function Home() {
             <h2 className="text-3xl lg:text-4xl text-slate-900 mb-4 font-bold">
               환경은 달라도, 지원은 하나로 완성됩니다
             </h2>
-            <p className="text-slate-500 max-w-2xl mx-auto text-[18px] font-medium">
+            <p className="text-[#666] max-w-2xl mx-auto text-[18px]">
               PC·모바일·웹 환경을 아우르는 통합 원격 지원 기술
             </p>
           </div>
@@ -519,7 +519,7 @@ export function Home() {
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
               간편한 4단계 연결로 시간과 비용을 단축하세요
             </h2>
-            <p className="text-slate-500 max-w-2xl mx-auto text-[18px]">
+            <p className="text-[#666] max-w-2xl mx-auto text-[18px]">
               누구나 1분 안에 원격 지원을 시작할 수 있습니다.
             </p>
           </div>
@@ -556,7 +556,7 @@ export function Home() {
                 <h3 className="text-lg font-bold mb-2 relative z-10">
                   {item.title}
                 </h3>
-                <p className="text-slate-500 text-[18px] font-medium relative z-10">
+                <p className="text-[#666] text-[18px] relative z-10">
                   {item.desc}
                 </p>
               </div>
@@ -661,14 +661,14 @@ export function Home() {
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
               서비스 도입 방식 선택
             </h2>
-            <p className="text-slate-500 max-w-2xl mx-auto text-[18px]">
+            <p className="text-[#666] max-w-2xl mx-auto text-[18px]">
               귀사의 규모와 환경에 맞는 플랜을 선택하세요.
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             <div className="p-10 rounded-2xl border border-slate-200 hover:border-primary transition-all bg-white shadow-sm flex flex-col">
               <h3 className="text-xl lg:text-2xl font-bold mb-4">구독형 제품 (SaaS)</h3>
-              <p className="text-slate-500 mb-8 flex-1 text-[18px]">
+              <p className="text-[#666] mb-8 flex-1 text-[18px]">
                 월/연 단위 결제로 즉시 사용 가능한 표준 서비스입니다.
                 <br />
                 중소·중견기업 고객에게 추천합니다.
@@ -681,7 +681,7 @@ export function Home() {
             </div>
             <div className="p-10 rounded-2xl border border-slate-200 hover:border-primary transition-all bg-white shadow-sm flex flex-col">
               <h3 className="text-xl lg:text-2xl font-bold mb-4">솔루션 / 연동형 제품</h3>
-              <p className="text-slate-500 mb-8 flex-1 text-[18px]">
+              <p className="text-[#666] mb-8 flex-1 text-[18px]">
                 기존 상담 시스템(CRM/KMS)과 연계 가능한 맞춤형 솔루션입니다.
                 <br />
                 대기업 및 금융권 환경에 최적화되어 있습니다.
