@@ -262,18 +262,20 @@ export function Header() {
                       {item.label}
                       <ChevronDown className="ml-1 h-3 w-3 transition-transform duration-200 group-hover:rotate-180" />
                     </button>
-                    <ul className="absolute left-0 top-full mt-2 z-50 hidden group-hover:block w-[200px] rounded-md border bg-white shadow-lg p-2">
-                      {item.subItems.map((sub) => (
-                        <li key={sub.href}>
-                          <Link
-                            href={sub.href}
-                            className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-slate-50 hover:text-primary text-sm font-medium text-slate-700"
-                          >
-                            {sub.label}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
+                    <div className="absolute left-0 top-full pt-2 z-50 hidden group-hover:block">
+                      <ul className="w-[200px] rounded-md border bg-white shadow-lg p-2">
+                        {item.subItems.map((sub) => (
+                          <li key={sub.href}>
+                            <Link
+                              href={sub.href}
+                              className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-slate-50 hover:text-primary text-sm font-medium text-slate-700"
+                            >
+                              {sub.label}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </>
                 ) : (
                   <Link href={item.href} className="inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 transition-colors hover:text-primary bg-transparent font-semibold text-foreground/80 text-[16px]">
