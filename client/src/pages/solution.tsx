@@ -266,7 +266,7 @@ export default function Solution() {
                     <h4 className="font-bold text-slate-900 mb-1">
                       {item.title}
                     </h4>
-                    <p className="text-sm text-slate-500">{item.desc}</p>
+                    <p className="text-[18px] text-[#666]">{item.desc}</p>
                   </div>
                 </div>
               ))}
