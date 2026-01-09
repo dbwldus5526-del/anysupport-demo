@@ -370,10 +370,10 @@ export function Home() {
       <section id="features" className="py-24 bg-[#f8fafc]">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
-            <h2 className="text-[25px] md:text-4xl font-bold mb-4">효율적인 지원을 위한 핵심적인 기능</h2>
-            <p className="text-slate-500 max-w-2xl mx-auto text-[14px] md:text-lg">
-              효율적인 지원을 위한 강력한 도구 모음
-            </p>
+            <h2 className="text-[25px] md:text-4xl font-bold mb-4">
+              효율적인 지원을 위한 핵심적인 기능
+            </h2>
+            <p className="text-slate-500 max-w-2xl mx-auto text-[14px] md:text-lg"></p>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 mb-12 max-w-6xl mx-auto">
             {[
@@ -460,7 +460,7 @@ export function Home() {
       <section className="py-24 bg-white border-y border-slate-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
-            <h2 className="md:text-5xl text-slate-900 mb-4 font-bold text-[34px]">
+            <h2 className="md:text-5xl text-slate-900 mb-4 font-bold text-[36px]">
               환경은 달라도, 지원은 하나로 완성됩니다
             </h2>
             <p className="text-slate-500 max-w-2xl mx-auto text-lg font-medium">
