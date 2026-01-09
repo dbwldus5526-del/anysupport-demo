@@ -439,7 +439,7 @@ export function Home() {
                   <span className="font-bold text-slate-800 text-sm">
                     {item.title}
                   </span>
-                  <p className="text-[11px] text-slate-500 leading-tight">
+                  <p className="text-slate-500 text-[18px] font-normal">
                     {item.desc}
                   </p>
                 </div>
