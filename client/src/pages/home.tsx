@@ -287,7 +287,7 @@ export function Home() {
               <Button
                 variant="outline"
                 size="lg"
-                onClick={() => scrollToSection("what-is-remote")}
+                onClick={() => scrollToSection("features")}
                 className="h-14 px-10 text-lg font-bold bg-white/80 backdrop-blur-sm border-slate-200"
               >
                 제품 자세히 보기
@@ -296,213 +296,7 @@ export function Home() {
           </div>
         </div>
       </section>
-      {/* 2. 원격지원이란 무엇인가 */}
-      <section id="what-is-remote" className="py-24 bg-white">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="text-center mb-16">
-            <span className="text-primary font-bold text-xs tracking-widest uppercase mb-3 block">
-              REMOTE SUPPORT
-            </span>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 text-slate-900">
-              원격지원(Remote Support)이란?
-            </h2>
-            <p className="text-primary font-bold text-base sm:text-lg mb-2">
-              현장 방문 없이 온라인으로 문제를 즉각 해결하는 기술
-            </p>
-            <p className="text-slate-500 font-medium leading-relaxed max-w-2xl mx-auto text-sm sm:text-base">
-              애니서포트는 상담원이 고객의 PC나 모바일 화면을 공유받아
-              <br className="hidden md:block" />
-              직접 제어함으로써 장애를 진단하고 해결하는 기업용 전문
-              서비스입니다.
-            </p>
-          </div>
-
-          <div className="max-w-4xl mx-auto mb-16">
-            <div className="bg-slate-50 rounded-2xl p-8 md:p-12 border border-slate-100 flex items-center justify-center relative overflow-hidden">
-              <div className="grid grid-cols-3 gap-8 items-center w-full max-w-lg relative z-10">
-                <div className="flex flex-col items-center gap-3">
-                  <div className="w-20 h-20 rounded-full bg-white shadow-lg flex items-center justify-center text-primary border border-slate-50">
-                    <Headphones size={36} />
-                  </div>
-                  <span className="text-sm font-bold text-slate-600">
-                    상담원
-                  </span>
-                </div>
-                <div className="flex flex-col items-center justify-center">
-                  <div className="h-0.5 w-full bg-slate-200 relative">
-                    <div className="absolute inset-0 bg-primary animate-pulse" />
-                  </div>
-                  <span className="text-[10px] font-bold text-primary mt-3 uppercase tracking-widest">
-                    Secure Connection
-                  </span>
-                </div>
-                <div className="flex flex-col items-center gap-3">
-                  <div className="w-20 h-20 rounded-full bg-white shadow-lg flex items-center justify-center text-slate-400 border border-slate-50">
-                    <Monitor size={36} />
-                  </div>
-                  <span className="text-sm font-bold text-slate-600">고객</span>
-                </div>
-              </div>
-              <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:20px_20px]" />
-            </div>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8 mb-12 max-w-5xl mx-auto">
-            {[
-              {
-                icon: Activity,
-                title: "무엇을 하는가?",
-                desc: "고객의 이탈 없이 즉각적인 장애 진단, 소프트웨어 설정, 시스템 복구 등 전문적인 기술 지원 서비스를 제공합니다.",
-              },
-              {
-                icon: Zap,
-                title: "어떻게 작동하는가?",
-                desc: "복잡한 설치 과정 없이 생성된 접속 번호 입력만으로 보안 세션이 연결되며, 브라우저나 앱을 통해 실시간 제어가 시작됩니다.",
-              },
-              {
-                icon: Building2,
-                title: "왜 필요한가?",
-                desc: "기업의 지원 비용을 획기적으로 낮추고 상담 생산성을 높이며, 대면 지원의 물리적 제약을 극복하기 위해 필수적입니다.",
-              },
-            ].map((card, i) => (
-              <div
-                key={i}
-                className="p-8 rounded-2xl border border-slate-100 bg-white shadow-sm text-center flex flex-col items-center"
-              >
-                <div className="w-14 h-14 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-6">
-                  <card.icon size={28} />
-                </div>
-                <h4 className="text-xl font-bold mb-3">{card.title}</h4>
-                <p className="text-slate-500 text-sm font-medium leading-relaxed">
-                  {card.desc}
-                </p>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center">
-            <Button
-              variant="outline"
-              size="lg"
-              onClick={() => scrollToSection("connection-process")}
-              className="font-bold border-slate-200 text-slate-700 hover:bg-slate-50"
-            >
-              원격지원 작동 방식 자세히 보기
-            </Button>
-          </div>
-        </div>
-      </section>
-      {/* 3. 왜 원격지원 애니서포트인가 (신뢰 요소) */}
-      <section className="py-24 bg-slate-50">
-        <div className="container mx-auto px-4 md:px-6 max-w-6xl">
-          <div className="flex flex-col lg:flex-row gap-16 items-center">
-            {/* Left side: Content */}
-            <div className="lg:w-1/2">
-              <h2 className="text-[25px] md:text-4xl font-bold mb-6 leading-tight">
-                왜 애니서포트인가요?
-              </h2>
-              <p className="text-slate-600 text-lg mb-8 leading-relaxed">
-                기업이 신뢰할 수 있는 압도적인 기술력과 안정성으로
-                <br className="hidden md:block" />
-                원격 지원의 새로운 기준을 제시합니다.
-              </p>
-
-              <ul className="space-y-6 mb-10">
-                {[
-                  {
-                    title: "검증된 신뢰성",
-                    desc: "국내외 1,200+ 기업이 매일 사용하는 안정적인 솔루션",
-                  },
-                  {
-                    title: "타협 없는 보안",
-                    desc: "금융권 수준의 End-to-End 암호화 및 다중 인증 체계",
-                  },
-                  {
-                    title: "효율적인 운영",
-                    desc: "관리 비용 절감과 상담원 생산성 극대화를 위한 설계",
-                  },
-                ].map((item, i) => (
-                  <li key={i} className="flex gap-4">
-                    <div className="mt-1 w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                      <div className="w-2 h-2 rounded-full bg-primary" />
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-slate-900 mb-1">
-                        {item.title}
-                      </h4>
-                      <p className="text-slate-500 text-sm">{item.desc}</p>
-                    </div>
-                  </li>
-                ))}
-              </ul>
-
-              <Button
-                variant="outline"
-                onClick={() => scrollToSection("use-cases")}
-                className="font-bold border-slate-200 text-slate-600 hover:text-primary hover:border-primary"
-              >
-                고객 도입 사례 보기 <ArrowRight className="ml-2 w-4 h-4" />
-              </Button>
-            </div>
-
-            {/* Right side: 2x2 Grid */}
-            <div className="lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {[
-                {
-                  icon: Zap,
-                  title: "압도적 안정성",
-                  desc: "끊김 없는 연결로 상담 지연을 최소화합니다.",
-                  badges: ["99.9% 성공률", "저대역폭 최적화"],
-                },
-                {
-                  icon: ShieldCheck,
-                  title: "금융권 보안",
-                  desc: "가장 엄격한 보안 규정을 준수하며 보호합니다.",
-                  badges: ["AES-256", "SSL/TLS"],
-                },
-                {
-                  icon: Activity,
-                  title: "운영 투명성",
-                  desc: "모든 활동은 기록되어 사후 감사가 가능합니다.",
-                  badges: ["감사로그", "녹화 기능"],
-                },
-                {
-                  icon: Clock,
-                  title: "중단 없는 지원",
-                  desc: "글로벌 인프라로 언제 어디서나 접속 가능합니다.",
-                  badges: ["24/365", "글로벌 IDC"],
-                },
-              ].map((item, i) => (
-                <div
-                  key={i}
-                  className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-all group"
-                >
-                  <div className="w-10 h-10 rounded-xl bg-primary/5 flex items-center justify-center text-primary mb-4 group-hover:scale-110 transition-transform">
-                    <item.icon size={20} />
-                  </div>
-                  <h3 className="text-lg font-bold mb-2 text-slate-900">
-                    {item.title}
-                  </h3>
-                  <p className="text-slate-500 text-xs leading-relaxed mb-4">
-                    {item.desc}
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    {item.badges.map((badge, bi) => (
-                      <span
-                        key={bi}
-                        className="px-2 py-1 bg-slate-50 text-[10px] font-bold text-slate-400 rounded-md border border-slate-100"
-                      >
-                        {badge}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* 4. 다양한 환경과 기기 지원 */}
+      {/* 다양한 환경과 기기 지원 */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
@@ -668,7 +462,7 @@ export function Home() {
       <section className="py-24 bg-white border-y border-slate-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
-            <h2 className="md:text-5xl text-slate-900 mb-4 font-bold text-[36px]">
+            <h2 className="md:text-5xl text-slate-900 mb-4 font-bold text-[34px]">
               환경은 달라도, 지원은 하나로 완성됩니다
             </h2>
             <p className="text-slate-500 max-w-2xl mx-auto text-lg font-medium">
