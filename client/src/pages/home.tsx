@@ -620,7 +620,7 @@ export function Home() {
       <section className="py-24 bg-white pt-[70px] pb-[70px]">
         <div className="max-w-[1280px] w-full mx-auto px-4 sm:px-6 lg:px-10">
           <div className="text-center mb-12">
-            <h2 className="text-[40px] font-bold text-[#333] mb-4">
+            <h2 className="text-[40px] font-bold text-[#333] mb-4 leading-[1.2]">
               26년의 원격지원
               <br />
               숫자와 성과가 증명합니다
