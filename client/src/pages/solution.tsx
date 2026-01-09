@@ -304,7 +304,7 @@ export default function Solution() {
           </div>
           <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
             <div className="bg-white p-10 rounded-3xl border border-slate-200 shadow-sm">
-              <h3 className="text-xl font-bold mb-8 flex items-center gap-2">
+              <h3 className="text-xl font-bold mb-8 flex items-center gap-2 text-[#333]">
                 <Monitor className="text-primary" size={24} /> 지원 환경
               </h3>
               <div className="space-y-4">
