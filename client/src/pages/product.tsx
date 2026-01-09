@@ -12,6 +12,14 @@ import {
   Lock,
   MousePointer2,
   Copy,
+  Timer,
+  Layers,
+  FileUp,
+  MessageCircle,
+  Settings,
+  Award,
+  RefreshCw,
+  EyeOff,
 } from "lucide-react";
 import pcHeroImg from "@assets/generated_images/pc_remote_support_hero_background_with_desk_setup.png";
 import remoteControlImg from "@assets/generated_images/remote_control_mouse_and_keyboard_icon.png";
@@ -160,46 +168,190 @@ export default function Product() {
           </div>
         </div>
       </section>
-      {/* Detailed Features Cards */}
+      {/* Desktop Edition Core Features */}
       <section className="py-24 bg-slate-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary border border-primary/20 mb-6">
+              <Zap size={16} />
+              <span className="text-xs font-bold tracking-wider uppercase">Desktop Edition</span>
+            </div>
             <h2 className="text-[25px] md:text-4xl font-bold mb-4 text-slate-900">
-              Desktop Edition만의 특별한 기능
+              고성능 원격지원의 새로운 기준
             </h2>
-            <p className="text-slate-500 text-[14px] md:text-lg max-w-2xl mx-auto">
-              PC 원격지원을 더욱 강력하게 만드는 전문 기능들
+            <p className="text-slate-500 text-[14px] md:text-lg max-w-3xl mx-auto">
+              웹 기반 솔루션으로 복잡한 설치 없이 <span className="text-primary font-bold">10초 이내 연결</span>.<br className="hidden md:block" />
+              최첨단 보안과 무제한 파일 전송으로 가장 빠르게 목적지에 도달합니다.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {specialFeatures.map((feature, i) => (
-              <div
-                key={i}
-                className="group relative aspect-square rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-2xl transition-all cursor-pointer bg-white"
-              >
-                <img
-                  src={feature.image}
-                  alt={feature.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-slate-900/0 group-hover:bg-slate-900/80 transition-all duration-300 flex flex-col justify-center items-center p-8 text-center opacity-0 group-hover:opacity-100">
-                  <h3 className="text-2xl font-bold mb-4 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                    {feature.title}
+          {/* Hero Feature - 10초 연결 */}
+          <div className="mb-12">
+            <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary via-primary to-primary/80 p-8 md:p-12 text-white">
+              <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+              <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full blur-2xl translate-y-1/2 -translate-x-1/2" />
+              
+              <div className="relative z-10 grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/20 text-white text-xs font-bold mb-4">
+                    <Timer size={14} />
+                    초고속 연결
+                  </div>
+                  <h3 className="text-3xl md:text-4xl font-black mb-4">
+                    6자리 인증번호로<br />
+                    <span className="text-white/90">10초 이내 즉시 연결</span>
                   </h3>
-                  <p className="text-white/90 text-sm leading-relaxed transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">
-                    {feature.desc}
+                  <p className="text-white/80 text-lg leading-relaxed mb-6">
+                    고객이 복잡한 프로그램 설치 없이 6자리 접속번호만 입력하면 즉시 원격지원이 시작됩니다.
+                    마치 <span className="font-bold text-white">최첨단 보안 시스템을 갖춘 초고속 하이패스</span>처럼,
+                    가장 빠르게 문제 해결에 도달합니다.
                   </p>
+                  <div className="flex flex-wrap gap-3">
+                    <div className="flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full text-sm font-medium">
+                      <CheckCircle2 size={16} />
+                      설치 불필요
+                    </div>
+                    <div className="flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full text-sm font-medium">
+                      <CheckCircle2 size={16} />
+                      웹 기반 연결
+                    </div>
+                  </div>
                 </div>
-                <div className="absolute bottom-6 left-6 right-6 group-hover:hidden transition-all">
-                  <div className="bg-white/90 backdrop-blur-sm px-4 py-2 rounded-lg inline-block border border-slate-100">
-                    <span className="font-bold text-slate-900">
-                      {feature.title}
-                    </span>
+                <div className="flex justify-center">
+                  <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+                    <div className="text-center mb-4">
+                      <span className="text-white/60 text-sm">접속 코드 입력</span>
+                    </div>
+                    <div className="flex gap-2 justify-center mb-6">
+                      {['1', '2', '3', '4', '5', '6'].map((num, i) => (
+                        <div key={i} className="w-12 h-14 bg-white/20 rounded-lg flex items-center justify-center text-2xl font-bold border border-white/30">
+                          {num}
+                        </div>
+                      ))}
+                    </div>
+                    <div className="text-center text-white/60 text-sm">
+                      연결 중... <span className="text-white font-bold">10초</span>
+                    </div>
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+
+          {/* Main Features Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            {[
+              {
+                icon: Layers,
+                title: "최대 10개 동시 세션",
+                desc: "하나의 창에서 최대 10개의 세션을 동시에 관리. 상담원 업무 효율을 극대화합니다.",
+                highlight: "10개 세션"
+              },
+              {
+                icon: FileUp,
+                title: "무제한 파일 전송",
+                desc: "타사와 달리 용량 제한 없는 양방향 파일 전송. 드래그 앤 드롭으로 간편하게 공유합니다.",
+                highlight: "용량 무제한"
+              },
+              {
+                icon: MessageCircle,
+                title: "통합 커뮤니케이션",
+                desc: "텍스트 채팅, 음성 통화, 화이트보드(그리기) 등 다양한 소통 도구가 내장되어 있습니다.",
+                highlight: "음성/채팅"
+              },
+              {
+                icon: RefreshCw,
+                title: "재부팅 자동 재접속",
+                desc: "PC 재부팅 시 별도 인증 절차 없이 자동으로 연결이 복구됩니다.",
+                highlight: "자동 복구"
+              }
+            ].map((feature, i) => (
+              <div key={i} className="group bg-white rounded-2xl p-6 border border-slate-200 hover:border-primary/30 hover:shadow-lg transition-all">
+                <div className="w-14 h-14 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <feature.icon size={28} />
+                </div>
+                <div className="inline-block px-2 py-1 bg-primary/5 text-primary text-xs font-bold rounded mb-2">
+                  {feature.highlight}
+                </div>
+                <h3 className="text-lg font-bold text-slate-900 mb-2">{feature.title}</h3>
+                <p className="text-sm text-slate-500 leading-relaxed">{feature.desc}</p>
+              </div>
             ))}
+          </div>
+
+          {/* Security & Management Section */}
+          <div className="grid md:grid-cols-2 gap-6">
+            {/* 보안 인증 카드 */}
+            <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-2xl p-8 text-white">
+              <div className="flex items-start gap-4 mb-6">
+                <div className="w-14 h-14 rounded-xl bg-white/10 flex items-center justify-center shrink-0">
+                  <Award size={28} className="text-primary" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold mb-1">글로벌 보안 인증</h3>
+                  <p className="text-slate-400 text-sm">공공기관 및 대기업 요구사항 충족</p>
+                </div>
+              </div>
+              <div className="space-y-3">
+                <div className="flex items-center gap-3 bg-white/5 rounded-xl p-4 border border-white/10">
+                  <ShieldCheck size={20} className="text-primary shrink-0" />
+                  <div>
+                    <div className="font-bold text-sm">ISO/IEC 27001 국제 인증</div>
+                    <div className="text-xs text-slate-400">정보보안 관리체계 국제 표준</div>
+                  </div>
+                </div>
+                <div className="flex items-center gap-3 bg-white/5 rounded-xl p-4 border border-white/10">
+                  <Award size={20} className="text-primary shrink-0" />
+                  <div>
+                    <div className="font-bold text-sm">GS인증 1등급</div>
+                    <div className="text-xs text-slate-400">국가정보보안 기본 지침 준수</div>
+                  </div>
+                </div>
+                <div className="flex items-center gap-3 bg-white/5 rounded-xl p-4 border border-white/10">
+                  <EyeOff size={20} className="text-primary shrink-0" />
+                  <div>
+                    <div className="font-bold text-sm">12건 보안 특허 보유</div>
+                    <div className="text-xs text-slate-400">화면 부분 차단 기술 등 독보적 보안</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* 관리자 기능 카드 */}
+            <div className="bg-white rounded-2xl p-8 border border-slate-200">
+              <div className="flex items-start gap-4 mb-6">
+                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
+                  <Settings size={28} className="text-primary" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-slate-900 mb-1">강력한 관리자 기능</h3>
+                  <p className="text-slate-500 text-sm">대규모 조직 운영에 최적화</p>
+                </div>
+              </div>
+              <div className="space-y-3">
+                <div className="flex items-center gap-3 bg-slate-50 rounded-xl p-4 border border-slate-100">
+                  <Users size={20} className="text-primary shrink-0" />
+                  <div>
+                    <div className="font-bold text-sm text-slate-900">상담원별 권한 설정</div>
+                    <div className="text-xs text-slate-500">세분화된 접근 권한 관리</div>
+                  </div>
+                </div>
+                <div className="flex items-center gap-3 bg-slate-50 rounded-xl p-4 border border-slate-100">
+                  <FileText size={20} className="text-primary shrink-0" />
+                  <div>
+                    <div className="font-bold text-sm text-slate-900">지원 내역 통계</div>
+                    <div className="text-xs text-slate-500">상세 리포트 및 엑셀 저장</div>
+                  </div>
+                </div>
+                <div className="flex items-center gap-3 bg-slate-50 rounded-xl p-4 border border-slate-100">
+                  <Monitor size={20} className="text-primary shrink-0" />
+                  <div>
+                    <div className="font-bold text-sm text-slate-900">체계적 DB 관리</div>
+                    <div className="text-xs text-slate-500">모든 상담 이력 자동 저장</div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
