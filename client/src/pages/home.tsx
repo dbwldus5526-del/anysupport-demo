@@ -266,7 +266,7 @@ export function Home() {
 
         <div className="max-w-[1280px] w-full mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
           <div className="max-w-3xl">
-            <h1 className="lg:text-4xl md:text-6xl font-black text-slate-900 text-[67px] mt-[0px] mb-[0px]">
+            <h1 className="lg:text-4xl md:text-6xl font-black mt-[0px] mb-[0px] text-[65px] text-[#333]">
               고객과 상담사사이
               <br />
               <span className="text-primary">애니서포트가 있습니다</span>
