@@ -631,7 +631,7 @@ export function Home() {
             </div>
             <div>
               <Counter value="93" suffix="%" />
-              <div className="text-slate-500 text-[10px] sm:text-xs md:text-sm font-bold">
+              <div className="sm:text-xs md:text-sm text-[#bac6d6] text-[16px] font-normal">
                 원격지원 해결율
               </div>
             </div>
