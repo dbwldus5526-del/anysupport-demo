@@ -289,7 +289,7 @@ export default function Product() {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold mb-1">글로벌 보안 인증</h3>
-                  <p className="text-slate-400 text-sm">공공기관 및 대기업 요구사항 충족</p>
+                  <p className="text-sm text-[#ffffff]">공공기관 및 대기업 요구사항 충족</p>
                 </div>
               </div>
               <div className="space-y-3">
