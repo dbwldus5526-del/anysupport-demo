@@ -320,7 +320,7 @@ export default function Solution() {
                 </div>
               </div>
             </div>
-            <div className="bg-white p-10 rounded-3xl border border-slate-200 shadow-sm">
+            <div className="bg-white p-10 rounded-3xl border border-slate-200 shadow-sm pl-[21px] pr-[21px]">
               <h3 className="text-xl font-bold mb-8 flex items-center gap-2 text-[#333]">
                 <Cloud className="text-primary" size={24} /> 도입 형태
               </h3>
