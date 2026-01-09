@@ -416,7 +416,7 @@ export default function Pricing() {
       {/* Trust Section */}
       <section className="py-24 text-white overflow-hidden bg-[#ffffff]">
         <div className="container mx-auto px-4 md:px-6 text-center mb-12">
-          <h2 className="md:text-5xl font-medium text-[#000000] text-[27px] text-center">이미 많은 글로벌 기업이 함께하고 있습니다</h2>
+          <h2 className="md:text-5xl text-center text-[36px] font-bold text-[#333]">이미 많은 글로벌 기업이 함께하고 있습니다</h2>
         </div>
         <LogoCarousel />
       </section>
