@@ -298,7 +298,7 @@ export default function Solution() {
             <h2 className="text-[25px] md:text-4xl font-bold mb-4 text-[#333]">
               사용 환경
             </h2>
-            <p className="text-slate-500 text-[14px] md:text-base">
+            <p className="md:text-base text-[#666] text-[18px]">
               기업의 환경에 맞춰 유연하게 도입하세요.
             </p>
           </div>
