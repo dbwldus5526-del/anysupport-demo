@@ -120,7 +120,7 @@ export default function Download() {
                 <button className="h-14 px-6 bg-black rounded-xl border border-white/10 flex items-center gap-3 transition-transform hover:scale-105">
                   <div className="text-white text-left">
                     <p className="text-[10px] uppercase font-bold text-white/60">GET IT ON</p>
-                    <p className="text-lg font-black leading-none">Google Play</p>
+                    <p className="font-black text-[24px]">Google Play</p>
                   </div>
                 </button>
                 <button className="h-14 px-6 bg-black rounded-xl border border-white/10 flex items-center gap-3 transition-transform hover:scale-105">
