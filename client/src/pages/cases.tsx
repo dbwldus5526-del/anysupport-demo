@@ -630,7 +630,7 @@ export default function Cases() {
                       <div className="font-bold mb-1 text-[18px] text-[#333]">
                         {caseItem.logo}
                       </div>
-                      <p className="text-xs text-slate-500 leading-tight">
+                      <p className="text-[18px] text-[#666]">
                         {caseItem.desc}
                       </p>
                     </div>
