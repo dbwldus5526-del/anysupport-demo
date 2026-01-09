@@ -280,7 +280,7 @@ export default function Cases() {
               </div>
               <div className="text-5xl md:text-6xl font-black mb-2 text-[#333]">175<span className="text-3xl">억원</span></div>
               <div className="text-xl font-bold text-slate-700 mb-2">연간 절감</div>
-              <p className="text-sm text-slate-500">
+              <p className="text-[#666] text-[18px]">
                 * 보안업체 OOO사 사례
               </p>
             </div>
