@@ -16,7 +16,9 @@ import {
   ArrowRight,
   Globe,
   Database,
-  FileText
+  FileText,
+  Headphones,
+  Activity
 } from "lucide-react";
 import solutionHeroImg from "@assets/generated_images/professional_enterprise_remote_support_solution_hero_background.png";
 import { Link } from "wouter";
@@ -65,6 +67,104 @@ export default function Solution() {
                 도입 문의하기 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 2. 원격지원이란 무엇인가 */}
+      <section id="what-is-remote" className="py-24 bg-white">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="text-center mb-16">
+            <span className="text-primary font-bold text-xs tracking-widest uppercase mb-3 block">
+              REMOTE SUPPORT
+            </span>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 text-slate-900">
+              원격지원(Remote Support)이란?
+            </h2>
+            <p className="text-primary font-bold text-base sm:text-lg mb-2">
+              현장 방문 없이 온라인으로 문제를 즉각 해결하는 기술
+            </p>
+            <p className="text-slate-500 font-medium leading-relaxed max-w-2xl mx-auto text-sm sm:text-base">
+              애니서포트는 상담원이 고객의 PC나 모바일 화면을 공유받아
+              <br className="hidden md:block" />
+              직접 제어함으로써 장애를 진단하고 해결하는 기업용 전문
+              서비스입니다.
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto mb-16">
+            <div className="bg-slate-50 rounded-2xl p-8 md:p-12 border border-slate-100 flex items-center justify-center relative overflow-hidden">
+              <div className="grid grid-cols-3 gap-8 items-center w-full max-w-lg relative z-10">
+                <div className="flex flex-col items-center gap-3">
+                  <div className="w-20 h-20 rounded-full bg-white shadow-lg flex items-center justify-center text-primary border border-slate-50">
+                    <Headphones size={36} />
+                  </div>
+                  <span className="text-sm font-bold text-slate-600">
+                    상담원
+                  </span>
+                </div>
+                <div className="flex flex-col items-center justify-center">
+                  <div className="h-0.5 w-full bg-slate-200 relative">
+                    <div className="absolute inset-0 bg-primary animate-pulse" />
+                  </div>
+                  <span className="text-[10px] font-bold text-primary mt-3 uppercase tracking-widest">
+                    Secure Connection
+                  </span>
+                </div>
+                <div className="flex flex-col items-center gap-3">
+                  <div className="w-20 h-20 rounded-full bg-white shadow-lg flex items-center justify-center text-slate-400 border border-slate-50">
+                    <Monitor size={36} />
+                  </div>
+                  <span className="text-sm font-bold text-slate-600">고객</span>
+                </div>
+              </div>
+              <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:20px_20px]" />
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 mb-12 max-w-5xl mx-auto">
+            {[
+              {
+                icon: Activity,
+                title: "무엇을 하는가?",
+                desc: "고객의 이탈 없이 즉각적인 장애 진단, 소프트웨어 설정, 시스템 복구 등 전문적인 기술 지원 서비스를 제공합니다.",
+              },
+              {
+                icon: Zap,
+                title: "어떻게 작동하는가?",
+                desc: "복잡한 설치 과정 없이 생성된 접속 번호 입력만으로 보안 세션이 연결되며, 브라우저나 앱을 통해 실시간 제어가 시작됩니다.",
+              },
+              {
+                icon: Building2,
+                title: "왜 필요한가?",
+                desc: "기업의 지원 비용을 획기적으로 낮추고 상담 생산성을 높이며, 대면 지원의 물리적 제약을 극복하기 위해 필수적입니다.",
+              },
+            ].map((card, i) => (
+              <div
+                key={i}
+                className="p-8 rounded-2xl border border-slate-100 bg-white shadow-sm text-center flex flex-col items-center"
+              >
+                <div className="w-14 h-14 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-6">
+                  <card.icon size={28} />
+                </div>
+                <h4 className="text-xl font-bold mb-3">{card.title}</h4>
+                <p className="text-slate-500 text-sm font-medium leading-relaxed">
+                  {card.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <Link href="/solution/guide">
+              <Button
+                variant="outline"
+                size="lg"
+                className="font-bold border-slate-200 text-slate-700 hover:bg-slate-50"
+              >
+                원격지원 작동 방식 자세히 보기
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
