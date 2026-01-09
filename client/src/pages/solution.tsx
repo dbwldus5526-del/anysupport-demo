@@ -329,7 +329,7 @@ export default function Solution() {
                   <Cloud className="text-primary" size={24} />
                   <div>
                     <h4 className="font-bold text-[18px] text-[#333]">클라우드(SaaS)</h4>
-                    <p className="text-xs text-slate-500">
+                    <p className="text-[18px] text-[#666]">
                       별도 서버 구축 없이 즉시 사용
                     </p>
                   </div>
