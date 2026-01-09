@@ -89,6 +89,9 @@ export default function Pricing() {
         
         <div className="container mx-auto px-4 md:px-6 relative z-10 text-center">
           <div className="max-w-3xl mx-auto">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 text-primary border border-primary/30 mb-6">
+              <span className="text-xs font-bold tracking-wider">애니서포트 구독형 [SaaS]</span>
+            </div>
             <h1 className="text-3xl md:text-6xl font-black mb-6 leading-tight">
               합리적인 가격으로<br />
               <span className="text-primary text-glow">비즈니스 가치를 높이세요</span>
@@ -177,9 +180,18 @@ export default function Pricing() {
             ))}
           </div>
 
-          <p className="text-center mt-16 text-slate-500 font-bold">
-            모든 플랜은 14일 무료 체험이 가능합니다. 신용카드 등록 없이 바로 시작하세요.
-          </p>
+          <div className="text-center mt-16">
+            <p className="text-slate-500 font-bold mb-6">
+              모든 플랜은 14일 무료 체험이 가능합니다. 신용카드 등록 없이 바로 시작하세요.
+            </p>
+            <Button 
+              size="lg" 
+              onClick={openModal}
+              className="h-14 px-10 text-lg font-bold shadow-xl shadow-primary/20"
+            >
+              무료체험 시작하기 <ArrowRight className="ml-2" />
+            </Button>
+          </div>
         </div>
       </section>
       {/* Comparison Table Section */}

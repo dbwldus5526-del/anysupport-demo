@@ -13,46 +13,53 @@ import { useToast } from "@/hooks/use-toast";
 import { insertInquirySchema } from "@shared/schema";
 
 const NAV_ITEMS = [
-  { 
-    label: "제품", 
+  {
+    label: "제품",
     href: "/product",
     subItems: [
       { label: "PC 원격지원", href: "/product/pc" },
       { label: "Mobile 원격지원", href: "/product/mobile" },
       { label: "Video 원격지원", href: "/product/video" },
-    ]
+    ],
   },
-  { 
-    label: "솔루션", 
+  {
+    label: "솔루션",
     href: "/solution",
     subItems: [
       { label: "원격지원이란", href: "/solution/intro" },
       { label: "산업별 맞춤 솔루션", href: "/solution/industry" },
       { label: "주요 도입 사례", href: "/solution/cases" },
-    ]
+    ],
   },
-  { 
-    label: "보안&기술", 
+  {
+    label: "보안&기술",
     href: "/security",
     subItems: [
       { label: "보안성과 안전성", href: "/solution/security" },
       { label: "다양한 기능", href: "/solution/features" },
       { label: "보안 특허기술", href: "/security/patents" },
-    ]
+    ],
   },
-  { 
-    label: "가격", 
+  {
+    label: "가격",
     href: "/pricing",
     subItems: [
       { label: "도입 방식 비교", href: "/pricing/comparison" },
-      { label: "요금제 안내(ASP/솔루션)", href: "/pricing" },
-    ]
+      { label: "요금제 안내(SaaS)", href: "/pricing" },
+    ],
   },
   { label: "다운로드", href: "/download" },
   { label: "고객지원", href: "/support" },
 ];
 
-function MobileMenuSheet({ isOpen, onClose, navItems, openMenus, toggleSubmenu, openModal }: any) {
+function MobileMenuSheet({
+  isOpen,
+  onClose,
+  navItems,
+  openMenus,
+  toggleSubmenu,
+  openModal,
+}: any) {
   useEffect(() => {
     const handleEsc = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
@@ -75,7 +82,7 @@ function MobileMenuSheet({ isOpen, onClose, navItems, openMenus, toggleSubmenu, 
             onClick={onClose}
             className="fixed inset-0 bg-black/50 z-[9998] md:hidden"
           />
-          
+
           {/* Half-Sheet Menu */}
           <motion.div
             initial={{ y: "100%" }}
@@ -88,7 +95,7 @@ function MobileMenuSheet({ isOpen, onClose, navItems, openMenus, toggleSubmenu, 
             {/* Sheet Header - Sticky */}
             <div className="sticky top-0 bg-white flex items-center justify-between px-6 py-4 border-b border-slate-100 shrink-0 z-10">
               <span className="text-lg font-bold">Menu</span>
-              <button 
+              <button
                 onClick={onClose}
                 className="p-2 hover:bg-slate-100 rounded-full transition-colors"
                 aria-label="Close menu"
@@ -101,40 +108,55 @@ function MobileMenuSheet({ isOpen, onClose, navItems, openMenus, toggleSubmenu, 
             <div className="flex-1 overflow-y-auto px-6 py-2">
               <nav className="flex flex-col">
                 {navItems.map((item: any) => (
-                  <div key={item.href} className="border-b border-slate-50 last:border-0">
-                    <div 
+                  <div
+                    key={item.href}
+                    className="border-b border-slate-50 last:border-0"
+                  >
+                    <div
                       className="flex items-center justify-between py-4 cursor-pointer"
-                      onClick={() => item.subItems ? toggleSubmenu(item.label) : onClose()}
+                      onClick={() =>
+                        item.subItems ? toggleSubmenu(item.label) : onClose()
+                      }
                     >
                       {item.subItems ? (
-                        <span className="text-base font-bold text-slate-800">{item.label}</span>
+                        <span className="text-base font-bold text-slate-800">
+                          {item.label}
+                        </span>
                       ) : (
-                        <Link href={item.href} className="text-base font-bold text-slate-800 w-full" onClick={onClose}>
+                        <Link
+                          href={item.href}
+                          className="text-base font-bold text-slate-800 w-full"
+                          onClick={onClose}
+                        >
                           {item.label}
                         </Link>
                       )}
                       {item.subItems ? (
-                        <ChevronDown 
-                          size={18} 
+                        <ChevronDown
+                          size={18}
                           className={cn(
                             "text-slate-400 transition-transform duration-300",
-                            openMenus.includes(item.label) && "rotate-180"
-                          )} 
+                            openMenus.includes(item.label) && "rotate-180",
+                          )}
                         />
                       ) : (
                         <ChevronRight size={18} className="text-slate-400" />
                       )}
                     </div>
-                    
+
                     {item.subItems && (
-                      <div className={cn(
-                        "bg-slate-50/50 rounded-xl overflow-hidden transition-all duration-300 ease-in-out",
-                        openMenus.includes(item.label) ? "max-h-[500px] mb-4 opacity-100 py-2" : "max-h-0 opacity-0"
-                      )}>
+                      <div
+                        className={cn(
+                          "bg-slate-50/50 rounded-xl overflow-hidden transition-all duration-300 ease-in-out",
+                          openMenus.includes(item.label)
+                            ? "max-h-[500px] mb-4 opacity-100 py-2"
+                            : "max-h-0 opacity-0",
+                        )}
+                      >
                         {item.subItems.map((sub: any) => (
-                          <Link 
-                            key={sub.href} 
-                            href={sub.href} 
+                          <Link
+                            key={sub.href}
+                            href={sub.href}
                             onClick={onClose}
                             className="block py-3 px-6 text-slate-600 text-sm font-semibold hover:text-primary transition-colors"
                           >
@@ -151,15 +173,28 @@ function MobileMenuSheet({ isOpen, onClose, navItems, openMenus, toggleSubmenu, 
             {/* Sheet Footer (Buttons) */}
             <div className="p-6 bg-slate-50/30 border-t border-slate-100 shrink-0 flex flex-col gap-3">
               <div className="grid grid-cols-2 gap-3">
-                <Button variant="outline" className="h-12 font-bold border-slate-200">로그인</Button>
-                <Button onClick={() => { onClose(); openModal(); }} className="h-12 font-bold shadow-md">무료체험 신청</Button>
+                <Button
+                  variant="outline"
+                  className="h-12 font-bold border-slate-200"
+                >
+                  로그인
+                </Button>
+                <Button
+                  onClick={() => {
+                    onClose();
+                    openModal();
+                  }}
+                  className="h-12 font-bold shadow-md"
+                >
+                  무료체험 신청
+                </Button>
               </div>
             </div>
           </motion.div>
         </>
       )}
     </AnimatePresence>,
-    document.body
+    document.body,
   );
 }
 
@@ -240,16 +275,26 @@ export function Header() {
   };
 
   const toggleMobileSubmenu = (label: string) => {
-    setOpenMobileMenus(prev => 
-      prev.includes(label) ? prev.filter(item => item !== label) : [...prev, label]
+    setOpenMobileMenus((prev) =>
+      prev.includes(label)
+        ? prev.filter((item) => item !== label)
+        : [...prev, label],
     );
   };
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 backdrop-blur-sm py-5 bg-[#ffffff]">
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
-        <Link href="/" onClick={handleLogoClick} className="flex items-center gap-2 group shrink-0">
-          <img src={logo} alt="AnySupport" className="h-8 md:h-10 w-auto object-contain" />
+        <Link
+          href="/"
+          onClick={handleLogoClick}
+          className="flex items-center gap-2 group shrink-0"
+        >
+          <img
+            src={logo}
+            alt="AnySupport"
+            className="h-8 md:h-10 w-auto object-contain"
+          />
         </Link>
 
         <nav className="hidden md:block">
@@ -278,7 +323,10 @@ export function Header() {
                     </div>
                   </>
                 ) : (
-                  <Link href={item.href} className="inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 transition-colors hover:text-primary bg-transparent font-semibold text-foreground/80 text-[16px]">
+                  <Link
+                    href={item.href}
+                    className="inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 transition-colors hover:text-primary bg-transparent font-semibold text-foreground/80 text-[16px]"
+                  >
                     {item.label}
                   </Link>
                 )}
@@ -288,12 +336,19 @@ export function Header() {
         </nav>
 
         <div className="hidden md:flex items-center gap-3 shrink-0">
-          <Button variant="ghost" className="font-semibold text-foreground/70 text-[16px]">로그인</Button>
-          <Button onClick={openModal} className="font-bold px-6 shadow-md">무료체험 신청</Button>
+          <Button
+            variant="ghost"
+            className="font-semibold text-foreground/70 text-[16px]"
+          >
+            로그인
+          </Button>
+          <Button onClick={openModal} className="font-bold px-6 shadow-md">
+            무료체험 신청
+          </Button>
         </div>
 
-        <button 
-          className="md:hidden p-2 relative z-[61]" 
+        <button
+          className="md:hidden p-2 relative z-[61]"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-expanded={isMobileMenuOpen}
           aria-label="Toggle menu"
@@ -301,9 +356,9 @@ export function Header() {
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
-      <MobileMenuSheet 
-        isOpen={isMobileMenuOpen} 
-        onClose={() => setIsMobileMenuOpen(false)} 
+      <MobileMenuSheet
+        isOpen={isMobileMenuOpen}
+        onClose={() => setIsMobileMenuOpen(false)}
         navItems={NAV_ITEMS}
         openMenus={openMobileMenus}
         toggleSubmenu={toggleMobileSubmenu}
