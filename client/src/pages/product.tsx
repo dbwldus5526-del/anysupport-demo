@@ -270,7 +270,7 @@ export default function Product() {
                 <div className="w-14 h-14 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                   <feature.icon size={28} />
                 </div>
-                <div className="inline-block px-2 py-1 bg-primary/5 text-primary text-xs font-bold rounded mb-2">
+                <div className="inline-block px-2 py-1 bg-primary/5 text-primary font-bold rounded mb-2 text-[14px]">
                   {feature.highlight}
                 </div>
                 <h3 className="text-lg font-bold text-slate-900 mb-2">{feature.title}</h3>
