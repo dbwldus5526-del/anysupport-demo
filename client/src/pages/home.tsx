@@ -613,27 +613,27 @@ export function Home() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6 text-center">
             <div>
-              <Counter value="1200" suffix="+" />
+              <Counter value="6000" suffix="+" />
               <div className="text-slate-500 text-[10px] sm:text-xs md:text-sm font-bold">
                 국내외 도입 기업수
               </div>
             </div>
             <div>
-              <Counter value="50000" suffix="+" />
+              <Counter value="60000" suffix="+" />
               <div className="text-slate-500 text-[10px] sm:text-xs md:text-sm font-bold">
                 하루 평균 고객지원수
               </div>
             </div>
             <div>
-              <Counter value="100" suffix="만+" />
+              <Counter value="93" suffix="%" />
               <div className="text-slate-500 text-[10px] sm:text-xs md:text-sm font-bold">
-                한달 평균 원격연결수
+                원격지원 해결율
               </div>
             </div>
             <div>
-              <Counter value="99.9" suffix="%" />
+              <Counter value="95" suffix="%" />
               <div className="text-slate-500 text-[10px] sm:text-xs md:text-sm font-bold">
-                연결 성공률
+                고객만족도 증가
               </div>
             </div>
             <div>
