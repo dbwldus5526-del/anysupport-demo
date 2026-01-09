@@ -59,7 +59,7 @@ export default function Download() {
                   </div>
                   <div>
                     <h4 className="text-lg font-bold text-slate-900">macOS 상담사용 프로그램</h4>
-                    <p className="text-slate-400 text-xs font-medium">macOS 10.12 이상 지원</p>
+                    <p className="text-[#666] font-normal text-[18px]">macOS 10.12 이상 지원</p>
                   </div>
                 </div>
                 <Button size="lg" className="w-full h-12 rounded-lg bg-[#002868] hover:bg-[#001d4d] text-white font-bold text-sm gap-2">
