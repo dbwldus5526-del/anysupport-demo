@@ -86,7 +86,7 @@ export default function Solution() {
       <section id="what-is-remote" className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
-            <span className="text-primary font-bold text-xs tracking-widest uppercase mb-3 block">
+            <span className="text-primary font-bold tracking-widest uppercase mb-3 block text-[14px]">
               REMOTE SUPPORT
             </span>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 text-[#333]">
