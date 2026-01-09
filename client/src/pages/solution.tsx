@@ -158,7 +158,7 @@ export default function Solution() {
                 <div className="w-14 h-14 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-6">
                   <card.icon size={28} />
                 </div>
-                <h4 className="text-xl font-bold mb-3">{card.title}</h4>
+                <h4 className="text-xl font-bold mb-3 text-[#333]">{card.title}</h4>
                 <p className="text-[18px] font-normal text-[#666]">
                   {card.desc}
                 </p>
