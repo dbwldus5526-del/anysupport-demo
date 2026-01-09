@@ -325,7 +325,7 @@ export function Header() {
                 ) : (
                   <Link
                     href={item.href}
-                    className="inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 transition-colors hover:text-primary bg-transparent font-semibold text-foreground/80 text-[16px]"
+                    className="inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 transition-colors hover:text-primary bg-transparent text-[#333] text-[18px] font-medium"
                   >
                     {item.label}
                   </Link>
