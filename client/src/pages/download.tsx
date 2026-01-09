@@ -115,7 +115,7 @@ export default function Download() {
 
             {/* Mobile Experience Section */}
             <div className="mt-24 text-center">
-              <h4 className="text-xl font-bold text-slate-900 mb-8">모바일에서도 애니서포트를 경험하세요</h4>
+              <h4 className="font-bold mb-8 text-[36px] text-[#333]">모바일에서도 애니서포트를 경험하세요</h4>
               <div className="flex justify-center gap-4">
                 <button className="h-14 px-6 bg-black rounded-xl border border-white/10 flex items-center gap-3 transition-transform hover:scale-105">
                   <div className="text-white text-left">
