@@ -126,7 +126,7 @@ export default function Solution() {
                   <div className="w-20 h-20 rounded-full bg-white shadow-lg flex items-center justify-center text-slate-400 border border-slate-50">
                     <Monitor size={36} />
                   </div>
-                  <span className="text-sm font-bold text-slate-600">고객</span>
+                  <span className="text-[18px] text-[#333] font-medium">고객</span>
                 </div>
               </div>
               <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:20px_20px]" />
