@@ -89,7 +89,7 @@ export default function Solution() {
             <span className="text-primary font-bold text-xs tracking-widest uppercase mb-3 block">
               REMOTE SUPPORT
             </span>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 text-slate-900">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 text-[#333]">
               원격지원(Remote Support)이란?
             </h2>
             <p className="text-primary font-bold text-base sm:text-lg mb-2">
