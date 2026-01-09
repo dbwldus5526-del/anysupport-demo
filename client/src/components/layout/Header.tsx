@@ -342,7 +342,7 @@ export function Header() {
           >
             로그인
           </Button>
-          <Button onClick={openModal} className="font-bold px-6 shadow-md">
+          <Button onClick={openModal} className="font-bold px-6 shadow-md text-[18px]">
             무료체험 신청
           </Button>
         </div>
