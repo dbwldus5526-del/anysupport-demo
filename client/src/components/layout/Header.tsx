@@ -303,7 +303,7 @@ export function Header() {
               <li key={item.href} className="relative group">
                 {item.subItems ? (
                   <>
-                    <button className="inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 transition-colors hover:text-primary bg-transparent font-semibold text-foreground/80 text-[16px]">
+                    <button className="inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 transition-colors hover:text-primary bg-transparent text-foreground/80 text-[18px] font-medium">
                       {item.label}
                       <ChevronDown className="ml-1 h-3 w-3 transition-transform duration-200 group-hover:rotate-180" />
                     </button>
