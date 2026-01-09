@@ -362,7 +362,7 @@ export function Home() {
               variant="outline"
               size="lg"
               onClick={() => scrollToSection("features")}
-              className="font-bold border-primary text-primary hover:bg-primary/5"
+              className="text-[18px] font-semibold border-primary text-primary hover:bg-primary/5"
             >
               제품 자세히 보기
             </Button>
