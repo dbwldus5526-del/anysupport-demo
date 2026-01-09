@@ -96,7 +96,7 @@ export default function Product() {
               <br />
               <span className="text-primary text-glow">10초 이내 연결</span>
             </h1>
-            <p className="text-[14px] md:text-xl text-slate-300 mb-10 max-w-2xl font-medium leading-relaxed">
+            <p className="text-[14px] md:text-xl text-slate-300 mb-10 max-w-2xl leading-relaxed font-normal">
               사내 PC부터 외부 현장까지, 전문가의 손길이 필요한 모든 곳을
               <br className="hidden md:block" />
               애니서포트 PC 원격지원으로 즉각 해결하세요.
