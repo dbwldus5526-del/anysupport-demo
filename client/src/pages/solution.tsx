@@ -328,7 +328,7 @@ export default function Solution() {
                 <div className="flex items-center gap-4 p-4 rounded-xl bg-slate-50">
                   <Cloud className="text-primary" size={24} />
                   <div>
-                    <h4 className="font-bold text-slate-900">클라우드(SaaS)</h4>
+                    <h4 className="font-bold text-[18px] text-[#333]">클라우드(SaaS)</h4>
                     <p className="text-xs text-slate-500">
                       별도 서버 구축 없이 즉시 사용
                     </p>
