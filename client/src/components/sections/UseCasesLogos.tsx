@@ -55,7 +55,7 @@ export default function UseCasesLogos() {
 
         {/* Category Tabs */}
         <div className="flex justify-start md:justify-center mb-12 overflow-x-auto pb-4 scrollbar-hide -mx-4 px-4">
-          <div className="flex items-center gap-2 p-1.5 bg-slate-100 rounded-2xl whitespace-nowrap">
+          <div className="flex items-center gap-2 p-1.5 rounded-2xl whitespace-nowrap bg-[#f9f9f9]">
             {categories.map((category) => (
               <button
                 key={category}
