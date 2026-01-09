@@ -591,7 +591,7 @@ export function Home() {
               종단간 암호화(E2E)와 다중 보안 인증으로 기업의 엄격한 보안 요구
               수준을 완벽하게 충족합니다.
             </p>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10">
               <div className="p-4 border border-slate-700 rounded-lg">
                 AES-256 암호화
               </div>
@@ -605,6 +605,11 @@ export function Home() {
                 개인정보 마스킹
               </div>
             </div>
+            <Link href="/solution/security">
+              <Button size="lg" variant="outline" className="font-bold border-white text-white hover:bg-white/10">
+                보안기술 자세히보기 <ArrowRight className="ml-2 w-4 h-4" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
