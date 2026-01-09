@@ -34,14 +34,28 @@ const NAV_ITEMS = [
     label: "솔루션", 
     href: "/solution",
     subItems: [
-      { label: "애니서포트 소개", href: "/solution/intro" },
-      { label: "보안성과 안전성", href: "/solution/security" },
-      { label: "다양한 기능", href: "/solution/features" },
-      { label: "원격지원 관리", href: "/solution/management" },
-      { label: "사용 방법", href: "/solution/guide" },
+      { label: "원격지원이란", href: "/solution/intro" },
+      { label: "산업별 맞춤 솔루션", href: "/solution/industry" },
+      { label: "주요 도입 사례", href: "/solution/cases" },
     ]
   },
-  { label: "가격", href: "/pricing" },
+  { 
+    label: "보안&기술", 
+    href: "/security",
+    subItems: [
+      { label: "보안성과 안전성", href: "/solution/security" },
+      { label: "다양한 기능", href: "/solution/features" },
+      { label: "보안 특허기술", href: "/security/patents" },
+    ]
+  },
+  { 
+    label: "가격", 
+    href: "/pricing",
+    subItems: [
+      { label: "도입 방식 비교", href: "/pricing/comparison" },
+      { label: "요금제 안내(ASP/솔루션)", href: "/pricing/plans" },
+    ]
+  },
   { label: "다운로드", href: "/download" },
   { label: "고객지원", href: "/support" },
 ];
