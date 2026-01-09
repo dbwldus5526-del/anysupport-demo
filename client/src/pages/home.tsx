@@ -626,7 +626,7 @@ export function Home() {
               숫자와 성과가 증명합니다
             </h2>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6 text-center text-[#333]">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6 text-center text-[#333] pt-[23px] pb-[23px]">
             <div>
               <Counter value="6000" suffix="+" textColor="#333" />
               <div className="font-normal text-[18px] text-[#666]">
