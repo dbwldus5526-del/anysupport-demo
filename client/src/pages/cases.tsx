@@ -291,7 +291,7 @@ export default function Cases() {
               </div>
               <div className="text-5xl md:text-6xl font-black mb-2 text-[#333]">95<span className="text-3xl">%</span></div>
               <div className="text-xl font-bold text-slate-700 mb-2">고객만족도</div>
-              <p className="text-sm text-slate-500">
+              <p className="text-[18px] text-[#666]">
                 원격지원 AnySupport를 사용했을 때
               </p>
             </div>
