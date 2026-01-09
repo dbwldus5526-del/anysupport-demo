@@ -587,7 +587,7 @@ export default function Cases() {
                     </h4>
                     <div className="space-y-2">
                       {currentScenario.securityPoints.map((point, i) => (
-                        <div key={i} className="flex items-center gap-2 text-sm">
+                        <div key={i} className="flex items-center gap-2 text-[18px] text-[#666]">
                           <CheckCircle size={14} className="text-green-500" />
                           <span className="text-slate-600">{point}</span>
                         </div>
