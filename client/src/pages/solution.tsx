@@ -63,7 +63,7 @@ export default function Solution() {
                 ].map((item, i) => (
                   <div
                     key={i}
-                    className="flex items-center gap-3 text-slate-300 font-bold"
+                    className="flex items-center gap-3 font-medium text-[18px] text-[#dce8f5]"
                   >
                     <CheckCircle2 className="text-primary shrink-0" size={22} />
                     {item}
@@ -82,7 +82,6 @@ export default function Solution() {
           </div>
         </div>
       </section>
-
       {/* 2. 원격지원이란 무엇인가 */}
       <section id="what-is-remote" className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
@@ -180,7 +179,6 @@ export default function Solution() {
           </div>
         </div>
       </section>
-
       {/* 3. 다양한 기능 */}
       <section className="py-24 bg-slate-900 text-white">
         <div className="container mx-auto px-4 md:px-6">
@@ -222,7 +220,6 @@ export default function Solution() {
           </div>
         </div>
       </section>
-
       {/* 4. 사용 방법 */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
@@ -294,7 +291,6 @@ export default function Solution() {
           </div>
         </div>
       </section>
-
       {/* 5. 사용 환경 */}
       <section className="py-24 bg-slate-50">
         <div className="container mx-auto px-4 md:px-6">
@@ -352,7 +348,6 @@ export default function Solution() {
           </div>
         </div>
       </section>
-
       {/* Final CTA */}
       <section className="py-20 bg-primary text-white text-center">
         <div className="container mx-auto px-4">
