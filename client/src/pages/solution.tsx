@@ -171,7 +171,7 @@ export default function Solution() {
               <Button
                 variant="outline"
                 size="lg"
-                className="font-bold border-slate-200 text-slate-700 hover:bg-slate-50"
+                className="font-bold border-slate-200 hover:bg-slate-50 text-[18px] text-[#333]"
               >
                 원격지원 작동 방식 자세히 보기
               </Button>
@@ -204,7 +204,7 @@ export default function Solution() {
                 className="p-8 rounded-2xl border border-white/10 bg-white/5 text-center flex flex-col items-center gap-4 hover:bg-white/10 transition-colors"
               >
                 <item.icon className="text-primary" size={32} />
-                <span className="font-bold">{item.title}</span>
+                <span className="text-[18px] font-medium">{item.title}</span>
               </div>
             ))}
           </div>
