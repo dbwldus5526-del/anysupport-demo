@@ -516,7 +516,9 @@ export function Home() {
       <section id="connection-process" className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
-            <h2 className="text-[25px] md:text-4xl font-bold mb-4">간편한 4단계 연결로 시간과 비용을 단축하세요</h2>
+            <h2 className="text-[25px] md:text-4xl font-bold mb-4">
+              간편한 4단계 연결로 시간과 비용을 단축하세요
+            </h2>
             <p className="text-slate-500 max-w-2xl mx-auto text-[14px] md:text-lg">
               누구나 1분 안에 원격 지원을 시작할 수 있습니다.
             </p>
@@ -609,7 +611,7 @@ export function Home() {
       {/* 8. 성과와 지표 (숫자로 증명) */}
       <section className="py-24 bg-[#0f172b] pt-[70px] pb-[70px]">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-12 text-center">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-6 md:gap-12 text-center">
             <div>
               <Counter value="1200" suffix="+" />
               <div className="text-slate-500 text-xs sm:text-sm md:text-base font-bold">
@@ -626,6 +628,12 @@ export function Home() {
               <Counter value="100" suffix="만+" />
               <div className="text-slate-500 text-xs sm:text-sm md:text-base font-bold">
                 한달 평균 원격연결수
+              </div>
+            </div>
+            <div>
+              <Counter value="99.9" suffix="%" />
+              <div className="text-slate-500 text-xs sm:text-sm md:text-base font-bold">
+                연결 성공률
               </div>
             </div>
             <div>
