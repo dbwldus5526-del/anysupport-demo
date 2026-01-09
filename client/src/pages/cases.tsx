@@ -305,7 +305,7 @@ export default function Cases() {
             <h2 className="text-2xl md:text-4xl font-bold mb-4">
               우리 환경은 어디에 해당하나요?
             </h2>
-            <p className="text-slate-500 max-w-2xl mx-auto">
+            <p className="text-slate-500 max-w-2xl mx-auto text-[18px]">
               조직의 네트워크 환경에 맞는 시나리오를 선택해 보세요
             </p>
           </div>
