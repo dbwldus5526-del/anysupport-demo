@@ -11,14 +11,6 @@ import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
 import { insertInquirySchema } from "@shared/schema";
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu";
 
 const NAV_ITEMS = [
   { 
@@ -261,43 +253,36 @@ export function Header() {
         </Link>
 
         <nav className="hidden md:block">
-          <NavigationMenu>
-            <NavigationMenuList className="gap-2">
-              {NAV_ITEMS.map((item) => (
-                <NavigationMenuItem key={item.href}>
-                  {item.subItems ? (
-                    <>
-                      <NavigationMenuTrigger className="group inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 transition-colors hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[state=open]:text-accent-foreground data-[state=open]:hover:bg-accent data-[state=open]:focus:bg-accent group bg-transparent font-semibold hover:bg-transparent data-[state=open]:bg-transparent text-foreground/80 text-[16px]">
-                        {item.label}
-                      </NavigationMenuTrigger>
-                      <NavigationMenuContent>
-                        <ul className="grid w-[200px] gap-1 p-2 bg-white">
-                          {item.subItems.map((sub) => (
-                            <li key={sub.href}>
-                              <NavigationMenuLink asChild>
-                                <Link
-                                  href={sub.href}
-                                  className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-slate-50 hover:text-primary text-sm font-medium"
-                                >
-                                  {sub.label}
-                                </Link>
-                              </NavigationMenuLink>
-                            </li>
-                          ))}
-                        </ul>
-                      </NavigationMenuContent>
-                    </>
-                  ) : (
-                    <NavigationMenuLink asChild>
-                      <Link href={item.href} className="group inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 transition-colors hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[state=open]:text-accent-foreground data-[state=open]:bg-accent/50 data-[state=open]:hover:bg-accent data-[state=open]:focus:bg-accent bg-transparent font-semibold hover:bg-transparent text-foreground/80 text-[16px]">
-                        {item.label}
-                      </Link>
-                    </NavigationMenuLink>
-                  )}
-                </NavigationMenuItem>
-              ))}
-            </NavigationMenuList>
-          </NavigationMenu>
+          <ul className="flex items-center gap-1">
+            {NAV_ITEMS.map((item) => (
+              <li key={item.href} className="relative group">
+                {item.subItems ? (
+                  <>
+                    <button className="inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 transition-colors hover:text-primary bg-transparent font-semibold text-foreground/80 text-[16px]">
+                      {item.label}
+                      <ChevronDown className="ml-1 h-3 w-3 transition-transform duration-200 group-hover:rotate-180" />
+                    </button>
+                    <ul className="absolute left-0 top-full mt-2 z-50 hidden group-hover:block w-[200px] rounded-md border bg-white shadow-lg p-2">
+                      {item.subItems.map((sub) => (
+                        <li key={sub.href}>
+                          <Link
+                            href={sub.href}
+                            className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-slate-50 hover:text-primary text-sm font-medium text-slate-700"
+                          >
+                            {sub.label}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </>
+                ) : (
+                  <Link href={item.href} className="inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 transition-colors hover:text-primary bg-transparent font-semibold text-foreground/80 text-[16px]">
+                    {item.label}
+                  </Link>
+                )}
+              </li>
+            ))}
+          </ul>
         </nav>
 
         <div className="hidden md:flex items-center gap-3 shrink-0">
