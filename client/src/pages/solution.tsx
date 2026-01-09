@@ -309,7 +309,7 @@ export default function Solution() {
               </h3>
               <div className="space-y-4">
                 <div className="flex justify-between p-3 border-b border-slate-50">
-                  <span className="font-bold text-slate-600">OS</span>
+                  <span className="font-extrabold text-[18px] text-[#333]">OS</span>
                   <span className="font-normal text-[18px]">
                     Windows / macOS / Android / iOS
                   </span>
