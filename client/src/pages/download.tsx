@@ -42,7 +42,7 @@ export default function Download() {
                     <Monitor size={28} />
                   </div>
                   <div>
-                    <h4 className="text-lg font-bold text-slate-900">Windows 상담사용 프로그램</h4>
+                    <h4 className="text-lg font-bold text-[#333]">Windows 상담사용 프로그램</h4>
                     <p className="text-[18px] font-normal text-[#666]">Windows 7 / 8 / 10 / 11 지원</p>
                   </div>
                 </div>
