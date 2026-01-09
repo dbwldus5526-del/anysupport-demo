@@ -274,7 +274,7 @@ export default function Product() {
                   {feature.highlight}
                 </div>
                 <h3 className="text-lg font-bold text-slate-900 mb-2">{feature.title}</h3>
-                <p className="text-sm text-slate-500 leading-relaxed">{feature.desc}</p>
+                <p className="text-[18px] text-[#666]">{feature.desc}</p>
               </div>
             ))}
           </div>
