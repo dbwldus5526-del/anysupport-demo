@@ -635,7 +635,7 @@ export function Home() {
             </div>
             <div>
               <Counter value="60000" suffix="+" textColor="#333" />
-              <div className="sm:text-xs md:text-sm text-[#666] text-[16px] font-normal">
+              <div className="sm:text-xs md:text-sm text-[#666] font-normal text-[18px]">
                 하루 평균 고객지원수
               </div>
             </div>
