@@ -433,7 +433,7 @@ export function Home() {
             ].map((item, i) => (
               <div
                 key={i}
-                className="bg-[#f7f8fc] p-6 rounded-xl border border-slate-200 flex flex-col items-center text-center gap-3 transition-colors"
+                className="bg-[#f7f8fc] p-6 rounded-xl border border-slate-300 flex flex-col items-center text-center gap-3 transition-colors"
               >
                 <div className="mb-2">
                   <DesignIcon type={item.type} />
