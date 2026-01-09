@@ -1,17 +1,17 @@
 import { Button } from "@/components/ui/button";
 import { useModal } from "@/context/ModalContext";
-import { 
-  Monitor, 
-  ShieldCheck, 
-  Zap, 
-  Clock, 
-  FileText, 
+import {
+  Monitor,
+  ShieldCheck,
+  Zap,
+  Clock,
+  FileText,
   ArrowRight,
   CheckCircle2,
   Users,
   Lock,
   MousePointer2,
-  Copy
+  Copy,
 } from "lucide-react";
 import pcHeroImg from "@assets/generated_images/pc_remote_support_hero_background_with_desk_setup.png";
 import remoteControlImg from "@assets/generated_images/remote_control_mouse_and_keyboard_icon.png";
@@ -25,41 +25,41 @@ export default function Product() {
     {
       title: "편리한 원격제어",
       desc: "마우스와 키보드를 제어하여 고객의 pc를 직접 제어할 수 있습니다. 복잡한 문제도 상담사가 직접 해결할 수 있어 고객 만족도가 높습니다.",
-      image: remoteControlImg
+      image: remoteControlImg,
     },
     {
       title: "빠른 파일 전송",
       desc: "드래그 앤 드롭 기능으로 고객의 컴퓨터에 간편하게 파일을 전송할 수 있습니다. 패치파일 , 매뉴얼 , 설치 프로그램 등을 즉시 공유할 수 있습니다.",
-      image: fileTransferImg
+      image: fileTransferImg,
     },
     {
       title: "멀티세션 관리",
       desc: "여러 고객을 동시에 지원하면서 세션 간 빠르게 전환이 가능합니다. 효율적인 상담 운영을 통해 생산성을 높이세요",
-      image: multiSessionImg
-    }
+      image: multiSessionImg,
+    },
   ];
 
   const features = [
     {
       title: "사내/외부 PC 원격 접속",
       desc: "장소에 구애받지 않고 사내 망 내부나 외부망에 있는 모든 PC에 즉각 연결합니다.",
-      icon: Monitor
+      icon: Monitor,
     },
     {
       title: "관리자 권한 및 세션 제어",
       desc: "보안이 중요한 기업 환경에 맞춰 관리자 권한 승인 및 세션별 접근 통제가 가능합니다.",
-      icon: Lock
+      icon: Lock,
     },
     {
       title: "강력한 협업 도구",
-      desc: "다중 모니터 지원, 대용량 파일 전송, 실시간 원격 제어로 업무 효율을 극대화합니다.",
-      icon: Zap
+      desc: " 용량 제한이 없는 양방향 파일 전송과 드래그 앤 드롭 기능을 지원하며, 한 명의 상담원이 최대 10개의 화면을 동시에 관리할 수 있는 멀티 세션 기능을 제공합니다",
+      icon: Zap,
     },
     {
       title: "상담 이력 및 로그 기록",
       desc: "모든 접속 기록과 상담 이력이 클라우드에 자동으로 저장되어 투명한 운영이 가능합니다.",
-      icon: FileText
-    }
+      icon: FileText,
+    },
   ];
 
   return (
@@ -67,30 +67,38 @@ export default function Product() {
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden bg-slate-900 text-white">
         <div className="absolute inset-0 z-0">
-          <img 
-            src={pcHeroImg} 
-            alt="PC Remote Support" 
+          <img
+            src={pcHeroImg}
+            alt="PC Remote Support"
             className="w-full h-full object-cover opacity-40"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/80 to-transparent" />
         </div>
-        
+
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/20 text-primary border border-primary/30 mb-6">
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-              <span className="text-[10px] md:text-xs font-bold tracking-wider uppercase">Enterprise IT Support</span>
+              <span className="text-[10px] md:text-xs font-bold tracking-wider uppercase">
+                Enterprise IT Support
+              </span>
             </div>
             <h1 className="text-3xl md:text-6xl font-black mb-6 leading-tight">
-              기업 내 IT 이슈를<br />
-              <span className="text-primary text-glow">가장 빠르고 안전하게</span>
+              복잡한 설치 과정 없이
+              <br />
+              <span className="text-primary text-glow">10초 이내 연결</span>
             </h1>
             <p className="text-[14px] md:text-xl text-slate-300 mb-10 max-w-2xl font-medium leading-relaxed">
-              사내 PC부터 외부 현장까지, 전문가의 손길이 필요한 모든 곳을<br className="hidden md:block" />
+              사내 PC부터 외부 현장까지, 전문가의 손길이 필요한 모든 곳을
+              <br className="hidden md:block" />
               애니서포트 PC 원격지원으로 즉각 해결하세요.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button size="lg" onClick={openModal} className="h-14 px-10 text-lg font-bold shadow-xl shadow-primary/20">
+              <Button
+                size="lg"
+                onClick={openModal}
+                className="h-14 px-10 text-lg font-bold shadow-xl shadow-primary/20"
+              >
                 무료체험 시작하기 <ArrowRight className="ml-2" />
               </Button>
             </div>
@@ -103,22 +111,28 @@ export default function Product() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-[25px] md:text-4xl font-bold text-slate-900 mb-6 leading-tight">
-                복잡한 IT 장애,<br />
-                <span className="text-primary">단 한 번의 연결</span>로 해결됩니다.
+                복잡한 IT 장애,
+                <br />
+                <span className="text-primary">단 한 번의 연결</span>로
+                해결됩니다.
               </h2>
               <p className="text-[14px] md:text-lg text-slate-600 mb-8 leading-relaxed">
-                기업 환경에서는 사소한 PC 장애도 생산성 저하로 이어집니다. 애니서포트는 
-                현장 방문 없이도 상담원이 고객의 PC 화면을 직접 제어하며 문제를 진단하고 
-                해결할 수 있는 최적의 환경을 제공합니다.
+                기업 환경에서는 사소한 PC 장애도 생산성 저하로 이어집니다.
+                애니서포트는 현장 방문 없이도 상담원이 고객의 PC 화면을 직접
+                제어하며 문제를 진단하고 해결할 수 있는 최적의 환경을
+                제공합니다.
               </p>
               <ul className="space-y-4">
                 {[
                   "사내 PC / 외부 PC 원격 접속 지원",
                   "관리자 권한 제어 및 세션 통제",
                   "다중 모니터 · 파일 전송 · 원격 제어",
-                  "상담 이력 및 접속 로그 자동 저장"
+                  "상담 이력 및 접속 로그 자동 저장",
                 ].map((item, i) => (
-                  <li key={i} className="flex items-center gap-3 text-slate-700 font-semibold">
+                  <li
+                    key={i}
+                    className="flex items-center gap-3 text-slate-700 font-semibold"
+                  >
                     <CheckCircle2 className="text-primary shrink-0" size={24} />
                     {item}
                   </li>
@@ -127,12 +141,19 @@ export default function Product() {
             </div>
             <div className="grid grid-cols-2 gap-4">
               {features.map((feature, i) => (
-                <div key={i} className="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:border-primary/30 transition-all group">
+                <div
+                  key={i}
+                  className="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:border-primary/30 transition-all group"
+                >
                   <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                     <feature.icon size={24} />
                   </div>
-                  <h3 className="text-lg font-bold mb-2 text-slate-900">{feature.title}</h3>
-                  <p className="text-sm text-slate-500 leading-relaxed font-medium">{feature.desc}</p>
+                  <h3 className="text-lg font-bold mb-2 text-slate-900">
+                    {feature.title}
+                  </h3>
+                  <p className="text-sm text-slate-500 leading-relaxed font-medium">
+                    {feature.desc}
+                  </p>
                 </div>
               ))}
             </div>
@@ -143,16 +164,23 @@ export default function Product() {
       <section className="py-24 bg-slate-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
-            <h2 className="text-[25px] md:text-4xl font-bold mb-4 text-slate-900">Desktop Edition만의 특별한 기능</h2>
-            <p className="text-slate-500 text-[14px] md:text-lg max-w-2xl mx-auto">PC 원격지원을 더욱 강력하게 만드는 전문 기능들</p>
+            <h2 className="text-[25px] md:text-4xl font-bold mb-4 text-slate-900">
+              Desktop Edition만의 특별한 기능
+            </h2>
+            <p className="text-slate-500 text-[14px] md:text-lg max-w-2xl mx-auto">
+              PC 원격지원을 더욱 강력하게 만드는 전문 기능들
+            </p>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-8">
             {specialFeatures.map((feature, i) => (
-              <div key={i} className="group relative aspect-square rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-2xl transition-all cursor-pointer bg-white">
-                <img 
-                  src={feature.image} 
-                  alt={feature.title} 
+              <div
+                key={i}
+                className="group relative aspect-square rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-2xl transition-all cursor-pointer bg-white"
+              >
+                <img
+                  src={feature.image}
+                  alt={feature.title}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-slate-900/0 group-hover:bg-slate-900/80 transition-all duration-300 flex flex-col justify-center items-center p-8 text-center opacity-0 group-hover:opacity-100">
@@ -165,7 +193,9 @@ export default function Product() {
                 </div>
                 <div className="absolute bottom-6 left-6 right-6 group-hover:hidden transition-all">
                   <div className="bg-white/90 backdrop-blur-sm px-4 py-2 rounded-lg inline-block border border-slate-100">
-                    <span className="font-bold text-slate-900">{feature.title}</span>
+                    <span className="font-bold text-slate-900">
+                      {feature.title}
+                    </span>
                   </div>
                 </div>
               </div>
@@ -177,14 +207,18 @@ export default function Product() {
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
-            <h2 className="text-[25px] md:text-4xl font-bold mb-4 text-slate-900">원격지원 연결 프로세스</h2>
-            <p className="text-slate-500 text-[14px] md:text-lg max-w-2xl mx-auto">간편하고 안전한 4단계 연결 과정을 통해 즉각적인 지원을 시작하세요.</p>
+            <h2 className="text-[25px] md:text-4xl font-bold mb-4 text-slate-900">
+              원격지원 연결 프로세스
+            </h2>
+            <p className="text-slate-500 text-[14px] md:text-lg max-w-2xl mx-auto">
+              간편하고 안전한 4단계 연결 과정을 통해 즉각적인 지원을 시작하세요.
+            </p>
           </div>
 
           <div className="relative">
             {/* Connection Line (Desktop) */}
             <div className="hidden lg:block absolute top-1/2 left-0 w-full h-0.5 bg-slate-100 -translate-y-1/2 z-0" />
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
               {[
                 {
@@ -192,29 +226,33 @@ export default function Product() {
                   title: "원격지원 요청",
                   icon: <ArrowRight className="text-primary" size={32} />,
                   desc: "상담원이 고객에게 원격지원 요청을 전달합니다. 이메일, 문자, 안내 페이지 등 다양한 방식으로 연결이 가능합니다.",
-                  points: ["고객 주도 접속 (보안)", "사전 인증 기반 연결"]
+                  points: ["고객 주도 접속 (보안)", "사전 인증 기반 연결"],
                 },
                 {
                   step: "STEP 02",
                   title: "고객 인증 및 동의",
                   icon: <ShieldCheck className="text-primary" size={32} />,
                   desc: "고객은 접속 코드 입력 또는 버튼 클릭으로 원격지원에 동의하고 연결을 시작합니다.",
-                  points: ["무단 접속 방지", "기업 보안 정책 준수"]
+                  points: ["무단 접속 방지", "기업 보안 정책 준수"],
                 },
                 {
                   step: "STEP 03",
                   title: "실시간 원격지원 진행",
                   icon: <Monitor className="text-primary" size={32} />,
                   desc: "화면 공유, 원격 제어, 음성/영상 연결을 통해 실시간으로 문제를 해결합니다.",
-                  types: ["PC 원격 제어", "모바일 화면 가이드", "영상 기반 상담"]
+                  types: [
+                    "PC 원격 제어",
+                    "모바일 화면 가이드",
+                    "영상 기반 상담",
+                  ],
                 },
                 {
                   step: "STEP 04",
                   title: "지원 종료 및 이력 관리",
                   icon: <FileText className="text-primary" size={32} />,
                   desc: "원격지원 종료 후 접속 이력과 상담 기록이 자동으로 저장됩니다.",
-                  points: ["상담 이력 관리", "운영 및 품질 분석 가능"]
-                }
+                  points: ["상담 이력 관리", "운영 및 품질 분석 가능"],
+                },
               ].map((item, i) => (
                 <div key={i} className="flex flex-col h-full bg-white">
                   <div className="mb-6 relative">
@@ -225,17 +263,24 @@ export default function Product() {
                       {i + 1}
                     </div>
                   </div>
-                  
+
                   <div className="flex-1">
-                    <span className="text-primary font-bold text-sm tracking-tighter mb-2 block">{item.step}</span>
-                    <h3 className="text-xl font-bold mb-4 text-slate-900">{item.title}</h3>
+                    <span className="text-primary font-bold text-sm tracking-tighter mb-2 block">
+                      {item.step}
+                    </span>
+                    <h3 className="text-xl font-bold mb-4 text-slate-900">
+                      {item.title}
+                    </h3>
                     <p className="text-slate-500 text-sm leading-relaxed mb-6">
                       {item.desc}
                     </p>
-                    
+
                     <div className="space-y-2">
                       {(item.points || item.types).map((point, idx) => (
-                        <div key={idx} className="flex items-center gap-2 text-xs font-bold text-slate-700 bg-slate-50 px-3 py-2 rounded-lg border border-slate-100">
+                        <div
+                          key={idx}
+                          className="flex items-center gap-2 text-xs font-bold text-slate-700 bg-slate-50 px-3 py-2 rounded-lg border border-slate-100"
+                        >
                           <CheckCircle2 size={14} className="text-primary" />
                           {point}
                         </div>
@@ -252,12 +297,23 @@ export default function Product() {
       {/* CTA Section */}
       <section className="py-20 bg-primary text-white">
         <div className="container mx-auto px-4 md:px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-10">복잡한 IT 기술 지원, 지금 바로 시작하세요</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-10">
+            복잡한 IT 기술 지원, 지금 바로 시작하세요
+          </h2>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Button size="lg" variant="secondary" onClick={openModal} className="h-16 px-12 text-xl font-bold bg-white text-primary hover:bg-slate-100 shadow-2xl">
+            <Button
+              size="lg"
+              variant="secondary"
+              onClick={openModal}
+              className="h-16 px-12 text-xl font-bold bg-white text-primary hover:bg-slate-100 shadow-2xl"
+            >
               PC 원격지원 자세히 보기
             </Button>
-            <Button size="lg" onClick={openModal} className="h-16 px-12 text-xl font-bold bg-primary-foreground text-primary hover:bg-slate-100 border-2 border-white/20">
+            <Button
+              size="lg"
+              onClick={openModal}
+              className="h-16 px-12 text-xl font-bold bg-primary-foreground text-primary hover:bg-slate-100 border-2 border-white/20"
+            >
               무료 체험 시작하기
             </Button>
           </div>
