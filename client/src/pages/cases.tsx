@@ -267,7 +267,7 @@ export default function Cases() {
               <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
                 <Clock size={32} className="text-primary" />
               </div>
-              <div className="text-5xl md:text-6xl font-black text-slate-900 mb-2">3분</div>
+              <div className="text-5xl md:text-6xl font-black mb-2 text-[#333]">3분</div>
               <div className="text-xl font-bold text-slate-700 mb-2">내 해결</div>
               <p className="text-sm text-slate-500">
                 평균 장애 해결 시간
