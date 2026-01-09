@@ -252,38 +252,38 @@ export default function Cases() {
       </section>
 
       {/* Section B: Performance Metrics */}
-      <section className="py-20 bg-gradient-to-r from-primary via-blue-600 to-primary text-white">
+      <section className="py-20 bg-white border-y border-slate-100">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div className="text-center p-8 bg-white/10 rounded-2xl backdrop-blur-sm">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-full mb-4">
-                <Clock size={32} />
+            <div className="text-center p-8 bg-slate-50 rounded-2xl border border-slate-100">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
+                <Clock size={32} className="text-primary" />
               </div>
-              <div className="text-5xl md:text-6xl font-black mb-2">3분</div>
-              <div className="text-xl font-bold mb-2">내 해결</div>
-              <p className="text-sm text-white/70">
+              <div className="text-5xl md:text-6xl font-black text-slate-900 mb-2">3분</div>
+              <div className="text-xl font-bold text-slate-700 mb-2">내 해결</div>
+              <p className="text-sm text-slate-500">
                 평균 장애 해결 시간
               </p>
             </div>
 
-            <div className="text-center p-8 bg-white/10 rounded-2xl backdrop-blur-sm">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-full mb-4">
-                <TrendingUp size={32} />
+            <div className="text-center p-8 bg-slate-50 rounded-2xl border border-slate-100">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
+                <TrendingUp size={32} className="text-primary" />
               </div>
-              <div className="text-5xl md:text-6xl font-black mb-2">175<span className="text-3xl">억원</span></div>
-              <div className="text-xl font-bold mb-2">연간 절감</div>
-              <p className="text-sm text-white/70">
+              <div className="text-5xl md:text-6xl font-black text-slate-900 mb-2">175<span className="text-3xl">억원</span></div>
+              <div className="text-xl font-bold text-slate-700 mb-2">연간 절감</div>
+              <p className="text-sm text-slate-500">
                 * 보안업체 OOO사 사례
               </p>
             </div>
 
-            <div className="text-center p-8 bg-white/10 rounded-2xl backdrop-blur-sm">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-full mb-4">
-                <Users size={32} />
+            <div className="text-center p-8 bg-slate-50 rounded-2xl border border-slate-100">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
+                <Users size={32} className="text-primary" />
               </div>
-              <div className="text-5xl md:text-6xl font-black mb-2">95<span className="text-3xl">%</span></div>
-              <div className="text-xl font-bold mb-2">고객만족도</div>
-              <p className="text-sm text-white/70">
+              <div className="text-5xl md:text-6xl font-black text-slate-900 mb-2">95<span className="text-3xl">%</span></div>
+              <div className="text-xl font-bold text-slate-700 mb-2">고객만족도</div>
+              <p className="text-sm text-slate-500">
                 원격지원 AnySupport를 사용했을 때
               </p>
             </div>
