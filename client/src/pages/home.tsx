@@ -619,7 +619,7 @@ export function Home() {
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6 text-center">
             <div>
               <Counter value="6000" suffix="+" />
-              <div className="text-slate-500 text-[10px] sm:text-xs md:text-sm font-bold">
+              <div className="sm:text-xs md:text-sm font-normal text-[16px] text-[#bac6d6]">
                 국내외 도입 기업수
               </div>
             </div>
