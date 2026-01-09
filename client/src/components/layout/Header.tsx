@@ -313,7 +313,7 @@ export function Header() {
                           <li key={sub.href}>
                             <Link
                               href={sub.href}
-                              className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-slate-50 hover:text-primary text-sm font-medium text-slate-700"
+                              className="block select-none rounded-md p-3 no-underline outline-none transition-colors hover:bg-slate-50 hover:text-primary font-medium text-slate-700 text-[18px]"
                             >
                               {sub.label}
                             </Link>
