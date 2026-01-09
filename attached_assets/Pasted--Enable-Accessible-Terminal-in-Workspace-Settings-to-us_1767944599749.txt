@@ -1,0 +1,335 @@
+
+/
+
+Enable "Accessible Terminal" in Workspace Settings to use a screen reader with the shell.
+/
+
+99.9
+2 results in 3 files
+515
+는 신뢰 섹션을 확인하실 수 있습니다. 추가로 보완하고 싶은 내용이 있다면 말씀해 주세요.
+634
+<Counter value="99.9" suffix="%" />
+62
+<Zap className="w-4 h-4 text-primary" /> 99.99% Uptime
+        <div className="max-w-[1280px] w-full mx-auto px-4 sm:px-6 lg:px-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="inline-block p-3 rounded-full bg-primary/20 text-primary mb-6">
+              <ShieldCheck size={40} />
+            </div>
+            <h2 className="text-3xl lg:text-4xl font-bold mb-6">
+              강력한 기술력과 타협 없는 보안
+            </h2>
+            <p className="text-slate-400 text-[18px] mb-10 leading-relaxed">
+              자체 개발한 최적화 코덱으로 저대역폭에서도 끊김 없는 원격 제어를
+              구현했습니다.
+              <br className="hidden md:block" />
+              종단간 암호화(E2E)와 다중 보안 인증으로 기업의 엄격한 보안 요구
+              수준을 완벽하게 충족합니다.
+            </p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10">
+              <div className="p-4 border border-slate-700 rounded-lg">
+                AES-256 암호화
+              </div>
+              <div className="p-4 border border-slate-700 rounded-lg">
+                SSL/TLS 전송
+              </div>
+              <div className="p-4 border border-slate-700 rounded-lg">
+                이중 인증(2FA)
+              </div>
+              <div className="p-4 border border-slate-700 rounded-lg">
+                개인정보 마스킹
+              </div>
+            </div>
+            <Link href="/solution/security">
+              <Button size="lg" variant="outline" className="font-bold border-white text-white hover:bg-white/10">
+                보안기술 자세히보기 <ArrowRight className="ml-2 w-4 h-4" />
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+      {/* 8. 성과와 지표 (숫자로 증명) */}
+      <section className="py-24 bg-[#0f172b] pt-[70px] pb-[70px]">
+        <div className="max-w-[1280px] w-full mx-auto px-4 sm:px-6 lg:px-10">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6 text-center">
+            <div>
+              <Counter value="6000" suffix="+" />
+              <div className="sm:text-xs md:text-sm font-normal text-[16px] text-[#bac6d6]">
+                국내외 도입 기업수
+              </div>
+            </div>
+            <div>
+              <Counter value="60000" suffix="+" />
+              <div className="sm:text-xs md:text-sm text-[#bac6d6] text-[16px] font-normal">
+                하루 평균 고객지원수
+              </div>
+            </div>
+            <div>
+              <Counter value="93" suffix="%" />
+              <div className="sm:text-xs md:text-sm text-[#bac6d6] text-[16px] font-normal">
+                원격지원 해결율
+              </div>
+            </div>
+            <div>
+              <Counter value="95" suffix="%" />
+              <div className="sm:text-xs md:text-sm font-normal text-[#bac6d6] text-[16px]">
+                고객만족도 증가
+              </div>
+            </div>
+            <div>
+              <Counter value="175" suffix="억원" />
+              <div className="sm:text-xs md:text-sm text-[#bac6d6] text-[16px] font-normal">
+                누적 비용 절감액
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* 9. 산업별 최적화 솔루션 */}
+      <section id="use-cases">
+        <UseCasesLogos />
+      </section>
+      {/* 10. 서비스 도입 방식 선택 */}
+      <section className="py-24 bg-[#f8fafc]">
+        <div className="max-w-[1280px] w-full mx-auto px-4 sm:px-6 lg:px-10">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+              서비스 도입 방식 선택
+            </h2>
+            <p className="text-[#666] max-w-2xl mx-auto text-[18px]">
+              귀사의 규모와 환경에 맞는 플랜을 선택하세요.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <div className="p-10 rounded-2xl border border-slate-200 hover:border-primary transition-all bg-white shadow-sm flex flex-col">
+              <h3 className="text-xl lg:text-2xl font-bold mb-4">구독형 제품 (SaaS)</h3>
+              <p className="text-[#666] mb-8 flex-1 text-[18px]">
+                월/연 단위 결제로 즉시 사용 가능한 표준 서비스입니다.
+                <br />
+                중소·중견기업 고객에게 추천합니다.
+              </p>
+              <Link href="/pricing" data-testid="link-pricing">
+                <Button size="lg" className="w-full font-bold">
+                  가격 페이지 보기
+                </Button>
+              </Link>
+            </div>
+            <div className="p-10 rounded-2xl border border-slate-200 hover:border-primary transition-all bg-white shadow-sm flex flex-col">
+              <h3 className="text-xl lg:text-2xl font-bold mb-4">솔루션 / 연동형 제품</h3>
+              <p className="text-[#666] mb-8 flex-1 text-[18px]">
+                기존 상담 시스템(CRM/KMS)과 연계 가능한 맞춤형 솔루션입니다.
+                <br />
+                대기업 및 금융권 환경에 최적화되어 있습니다.
+              </p>
+              <Button
+                size="lg"
+                variant="outline"
+                  </span>
+                  <p className="text-slate-500 text-[18px] font-normal">
+                    {item.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <Link href="/solution/features">
+              <Button size="lg" className="font-bold shadow-lg">
+                애니서포트 기능 자세히 보기
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+      {/* 5.1 Device Support Toggle Section */}
+      <section className="py-24 bg-white border-y border-slate-50">
+        <div className="max-w-[1280px] w-full mx-auto px-4 sm:px-6 lg:px-10">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl text-slate-900 mb-4 font-bold">
+              환경은 달라도, 지원은 하나로 완성됩니다
+            </h2>
+            <p className="text-[#666] max-w-2xl mx-auto text-[18px]">
+              PC·모바일·웹 환경을 아우르는 통합 원격 지원 기술
+            </p>
+          </div>
+
+          <div className="flex flex-wrap justify-center gap-3 mb-12">
+            {deviceViewItems.map((device) => (
+              <button
+                key={device.id}
+                onClick={() => setActiveDevice(device.id)}
+                className={`px-6 py-2.5 rounded-full text-sm font-bold transition-all duration-300 border ${
+                  activeDevice === device.id
+                    ? "bg-primary text-white border-primary shadow-lg shadow-primary/20"
+                    : "bg-white text-slate-500 border-slate-200 hover:border-primary hover:text-primary"
+                }`}
+              >
+                {device.label}
+              </button>
+            ))}
+          </div>
+
+          <div className="max-w-5xl mx-auto">
+            <div className="relative overflow-hidden aspect-[16/10] flex items-center justify-center">
+              <motion.div
+                key={activeDevice}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5 }}
+                className="w-full h-full"
+              >
+                <img
+                  src={
+                    deviceViewItems.find((d) => d.id === activeDevice)?.image
+                  }
+                  alt="Device View"
+                  className="w-full h-full object-cover rounded-2xl shadow-xl"
+                />
+              </motion.div>
+            </div>
+            <p className="mt-8 text-center text-slate-400 text-sm flex items-center justify-center gap-2">
+              <span className="inline-block w-4 h-4 bg-yellow-400 rounded-full flex items-center justify-center text-[10px] text-white">
+                💡
+              </span>
+              이미지 상단의 버튼을 클릭하여 각 환경에 대한 상세 화면을
+              확인하세요
+            </p>
+          </div>
+        </div>
+      </section>
+      {/* 6. 원격 연결 프로세스 (4단계) */}
+      <section id="connection-process" className="py-24 bg-white">
+        <div className="max-w-[1280px] w-full mx-auto px-4 sm:px-6 lg:px-10">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+              간편한 4단계 연결로 시간과 비용을 단축하세요
+            </h2>
+            <p className="text-[#666] max-w-2xl mx-auto text-[18px]">
+              누구나 1분 안에 원격 지원을 시작할 수 있습니다.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+            {[
+              {
+                step: "01",
+                title: "상담원 로그인",
+                desc: "웹 대시보드에서 계정 로그인",
+              },
+              {
+                step: "02",
+                title: "접속 번호 생성",
+                desc: "고객에게 전달할 6자리 번호 생성",
+              },
+              {
+                step: "03",
+                title: "고객 번호 입력",
+                desc: "고객이 페이지에서 번호 입력",
+              },
+              {
+                step: "04",
+                title: "원격 연결 시작",
+Update homepage description text styles for better readability
+"주요 도입사례" 페이지를 만들었어요. 모든 섹션이 포함되어 있습니다: 히어로, 성과지표(3분/175억/95%), 시나리오 탭(인터넷망/내부망/DMZ), 업종별 필터, 도입 효과, 보안 관제탑 요약, 하단 CTA. 확인해 주세요!
+
+Checkpoint made
+Saved progress at the end of the loop
+Worked for 5 minutes
+Want users to get these changes? Republish this App.
+파란색말고 흰색모드로 바꿔줘 깔끔하게
+
+성과지표 섹션을 깔끔한 흰색 모드로 변경했어요. 확인해 주세요!
+
+Checkpoint made
+Update performance metrics section to a clean white theme
+Worked for 52 seconds
+Checkpoint made
+•
+Free
+Visual edit
+다음 픽토그램을 아이콘과 픽토그램을이용하여 추가로 설명을 넣어줘
+
+시나리오 섹션에 아이콘과 픽토그램을 사용한 시각적인 플로우 다이어그램을 추가했어요. 상담원 → 보안인증 → 네트워크 → 대상기기 순서로 흐름을 보여줍니다. 확인해 주세요!
+
+Checkpoint made
+Add visual flow diagrams to explain scenarios with icons
+Worked for 1 minute
+각자 다른 아이콘과 픽토그램으로 설명해줘.
+인터넷망 고객 지원->여기 카드에는 이 캡처이미지를 아이콘,픽토그램화 시켜서 알아보기 쉽게 넣어줘
+
+각 시나리오별로 다른 픽토그램 플로우를 만들었어요! 인터넷망(상담원→홈페이지/암호화/서비스→고객), 내부망(솔루션연계/공장관리), DMZ(방화벽/내부서버/승인프로세스) 각각 다른 아이콘으로 구성했습니다. 확인해 주세요!
+
+Checkpoint made
+Add visual flow diagrams to illustrate customer support scenarios
+Worked for 1 minute
+홈페이지 랜딩페이지 전체 페이지 공통 wrapper를 max-w-[1280px] w-full mx-auto px-4 sm:px-6 lg:px-10로 변경하고, 섹션 타이틀은 text-3xl lg:text-4xl, 카드 타이틀 lg:text-2xl, 설명 sm:text-base로 스케일업. 카드 이미지 영역은 h-56 sm:h-64로 고정. 레이아웃 구조/섹션 순서는 그대로 유지.
+“전체 컨테이너 폭을 1280px로”
+
+“섹션 타이틀/본문 폰트 스케일 업”
+
+“카드 이미지 영역 높이 64로 고정”
+
+“그 외 레이아웃 구조는 유지
+
+홈페이지 전체 컨테이너 폭을 1280px로, 섹션 타이틀을 text-3xl lg:text-4xl로, 카드 타이틀을 lg:text-2xl로, 설명을 sm:text-base로, 카드 이미지 영역을 h-56 sm:h-64로 업데이트했습니다. 확인해 주세요!
+
+Checkpoint made
+Update homepage layout and text scaling for improved visual presentation
+Worked for 2 minutes
+설명 폰트 P로 되어있는 폰트 크기들을 전부 18PX로 바꿔줘
+
+홈페이지의 모든 설명(p 태그) 폰트 크기를 18px로 변경했습니다. 확인해 주세요!
+
+Checkpoint made
+Update homepage text elements to use a consistent font size
+Worked for 1 minute
+Checkpoint made
+•
+Free
+Visual edit
+Checkpoint made
+•
+Free
+Visual edit
+Checkpoint made
+•
+Free
+Visual edit
+Checkpoint made
+•
+Free
+Visual edit
+Checkpoint made
+•
+Free
+Visual edit
+Checkpoint made
+•
+Free
+Visual edit
+Checkpoint made
+•
+Free
+Visual edit
+Checkpoint made
+•
+Free
+Visual edit
+Checkpoint made
+•
+Free
+Visual edit
+모든 설명 폰트 색상을 #666 로 변경해주고 설명폰트는 전부 REGULAR로 18PX로 변경해줘
+
+배경이 흰색에 있는 P로 되어있는 설명 폰트 스타일들은 #666 로 변경해주고 설명폰트는 전부 REGULAR로 18PX로 변경해줘
+어두운 배경위에 있는 밝은계열의 폰트들은 색상 변경하지마.
+
+흰색 배경 위의 모든 설명 폰트를 #666 색상, Regular, 18px로 변경했습니다. 어두운 배경(보안 섹션 등)의 밝은 폰트는 그대로 유지했어요. 확인해 주세요!
+
+Checkpoint made
+Update homepage description text styles for better readability
+Worked for 1 minute
+다른 페이지에도 있는 모든 섹션에있는 제목들 H2로 되어있는 제목들은 전부 이 스타일로 동일하게 맞춰줘
+
+다른 페이지에도 있는 모든 섹션에있는 제목들 H2로 되어있는 제목들은 전부 색상은 #333 에 크기는 40PX BOLD 로 맞춰줘
