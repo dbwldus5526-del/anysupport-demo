@@ -300,7 +300,7 @@ export function Home() {
       <section className="py-24 bg-white pt-[154px] pb-[154px]">
         <div className="max-w-[1280px] w-full mx-auto px-4 sm:px-6 lg:px-10">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+            <h2 className="lg:text-4xl font-bold mb-4 text-[40px] text-[#333]">
               환경과 기기에 제한 없는 원격지원
             </h2>
             <p className="text-[#666] max-w-2xl mx-auto text-[18px]">
