@@ -95,7 +95,7 @@ export default function Solution() {
             <p className="text-primary font-bold text-base sm:text-lg mb-2">
               현장 방문 없이 온라인으로 문제를 즉각 해결하는 기술
             </p>
-            <p className="max-w-2xl mx-auto sm:text-base text-[18px] text-[#666] font-normal">
+            <p className="max-w-2xl mx-auto sm:text-base font-normal text-[18px] text-[#666]">
               애니서포트는 상담원이 고객의 PC나 모바일 화면을 공유받아
               <br className="hidden md:block" />
               직접 제어함으로써 장애를 진단하고 해결하는 기업용 전문
