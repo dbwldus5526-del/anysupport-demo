@@ -600,7 +600,7 @@ export default function Cases() {
                       <Users size={18} className="text-blue-600" />
                       지원 대상
                     </h4>
-                    <div className="space-y-2 text-sm text-blue-700">
+                    <div className="space-y-2 text-blue-700 text-[18px]">
                       <div className="flex items-center gap-2 text-[18px]">
                         <Headphones size={14} />
                         <strong>누가:</strong> 상담원/운영자
