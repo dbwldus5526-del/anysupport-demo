@@ -338,7 +338,7 @@ export function Header() {
         <div className="hidden md:flex items-center gap-3 shrink-0">
           <Button
             variant="ghost"
-            className="font-semibold text-foreground/70 text-[16px]"
+            className="font-semibold text-foreground/70 text-[18px]"
           >
             로그인
           </Button>
