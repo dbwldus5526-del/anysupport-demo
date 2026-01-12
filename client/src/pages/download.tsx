@@ -1,5 +1,6 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Download as DownloadIcon, Monitor, Apple, Smartphone, Globe, MessageSquare, User, Play, Settings, FileText, Video, BookOpen, ClipboardList, Wrench } from "lucide-react";
+import { Download as DownloadIcon, Monitor, Apple, Smartphone, Globe, MessageSquare, User, Play, Settings, FileText, Video, BookOpen, ClipboardList, Wrench, ChevronDown, ChevronUp } from "lucide-react";
 import downloadHeroImg from "@assets/generated_images/modern_abstract_blue_gradient_background_for_download_page_hero_section.png";
 import googlePlayLogo from "@assets/image-removebg-preview_(20)_1768199099339.png";
 import appStoreLogo from "@assets/image-removebg-preview_(21)_1768199186426.png";
@@ -8,6 +9,8 @@ import googlePlayFullLogo from "@assets/image_1768199304085.png";
 import appStoreFullLogo from "@assets/image-removebg-preview_(23)_1768199353224.png";
 
 export default function Download() {
+  const [diagnosticOpen, setDiagnosticOpen] = useState(false);
+  
   return (
     <div className="flex flex-col min-h-screen bg-slate-50/50">
       {/* Hero Header Section */}
@@ -107,10 +110,41 @@ export default function Download() {
                       <ClipboardList size={16} className="text-[#0066b3]" />
                       애니서포트 사용신청서
                     </Button>
-                    <Button variant="ghost" className="w-full justify-start hover:bg-[#0066b3]/10 text-[15px] gap-2 text-[#0066b3]">
-                      <Wrench size={16} className="text-[#0066b3]" />
-                      애니서포트 시스템 진단 툴 (Windows 용)
-                    </Button>
+                    <div>
+                      <Button 
+                        variant="ghost" 
+                        className="w-full justify-between hover:bg-[#0066b3]/10 text-[15px] gap-2 text-[#0066b3]"
+                        onClick={() => setDiagnosticOpen(!diagnosticOpen)}
+                      >
+                        <div className="flex items-center gap-2">
+                          <Wrench size={16} className="text-[#0066b3]" />
+                          애니서포트 시스템 진단 툴 (Windows 용)
+                        </div>
+                        {diagnosticOpen ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+                      </Button>
+                      {diagnosticOpen && (
+                        <div className="mt-2 ml-6 p-4 bg-white rounded-lg border border-slate-200">
+                          <p className="text-[#666] text-[14px] mb-4">
+                            애니서포트 사용환경을 진단하고 로그 수집을 통해 분석하여 문제를 파악할 수 있습니다.<br />
+                            접속불가 등 문제 발생 시 상담원의 가이드에 따라 아래 링크에서 다운로드 받은 후 실행하여 주시기 바랍니다.
+                          </p>
+                          <div className="space-y-2">
+                            <a href="/attached_assets/AnySupport_Checker_1768200447102.exe" download="AnySupport_Checker.exe">
+                              <Button variant="outline" className="w-full justify-start text-[14px] gap-2 text-[#0066b3] border-slate-200 hover:border-[#0066b3]">
+                                <DownloadIcon size={14} className="text-[#0066b3]" />
+                                애니서포트 시스템 진단 툴 (EXE 버전)
+                              </Button>
+                            </a>
+                            <a href="/attached_assets/AnySupport_Checker_1768200447102.zip" download="AnySupport_Checker.zip">
+                              <Button variant="outline" className="w-full justify-start text-[14px] gap-2 text-[#0066b3] border-slate-200 hover:border-[#0066b3]">
+                                <DownloadIcon size={14} className="text-[#0066b3]" />
+                                애니서포트 시스템 진단 툴 (ZIP 버전 - EXE 다운로드 불가시)
+                              </Button>
+                            </a>
+                          </div>
+                        </div>
+                      )}
+                    </div>
                   </div>
                 </div>
               </div>
