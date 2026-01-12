@@ -302,7 +302,7 @@ export default function Notice() {
                         className="flex items-start gap-3 text-[#0066b3] hover:text-primary cursor-pointer"
                       >
                         <FileText size={16} className="shrink-0 mt-0.5 text-[#666]" />
-                        <span className="text-[15px] flex-1">{item.title}</span>
+                        <span className="text-[15px] flex-1 text-[#666]">{item.title}</span>
                         {item.date && (
                           <span className="text-[13px] text-[#999] shrink-0">{item.date}</span>
                         )}
