@@ -411,7 +411,7 @@ export default function Product() {
                     <div className="w-16 h-16 rounded-2xl bg-primary/5 flex items-center justify-center border border-primary/10 relative z-10 bg-white">
                       {item.icon}
                     </div>
-                    <div className="absolute -top-3 -right-3 text-slate-200 font-black text-4xl opacity-50 z-0">
+                    <div className="absolute -top-3 -right-3 font-black text-4xl opacity-50 z-0 text-[#999]">
                       {i + 1}
                     </div>
                   </div>
