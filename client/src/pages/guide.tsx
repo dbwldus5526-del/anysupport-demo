@@ -204,7 +204,7 @@ export default function Guide() {
                       <p className="text-lg md:text-xl font-bold text-slate-800 leading-snug">{step.summary}</p>
                     </div>
                   </div>
-                  <p className="text-slate-600 text-base md:text-lg font-medium leading-relaxed whitespace-pre-line">
+                  <p className="text-base md:text-lg leading-relaxed whitespace-pre-line text-[#666] font-normal">
                     {step.description}
                   </p>
                 </div>
