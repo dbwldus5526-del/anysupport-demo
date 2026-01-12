@@ -146,7 +146,7 @@ export default function Guide() {
 
         <div className="container mx-auto px-4 md:px-6 relative z-10 text-center">
           <h1 className="text-4xl md:text-6xl font-black text-white mb-6 leading-tight">사용 방법 안내입니다.</h1>
-          <p className="text-lg md:text-xl text-slate-300 font-medium max-w-4xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl font-medium max-w-4xl mx-auto leading-relaxed text-[#e1e9f0]">
             고객님의 애니서포트 사용에 감사드리며, 순차적으로 따라하시면 애니서포트를 쉽게 이용하실 수 있습니다.
           </p>
         </div>
