@@ -265,10 +265,12 @@ export default function Download() {
                 <div>
                   <h4 className="font-bold text-[#0066b3] mb-3 text-[16px]">매뉴얼</h4>
                   <div className="space-y-2 bg-[#f8fafc] rounded-xl p-4">
-                    <Button variant="ghost" className="w-full justify-start hover:bg-[#0066b3]/10 text-[15px] gap-2 text-[#0066b3]">
-                      <BookOpen size={16} className="text-[#0066b3]" />
-                      애니서포트 고객 매뉴얼
-                    </Button>
+                    <a href="/attached_assets/anysupport_customer_manual_v10_1768201272472.pdf" target="_blank" rel="noopener noreferrer">
+                      <Button variant="ghost" className="w-full justify-start hover:bg-[#0066b3]/10 text-[15px] gap-2 text-[#0066b3]">
+                        <BookOpen size={16} className="text-[#0066b3]" />
+                        애니서포트 고객 매뉴얼
+                      </Button>
+                    </a>
                   </div>
                 </div>
               </div>
