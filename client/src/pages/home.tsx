@@ -643,14 +643,25 @@ export function Home() {
                     고객이 안내받은 번호를 입력하면<br />
                     즉시 연결되어 지원을 시작할 수 있습니다.
                   </p>
-                  <Link href="/solution/guide">
-                    <Button 
-                      variant="ghost" 
-                      className="mt-3 text-primary font-bold hover:bg-primary/5 px-0"
-                    >
-                      애니서포트 매뉴얼 보기 <ArrowRight className="ml-1 w-4 h-4" />
-                    </Button>
-                  </Link>
+                  <div className="flex flex-wrap gap-2 mt-3">
+                    <a href="https://988.co.kr/" target="_blank" rel="noopener noreferrer">
+                      <Button 
+                        size="sm"
+                        variant="outline" 
+                        className="font-bold border-slate-300 text-[#333] hover:border-primary hover:text-primary"
+                      >
+                        고객접속페이지 바로가기
+                      </Button>
+                    </a>
+                    <Link href="/solution/guide">
+                      <Button 
+                        variant="ghost" 
+                        className="text-primary font-bold hover:bg-primary/5 px-0"
+                      >
+                        애니서포트 매뉴얼 보기 <ArrowRight className="ml-1 w-4 h-4" />
+                      </Button>
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
