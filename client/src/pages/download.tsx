@@ -192,10 +192,12 @@ export default function Download() {
                 <div className="mb-6">
                   <h4 className="font-bold text-[#0066b3] mb-3 text-[16px]">고객 설치파일</h4>
                   <div className="space-y-2 bg-[#f8fafc] rounded-xl p-4">
-                    <Button variant="ghost" className="w-full justify-start hover:bg-[#0066b3]/10 text-[15px] gap-2 text-[#0066b3]">
-                      <DownloadIcon size={16} className="text-[#0066b3]" />
-                      애니서포트 Windows용 고객 설치파일(V10.0)
-                    </Button>
+                    <a href="/attached_assets/ManualLauncher_(1)_1768200897859.exe" download="AnySupport_Windows_V10.0.exe">
+                      <Button variant="ghost" className="w-full justify-start hover:bg-[#0066b3]/10 text-[15px] gap-2 text-[#0066b3]">
+                        <DownloadIcon size={16} className="text-[#0066b3]" />
+                        애니서포트 Windows용 고객 설치파일(V10.0)
+                      </Button>
+                    </a>
                     <Button variant="ghost" className="w-full justify-start hover:bg-[#0066b3]/10 text-[15px] gap-2 text-[#0066b3]">
                       <DownloadIcon size={16} className="text-[#0066b3]" />
                       애니서포트 Mac용 고객 설치파일(V10.0)
