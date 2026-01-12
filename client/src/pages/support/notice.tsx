@@ -6,6 +6,8 @@ interface NoticeItem {
   title: string;
   date?: string;
   modalContent?: string;
+  modalImage?: string;
+  modalImageLink?: string;
 }
 
 interface NoticeCategory {
@@ -239,7 +241,30 @@ const noticeCategories: NoticeCategory[] = [
     title: "바우처 사업",
     count: 1,
     items: [
-      { title: "코이노, 2024년 클라우드서비스 바우처 공급기업 선정", date: "2024/04/10" },
+      { 
+        title: "코이노, 2024년 클라우드서비스 바우처 공급기업 선정", 
+        date: "2024/04/10",
+        modalImage: "/attached_assets/0v9OyY_snR3S0Hg35wAM6xRJEOYhIzX9ZA_1768203636437.png",
+        modalImageLink: "https://docs.google.com/forms/d/16_mcDh2SKhMm_cWKmXlmQJbK1mDA61X8shyq1Vi0oUs/viewform?edit_requested=true",
+        modalContent: `코이노가 3년 연속으로 '클라우드서비스 바우처 공급기업'으로 선정 됐다.
+
+이 사업은 과학기술정보통신부와 정보통신산업진흥원이 주관하는 바우처 사업으로
+국내 클라우드 시장의 활성화와 중소기업의 경쟁력 강화를 목적으로 하는 사업으로 이번에 코이노가 공급기업으로 선정됨에 따라 중소기업에 
+'애니서포트', '피씨애니프로', '링크미마인'을 제공할 수 있다.
+
+2023년도에는 '애니서포트'와 '피씨애니프로'를 도입한 '이디비 주식회사가' 클라우드서비스 우수도입 기업으로 선정되어 우수사례집에 실리기도 하였다.
+
+수요기업으로 선정된 중소기업은 일반지원은 최대 1,550만원, 집중지원은 5,000만원까지 지원되며 정부 지원금액은
+80%까지 지원이 되어 수요기업(중소기업)은 20%만 부담하여 코이노 제품을 도입할 수 있다.
+
+수요기업(중소기업)모집은 4월5일까지 이며 코이노에서는 수요기업 지원기업에 대한 상담을 받고 있습니다.
+
+[상담신청 바로가기]
+
+1. 애니서포트 홈페이지 배너에서 상담신청
+
+2. 상담신청 바로가기` 
+      },
     ],
   },
   {
@@ -257,6 +282,8 @@ export default function Notice() {
   const [modalOpen, setModalOpen] = useState(false);
   const [modalTitle, setModalTitle] = useState("");
   const [modalContent, setModalContent] = useState("");
+  const [modalImage, setModalImage] = useState("");
+  const [modalImageLink, setModalImageLink] = useState("");
 
   const toggleCategory = (index: number) => {
     setOpenCategories(prev => 
@@ -266,9 +293,11 @@ export default function Notice() {
     );
   };
 
-  const openModalWithContent = (title: string, content: string) => {
+  const openModalWithContent = (title: string, content: string, image?: string, imageLink?: string) => {
     setModalTitle(title);
     setModalContent(content);
+    setModalImage(image || "");
+    setModalImageLink(imageLink || "");
     setModalOpen(true);
   };
 
@@ -276,6 +305,8 @@ export default function Notice() {
     setModalOpen(false);
     setModalTitle("");
     setModalContent("");
+    setModalImage("");
+    setModalImageLink("");
   };
 
   return (
@@ -317,7 +348,7 @@ export default function Notice() {
                     {category.items.map((item, itemIndex) => (
                       <div
                         key={itemIndex}
-                        onClick={() => item.modalContent && openModalWithContent(item.title, item.modalContent)}
+                        onClick={() => item.modalContent && openModalWithContent(item.title, item.modalContent, item.modalImage, item.modalImageLink)}
                         className="flex items-start gap-3 text-[#0066b3] hover:text-primary cursor-pointer"
                       >
                         <FileText size={16} className="shrink-0 mt-0.5 text-[#666]" />
@@ -347,6 +378,25 @@ export default function Notice() {
               </button>
             </div>
             <div className="p-6 overflow-y-auto flex-1">
+              {modalImage && (
+                <div className="mb-6">
+                  {modalImageLink ? (
+                    <a href={modalImageLink} target="_blank" rel="noopener noreferrer">
+                      <img 
+                        src={modalImage} 
+                        alt={modalTitle}
+                        className="w-full rounded-lg cursor-pointer hover:opacity-90 transition-opacity"
+                      />
+                    </a>
+                  ) : (
+                    <img 
+                      src={modalImage} 
+                      alt={modalTitle}
+                      className="w-full rounded-lg"
+                    />
+                  )}
+                </div>
+              )}
               <pre className="whitespace-pre-wrap text-[14px] text-[#333] font-sans leading-relaxed">
                 {modalContent}
               </pre>
