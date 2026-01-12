@@ -252,10 +252,12 @@ export default function Download() {
                       <DownloadIcon size={16} className="text-[#0066b3]" />
                       애니서포트 비디오 설치파일(iOS)
                     </Button>
-                    <Button variant="ghost" className="w-full justify-start hover:bg-[#0066b3]/10 text-[15px] gap-2 text-[#0066b3]">
-                      <BookOpen size={16} className="text-[#0066b3]" />
-                      애니서포트 비디오 매뉴얼
-                    </Button>
+                    <a href="/attached_assets/anysupport_video_edition_manual_v10_1768201236064.pdf" target="_blank" rel="noopener noreferrer">
+                      <Button variant="ghost" className="w-full justify-start hover:bg-[#0066b3]/10 text-[15px] gap-2 text-[#0066b3]">
+                        <BookOpen size={16} className="text-[#0066b3]" />
+                        애니서포트 비디오 매뉴얼
+                      </Button>
+                    </a>
                   </div>
                 </div>
 
