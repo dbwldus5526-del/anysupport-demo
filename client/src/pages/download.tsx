@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Download as DownloadIcon, Monitor, Apple, Smartphone, Globe, MessageSquare, User, Play, Settings } from "lucide-react";
 import downloadHeroImg from "@assets/generated_images/modern_abstract_blue_gradient_background_for_download_page_hero_section.png";
-import googlePlayLogo from "@assets/Google_Play_logo_1768198876507.png";
+import googlePlayLogo from "@assets/image-removebg-preview_(20)_1768199099339.png";
 
 export default function Download() {
   return (
