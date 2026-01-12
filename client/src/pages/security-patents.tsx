@@ -190,7 +190,7 @@ export default function SecurityPatents() {
                   <div className="flex justify-center items-center mb-4">
                     <img src={samsungKnoxLogo} alt="Samsung Knox" className="h-16 w-auto object-contain" />
                   </div>
-                  <p className="text-[#666] text-sm">
+                  <p className="text-[#666] text-[16px]">
                     Knox SDK를 사용한 플랫폼 기반으로<br />
                     삼성 디바이스에 최적화된 보안성과<br />
                     Knox의 유용한 기능을 함께 제공
