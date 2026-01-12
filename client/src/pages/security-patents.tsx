@@ -243,11 +243,11 @@ export default function SecurityPatents() {
                 <div className="space-y-3 mt-6">
                   <div className="flex items-center gap-3 p-3 bg-slate-50 rounded-lg">
                     <CheckCircle2 size={18} className="text-green-500" />
-                    <span className="text-[#666]">글로벌 수준의 모바일 보안 적용</span>
+                    <span className="text-[#666] text-[18px]">글로벌 수준의 모바일 보안 적용</span>
                   </div>
                   <div className="flex items-center gap-3 p-3 bg-slate-50 rounded-lg">
                     <CheckCircle2 size={18} className="text-green-500" />
-                    <span className="text-[#666]">삼성 디바이스 전용 최적화</span>
+                    <span className="text-[#666] text-[18px]">삼성 디바이스 전용 최적화</span>
                   </div>
                   <div className="flex items-center gap-3 p-3 bg-slate-50 rounded-lg">
                     <CheckCircle2 size={18} className="text-green-500" />
