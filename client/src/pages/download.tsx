@@ -223,10 +223,12 @@ export default function Download() {
                         애니서포트 모바일 설치파일(Android)
                       </Button>
                     </a>
-                    <Button variant="ghost" className="w-full justify-start hover:bg-[#0066b3]/10 text-[15px] gap-2 text-[#0066b3]">
-                      <DownloadIcon size={16} className="text-[#0066b3]" />
-                      애니서포트 모바일 설치파일(iOS)
-                    </Button>
+                    <a href="https://apps.apple.com/us/app/%EB%AA%A8%EB%B0%94%EC%9D%BC%EC%A7%80%EC%9B%90/id993614818?l=ko" target="_blank" rel="noopener noreferrer">
+                      <Button variant="ghost" className="w-full justify-start hover:bg-[#0066b3]/10 text-[15px] gap-2 text-[#0066b3]">
+                        <DownloadIcon size={16} className="text-[#0066b3]" />
+                        애니서포트 모바일 설치파일(iOS)
+                      </Button>
+                    </a>
                     <Button variant="ghost" className="w-full justify-start hover:bg-[#0066b3]/10 text-[15px] gap-2 text-[#0066b3]">
                       <BookOpen size={16} className="text-[#0066b3]" />
                       애니서포트 모바일 매뉴얼
