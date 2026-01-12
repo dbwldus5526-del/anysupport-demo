@@ -619,7 +619,7 @@ export default function Cases() {
               </div>
 
               {/* Case Logos Grid */}
-              <div className="bg-white rounded-2xl border border-slate-200 p-8 text-[#333]">
+              <div className="rounded-2xl border border-slate-200 p-8 bg-[#f8fafc] text-[#333]">
                 <h3 className="text-lg font-bold mb-6 text-center">대표 사례</h3>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                   {currentScenario.cases.slice(0, 8).map((caseItem, i) => (
