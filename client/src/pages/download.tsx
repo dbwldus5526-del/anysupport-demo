@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Download as DownloadIcon, Monitor, Apple, Smartphone, Globe, MessageSquare, User, Play, Settings } from "lucide-react";
 import downloadHeroImg from "@assets/generated_images/modern_abstract_blue_gradient_background_for_download_page_hero_section.png";
+import googlePlayLogo from "@assets/Google_Play_logo_1768198876507.png";
 
 export default function Download() {
   return (
@@ -111,7 +112,7 @@ export default function Download() {
                     <a href="https://988.co.kr/" target="_blank" rel="noopener noreferrer">
                       <Button variant="outline" className="w-full justify-between border-slate-200 text-[#333] hover:border-primary text-[16px]">
                         <div className="flex items-center gap-2">
-                          <div className="w-5 h-5 bg-gradient-to-br from-green-400 via-blue-500 to-purple-600 rounded"></div>
+                          <img src={googlePlayLogo} alt="Google Play" className="h-5" />
                           Google Play
                         </div>
                         <DownloadIcon size={16} className="text-[#0066b3]" />
@@ -149,7 +150,7 @@ export default function Download() {
                     <div className="space-y-2">
                       <Button variant="outline" className="w-full justify-between border-slate-200 text-[#333] hover:border-primary text-[14px]">
                         <div className="flex items-center gap-2">
-                          <div className="w-4 h-4 bg-gradient-to-br from-green-400 via-blue-500 to-purple-600 rounded"></div>
+                          <img src={googlePlayLogo} alt="Google Play" className="h-4" />
                           Google Play
                         </div>
                         <DownloadIcon size={14} className="text-[#0066b3]" />
@@ -168,7 +169,7 @@ export default function Download() {
                     <div className="space-y-2">
                       <Button variant="outline" className="w-full justify-between border-slate-200 text-[#333] hover:border-primary text-[14px]">
                         <div className="flex items-center gap-2">
-                          <div className="w-4 h-4 bg-gradient-to-br from-green-400 via-blue-500 to-purple-600 rounded"></div>
+                          <img src={googlePlayLogo} alt="Google Play" className="h-4" />
                           Google Play
                         </div>
                         <DownloadIcon size={14} className="text-[#0066b3]" />
