@@ -576,7 +576,7 @@ export default function Cases() {
                         <span className="text-[10px] md:text-xs font-bold text-slate-700 text-center">
                           공급솔루션
                         </span>
-                        <span className="text-[10px] md:text-xs text-slate-400 text-center">
+                        <span className="md:text-xs text-center text-[18px] text-[#666]">
                           서비스 연계
                         </span>
                       </div>
