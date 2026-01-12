@@ -106,7 +106,7 @@ export default function Download() {
                 <div className="bg-white rounded-xl p-4">
                 {/* 웹브라우저 */}
                 <div className="mb-6">
-                  <h4 className="font-bold text-[#0066b3] mb-1 text-[18px]">웹브라우저</h4>
+                  <h4 className="font-bold mb-1 text-[18px] text-[#2563eb]">웹브라우저</h4>
                   <p className="text-[#666] text-[16px] mb-3">모바일 · 영상 지원 앱</p>
                   <div className="grid grid-cols-2 gap-3">
                     <a href="https://988.co.kr/" target="_blank" rel="noopener noreferrer">
