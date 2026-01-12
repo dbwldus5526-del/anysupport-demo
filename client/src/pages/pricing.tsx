@@ -181,7 +181,7 @@ export default function Pricing() {
           </div>
 
           <div className="text-center mt-16">
-            <p className="text-slate-500 font-bold mb-6">
+            <p className="text-slate-500 mb-6 font-normal text-[18px]">
               모든 플랜은 14일 무료 체험이 가능합니다. 신용카드 등록 없이 바로 시작하세요.
             </p>
             <Button 
