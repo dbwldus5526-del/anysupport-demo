@@ -288,7 +288,7 @@ export default function Pricing() {
                         </span>
                         <h3 className="text-xl font-black">{category.title}</h3>
                       </div>
-                      <p className="text-white/80 text-sm font-bold">{category.subtitle}</p>
+                      <p className="text-white/80 text-[18px] font-normal">{category.subtitle}</p>
                     </div>
                     <div className="grid-cols-4 gap-4 text-center min-w-[400px] hidden md:grid text-[19px] font-light">
                       {["BASIC", "PREMIUM", "MOBILE", "Video"].map((name) => (
