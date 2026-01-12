@@ -325,7 +325,7 @@ export default function Product() {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-slate-900 mb-1">강력한 관리자 기능</h3>
-                  <p className="text-slate-500 text-sm">대규모 조직 운영에 최적화</p>
+                  <p className="text-[16px] text-[#666]">대규모 조직 운영에 최적화</p>
                 </div>
               </div>
               <div className="space-y-3">
