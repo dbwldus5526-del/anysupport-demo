@@ -85,7 +85,7 @@ export default function Product() {
 
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/20 text-primary border border-primary/30 mb-6">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/20 border border-primary/30 mb-6 text-[#ffffff]">
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
               <span className="text-[10px] md:text-xs font-bold tracking-wider uppercase">
                 Enterprise IT Support
