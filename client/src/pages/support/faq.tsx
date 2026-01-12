@@ -236,7 +236,7 @@ export default function FAQ() {
                 >
                   <div className="flex items-center gap-3">
                     <FolderOpen size={24} className="text-white/80" />
-                    <span className="text-[20px] font-bold">
+                    <span className="text-[20px] text-[#333] font-medium">
                       {category.title} ({category.count})
                     </span>
                   </div>
