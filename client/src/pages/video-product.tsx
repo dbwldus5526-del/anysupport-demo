@@ -268,7 +268,7 @@ export default function VideoProduct() {
                     <h3 className="text-xl font-bold mb-4 text-slate-900">
                       {item.title}
                     </h3>
-                    <p className="mb-6 text-[#666] text-[18px]">
+                    <p className="mb-6 text-[#666] text-[18px] min-h-[84px]">
                       {item.desc}
                     </p>
 
