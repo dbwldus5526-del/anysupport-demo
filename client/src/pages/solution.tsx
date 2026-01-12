@@ -118,7 +118,7 @@ export default function Solution() {
                   <div className="h-0.5 w-full bg-slate-200 relative">
                     <div className="absolute inset-0 bg-primary animate-pulse" />
                   </div>
-                  <span className="font-bold text-primary mt-3 uppercase tracking-widest text-[14px] text-center">
+                  <span className="text-primary uppercase tracking-widest text-center text-[18px] font-extrabold mt-[3px] mb-[3px]">
                     Secure Connection
                   </span>
                 </div>
