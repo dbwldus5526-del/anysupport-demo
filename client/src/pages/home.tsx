@@ -33,6 +33,7 @@ import videoSupportImg from "@assets/uibg-video_new_1767775875384.png";
 import customerImg from "@assets/uibg-customer_new_1767776369054.png";
 import companyLogos from "@assets/기업로고new_1767749031414.png";
 import sessionImg from "@assets/상담원프로그램._1767776278541.png";
+import connectionProcessImg from "@assets/img-ic-agent-03_-_복사본_1768197714194.png";
 import { Link, useLocation } from "wouter";
 
 function Counter({
@@ -574,6 +575,90 @@ export function Home() {
                 사용 방법 자세히 보기 <ArrowRight className="ml-2 w-4 h-4" />
               </Button>
             </Link>
+          </div>
+        </div>
+      </section>
+      {/* 6.5 원격지원 연결 과정 상세 */}
+      <section className="py-24 bg-[#f8fafc]">
+        <div className="max-w-[1280px] w-full mx-auto px-4 sm:px-6 lg:px-10">
+          <div className="text-center mb-16">
+            <h2 className="lg:text-4xl font-bold mb-4 text-[#333] text-[40px]">
+              애니서포트 원격지원, 단 10초면 연결 가능!
+            </h2>
+          </div>
+          <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+            <div className="flex justify-center">
+              <img 
+                src={connectionProcessImg} 
+                alt="원격지원 연결 화면" 
+                className="max-w-full rounded-2xl shadow-lg"
+              />
+            </div>
+            <div className="space-y-8">
+              <div className="flex items-start gap-4">
+                <div className="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold shrink-0">
+                  1
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-[#333] mb-2">접속 준비</h3>
+                  <p className="text-[#666] text-[18px]">
+                    PC에서 에이전트 실행 후 로그인하거나<br />
+                    PC·모바일에서 웹브라우저로 접속해 로그인하세요.
+                  </p>
+                  <Button 
+                    size="sm" 
+                    variant="outline" 
+                    onClick={openModal}
+                    className="mt-3 font-bold border-slate-300 text-[#333] hover:border-primary hover:text-primary"
+                  >
+                    원격지원 바로시작
+                  </Button>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <div className="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold shrink-0">
+                  2
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-[#333] mb-2">접속번호 생성</h3>
+                  <p className="text-[#666] text-[18px]">
+                    [원격지원 시작하기] 클릭하면<br />
+                    접속번호와 URL이 자동 생성됩니다.
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <div className="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold shrink-0">
+                  3
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-[#333] mb-2">원격지원 연결</h3>
+                  <p className="text-[#666] text-[18px]">
+                    고객이 안내받은 번호를 입력하면<br />
+                    즉시 연결되어 지원을 시작할 수 있습니다.
+                  </p>
+                  <Link href="/solution/guide">
+                    <Button 
+                      variant="ghost" 
+                      className="mt-3 text-primary font-bold hover:bg-primary/5 px-0"
+                    >
+                      애니서포트 매뉴얼 보기 <ArrowRight className="ml-1 w-4 h-4" />
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="text-center mt-16">
+            <Button 
+              size="lg" 
+              onClick={openModal}
+              className="h-14 px-10 text-lg font-bold shadow-xl shadow-primary/20"
+            >
+              <Clock className="mr-2 w-5 h-5" />
+              애니서포트, 14일간 제한 없이 써보세요
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Button>
           </div>
         </div>
       </section>
