@@ -252,7 +252,7 @@ export default function Security() {
                           </div>
                           <span className="font-bold text-lg text-white/90">{item.cardTitle}</span>
                         </div>
-                        <p className="text-sm text-slate-400 leading-relaxed">
+                        <p className="text-[#fafafa] font-normal text-[18px]">
                           {item.desc}
                         </p>
                       </div>
