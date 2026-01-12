@@ -297,7 +297,7 @@ export default function Product() {
                   <ShieldCheck size={20} className="text-primary shrink-0" />
                   <div>
                     <div className="font-bold text-[18px]">ISO/IEC 27001 국제 인증</div>
-                    <div className="text-slate-400 text-[14px]">정보보안 관리체계 국제 표준</div>
+                    <div className="text-slate-400 text-[16px]">정보보안 관리체계 국제 표준</div>
                   </div>
                 </div>
                 <div className="flex items-center gap-3 bg-white/5 rounded-xl p-4 border border-white/10">
