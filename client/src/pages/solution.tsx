@@ -259,7 +259,7 @@ export default function Solution() {
                   key={i}
                   className="flex gap-4 p-4 rounded-xl border border-slate-50 hover:bg-slate-50 transition-colors pt-[11px] pb-[11px]"
                 >
-                  <span className="font-black text-primary/30 text-[27px]">
+                  <span className="font-black text-primary/30 text-[30px]">
                     {item.step}
                   </span>
                   <div>
