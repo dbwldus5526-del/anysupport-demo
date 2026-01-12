@@ -228,7 +228,7 @@ export default function Guide() {
       {/* User Manual Download Section */}
       <section className="py-24 bg-slate-50/50">
         <div className="container mx-auto px-4 md:px-6 text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-4">상세 사용자 매뉴얼</h2>
+          <h2 className="text-3xl md:text-4xl mb-4 font-bold text-[#333]">상세 사용자 매뉴얼</h2>
           <p className="text-[18px] font-normal text-[#666]">필요한 매뉴얼을 다운받아 확인하세요.</p>
         </div>
         <div className="container mx-auto px-4 md:px-6">
