@@ -33,7 +33,7 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <h4 className="font-bold mb-6">회사</h4>
+            <h4 className="mb-6 font-medium text-[#666]">회사</h4>
             <ul className="space-y-4 text-sm text-slate-500">
               <li><Link href="/about">회사소개</Link></li>
               <li><Link href="/careers">인재채용</Link></li>
