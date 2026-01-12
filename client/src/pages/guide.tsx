@@ -151,7 +151,6 @@ export default function Guide() {
           </p>
         </div>
       </section>
-
       {/* 6-Step Usage Guide Section (Quick Overview) */}
       <section className="py-24 border-b border-slate-100 bg-white">
         <div className="container mx-auto px-4 md:px-6">
@@ -179,7 +178,7 @@ export default function Guide() {
                   </div>
                 </div>
 
-                <h3 className="text-slate-900 font-black text-sm text-center leading-tight whitespace-pre-wrap max-w-[120px]">
+                <h3 className="text-center whitespace-pre-wrap max-w-[120px] text-[#666] font-normal text-[18px]">
                   {step.title}
                 </h3>
               </div>
@@ -187,7 +186,6 @@ export default function Guide() {
           </div>
         </div>
       </section>
-
       {/* Detailed Step-by-Step Section */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
@@ -227,7 +225,6 @@ export default function Guide() {
           </div>
         </div>
       </section>
-
       {/* User Manual Download Section */}
       <section className="py-24 bg-slate-50/50">
         <div className="container mx-auto px-4 md:px-6 text-center mb-16">
@@ -270,7 +267,6 @@ export default function Guide() {
           </div>
         </div>
       </section>
-
       {/* Contact Section */}
       <section className="py-20 bg-white border-t border-slate-100">
         <div className="container mx-auto px-4 text-center">
