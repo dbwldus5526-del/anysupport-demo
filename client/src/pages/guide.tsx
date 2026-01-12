@@ -194,7 +194,7 @@ export default function Guide() {
               <div key={i} className="flex flex-col lg:items-center gap-12 lg:gap-20 lg:flex-row mt-[45px] mb-[45px]">
                 {/* Text Content */}
                 <div className="flex-1">
-                  <div className="inline-block px-3 py-1 bg-slate-800 text-white font-bold rounded mb-6 text-[18px]">
+                  <div className="inline-block px-3 py-1 text-white font-bold rounded mb-6 text-[18px] bg-[#3080ff]">
                     {step.target}
                   </div>
                   <div className="flex items-start gap-8 border-b border-slate-100 pb-8 mb-8">
