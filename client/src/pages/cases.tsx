@@ -398,7 +398,11 @@ export default function Cases() {
               <button
                 key={scenario.id}
                 onClick={() => setActiveScenario(scenario.id)}
-                className="px-6 py-3 rounded-full font-bold transition-all duration-300 border bg-white text-slate-600 border-slate-200 hover:border-primary hover:text-primary text-[18px]"
+                className={`px-6 py-3 rounded-full font-bold transition-all duration-300 border text-[18px] ${
+                  activeScenario === scenario.id
+                    ? "bg-primary text-white border-primary"
+                    : "bg-white text-slate-600 border-slate-200 hover:border-primary hover:text-primary"
+                }`}
               >
                 {scenario.id === "internet" && (
                   <Globe className="inline mr-2 w-4 h-4" />
@@ -539,7 +543,7 @@ export default function Cases() {
                               <Monitor size={16} className="text-sky-400" />
                             </div>
                           </div>
-                          <span className="text-xs font-bold text-slate-600 mt-1">
+                          <span className="font-bold mt-1 text-[#333] text-[18px]">
                             상담원
                           </span>
                         </div>
