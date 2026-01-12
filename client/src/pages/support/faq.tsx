@@ -73,7 +73,6 @@ export default function FAQ() {
           </p>
         </div>
       </section>
-
       <section className="py-16">
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -84,7 +83,7 @@ export default function FAQ() {
               >
                 <button
                   onClick={() => toggleCategory(index)}
-                  className="w-full bg-[#0b2a6b] text-white p-6 flex items-center justify-between"
+                  className="w-full text-white p-6 flex items-center justify-between bg-[#275ab0] text-[18px] font-light"
                 >
                   <div className="flex items-center gap-3">
                     <FolderOpen size={24} className="text-white/80" />
