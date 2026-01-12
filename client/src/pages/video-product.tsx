@@ -169,7 +169,7 @@ export default function VideoProduct() {
             <h2 className="text-[25px] md:text-4xl font-bold mb-4 text-slate-900">
               [Video Edition만의 특별한 기능]
             </h2>
-            <p className="text-slate-500 text-[14px] md:text-lg max-w-2xl mx-auto">
+            <p className="text-[14px] md:text-lg max-w-2xl mx-auto text-[#666]">
               영상 기반 원격지원을 더욱 풍성하게 만드는 전문 기능들
             </p>
           </div>
