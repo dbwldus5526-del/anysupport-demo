@@ -475,28 +475,28 @@ export default function Cases() {
                     <div className="flex justify-center gap-3 md:gap-6 mb-6">
                       <div className="flex flex-col items-center p-3 md:p-4 bg-white rounded-xl border border-slate-200 w-28 md:w-36">
                         <Globe size={28} className="text-blue-500 mb-2" />
-                        <span className="md:text-xs font-bold text-center text-[18px] text-[#333]">
+                        <span className="font-bold text-center text-[16px] text-[#333]">
                           홈페이지
                         </span>
-                        <span className="md:text-xs text-center text-[18px] text-[#666]">
+                        <span className="text-center text-[16px] text-[#666]">
                           이용문의
                         </span>
                       </div>
                       <div className="flex flex-col items-center p-3 md:p-4 bg-white rounded-xl border border-slate-200 w-28 md:w-36">
                         <Lock size={28} className="text-orange-500 mb-2" />
-                        <span className="md:text-xs font-bold text-center text-[18px] text-[#333]">
+                        <span className="font-bold text-center text-[16px] text-[#333]">
                           암호화모듈
                         </span>
-                        <span className="md:text-xs text-center text-[18px] text-[#666]">
+                        <span className="text-center text-[16px] text-[#666]">
                           PC보안/설치문의
                         </span>
                       </div>
                       <div className="flex flex-col items-center p-3 md:p-4 bg-white rounded-xl border border-slate-200 w-28 md:w-36">
                         <Laptop size={28} className="text-green-500 mb-2" />
-                        <span className="md:text-xs font-bold text-center text-[18px] text-[#333]">
+                        <span className="font-bold text-center text-[16px] text-[#333]">
                           서비스
                         </span>
-                        <span className="md:text-xs text-center text-[#666] text-[18px]">
+                        <span className="text-center text-[16px] text-[#666]">
                           이용문의
                         </span>
                       </div>
