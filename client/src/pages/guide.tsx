@@ -254,7 +254,7 @@ export default function Guide() {
                         onClick={openModal}
                         className="flex items-center justify-between p-5 bg-white rounded-2xl border border-slate-100 hover:border-primary hover:shadow-md transition-all group text-left"
                       >
-                        <span className="text-slate-700 font-bold text-sm leading-tight pr-4">
+                        <span className="pr-4 text-[#333] text-[18px] font-medium">
                           {item.name}
                         </span>
                         <Download className="text-slate-300 group-hover:text-primary transition-colors shrink-0" size={18} />
