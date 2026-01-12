@@ -227,7 +227,7 @@ export default function Solution() {
             <h2 className="text-[25px] md:text-4xl font-bold mb-4 text-[#333]">
               사용 방법
             </h2>
-            <p className="md:text-base text-[18px] text-[#666]">
+            <p className="md:text-base text-[#666] text-[18px]">
               누구나 바로 사용 가능한 간편한 프로세스
             </p>
           </div>
