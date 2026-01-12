@@ -124,7 +124,7 @@ export default function SecurityPatents() {
 
                   {/* 암호화 표준 */}
                   <div className="bg-red-50 border border-red-200 rounded-xl p-4">
-                    <p className="text-red-700 font-bold text-sm mb-1">
+                    <p className="text-red-700 font-bold mb-1 text-[16px]">
                       국제 암호화 표준 AES 256bit 알고리즘
                     </p>
                     <p className="text-red-600 text-sm">
