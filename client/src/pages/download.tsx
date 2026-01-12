@@ -37,7 +37,7 @@ export default function Download() {
             <div className="grid md:grid-cols-2 gap-8">
               
               {/* 지원하는 측 (상담사) */}
-              <div className="rounded-2xl bg-gradient-to-br from-[#e8f4fc] to-[#d0e8f7] p-8 border border-[#b8daf0]">
+              <div className="rounded-2xl from-[#e8f4fc] to-[#d0e8f7] p-8 border border-[#b8daf0] bg-[#ffffff]">
                 <div className="flex items-center gap-3 mb-2">
                   <h3 className="font-bold text-[32px] text-[#333]">지원하는 측 (상담사)</h3>
                   <MessageSquare className="text-[#0066b3]" size={24} />
