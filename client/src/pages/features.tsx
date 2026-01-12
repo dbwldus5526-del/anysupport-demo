@@ -144,7 +144,6 @@ export default function Features() {
           </div>
         </div>
       </section>
-
       {/* 1. Category Accordion Section */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6 text-center mb-16">
@@ -166,7 +165,7 @@ export default function Features() {
                     </div>
                     <div className="text-left">
                       <h2 className="text-xl md:text-2xl font-black text-slate-900">{group.title}</h2>
-                      <p className="text-slate-500 font-bold text-xs md:text-sm mt-1 md:whitespace-nowrap">{group.summary}</p>
+                      <p className="md:text-sm mt-1 md:whitespace-nowrap font-normal text-[#666] text-[18px]">{group.summary}</p>
                     </div>
                   </div>
                   
@@ -210,7 +209,6 @@ export default function Features() {
           </div>
         </div>
       </section>
-
       {/* 2. Core Features Summary - 4x2 Grid */}
       <section className="py-24 bg-slate-50 border-y border-slate-100">
         <div className="container mx-auto px-4 md:px-6 text-center mb-16">
@@ -245,7 +243,6 @@ export default function Features() {
           </div>
         </div>
       </section>
-
       {/* 3. Advanced Features Section - 4x2 Grid */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
@@ -280,7 +277,6 @@ export default function Features() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-24 bg-white text-center">
         <div className="container mx-auto px-4">
