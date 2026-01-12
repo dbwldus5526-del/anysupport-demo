@@ -594,10 +594,13 @@ export function Home() {
                 className="max-w-full rounded-2xl shadow-lg"
               />
             </div>
-            <div className="space-y-8">
+            <div className="space-y-0">
               <div className="flex items-start gap-4">
-                <div className="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold shrink-0">
-                  1
+                <div className="flex flex-col items-center">
+                  <div className="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold shrink-0">
+                    1
+                  </div>
+                  <div className="w-px h-20 bg-slate-300 mt-2"></div>
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-[#333] mb-2">접속 준비</h3>
@@ -616,8 +619,11 @@ export function Home() {
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <div className="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold shrink-0">
-                  2
+                <div className="flex flex-col items-center">
+                  <div className="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold shrink-0">
+                    2
+                  </div>
+                  <div className="w-px h-16 bg-slate-300 mt-2"></div>
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-[#333] mb-2">접속번호 생성</h3>
@@ -628,8 +634,10 @@ export function Home() {
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <div className="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold shrink-0">
-                  3
+                <div className="flex flex-col items-center">
+                  <div className="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold shrink-0">
+                    3
+                  </div>
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-[#333] mb-2">원격지원 연결</h3>
