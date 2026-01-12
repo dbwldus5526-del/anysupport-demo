@@ -644,7 +644,7 @@ export default function Cases() {
                               <div className="font-bold text-amber-800 text-[18px]">
                                 외부 IT협력업체
                               </div>
-                              <div className="text-xs text-amber-600">
+                              <div className="text-amber-600 text-[18px]">
                                 유지보수 엔지니어
                               </div>
                             </div>
