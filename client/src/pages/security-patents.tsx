@@ -305,7 +305,7 @@ export default function SecurityPatents() {
                     <Lock size={28} className="text-green-600" />
                   </div>
                   <div className="font-bold text-[#333] mb-1">256bit 암호화</div>
-                  <p className="text-sm text-[#666]">SSL 통신 적용</p>
+                  <p className="text-[#666] text-[16px]">SSL 통신 적용</p>
                 </motion.div>
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
@@ -317,7 +317,7 @@ export default function SecurityPatents() {
                     <Key size={28} className="text-purple-600" />
                   </div>
                   <div className="font-bold text-[#333] mb-1">일회용 인증</div>
-                  <p className="text-sm text-[#666]">세션별 고유 코드</p>
+                  <p className="text-[#666] text-[16px]">세션별 고유 코드</p>
                 </motion.div>
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
