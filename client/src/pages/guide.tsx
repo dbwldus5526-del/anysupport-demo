@@ -166,7 +166,7 @@ export default function Guide() {
                 
                 <div className="relative mb-6">
                   {/* Step Badge */}
-                  <div className="absolute -top-2 -left-2 bg-primary text-white text-[10px] font-black px-2 py-1 rounded-md z-30 shadow-lg">
+                  <div className="absolute -top-2 -left-2 text-white font-black px-2 py-1 rounded-md z-30 shadow-lg text-[15px] bg-[#2057d4]">
                     STEP {i + 1}
                   </div>
                   
