@@ -137,7 +137,7 @@ export default function Pricing() {
                 )}
                 
                 <div className="mb-10">
-                  <h3 className={`text-2xl font-black mb-3 ${plan.popular ? 'text-primary' : 'text-slate-900'}`}>{plan.title}</h3>
+                  <h3 className="font-black mb-3 text-[26px] text-[#333]">{plan.title}</h3>
                   <p className="min-h-[40px] font-normal text-[18px] text-[#666]">{plan.desc}</p>
                 </div>
 
