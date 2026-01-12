@@ -240,7 +240,7 @@ export default function Security() {
                     <div className="flex-grow">
                       <div className="flex flex-col sm:flex-row sm:items-center gap-3 mb-2">
                         <h4 className="text-xl font-bold text-white">{item.title}</h4>
-                        <span className="inline-block px-2 py-0.5 rounded bg-primary/20 font-bold text-[12px] text-[#96b3eb] whitespace-nowrap">
+                        <span className="inline-block px-2 py-0.5 rounded bg-primary/20 whitespace-nowrap text-[16px] font-medium text-[#bfd4ff]">
                           {item.subtitle}
                         </span>
                       </div>
