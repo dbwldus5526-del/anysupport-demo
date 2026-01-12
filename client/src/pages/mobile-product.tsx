@@ -88,7 +88,7 @@ export default function MobileProduct() {
               모바일 환경에서도<br />
               <span className="text-primary text-glow">정확하고 직관적인 지원</span>
             </h1>
-            <p className="text-[14px] md:text-xl text-slate-300 mb-10 max-w-2xl font-medium leading-relaxed">
+            <p className="text-[14px] md:text-xl text-slate-300 mb-10 max-w-2xl leading-relaxed font-normal">
               모바일 앱 사용 가이드부터 금융 상담까지, 비대면 고객 응대에 최적화된<br className="hidden md:block" />
               애니서포트 Mobile 원격지원을 경험해 보세요.
             </p>
