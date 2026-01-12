@@ -332,14 +332,14 @@ export default function Product() {
                 <div className="flex items-center gap-3 bg-slate-50 rounded-xl p-4 border border-slate-100">
                   <Users size={20} className="text-primary shrink-0" />
                   <div>
-                    <div className="font-bold text-sm text-slate-900">상담원별 권한 설정</div>
+                    <div className="font-bold text-slate-900 text-[18px]">상담원별 권한 설정</div>
                     <div className="text-[16px] text-[#666]">세분화된 접근 권한 관리</div>
                   </div>
                 </div>
                 <div className="flex items-center gap-3 bg-slate-50 rounded-xl p-4 border border-slate-100">
                   <FileText size={20} className="text-primary shrink-0" />
                   <div>
-                    <div className="font-bold text-sm text-slate-900">지원 내역 통계</div>
+                    <div className="font-bold text-slate-900 text-[18px]">지원 내역 통계</div>
                     <div className="text-[#666] text-[16px]">상세 리포트 및 엑셀 저장</div>
                   </div>
                 </div>
