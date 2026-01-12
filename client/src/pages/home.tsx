@@ -209,6 +209,7 @@ import UseCasesLogos from "@/components/sections/UseCasesLogos";
 export function Home() {
   const { openModal } = useModal();
   const [activeDevice, setActiveDevice] = useState("agent");
+  const [contactModalOpen, setContactModalOpen] = useState(false);
 
   const deviceViewItems = [
     {
@@ -434,7 +435,7 @@ export function Home() {
             ].map((item, i) => (
               <div
                 key={i}
-                className="bg-[#f7f8fc] p-6 rounded-xl border border-slate-300 flex flex-col items-center text-center gap-3 transition-colors"
+                className="p-6 rounded-xl border border-slate-300 flex flex-col items-center text-center gap-3 transition-colors bg-[#ffffff]"
               >
                 <div className="mb-2">
                   <DesignIcon type={item.type} />
@@ -823,16 +824,65 @@ export function Home() {
             <br />
             최고의 원격 지원 기술을 직접 경험해보세요.
           </p>
-          <Button
-            size="lg"
-            variant="secondary"
-            onClick={openModal}
-            className="h-16 px-12 text-xl font-bold bg-[#f7f8fc] text-primary hover:bg-slate-100 border border-slate-200"
-          >
-            무료체험 시작하기
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button
+              size="lg"
+              variant="secondary"
+              onClick={openModal}
+              className="h-16 px-12 text-xl font-bold bg-[#f7f8fc] text-primary hover:bg-slate-100 border border-slate-200"
+            >
+              무료체험 시작하기
+            </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              onClick={() => setContactModalOpen(true)}
+              className="h-16 px-12 text-xl font-bold bg-transparent text-white border-white hover:bg-white/10"
+            >
+              문의하기
+            </Button>
+          </div>
         </div>
       </section>
+
+      {/* Contact Modal */}
+      {contactModalOpen && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+          <div className="bg-white rounded-2xl p-8 max-w-md w-full mx-4 relative">
+            <button
+              onClick={() => setContactModalOpen(false)}
+              className="absolute top-4 right-4 text-slate-400 hover:text-slate-600 text-2xl font-bold"
+            >
+              ×
+            </button>
+            <h2 className="text-2xl font-bold text-[#333] mb-6">애니서포트 문의하기</h2>
+            <div className="space-y-4 text-[#666]">
+              <div className="flex items-start gap-3">
+                <span className="font-semibold text-[#333] min-w-[70px]">대표전화</span>
+                <span>02-839-7500</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="font-semibold text-[#333] min-w-[70px]">팩스</span>
+                <span>02-857-0054</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="font-semibold text-[#333] min-w-[70px]">Email</span>
+                <span>anysupport@koino.co.kr</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="font-semibold text-[#333] min-w-[70px]">주소</span>
+                <span>서울시 금천구 가산디지털2로 184 벽산디지털밸리2차 404호</span>
+              </div>
+            </div>
+            <Button
+              onClick={() => setContactModalOpen(false)}
+              className="w-full mt-8 h-12 font-bold"
+            >
+              닫기
+            </Button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
