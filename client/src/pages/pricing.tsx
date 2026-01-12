@@ -154,7 +154,7 @@ export default function Pricing() {
                   {plan.features.map((feature, idx) => (
                     <div key={idx} className="flex items-start gap-3">
                       <CheckCircle2 className="text-primary mt-1 shrink-0" size={18} />
-                      <span className="text-slate-600 text-[15px] font-bold leading-tight">{feature}</span>
+                      <span className="font-normal text-[18px] text-[#666]">{feature}</span>
                     </div>
                   ))}
                 </div>
