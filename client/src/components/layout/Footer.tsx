@@ -25,7 +25,7 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <h4 className="font-bold mb-6">고객지원</h4>
+            <h4 className="mb-6 text-[#666] font-medium">고객지원</h4>
             <ul className="space-y-4 text-sm text-slate-500">
               <li><Link href="/help">도움말</Link></li>
               <li><Link href="/notice">공지사항</Link></li>
