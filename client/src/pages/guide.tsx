@@ -201,7 +201,7 @@ export default function Guide() {
                     <span className="text-6xl md:text-8xl font-black text-slate-200 leading-none">{step.id}</span>
                     <div>
                       <h3 className="text-2xl md:text-3xl font-black text-slate-900 mb-2">{step.title}</h3>
-                      <p className="text-lg md:text-xl font-bold text-slate-800 leading-snug">{step.summary}</p>
+                      <p className="text-lg md:text-xl font-bold leading-snug text-[#666]">{step.summary}</p>
                     </div>
                   </div>
                   <p className="text-base md:text-lg leading-relaxed whitespace-pre-line text-[#666] font-normal">
