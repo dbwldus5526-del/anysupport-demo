@@ -49,48 +49,19 @@ export default function Download() {
                 
                 <div className="border-t border-[#b8daf0] pt-6"></div>
 
-                <div className="space-y-4 bg-white/50 rounded-xl p-4">
-                  {/* 통합 에이전트 */}
-                  <div className="bg-gradient-to-r from-[#0066b3]/20 to-[#0088cc]/10 rounded-xl p-5 border border-[#0066b3]/20">
-                    <div className="flex items-center gap-2 mb-2">
-                      <Monitor className="text-[#0066b3]" size={18} />
-                      <span className="font-bold text-[#0066b3] text-[18px]">통합 에이전트</span>
-                    </div>
-                    <p className="text-[#666] text-[16px] mb-4">상담사용 에이전트 설치 프로그램</p>
-                    <div className="flex justify-end">
-                      <Button variant="ghost" size="sm" className="text-[#0066b3] hover:bg-[#0066b3]/10">
-                        <DownloadIcon size={18} />
-                      </Button>
-                    </div>
-                  </div>
-
-                  {/* 녹화 영상 플레이어 */}
-                  <div className="bg-gradient-to-r from-[#0066b3]/20 to-[#0088cc]/10 rounded-xl p-5 border border-[#0066b3]/20">
-                    <div className="flex items-center gap-2 mb-2">
-                      <Play className="text-[#0066b3]" size={18} />
-                      <span className="font-bold text-[#0066b3] text-[18px]">녹화 영상 플레이어</span>
-                    </div>
-                    <p className="text-[#666] text-[16px] mb-4">녹화한 영상을 보기 위한 플레이어 설치 파일</p>
-                    <div className="flex justify-end">
-                      <Button variant="ghost" size="sm" className="text-[#0066b3] hover:bg-[#0066b3]/10">
-                        <DownloadIcon size={18} />
-                      </Button>
-                    </div>
-                  </div>
-
-                  {/* 원격지원 환경진단 툴 */}
-                  <div className="bg-gradient-to-r from-[#0066b3]/20 to-[#0088cc]/10 rounded-xl p-5 border border-[#0066b3]/20">
-                    <div className="flex items-center gap-2 mb-2">
-                      <Settings className="text-[#0066b3]" size={18} />
-                      <span className="font-bold text-[#0066b3] text-[18px]">원격지원 환경진단 툴</span>
-                    </div>
-                    <p className="text-[#666] text-[16px] mb-4">동작 환경 체크 및 로그 수집 프로그램</p>
-                    <div className="flex justify-end">
-                      <Button variant="ghost" size="sm" className="text-[#0066b3] hover:bg-[#0066b3]/10">
-                        <DownloadIcon size={18} />
-                      </Button>
-                    </div>
-                  </div>
+                <div className="space-y-3 bg-white/50 rounded-xl p-4">
+                  <Button variant="ghost" className="w-full justify-start text-[#0066b3] hover:bg-[#0066b3]/10 text-[16px] gap-2">
+                    <DownloadIcon size={18} />
+                    애니서포트 Windows용 상담원 프로그램(V10.0)
+                  </Button>
+                  <Button variant="ghost" className="w-full justify-start text-[#0066b3] hover:bg-[#0066b3]/10 text-[16px] gap-2">
+                    <DownloadIcon size={18} />
+                    애니서포트 Mac용 상담원 프로그램(V10.0)
+                  </Button>
+                  <Button variant="ghost" className="w-full justify-start text-[#0066b3] hover:bg-[#0066b3]/10 text-[16px] gap-2">
+                    <DownloadIcon size={18} />
+                    애니서포트 윈도우즈용 상담원 프로그램(V6.0)
+                  </Button>
                 </div>
               </div>
 
