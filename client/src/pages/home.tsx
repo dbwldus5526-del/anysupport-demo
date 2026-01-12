@@ -609,7 +609,7 @@ export function Home() {
               </div>
             </div>
             <Link href="/solution/security">
-              <Button size="lg" variant="outline" className="font-bold text-white hover:bg-white/10 border-0">
+              <Button size="lg" variant="outline" className="font-bold hover:bg-white/10 border-0 text-[18px] bg-[#ffffff00] text-[#b5b5b5]">
                 보안기술 자세히보기 <ArrowRight className="ml-2 w-4 h-4" />
               </Button>
             </Link>
