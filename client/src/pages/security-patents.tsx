@@ -293,7 +293,7 @@ export default function SecurityPatents() {
                     <Monitor size={28} className="text-blue-600" />
                   </div>
                   <div className="font-bold text-[#333] mb-1">화면 캡처</div>
-                  <p className="text-sm text-[#666]">실시간 압축 전송</p>
+                  <p className="text-[#666] text-[16px]">실시간 압축 전송</p>
                 </motion.div>
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
