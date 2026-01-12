@@ -304,14 +304,14 @@ export default function Product() {
                   <Award size={20} className="text-primary shrink-0" />
                   <div>
                     <div className="font-bold text-[18px]">GS인증 1등급</div>
-                    <div className="text-xs text-slate-400">국가정보보안 기본 지침 준수</div>
+                    <div className="text-slate-400 text-[16px]">국가정보보안 기본 지침 준수</div>
                   </div>
                 </div>
                 <div className="flex items-center gap-3 bg-white/5 rounded-xl p-4 border border-white/10">
                   <EyeOff size={20} className="text-primary shrink-0" />
                   <div>
                     <div className="font-bold text-[18px]">12건 보안 특허 보유</div>
-                    <div className="text-xs text-slate-400">화면 부분 차단 기술 등 독보적 보안</div>
+                    <div className="text-slate-400 text-[16px]">화면 부분 차단 기술 등 독보적 보안</div>
                   </div>
                 </div>
               </div>
