@@ -619,19 +619,6 @@ export default function Cases() {
                 {/* DMZ Scenario Flow */}
                 {currentScenario.id === "dmz" && (
                   <div className="py-6">
-                    {/* Purpose Banner */}
-                    <div className="flex justify-center mb-6">
-                      <div className="px-4 py-2 bg-slate-100 rounded-lg border border-slate-200">
-                        <span className="text-xs font-bold text-slate-500 mr-2">
-                          Purpose
-                        </span>
-                        <span className="text-[16px] text-[#333]">
-                          고객사 내부망 접속 승인프로세스를 통한 시스템 접근
-                          보안성 강화
-                        </span>
-                      </div>
-                    </div>
-
                     <div className="grid md:grid-cols-2 gap-6">
                       {/* Left: 외부 IT협력업체 */}
                       <div className="flex flex-col items-center">
