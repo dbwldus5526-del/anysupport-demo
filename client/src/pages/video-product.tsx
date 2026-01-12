@@ -133,7 +133,7 @@ export default function VideoProduct() {
                 ].map((item, i) => (
                   <li
                     key={i}
-                    className="flex items-center gap-3 text-slate-700 font-semibold"
+                    className="flex items-center gap-3 text-[18px] text-[#333] font-normal"
                   >
                     <CheckCircle2 className="text-primary shrink-0" size={24} />
                     {item}
