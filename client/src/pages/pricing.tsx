@@ -390,7 +390,7 @@ export default function Pricing() {
             ].map((item, i) => (
               <div key={i} className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition-shadow">
                 <button 
-                  className="w-full px-8 py-6 text-left flex items-center justify-between group"
+                  className="w-full px-8 py-6 text-left flex items-center justify-between group text-[#333]"
                   onClick={(e) => {
                     const content = e.currentTarget.nextElementSibling;
                     const icon = e.currentTarget.querySelector('.chevron');
