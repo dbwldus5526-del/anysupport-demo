@@ -107,9 +107,11 @@ export default function Download() {
                   다운로드가 어려운 환경에서도 웹 브라우저만 있으면<br />
                   상담사가 안내한 인증번호를 입력하여 즉시 원격지원을 받으실 수 있습니다.
                 </p>
-                <Button size="lg" className="bg-white text-[#001d4d] hover:bg-slate-100 px-8 h-14 rounded-xl gap-2 shadow-lg text-[18px] font-semibold">
-                  <Globe size={20} /> 웹에서 바로 원격지원 받기
-                </Button>
+                <a href="https://988.co.kr/" target="_blank" rel="noopener noreferrer">
+                  <Button size="lg" className="bg-white text-[#001d4d] hover:bg-slate-100 px-8 h-14 rounded-xl gap-2 shadow-lg text-[18px] font-semibold">
+                    <Globe size={20} /> 웹에서 바로 원격지원 받기
+                  </Button>
+                </a>
               </div>
             </div>
 
