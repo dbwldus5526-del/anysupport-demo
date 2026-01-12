@@ -194,7 +194,7 @@ export default function Guide() {
               <div key={i} className={`flex flex-col lg:items-center gap-12 lg:gap-20 ${i % 2 === 1 ? 'lg:flex-row-reverse' : 'lg:flex-row'}`}>
                 {/* Text Content */}
                 <div className="flex-1">
-                  <div className="inline-block px-3 py-1 bg-slate-800 text-white text-xs font-bold rounded mb-6">
+                  <div className="inline-block px-3 py-1 bg-slate-800 text-white font-bold rounded mb-6 text-[18px]">
                     {step.target}
                   </div>
                   <div className="flex items-start gap-8 border-b border-slate-100 pb-8 mb-8">
