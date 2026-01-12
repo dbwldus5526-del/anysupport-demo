@@ -41,236 +41,194 @@ export default function Download() {
             <div className="grid md:grid-cols-2 gap-8">
               
               {/* 지원하는 측 (상담사) */}
-              <div className="rounded-2xl p-8 border border-[#b8daf0] bg-white">
-                <div className="flex items-center gap-3 mb-2">
-                  <h3 className="font-bold text-[32px] text-[#333]">지원하는 측 (상담사)</h3>
-                  <MessageSquare className="text-[#0066b3]" size={24} />
+              <div className="rounded-2xl overflow-hidden shadow-lg shadow-blue-100/50">
+                {/* 헤더 영역 */}
+                <div className="bg-gradient-to-r from-[#4A9FD4] to-[#7EC8E3] p-6 relative">
+                  <h3 className="font-bold text-[24px] text-white">지원하는 측 (상담사)</h3>
+                  <p className="text-white/80 text-[14px] mt-1">
+                    전용 에이전트로 지원 시 필요한 설치 파일로,<br />
+                    Windows와 Mac에서 사용할 수 있습니다.
+                  </p>
+                  <MessageSquare className="absolute right-6 top-1/2 -translate-y-1/2 text-white/40" size={40} />
                 </div>
-                <p className="text-[#666] text-[16px] mb-6">
-                  전용 에이전트로 지원 시 필요한 설치 파일로,<br />
-                  Windows와 Mac에서 사용할 수 있습니다.
-                </p>
                 
-                <div className="border-t border-[#b8daf0] pt-6"></div>
-
-                {/* 상담원 프로그램 */}
-                <div className="mb-6">
-                  <h4 className="font-bold text-[#0066b3] mb-3 text-[16px]">상담원 프로그램</h4>
-                  <div className="space-y-2 bg-[#f8fafc] rounded-xl p-4">
-                    <a href="/attached_assets/AnySupport_Setup_10_(5)_1768199980822.exe" download="AnySupport_Setup_10.exe">
-                      <Button variant="ghost" className="w-full justify-start hover:bg-[#0066b3]/10 text-[15px] gap-2 text-[#0066b3]">
-                        <DownloadIcon size={16} className="text-[#0066b3]" />
-                        애니서포트 Windows용 상담원 프로그램(V10.0)
-                      </Button>
-                    </a>
-                    <a href="/attached_assets/AnySupport_installer_Mac_(1)_1768200133753.zip" download="AnySupport_Mac_Setup.zip">
-                      <Button variant="ghost" className="w-full justify-start hover:bg-[#0066b3]/10 text-[15px] gap-2 text-[#0066b3]">
-                        <DownloadIcon size={16} className="text-[#0066b3]" />
-                        애니서포트 Mac용 상담원 프로그램(V10.0)
-                      </Button>
-                    </a>
-                    <a href="/attached_assets/AnySupport_Setup_1768200189167.exe" download="AnySupport_Setup_V6.exe">
-                      <Button variant="ghost" className="w-full justify-start hover:bg-[#0066b3]/10 text-[15px] gap-2 text-[#0066b3]">
-                        <DownloadIcon size={16} className="text-[#0066b3]" />
-                        애니서포트 윈도우즈용 상담원 프로그램(V6.0)
-                      </Button>
-                    </a>
-                  </div>
-                </div>
-
-                {/* 매뉴얼 */}
-                <div className="mb-6">
-                  <h4 className="font-bold text-[#0066b3] mb-3 text-[16px]">매뉴얼</h4>
-                  <div className="space-y-2 bg-[#f8fafc] rounded-xl p-4">
-                    <a href="/attached_assets/anysupport_agent_manual_v10_(1)_1768200734361.pdf" target="_blank" rel="noopener noreferrer">
-                      <Button variant="ghost" className="w-full justify-start hover:bg-[#0066b3]/10 text-[15px] gap-2 text-[#0066b3]">
-                        <BookOpen size={16} className="text-[#0066b3]" />
-                        애니서포트 상담원 매뉴얼(Ver10.0)
-                      </Button>
-                    </a>
-                    <a href="/attached_assets/anysupport_admin_manual_v10_(1)_1768200769433.pdf" target="_blank" rel="noopener noreferrer">
-                      <Button variant="ghost" className="w-full justify-start hover:bg-[#0066b3]/10 text-[15px] gap-2 text-[#0066b3]">
-                        <BookOpen size={16} className="text-[#0066b3]" />
-                        애니서포트 관리자 매뉴얼
-                      </Button>
-                    </a>
-                    <a href="/attached_assets/agent_manual_Ver6.0_1768200845912.pdf" target="_blank" rel="noopener noreferrer">
-                      <Button variant="ghost" className="w-full justify-start hover:bg-[#0066b3]/10 text-[15px] gap-2 text-[#0066b3]">
-                        <BookOpen size={16} className="text-[#0066b3]" />
-                        애니서포트 상담원 매뉴얼(Ver6.0)
-                      </Button>
-                    </a>
-                  </div>
-                </div>
-
-                {/* 기타 */}
-                <div>
-                  <h4 className="font-bold text-[#0066b3] mb-3 text-[16px]">기타</h4>
-                  <div className="space-y-2 bg-[#f8fafc] rounded-xl p-4">
-                    <div>
-                      <Button 
-                        variant="ghost" 
-                        className="w-full justify-between hover:bg-[#0066b3]/10 text-[15px] gap-2 text-[#0066b3]"
-                        onClick={() => setApplicationOpen(!applicationOpen)}
-                      >
-                        <div className="flex items-center gap-2">
-                          <ClipboardList size={16} className="text-[#0066b3]" />
-                          애니서포트 사용신청서
-                        </div>
-                        {applicationOpen ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
-                      </Button>
-                      {applicationOpen && (
-                        <div className="mt-2 ml-6 space-y-2">
-                          <a href="/attached_assets/애니서포트_서비스_신청서(공통)_1768200560351.hwp" download="애니서포트_서비스_신청서.hwp">
-                            <Button variant="outline" className="w-full justify-start text-[14px] gap-2 text-[#0066b3] border-slate-200 hover:border-[#0066b3]">
-                              <DownloadIcon size={14} className="text-[#0066b3]" />
-                              애니서포트 사용신청서 (HWP)
-                            </Button>
-                          </a>
-                          <a href="/attached_assets/애니서포트_서비스_신청서(공통)_1768200560350.doc" download="애니서포트_서비스_신청서.doc">
-                            <Button variant="outline" className="w-full justify-start text-[14px] gap-2 text-[#0066b3] border-slate-200 hover:border-[#0066b3]">
-                              <DownloadIcon size={14} className="text-[#0066b3]" />
-                              애니서포트 사용신청서 (DOC)
-                            </Button>
-                          </a>
-                        </div>
-                      )}
+                {/* 콘텐츠 영역 */}
+                <div className="bg-white p-6">
+                  {/* 상담원 프로그램 */}
+                  <div className="mb-4">
+                    <h4 className="font-bold text-[#333] mb-3 text-[14px] uppercase tracking-wide">상담원 프로그램</h4>
+                    <div className="divide-y divide-slate-100">
+                      <a href="/attached_assets/AnySupport_Setup_10_(5)_1768199980822.exe" download="AnySupport_Setup_10.exe" className="flex items-center justify-between py-3 hover:bg-slate-50 px-2 -mx-2 rounded transition-colors group">
+                        <span className="text-[15px] text-[#333]">애니서포트 Windows용 상담원 프로그램(V10.0)</span>
+                        <DownloadIcon size={18} className="text-slate-400 group-hover:text-[#4A9FD4]" />
+                      </a>
+                      <a href="/attached_assets/AnySupport_installer_Mac_(1)_1768200133753.zip" download="AnySupport_Mac_Setup.zip" className="flex items-center justify-between py-3 hover:bg-slate-50 px-2 -mx-2 rounded transition-colors group">
+                        <span className="text-[15px] text-[#333]">애니서포트 Mac용 상담원 프로그램(V10.0)</span>
+                        <DownloadIcon size={18} className="text-slate-400 group-hover:text-[#4A9FD4]" />
+                      </a>
+                      <a href="/attached_assets/AnySupport_Setup_1768200189167.exe" download="AnySupport_Setup_V6.exe" className="flex items-center justify-between py-3 hover:bg-slate-50 px-2 -mx-2 rounded transition-colors group">
+                        <span className="text-[15px] text-[#333]">애니서포트 윈도우즈용 상담원 프로그램(V6.0)</span>
+                        <DownloadIcon size={18} className="text-slate-400 group-hover:text-[#4A9FD4]" />
+                      </a>
                     </div>
-                    <div>
-                      <Button 
-                        variant="ghost" 
-                        className="w-full justify-between hover:bg-[#0066b3]/10 text-[15px] gap-2 text-[#0066b3]"
-                        onClick={() => setDiagnosticOpen(!diagnosticOpen)}
-                      >
-                        <div className="flex items-center gap-2">
-                          <Wrench size={16} className="text-[#0066b3]" />
-                          애니서포트 시스템 진단 툴 (Windows 용)
-                        </div>
-                        {diagnosticOpen ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
-                      </Button>
-                      {diagnosticOpen && (
-                        <div className="mt-2 ml-6 p-4 bg-white rounded-lg border border-slate-200">
-                          <p className="text-[#666] text-[14px] mb-4">
-                            애니서포트 사용환경을 진단하고 로그 수집을 통해 분석하여 문제를 파악할 수 있습니다.<br />
-                            접속불가 등 문제 발생 시 상담원의 가이드에 따라 아래 링크에서 다운로드 받은 후 실행하여 주시기 바랍니다.
-                          </p>
-                          <div className="space-y-2">
-                            <a href="/attached_assets/AnySupport_Checker_1768200447102.exe" download="AnySupport_Checker.exe">
-                              <Button variant="outline" className="w-full justify-start text-[14px] gap-2 text-[#0066b3] border-slate-200 hover:border-[#0066b3]">
-                                <DownloadIcon size={14} className="text-[#0066b3]" />
-                                애니서포트 시스템 진단 툴 (EXE 버전)
-                              </Button>
+                  </div>
+
+                  {/* 매뉴얼 */}
+                  <div className="mb-4">
+                    <h4 className="font-bold text-[#333] mb-3 text-[14px] uppercase tracking-wide">매뉴얼</h4>
+                    <div className="divide-y divide-slate-100">
+                      <a href="/attached_assets/anysupport_agent_manual_v10_(1)_1768200734361.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between py-3 hover:bg-slate-50 px-2 -mx-2 rounded transition-colors group">
+                        <span className="text-[15px] text-[#333]">애니서포트 상담원 매뉴얼(Ver10.0)</span>
+                        <BookOpen size={18} className="text-slate-400 group-hover:text-[#4A9FD4]" />
+                      </a>
+                      <a href="/attached_assets/anysupport_admin_manual_v10_(1)_1768200769433.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between py-3 hover:bg-slate-50 px-2 -mx-2 rounded transition-colors group">
+                        <span className="text-[15px] text-[#333]">애니서포트 관리자 매뉴얼</span>
+                        <BookOpen size={18} className="text-slate-400 group-hover:text-[#4A9FD4]" />
+                      </a>
+                      <a href="/attached_assets/agent_manual_Ver6.0_1768200845912.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between py-3 hover:bg-slate-50 px-2 -mx-2 rounded transition-colors group">
+                        <span className="text-[15px] text-[#333]">애니서포트 상담원 매뉴얼(Ver6.0)</span>
+                        <BookOpen size={18} className="text-slate-400 group-hover:text-[#4A9FD4]" />
+                      </a>
+                    </div>
+                  </div>
+
+                  {/* 기타 */}
+                  <div>
+                    <h4 className="font-bold text-[#333] mb-3 text-[14px] uppercase tracking-wide">기타</h4>
+                    <div className="divide-y divide-slate-100">
+                      <div>
+                        <button 
+                          className="flex items-center justify-between py-3 hover:bg-slate-50 px-2 -mx-2 rounded transition-colors w-full text-left"
+                          onClick={() => setApplicationOpen(!applicationOpen)}
+                        >
+                          <span className="text-[15px] text-[#333]">애니서포트 사용신청서</span>
+                          {applicationOpen ? <ChevronUp size={18} className="text-slate-400" /> : <ChevronDown size={18} className="text-slate-400" />}
+                        </button>
+                        {applicationOpen && (
+                          <div className="ml-4 mb-3 space-y-2">
+                            <a href="/attached_assets/애니서포트_서비스_신청서(공통)_1768200560351.hwp" download="애니서포트_서비스_신청서.hwp" className="flex items-center justify-between py-2 hover:bg-slate-50 px-2 rounded transition-colors group">
+                              <span className="text-[14px] text-[#666]">애니서포트 사용신청서 (HWP)</span>
+                              <DownloadIcon size={16} className="text-slate-400 group-hover:text-[#4A9FD4]" />
                             </a>
-                            <a href="/attached_assets/AnySupport_Checker_1768200447102.zip" download="AnySupport_Checker.zip">
-                              <Button variant="outline" className="w-full justify-start text-[14px] gap-2 text-[#0066b3] border-slate-200 hover:border-[#0066b3]">
-                                <DownloadIcon size={14} className="text-[#0066b3]" />
-                                애니서포트 시스템 진단 툴 (ZIP 버전 - EXE 다운로드 불가시)
-                              </Button>
+                            <a href="/attached_assets/애니서포트_서비스_신청서(공통)_1768200560350.doc" download="애니서포트_서비스_신청서.doc" className="flex items-center justify-between py-2 hover:bg-slate-50 px-2 rounded transition-colors group">
+                              <span className="text-[14px] text-[#666]">애니서포트 사용신청서 (DOC)</span>
+                              <DownloadIcon size={16} className="text-slate-400 group-hover:text-[#4A9FD4]" />
                             </a>
                           </div>
-                        </div>
-                      )}
+                        )}
+                      </div>
+                      <div>
+                        <button 
+                          className="flex items-center justify-between py-3 hover:bg-slate-50 px-2 -mx-2 rounded transition-colors w-full text-left"
+                          onClick={() => setDiagnosticOpen(!diagnosticOpen)}
+                        >
+                          <span className="text-[15px] text-[#333]">애니서포트 시스템 진단 툴 (Windows 용)</span>
+                          {diagnosticOpen ? <ChevronUp size={18} className="text-slate-400" /> : <ChevronDown size={18} className="text-slate-400" />}
+                        </button>
+                        {diagnosticOpen && (
+                          <div className="ml-4 mb-3 p-4 bg-slate-50 rounded-lg">
+                            <p className="text-[#666] text-[14px] mb-4">
+                              애니서포트 사용환경을 진단하고 로그 수집을 통해 분석하여 문제를 파악할 수 있습니다.<br />
+                              접속불가 등 문제 발생 시 상담원의 가이드에 따라 아래 링크에서 다운로드 받은 후 실행하여 주시기 바랍니다.
+                            </p>
+                            <div className="space-y-2">
+                              <a href="/attached_assets/AnySupport_Checker_1768200447102.exe" download="AnySupport_Checker.exe" className="flex items-center justify-between py-2 hover:bg-white px-2 rounded transition-colors group">
+                                <span className="text-[14px] text-[#666]">애니서포트 시스템 진단 툴 (EXE 버전)</span>
+                                <DownloadIcon size={16} className="text-slate-400 group-hover:text-[#4A9FD4]" />
+                              </a>
+                              <a href="/attached_assets/AnySupport_Checker_1768200447102.zip" download="AnySupport_Checker.zip" className="flex items-center justify-between py-2 hover:bg-white px-2 rounded transition-colors group">
+                                <span className="text-[14px] text-[#666]">애니서포트 시스템 진단 툴 (ZIP 버전)</span>
+                                <DownloadIcon size={16} className="text-slate-400 group-hover:text-[#4A9FD4]" />
+                              </a>
+                            </div>
+                          </div>
+                        )}
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
 
               {/* 지원받는 측 (고객) */}
-              <div className="rounded-2xl bg-white p-8 border border-slate-200">
-                <div className="flex items-center gap-3 mb-2">
-                  <h3 className="font-bold text-[32px] text-[#333]">지원받는 측 (고객)</h3>
-                  <User className="text-[#0066b3]" size={24} />
+              <div className="rounded-2xl overflow-hidden shadow-lg shadow-slate-100/50">
+                {/* 헤더 영역 */}
+                <div className="bg-gradient-to-r from-[#f8fafc] to-[#e2e8f0] p-6 relative border-b border-slate-200">
+                  <h3 className="font-bold text-[24px] text-[#333]">지원받는 측 (고객)</h3>
+                  <p className="text-[#666] text-[14px] mt-1">
+                    지원 환경별로 고객이 설치해야 하는<br />
+                    필요 파일을 확인할 수 있습니다.
+                  </p>
+                  <User className="absolute right-6 top-1/2 -translate-y-1/2 text-slate-300" size={40} />
                 </div>
-                <p className="text-[#666] text-[16px] mb-6">
-                  지원 환경별로 고객이 설치해야 하는<br />
-                  필요 파일을 확인할 수 있습니다.
-                </p>
 
-                <div className="border-t border-slate-200 pt-6"></div>
-
-                {/* 고객 설치파일 */}
-                <div className="mb-6">
-                  <h4 className="font-bold text-[#0066b3] mb-3 text-[16px]">고객 설치파일</h4>
-                  <div className="space-y-2 bg-[#f8fafc] rounded-xl p-4">
-                    <a href="/attached_assets/ManualLauncher_(1)_1768200897859.exe" download="AnySupport_Windows_V10.0.exe">
-                      <Button variant="ghost" className="w-full justify-start hover:bg-[#0066b3]/10 text-[15px] gap-2 text-[#0066b3]">
-                        <DownloadIcon size={16} className="text-[#0066b3]" />
-                        애니서포트 Windows용 고객 설치파일(V10.0)
-                      </Button>
-                    </a>
-                    <a href="/attached_assets/AnySupportHost_Mac_1768200922810.zip" download="AnySupport_Mac_V10.0.zip">
-                      <Button variant="ghost" className="w-full justify-start hover:bg-[#0066b3]/10 text-[15px] gap-2 text-[#0066b3]">
-                        <DownloadIcon size={16} className="text-[#0066b3]" />
-                        애니서포트 Mac용 고객 설치파일(V10.0)
-                      </Button>
-                    </a>
-                    <a href="/attached_assets/ManualLauncher_(1)_1768201005633.exe" download="AnySupport_Windows_V6.0.exe">
-                      <Button variant="ghost" className="w-full justify-start hover:bg-[#0066b3]/10 text-[15px] gap-2 text-[#0066b3]">
-                        <DownloadIcon size={16} className="text-[#0066b3]" />
-                        애니서포트 윈도우즈용 고객 설치파일(V6.0)
-                      </Button>
-                    </a>
+                {/* 콘텐츠 영역 */}
+                <div className="bg-white p-6">
+                  {/* 고객 설치파일 */}
+                  <div className="mb-4">
+                    <h4 className="font-bold text-[#333] mb-3 text-[14px] uppercase tracking-wide">고객 설치파일</h4>
+                    <div className="divide-y divide-slate-100">
+                      <a href="/attached_assets/ManualLauncher_(1)_1768200897859.exe" download="AnySupport_Windows_V10.0.exe" className="flex items-center justify-between py-3 hover:bg-slate-50 px-2 -mx-2 rounded transition-colors group">
+                        <span className="text-[15px] text-[#333]">애니서포트 Windows용 고객 설치파일(V10.0)</span>
+                        <DownloadIcon size={18} className="text-slate-400 group-hover:text-[#4A9FD4]" />
+                      </a>
+                      <a href="/attached_assets/AnySupportHost_Mac_1768200922810.zip" download="AnySupport_Mac_V10.0.zip" className="flex items-center justify-between py-3 hover:bg-slate-50 px-2 -mx-2 rounded transition-colors group">
+                        <span className="text-[15px] text-[#333]">애니서포트 Mac용 고객 설치파일(V10.0)</span>
+                        <DownloadIcon size={18} className="text-slate-400 group-hover:text-[#4A9FD4]" />
+                      </a>
+                      <a href="/attached_assets/ManualLauncher_(1)_1768201005633.exe" download="AnySupport_Windows_V6.0.exe" className="flex items-center justify-between py-3 hover:bg-slate-50 px-2 -mx-2 rounded transition-colors group">
+                        <span className="text-[15px] text-[#333]">애니서포트 윈도우즈용 고객 설치파일(V6.0)</span>
+                        <DownloadIcon size={18} className="text-slate-400 group-hover:text-[#4A9FD4]" />
+                      </a>
+                    </div>
                   </div>
-                </div>
 
-                {/* 모바일 설치파일 */}
-                <div className="mb-6">
-                  <h4 className="font-bold text-[#0066b3] mb-3 text-[16px]">모바일 설치파일</h4>
-                  <div className="space-y-2 bg-[#f8fafc] rounded-xl p-4">
-                    <a href="/attached_assets/AnySupport_(4)_1768201031671.apk" download="AnySupport_Mobile_Android.apk">
-                      <Button variant="ghost" className="w-full justify-start hover:bg-[#0066b3]/10 text-[15px] gap-2 text-[#0066b3]">
-                        <DownloadIcon size={16} className="text-[#0066b3]" />
-                        애니서포트 모바일 설치파일(Android)
-                      </Button>
-                    </a>
-                    <a href="https://apps.apple.com/us/app/%EB%AA%A8%EB%B0%94%EC%9D%BC%EC%A7%80%EC%9B%90/id993614818?l=ko" target="_blank" rel="noopener noreferrer">
-                      <Button variant="ghost" className="w-full justify-start hover:bg-[#0066b3]/10 text-[15px] gap-2 text-[#0066b3]">
-                        <DownloadIcon size={16} className="text-[#0066b3]" />
-                        애니서포트 모바일 설치파일(iOS)
-                      </Button>
-                    </a>
-                    <a href="/attached_assets/anysupport_mobile_edition_manual_v10_1768201099221.pdf" target="_blank" rel="noopener noreferrer">
-                      <Button variant="ghost" className="w-full justify-start hover:bg-[#0066b3]/10 text-[15px] gap-2 text-[#0066b3]">
-                        <BookOpen size={16} className="text-[#0066b3]" />
-                        애니서포트 모바일 매뉴얼
-                      </Button>
-                    </a>
+                  {/* 모바일 설치파일 */}
+                  <div className="mb-4">
+                    <h4 className="font-bold text-[#333] mb-3 text-[14px] uppercase tracking-wide">모바일 설치파일</h4>
+                    <div className="divide-y divide-slate-100">
+                      <a href="/attached_assets/AnySupport_(4)_1768201031671.apk" download="AnySupport_Mobile_Android.apk" className="flex items-center justify-between py-3 hover:bg-slate-50 px-2 -mx-2 rounded transition-colors group">
+                        <span className="text-[15px] text-[#333]">애니서포트 모바일 설치파일(Android)</span>
+                        <DownloadIcon size={18} className="text-slate-400 group-hover:text-[#4A9FD4]" />
+                      </a>
+                      <a href="https://apps.apple.com/us/app/%EB%AA%A8%EB%B0%94%EC%9D%BC%EC%A7%80%EC%9B%90/id993614818?l=ko" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between py-3 hover:bg-slate-50 px-2 -mx-2 rounded transition-colors group">
+                        <span className="text-[15px] text-[#333]">애니서포트 모바일 설치파일(iOS)</span>
+                        <DownloadIcon size={18} className="text-slate-400 group-hover:text-[#4A9FD4]" />
+                      </a>
+                      <a href="/attached_assets/anysupport_mobile_edition_manual_v10_1768201099221.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between py-3 hover:bg-slate-50 px-2 -mx-2 rounded transition-colors group">
+                        <span className="text-[15px] text-[#333]">애니서포트 모바일 매뉴얼</span>
+                        <BookOpen size={18} className="text-slate-400 group-hover:text-[#4A9FD4]" />
+                      </a>
+                    </div>
                   </div>
-                </div>
 
-                {/* 비디오 설치파일 */}
-                <div className="mb-6">
-                  <h4 className="font-bold text-[#0066b3] mb-3 text-[16px]">비디오 설치파일</h4>
-                  <div className="space-y-2 bg-[#f8fafc] rounded-xl p-4">
-                    <a href="/attached_assets/AnySupportVideo_(1)_1768201137522.apk" download="AnySupport_Video_Android.apk">
-                      <Button variant="ghost" className="w-full justify-start hover:bg-[#0066b3]/10 text-[15px] gap-2 text-[#0066b3]">
-                        <DownloadIcon size={16} className="text-[#0066b3]" />
-                        애니서포트 비디오 설치파일(Android)
-                      </Button>
-                    </a>
-                    <Button variant="ghost" className="w-full justify-start hover:bg-[#0066b3]/10 text-[15px] gap-2 text-[#0066b3]">
-                      <DownloadIcon size={16} className="text-[#0066b3]" />
-                      애니서포트 비디오 설치파일(iOS)
-                    </Button>
-                    <a href="/attached_assets/anysupport_video_edition_manual_v10_1768201236064.pdf" target="_blank" rel="noopener noreferrer">
-                      <Button variant="ghost" className="w-full justify-start hover:bg-[#0066b3]/10 text-[15px] gap-2 text-[#0066b3]">
-                        <BookOpen size={16} className="text-[#0066b3]" />
-                        애니서포트 비디오 매뉴얼
-                      </Button>
-                    </a>
+                  {/* 비디오 설치파일 */}
+                  <div className="mb-4">
+                    <h4 className="font-bold text-[#333] mb-3 text-[14px] uppercase tracking-wide">비디오 설치파일</h4>
+                    <div className="divide-y divide-slate-100">
+                      <a href="/attached_assets/AnySupportVideo_(1)_1768201137522.apk" download="AnySupport_Video_Android.apk" className="flex items-center justify-between py-3 hover:bg-slate-50 px-2 -mx-2 rounded transition-colors group">
+                        <span className="text-[15px] text-[#333]">애니서포트 비디오 설치파일(Android)</span>
+                        <DownloadIcon size={18} className="text-slate-400 group-hover:text-[#4A9FD4]" />
+                      </a>
+                      <span className="flex items-center justify-between py-3 px-2 -mx-2">
+                        <span className="text-[15px] text-[#999]">애니서포트 비디오 설치파일(iOS)</span>
+                        <DownloadIcon size={18} className="text-slate-300" />
+                      </span>
+                      <a href="/attached_assets/anysupport_video_edition_manual_v10_1768201236064.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between py-3 hover:bg-slate-50 px-2 -mx-2 rounded transition-colors group">
+                        <span className="text-[15px] text-[#333]">애니서포트 비디오 매뉴얼</span>
+                        <BookOpen size={18} className="text-slate-400 group-hover:text-[#4A9FD4]" />
+                      </a>
+                    </div>
                   </div>
-                </div>
 
-                {/* 고객 매뉴얼 */}
-                <div>
-                  <h4 className="font-bold text-[#0066b3] mb-3 text-[16px]">매뉴얼</h4>
-                  <div className="space-y-2 bg-[#f8fafc] rounded-xl p-4">
-                    <a href="/attached_assets/anysupport_customer_manual_v10_1768201272472.pdf" target="_blank" rel="noopener noreferrer">
-                      <Button variant="ghost" className="w-full justify-start hover:bg-[#0066b3]/10 text-[15px] gap-2 text-[#0066b3]">
-                        <BookOpen size={16} className="text-[#0066b3]" />
-                        애니서포트 고객 매뉴얼
-                      </Button>
-                    </a>
+                  {/* 고객 매뉴얼 */}
+                  <div>
+                    <h4 className="font-bold text-[#333] mb-3 text-[14px] uppercase tracking-wide">매뉴얼</h4>
+                    <div className="divide-y divide-slate-100">
+                      <a href="/attached_assets/anysupport_customer_manual_v10_1768201272472.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between py-3 hover:bg-slate-50 px-2 -mx-2 rounded transition-colors group">
+                        <span className="text-[15px] text-[#333]">애니서포트 고객 매뉴얼</span>
+                        <BookOpen size={18} className="text-slate-400 group-hover:text-[#4A9FD4]" />
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
