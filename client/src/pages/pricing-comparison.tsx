@@ -409,10 +409,10 @@ export default function PricingComparison() {
                     ))}
                   </ul>
                   <div className="flex gap-3">
-                    <Button variant="outline" size="sm" className="flex-1 text-[14px]" onClick={openModal}>
+                    <Button variant="outline" size="sm" className="flex-1 text-[18px] text-[#333]" onClick={openModal}>
                       자세히
                     </Button>
-                    <Button size="sm" className="flex-1 text-[14px]" onClick={openModal}>
+                    <Button size="sm" className="flex-1 text-[18px]" onClick={openModal}>
                       상담
                     </Button>
                   </div>
