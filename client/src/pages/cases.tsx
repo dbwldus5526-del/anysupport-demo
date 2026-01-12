@@ -641,7 +641,7 @@ export default function Cases() {
                               <User size={24} className="text-amber-700" />
                             </div>
                             <div>
-                              <div className="text-sm font-bold text-amber-800">
+                              <div className="font-bold text-amber-800 text-[18px]">
                                 외부 IT협력업체
                               </div>
                               <div className="text-xs text-amber-600">
