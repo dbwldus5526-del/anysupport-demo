@@ -698,7 +698,7 @@ export default function Cases() {
                           내부망 (업무망)
                         </div>
                         <div className="p-3 bg-yellow-50 rounded-lg border border-yellow-200 mb-3">
-                          <div className="text-center text-xs font-bold text-yellow-800 mb-2">
+                          <div className="text-center font-bold text-yellow-800 mb-2 text-[16px]">
                             고객사 내부서버
                           </div>
                           <div className="grid grid-cols-2 gap-2">
