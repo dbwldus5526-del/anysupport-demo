@@ -360,7 +360,7 @@ export default function Pricing() {
                     <div className="bg-primary/5 p-4 rounded-xl border border-primary/10">
                       <p className="font-bold text-primary mb-2 text-sm">[참고]</p>
                       <ul className="text-xs text-slate-600 space-y-1 list-disc pl-4">
-                        <li>1계정당 동시 접속자 수는 BASIC(3명), PREMIUM/MOBILE/VIDEO(10명)입니다.</li>
+                        <li className="text-[#333] text-[16px]">1계정당 동시 접속자 수는 BASIC(3명), PREMIUM/MOBILE/VIDEO(10명)입니다.</li>
                         <li>상기 금액은 1년 선납 기준이며, 월 단위 결제는 위 표의 월 금액을 참고해주세요.</li>
                       </ul>
                     </div>
