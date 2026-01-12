@@ -400,7 +400,7 @@ export default function Pricing() {
                     }
                   }}
                 >
-                  <span className="text-lg font-bold text-slate-900 group-hover:text-primary transition-colors">{item.q}</span>
+                  <span className="text-lg text-slate-900 group-hover:text-primary transition-colors font-medium">{item.q}</span>
                   <div className="chevron transition-transform duration-300">
                     <ArrowRight className="text-slate-400 rotate-90" size={20} />
                   </div>
