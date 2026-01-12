@@ -251,7 +251,7 @@ export default function SecurityPatents() {
                   </div>
                   <div className="flex items-center gap-3 p-3 bg-slate-50 rounded-lg">
                     <CheckCircle2 size={18} className="text-green-500" />
-                    <span className="text-[#666]">엔터프라이즈 보안 인증</span>
+                    <span className="text-[#666] text-[18px]">엔터프라이즈 보안 인증</span>
                   </div>
                 </div>
               </div>
