@@ -53,10 +53,12 @@ export default function Download() {
                 <div className="mb-6">
                   <h4 className="font-bold text-[#0066b3] mb-3 text-[16px]">상담원 프로그램</h4>
                   <div className="space-y-2 bg-[#f8fafc] rounded-xl p-4">
-                    <Button variant="ghost" className="w-full justify-start hover:bg-[#0066b3]/10 text-[15px] gap-2 text-[#0066b3]">
-                      <DownloadIcon size={16} className="text-[#0066b3]" />
-                      애니서포트 Windows용 상담원 프로그램(V10.0)
-                    </Button>
+                    <a href="/attached_assets/AnySupport_Setup_10_(5)_1768199980822.exe" download="AnySupport_Setup_10.exe">
+                      <Button variant="ghost" className="w-full justify-start hover:bg-[#0066b3]/10 text-[15px] gap-2 text-[#0066b3]">
+                        <DownloadIcon size={16} className="text-[#0066b3]" />
+                        애니서포트 Windows용 상담원 프로그램(V10.0)
+                      </Button>
+                    </a>
                     <Button variant="ghost" className="w-full justify-start hover:bg-[#0066b3]/10 text-[15px] gap-2 text-[#0066b3]">
                       <DownloadIcon size={16} className="text-[#0066b3]" />
                       애니서포트 Mac용 상담원 프로그램(V10.0)
