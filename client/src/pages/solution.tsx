@@ -85,7 +85,7 @@ export default function Solution() {
       {/* 2. 원격지원이란 무엇인가 */}
       <section id="what-is-remote" className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="text-center mb-16">
+          <div className="text-center mt-[34px] mb-[34px]">
             <span className="text-primary font-bold tracking-widest uppercase mb-3 block text-[14px]">
               REMOTE SUPPORT
             </span>
