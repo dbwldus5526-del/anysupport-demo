@@ -408,7 +408,7 @@ export default function Cases() {
                         </div>
                         <div>
                           <div className="font-bold text-primary text-[18px]">고객 (인터넷망)</div>
-                          <div className="text-xs text-slate-500">PC·모바일 이용고객</div>
+                          <div className="text-[18px] text-[#666]">PC·모바일 이용고객</div>
                         </div>
                       </div>
                     </div>
