@@ -164,7 +164,7 @@ export default function Features() {
                       <group.icon size={32} />
                     </div>
                     <div className="text-left">
-                      <h2 className="text-xl md:text-2xl font-black text-slate-900">{group.title}</h2>
+                      <h2 className="md:text-2xl text-[18px] font-bold text-[#333]">{group.title}</h2>
                       <p className="md:text-sm mt-1 md:whitespace-nowrap font-normal text-[#666] text-[18px]">{group.summary}</p>
                     </div>
                   </div>
