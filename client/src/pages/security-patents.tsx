@@ -17,7 +17,7 @@ import {
 } from "lucide-react";
 import samsungKnoxLogo from "@assets/image_1768207806783.png";
 import koinoLogo from "@assets/코이노로고_1768207913009.png";
-import seapLogo from "@assets/image-removebg-preview_(24)_1768208006965.png";
+import seapLogo from "@assets/image-removebg-preview_(25)_1768208039940.png";
 import { motion } from "framer-motion";
 
 export default function SecurityPatents() {
@@ -227,11 +227,11 @@ export default function SecurityPatents() {
                     삼성전자 SEAP 파트너
                   </span>
                   <div className="flex justify-center items-center gap-6 mb-6">
-                    <div className="w-24 h-24 bg-slate-100 rounded-xl flex items-center justify-center p-2">
-                      <img src={koinoLogo} alt="KOINO" className="h-12 w-auto object-contain" />
+                    <div className="w-32 h-28 bg-slate-100 rounded-xl flex items-center justify-center p-3">
+                      <img src={koinoLogo} alt="KOINO" className="h-20 w-auto object-contain" />
                     </div>
-                    <div className="w-28 h-24 bg-slate-100 rounded-xl flex items-center justify-center p-2">
-                      <img src={seapLogo} alt="Samsung Enterprise Alliance Program" className="h-16 w-auto object-contain" />
+                    <div className="w-32 h-28 bg-slate-100 rounded-xl flex items-center justify-center p-3">
+                      <img src={seapLogo} alt="Samsung Enterprise Alliance Program" className="h-20 w-auto object-contain" />
                     </div>
                   </div>
                   <p className="text-[#666] text-sm">
