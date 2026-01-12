@@ -300,7 +300,7 @@ export default function Pricing() {
                 <div className="bg-white">
                   {category.rows.map((row, idx) => (
                     <div key={idx} className={`grid grid-cols-1 md:grid-cols-[1fr_400px] items-center border-b border-slate-100 last:border-0 hover:bg-slate-50 transition-colors`}>
-                      <div className="p-5 pl-8 text-slate-700 font-bold text-[15px]">
+                      <div className="p-5 pl-8 text-[18px] font-normal text-[#333]">
                         {row.name}
                       </div>
                       <div className="grid grid-cols-4 gap-4 p-5 text-center bg-slate-50/30 md:bg-transparent">
