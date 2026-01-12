@@ -218,11 +218,11 @@ export default function Product() {
                     처럼, 가장 빠르게 문제 해결에 도달합니다.
                   </p>
                   <div className="flex flex-wrap gap-3">
-                    <div className="flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full text-sm font-medium">
+                    <div className="flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full font-medium text-[18px]">
                       <CheckCircle2 size={16} />
                       설치 불필요
                     </div>
-                    <div className="flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full text-sm font-medium">
+                    <div className="flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full font-medium text-[18px]">
                       <CheckCircle2 size={16} />웹 기반 연결
                     </div>
                   </div>
@@ -289,7 +289,7 @@ export default function Product() {
                 <div className="w-14 h-14 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                   <feature.icon size={28} />
                 </div>
-                <div className="inline-block px-2 py-1 bg-primary/5 text-primary font-bold rounded mb-2 text-[14px]">
+                <div className="inline-block px-2 py-1 bg-primary/5 text-primary font-bold rounded mb-2 text-[16px]">
                   {feature.highlight}
                 </div>
                 <h3 className="text-lg font-bold text-slate-900 mb-2">
