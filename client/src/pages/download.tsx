@@ -82,7 +82,7 @@ export default function Download() {
                 <div className="mb-6">
                   <h4 className="font-bold text-[#0066b3] mb-3 text-[16px]">매뉴얼</h4>
                   <div className="space-y-2 bg-[#f8fafc] rounded-xl p-4">
-                    <a href="/attached_assets/anysupport_agent_manual_v10_(2)_1768200309494.pdf" target="_blank" rel="noopener noreferrer">
+                    <a href="/attached_assets/anysupport_agent_manual_v10_(1)_1768200734361.pdf" target="_blank" rel="noopener noreferrer">
                       <Button variant="ghost" className="w-full justify-start hover:bg-[#0066b3]/10 text-[15px] gap-2 text-[#0066b3]">
                         <BookOpen size={16} className="text-[#0066b3]" />
                         애니서포트 상담원 매뉴얼(Ver10.0)
