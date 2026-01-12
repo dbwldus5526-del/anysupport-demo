@@ -50,7 +50,16 @@ const NAV_ITEMS = [
     ],
   },
   { label: "다운로드", href: "/download" },
-  { label: "고객지원", href: "/support" },
+  {
+    label: "고객지원",
+    href: "/support",
+    subItems: [
+      { label: "FAQ", href: "/support/faq" },
+      { label: "공지사항", href: "/support/notice" },
+      { label: "보도자료", href: "/support/press" },
+      { label: "블로그", href: "/support/blog" },
+    ],
+  },
 ];
 
 function MobileMenuSheet({
