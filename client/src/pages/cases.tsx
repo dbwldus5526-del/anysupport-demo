@@ -683,7 +683,7 @@ export default function Cases() {
                                   접속 승인 시, 고객사 직원 PC화면에 대한 제어권
                                   이양
                                 </div>
-                                <div className="text-[10px] text-slate-500">
+                                <div className="text-[#666] text-[18px]">
                                   제어 주체: 유지보수업체 / 제어 대상: 고객사
                                 </div>
                               </div>
