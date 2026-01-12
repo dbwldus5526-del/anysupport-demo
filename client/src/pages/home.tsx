@@ -476,11 +476,7 @@ export function Home() {
               <button
                 key={device.id}
                 onClick={() => setActiveDevice(device.id)}
-                className={`px-6 py-2.5 rounded-full text-sm font-bold transition-all duration-300 border ${
-                  activeDevice === device.id
-                    ? "bg-primary text-white border-primary"
-                    : "bg-[#f7f8fc] text-slate-500 border-slate-200 hover:border-primary hover:text-primary"
-                }`}
+                className="px-6 py-2.5 rounded-full font-bold transition-all duration-300 border bg-primary text-white border-primary text-[18px]"
               >
                 {device.label}
               </button>
