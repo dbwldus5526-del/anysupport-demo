@@ -93,7 +93,7 @@ export default function SecurityPatents() {
                           <CheckCircle2 size={14} className="text-green-500" />
                           데이터 암호화 전송
                         </div>
-                        <div className="text-center font-bold text-blue-600 py-1 bg-blue-50 rounded text-[16px]">
+                        <div className="text-center font-bold text-blue-600 py-1 rounded text-[16px] bg-[#dbeafe]">
                           원격지원
                         </div>
                         <div className="flex items-center gap-2 text-[#666] text-[16px]">
