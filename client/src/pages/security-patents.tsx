@@ -16,6 +16,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import samsungKnoxLogo from "@assets/image_1768207806783.png";
+import koinoLogo from "@assets/코이노로고_1768207913009.png";
 import { motion } from "framer-motion";
 
 export default function SecurityPatents() {
@@ -225,8 +226,8 @@ export default function SecurityPatents() {
                     삼성전자 SEAP 파트너
                   </span>
                   <div className="flex justify-center items-center gap-6 mb-6">
-                    <div className="w-24 h-24 bg-slate-100 rounded-xl flex items-center justify-center">
-                      <span className="text-xl font-bold text-blue-600">KOINO</span>
+                    <div className="w-24 h-24 bg-slate-100 rounded-xl flex items-center justify-center p-2">
+                      <img src={koinoLogo} alt="KOINO" className="h-12 w-auto object-contain" />
                     </div>
                     <div className="w-24 h-24 bg-slate-100 rounded-xl flex items-center justify-center p-2">
                       <div className="text-center">
