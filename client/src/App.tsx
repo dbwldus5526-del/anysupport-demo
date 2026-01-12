@@ -19,6 +19,7 @@ import Pricing from "@/pages/pricing";
 import PricingComparison from "@/pages/pricing-comparison";
 import Download from "@/pages/download";
 import Support from "@/pages/support";
+import FAQ from "@/pages/support/faq";
 import { ModalProvider } from "@/context/ModalContext";
 import { GetStartedModal } from "@/components/modals/GetStartedModal";
 import { Header } from "@/components/layout/Header";
@@ -58,6 +59,7 @@ function Router() {
           <Route path="/pricing/comparison" component={PricingComparison} />
           <Route path="/download" component={Download} />
           <Route path="/support" component={Support} />
+          <Route path="/support/faq" component={FAQ} />
           <Route component={NotFound} />
         </Switch>
       </main>
