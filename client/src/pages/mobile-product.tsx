@@ -100,7 +100,6 @@ export default function MobileProduct() {
           </div>
         </div>
       </section>
-
       {/* Summary Section */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
@@ -143,14 +142,13 @@ export default function MobileProduct() {
                     <feature.icon size={24} />
                   </div>
                   <h3 className="text-lg font-bold mb-2 text-slate-900">{feature.title}</h3>
-                  <p className="text-sm text-slate-500 leading-relaxed font-medium">{feature.desc}</p>
+                  <p className="text-[18px] font-normal text-[#666]">{feature.desc}</p>
                 </div>
               ))}
             </div>
           </div>
         </div>
       </section>
-
       {/* Mobile Special Features Section */}
       <section className="py-24 bg-slate-50">
         <div className="container mx-auto px-4 md:px-6">
@@ -185,7 +183,6 @@ export default function MobileProduct() {
           </div>
         </div>
       </section>
-
       {/* Connection Process Section */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
@@ -260,7 +257,6 @@ export default function MobileProduct() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-primary text-white">
         <div className="container mx-auto px-4 md:px-6 text-center">
