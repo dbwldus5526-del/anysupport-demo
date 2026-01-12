@@ -582,9 +582,7 @@ export function Home() {
       <section className="py-24 bg-[#f8fafc]">
         <div className="max-w-[1280px] w-full mx-auto px-4 sm:px-6 lg:px-10">
           <div className="text-center mb-16">
-            <h2 className="lg:text-4xl font-bold mb-4 text-[#333] text-[40px]">
-              애니서포트 원격지원, 단 10초면 연결 가능!
-            </h2>
+            <h2 className="lg:text-4xl font-bold mb-4 text-[#333] text-[40px]">애니서포트 원격지원, 5초안에 연결!</h2>
           </div>
           <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
             <div className="flex justify-center">
