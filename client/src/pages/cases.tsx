@@ -348,7 +348,7 @@ export default function Cases() {
       {/* Section B: Performance Metrics */}
       <section className="py-20 bg-white border-y border-slate-100">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
             <div className="text-center p-8 bg-slate-50 rounded-2xl border border-slate-100">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
                 <Clock size={32} className="text-primary" />
@@ -387,6 +387,21 @@ export default function Cases() {
               </div>
               <p className="text-[18px] text-[#666]">
                 원격지원 AnySupport를 사용했을 때
+              </p>
+            </div>
+
+            <div className="text-center p-8 bg-slate-50 rounded-2xl border border-slate-100">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
+                <CheckCircle size={32} className="text-primary" />
+              </div>
+              <div className="text-5xl md:text-6xl font-black mb-2 text-[#333]">
+                75<span className="text-3xl">%</span>
+              </div>
+              <div className="text-xl font-bold text-slate-700 mb-2">
+                FCR 비율 증가
+              </div>
+              <p className="text-[18px] text-[#666]">
+                첫 고객 대응으로 문제해결, 재문의 전화비율 감소
               </p>
             </div>
           </div>
