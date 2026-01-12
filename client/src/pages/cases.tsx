@@ -694,7 +694,7 @@ export default function Cases() {
 
                       {/* Right: 내부망 구조 */}
                       <div className="p-4 bg-red-50 rounded-xl border-2 border-red-200">
-                        <div className="text-center text-xs font-bold text-red-700 mb-3">
+                        <div className="text-center font-bold text-red-700 mb-3 text-[16px]">
                           내부망 (업무망)
                         </div>
                         <div className="p-3 bg-yellow-50 rounded-lg border border-yellow-200 mb-3">
