@@ -238,7 +238,7 @@ export default function MobileProduct() {
                   <div className="flex-1">
                     <span className="text-primary font-bold text-sm tracking-tighter mb-2 block">{item.step}</span>
                     <h3 className="text-xl font-bold mb-4 text-slate-900">{item.title}</h3>
-                    <p className="text-slate-500 text-sm leading-relaxed mb-6">
+                    <p className="text-slate-500 mb-6 text-[18px]">
                       {item.desc}
                     </p>
                     
