@@ -869,10 +869,6 @@ export function Home() {
                 <span className="font-semibold text-[#333] min-w-[70px]">Email</span>
                 <span>anysupport@koino.co.kr</span>
               </div>
-              <div className="flex items-start gap-3">
-                <span className="font-semibold text-[#333] min-w-[70px]">주소</span>
-                <span>서울시 금천구 가산디지털2로 184 벽산디지털밸리2차 404호</span>
-              </div>
             </div>
             <Button
               onClick={() => setContactModalOpen(false)}
