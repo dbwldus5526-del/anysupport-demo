@@ -592,7 +592,7 @@ export default function Cases() {
                     </div>
 
                     {/* 화살표 */}
-                    <div className="flex justify-center mb-6">
+                    <div className="flex justify-center mt-[9px] mb-[9px]">
                       <ArrowDown size={24} className="text-slate-300" />
                     </div>
 
