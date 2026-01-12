@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Download as DownloadIcon, Monitor, Apple, Smartphone, Globe } from "lucide-react";
+import { Download as DownloadIcon, Monitor, Apple, Smartphone, Globe, MessageSquare, User, Play, Settings } from "lucide-react";
 import downloadHeroImg from "@assets/generated_images/modern_abstract_blue_gradient_background_for_download_page_hero_section.png";
 
 export default function Download() {
@@ -25,82 +25,165 @@ export default function Download() {
           </p>
         </div>
       </section>
-      {/* Counselor Program Section */}
+
+      {/* Two Column Download Section */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-6xl mx-auto">
-            <div className="mb-12">
-              <h3 className="md:text-3xl mb-3 text-[#333] font-bold text-[36px]">상담사용 원격지원 프로그램</h3>
-              <p className="md:text-base font-normal text-[#666] text-left text-[18px]">고객을 지원하고 인증번호를 발급하는 상담사용 프로그램입니다.</p>
-            </div>
-
             <div className="grid md:grid-cols-2 gap-8">
-              {/* Windows Card */}
-              <div className="flex flex-col p-8 rounded-xl bg-white border border-slate-200 shadow-sm transition-all hover:shadow-md">
-                <div className="flex items-center gap-5 mb-8">
-                  <div className="w-14 h-14 rounded-lg bg-[#004481] flex items-center justify-center text-white shrink-0">
-                    <Monitor size={28} />
+              
+              {/* 지원하는 측 (상담사) */}
+              <div className="rounded-2xl bg-gradient-to-br from-[#e8f4fc] to-[#d0e8f7] p-8 border border-[#b8daf0]">
+                <div className="flex items-center gap-3 mb-2">
+                  <h3 className="text-2xl font-bold text-[#0066b3]">지원하는 측 (상담사)</h3>
+                  <MessageSquare className="text-[#0066b3]" size={24} />
+                </div>
+                <p className="text-[#666] text-[16px] mb-8">
+                  전용 에이전트로 지원 시 필요한 설치 파일로,<br />
+                  Windows에서 사용할 수 있습니다.
+                </p>
+
+                <div className="space-y-4">
+                  {/* 통합 에이전트 */}
+                  <div className="bg-gradient-to-r from-[#0066b3]/20 to-[#0088cc]/10 rounded-xl p-5 border border-[#0066b3]/20">
+                    <div className="flex items-center gap-2 mb-2">
+                      <Monitor className="text-[#0066b3]" size={18} />
+                      <span className="font-bold text-[#0066b3] text-[18px]">통합 에이전트</span>
+                    </div>
+                    <p className="text-[#666] text-[16px] mb-4">상담사용 에이전트 설치 프로그램</p>
+                    <div className="flex justify-end">
+                      <Button variant="ghost" size="sm" className="text-[#0066b3] hover:bg-[#0066b3]/10">
+                        <DownloadIcon size={18} />
+                      </Button>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="text-lg font-bold text-[#333]">Windows 상담사용 프로그램</h4>
-                    <p className="text-[18px] font-normal text-[#666]">Windows V6.0/ V10.0 지원</p>
+
+                  {/* 녹화 영상 플레이어 */}
+                  <div className="bg-gradient-to-r from-[#0066b3]/20 to-[#0088cc]/10 rounded-xl p-5 border border-[#0066b3]/20">
+                    <div className="flex items-center gap-2 mb-2">
+                      <Play className="text-[#0066b3]" size={18} />
+                      <span className="font-bold text-[#0066b3] text-[18px]">녹화 영상 플레이어</span>
+                    </div>
+                    <p className="text-[#666] text-[16px] mb-4">녹화한 영상을 보기 위한 플레이어 설치 파일</p>
+                    <div className="flex justify-end">
+                      <Button variant="ghost" size="sm" className="text-[#0066b3] hover:bg-[#0066b3]/10">
+                        <DownloadIcon size={18} />
+                      </Button>
+                    </div>
+                  </div>
+
+                  {/* 원격지원 환경진단 툴 */}
+                  <div className="bg-gradient-to-r from-[#0066b3]/20 to-[#0088cc]/10 rounded-xl p-5 border border-[#0066b3]/20">
+                    <div className="flex items-center gap-2 mb-2">
+                      <Settings className="text-[#0066b3]" size={18} />
+                      <span className="font-bold text-[#0066b3] text-[18px]">원격지원 환경진단 툴</span>
+                    </div>
+                    <p className="text-[#666] text-[16px] mb-4">동작 환경 체크 및 로그 수집 프로그램</p>
+                    <div className="flex justify-end">
+                      <Button variant="ghost" size="sm" className="text-[#0066b3] hover:bg-[#0066b3]/10">
+                        <DownloadIcon size={18} />
+                      </Button>
+                    </div>
                   </div>
                 </div>
-                <Button size="lg" className="w-full h-12 rounded-lg bg-[#002868] hover:bg-[#001d4d] text-white font-bold gap-2 text-[18px]">
-                  <DownloadIcon size={16} /> 다운로드
-                </Button>
               </div>
 
-              {/* macOS Card */}
-              <div className="flex flex-col p-8 rounded-xl bg-white border border-slate-200 shadow-sm transition-all hover:shadow-md">
-                <div className="flex items-center gap-5 mb-8">
-                  <div className="w-14 h-14 rounded-lg bg-[#004481] flex items-center justify-center text-white shrink-0">
-                    <Apple size={28} />
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-bold text-[#333]">macOS 상담사용 프로그램</h4>
-                    <p className="text-[#666] font-normal text-[18px]">macOS 10.12 이상 지원</p>
+              {/* 지원받는 측 (고객) */}
+              <div className="rounded-2xl bg-[#f8fafc] p-8 border border-slate-200">
+                <div className="flex items-center gap-3 mb-2">
+                  <h3 className="text-2xl font-bold text-[#0066b3]">지원받는 측 (고객)</h3>
+                  <User className="text-[#0066b3]" size={24} />
+                </div>
+                <p className="text-[#666] text-[16px] mb-8">
+                  지원 환경별로 고객이 설치해야 하는<br />
+                  필요 파일을 확인할 수 있습니다.
+                </p>
+
+                {/* 웹브라우저 */}
+                <div className="mb-6">
+                  <h4 className="font-bold text-[#0066b3] mb-1 text-[18px]">웹브라우저</h4>
+                  <p className="text-[#666] text-[16px] mb-3">모바일 · 영상 지원 앱</p>
+                  <div className="grid grid-cols-2 gap-3">
+                    <a href="https://988.co.kr/" target="_blank" rel="noopener noreferrer">
+                      <Button variant="outline" className="w-full justify-between border-slate-200 text-[#333] hover:border-primary text-[16px]">
+                        <div className="flex items-center gap-2">
+                          <div className="w-5 h-5 bg-gradient-to-br from-green-400 via-blue-500 to-purple-600 rounded"></div>
+                          Google Play
+                        </div>
+                        <DownloadIcon size={16} className="text-[#0066b3]" />
+                      </Button>
+                    </a>
+                    <a href="https://988.co.kr/" target="_blank" rel="noopener noreferrer">
+                      <Button variant="outline" className="w-full justify-between border-slate-200 text-[#333] hover:border-primary text-[16px]">
+                        <div className="flex items-center gap-2">
+                          <Apple size={18} />
+                          App Store
+                        </div>
+                        <DownloadIcon size={16} className="text-[#0066b3]" />
+                      </Button>
+                    </a>
                   </div>
                 </div>
-                <Button size="lg" className="w-full h-12 rounded-lg bg-[#002868] hover:bg-[#001d4d] text-white font-bold gap-2 text-[18px]">
-                  <DownloadIcon size={16} /> 다운로드
-                </Button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* Customer Launcher Section */}
-      <section className="py-24 bg-white border-t border-slate-100">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="max-w-6xl mx-auto">
-            <div className="mb-12">
-              <h3 className="text-[36px] mb-3 text-[#333] font-bold">고객용 원격지원 런처</h3>
-              <p className="md:text-base text-[#666] font-normal text-[18px]">상담사가 안내한 인증번호를 입력하여 원격지원을 받습니다.</p>
-            </div>
 
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
-              {[
-                { name: "Windows", desc: "고객용 런처", icon: <Monitor size={24} />, color: "#004481", btn: "다운로드" },
-                { name: "macOS", desc: "고객용 런처", icon: <Apple size={24} />, color: "#004481", btn: "다운로드" },
-                { name: "Android", desc: "고객용 앱", icon: <Smartphone size={24} />, color: "#004481", btn: "Google Play" },
-                { name: "iOS", desc: "고객용 앱", icon: <Smartphone size={24} />, color: "#004481", btn: "App Store" },
-              ].map((item, i) => (
-                <div key={i} className="flex flex-col items-center p-8 rounded-xl bg-white border border-slate-200 shadow-sm text-center">
-                  <div className={`w-14 h-14 rounded-xl flex items-center justify-center text-white mb-6`} style={{ backgroundColor: item.color }}>
-                    {item.icon}
-                  </div>
-                  <h4 className="text-lg font-bold text-slate-900 mb-1">{item.name}</h4>
-                  <p className="mb-8 text-[18px] font-normal text-[#666]">{item.desc}</p>
-                  <Button variant="outline" className="w-full border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white h-10 rounded-lg text-[18px] font-medium">
-                    {item.btn}
+                {/* 전용 에이전트 */}
+                <div className="mb-6">
+                  <h4 className="font-bold text-[#0066b3] mb-1 text-[18px]">전용 에이전트</h4>
+                  <p className="text-[#666] text-[16px] mb-3">PC지원 고객 설치 플러그인</p>
+                  <Button variant="outline" className="w-full justify-between border-slate-200 text-[#333] hover:border-primary text-[16px]">
+                    <div className="flex items-center gap-2">
+                      <Monitor size={18} className="text-[#0066b3]" />
+                      Windows
+                    </div>
+                    <DownloadIcon size={16} className="text-[#0066b3]" />
                   </Button>
                 </div>
-              ))}
+
+                {/* 모바일 지원 앱 & 영상 지원 앱 */}
+                <div className="grid grid-cols-2 gap-6">
+                  <div>
+                    <h4 className="font-bold text-[#333] mb-3 text-[16px]">모바일 지원 앱</h4>
+                    <div className="space-y-2">
+                      <Button variant="outline" className="w-full justify-between border-slate-200 text-[#333] hover:border-primary text-[14px]">
+                        <div className="flex items-center gap-2">
+                          <div className="w-4 h-4 bg-gradient-to-br from-green-400 via-blue-500 to-purple-600 rounded"></div>
+                          Google Play
+                        </div>
+                        <DownloadIcon size={14} className="text-[#0066b3]" />
+                      </Button>
+                      <Button variant="outline" className="w-full justify-between border-slate-200 text-[#333] hover:border-primary text-[14px]">
+                        <div className="flex items-center gap-2">
+                          <Apple size={16} />
+                          App Store
+                        </div>
+                        <DownloadIcon size={14} className="text-[#0066b3]" />
+                      </Button>
+                    </div>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-[#333] mb-3 text-[16px]">영상 지원 앱</h4>
+                    <div className="space-y-2">
+                      <Button variant="outline" className="w-full justify-between border-slate-200 text-[#333] hover:border-primary text-[14px]">
+                        <div className="flex items-center gap-2">
+                          <div className="w-4 h-4 bg-gradient-to-br from-green-400 via-blue-500 to-purple-600 rounded"></div>
+                          Google Play
+                        </div>
+                        <DownloadIcon size={14} className="text-[#0066b3]" />
+                      </Button>
+                      <Button variant="outline" className="w-full justify-between border-slate-200 text-[#333] hover:border-primary text-[14px]">
+                        <div className="flex items-center gap-2">
+                          <Apple size={16} />
+                          App Store
+                        </div>
+                        <DownloadIcon size={14} className="text-[#0066b3]" />
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* Web Version Banner */}
-            <div className="relative rounded-[2rem] bg-gradient-to-r from-[#001d4d] to-[#004481] p-12 md:p-16 text-center text-white overflow-hidden shadow-2xl shadow-blue-900/20 pt-[57px] pb-[57px]">
+            <div className="mt-16 relative rounded-[2rem] bg-gradient-to-r from-[#001d4d] to-[#004481] p-12 md:p-16 text-center text-white overflow-hidden shadow-2xl shadow-blue-900/20 pt-[57px] pb-[57px]">
               <div className="relative z-10">
                 <h3 className="md:text-3xl mb-6 text-[36px] font-bold">설치 없이 브라우저에서도 바로 원격지원을 받을 수 있습니다!</h3>
                 <p className="text-white/80 mb-10 max-w-2xl mx-auto md:text-base font-normal text-[18px]">
