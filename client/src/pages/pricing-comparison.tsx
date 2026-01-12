@@ -455,7 +455,7 @@ export default function PricingComparison() {
                   <th className="px-6 py-4 text-center font-bold">
                     <div className="flex flex-col items-center gap-1">
                       <Code size={20} />
-                      <span>연동형</span>
+                      <span className="text-[18px]">연동형</span>
                     </div>
                   </th>
                 </tr>
