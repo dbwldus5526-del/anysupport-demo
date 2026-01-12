@@ -464,7 +464,7 @@ export default function PricingComparison() {
                 {comparisonData.map((row, i) => (
                   <tr key={i} className={cn("border-b border-slate-100", i % 2 === 0 && "bg-slate-50/50")}>
                     <td className="px-6 py-4 font-semibold text-[18px] text-[#333]">{row.label}</td>
-                    <td className="px-6 py-4 text-center text-slate-600">{row.saas}</td>
+                    <td className="px-6 py-4 text-center text-slate-600 text-[18px]">{row.saas}</td>
                     <td className="px-6 py-4 text-center text-slate-900 font-medium bg-primary/5">{row.onprem}</td>
                     <td className="px-6 py-4 text-center text-slate-600">{row.sdk}</td>
                   </tr>
