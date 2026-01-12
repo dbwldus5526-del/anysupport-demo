@@ -107,7 +107,7 @@ export default function Pricing() {
       <section className="py-12 bg-white border-b border-slate-100">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-center gap-6">
-            <span className={`text-lg font-bold transition-colors ${!isAnnual ? 'text-primary' : 'text-slate-400'}`}>월간</span>
+            <span className="text-lg transition-colors font-semibold text-[#333]">월간</span>
             <div className="relative">
               <Switch 
                 checked={isAnnual} 
