@@ -325,20 +325,20 @@ export default function PricingComparison() {
                 </div>
 
                 <div className="bg-gradient-to-br from-primary to-primary/80 rounded-2xl p-6 md:p-8 text-white mb-6">
-                  <div className="text-primary-foreground/70 text-sm font-medium mb-2">
+                  <div className="text-primary-foreground/70 font-medium mb-2 text-[18px]">
                     추천 도입 방식
                   </div>
                   <h4 className="text-2xl md:text-3xl font-black mb-4">
                     {getRecommendation().title}
                   </h4>
-                  <p className="text-white/80 mb-6">
+                  <p className="text-white/80 mb-6 text-[18px]">
                     {getRecommendation().reason}
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {getRecommendation().features.map((feature, i) => (
                       <span
                         key={i}
-                        className="px-3 py-1 bg-white/20 rounded-full text-sm font-medium"
+                        className="px-3 py-1 bg-white/20 rounded-full font-medium text-[18px]"
                       >
                         {feature}
                       </span>
@@ -350,7 +350,7 @@ export default function PricingComparison() {
                   <Button
                     size="lg"
                     onClick={openModal}
-                    className="flex-1 h-12 font-bold"
+                    className="flex-1 h-12 font-bold text-[18px]"
                   >
                     상담 요청하기
                   </Button>
@@ -358,7 +358,7 @@ export default function PricingComparison() {
                     size="lg"
                     variant="outline"
                     onClick={resetQuiz}
-                    className="flex-1 h-12 font-bold"
+                    className="flex-1 h-12 font-bold text-[18px] text-[#333]"
                   >
                     다시 진단하기
                   </Button>
