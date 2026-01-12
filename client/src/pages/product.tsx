@@ -420,7 +420,7 @@ export default function Product() {
                     <span className="text-primary font-bold text-sm tracking-tighter mb-2 block">
                       {item.step}
                     </span>
-                    <h3 className="text-xl font-bold mb-4 text-slate-900">
+                    <h3 className="font-bold mb-4 text-[18px] text-[#333]">
                       {item.title}
                     </h3>
                     <p className="mb-6 text-[#666] text-[18px]">
