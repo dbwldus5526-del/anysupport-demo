@@ -121,7 +121,7 @@ export default function MobileProduct() {
                   "앱 설치 최소화 설계",
                   "비대면 고객 응대 최적화"
                 ].map((item, i) => (
-                  <li key={i} className="flex items-center gap-3 text-slate-700 font-semibold">
+                  <li key={i} className="flex items-center gap-3 font-semibold text-[#333] text-[18px]">
                     <CheckCircle2 className="text-primary shrink-0" size={24} />
                     {item}
                   </li>
