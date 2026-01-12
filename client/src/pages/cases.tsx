@@ -704,7 +704,7 @@ export default function Cases() {
                           </div>
                         </div>
                         <div className="p-3 bg-green-50 rounded-lg border border-green-200">
-                          <div className="text-center text-xs font-bold text-green-800 mb-2">
+                          <div className="text-center font-bold text-green-800 mb-2 text-[18px]">
                             DMZ
                           </div>
                           <div className="flex items-center justify-center gap-2 p-2 bg-white rounded border border-slate-200">
