@@ -448,7 +448,7 @@ export default function PricingComparison() {
                   <th className="px-6 py-4 text-center font-bold bg-primary">
                     <div className="flex flex-col items-center gap-1">
                       <Server size={20} />
-                      <span>구축형</span>
+                      <span className="text-[18px]">구축형</span>
                       <span className="text-[10px] bg-white/20 px-2 py-0.5 rounded-full">추천</span>
                     </div>
                   </th>
