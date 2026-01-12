@@ -662,7 +662,7 @@ export default function Cases() {
                           {/* 프로세스 단계 */}
                           <div className="space-y-3">
                             <div className="flex items-start gap-3 p-3 bg-white rounded-lg border border-slate-200">
-                              <div className="w-6 h-6 bg-primary text-white rounded-full flex items-center justify-center text-xs font-bold shrink-0">
+                              <div className="w-6 h-6 bg-primary text-white rounded-full flex items-center justify-center shrink-0 text-[16px] font-extrabold">
                                 2
                               </div>
                               <div>
