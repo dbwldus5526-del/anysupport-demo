@@ -3,6 +3,7 @@ import { Download as DownloadIcon, Monitor, Apple, Smartphone, Globe, MessageSqu
 import downloadHeroImg from "@assets/generated_images/modern_abstract_blue_gradient_background_for_download_page_hero_section.png";
 import googlePlayLogo from "@assets/image-removebg-preview_(20)_1768199099339.png";
 import appStoreLogo from "@assets/image-removebg-preview_(21)_1768199186426.png";
+import windowsLogo from "@assets/image-removebg-preview_(22)_1768199241860.png";
 
 export default function Download() {
   return (
@@ -137,7 +138,7 @@ export default function Download() {
                   <p className="text-[#666] text-[16px] mb-3">PC지원 고객 설치 플러그인</p>
                   <Button variant="outline" className="w-full justify-between border-slate-200 text-[#333] hover:border-primary text-[16px]">
                     <div className="flex items-center gap-2">
-                      <Monitor size={18} className="text-[#0066b3]" />
+                      <img src={windowsLogo} alt="Windows" className="h-5" />
                       Windows
                     </div>
                     <DownloadIcon size={16} className="text-[#0066b3]" />
