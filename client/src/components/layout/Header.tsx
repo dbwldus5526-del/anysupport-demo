@@ -56,8 +56,6 @@ const NAV_ITEMS = [
     subItems: [
       { label: "FAQ", href: "/support/faq" },
       { label: "공지사항", href: "/support/notice" },
-      { label: "보도자료", href: "/support/press" },
-      { label: "블로그", href: "/support/blog" },
     ],
   },
 ];
