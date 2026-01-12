@@ -346,7 +346,7 @@ export default function Product() {
                 <div className="flex items-center gap-3 bg-slate-50 rounded-xl p-4 border border-slate-100">
                   <Monitor size={20} className="text-primary shrink-0" />
                   <div>
-                    <div className="font-bold text-sm text-slate-900">체계적 DB 관리</div>
+                    <div className="font-bold text-[#333] text-[18px]">체계적 DB 관리</div>
                     <div className="text-[16px] text-[#666]">모든 상담 이력 자동 저장</div>
                   </div>
                 </div>
