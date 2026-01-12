@@ -340,7 +340,7 @@ export default function Product() {
                   <FileText size={20} className="text-primary shrink-0" />
                   <div>
                     <div className="font-bold text-sm text-slate-900">지원 내역 통계</div>
-                    <div className="text-xs text-slate-500">상세 리포트 및 엑셀 저장</div>
+                    <div className="text-[#666] text-[16px]">상세 리포트 및 엑셀 저장</div>
                   </div>
                 </div>
                 <div className="flex items-center gap-3 bg-slate-50 rounded-xl p-4 border border-slate-100">
