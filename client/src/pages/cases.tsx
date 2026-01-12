@@ -32,6 +32,12 @@ import {
   Video,
 } from "lucide-react";
 import { motion } from "framer-motion";
+import logo조달청 from "@assets/조달청@2x_1768206613259.png";
+import logo법무부 from "@assets/법무부@2x_1768206628443.png";
+import logoKDB생명 from "@assets/KDB생명@2x_1768206638134.png";
+import logo한화생명 from "@assets/Hanwha@2x_1768206650889.png";
+import logo서울특별시 from "@assets/서울특별시@2x_1768206671468.png";
+import logo기획재정부 from "@assets/기획재정부@2x_1768206679624.png";
 
 const industryFilters = [
   { id: "all", label: "전체", icon: Building2 },
@@ -48,37 +54,37 @@ const allCases = [
     company: "조달청",
     industry: ["public"],
     desc: "나라장터 이용기관 원격지원",
-    logo: "/attached_assets/조달청@2x_1768206613259.png",
+    logo: logo조달청,
   },
   {
     company: "법무부",
     industry: ["public"],
     desc: "통합사증정보시스템 고객 원격지원",
-    logo: "/attached_assets/법무부@2x_1768206628443.png",
+    logo: logo법무부,
   },
   {
     company: "KDB생명",
     industry: ["finance"],
     desc: "다이렉트 보험 고객 원격상담",
-    logo: "/attached_assets/KDB생명@2x_1768206638134.png",
+    logo: logoKDB생명,
   },
   {
     company: "한화생명",
     industry: ["finance"],
     desc: "사이트 이용 고객 원격지원",
-    logo: "/attached_assets/Hanwha@2x_1768206650889.png",
+    logo: logo한화생명,
   },
   {
     company: "서울특별시",
     industry: ["public"],
     desc: "클린업시스템 이용 고객 원격지원",
-    logo: "/attached_assets/서울특별시@2x_1768206671468.png",
+    logo: logo서울특별시,
   },
   {
     company: "기획재정부",
     industry: ["public"],
     desc: "디브레인 시스템 이용 고객 원격지원",
-    logo: "/attached_assets/기획재정부@2x_1768206679624.png",
+    logo: logo기획재정부,
   },
   {
     company: "통계청",
