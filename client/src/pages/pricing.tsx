@@ -286,7 +286,7 @@ export default function Pricing() {
                         <span className="flex items-center justify-center w-6 h-6 rounded-full bg-white text-primary text-xs font-black">
                           {category.id}
                         </span>
-                        <h3 className="text-xl font-black">{category.title}</h3>
+                        <h3 className="text-xl font-medium">{category.title}</h3>
                       </div>
                       <p className="text-white/80 text-[18px] font-normal">{category.subtitle}</p>
                     </div>
