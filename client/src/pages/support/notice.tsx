@@ -1,24 +1,107 @@
 import { useState } from "react";
-import { FolderOpen, FileText, ChevronDown, ChevronUp } from "lucide-react";
+import { FolderOpen, FileText, ChevronDown, ChevronUp, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 interface NoticeItem {
   title: string;
   date?: string;
+  modalContent?: string;
 }
 
 interface NoticeCategory {
   title: string;
   count: number;
   items: NoticeItem[];
-  showMore?: boolean;
 }
+
+const termsContent = `[애니서포트 서비스 약관]
+
+제1조 (목적)
+
+본 약관은 주식회사 코이노(이하 "회사"라 한다)가 운영하는 웹사이트(이하 "사이트"라 한다)에서 제공하는 인터넷 관련 서비스(이하 "애니서포트"라 한다)를 이용함에 있어 회사와 이용자간 이용조건 및 절차와 권리•의무 및 책임 사항을 규정함을 목적으로 합니다.
+
+제2조 (정의)
+
+1) "회원"이라 함은 회사가 운영하는 사이트에 접속하여 이 약관에 동의하고 아이디 및 비밀번호를 발급받아 회원등록을 하며 회사의 정보를 제공받고 서비스를 지속적으로 이용할 수 있는 자를 말하며 회사가 정한 회원의 구분에 따라 유료회원과 일반회원으로 구분됩니다.
+
+2) "서비스"란 회사의 사이트를 통하여 데스크톱, 모바일단말기기 등 유무선기기와 인터넷을 통해 접속하는 회원 또는 이용자에게 원격지원, 원격상담, 원격제어 등 원격 관련 비대면 서비스를 이용할 수 있도록 무료 또는 유료로 제공하는 행위 또는 그 행위의 대상인 유•무형의 제품 자체를 의미합니다.
+
+3) "이용계약"이라 함은 회사 서비스와 관련하여 회사와 회원간 체결하는 계약을 말합니다.
+
+4) "유료회원"이라 함은 회사에 유료서비스 가입신청서를 제출하고 이를 회사가 승인하여 이용요금의 납부의무를 가진 법인 또는 개인을 의미합니다.
+
+5) "일반회원"이라 함은 회사가 운영하는 사이트의 이용약관에 동의하고 '이용신청 및 승인' 절차에 의하여 회원으로 등록된 자를 의미합니다.
+
+6) "아이디"라 함은 회원식별과 서비스 이용을 위해 회원이 선정하고 회사가 승인하는 식별주체로 문자와 숫자의 조합 또는 회원의 이메일 주소를 의미합니다.
+
+7) "비밀번호(Password)"라 함은 회원이 부여받은 아이디에 대해 회원이 네트워크상에서 본인의 비밀보호를 위해 설정한 문자와 숫자 및 특수문자의 조합을 의미합니다.
+
+8) "계약해지"라 함은 회사 또는 회원(회원신청상태 포함)이 서비스 개통 후 서비스에 대한 이용계약을 해지하는 것을 말합니다.
+
+9) "계약취소"라 함은 회사 또는 서비스신청자가 서비스 개통 전 이용계약을 해지하는 것을 말합니다.
+
+10) "개통일"이라 함은 신청자가 서비스를 신청한 후 회사가 서비스를 이용할 수 있도록 승인 절차와 개통처리를 완료한 일자를 의미합니다.
+
+11) "해지일/취소일"은 회사 또는 신청자가 이미 신청한 서비스의 이용(및 이용 전) 종료를 요청하여 회사가 검토하여 종료키로 한 날짜를 의미합니다.
+
+12) "불법통신"은 국가기밀 침해, 청소년 보호법상 청소년 유해 매체물, 음란한 내용, 불법복제 등 지적재산권 침해, 비방 및 허위사실에 의한 타인 명예훼손 등이 포함된 통신구현형태를 의미합니다.
+
+13) "게시물"은 서비스를 이용할 때 회원이 여러 유형의 단말기기(데스크톱, 모바일기기, TV등 유무선기기 포함)를 통해 회사 사이트에 게시한 부호, 문자, 음성, 음향, 화상, 동영상 등의 정보를 전달하는 문장, 이미지, 동영상 등의 각종 파일과 그 링크를 말합니다.
+
+14) "결제대행업자"는 회원에게 결제수단을 선택하게 하려고 회사가 지정한 전자지불 서비스를 대행하는 업체를 말합니다.
+
+제3조 (약관의 효력과 개정)
+
+1) 회사는 서비스의 효율적인 제공을 위하여 본 약관을 수정 또는 변경할 수 있으며 변경된 약관은 회사의 사이트 홈페이지(https://www.anysupport.net)에 공지합니다.
+
+2) 약관에 동의하고 회원가입을 한 회원의 경우 약관 동의 시점부터 동의한 약관의 적용을 받되 약관의 변경이 있을 경우 변경의 효력이 발생한 시점부터 변경된 약관의 적용을 받습니다. 변경된 약관은 공시 또는 고지한 적용일로부터 효력을 발생합니다.
+
+3) 회사는 필요하다고 인정되는 경우 약관을 변경할 수 있습니다. 약관이 변경되는 경우 변경된 약관의 내용과 적용일을 정해 그 적용일로부터 7일전까지 홈페이지에 공지하거나 회원의 이메일로 전송하는 방법으로 고지합니다. 단, 변경내용이 회원에게 불리하거나 중대사항 변경에 해당할 경우 30일 전에 고지합니다.
+
+4) 회원이 본 약관의 변경에 동의하지 않을 경우 이용을 중단하고 이용계약 해지 및 회원탈퇴할 수 있습니다. 약관시행일까지 회원탈퇴를 하지 않은 경우 개정약관에 동의한 것으로 간주합니다.
+
+5) 본 약관에 명시되지 않는 사항에 대해 '전자상거래 등에서의 소비자보호에 관한 법률', '정보통신망이용촉진 및 정보보호 등에 관한 법률', 등 관계법령 및 회사 개별 서비스별 별도의 이용약관 및 규정이 있는 경우에 이를 따르도록 합니다.
+
+제4조 (서비스의 제공 및 계약의 성립)
+
+1) 회사가 제공하는 서비스 이용을 원하는 신청자가 본 약관에 동의를 한 후 회사가 제시하는 양식과 절차에 따라 신청한 내용에 대해 회사가 아이디 개통 후 사용허가를 함으로 회사와 신청자간 이용계약이 성립됩니다.
+
+2) 신청자가 이용약관을 동의한다는 의사표시는 서비스를 이용하고자 하는 대상이 이용신청시 약관에 대한 동의 체크를 하여 완료됩니다. 오프라인 이용신청의 경우 신청자의 가입신청서 및 관련서류 제출을 수반한 회사의 이용신청 기준에 의거 완료됩니다.
+
+3) 계약이 성립된 후 회사는 회원에게 본 약관이 정하는 기준에 의거 회원아이디를 이메일과 같은 온라인 매체를 통해 전달하며 서비스 이용기간 동안 회원아이디의 변경은 원칙적으로 불가합니다.
+
+4) 온라인 및 오프라인 양식에 제출하는 모든 정보는 허구가 없는 실데이터여야 하고 만약 실명 또는 실 정보를 입력하지 않은 회원의 경우 법적인 보호를 받을 수 없습니다.
+
+5) 이용신청을 위한 정보는 홈페이지 회원가입 화면에서 아래와 같은 내용을 정확히 포함하여야 합니다.
+- 아이디(ID), 비밀번호(Password), 회원명(Name), 회사이름(Company), 국적(Nationality), 연락처(Mobile phone, Telephone, Email)
+
+제5조 (서비스의 중단 및 게시물·내용물 삭제)
+
+1) 회사는 아래에 해당 시 서비스 전부 또는 일부를 제한하거나 중지할 수 있습니다.
+- 천재지변, 국가비상사태 등 불가항력적인 사유가 있는 경우
+- 전기통신사업법에 규정된 기간통신사업자가 전기통신서비스를 중지하였을 경우
+- 서비스용 설비 보수, 정기점검 등 공사로 인한 부득이한 경우
+- 정전, 제반 설비 장애나 이용량 폭주 등으로 정상적 서비스 이용에 지장이 있는 경우
+- 기타 회사 업무상 또는 기술상의 이유로 서비스 중지가 필요하다고 판단되는 경우
+
+2) 서비스 중단이 있는 경우에는 회사가 제8조에 기술된 회원에 대한 통지에 정한 방법으로 회원에게 사전 통지합니다.
+
+3) 회사가 통제할 수 없는 사유로 인한 서비스 중단으로 인해 사전 통지가 불가능한 경우에는 사후 이를 홈페이지 또는 개별 서비스 관련 홈페이지에 공지할 수 있습니다.
+
+제6조 (제공 서비스와 이용요금)
+
+1) 회사는 원거리에 있는 고객의 문제점을 원격으로 빠르게 진단하고 모니터링하여 해결해 줄 수 있는 애니서포트 원격지원제어 서비스를 회원에게 제공합니다.
+
+2) 이용요금은 애니서포트 홈페이지 (https://www.anysupport.net) 에 공시합니다.
+
+3) 회사는 상기 서비스 이외 새로운 서비스를 추가로 제공할 수 있으며, 신규 서비스는 본 약관에 의거하여 서비스를 제공합니다.`;
 
 const noticeCategories: NoticeCategory[] = [
   {
     title: "이용약관",
     count: 1,
     items: [
-      { title: "애니서포트 서비스 이용약관" },
+      { title: "애니서포트 서비스 이용약관", modalContent: termsContent },
     ],
   },
   {
@@ -65,6 +148,9 @@ const noticeCategories: NoticeCategory[] = [
 
 export default function Notice() {
   const [openCategories, setOpenCategories] = useState<number[]>([0, 1, 2, 3, 4, 5]);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalTitle, setModalTitle] = useState("");
+  const [modalContent, setModalContent] = useState("");
 
   const toggleCategory = (index: number) => {
     setOpenCategories(prev => 
@@ -72,6 +158,18 @@ export default function Notice() {
         ? prev.filter(i => i !== index)
         : [...prev, index]
     );
+  };
+
+  const openModalWithContent = (title: string, content: string) => {
+    setModalTitle(title);
+    setModalContent(content);
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+    setModalTitle("");
+    setModalContent("");
   };
 
   return (
@@ -114,17 +212,13 @@ export default function Notice() {
                     {category.items.map((item, itemIndex) => (
                       <div
                         key={itemIndex}
+                        onClick={() => item.modalContent && openModalWithContent(item.title, item.modalContent)}
                         className="flex items-start gap-3 text-[#0066b3] hover:text-primary cursor-pointer"
                       >
                         <FileText size={16} className="shrink-0 mt-0.5 text-[#666]" />
                         <span className="text-[15px]">{item.title}</span>
                       </div>
                     ))}
-                    {category.showMore && (
-                      <div className="text-[14px] text-[#0066b3] hover:text-primary cursor-pointer mt-2">
-                        모두 보기 {category.count}
-                      </div>
-                    )}
                   </div>
                 )}
               </div>
@@ -132,6 +226,32 @@ export default function Notice() {
           </div>
         </div>
       </section>
+
+      {modalOpen && (
+        <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
+          <div className="bg-white rounded-2xl max-w-3xl w-full max-h-[80vh] flex flex-col">
+            <div className="flex items-center justify-between p-6 border-b border-slate-200">
+              <h2 className="text-xl font-bold text-[#333]">{modalTitle}</h2>
+              <button
+                onClick={closeModal}
+                className="p-2 hover:bg-slate-100 rounded-full transition-colors"
+              >
+                <X size={24} className="text-[#666]" />
+              </button>
+            </div>
+            <div className="p-6 overflow-y-auto flex-1">
+              <pre className="whitespace-pre-wrap text-[14px] text-[#333] font-sans leading-relaxed">
+                {modalContent}
+              </pre>
+            </div>
+            <div className="p-6 border-t border-slate-200 flex justify-end">
+              <Button onClick={closeModal} variant="outline">
+                닫기
+              </Button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
