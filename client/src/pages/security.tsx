@@ -186,7 +186,7 @@ export default function Security() {
                 편리함을 위해 보안을 희생하지 않고<br className="hidden md:block" />
                 보안을 위해 사용성을 포기하지 않습니다.
               </p>
-              <p className="text-primary font-bold text-lg opacity-80">
+              <p className="opacity-80 text-[#fafafa] font-normal text-[20px]">
                 “쉽지만 위험하지 않은 원격지원”
               </p>
             </div>
