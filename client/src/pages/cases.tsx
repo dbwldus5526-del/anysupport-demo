@@ -625,7 +625,7 @@ export default function Cases() {
                         <span className="text-xs font-bold text-slate-500 mr-2">
                           Purpose
                         </span>
-                        <span className="text-xs text-slate-700">
+                        <span className="text-[16px] text-[#333]">
                           고객사 내부망 접속 승인프로세스를 통한 시스템 접근
                           보안성 강화
                         </span>
