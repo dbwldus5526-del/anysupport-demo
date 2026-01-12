@@ -607,7 +607,7 @@ export default function Cases() {
                           <div className="font-bold text-sky-700 text-[18px]">
                             고객 (내외부망)
                           </div>
-                          <div className="text-xs text-slate-500">
+                          <div className="text-[18px] text-[#666]">
                             PC·모바일 이용고객
                           </div>
                         </div>
