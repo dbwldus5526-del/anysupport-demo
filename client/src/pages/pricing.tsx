@@ -163,7 +163,7 @@ export default function Pricing() {
                   <Button 
                     size="lg" 
                     onClick={openModal}
-                    className={`w-full h-14 rounded-2xl font-black text-lg transition-all ${plan.popular ? 'bg-primary text-white hover:bg-primary/90 shadow-lg shadow-primary/20' : 'bg-slate-900 text-white hover:bg-slate-800'}`}
+                    className="inline-flex items-center justify-center gap-2 whitespace-nowrap focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 hover-elevate active-elevate-2 border border-primary-border min-h-10 px-8 w-full h-14 rounded-2xl text-lg transition-all bg-slate-900 text-white hover:bg-slate-800 font-bold"
                   >
                     바로구매
                   </Button>
@@ -171,7 +171,7 @@ export default function Pricing() {
                     size="lg" 
                     variant="outline" 
                     onClick={openModal}
-                    className="w-full h-14 rounded-2xl font-black text-lg border-2 border-slate-200 hover:border-primary hover:text-primary transition-all"
+                    className="w-full h-14 rounded-2xl font-bold text-lg border-2 border-slate-200 hover:border-primary hover:text-primary transition-all"
                   >
                     문의하기
                   </Button>
