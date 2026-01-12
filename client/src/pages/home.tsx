@@ -606,14 +606,15 @@ export function Home() {
                     PC에서 에이전트 실행 후 로그인하거나<br />
                     PC·모바일에서 웹브라우저로 접속해 로그인하세요.
                   </p>
-                  <Button 
-                    size="sm" 
-                    variant="outline" 
-                    onClick={openModal}
-                    className="mt-3 font-bold border-slate-300 text-[#333] hover:border-primary hover:text-primary"
-                  >
-                    원격지원 바로시작
-                  </Button>
+                  <a href="/attached_assets/AnySupport_Setup_10_(4)_1768201870901.exe" download="AnySupport_Setup.exe">
+                    <Button 
+                      size="sm" 
+                      variant="outline" 
+                      className="mt-3 font-bold border-slate-300 text-[#333] hover:border-primary hover:text-primary"
+                    >
+                      원격지원 바로시작
+                    </Button>
+                  </a>
                 </div>
               </div>
               <div className="flex items-start gap-4 pt-[9px] pb-[9px]">
