@@ -591,7 +591,7 @@ export function Home() {
               <img 
                 src={connectionProcessImg} 
                 alt="원격지원 연결 화면" 
-                className="max-w-full rounded-2xl shadow-lg"
+                className="max-w-full rounded-2xl"
               />
             </div>
             <div className="space-y-0">
