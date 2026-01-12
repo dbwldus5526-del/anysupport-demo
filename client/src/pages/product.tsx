@@ -333,7 +333,7 @@ export default function Product() {
                   <Users size={20} className="text-primary shrink-0" />
                   <div>
                     <div className="font-bold text-sm text-slate-900">상담원별 권한 설정</div>
-                    <div className="text-xs text-slate-500">세분화된 접근 권한 관리</div>
+                    <div className="text-[16px] text-[#666]">세분화된 접근 권한 관리</div>
                   </div>
                 </div>
                 <div className="flex items-center gap-3 bg-slate-50 rounded-xl p-4 border border-slate-100">
