@@ -169,7 +169,7 @@ export default function MobileProduct() {
                   <h3 className="text-2xl font-bold mb-4 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                     {feature.title}
                   </h3>
-                  <p className="text-white/90 text-sm leading-relaxed transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">
+                  <p className="text-white/90 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75 text-[18px]">
                     {feature.desc}
                   </p>
                 </div>
