@@ -152,7 +152,7 @@ export default function Guide() {
         </div>
       </section>
       {/* 6-Step Usage Guide Section (Quick Overview) */}
-      <section className="py-24 border-b border-slate-100 bg-white">
+      <section className="py-24 border-b border-slate-100 bg-white pt-[92px] pb-[92px]">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 max-w-7xl mx-auto relative">
             {usageSteps.map((step, i) => (
