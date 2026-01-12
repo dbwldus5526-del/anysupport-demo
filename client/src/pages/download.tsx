@@ -43,7 +43,7 @@ export default function Download() {
                   </div>
                   <div>
                     <h4 className="text-lg font-bold text-[#333]">Windows 상담사용 프로그램</h4>
-                    <p className="text-[18px] font-normal text-[#666]">Windows 7 / 8 / 10 / 11 지원</p>
+                    <p className="text-[18px] font-normal text-[#666]">Windows V6.0/ V10.0 지원</p>
                   </div>
                 </div>
                 <Button size="lg" className="w-full h-12 rounded-lg bg-[#002868] hover:bg-[#001d4d] text-white font-bold gap-2 text-[18px]">
