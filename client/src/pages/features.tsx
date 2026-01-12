@@ -197,7 +197,7 @@ export default function Features() {
                           </div>
                           <div>
                             <h4 className="font-bold text-lg mb-1 group-hover/item:text-primary transition-colors">{item.title}</h4>
-                            <p className="text-slate-400 text-sm leading-relaxed">{item.desc}</p>
+                            <p className="text-sm leading-relaxed text-[#e6edf7] font-normal">{item.desc}</p>
                           </div>
                         </div>
                       ))}
