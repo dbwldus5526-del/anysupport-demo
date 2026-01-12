@@ -46,7 +46,7 @@ export default function Download() {
                     <p className="text-[18px] font-normal text-[#666]">Windows 7 / 8 / 10 / 11 지원</p>
                   </div>
                 </div>
-                <Button size="lg" className="w-full h-12 rounded-lg bg-[#002868] hover:bg-[#001d4d] text-white font-bold text-sm gap-2">
+                <Button size="lg" className="w-full h-12 rounded-lg bg-[#002868] hover:bg-[#001d4d] text-white font-bold gap-2 text-[18px]">
                   <DownloadIcon size={16} /> 다운로드
                 </Button>
               </div>
@@ -62,7 +62,7 @@ export default function Download() {
                     <p className="text-[#666] font-normal text-[18px]">macOS 10.12 이상 지원</p>
                   </div>
                 </div>
-                <Button size="lg" className="w-full h-12 rounded-lg bg-[#002868] hover:bg-[#001d4d] text-white font-bold text-sm gap-2">
+                <Button size="lg" className="w-full h-12 rounded-lg bg-[#002868] hover:bg-[#001d4d] text-white font-bold gap-2 text-[18px]">
                   <DownloadIcon size={16} /> 다운로드
                 </Button>
               </div>
