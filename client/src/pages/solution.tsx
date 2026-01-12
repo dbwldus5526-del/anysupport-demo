@@ -104,7 +104,7 @@ export default function Solution() {
           </div>
 
           <div className="max-w-4xl mx-auto mb-16">
-            <div className="bg-slate-50 rounded-2xl p-8 md:p-12 border border-slate-100 flex items-center justify-center relative overflow-hidden">
+            <div className="bg-slate-50 rounded-2xl p-8 md:p-12 border border-slate-100 flex items-center justify-center relative overflow-hidden pt-[36px] pb-[36px] pl-[52px] pr-[52px]">
               <div className="grid grid-cols-3 gap-8 items-center w-full max-w-lg relative z-10">
                 <div className="flex flex-col items-center gap-3">
                   <div className="w-20 h-20 rounded-full bg-white shadow-lg flex items-center justify-center text-primary border border-slate-50">
