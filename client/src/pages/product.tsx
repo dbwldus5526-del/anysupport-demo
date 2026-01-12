@@ -324,7 +324,7 @@ export default function Product() {
                   <Settings size={28} className="text-primary" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-1">강력한 관리자 기능</h3>
+                  <h3 className="text-xl font-bold mb-1 text-[#333]">강력한 관리자 기능</h3>
                   <p className="text-[16px] text-[#666]">대규모 조직 운영에 최적화</p>
                 </div>
               </div>
