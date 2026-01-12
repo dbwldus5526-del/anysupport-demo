@@ -23,7 +23,8 @@ import {
   Database,
 } from "lucide-react";
 import { motion, useInView } from "framer-motion";
-import heroImage from "@assets/hero1_1767765900169.png";
+import heroImage1 from "@assets/hero1_1767765900169.png";
+import heroImage2 from "@assets/190508_bg_-_복사본_1768208662176.jpg";
 import pcSupportImgOriginal from "@assets/generated_images/pc_remote_support_professional_image.png";
 import mobileSupportImgOriginal from "@assets/generated_images/mobile_remote_support_app_interface.png";
 import videoSupportImgOriginal from "@assets/generated_images/video-based_remote_support_concept.png";
@@ -206,6 +207,82 @@ const DesignIcon = ({ type }: { type: string }) => {
 
 import UseCasesLogos from "@/components/sections/UseCasesLogos";
 
+const heroImages = [heroImage1, heroImage2];
+
+function HeroCarousel({ openModal, scrollToSection }: { openModal: () => void; scrollToSection: (id: string) => void }) {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % heroImages.length);
+    }, 8000);
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <section className="relative min-h-[90vh] flex items-center pt-20 pb-20 overflow-hidden bg-white">
+      <div className="absolute inset-0 z-0">
+        {heroImages.map((img, index) => (
+          <img
+            key={index}
+            src={img}
+            alt={`AnySupport Background ${index + 1}`}
+            className={`absolute inset-0 w-full h-full object-cover object-right-bottom transition-opacity duration-1000 ${
+              currentSlide === index ? "opacity-80" : "opacity-0"
+            }`}
+          />
+        ))}
+        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent lg:w-3/4" />
+      </div>
+
+      <div className="max-w-[1280px] w-full mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
+        <div className="max-w-3xl">
+          <h1 className="font-black mt-[0px] mb-[20px] text-[#333] text-[67px] leading-[1.1]">
+            고객과 상담사 사이
+            <br />
+            <span className="block text-primary text-[67px]">애니서포트가 있습니다</span>
+          </h1>
+          <p className="sm:text-lg md:text-xl mb-10 max-w-2xl text-[#333] mt-6 text-[21px] font-normal">
+            고객 상담·IT 지원·운영 지원을 하나로 연결하는
+            <br className="hidden md:block" />
+            기업용 원격지원 SaaS 애니서포트
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Button
+              size="lg"
+              onClick={openModal}
+              className="h-14 px-10 text-lg font-bold"
+            >
+              무료체험 시작하기 <ArrowRight className="ml-2" />
+            </Button>
+            <Button
+              variant="outline"
+              size="lg"
+              onClick={() => scrollToSection("features")}
+              className="h-14 px-10 text-lg font-bold bg-[#f7f8fc] border border-slate-200"
+            >
+              제품 자세히 보기
+            </Button>
+          </div>
+        </div>
+      </div>
+
+      {/* Slide Indicators */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-2">
+        {heroImages.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentSlide(index)}
+            className={`w-3 h-3 rounded-full transition-all ${
+              currentSlide === index ? "bg-primary w-8" : "bg-slate-300"
+            }`}
+          />
+        ))}
+      </div>
+    </section>
+  );
+}
+
 export function Home() {
   const { openModal } = useModal();
   const [activeDevice, setActiveDevice] = useState("agent");
@@ -258,49 +335,8 @@ export function Home() {
 
   return (
     <div className="flex flex-col">
-      {/* 1. Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center pt-20 pb-20 overflow-hidden bg-white">
-        <div className="absolute inset-0 z-0">
-          <img
-            src={heroImage}
-            alt="AnySupport Background"
-            className="w-full h-full object-cover object-right-bottom opacity-80"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent lg:w-3/4" />
-        </div>
-
-        <div className="max-w-[1280px] w-full mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
-          <div className="max-w-3xl">
-            <h1 className="font-black mt-[0px] mb-[20px] text-[#333] text-[67px] leading-[1.1]">
-              고객과 상담사 사이
-              <br />
-              <span className="block text-primary text-[67px]">애니서포트가 있습니다</span>
-            </h1>
-            <p className="sm:text-lg md:text-xl mb-10 max-w-2xl text-[#333] mt-6 text-[21px] font-normal">
-              고객 상담·IT 지원·운영 지원을 하나로 연결하는
-              <br className="hidden md:block" />
-              기업용 원격지원 SaaS 애니서포트
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button
-                size="lg"
-                onClick={openModal}
-                className="h-14 px-10 text-lg font-bold"
-              >
-                무료체험 시작하기 <ArrowRight className="ml-2" />
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                onClick={() => scrollToSection("features")}
-                className="h-14 px-10 text-lg font-bold bg-[#f7f8fc] border border-slate-200"
-              >
-                제품 자세히 보기
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* 1. Hero Section with Carousel */}
+      <HeroCarousel openModal={openModal} scrollToSection={scrollToSection} />
       {/* 다양한 환경과 기기 지원 */}
       <section className="py-24 bg-white pt-[154px] pb-[154px]">
         <div className="max-w-[1280px] w-full mx-auto px-4 sm:px-6 lg:px-10">
