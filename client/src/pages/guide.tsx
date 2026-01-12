@@ -270,7 +270,7 @@ export default function Guide() {
       {/* Contact Section */}
       <section className="py-20 bg-white border-t border-slate-100">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-2xl md:text-3xl font-black mb-6 text-slate-900">찾으시는 내용이 없나요?</h2>
+          <h2 className="md:text-3xl font-black mb-6 text-[36px] text-[#333]">찾으시는 내용이 없나요?</h2>
           <Button size="lg" onClick={openModal} className="h-14 px-10 rounded-2xl font-black text-lg shadow-lg group">
             고객센터 문의하기 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
           </Button>
