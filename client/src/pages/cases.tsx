@@ -585,7 +585,7 @@ export default function Cases() {
                         <span className="md:text-xs font-bold text-center text-[#333] text-[18px]">
                           공장관리
                         </span>
-                        <span className="text-[10px] md:text-xs text-slate-400 text-center">
+                        <span className="md:text-xs text-center text-[18px] text-[#666]">
                           운영시스템
                         </span>
                       </div>
