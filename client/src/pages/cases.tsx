@@ -564,28 +564,28 @@ export default function Cases() {
                           size={28}
                           className="text-purple-500 mb-2"
                         />
-                        <span className="md:text-xs font-bold text-center text-[#333] text-[18px]">
+                        <span className="font-bold text-center text-[#333] text-[18px]">
                           수강생/직원
                         </span>
-                        <span className="md:text-xs text-center text-[18px] text-[#666]">
+                        <span className="text-center text-[18px] text-[#666]">
                           전용 단말기
                         </span>
                       </div>
                       <div className="flex flex-col items-center p-3 md:p-4 bg-white rounded-xl border border-slate-200 w-28 md:w-36">
                         <Network size={28} className="text-blue-500 mb-2" />
-                        <span className="md:text-xs font-bold text-center text-[18px] text-[#333]">
+                        <span className="font-bold text-center text-[18px] text-[#333]">
                           공급솔루션
                         </span>
-                        <span className="md:text-xs text-center text-[18px] text-[#666]">
+                        <span className="text-center text-[18px] text-[#666]">
                           서비스 연계
                         </span>
                       </div>
                       <div className="flex flex-col items-center p-3 md:p-4 bg-white rounded-xl border border-slate-200 w-28 md:w-36">
                         <Factory size={28} className="text-slate-600 mb-2" />
-                        <span className="md:text-xs font-bold text-center text-[#333] text-[18px]">
+                        <span className="font-bold text-center text-[#333] text-[18px]">
                           공장관리
                         </span>
-                        <span className="md:text-xs text-center text-[18px] text-[#666]">
+                        <span className="text-center text-[18px] text-[#666]">
                           운영시스템
                         </span>
                       </div>
