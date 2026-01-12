@@ -714,7 +714,7 @@ export default function Cases() {
                             </span>
                           </div>
                           <div className="flex items-center justify-center mt-2">
-                            <div className="flex items-center gap-2 px-3 py-1.5 bg-blue-50 rounded-full border border-blue-200">
+                            <div className="flex items-center gap-2 px-3 py-1.5 rounded-full border border-blue-200 bg-[#ffffff]">
                               <div className="w-5 h-5 bg-primary text-white rounded-full flex items-center justify-center text-[10px] font-bold">
                                 1
                               </div>
