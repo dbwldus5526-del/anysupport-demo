@@ -239,7 +239,7 @@ export default function Guide() {
                   <div className="flex justify-between items-start">
                     <div>
                       <h3 className="text-2xl font-black mb-2">{section.title}</h3>
-                      <p className="text-white/80 text-sm font-bold">{section.subtitle}</p>
+                      <p className="text-[18px] text-[#ffffff] font-medium">{section.subtitle}</p>
                     </div>
                     <div className="bg-white/20 p-3 rounded-2xl backdrop-blur-sm">
                       <section.icon size={28} />
