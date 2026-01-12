@@ -544,17 +544,17 @@ export default function PricingComparison() {
                 })()}
                 <div>
                   <h3 className="text-2xl font-bold">{industries[activeIndustry].title}</h3>
-                  <p className="text-white/60">{industries[activeIndustry].challenge}</p>
+                  <p className="text-white/60 text-[18px]">{industries[activeIndustry].challenge}</p>
                 </div>
               </div>
               
               <div className="bg-white/5 rounded-xl p-6 mb-6">
-                <div className="text-primary font-bold text-sm mb-2">추천 도입 방식</div>
+                <div className="text-primary font-bold mb-2 text-[18px]">추천 도입 방식</div>
                 <div className="text-xl font-bold">{industries[activeIndustry].recommendation}</div>
               </div>
               
               <p className="text-white/80 mb-6">
-                <span className="text-primary font-bold">왜?</span> {industries[activeIndustry].reason}
+                <span className="text-primary font-bold text-[18px]">왜?</span> {industries[activeIndustry].reason}
               </p>
               
               <Button onClick={openModal} className="w-full h-12 font-bold">
