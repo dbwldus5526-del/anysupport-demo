@@ -43,7 +43,7 @@ export default function Solution() {
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="grid lg:grid-cols-1 gap-12 items-center">
             <div className="max-w-3xl">
-              <span className="text-primary font-bold text-[10px] md:text-sm tracking-widest uppercase mb-4 block">
+              <span className="font-bold md:text-sm tracking-widest uppercase mb-4 block text-[16px] text-[#ffffff]">
                 ANY SUPPORT SOLUTION
               </span>
               <h1 className="text-4xl md:text-6xl font-black text-white mb-6 leading-tight">
