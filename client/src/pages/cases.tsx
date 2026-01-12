@@ -666,11 +666,11 @@ export default function Cases() {
                                 3
                               </div>
                               <div>
-                                <div className="font-bold text-[#333] text-[18px]">
+                                <div className="font-bold text-[#333] text-[16px]">
                                   접속 승인 시, 고객사 직원 PC화면에 대한 제어권
                                   이양
                                 </div>
-                                <div className="text-[#666] text-[18px]">
+                                <div className="text-[#666] text-[16px]">
                                   제어 주체: 유지보수업체 / 제어 대상: 고객사
                                 </div>
                               </div>
