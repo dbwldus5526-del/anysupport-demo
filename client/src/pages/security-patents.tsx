@@ -15,6 +15,7 @@ import {
   Globe,
   ArrowRight,
 } from "lucide-react";
+import samsungKnoxLogo from "@assets/image_1768207806783.png";
 import { motion } from "framer-motion";
 
 export default function SecurityPatents() {
@@ -184,13 +185,8 @@ export default function SecurityPatents() {
                   <span className="inline-block px-4 py-1.5 bg-blue-100 text-blue-700 font-bold rounded-full text-sm mb-4">
                     삼성 Galaxy시리즈 특화
                   </span>
-                  <div className="flex justify-center items-center gap-4 mb-4">
-                    <div className="text-4xl font-black text-[#333]">
-                      SAMSUNG
-                    </div>
-                  </div>
-                  <div className="text-5xl font-black text-blue-600 mb-4">
-                    Kn<span className="text-blue-400">0</span>x
+                  <div className="flex justify-center items-center mb-4">
+                    <img src={samsungKnoxLogo} alt="Samsung Knox" className="h-16 w-auto object-contain" />
                   </div>
                   <p className="text-[#666] text-sm">
                     Knox SDK를 사용한 플랫폼 기반으로<br />
