@@ -329,7 +329,7 @@ export default function SecurityPatents() {
                     <Trash2 size={28} className="text-red-600" />
                   </div>
                   <div className="font-bold text-[#333] mb-1">자동 삭제</div>
-                  <p className="text-sm text-[#666]">종료 후 모듈 제거</p>
+                  <p className="text-[#666] text-[16px]">종료 후 모듈 제거</p>
                 </motion.div>
               </div>
             </div>
@@ -353,7 +353,7 @@ export default function SecurityPatents() {
                       <Cloud size={28} className="text-orange-400" />
                     </div>
                     <div className="font-bold mb-1">AWS 클라우드</div>
-                    <p className="text-sm text-slate-300">글로벌 인프라</p>
+                    <p className="text-slate-300 text-[16px]">글로벌 인프라</p>
                   </motion.div>
                   <motion.div
                     initial={{ opacity: 0, scale: 0.9 }}
