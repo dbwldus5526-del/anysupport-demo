@@ -127,7 +127,7 @@ export default function Security() {
             <p className="text-[#666] text-lg font-normal">기업 환경에 최적화된 철저한 보안 체계</p>
           </div>
           
-          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-px bg-slate-200 border border-slate-200 rounded-3xl overflow-hidden shadow-sm">
+          <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-px bg-slate-200 border border-slate-200 rounded-3xl overflow-hidden shadow-sm">
             {[
               {
                 title: "접속 보안",
@@ -160,12 +160,12 @@ export default function Security() {
                 icon: ShieldAlert
               }
             ].map((section, idx) => (
-              <div key={idx} className="bg-white p-10 flex flex-col items-center text-center group hover:bg-slate-50 transition-colors">
-                <div className="w-16 h-16 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                  <section.icon size={32} />
+              <div key={idx} className="bg-white p-4 sm:p-6 md:p-10 flex flex-col items-center text-center group hover:bg-slate-50 transition-colors">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-xl sm:rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-3 sm:mb-4 md:mb-6 group-hover:scale-110 transition-transform">
+                  <section.icon className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8" />
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-3">{section.title}</h3>
-                <p className="text-[#666] leading-relaxed text-lg font-normal max-w-xs">
+                <h3 className="text-sm sm:text-lg md:text-xl font-bold text-slate-900 mb-2 sm:mb-3">{section.title}</h3>
+                <p className="text-[#666] leading-relaxed text-xs sm:text-sm md:text-lg font-normal max-w-xs">
                   {section.desc}
                 </p>
               </div>
