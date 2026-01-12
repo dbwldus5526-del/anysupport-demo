@@ -147,7 +147,7 @@ export default function Pricing() {
                       {isAnnual ? plan.annualPrice : plan.monthlyPrice}원
                     </span>
                   </div>
-                  <span className="text-slate-400 font-bold text-sm">/ {isAnnual ? '년' : '월'}</span>
+                  <span className="text-[#666] font-normal text-[18px]">/ {isAnnual ? '년' : '월'}</span>
                 </div>
 
                 <div className="flex-grow space-y-4 mb-10">
