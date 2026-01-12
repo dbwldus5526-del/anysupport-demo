@@ -679,7 +679,7 @@ export default function Cases() {
                                 3
                               </div>
                               <div>
-                                <div className="text-xs font-bold text-slate-700">
+                                <div className="font-bold text-[#333] text-[18px]">
                                   접속 승인 시, 고객사 직원 PC화면에 대한 제어권
                                   이양
                                 </div>
