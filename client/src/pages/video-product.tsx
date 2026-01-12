@@ -119,7 +119,7 @@ export default function VideoProduct() {
                 <br />
                 <span className="text-primary">가장 인간적인 기술 지원</span>
               </h2>
-              <p className="text-[14px] md:text-lg text-slate-600 mb-8 leading-relaxed">
+              <p className="text-[14px] md:text-lg mb-8 leading-relaxed text-[#333]">
                 텍스트와 화면 제어만으로는 부족한 경우가 있습니다. 애니서포트
                 Video 원격지원은 상담원과 고객이 실시간으로 얼굴을 마주하며
                 소통함으로써 기술 지원을 넘어선 고객 감동을 실현합니다.
