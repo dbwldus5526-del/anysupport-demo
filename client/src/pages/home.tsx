@@ -362,7 +362,7 @@ export function Home() {
               variant="outline"
               size="lg"
               onClick={() => scrollToSection("features")}
-              className="text-[18px] font-semibold border-primary text-primary hover:bg-primary/5"
+              className="text-[18px] font-bold border-primary text-primary hover:bg-primary/5"
             >
               제품 자세히 보기
             </Button>
@@ -587,7 +587,7 @@ export function Home() {
             <h2 className="text-3xl lg:text-4xl font-bold mb-6">
               강력한 기술력과 타협 없는 보안
             </h2>
-            <p className="text-slate-400 text-[18px] mb-10 leading-relaxed">
+            <p className="text-[18px] mb-10 leading-relaxed text-[#d8e2f2]">
               자체 개발한 최적화 코덱으로 저대역폭에서도 끊김 없는 원격 제어를
               구현했습니다.
               <br className="hidden md:block" />
