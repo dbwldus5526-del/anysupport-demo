@@ -338,7 +338,7 @@ export default function Cases() {
               {/* Visual Flow Diagram */}
               <div className="bg-slate-50 rounded-2xl p-8 mb-8 border border-slate-100">
                 <div className="text-center mb-6">
-                  <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-bold rounded-full mb-2">
+                  <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary font-bold rounded-full mb-2 text-[18px]">
                     시나리오
                   </span>
                   <h3 className="text-xl font-bold text-slate-800">
