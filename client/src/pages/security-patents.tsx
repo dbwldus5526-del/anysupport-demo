@@ -234,7 +234,7 @@ export default function SecurityPatents() {
                       <img src={seapLogo} alt="Samsung Enterprise Alliance Program" className="h-20 w-auto object-contain" />
                     </div>
                   </div>
-                  <p className="text-[#666] text-[18px]">
+                  <p className="text-[#666] text-[16px]">
                     삼성전자가 운영하는 글로벌 모바일<br />
                     솔루션 파트너십 프로그램 파트너
                   </p>
