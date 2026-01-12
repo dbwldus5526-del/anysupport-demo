@@ -669,7 +669,7 @@ export default function Cases() {
                                 <div className="text-xs font-bold text-slate-700">
                                   원격세션 연결
                                 </div>
-                                <div className="text-[10px] text-slate-500">
+                                <div className="text-[#666] text-[16px]">
                                   제어 주체: 고객사 / 제어 대상: 유지보수업체
                                 </div>
                               </div>
