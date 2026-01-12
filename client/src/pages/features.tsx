@@ -170,7 +170,7 @@ export default function Features() {
                   </div>
                   
                   <div className="md:pl-6 md:border-l border-slate-200 flex items-center gap-3 min-w-[140px] justify-end">
-                    <span className="font-black text-primary text-sm whitespace-nowrap">
+                    <span className="text-primary whitespace-nowrap text-[16px] font-normal">
                       {expandedCategory === idx ? '상세 접기' : '자세히 보기'}
                     </span>
                     {expandedCategory === idx ? <ChevronUp className="text-primary" size={20} /> : <ChevronDown className="text-primary" size={20} />}
