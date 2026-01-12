@@ -350,7 +350,7 @@ export default function Pricing() {
                       </div>
                       <div className="bg-white p-4 rounded-xl border border-slate-200">
                         <p className="font-bold text-slate-900 mb-2">[Mobile 에디션]</p>
-                        <p className="text-sm text-slate-600">Android/iOS: 290만원 (VAT 별도)</p>
+                        <p className="text-[#333] font-normal text-[18px]">Android/iOS: 290만원 (VAT 별도)</p>
                       </div>
                       <div className="bg-white p-4 rounded-xl border border-slate-200">
                         <p className="font-bold text-slate-900 mb-2">[Video 에디션]</p>
