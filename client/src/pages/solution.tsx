@@ -212,7 +212,7 @@ export default function Solution() {
             <Link href="/solution/features">
               <Button
                 size="lg"
-                className="h-14 px-10 text-lg font-bold border-2 border-primary/20 bg-transparent hover:bg-primary/10 text-white transition-all"
+                className="h-12 px-6 sm:h-14 sm:px-10 text-base sm:text-lg font-bold border-2 border-primary/20 bg-transparent hover:bg-primary/10 text-white transition-all"
               >
                 기능 더 자세히 보기 <ArrowRight className="ml-2" size={20} />
               </Button>

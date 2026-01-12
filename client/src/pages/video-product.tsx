@@ -101,7 +101,7 @@ export default function VideoProduct() {
               <Button
                 size="lg"
                 onClick={openModal}
-                className="h-14 px-10 text-lg font-bold shadow-xl shadow-primary/20"
+                className="h-12 px-6 sm:h-14 sm:px-10 text-base sm:text-lg font-bold shadow-xl shadow-primary/20"
               >
                 무료체험 시작하기 <ArrowRight className="ml-2" />
               </Button>

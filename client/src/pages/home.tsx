@@ -260,7 +260,7 @@ function HeroCarousel({ openModal, scrollToSection }: { openModal: () => void; s
             <Button
               size="lg"
               onClick={openModal}
-              className="h-14 px-10 text-lg font-bold"
+              className="h-12 px-6 sm:h-14 sm:px-10 text-base sm:text-lg font-bold"
             >
               무료체험 시작하기 <ArrowRight className="ml-2" />
             </Button>
@@ -268,7 +268,7 @@ function HeroCarousel({ openModal, scrollToSection }: { openModal: () => void; s
               variant="outline"
               size="lg"
               onClick={() => scrollToSection("features")}
-              className="h-14 px-10 text-lg font-bold bg-[#f7f8fc] border border-slate-200"
+              className="h-12 px-6 sm:h-14 sm:px-10 text-base sm:text-lg font-bold bg-[#f7f8fc] border border-slate-200"
             >
               제품 자세히 보기
             </Button>
@@ -717,7 +717,7 @@ export function Home() {
             <Button 
               size="lg" 
               onClick={openModal}
-              className="h-14 px-10 text-lg font-bold shadow-xl shadow-primary/20"
+              className="h-12 px-6 sm:h-14 sm:px-10 text-base sm:text-lg font-bold shadow-xl shadow-primary/20"
             >
               <Clock className="mr-2 w-5 h-5" />
               애니서포트, 14일간 제한 없이 써보세요

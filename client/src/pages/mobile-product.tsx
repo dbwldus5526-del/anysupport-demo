@@ -93,7 +93,7 @@ export default function MobileProduct() {
               애니서포트 Mobile 원격지원을 경험해 보세요.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button size="lg" onClick={openModal} className="h-14 px-10 text-lg font-bold shadow-xl shadow-primary/20">
+              <Button size="lg" onClick={openModal} className="h-12 px-6 sm:h-14 sm:px-10 text-base sm:text-lg font-bold shadow-xl shadow-primary/20">
                 무료체험 시작하기 <ArrowRight className="ml-2" />
               </Button>
             </div>

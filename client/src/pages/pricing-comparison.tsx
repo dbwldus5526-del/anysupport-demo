@@ -578,14 +578,14 @@ export default function PricingComparison() {
               size="lg"
               variant="secondary"
               onClick={openModal}
-              className="h-14 px-10 text-lg font-bold"
+              className="h-12 px-6 sm:h-14 sm:px-10 text-base sm:text-lg font-bold"
             >
               무료 컨설팅 신청
             </Button>
             <Button
               size="lg"
               onClick={scrollToQuiz}
-              className="h-14 px-10 text-lg font-bold bg-white/20 hover:bg-white/30 border-2 border-white/30"
+              className="h-12 px-6 sm:h-14 sm:px-10 text-base sm:text-lg font-bold bg-white/20 hover:bg-white/30 border-2 border-white/30"
             >
               다시 진단하기
             </Button>
