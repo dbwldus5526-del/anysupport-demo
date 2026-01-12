@@ -384,7 +384,7 @@ export default function Cases() {
                       </div>
                       <div className="flex flex-col items-center p-3 md:p-4 bg-white rounded-xl border border-slate-200 w-28 md:w-36">
                         <Lock size={28} className="text-orange-500 mb-2" />
-                        <span className="text-[10px] md:text-xs font-bold text-slate-700 text-center">암호화모듈</span>
+                        <span className="md:text-xs font-bold text-center text-[18px] text-[#333]">암호화모듈</span>
                         <span className="text-[10px] md:text-xs text-slate-400 text-center">PC보안 설치문의</span>
                       </div>
                       <div className="flex flex-col items-center p-3 md:p-4 bg-white rounded-xl border border-slate-200 w-28 md:w-36">
