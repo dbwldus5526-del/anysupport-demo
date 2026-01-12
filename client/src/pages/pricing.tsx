@@ -346,7 +346,7 @@ export default function Pricing() {
                       <div className="bg-white p-4 rounded-xl border border-slate-200">
                         <p className="font-bold text-slate-900 mb-2">[PC 에디션]</p>
                         <p className="text-[18px] text-[#333] font-normal">Basic: 100만원 (VAT 별도)</p>
-                        <p className="text-sm text-slate-600">Premium: 132만원 (VAT 별도)</p>
+                        <p className="text-[#333] text-[18px] font-normal">Premium: 132만원 (VAT 별도)</p>
                       </div>
                       <div className="bg-white p-4 rounded-xl border border-slate-200">
                         <p className="font-bold text-slate-900 mb-2">[Mobile 에디션]</p>
