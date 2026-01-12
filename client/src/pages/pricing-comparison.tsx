@@ -397,7 +397,7 @@ export default function PricingComparison() {
                   <p className="text-primary font-medium text-[18px] mb-4">
                     {option.tagline}
                   </p>
-                  <p className="text-[#666] text-[18px] mb-6">
+                  <p className="text-[#666] text-[18px] mb-6 min-h-[56px]">
                     <span className="font-semibold text-slate-700">적합 대상:</span> {option.suitable}
                   </p>
                   <ul className="space-y-3 mb-6">
