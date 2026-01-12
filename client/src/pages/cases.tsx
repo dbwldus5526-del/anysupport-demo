@@ -622,7 +622,7 @@ export default function Cases() {
                     <div className="grid md:grid-cols-2 gap-6">
                       {/* Left: 외부 IT협력업체 */}
                       <div className="flex flex-col items-center">
-                        <div className="w-full max-w-xs">
+                        <div className="w-full max-w-md">
                           <div className="flex items-center gap-3 p-4 bg-amber-50 rounded-xl border border-amber-200 mb-4">
                             <div className="w-12 h-12 bg-amber-100 rounded-lg flex items-center justify-center">
                               <User size={24} className="text-amber-700" />
