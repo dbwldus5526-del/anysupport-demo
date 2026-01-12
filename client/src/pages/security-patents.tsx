@@ -365,7 +365,7 @@ export default function SecurityPatents() {
                       <Shield size={28} className="text-red-400" />
                     </div>
                     <div className="font-bold mb-1">통합 방화벽</div>
-                    <p className="text-sm text-slate-300">다중 보안 계층</p>
+                    <p className="text-slate-300 text-[16px]">다중 보안 계층</p>
                   </motion.div>
                   <motion.div
                     initial={{ opacity: 0, scale: 0.9 }}
@@ -377,7 +377,7 @@ export default function SecurityPatents() {
                       <Globe size={28} className="text-blue-400" />
                     </div>
                     <div className="font-bold mb-1">웹 방화벽</div>
-                    <p className="text-sm text-slate-300">WAF 적용</p>
+                    <p className="text-slate-300 text-[16px]">WAF 적용</p>
                   </motion.div>
                   <motion.div
                     initial={{ opacity: 0, scale: 0.9 }}
