@@ -768,7 +768,7 @@ export default function Cases() {
 
           <div className="text-center">
             <Link href="/solution/management">
-              <Button size="lg" variant="outline" className="font-bold border-white text-white hover:bg-white/10">
+              <Button size="lg" variant="outline" className="font-bold border-white text-white hover:bg-white/10 text-[18px]">
                 원격지원 관리 기능 보기 <ArrowRight className="ml-2 w-4 h-4" />
               </Button>
             </Link>
