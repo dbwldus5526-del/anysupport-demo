@@ -4,6 +4,7 @@ import downloadHeroImg from "@assets/generated_images/modern_abstract_blue_gradi
 import googlePlayLogo from "@assets/image-removebg-preview_(20)_1768199099339.png";
 import appStoreLogo from "@assets/image-removebg-preview_(21)_1768199186426.png";
 import windowsLogo from "@assets/image-removebg-preview_(22)_1768199241860.png";
+import googlePlayFullLogo from "@assets/image_1768199304085.png";
 
 export default function Download() {
   return (
@@ -210,11 +211,8 @@ export default function Download() {
             <div className="mt-24 text-center">
               <h4 className="font-bold mb-8 text-[36px] text-[#333]">모바일에서도 애니서포트를 경험하세요</h4>
               <div className="flex justify-center gap-4">
-                <button className="h-14 px-6 bg-black rounded-xl border border-white/10 flex items-center gap-3 transition-transform hover:scale-105 pl-[55px] pr-[55px]">
-                  <div className="text-white text-left">
-                    <p className="text-[10px] uppercase font-bold text-white/60">GET IT ON</p>
-                    <p className="font-black text-[24px]">Google Play</p>
-                  </div>
+                <button className="h-14 px-6 bg-white rounded-xl border border-slate-200 flex items-center gap-3 transition-transform hover:scale-105 pl-[20px] pr-[20px]">
+                  <img src={googlePlayFullLogo} alt="Google Play" className="h-8" />
                 </button>
                 <button className="h-14 px-6 bg-black rounded-xl border border-white/10 flex items-center gap-3 transition-transform hover:scale-105 pl-[55px] pr-[55px]">
                   <Apple className="text-white" size={28} />
