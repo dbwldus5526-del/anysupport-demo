@@ -618,7 +618,7 @@ export function Home() {
                   </Button>
                 </div>
               </div>
-              <div className="flex items-start gap-4">
+              <div className="flex items-start gap-4 pt-[9px] pb-[9px]">
                 <div className="flex flex-col items-center">
                   <div className="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold shrink-0">
                     2
