@@ -363,7 +363,7 @@ export default function Cases() {
                               <Monitor size={16} className="text-blue-400" />
                             </div>
                           </div>
-                          <span className="text-xs font-bold text-slate-600 mt-1">상담원</span>
+                          <span className="font-bold mt-1 text-[#333] text-[18px]">상담원</span>
                         </div>
                       ))}
                     </div>
