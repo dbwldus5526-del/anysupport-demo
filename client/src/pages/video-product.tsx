@@ -109,7 +109,6 @@ export default function VideoProduct() {
           </div>
         </div>
       </section>
-
       {/* Summary Section */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
@@ -154,7 +153,7 @@ export default function VideoProduct() {
                   <h3 className="text-lg font-bold mb-2 text-slate-900">
                     {feature.title}
                   </h3>
-                  <p className="text-sm text-slate-500 leading-relaxed font-medium">
+                  <p className="text-[#666] text-[18px] font-normal">
                     {feature.desc}
                   </p>
                 </div>
@@ -163,7 +162,6 @@ export default function VideoProduct() {
           </div>
         </div>
       </section>
-
       {/* Video Special Features Section */}
       <section className="py-24 bg-slate-50">
         <div className="container mx-auto px-4 md:px-6">
@@ -207,7 +205,6 @@ export default function VideoProduct() {
           </div>
         </div>
       </section>
-
       {/* Connection Process Section */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
@@ -293,7 +290,6 @@ export default function VideoProduct() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-primary text-white">
         <div className="container mx-auto px-4 md:px-6 text-center">
