@@ -10,6 +10,7 @@ import appStoreFullLogo from "@assets/image-removebg-preview_(23)_1768199353224.
 
 export default function Download() {
   const [diagnosticOpen, setDiagnosticOpen] = useState(false);
+  const [applicationOpen, setApplicationOpen] = useState(false);
   
   return (
     <div className="flex flex-col min-h-screen bg-slate-50/50">
@@ -106,10 +107,35 @@ export default function Download() {
                 <div>
                   <h4 className="font-bold text-[#0066b3] mb-3 text-[16px]">기타</h4>
                   <div className="space-y-2 bg-[#f8fafc] rounded-xl p-4">
-                    <Button variant="ghost" className="w-full justify-start hover:bg-[#0066b3]/10 text-[15px] gap-2 text-[#0066b3]">
-                      <ClipboardList size={16} className="text-[#0066b3]" />
-                      애니서포트 사용신청서
-                    </Button>
+                    <div>
+                      <Button 
+                        variant="ghost" 
+                        className="w-full justify-between hover:bg-[#0066b3]/10 text-[15px] gap-2 text-[#0066b3]"
+                        onClick={() => setApplicationOpen(!applicationOpen)}
+                      >
+                        <div className="flex items-center gap-2">
+                          <ClipboardList size={16} className="text-[#0066b3]" />
+                          애니서포트 사용신청서
+                        </div>
+                        {applicationOpen ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+                      </Button>
+                      {applicationOpen && (
+                        <div className="mt-2 ml-6 space-y-2">
+                          <a href="/attached_assets/애니서포트_서비스_신청서(공통)_1768200560351.hwp" download="애니서포트_서비스_신청서.hwp">
+                            <Button variant="outline" className="w-full justify-start text-[14px] gap-2 text-[#0066b3] border-slate-200 hover:border-[#0066b3]">
+                              <DownloadIcon size={14} className="text-[#0066b3]" />
+                              애니서포트 사용신청서 (HWP)
+                            </Button>
+                          </a>
+                          <a href="/attached_assets/애니서포트_서비스_신청서(공통)_1768200560350.doc" download="애니서포트_서비스_신청서.doc">
+                            <Button variant="outline" className="w-full justify-start text-[14px] gap-2 text-[#0066b3] border-slate-200 hover:border-[#0066b3]">
+                              <DownloadIcon size={14} className="text-[#0066b3]" />
+                              애니서포트 사용신청서 (DOC)
+                            </Button>
+                          </a>
+                        </div>
+                      )}
+                    </div>
                     <div>
                       <Button 
                         variant="ghost" 
