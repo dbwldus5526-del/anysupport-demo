@@ -43,8 +43,8 @@ const noticeCategories: NoticeCategory[] = [
       { title: "2022년12월 프로모션 특가 이벤트!!!" },
       { title: "코이노 마곡 신사옥 입주 감사 이벤트_20210901" },
       { title: "2024년 구정이벤트_선물을 쏩니다" },
+      { title: "2024년 코이노 공식파트너 모집 설명회 개최" },
     ],
-    showMore: true,
   },
   {
     title: "바우처 사업",
