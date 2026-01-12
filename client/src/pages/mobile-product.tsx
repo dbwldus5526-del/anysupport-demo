@@ -244,7 +244,7 @@ export default function MobileProduct() {
                     
                     <div className="space-y-2">
                       {(item.points || item.types).map((point, idx) => (
-                        <div key={idx} className="flex items-center gap-2 text-xs font-bold text-slate-700 bg-slate-50 px-3 py-2 rounded-lg border border-slate-100">
+                        <div key={idx} className="flex items-center gap-2 font-bold bg-slate-50 px-3 py-2 rounded-lg border border-slate-100 text-[18px] text-[#333]">
                           <CheckCircle2 size={14} className="text-primary" />
                           {point}
                         </div>
