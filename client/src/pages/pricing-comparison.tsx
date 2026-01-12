@@ -442,7 +442,7 @@ export default function PricingComparison() {
                   <th className="px-6 py-4 text-center font-bold">
                     <div className="flex flex-col items-center gap-1">
                       <Cloud size={20} />
-                      <span>SaaS</span>
+                      <span className="text-[18px]">SaaS</span>
                     </div>
                   </th>
                   <th className="px-6 py-4 text-center font-bold bg-primary">
