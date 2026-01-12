@@ -111,7 +111,10 @@ export default function Download() {
                   <div className="grid grid-cols-2 gap-3">
                     <a href="https://988.co.kr/" target="_blank" rel="noopener noreferrer">
                       <Button variant="outline" className="w-full justify-between border-slate-200 text-[#333] hover:border-primary text-[16px]">
-                        <img src={googlePlayLogo} alt="Google Play" className="h-5" />
+                        <div className="flex items-center gap-2">
+                          <img src={googlePlayLogo} alt="Google Play" className="h-5" />
+                          Google Play
+                        </div>
                         <DownloadIcon size={16} className="text-[#0066b3]" />
                       </Button>
                     </a>
@@ -146,7 +149,10 @@ export default function Download() {
                     <h4 className="font-bold text-[#333] mb-3 text-[16px]">모바일 지원 앱</h4>
                     <div className="space-y-2">
                       <Button variant="outline" className="w-full justify-between border-slate-200 text-[#333] hover:border-primary text-[14px]">
-                        <img src={googlePlayLogo} alt="Google Play" className="h-5" />
+                        <div className="flex items-center gap-2">
+                          <img src={googlePlayLogo} alt="Google Play" className="h-4" />
+                          Google Play
+                        </div>
                         <DownloadIcon size={14} className="text-[#0066b3]" />
                       </Button>
                       <Button variant="outline" className="w-full justify-between border-slate-200 text-[#333] hover:border-primary text-[14px]">
@@ -162,7 +168,10 @@ export default function Download() {
                     <h4 className="font-bold text-[#333] mb-3 text-[16px]">영상 지원 앱</h4>
                     <div className="space-y-2">
                       <Button variant="outline" className="w-full justify-between border-slate-200 text-[#333] hover:border-primary text-[14px]">
-                        <img src={googlePlayLogo} alt="Google Play" className="h-5" />
+                        <div className="flex items-center gap-2">
+                          <img src={googlePlayLogo} alt="Google Play" className="h-4" />
+                          Google Play
+                        </div>
                         <DownloadIcon size={14} className="text-[#0066b3]" />
                       </Button>
                       <Button variant="outline" className="w-full justify-between border-slate-200 text-[#333] hover:border-primary text-[14px]">
