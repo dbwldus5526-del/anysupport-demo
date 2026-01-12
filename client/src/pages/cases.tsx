@@ -666,7 +666,7 @@ export default function Cases() {
                                 2
                               </div>
                               <div>
-                                <div className="text-xs font-bold text-slate-700">
+                                <div className="font-bold text-[#333] text-[16px]">
                                   원격세션 연결
                                 </div>
                                 <div className="text-[#666] text-[16px]">
