@@ -82,7 +82,7 @@ export default function MobileProduct() {
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/20 text-primary border border-primary/30 mb-6">
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-              <span className="text-[10px] md:text-xs font-bold tracking-wider uppercase">Mobile IT Support</span>
+              <span className="text-[10px] md:text-xs font-bold tracking-wider uppercase text-[#fafafa]">Mobile IT Support</span>
             </div>
             <h1 className="text-3xl md:text-6xl font-black mb-6 leading-tight">
               모바일 환경에서도<br />
