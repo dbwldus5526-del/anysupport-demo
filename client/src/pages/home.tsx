@@ -207,14 +207,27 @@ const DesignIcon = ({ type }: { type: string }) => {
 
 import UseCasesLogos from "@/components/sections/UseCasesLogos";
 
-const heroImages = [heroImage1, heroImage2];
+const heroSlides = [
+  {
+    image: heroImage1,
+    objectPosition: "object-right-bottom",
+    title: <>고객과 상담사 사이<br /><span className="block text-primary text-[67px]">애니서포트가 있습니다</span></>,
+    subtitle: <>고객 상담·IT 지원·운영 지원을 하나로 연결하는<br className="hidden md:block" />기업용 원격지원 SaaS 애니서포트</>
+  },
+  {
+    image: heroImage2,
+    objectPosition: "object-[70%_center]",
+    title: <>6,000고객사가 선택한<br /><span className="block text-primary text-[67px]">검증된 원격지원</span></>,
+    subtitle: <>고객 상담·IT 지원·운영 지원을 하나로 연결하는<br className="hidden md:block" />기업용 원격지원 SaaS 애니서포트</>
+  }
+];
 
 function HeroCarousel({ openModal, scrollToSection }: { openModal: () => void; scrollToSection: (id: string) => void }) {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % heroImages.length);
+      setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
     }, 8000);
     return () => clearInterval(interval);
   }, []);
@@ -222,12 +235,12 @@ function HeroCarousel({ openModal, scrollToSection }: { openModal: () => void; s
   return (
     <section className="relative min-h-[90vh] flex items-center pt-20 pb-20 overflow-hidden bg-white">
       <div className="absolute inset-0 z-0">
-        {heroImages.map((img, index) => (
+        {heroSlides.map((slide, index) => (
           <img
             key={index}
-            src={img}
+            src={slide.image}
             alt={`AnySupport Background ${index + 1}`}
-            className={`absolute inset-0 w-full h-full object-cover object-right-bottom transition-opacity duration-1000 ${
+            className={`absolute inset-0 w-full h-full object-cover ${slide.objectPosition} transition-opacity duration-1000 ${
               currentSlide === index ? "opacity-80" : "opacity-0"
             }`}
           />
@@ -238,14 +251,10 @@ function HeroCarousel({ openModal, scrollToSection }: { openModal: () => void; s
       <div className="max-w-[1280px] w-full mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
         <div className="max-w-3xl">
           <h1 className="font-black mt-[0px] mb-[20px] text-[#333] text-[67px] leading-[1.1]">
-            고객과 상담사 사이
-            <br />
-            <span className="block text-primary text-[67px]">애니서포트가 있습니다</span>
+            {heroSlides[currentSlide].title}
           </h1>
           <p className="sm:text-lg md:text-xl mb-10 max-w-2xl text-[#333] mt-6 text-[21px] font-normal">
-            고객 상담·IT 지원·운영 지원을 하나로 연결하는
-            <br className="hidden md:block" />
-            기업용 원격지원 SaaS 애니서포트
+            {heroSlides[currentSlide].subtitle}
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button
@@ -269,7 +278,7 @@ function HeroCarousel({ openModal, scrollToSection }: { openModal: () => void; s
 
       {/* Slide Indicators */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-2">
-        {heroImages.map((_, index) => (
+        {heroSlides.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrentSlide(index)}
