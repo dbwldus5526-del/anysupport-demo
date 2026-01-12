@@ -262,7 +262,7 @@ export default function VideoProduct() {
                   </div>
 
                   <div className="flex-1">
-                    <span className="text-primary font-bold text-sm tracking-tighter mb-2 block">
+                    <span className="text-primary tracking-tighter mb-2 block text-[18px] font-extrabold">
                       {item.step}
                     </span>
                     <h3 className="text-xl font-bold mb-4 text-slate-900">
