@@ -29,7 +29,7 @@ export default function SecurityPatents() {
           <div className="absolute bottom-20 right-20 w-96 h-96 bg-purple-500 rounded-full blur-3xl" />
         </div>
 
-        <div className="container mx-auto px-4 md:px-6 relative z-10 text-center">
+        <div className="container mx-auto px-4 md:px-6 relative z-10 text-center mt-[38px] mb-[38px]">
           <div className="max-w-4xl mx-auto">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full mb-6 text-sm font-medium">
               <ShieldCheck size={18} />
@@ -45,7 +45,6 @@ export default function SecurityPatents() {
           </div>
         </div>
       </section>
-
       {/* Section 1: 공통 보안 프로세스 */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 md:px-6">
@@ -167,7 +166,6 @@ export default function SecurityPatents() {
           </div>
         </div>
       </section>
-
       {/* Section 2: 삼성Knox 보안 */}
       <section className="py-20 bg-slate-50">
         <div className="container mx-auto px-4 md:px-6">
@@ -269,7 +267,6 @@ export default function SecurityPatents() {
           </div>
         </div>
       </section>
-
       {/* Section 3: 첫째 - 화면 캡처 전송 방식 */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 md:px-6">
@@ -347,7 +344,6 @@ export default function SecurityPatents() {
           </div>
         </div>
       </section>
-
       {/* Section 4: 둘째 - AWS 클라우드 */}
       <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
         <div className="container mx-auto px-4 md:px-6">
@@ -424,7 +420,6 @@ export default function SecurityPatents() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 md:px-6">
