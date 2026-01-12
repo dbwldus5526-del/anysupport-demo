@@ -143,7 +143,7 @@ export default function Pricing() {
 
                 <div className="mb-10">
                   <div className="flex items-baseline gap-1">
-                    <span className="text-4xl font-black text-slate-900">
+                    <span className="text-4xl text-[#333] font-bold">
                       {isAnnual ? plan.annualPrice : plan.monthlyPrice}원
                     </span>
                   </div>
