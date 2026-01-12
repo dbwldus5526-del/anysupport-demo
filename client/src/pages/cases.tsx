@@ -718,7 +718,7 @@ export default function Cases() {
                               <div className="w-5 h-5 bg-primary text-white rounded-full flex items-center justify-center text-[10px] font-bold">
                                 1
                               </div>
-                              <span className="text-[10px] text-blue-700">
+                              <span className="text-[16px] text-[#333] font-bold">
                                 내부PC-내부망 서버 연결 (터미널 등)
                               </span>
                             </div>
