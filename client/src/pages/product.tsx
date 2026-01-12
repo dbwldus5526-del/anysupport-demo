@@ -472,7 +472,7 @@ export default function Product() {
                     <h3 className="font-bold mb-4 text-[18px] text-[#333]">
                       {item.title}
                     </h3>
-                    <p className="mb-6 text-[#666] text-[18px]">{item.desc}</p>
+                    <p className="mb-6 text-[#666] text-[18px] min-h-[120px]">{item.desc}</p>
 
                     <div className="space-y-2">
                       {(item.points || item.types).map((point, idx) => (
