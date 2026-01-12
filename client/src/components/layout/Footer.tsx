@@ -16,7 +16,7 @@ export function Footer() {
             </p>
           </div>
           <div>
-            <h4 className="font-bold mb-6">제품</h4>
+            <h4 className="mb-6 font-medium text-[#666]">제품</h4>
             <ul className="space-y-4 text-slate-500 text-[14px]">
               <li><Link href="/solution/features">주요기능</Link></li>
               <li><Link href="/solution/management">원격지원 관리</Link></li>

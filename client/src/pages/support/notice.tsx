@@ -195,40 +195,40 @@ const noticeCategories: NoticeCategory[] = [
     title: "개인정보취급방침",
     count: 1,
     items: [
-      { title: "애니서포트 개인정보취급방침" },
+      { title: "애니서포트 개인정보취급방침", modalContent: privacyContent },
     ],
   },
   {
     title: "시스템점검",
     count: 2,
     items: [
-      { title: "[시스템점검] 서버 증설 공지" },
-      { title: "[시스템점검]서버 증설 공지(신규 방화벽 정보 포함)" },
+      { title: "[시스템점검] 서버 증설 공지", date: "2024/03/15" },
+      { title: "[시스템점검]서버 증설 공지(신규 방화벽 정보 포함)", date: "2024/01/22" },
     ],
   },
   {
     title: "이벤트",
     count: 4,
     items: [
-      { title: "2022년12월 프로모션 특가 이벤트!!!" },
-      { title: "코이노 마곡 신사옥 입주 감사 이벤트_20210901" },
-      { title: "2024년 구정이벤트_선물을 쏩니다" },
-      { title: "2024년 코이노 공식파트너 모집 설명회 개최" },
+      { title: "2022년12월 프로모션 특가 이벤트!!!", date: "2022/12/01" },
+      { title: "코이노 마곡 신사옥 입주 감사 이벤트_20210901", date: "2021/09/01" },
+      { title: "2024년 구정이벤트_선물을 쏩니다", date: "2024/02/05" },
+      { title: "2024년 코이노 공식파트너 모집 설명회 개최", date: "2024/05/20" },
     ],
   },
   {
     title: "바우처 사업",
     count: 1,
     items: [
-      { title: "코이노, 2024년 클라우드서비스 바우처 공급기업 선정" },
+      { title: "코이노, 2024년 클라우드서비스 바우처 공급기업 선정", date: "2024/04/10" },
     ],
   },
   {
     title: "고객센터공지",
     count: 2,
     items: [
-      { title: "[공지]애니서포트 고객센터 6월 업무일 안내(2024.06.07)" },
-      { title: "[공지]애니서포트 고객센터 8월 업무일 안내(2024.08.16)" },
+      { title: "[공지]애니서포트 고객센터 6월 업무일 안내(2024.06.07)", date: "2024/06/07" },
+      { title: "[공지]애니서포트 고객센터 8월 업무일 안내(2024.08.16)", date: "2024/08/16" },
     ],
   },
 ];
@@ -302,7 +302,10 @@ export default function Notice() {
                         className="flex items-start gap-3 text-[#0066b3] hover:text-primary cursor-pointer"
                       >
                         <FileText size={16} className="shrink-0 mt-0.5 text-[#666]" />
-                        <span className="text-[15px]">{item.title}</span>
+                        <span className="text-[15px] flex-1">{item.title}</span>
+                        {item.date && (
+                          <span className="text-[13px] text-[#999] shrink-0">{item.date}</span>
+                        )}
                       </div>
                     ))}
                   </div>
