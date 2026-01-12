@@ -131,7 +131,7 @@ export default function Pricing() {
                 className={`relative flex flex-col p-10 rounded-[2.5rem] bg-white border-2 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 ${plan.popular ? 'border-primary shadow-2xl shadow-primary/10' : 'border-slate-100'}`}
               >
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-amber-400 text-white text-xs font-black px-4 py-1.5 rounded-full shadow-lg z-20">
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-amber-400 text-white font-black px-4 py-1.5 rounded-full shadow-lg z-20 text-[20px]">
                     인기
                   </div>
                 )}
