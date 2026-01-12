@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Download as DownloadIcon, Monitor, Apple, Smartphone, Globe, MessageSquare, User, Play, Settings } from "lucide-react";
+import { Download as DownloadIcon, Monitor, Apple, Smartphone, Globe, MessageSquare, User, Play, Settings, FileText, Video, BookOpen, ClipboardList, Wrench } from "lucide-react";
 import downloadHeroImg from "@assets/generated_images/modern_abstract_blue_gradient_background_for_download_page_hero_section.png";
 import googlePlayLogo from "@assets/image-removebg-preview_(20)_1768199099339.png";
 import appStoreLogo from "@assets/image-removebg-preview_(21)_1768199186426.png";
@@ -37,38 +37,76 @@ export default function Download() {
             <div className="grid md:grid-cols-2 gap-8">
               
               {/* 지원하는 측 (상담사) */}
-              <div className="rounded-2xl from-[#e8f4fc] to-[#d0e8f7] p-8 border border-[#b8daf0] bg-[#ffffff]">
+              <div className="rounded-2xl p-8 border border-[#b8daf0] bg-white">
                 <div className="flex items-center gap-3 mb-2">
                   <h3 className="font-bold text-[32px] text-[#333]">지원하는 측 (상담사)</h3>
                   <MessageSquare className="text-[#0066b3]" size={24} />
                 </div>
                 <p className="text-[#666] text-[16px] mb-6">
                   전용 에이전트로 지원 시 필요한 설치 파일로,<br />
-                  Windows에서 사용할 수 있습니다.
+                  Windows와 Mac에서 사용할 수 있습니다.
                 </p>
                 
                 <div className="border-t border-[#b8daf0] pt-6"></div>
 
-                <div className="space-y-3 rounded-xl p-4 bg-[#f8fafc]">
-                  <Button variant="ghost" className="w-full justify-start hover:bg-[#0066b3]/10 text-[16px] gap-2 text-[#666]">
-                    <DownloadIcon size={18} />
-                    애니서포트 Windows용 상담원 프로그램(V10.0)
-                  </Button>
-                  <Button variant="ghost" className="w-full justify-start hover:bg-[#0066b3]/10 text-[16px] gap-2 text-[#666]">
-                    <DownloadIcon size={18} />
-                    애니서포트 Mac용 상담원 프로그램(V10.0)
-                  </Button>
-                  <Button variant="ghost" className="w-full justify-start hover:bg-[#0066b3]/10 text-[16px] gap-2 text-[#666]">
-                    <DownloadIcon size={18} />
-                    애니서포트 윈도우즈용 상담원 프로그램(V6.0)
-                  </Button>
+                {/* 상담원 프로그램 */}
+                <div className="mb-6">
+                  <h4 className="font-bold text-[#0066b3] mb-3 text-[16px]">상담원 프로그램</h4>
+                  <div className="space-y-2 bg-[#f8fafc] rounded-xl p-4">
+                    <Button variant="ghost" className="w-full justify-start hover:bg-[#0066b3]/10 text-[15px] gap-2 text-[#0066b3]">
+                      <DownloadIcon size={16} className="text-[#0066b3]" />
+                      애니서포트 Windows용 상담원 프로그램(V10.0)
+                    </Button>
+                    <Button variant="ghost" className="w-full justify-start hover:bg-[#0066b3]/10 text-[15px] gap-2 text-[#0066b3]">
+                      <DownloadIcon size={16} className="text-[#0066b3]" />
+                      애니서포트 Mac용 상담원 프로그램(V10.0)
+                    </Button>
+                    <Button variant="ghost" className="w-full justify-start hover:bg-[#0066b3]/10 text-[15px] gap-2 text-[#0066b3]">
+                      <DownloadIcon size={16} className="text-[#0066b3]" />
+                      애니서포트 윈도우즈용 상담원 프로그램(V6.0)
+                    </Button>
+                  </div>
+                </div>
+
+                {/* 매뉴얼 */}
+                <div className="mb-6">
+                  <h4 className="font-bold text-[#0066b3] mb-3 text-[16px]">매뉴얼</h4>
+                  <div className="space-y-2 bg-[#f8fafc] rounded-xl p-4">
+                    <Button variant="ghost" className="w-full justify-start hover:bg-[#0066b3]/10 text-[15px] gap-2 text-[#0066b3]">
+                      <BookOpen size={16} className="text-[#0066b3]" />
+                      애니서포트 상담원 매뉴얼(Ver10.0)
+                    </Button>
+                    <Button variant="ghost" className="w-full justify-start hover:bg-[#0066b3]/10 text-[15px] gap-2 text-[#0066b3]">
+                      <BookOpen size={16} className="text-[#0066b3]" />
+                      애니서포트 관리자 매뉴얼
+                    </Button>
+                    <Button variant="ghost" className="w-full justify-start hover:bg-[#0066b3]/10 text-[15px] gap-2 text-[#0066b3]">
+                      <BookOpen size={16} className="text-[#0066b3]" />
+                      애니서포트 상담원 매뉴얼(Ver6.0)
+                    </Button>
+                  </div>
+                </div>
+
+                {/* 기타 */}
+                <div>
+                  <h4 className="font-bold text-[#0066b3] mb-3 text-[16px]">기타</h4>
+                  <div className="space-y-2 bg-[#f8fafc] rounded-xl p-4">
+                    <Button variant="ghost" className="w-full justify-start hover:bg-[#0066b3]/10 text-[15px] gap-2 text-[#0066b3]">
+                      <ClipboardList size={16} className="text-[#0066b3]" />
+                      애니서포트 사용신청서
+                    </Button>
+                    <Button variant="ghost" className="w-full justify-start hover:bg-[#0066b3]/10 text-[15px] gap-2 text-[#0066b3]">
+                      <Wrench size={16} className="text-[#0066b3]" />
+                      애니서포트 시스템 진단 툴 (Windows 용)
+                    </Button>
+                  </div>
                 </div>
               </div>
 
               {/* 지원받는 측 (고객) */}
-              <div className="rounded-2xl bg-[#f8fafc] p-8 border border-slate-200">
+              <div className="rounded-2xl bg-white p-8 border border-slate-200">
                 <div className="flex items-center gap-3 mb-2">
-                  <h3 className="font-bold text-[32px] text-[333]">지원받는 측 (고객)</h3>
+                  <h3 className="font-bold text-[32px] text-[#333]">지원받는 측 (고객)</h3>
                   <User className="text-[#0066b3]" size={24} />
                 </div>
                 <p className="text-[#666] text-[16px] mb-6">
@@ -78,87 +116,72 @@ export default function Download() {
 
                 <div className="border-t border-slate-200 pt-6"></div>
 
-                <div className="bg-white rounded-xl p-4">
-                {/* 웹브라우저 */}
+                {/* 고객 설치파일 */}
                 <div className="mb-6">
-                  <h4 className="font-bold mb-1 text-[18px] text-[#2563eb]">웹브라우저</h4>
-                  <p className="text-[#666] text-[16px] mb-3">모바일 · 영상 지원 앱</p>
-                  <div className="grid grid-cols-2 gap-3">
-                    <a href="https://988.co.kr/" target="_blank" rel="noopener noreferrer">
-                      <Button variant="outline" className="w-full justify-between border-slate-200 text-[#333] hover:border-primary text-[16px]">
-                        <div className="flex items-center gap-2">
-                          <img src={googlePlayLogo} alt="Google Play" className="h-5" />
-                          Google Play
-                        </div>
-                        <DownloadIcon size={16} className="text-[#0066b3]" />
-                      </Button>
-                    </a>
-                    <a href="https://988.co.kr/" target="_blank" rel="noopener noreferrer">
-                      <Button variant="outline" className="w-full justify-between border-slate-200 text-[#333] hover:border-primary text-[16px]">
-                        <div className="flex items-center gap-2">
-                          <img src={appStoreLogo} alt="App Store" className="h-5" />
-                          App Store
-                        </div>
-                        <DownloadIcon size={16} className="text-[#0066b3]" />
-                      </Button>
-                    </a>
+                  <h4 className="font-bold text-[#0066b3] mb-3 text-[16px]">고객 설치파일</h4>
+                  <div className="space-y-2 bg-[#f8fafc] rounded-xl p-4">
+                    <Button variant="ghost" className="w-full justify-start hover:bg-[#0066b3]/10 text-[15px] gap-2 text-[#0066b3]">
+                      <DownloadIcon size={16} className="text-[#0066b3]" />
+                      애니서포트 Windows용 고객 설치파일(V10.0)
+                    </Button>
+                    <Button variant="ghost" className="w-full justify-start hover:bg-[#0066b3]/10 text-[15px] gap-2 text-[#0066b3]">
+                      <DownloadIcon size={16} className="text-[#0066b3]" />
+                      애니서포트 Mac용 고객 설치파일(V10.0)
+                    </Button>
+                    <Button variant="ghost" className="w-full justify-start hover:bg-[#0066b3]/10 text-[15px] gap-2 text-[#0066b3]">
+                      <DownloadIcon size={16} className="text-[#0066b3]" />
+                      애니서포트 윈도우즈용 고객 설치파일(V6.0)
+                    </Button>
                   </div>
                 </div>
 
-                {/* 전용 에이전트 */}
+                {/* 모바일 설치파일 */}
                 <div className="mb-6">
-                  <h4 className="font-bold text-[#0066b3] mb-1 text-[18px]">전용 에이전트</h4>
-                  <p className="text-[#666] text-[16px] mb-3">PC지원 고객 설치 플러그인</p>
-                  <Button variant="outline" className="w-full justify-between border-slate-200 text-[#333] hover:border-primary text-[16px]">
-                    <div className="flex items-center gap-2">
-                      <img src={windowsLogo} alt="Windows" className="h-5" />
-                      Windows
-                    </div>
-                    <DownloadIcon size={16} className="text-[#0066b3]" />
-                  </Button>
+                  <h4 className="font-bold text-[#0066b3] mb-3 text-[16px]">모바일 설치파일</h4>
+                  <div className="space-y-2 bg-[#f8fafc] rounded-xl p-4">
+                    <Button variant="ghost" className="w-full justify-start hover:bg-[#0066b3]/10 text-[15px] gap-2 text-[#0066b3]">
+                      <DownloadIcon size={16} className="text-[#0066b3]" />
+                      애니서포트 모바일 설치파일(Android)
+                    </Button>
+                    <Button variant="ghost" className="w-full justify-start hover:bg-[#0066b3]/10 text-[15px] gap-2 text-[#0066b3]">
+                      <DownloadIcon size={16} className="text-[#0066b3]" />
+                      애니서포트 모바일 설치파일(iOS)
+                    </Button>
+                    <Button variant="ghost" className="w-full justify-start hover:bg-[#0066b3]/10 text-[15px] gap-2 text-[#0066b3]">
+                      <BookOpen size={16} className="text-[#0066b3]" />
+                      애니서포트 모바일 매뉴얼
+                    </Button>
+                  </div>
                 </div>
 
-                {/* 모바일 지원 앱 & 영상 지원 앱 */}
-                <div className="grid grid-cols-2 gap-6">
-                  <div>
-                    <h4 className="font-bold text-[#333] mb-3 text-[16px]">모바일 지원 앱</h4>
-                    <div className="space-y-2">
-                      <Button variant="outline" className="w-full justify-between border-slate-200 text-[#333] hover:border-primary text-[14px]">
-                        <div className="flex items-center gap-2">
-                          <img src={googlePlayLogo} alt="Google Play" className="h-4" />
-                          Google Play
-                        </div>
-                        <DownloadIcon size={14} className="text-[#0066b3]" />
-                      </Button>
-                      <Button variant="outline" className="w-full justify-between border-slate-200 text-[#333] hover:border-primary text-[14px]">
-                        <div className="flex items-center gap-2">
-                          <img src={appStoreLogo} alt="App Store" className="h-4" />
-                          App Store
-                        </div>
-                        <DownloadIcon size={14} className="text-[#0066b3]" />
-                      </Button>
-                    </div>
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-[#333] mb-3 text-[16px]">영상 지원 앱</h4>
-                    <div className="space-y-2">
-                      <Button variant="outline" className="w-full justify-between border-slate-200 text-[#333] hover:border-primary text-[14px]">
-                        <div className="flex items-center gap-2">
-                          <img src={googlePlayLogo} alt="Google Play" className="h-4" />
-                          Google Play
-                        </div>
-                        <DownloadIcon size={14} className="text-[#0066b3]" />
-                      </Button>
-                      <Button variant="outline" className="w-full justify-between border-slate-200 text-[#333] hover:border-primary text-[14px]">
-                        <div className="flex items-center gap-2">
-                          <img src={appStoreLogo} alt="App Store" className="h-4" />
-                          App Store
-                        </div>
-                        <DownloadIcon size={14} className="text-[#0066b3]" />
-                      </Button>
-                    </div>
+                {/* 비디오 설치파일 */}
+                <div className="mb-6">
+                  <h4 className="font-bold text-[#0066b3] mb-3 text-[16px]">비디오 설치파일</h4>
+                  <div className="space-y-2 bg-[#f8fafc] rounded-xl p-4">
+                    <Button variant="ghost" className="w-full justify-start hover:bg-[#0066b3]/10 text-[15px] gap-2 text-[#0066b3]">
+                      <DownloadIcon size={16} className="text-[#0066b3]" />
+                      애니서포트 비디오 설치파일(Android)
+                    </Button>
+                    <Button variant="ghost" className="w-full justify-start hover:bg-[#0066b3]/10 text-[15px] gap-2 text-[#0066b3]">
+                      <DownloadIcon size={16} className="text-[#0066b3]" />
+                      애니서포트 비디오 설치파일(iOS)
+                    </Button>
+                    <Button variant="ghost" className="w-full justify-start hover:bg-[#0066b3]/10 text-[15px] gap-2 text-[#0066b3]">
+                      <BookOpen size={16} className="text-[#0066b3]" />
+                      애니서포트 비디오 매뉴얼
+                    </Button>
                   </div>
                 </div>
+
+                {/* 고객 매뉴얼 */}
+                <div>
+                  <h4 className="font-bold text-[#0066b3] mb-3 text-[16px]">매뉴얼</h4>
+                  <div className="space-y-2 bg-[#f8fafc] rounded-xl p-4">
+                    <Button variant="ghost" className="w-full justify-start hover:bg-[#0066b3]/10 text-[15px] gap-2 text-[#0066b3]">
+                      <BookOpen size={16} className="text-[#0066b3]" />
+                      애니서포트 고객 매뉴얼
+                    </Button>
+                  </div>
                 </div>
               </div>
             </div>
