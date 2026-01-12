@@ -604,7 +604,7 @@ export default function Cases() {
                           <Smartphone size={24} className="text-sky-500" />
                         </div>
                         <div>
-                          <div className="text-sm font-bold text-sky-700">
+                          <div className="font-bold text-sky-700 text-[18px]">
                             고객 (내외부망)
                           </div>
                           <div className="text-xs text-slate-500">
