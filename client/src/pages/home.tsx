@@ -350,7 +350,7 @@ export function Home() {
       <section className="py-24 bg-white pt-[154px] pb-[154px]">
         <div className="max-w-[1280px] w-full mx-auto px-4 sm:px-6 lg:px-10">
           <div className="text-center mb-16">
-            <h2 className="lg:text-4xl font-bold mb-4 text-[40px] text-[#333]">
+            <h2 className="font-bold mb-4 text-[24px] sm:text-[32px] lg:text-[40px] text-[#333]">
               환경과 기기에 제한 없는 원격지원
             </h2>
             <p className="text-[#666] max-w-2xl mx-auto text-[18px]">
@@ -420,7 +420,7 @@ export function Home() {
       <section id="features" className="py-24 bg-[#f8fafc]">
         <div className="max-w-[1280px] w-full mx-auto px-4 sm:px-6 lg:px-10">
           <div className="text-center mb-16">
-            <h2 className="lg:text-4xl font-bold mb-4 text-[#333] text-[40px]">
+            <h2 className="font-bold mb-4 text-[#333] text-[24px] sm:text-[32px] lg:text-[40px]">
               효율적인 지원을 위한 핵심적인 기능
             </h2>
             <p className="text-[#666] max-w-2xl mx-auto text-[18px]"></p>
@@ -510,7 +510,7 @@ export function Home() {
       <section className="py-24 bg-white border-y border-slate-50">
         <div className="max-w-[1280px] w-full mx-auto px-4 sm:px-6 lg:px-10">
           <div className="text-center mb-16">
-            <h2 className="lg:text-4xl mb-4 font-bold text-[#333] text-[40px]">
+            <h2 className="mb-4 font-bold text-[#333] text-[24px] sm:text-[32px] lg:text-[40px]">
               환경은 달라도, 지원은 하나로 완성됩니다
             </h2>
             <p className="text-[#666] max-w-2xl mx-auto text-[18px]">
@@ -566,7 +566,7 @@ export function Home() {
       <section id="connection-process" className="py-24 bg-white">
         <div className="max-w-[1280px] w-full mx-auto px-4 sm:px-6 lg:px-10">
           <div className="text-center mb-16">
-            <h2 className="lg:text-4xl font-bold mb-4 text-[#333] text-[40px]">
+            <h2 className="font-bold mb-4 text-[#333] text-[24px] sm:text-[32px] lg:text-[40px]">
               간편한 4단계 연결로 시간과 비용을 단축하세요
             </h2>
             <p className="text-[#666] max-w-2xl mx-auto text-[18px]">
@@ -628,7 +628,7 @@ export function Home() {
       <section className="py-24 bg-[#f8fafc]">
         <div className="max-w-[1280px] w-full mx-auto px-4 sm:px-6 lg:px-10">
           <div className="text-center mb-16">
-            <h2 className="lg:text-4xl font-bold mb-4 text-[#333] text-[40px]">애니서포트 원격지원, 5초안에 연결!</h2>
+            <h2 className="font-bold mb-4 text-[#333] text-[24px] sm:text-[32px] lg:text-[40px]">애니서포트 원격지원, 5초안에 연결!</h2>
           </div>
           <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
             <div className="flex justify-center">
@@ -769,7 +769,7 @@ export function Home() {
       <section className="py-24 bg-white pt-[92px] pb-[92px]">
         <div className="max-w-[1280px] w-full mx-auto px-4 sm:px-6 lg:px-10">
           <div className="text-center mb-12">
-            <h2 className="text-[40px] font-bold text-[#333] mb-4 leading-[1.2]">
+            <h2 className="text-[24px] sm:text-[32px] lg:text-[40px] font-bold text-[#333] mb-4 leading-[1.2]">
               26년의 원격지원
               <br />
               숫자와 성과가 증명합니다
@@ -817,7 +817,7 @@ export function Home() {
       <section className="py-24 bg-[#ffffff]">
         <div className="max-w-[1280px] w-full mx-auto px-4 sm:px-6 lg:px-10">
           <div className="text-center mb-16">
-            <h2 className="lg:text-4xl font-bold mb-4 text-[40px] text-[#333]">
+            <h2 className="font-bold mb-4 text-[24px] sm:text-[32px] lg:text-[40px] text-[#333]">
               서비스 도입 방식 선택
             </h2>
             <p className="text-[#666] max-w-2xl mx-auto text-[18px]">
