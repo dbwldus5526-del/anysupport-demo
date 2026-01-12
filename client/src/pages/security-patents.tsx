@@ -144,7 +144,7 @@ export default function SecurityPatents() {
                     </div>
                     <div>
                       <div className="font-bold text-lg text-[#333]">코이노 IDC</div>
-                      <div className="text-sm text-[#666]">전문 데이터센터 운영</div>
+                      <div className="text-[#666] text-[16px]">전문 데이터센터 운영</div>
                     </div>
                   </div>
                   <div className="space-y-3">
