@@ -347,7 +347,7 @@ export default function Product() {
                   <Monitor size={20} className="text-primary shrink-0" />
                   <div>
                     <div className="font-bold text-sm text-slate-900">체계적 DB 관리</div>
-                    <div className="text-xs text-slate-500">모든 상담 이력 자동 저장</div>
+                    <div className="text-[16px] text-[#666]">모든 상담 이력 자동 저장</div>
                   </div>
                 </div>
               </div>
