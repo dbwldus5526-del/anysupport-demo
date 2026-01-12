@@ -226,12 +226,9 @@ export default function MobileProduct() {
                 }
               ].map((item, i) => (
                 <div key={i} className="flex flex-col h-full bg-white">
-                  <div className="mb-6 relative">
-                    <div className="w-16 h-16 rounded-2xl bg-primary/5 flex items-center justify-center border border-primary/10 relative z-10 bg-white">
+                  <div className="mb-6">
+                    <div className="w-16 h-16 rounded-2xl bg-primary/5 flex items-center justify-center border border-primary/10 bg-white">
                       {item.icon}
-                    </div>
-                    <div className="absolute -top-3 -right-3 text-slate-200 font-black text-4xl opacity-50 z-0">
-                      {i + 1}
                     </div>
                   </div>
                   
