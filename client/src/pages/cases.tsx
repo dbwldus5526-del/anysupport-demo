@@ -334,7 +334,7 @@ export default function Cases() {
                 (badge, i) => (
                   <div
                     key={i}
-                    className="flex items-center gap-2 px-4 py-2 bg-white/10 rounded-lg font-medium text-[18px]"
+                    className="flex items-center gap-2 px-4 py-2 bg-white/10 rounded-lg font-medium text-[14px] sm:text-[16px] lg:text-[18px]"
                   >
                     <CheckCircle size={16} className="text-green-400" />
                     {badge}
@@ -359,7 +359,7 @@ export default function Cases() {
               <div className="text-xl font-bold text-slate-700 mb-2">
                 내 해결
               </div>
-              <p className="text-[#666] text-[18px]">평균 장애 해결 시간</p>
+              <p className="text-[#666] text-[14px] sm:text-[16px] lg:text-[18px]">평균 장애 해결 시간</p>
             </div>
 
             <div className="text-center p-8 bg-slate-50 rounded-2xl border border-slate-100">
@@ -372,7 +372,7 @@ export default function Cases() {
               <div className="text-xl font-bold text-slate-700 mb-2">
                 연간 절감
               </div>
-              <p className="text-[#666] text-[18px]">* 보안업체 OOO사 사례</p>
+              <p className="text-[#666] text-[14px] sm:text-[16px] lg:text-[18px]">* 보안업체 OOO사 사례</p>
             </div>
 
             <div className="text-center p-8 bg-slate-50 rounded-2xl border border-slate-100">
@@ -385,7 +385,7 @@ export default function Cases() {
               <div className="text-xl font-bold text-slate-700 mb-2">
                 고객만족도
               </div>
-              <p className="text-[18px] text-[#666]">
+              <p className="text-[14px] sm:text-[16px] lg:text-[18px] text-[#666]">
                 원격지원 AnySupport를 사용했을 때
               </p>
             </div>
@@ -400,7 +400,7 @@ export default function Cases() {
               <div className="text-xl font-bold text-slate-700 mb-2">
                 FCR 비율 증가
               </div>
-              <p className="text-[18px] text-[#666]">
+              <p className="text-[14px] sm:text-[16px] lg:text-[18px] text-[#666]">
                 첫 고객 대응으로 문제해결, 재문의 전화비율 감소
               </p>
             </div>
@@ -414,7 +414,7 @@ export default function Cases() {
             <h2 className="text-2xl md:text-4xl font-bold mb-4 text-[#333]">
               우리 환경은 어디에 해당하나요?
             </h2>
-            <p className="text-slate-500 max-w-2xl mx-auto text-[18px]">
+            <p className="text-slate-500 max-w-2xl mx-auto text-[14px] sm:text-[16px] lg:text-[18px]">
               조직의 네트워크 환경에 맞는 시나리오를 선택해 보세요
             </p>
           </div>
@@ -425,7 +425,7 @@ export default function Cases() {
               <button
                 key={scenario.id}
                 onClick={() => setActiveScenario(scenario.id)}
-                className={`px-6 py-3 rounded-full font-bold transition-all duration-300 border text-[18px] ${
+                className={`px-6 py-3 rounded-full font-bold transition-all duration-300 border text-[14px] sm:text-[16px] lg:text-[18px] ${
                   activeScenario === scenario.id
                     ? "bg-primary text-white border-primary"
                     : "bg-white text-slate-600 border-slate-200 hover:border-primary hover:text-primary"
@@ -457,25 +457,25 @@ export default function Cases() {
               {/* Visual Flow Diagram */}
               <div className="bg-slate-50 rounded-2xl p-8 mb-8 border border-slate-100">
                 <div className="text-center mb-6">
-                  <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary font-bold rounded-full mb-2 text-[18px]">
+                  <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary font-bold rounded-full mb-2 text-[14px] sm:text-[16px] lg:text-[18px]">
                     시나리오
                   </span>
                   <h3 className="text-xl font-bold text-slate-800">
                     {currentScenario.subtitle}
                   </h3>
-                  <p className="mt-2 text-[18px] text-[#666]">
+                  <p className="mt-2 text-[14px] sm:text-[16px] lg:text-[18px] text-[#666]">
                     {currentScenario.description}
                   </p>
                 </div>
 
                 {/* Internet Scenario Flow */}
                 {currentScenario.id === "internet" && (
-                  <div className="py-6 text-[18px] text-[#666]">
+                  <div className="py-6 text-[14px] sm:text-[16px] lg:text-[18px] text-[#666]">
                     {/* Top: 상담원 그룹 */}
                     <div className="flex justify-center gap-4 md:gap-8 mb-6">
                       {["A사", "B사", "C사"].map((company, i) => (
                         <div key={i} className="flex flex-col items-center">
-                          <div className="px-3 py-1 bg-primary text-white font-bold rounded-full mb-2 text-[18px]">
+                          <div className="px-3 py-1 bg-primary text-white font-bold rounded-full mb-2 text-[14px] sm:text-[16px] lg:text-[18px]">
                             {company}
                           </div>
                           <div className="w-16 h-16 md:w-20 md:h-20 bg-blue-50 rounded-xl border-2 border-dashed border-blue-200 flex items-center justify-center">
@@ -484,7 +484,7 @@ export default function Cases() {
                               <Monitor size={16} className="text-blue-400" />
                             </div>
                           </div>
-                          <span className="font-bold mt-1 text-[#333] text-[18px]">
+                          <span className="font-bold mt-1 text-[#333] text-[14px] sm:text-[16px] lg:text-[18px]">
                             상담원
                           </span>
                         </div>
@@ -542,10 +542,10 @@ export default function Cases() {
                           <Smartphone size={24} className="text-primary" />
                         </div>
                         <div>
-                          <div className="font-bold text-primary text-[18px]">
+                          <div className="font-bold text-primary text-[14px] sm:text-[16px] lg:text-[18px]">
                             고객 (인터넷망)
                           </div>
-                          <div className="text-[18px] text-[#666]">
+                          <div className="text-[14px] sm:text-[16px] lg:text-[18px] text-[#666]">
                             PC·모바일 이용고객
                           </div>
                         </div>
@@ -561,7 +561,7 @@ export default function Cases() {
                     <div className="flex justify-center gap-4 md:gap-8 mb-6">
                       {["A사", "B사", "C사"].map((company, i) => (
                         <div key={i} className="flex flex-col items-center">
-                          <div className="px-3 py-1 bg-sky-500 text-white font-bold rounded-full mb-2 text-[18px]">
+                          <div className="px-3 py-1 bg-sky-500 text-white font-bold rounded-full mb-2 text-[14px] sm:text-[16px] lg:text-[18px]">
                             {company}
                           </div>
                           <div className="w-16 h-16 md:w-20 md:h-20 bg-sky-50 rounded-xl border-2 border-dashed border-sky-200 flex items-center justify-center">
@@ -570,7 +570,7 @@ export default function Cases() {
                               <Monitor size={16} className="text-sky-400" />
                             </div>
                           </div>
-                          <span className="font-bold mt-1 text-[#333] text-[18px]">
+                          <span className="font-bold mt-1 text-[#333] text-[14px] sm:text-[16px] lg:text-[18px]">
                             상담원
                           </span>
                         </div>
@@ -591,28 +591,28 @@ export default function Cases() {
                           size={28}
                           className="text-purple-500 mb-2"
                         />
-                        <span className="font-bold text-center text-[#333] text-[18px]">
+                        <span className="font-bold text-center text-[#333] text-[14px] sm:text-[16px] lg:text-[18px]">
                           수강생/직원
                         </span>
-                        <span className="text-center text-[18px] text-[#666]">
+                        <span className="text-center text-[14px] sm:text-[16px] lg:text-[18px] text-[#666]">
                           전용 단말기
                         </span>
                       </div>
                       <div className="flex flex-col items-center p-3 md:p-4 bg-white rounded-xl border border-slate-200 w-28 md:w-36">
                         <Network size={28} className="text-blue-500 mb-2" />
-                        <span className="font-bold text-center text-[18px] text-[#333]">
+                        <span className="font-bold text-center text-[14px] sm:text-[16px] lg:text-[18px] text-[#333]">
                           공급솔루션
                         </span>
-                        <span className="text-center text-[18px] text-[#666]">
+                        <span className="text-center text-[14px] sm:text-[16px] lg:text-[18px] text-[#666]">
                           서비스 연계
                         </span>
                       </div>
                       <div className="flex flex-col items-center p-3 md:p-4 bg-white rounded-xl border border-slate-200 w-28 md:w-36">
                         <Factory size={28} className="text-slate-600 mb-2" />
-                        <span className="font-bold text-center text-[#333] text-[18px]">
+                        <span className="font-bold text-center text-[#333] text-[14px] sm:text-[16px] lg:text-[18px]">
                           공장관리
                         </span>
-                        <span className="text-center text-[18px] text-[#666]">
+                        <span className="text-center text-[14px] sm:text-[16px] lg:text-[18px] text-[#666]">
                           운영시스템
                         </span>
                       </div>
@@ -631,10 +631,10 @@ export default function Cases() {
                           <Smartphone size={24} className="text-sky-500" />
                         </div>
                         <div>
-                          <div className="font-bold text-sky-700 text-[18px]">
+                          <div className="font-bold text-sky-700 text-[14px] sm:text-[16px] lg:text-[18px]">
                             고객 (내외부망)
                           </div>
-                          <div className="text-[18px] text-[#666]">
+                          <div className="text-[14px] sm:text-[16px] lg:text-[18px] text-[#666]">
                             PC·모바일 이용고객
                           </div>
                         </div>
@@ -655,10 +655,10 @@ export default function Cases() {
                               <User size={24} className="text-amber-700" />
                             </div>
                             <div>
-                              <div className="font-bold text-amber-800 text-[18px]">
+                              <div className="font-bold text-amber-800 text-[14px] sm:text-[16px] lg:text-[18px]">
                                 외부 IT협력업체
                               </div>
-                              <div className="text-amber-600 text-[18px]">
+                              <div className="text-amber-600 text-[14px] sm:text-[16px] lg:text-[18px]">
                                 유지보수 엔지니어
                               </div>
                             </div>
@@ -731,7 +731,7 @@ export default function Cases() {
                           </div>
                         </div>
                         <div className="p-3 bg-green-50 rounded-lg border border-green-200">
-                          <div className="text-center font-bold text-green-800 mb-2 text-[18px]">
+                          <div className="text-center font-bold text-green-800 mb-2 text-[14px] sm:text-[16px] lg:text-[18px]">
                             DMZ
                           </div>
                           <div className="flex items-center justify-center gap-2 p-2 bg-white rounded border border-slate-200">
@@ -768,7 +768,7 @@ export default function Cases() {
                 {/* Security Points & Info */}
                 <div className="grid md:grid-cols-2 gap-6 mt-6">
                   <div className="bg-white rounded-xl p-5 border border-slate-100">
-                    <h4 className="font-bold text-slate-800 mb-3 flex items-center gap-2 text-[18px]">
+                    <h4 className="font-bold text-slate-800 mb-3 flex items-center gap-2 text-[14px] sm:text-[16px] lg:text-[18px]">
                       <Shield size={18} className="text-primary" />
                       보안 포인트
                     </h4>
@@ -776,7 +776,7 @@ export default function Cases() {
                       {currentScenario.securityPoints.map((point, i) => (
                         <div
                           key={i}
-                          className="flex items-center gap-2 text-[18px] text-[#666]"
+                          className="flex items-center gap-2 text-[14px] sm:text-[16px] lg:text-[18px] text-[#666]"
                         >
                           <CheckCircle size={14} className="text-green-500" />
                           <span className="text-slate-600">{point}</span>
@@ -786,12 +786,12 @@ export default function Cases() {
                   </div>
 
                   <div className="bg-blue-50 rounded-xl p-5 border border-blue-100">
-                    <h4 className="font-bold text-blue-800 mb-3 flex items-center gap-2 text-[18px]">
+                    <h4 className="font-bold text-blue-800 mb-3 flex items-center gap-2 text-[14px] sm:text-[16px] lg:text-[18px]">
                       <Users size={18} className="text-blue-600" />
                       지원 대상
                     </h4>
-                    <div className="space-y-2 text-blue-700 text-[18px]">
-                      <div className="flex items-center gap-2 text-[18px]">
+                    <div className="space-y-2 text-blue-700 text-[14px] sm:text-[16px] lg:text-[18px]">
+                      <div className="flex items-center gap-2 text-[14px] sm:text-[16px] lg:text-[18px]">
                         <Headphones size={14} />
                         <strong>누가:</strong> 상담원/운영자
                       </div>
@@ -828,12 +828,12 @@ export default function Cases() {
                   {currentScenario.cases.slice(0, 8).map((caseItem, i) => (
                     <div
                       key={i}
-                      className="p-4 rounded-xl border border-slate-100 hover:border-primary/30 transition-colors text-[18px] text-[#333] bg-[#ffffff]"
+                      className="p-4 rounded-xl border border-slate-100 hover:border-primary/30 transition-colors text-[14px] sm:text-[16px] lg:text-[18px] text-[#333] bg-[#ffffff]"
                     >
-                      <div className="font-bold mb-1 text-[18px] text-[#333]">
+                      <div className="font-bold mb-1 text-[14px] sm:text-[16px] lg:text-[18px] text-[#333]">
                         {caseItem.logo}
                       </div>
-                      <p className="text-[18px] text-[#666]">{caseItem.desc}</p>
+                      <p className="text-[14px] sm:text-[16px] lg:text-[18px] text-[#666]">{caseItem.desc}</p>
                     </div>
                   ))}
                 </div>
@@ -942,10 +942,10 @@ export default function Cases() {
                   {effect.title.replace(effect.highlight, "")}
                   <span className="text-primary">{effect.highlight}</span>
                 </div>
-                <p className="mb-2 text-[#333] text-[18px] font-semibold">
+                <p className="mb-2 text-[#333] text-[14px] sm:text-[16px] lg:text-[18px] font-semibold">
                   {effect.desc}
                 </p>
-                <p className="text-[#666] text-[18px] font-normal">
+                <p className="text-[#666] text-[14px] sm:text-[16px] lg:text-[18px] font-normal">
                   {effect.details}
                 </p>
               </div>
@@ -961,7 +961,7 @@ export default function Cases() {
               <Shield size={40} />
             </div>
             <h2 className="text-2xl md:text-4xl font-bold mb-4">보안 관제탑</h2>
-            <p className="text-slate-400 max-w-2xl mx-auto text-[18px]">
+            <p className="text-slate-400 max-w-2xl mx-auto text-[14px] sm:text-[16px] lg:text-[18px]">
               접근 통제부터 감사·추적까지, 엔터프라이즈급 보안을 제공합니다
             </p>
           </div>
@@ -980,7 +980,7 @@ export default function Cases() {
                   {feature.items.map((item, j) => (
                     <li
                       key={j}
-                      className="flex items-center gap-2 text-slate-300 text-[18px]"
+                      className="flex items-center gap-2 text-slate-300 text-[14px] sm:text-[16px] lg:text-[18px]"
                     >
                       <CheckCircle size={14} className="text-green-400" />
                       {item}
@@ -996,7 +996,7 @@ export default function Cases() {
               <Button
                 size="lg"
                 variant="outline"
-                className="font-bold border-white text-white hover:bg-white/10 text-[18px]"
+                className="font-bold border-white text-white hover:bg-white/10 text-[14px] sm:text-[16px] lg:text-[18px]"
               >
                 원격지원 관리 기능 보기 <ArrowRight className="ml-2 w-4 h-4" />
               </Button>

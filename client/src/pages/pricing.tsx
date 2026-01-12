@@ -116,7 +116,7 @@ export default function Pricing() {
               />
             </div>
             <span className={`text-lg font-bold transition-colors ${isAnnual ? 'text-primary' : 'text-slate-400'}`}>
-              연간 <span className="font-black text-green-500 ml-1 text-[18px]">(20% 할인)</span>
+              연간 <span className="font-black text-green-500 ml-1 text-[14px] sm:text-[16px] lg:text-[18px]">(20% 할인)</span>
             </span>
           </div>
         </div>
@@ -138,7 +138,7 @@ export default function Pricing() {
                 
                 <div className="mb-10">
                   <h3 className="font-black mb-3 text-[26px] text-[#333]">{plan.title}</h3>
-                  <p className="min-h-[40px] font-normal text-[18px] text-[#666]">{plan.desc}</p>
+                  <p className="min-h-[40px] font-normal text-[14px] sm:text-[16px] lg:text-[18px] text-[#666]">{plan.desc}</p>
                 </div>
 
                 <div className="mb-10">
@@ -147,14 +147,14 @@ export default function Pricing() {
                       {isAnnual ? plan.annualPrice : plan.monthlyPrice}원
                     </span>
                   </div>
-                  <span className="text-[#666] font-normal text-[18px]">/ {isAnnual ? '년' : '월'}</span>
+                  <span className="text-[#666] font-normal text-[14px] sm:text-[16px] lg:text-[18px]">/ {isAnnual ? '년' : '월'}</span>
                 </div>
 
                 <div className="flex-grow space-y-4 mb-10">
                   {plan.features.map((feature, idx) => (
                     <div key={idx} className="flex items-start gap-3">
                       <CheckCircle2 className="text-primary mt-1 shrink-0" size={18} />
-                      <span className="font-normal text-[18px] text-[#666]">{feature}</span>
+                      <span className="font-normal text-[14px] sm:text-[16px] lg:text-[18px] text-[#666]">{feature}</span>
                     </div>
                   ))}
                 </div>
@@ -181,7 +181,7 @@ export default function Pricing() {
           </div>
 
           <div className="text-center mt-16">
-            <p className="text-slate-500 mb-6 font-normal text-[18px]">
+            <p className="text-slate-500 mb-6 font-normal text-[14px] sm:text-[16px] lg:text-[18px]">
               모든 플랜은 14일 무료 체험이 가능합니다. 신용카드 등록 없이 바로 시작하세요.
             </p>
             <Button 
@@ -288,7 +288,7 @@ export default function Pricing() {
                         </span>
                         <h3 className="text-xl font-medium">{category.title}</h3>
                       </div>
-                      <p className="text-white/80 text-[18px] font-normal">{category.subtitle}</p>
+                      <p className="text-white/80 text-[14px] sm:text-[16px] lg:text-[18px] font-normal">{category.subtitle}</p>
                     </div>
                     <div className="grid-cols-4 gap-4 text-center min-w-[400px] hidden md:grid text-[19px] font-light">
                       {["BASIC", "PREMIUM", "MOBILE", "Video"].map((name) => (
@@ -300,7 +300,7 @@ export default function Pricing() {
                 <div className="bg-white">
                   {category.rows.map((row, idx) => (
                     <div key={idx} className={`grid grid-cols-1 md:grid-cols-[1fr_400px] items-center border-b border-slate-100 last:border-0 hover:bg-slate-50 transition-colors`}>
-                      <div className="p-5 pl-8 text-[18px] font-normal text-[#333]">
+                      <div className="p-5 pl-8 text-[14px] sm:text-[16px] lg:text-[18px] font-normal text-[#333]">
                         {row.name}
                       </div>
                       <div className="grid grid-cols-4 gap-4 p-5 text-center bg-slate-50/30 md:bg-transparent">
@@ -313,7 +313,7 @@ export default function Pricing() {
                                 <span className="text-slate-300 font-bold">-</span>
                               )
                             ) : (
-                              <span className="text-[#2563eb] text-[18px] font-bold">{val}</span>
+                              <span className="text-[#2563eb] text-[14px] sm:text-[16px] lg:text-[18px] font-bold">{val}</span>
                             )}
                           </div>
                         ))}
@@ -330,7 +330,7 @@ export default function Pricing() {
       <section className="py-24 bg-slate-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
-            <span className="text-primary font-bold tracking-widest uppercase mb-2 block text-[18px]">FAQ</span>
+            <span className="text-primary font-bold tracking-widest uppercase mb-2 block text-[14px] sm:text-[16px] lg:text-[18px]">FAQ</span>
             <h2 className="text-[25px] md:text-5xl font-black mb-4 text-slate-900">무엇을 도와드릴까요?</h2>
             <p className="text-slate-500 text-[14px] md:text-lg font-medium">자주 묻는 질문에 대한 답변을 확인하세요</p>
           </div>
@@ -344,17 +344,17 @@ export default function Pricing() {
                     <p>애니서포트 서비스제품(SaaS)은 1년 선납 기준으로 아래와 같습니다.</p>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div className="bg-white p-4 rounded-xl border border-slate-200">
-                        <p className="font-bold mb-2 text-[#333] text-[18px]">[PC 에디션]</p>
-                        <p className="text-[18px] text-[#333] font-normal">Basic: 100만원 (VAT 별도)</p>
-                        <p className="text-[#333] text-[18px] font-normal">Premium: 132만원 (VAT 별도)</p>
+                        <p className="font-bold mb-2 text-[#333] text-[14px] sm:text-[16px] lg:text-[18px]">[PC 에디션]</p>
+                        <p className="text-[14px] sm:text-[16px] lg:text-[18px] text-[#333] font-normal">Basic: 100만원 (VAT 별도)</p>
+                        <p className="text-[#333] text-[14px] sm:text-[16px] lg:text-[18px] font-normal">Premium: 132만원 (VAT 별도)</p>
                       </div>
                       <div className="bg-white p-4 rounded-xl border border-slate-200">
-                        <p className="font-bold mb-2 text-[#333] text-[18px]">[Mobile 에디션]</p>
-                        <p className="text-[#333] font-normal text-[18px]">Android/iOS: 290만원 (VAT 별도)</p>
+                        <p className="font-bold mb-2 text-[#333] text-[14px] sm:text-[16px] lg:text-[18px]">[Mobile 에디션]</p>
+                        <p className="text-[#333] font-normal text-[14px] sm:text-[16px] lg:text-[18px]">Android/iOS: 290만원 (VAT 별도)</p>
                       </div>
                       <div className="bg-white p-4 rounded-xl border border-slate-200">
-                        <p className="font-bold mb-2 text-[#333] text-[18px]">[Video 에디션]</p>
-                        <p className="text-[#333] font-normal text-[18px]">영상상담: 387만원 (VAT 별도)</p>
+                        <p className="font-bold mb-2 text-[#333] text-[14px] sm:text-[16px] lg:text-[18px]">[Video 에디션]</p>
+                        <p className="text-[#333] font-normal text-[14px] sm:text-[16px] lg:text-[18px]">영상상담: 387만원 (VAT 별도)</p>
                       </div>
                     </div>
                     <div className="bg-primary/5 p-4 rounded-xl border border-primary/10">

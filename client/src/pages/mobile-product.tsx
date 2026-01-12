@@ -121,7 +121,7 @@ export default function MobileProduct() {
                   "앱 설치 최소화 설계",
                   "비대면 고객 응대 최적화"
                 ].map((item, i) => (
-                  <li key={i} className="flex items-center gap-3 font-semibold text-[#333] text-[18px]">
+                  <li key={i} className="flex items-center gap-3 font-semibold text-[#333] text-[14px] sm:text-[16px] lg:text-[18px]">
                     <CheckCircle2 className="text-primary shrink-0" size={24} />
                     {item}
                   </li>
@@ -130,8 +130,8 @@ export default function MobileProduct() {
               <div className="mt-8 p-6 bg-slate-50 rounded-xl border border-slate-100">
                 <h4 className="font-bold mb-3 text-[#2563eb]">활용 예</h4>
                 <div className="flex flex-wrap gap-2">
-                  <span className="px-4 py-2 bg-white rounded-full border border-slate-200 text-[18px] text-[#333] font-normal">금융 / 공공 / 교육 고객 상담</span>
-                  <span className="px-4 py-2 bg-white rounded-full border border-slate-200 text-[#333] text-[18px] font-normal">모바일 앱 사용 가이드</span>
+                  <span className="px-4 py-2 bg-white rounded-full border border-slate-200 text-[14px] sm:text-[16px] lg:text-[18px] text-[#333] font-normal">금융 / 공공 / 교육 고객 상담</span>
+                  <span className="px-4 py-2 bg-white rounded-full border border-slate-200 text-[#333] text-[14px] sm:text-[16px] lg:text-[18px] font-normal">모바일 앱 사용 가이드</span>
                 </div>
               </div>
             </div>
@@ -142,7 +142,7 @@ export default function MobileProduct() {
                     <feature.icon size={24} />
                   </div>
                   <h3 className="text-lg font-bold mb-2 text-[#333]">{feature.title}</h3>
-                  <p className="text-[18px] font-normal text-[#666]">{feature.desc}</p>
+                  <p className="text-[14px] sm:text-[16px] lg:text-[18px] font-normal text-[#666]">{feature.desc}</p>
                 </div>
               ))}
             </div>
@@ -169,7 +169,7 @@ export default function MobileProduct() {
                   <h3 className="text-2xl font-bold mb-4 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                     {feature.title}
                   </h3>
-                  <p className="text-white/90 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75 text-[18px]">
+                  <p className="text-white/90 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75 text-[14px] sm:text-[16px] lg:text-[18px]">
                     {feature.desc}
                   </p>
                 </div>
@@ -236,15 +236,15 @@ export default function MobileProduct() {
                   </div>
                   
                   <div className="flex-1">
-                    <span className="text-primary font-bold tracking-tighter mb-2 block text-[18px]">{item.step}</span>
+                    <span className="text-primary font-bold tracking-tighter mb-2 block text-[14px] sm:text-[16px] lg:text-[18px]">{item.step}</span>
                     <h3 className="text-xl font-bold mb-4 text-slate-900">{item.title}</h3>
-                    <p className="text-slate-500 mb-6 text-[18px]">
+                    <p className="text-slate-500 mb-6 text-[14px] sm:text-[16px] lg:text-[18px]">
                       {item.desc}
                     </p>
                     
                     <div className="space-y-2">
                       {(item.points || item.types).map((point, idx) => (
-                        <div key={idx} className="flex items-center gap-2 font-bold bg-slate-50 px-3 py-2 rounded-lg border border-slate-100 text-[18px] text-[#333]">
+                        <div key={idx} className="flex items-center gap-2 font-bold bg-slate-50 px-3 py-2 rounded-lg border border-slate-100 text-[14px] sm:text-[16px] lg:text-[18px] text-[#333]">
                           <CheckCircle2 size={14} className="text-primary" />
                           {point}
                         </div>

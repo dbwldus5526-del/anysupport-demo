@@ -195,7 +195,7 @@ export default function Security() {
           <div className="max-w-5xl mx-auto">
             <div className="bg-white/5 border border-white/10 p-8 md:p-12 rounded-[2rem] backdrop-blur-md pt-[14px] pb-[14px] pl-[48px] pr-[48px]">
               <div className="text-center mt-[12px] mb-[12px]">
-                <span className="inline-block px-4 py-1 rounded-full bg-primary/20 font-black tracking-widest uppercase mb-4 text-[#ffffff] text-[18px]">
+                <span className="inline-block px-4 py-1 rounded-full bg-primary/20 font-black tracking-widest uppercase mb-4 text-[#ffffff] text-[14px] sm:text-[16px] lg:text-[18px]">
                   3 STEP TRUST DESIGN
                 </span>
               </div>
@@ -252,7 +252,7 @@ export default function Security() {
                           </div>
                           <span className="font-bold text-lg text-white/90">{item.cardTitle}</span>
                         </div>
-                        <p className="text-[#fafafa] font-normal text-[18px]">
+                        <p className="text-[#fafafa] font-normal text-[14px] sm:text-[16px] lg:text-[18px]">
                           {item.desc}
                         </p>
                       </div>

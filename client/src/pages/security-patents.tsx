@@ -184,7 +184,7 @@ export default function SecurityPatents() {
               {/* 삼성 Galaxy시리즈 특화 */}
               <div className="bg-white rounded-2xl p-8 border border-slate-200">
                 <div className="text-center mb-6">
-                  <span className="inline-block px-4 py-1.5 bg-blue-100 text-blue-700 font-bold rounded-full mb-4 text-[18px]">
+                  <span className="inline-block px-4 py-1.5 bg-blue-100 text-blue-700 font-bold rounded-full mb-4 text-[14px] sm:text-[16px] lg:text-[18px]">
                     삼성 Galaxy시리즈 특화
                   </span>
                   <div className="flex justify-center items-center mb-4">
@@ -223,7 +223,7 @@ export default function SecurityPatents() {
               {/* 삼성전자 SEAP 파트너 */}
               <div className="bg-white rounded-2xl p-8 border border-slate-200">
                 <div className="text-center mb-6">
-                  <span className="inline-block px-4 py-1.5 font-bold rounded-full mb-4 bg-[#dbeafe] text-[#1447e6] text-[18px]">
+                  <span className="inline-block px-4 py-1.5 font-bold rounded-full mb-4 bg-[#dbeafe] text-[#1447e6] text-[14px] sm:text-[16px] lg:text-[18px]">
                     삼성전자 SEAP 파트너
                   </span>
                   <div className="flex justify-center items-center gap-6 mb-6">
@@ -243,15 +243,15 @@ export default function SecurityPatents() {
                 <div className="space-y-3 mt-6">
                   <div className="flex items-center gap-3 p-3 bg-slate-50 rounded-lg">
                     <CheckCircle2 size={18} className="text-green-500" />
-                    <span className="text-[#666] text-[18px]">글로벌 수준의 모바일 보안 적용</span>
+                    <span className="text-[#666] text-[14px] sm:text-[16px] lg:text-[18px]">글로벌 수준의 모바일 보안 적용</span>
                   </div>
                   <div className="flex items-center gap-3 p-3 bg-slate-50 rounded-lg">
                     <CheckCircle2 size={18} className="text-green-500" />
-                    <span className="text-[#666] text-[18px]">삼성 디바이스 전용 최적화</span>
+                    <span className="text-[#666] text-[14px] sm:text-[16px] lg:text-[18px]">삼성 디바이스 전용 최적화</span>
                   </div>
                   <div className="flex items-center gap-3 p-3 bg-slate-50 rounded-lg">
                     <CheckCircle2 size={18} className="text-green-500" />
-                    <span className="text-[#666] text-[18px]">엔터프라이즈 보안 인증</span>
+                    <span className="text-[#666] text-[14px] sm:text-[16px] lg:text-[18px]">엔터프라이즈 보안 인증</span>
                   </div>
                 </div>
               </div>

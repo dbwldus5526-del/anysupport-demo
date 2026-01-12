@@ -178,7 +178,7 @@ export default function Guide() {
                   </div>
                 </div>
 
-                <h3 className="text-center whitespace-pre-wrap max-w-[120px] text-[#666] font-normal text-[18px]">
+                <h3 className="text-center whitespace-pre-wrap max-w-[120px] text-[#666] font-normal text-[14px] sm:text-[16px] lg:text-[18px]">
                   {step.title}
                 </h3>
               </div>
@@ -194,7 +194,7 @@ export default function Guide() {
               <div key={i} className="flex flex-col lg:items-center gap-12 lg:gap-20 lg:flex-row mt-[45px] mb-[45px]">
                 {/* Text Content */}
                 <div className="flex-1">
-                  <div className="inline-block px-3 py-1 text-white font-bold rounded mb-6 text-[18px] bg-[#3080ff]">
+                  <div className="inline-block px-3 py-1 text-white font-bold rounded mb-6 text-[14px] sm:text-[16px] lg:text-[18px] bg-[#3080ff]">
                     {step.target}
                   </div>
                   <div className="flex items-start gap-8 border-b border-slate-100 pb-8 mb-8">
@@ -229,7 +229,7 @@ export default function Guide() {
       <section className="py-24 bg-slate-50/50">
         <div className="container mx-auto px-4 md:px-6 text-center mb-16">
           <h2 className="text-3xl md:text-4xl mb-4 font-bold text-[#333]">상세 사용자 매뉴얼</h2>
-          <p className="text-[18px] font-normal text-[#666]">필요한 매뉴얼을 다운받아 확인하세요.</p>
+          <p className="text-[14px] sm:text-[16px] lg:text-[18px] font-normal text-[#666]">필요한 매뉴얼을 다운받아 확인하세요.</p>
         </div>
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid md:grid-cols-2 gap-8 max-w-7xl mx-auto">
@@ -239,7 +239,7 @@ export default function Guide() {
                   <div className="flex justify-between items-start">
                     <div>
                       <h3 className="text-2xl font-black mb-2">{section.title}</h3>
-                      <p className="text-[18px] text-[#ffffff] font-medium">{section.subtitle}</p>
+                      <p className="text-[14px] sm:text-[16px] lg:text-[18px] text-[#ffffff] font-medium">{section.subtitle}</p>
                     </div>
                     <div className="bg-white/20 p-3 rounded-2xl backdrop-blur-sm">
                       <section.icon size={28} />
@@ -254,7 +254,7 @@ export default function Guide() {
                         onClick={openModal}
                         className="flex items-center justify-between p-5 bg-white rounded-2xl border border-slate-100 hover:border-primary hover:shadow-md transition-all group text-left"
                       >
-                        <span className="pr-4 text-[#333] text-[18px] font-medium">
+                        <span className="pr-4 text-[#333] text-[14px] sm:text-[16px] lg:text-[18px] font-medium">
                           {item.name}
                         </span>
                         <Download className="text-slate-300 group-hover:text-primary transition-colors shrink-0" size={18} />

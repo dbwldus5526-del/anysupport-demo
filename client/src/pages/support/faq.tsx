@@ -217,7 +217,7 @@ export default function FAQ() {
       <section className="relative pt-32 pb-16 overflow-hidden bg-slate-900 text-white text-center">
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
           <h1 className="text-[40px] font-bold mb-4">자주 묻는 질문</h1>
-          <p className="text-[18px] text-white/80">
+          <p className="text-[14px] sm:text-[16px] lg:text-[18px] text-white/80">
             애니서포트에 대해 궁금한 점을 확인하세요
           </p>
         </div>
@@ -232,7 +232,7 @@ export default function FAQ() {
               >
                 <button
                   onClick={() => toggleCategory(index)}
-                  className="w-full p-6 flex items-center justify-between text-[18px] font-light bg-[#f2f2f2] text-[#0f172b]"
+                  className="w-full p-6 flex items-center justify-between text-[14px] sm:text-[16px] lg:text-[18px] font-light bg-[#f2f2f2] text-[#0f172b]"
                 >
                   <div className="flex items-center gap-3">
                     <FolderOpen size={24} className="text-[#666]" />
@@ -283,7 +283,7 @@ export default function FAQ() {
             <h3 className="text-[28px] font-bold mb-4">
               더 자세한 문의가 필요하신가요?
             </h3>
-            <p className="text-[18px] text-white/80 mb-8">
+            <p className="text-[14px] sm:text-[16px] lg:text-[18px] text-white/80 mb-8">
               아래 연락처로 문의해 주시면 친절하게 안내해 드리겠습니다.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">

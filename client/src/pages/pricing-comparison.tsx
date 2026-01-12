@@ -325,20 +325,20 @@ export default function PricingComparison() {
                 </div>
 
                 <div className="bg-gradient-to-br from-primary to-primary/80 rounded-2xl p-6 md:p-8 text-white mb-6">
-                  <div className="text-primary-foreground/70 font-medium mb-2 text-[18px]">
+                  <div className="text-primary-foreground/70 font-medium mb-2 text-[14px] sm:text-[16px] lg:text-[18px]">
                     추천 도입 방식
                   </div>
                   <h4 className="text-2xl md:text-3xl font-black mb-4">
                     {getRecommendation().title}
                   </h4>
-                  <p className="text-white/80 mb-6 text-[18px]">
+                  <p className="text-white/80 mb-6 text-[14px] sm:text-[16px] lg:text-[18px]">
                     {getRecommendation().reason}
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {getRecommendation().features.map((feature, i) => (
                       <span
                         key={i}
-                        className="px-3 py-1 bg-white/20 rounded-full font-medium text-[18px]"
+                        className="px-3 py-1 bg-white/20 rounded-full font-medium text-[14px] sm:text-[16px] lg:text-[18px]"
                       >
                         {feature}
                       </span>
@@ -350,7 +350,7 @@ export default function PricingComparison() {
                   <Button
                     size="lg"
                     onClick={openModal}
-                    className="flex-1 h-12 font-bold text-[18px]"
+                    className="flex-1 h-12 font-bold text-[14px] sm:text-[16px] lg:text-[18px]"
                   >
                     상담 요청하기
                   </Button>
@@ -358,7 +358,7 @@ export default function PricingComparison() {
                     size="lg"
                     variant="outline"
                     onClick={resetQuiz}
-                    className="flex-1 h-12 font-bold text-[18px] text-[#333]"
+                    className="flex-1 h-12 font-bold text-[14px] sm:text-[16px] lg:text-[18px] text-[#333]"
                   >
                     다시 진단하기
                   </Button>
@@ -394,25 +394,25 @@ export default function PricingComparison() {
                   <h3 className="text-xl font-bold text-slate-900 mb-2">
                     {option.title}
                   </h3>
-                  <p className="text-primary font-medium text-[18px] mb-4">
+                  <p className="text-primary font-medium text-[14px] sm:text-[16px] lg:text-[18px] mb-4">
                     {option.tagline}
                   </p>
-                  <p className="text-[#666] text-[18px] mb-6 min-h-[56px]">
+                  <p className="text-[#666] text-[14px] sm:text-[16px] lg:text-[18px] mb-6 min-h-[56px]">
                     <span className="font-semibold text-slate-700">적합 대상:</span> {option.suitable}
                   </p>
                   <ul className="space-y-3 mb-6">
                     {option.features.map((feature, fi) => (
-                      <li key={fi} className="flex items-center gap-2 text-[18px] text-[#666]">
+                      <li key={fi} className="flex items-center gap-2 text-[14px] sm:text-[16px] lg:text-[18px] text-[#666]">
                         <CheckCircle2 size={16} className="text-primary shrink-0" />
                         {feature}
                       </li>
                     ))}
                   </ul>
                   <div className="flex gap-3">
-                    <Button variant="outline" size="sm" className="flex-1 text-[18px] text-[#333]" onClick={openModal}>
+                    <Button variant="outline" size="sm" className="flex-1 text-[14px] sm:text-[16px] lg:text-[18px] text-[#333]" onClick={openModal}>
                       자세히
                     </Button>
-                    <Button size="sm" className="flex-1 text-[18px]" onClick={openModal}>
+                    <Button size="sm" className="flex-1 text-[14px] sm:text-[16px] lg:text-[18px]" onClick={openModal}>
                       상담
                     </Button>
                   </div>
@@ -438,24 +438,24 @@ export default function PricingComparison() {
             <table className="w-full bg-white rounded-2xl shadow-lg overflow-hidden">
               <thead>
                 <tr className="bg-slate-900 text-white">
-                  <th className="px-6 py-4 text-left font-bold text-[18px]">구분</th>
+                  <th className="px-6 py-4 text-left font-bold text-[14px] sm:text-[16px] lg:text-[18px]">구분</th>
                   <th className="px-6 py-4 text-center font-bold">
                     <div className="flex flex-col items-center gap-1">
                       <Cloud size={20} />
-                      <span className="text-[18px]">SaaS</span>
+                      <span className="text-[14px] sm:text-[16px] lg:text-[18px]">SaaS</span>
                     </div>
                   </th>
                   <th className="px-6 py-4 text-center font-bold bg-primary">
                     <div className="flex flex-col items-center gap-1">
                       <Server size={20} />
-                      <span className="text-[18px]">구축형</span>
+                      <span className="text-[14px] sm:text-[16px] lg:text-[18px]">구축형</span>
                       <span className="text-[10px] bg-white/20 px-2 py-0.5 rounded-full">추천</span>
                     </div>
                   </th>
                   <th className="px-6 py-4 text-center font-bold">
                     <div className="flex flex-col items-center gap-1">
                       <Code size={20} />
-                      <span className="text-[18px]">연동형</span>
+                      <span className="text-[14px] sm:text-[16px] lg:text-[18px]">연동형</span>
                     </div>
                   </th>
                 </tr>
@@ -463,10 +463,10 @@ export default function PricingComparison() {
               <tbody>
                 {comparisonData.map((row, i) => (
                   <tr key={i} className={cn("border-b border-slate-100", i % 2 === 0 && "bg-slate-50/50")}>
-                    <td className="px-6 py-4 font-semibold text-[18px] text-[#333]">{row.label}</td>
-                    <td className="px-6 py-4 text-center text-[18px] text-[#666]">{row.saas}</td>
-                    <td className="px-6 py-4 text-center font-medium bg-primary/5 text-[18px] text-[#333]">{row.onprem}</td>
-                    <td className="px-6 py-4 text-center text-[18px] text-[#666]">{row.sdk}</td>
+                    <td className="px-6 py-4 font-semibold text-[14px] sm:text-[16px] lg:text-[18px] text-[#333]">{row.label}</td>
+                    <td className="px-6 py-4 text-center text-[14px] sm:text-[16px] lg:text-[18px] text-[#666]">{row.saas}</td>
+                    <td className="px-6 py-4 text-center font-medium bg-primary/5 text-[14px] sm:text-[16px] lg:text-[18px] text-[#333]">{row.onprem}</td>
+                    <td className="px-6 py-4 text-center text-[14px] sm:text-[16px] lg:text-[18px] text-[#666]">{row.sdk}</td>
                   </tr>
                 ))}
               </tbody>
@@ -544,20 +544,20 @@ export default function PricingComparison() {
                 })()}
                 <div>
                   <h3 className="text-2xl font-bold">{industries[activeIndustry].title}</h3>
-                  <p className="text-white/60 text-[18px]">{industries[activeIndustry].challenge}</p>
+                  <p className="text-white/60 text-[14px] sm:text-[16px] lg:text-[18px]">{industries[activeIndustry].challenge}</p>
                 </div>
               </div>
               
               <div className="bg-white/5 rounded-xl p-6 mb-6">
-                <div className="text-primary font-bold mb-2 text-[18px]">추천 도입 방식</div>
+                <div className="text-primary font-bold mb-2 text-[14px] sm:text-[16px] lg:text-[18px]">추천 도입 방식</div>
                 <div className="text-xl font-bold">{industries[activeIndustry].recommendation}</div>
               </div>
               
-              <p className="text-white/80 mb-6 text-[18px]">
-                <span className="text-primary font-bold text-[18px]">왜?</span> {industries[activeIndustry].reason}
+              <p className="text-white/80 mb-6 text-[14px] sm:text-[16px] lg:text-[18px]">
+                <span className="text-primary font-bold text-[14px] sm:text-[16px] lg:text-[18px]">왜?</span> {industries[activeIndustry].reason}
               </p>
               
-              <Button onClick={openModal} className="w-full h-12 font-bold text-[18px]">
+              <Button onClick={openModal} className="w-full h-12 font-bold text-[14px] sm:text-[16px] lg:text-[18px]">
                 맞춤 상담 받기 <ArrowRight className="ml-2" />
               </Button>
             </div>

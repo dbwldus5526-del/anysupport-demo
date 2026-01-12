@@ -133,7 +133,7 @@ export default function VideoProduct() {
                 ].map((item, i) => (
                   <li
                     key={i}
-                    className="flex items-center gap-3 text-[18px] text-[#333] font-normal"
+                    className="flex items-center gap-3 text-[14px] sm:text-[16px] lg:text-[18px] text-[#333] font-normal"
                   >
                     <CheckCircle2 className="text-primary shrink-0" size={24} />
                     {item}
@@ -153,7 +153,7 @@ export default function VideoProduct() {
                   <h3 className="text-lg font-bold mb-2 text-slate-900">
                     {feature.title}
                   </h3>
-                  <p className="text-[#666] text-[18px] font-normal">
+                  <p className="text-[#666] text-[14px] sm:text-[16px] lg:text-[18px] font-normal">
                     {feature.desc}
                   </p>
                 </div>
@@ -189,7 +189,7 @@ export default function VideoProduct() {
                   <h3 className="text-2xl font-bold mb-4 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                     {feature.title}
                   </h3>
-                  <p className="text-white/90 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75 text-[18px]">
+                  <p className="text-white/90 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75 text-[14px] sm:text-[16px] lg:text-[18px]">
                     {feature.desc}
                   </p>
                 </div>
@@ -259,13 +259,13 @@ export default function VideoProduct() {
                   </div>
 
                   <div className="flex-1">
-                    <span className="text-primary tracking-tighter mb-2 block text-[18px] font-extrabold">
+                    <span className="text-primary tracking-tighter mb-2 block text-[14px] sm:text-[16px] lg:text-[18px] font-extrabold">
                       {item.step}
                     </span>
                     <h3 className="text-xl font-bold mb-4 text-slate-900">
                       {item.title}
                     </h3>
-                    <p className="mb-6 text-[#666] text-[18px] min-h-[84px]">
+                    <p className="mb-6 text-[#666] text-[14px] sm:text-[16px] lg:text-[18px] min-h-[84px]">
                       {item.desc}
                     </p>
 
@@ -273,7 +273,7 @@ export default function VideoProduct() {
                       {(item.points || item.types).map((point, idx) => (
                         <div
                           key={idx}
-                          className="flex items-center gap-2 font-bold bg-slate-50 px-3 py-2 rounded-lg border border-slate-100 text-[#333] text-[18px]"
+                          className="flex items-center gap-2 font-bold bg-slate-50 px-3 py-2 rounded-lg border border-slate-100 text-[#333] text-[14px] sm:text-[16px] lg:text-[18px]"
                         >
                           <CheckCircle2 size={14} className="text-primary" />
                           {point}

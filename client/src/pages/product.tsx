@@ -218,11 +218,11 @@ export default function Product() {
                     처럼, 가장 빠르게 문제 해결에 도달합니다.
                   </p>
                   <div className="flex flex-wrap gap-3">
-                    <div className="flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full font-medium text-[18px]">
+                    <div className="flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full font-medium text-[14px] sm:text-[16px] lg:text-[18px]">
                       <CheckCircle2 size={16} />
                       설치 불필요
                     </div>
-                    <div className="flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full font-medium text-[18px]">
+                    <div className="flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full font-medium text-[14px] sm:text-[16px] lg:text-[18px]">
                       <CheckCircle2 size={16} />웹 기반 연결
                     </div>
                   </div>
@@ -230,7 +230,7 @@ export default function Product() {
                 <div className="flex justify-center">
                   <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
                     <div className="text-center mb-4">
-                      <span className="text-white/60 text-[18px]">
+                      <span className="text-white/60 text-[14px] sm:text-[16px] lg:text-[18px]">
                         접속 코드 입력
                       </span>
                     </div>
@@ -295,7 +295,7 @@ export default function Product() {
                 <h3 className="text-lg font-bold text-slate-900 mb-2">
                   {feature.title}
                 </h3>
-                <p className="text-[18px] text-[#666]">{feature.desc}</p>
+                <p className="text-[14px] sm:text-[16px] lg:text-[18px] text-[#666]">{feature.desc}</p>
               </div>
             ))}
           </div>
@@ -319,7 +319,7 @@ export default function Product() {
                 <div className="flex items-center gap-3 bg-white/5 rounded-xl p-4 border border-white/10">
                   <ShieldCheck size={20} className="text-primary shrink-0" />
                   <div>
-                    <div className="font-bold text-[18px]">
+                    <div className="font-bold text-[14px] sm:text-[16px] lg:text-[18px]">
                       ISO/IEC 27001 국제 인증
                     </div>
                     <div className="text-slate-400 text-[16px]">
@@ -330,7 +330,7 @@ export default function Product() {
                 <div className="flex items-center gap-3 bg-white/5 rounded-xl p-4 border border-white/10">
                   <Award size={20} className="text-primary shrink-0" />
                   <div>
-                    <div className="font-bold text-[18px]">GS인증 1등급</div>
+                    <div className="font-bold text-[14px] sm:text-[16px] lg:text-[18px]">GS인증 1등급</div>
                     <div className="text-slate-400 text-[16px]">
                       국가정보보안 기본 지침 준수
                     </div>
@@ -339,7 +339,7 @@ export default function Product() {
                 <div className="flex items-center gap-3 bg-white/5 rounded-xl p-4 border border-white/10">
                   <EyeOff size={20} className="text-primary shrink-0" />
                   <div>
-                    <div className="font-bold text-[18px]">
+                    <div className="font-bold text-[14px] sm:text-[16px] lg:text-[18px]">
                       12건 보안 특허 보유
                     </div>
                     <div className="text-slate-400 text-[16px]">
@@ -369,7 +369,7 @@ export default function Product() {
                 <div className="flex items-center gap-3 bg-slate-50 rounded-xl p-4 border border-slate-100">
                   <Users size={20} className="text-primary shrink-0" />
                   <div>
-                    <div className="font-bold text-[18px] text-[#333]">
+                    <div className="font-bold text-[14px] sm:text-[16px] lg:text-[18px] text-[#333]">
                       상담원별 권한 설정
                     </div>
                     <div className="text-[16px] text-[#666]">
@@ -380,7 +380,7 @@ export default function Product() {
                 <div className="flex items-center gap-3 bg-slate-50 rounded-xl p-4 border border-slate-100">
                   <FileText size={20} className="text-primary shrink-0" />
                   <div>
-                    <div className="font-bold text-[18px] text-[#333]">
+                    <div className="font-bold text-[14px] sm:text-[16px] lg:text-[18px] text-[#333]">
                       지원 내역 통계
                     </div>
                     <div className="text-[#666] text-[16px]">
@@ -391,7 +391,7 @@ export default function Product() {
                 <div className="flex items-center gap-3 bg-slate-50 rounded-xl p-4 border border-slate-100">
                   <Monitor size={20} className="text-primary shrink-0" />
                   <div>
-                    <div className="font-bold text-[#333] text-[18px]">
+                    <div className="font-bold text-[#333] text-[14px] sm:text-[16px] lg:text-[18px]">
                       체계적 DB 관리
                     </div>
                     <div className="text-[16px] text-[#666]">
@@ -469,16 +469,16 @@ export default function Product() {
                     <span className="text-primary font-bold text-sm tracking-tighter mb-2 block">
                       {item.step}
                     </span>
-                    <h3 className="font-bold mb-4 text-[18px] text-[#333]">
+                    <h3 className="font-bold mb-4 text-[14px] sm:text-[16px] lg:text-[18px] text-[#333]">
                       {item.title}
                     </h3>
-                    <p className="mb-6 text-[#666] text-[18px] min-h-[120px]">{item.desc}</p>
+                    <p className="mb-6 text-[#666] text-[14px] sm:text-[16px] lg:text-[18px] min-h-[120px]">{item.desc}</p>
 
                     <div className="space-y-2">
                       {(item.points || item.types).map((point, idx) => (
                         <div
                           key={idx}
-                          className="flex items-center gap-2 font-bold bg-slate-50 px-3 py-2 rounded-lg border border-slate-100 text-[18px] text-[#333]"
+                          className="flex items-center gap-2 font-bold bg-slate-50 px-3 py-2 rounded-lg border border-slate-100 text-[14px] sm:text-[16px] lg:text-[18px] text-[#333]"
                         >
                           <CheckCircle2 size={14} className="text-primary" />
                           {point}

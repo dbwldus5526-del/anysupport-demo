@@ -314,7 +314,7 @@ export default function Notice() {
       <section className="relative pt-32 pb-16 overflow-hidden bg-slate-900 text-white text-center">
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
           <h1 className="text-[40px] font-bold mb-4">공지사항</h1>
-          <p className="text-[18px] text-white/80">
+          <p className="text-[14px] sm:text-[16px] lg:text-[18px] text-white/80">
             애니서포트의 새로운 소식과 공지를 확인하세요
           </p>
         </div>
@@ -329,11 +329,11 @@ export default function Notice() {
               >
                 <button
                   onClick={() => toggleCategory(index)}
-                  className="w-full p-5 flex items-center justify-between text-[18px] font-light bg-[#f2f2f2] text-[#0f172b]"
+                  className="w-full p-5 flex items-center justify-between text-[14px] sm:text-[16px] lg:text-[18px] font-light bg-[#f2f2f2] text-[#0f172b]"
                 >
                   <div className="flex items-center gap-3">
                     <FolderOpen size={22} className="text-[#666]" />
-                    <span className="text-[18px] font-medium text-[#333]">
+                    <span className="text-[14px] sm:text-[16px] lg:text-[18px] font-medium text-[#333]">
                       {category.title} ({category.count})
                     </span>
                   </div>

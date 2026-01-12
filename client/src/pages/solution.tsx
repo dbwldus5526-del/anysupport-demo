@@ -63,7 +63,7 @@ export default function Solution() {
                 ].map((item, i) => (
                   <div
                     key={i}
-                    className="flex items-center gap-3 font-medium text-[18px] text-[#dce8f5]"
+                    className="flex items-center gap-3 font-medium text-[14px] sm:text-[16px] lg:text-[18px] text-[#dce8f5]"
                   >
                     <CheckCircle2 className="text-primary shrink-0" size={22} />
                     {item}
@@ -95,7 +95,7 @@ export default function Solution() {
             <p className="text-primary font-bold text-base sm:text-lg mb-2">
               현장 방문 없이 온라인으로 문제를 즉각 해결하는 기술
             </p>
-            <p className="max-w-2xl mx-auto sm:text-base font-normal text-[18px] text-[#666]">
+            <p className="max-w-2xl mx-auto sm:text-base font-normal text-[14px] sm:text-[16px] lg:text-[18px] text-[#666]">
               애니서포트는 상담원이 고객의 PC나 모바일 화면을 공유받아
               <br className="hidden md:block" />
               직접 제어함으로써 장애를 진단하고 해결하는 기업용 전문
@@ -110,7 +110,7 @@ export default function Solution() {
                   <div className="w-20 h-20 rounded-full bg-white shadow-lg flex items-center justify-center text-primary border border-slate-50">
                     <Headphones size={36} />
                   </div>
-                  <span className="text-[18px] font-medium text-[#333]">
+                  <span className="text-[14px] sm:text-[16px] lg:text-[18px] font-medium text-[#333]">
                     상담원
                   </span>
                 </div>
@@ -118,7 +118,7 @@ export default function Solution() {
                   <div className="h-0.5 w-full bg-slate-200 relative">
                     <div className="absolute inset-0 bg-primary animate-pulse" />
                   </div>
-                  <span className="text-primary uppercase tracking-widest text-center text-[18px] font-extrabold mt-[3px] mb-[3px]">
+                  <span className="text-primary uppercase tracking-widest text-center text-[14px] sm:text-[16px] lg:text-[18px] font-extrabold mt-[3px] mb-[3px]">
                     Secure Connection
                   </span>
                 </div>
@@ -126,7 +126,7 @@ export default function Solution() {
                   <div className="w-20 h-20 rounded-full bg-white shadow-lg flex items-center justify-center text-slate-400 border border-slate-50">
                     <Monitor size={36} />
                   </div>
-                  <span className="text-[18px] text-[#333] font-medium">고객</span>
+                  <span className="text-[14px] sm:text-[16px] lg:text-[18px] text-[#333] font-medium">고객</span>
                 </div>
               </div>
               <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:20px_20px]" />
@@ -159,7 +159,7 @@ export default function Solution() {
                   <card.icon size={28} />
                 </div>
                 <h4 className="text-xl font-bold mb-3 text-[#333]">{card.title}</h4>
-                <p className="text-[18px] font-normal text-[#666]">
+                <p className="text-[14px] sm:text-[16px] lg:text-[18px] font-normal text-[#666]">
                   {card.desc}
                 </p>
               </div>
@@ -171,7 +171,7 @@ export default function Solution() {
               <Button
                 variant="outline"
                 size="lg"
-                className="font-bold border-slate-200 hover:bg-slate-50 text-[18px] text-[#333]"
+                className="font-bold border-slate-200 hover:bg-slate-50 text-[14px] sm:text-[16px] lg:text-[18px] text-[#333]"
               >
                 원격지원 작동 방식 자세히 보기
               </Button>
@@ -204,7 +204,7 @@ export default function Solution() {
                 className="p-8 rounded-2xl border border-white/10 bg-white/5 text-center flex flex-col items-center gap-4 hover:bg-white/10 transition-colors"
               >
                 <item.icon className="text-primary" size={32} />
-                <span className="text-[18px] font-medium">{item.title}</span>
+                <span className="text-[14px] sm:text-[16px] lg:text-[18px] font-medium">{item.title}</span>
               </div>
             ))}
           </div>
@@ -227,7 +227,7 @@ export default function Solution() {
             <h2 className="text-[25px] md:text-4xl font-bold mb-4 text-[#333]">
               사용 방법
             </h2>
-            <p className="md:text-base text-[#666] text-[18px]">
+            <p className="md:text-base text-[#666] text-[14px] sm:text-[16px] lg:text-[18px]">
               누구나 바로 사용 가능한 간편한 프로세스
             </p>
           </div>
@@ -263,10 +263,10 @@ export default function Solution() {
                     {item.step}
                   </span>
                   <div>
-                    <h4 className="font-bold mb-1 text-[18px] text-[#333]">
+                    <h4 className="font-bold mb-1 text-[14px] sm:text-[16px] lg:text-[18px] text-[#333]">
                       {item.title}
                     </h4>
-                    <p className="text-[18px] text-[#666]">{item.desc}</p>
+                    <p className="text-[14px] sm:text-[16px] lg:text-[18px] text-[#666]">{item.desc}</p>
                   </div>
                 </div>
               ))}
@@ -274,7 +274,7 @@ export default function Solution() {
             <div className="flex-1 bg-slate-50 p-10 rounded-3xl border border-slate-100 flex flex-col items-center text-center">
               <div className="text-5xl mb-6">🚀</div>
               <h3 className="text-2xl font-bold mb-4">설치 없는 원격지원</h3>
-              <p className="mb-8 text-[18px] font-normal text-[#666]">
+              <p className="mb-8 text-[14px] sm:text-[16px] lg:text-[18px] font-normal text-[#666]">
                 복잡한 설치 없이 브라우저에서 바로!
                 <br />
                 언제 어디서나 즉각적인 고객 응대가 가능합니다.
@@ -298,7 +298,7 @@ export default function Solution() {
             <h2 className="text-[25px] md:text-4xl font-bold mb-4 text-[#333]">
               사용 환경
             </h2>
-            <p className="md:text-base text-[#666] text-[18px]">
+            <p className="md:text-base text-[#666] text-[14px] sm:text-[16px] lg:text-[18px]">
               기업의 환경에 맞춰 유연하게 도입하세요.
             </p>
           </div>
@@ -309,14 +309,14 @@ export default function Solution() {
               </h3>
               <div className="space-y-4">
                 <div className="flex justify-between p-3 border-b border-slate-50">
-                  <span className="font-extrabold text-[18px] text-[#333]">OS</span>
-                  <span className="font-normal text-[18px] text-[#666]">
+                  <span className="font-extrabold text-[14px] sm:text-[16px] lg:text-[18px] text-[#333]">OS</span>
+                  <span className="font-normal text-[14px] sm:text-[16px] lg:text-[18px] text-[#666]">
                     Windows / macOS / Android / iOS
                   </span>
                 </div>
                 <div className="flex justify-between p-3 border-b border-slate-50">
-                  <span className="text-[#333] font-extrabold text-[18px]">Browser</span>
-                  <span className="text-[#666] text-[18px] font-normal">Chrome / Edge / Safari</span>
+                  <span className="text-[#333] font-extrabold text-[14px] sm:text-[16px] lg:text-[18px]">Browser</span>
+                  <span className="text-[#666] text-[14px] sm:text-[16px] lg:text-[18px] font-normal">Chrome / Edge / Safari</span>
                 </div>
               </div>
             </div>
@@ -328,8 +328,8 @@ export default function Solution() {
                 <div className="flex items-center gap-4 p-4 rounded-xl bg-slate-50">
                   <Cloud className="text-primary" size={24} />
                   <div>
-                    <h4 className="font-bold text-[18px] text-[#333]">클라우드(SaaS)</h4>
-                    <p className="text-[18px] text-[#666]">
+                    <h4 className="font-bold text-[14px] sm:text-[16px] lg:text-[18px] text-[#333]">클라우드(SaaS)</h4>
+                    <p className="text-[14px] sm:text-[16px] lg:text-[18px] text-[#666]">
                       별도 서버 구축 없이 즉시 사용
                     </p>
                   </div>
@@ -337,8 +337,8 @@ export default function Solution() {
                 <div className="flex items-center gap-4 p-4 rounded-xl bg-slate-50">
                   <Building2 className="text-primary" size={24} />
                   <div>
-                    <h4 className="font-bold text-[#333] text-[18px]">온프레미스</h4>
-                    <p className="text-[18px] text-[#666]">
+                    <h4 className="font-bold text-[#333] text-[14px] sm:text-[16px] lg:text-[18px]">온프레미스</h4>
+                    <p className="text-[14px] sm:text-[16px] lg:text-[18px] text-[#666]">
                       기업 내 인프라 직접 설치 (문의 필요)
                     </p>
                   </div>
