@@ -38,12 +38,14 @@ export default function Download() {
                   <h3 className="text-2xl font-bold text-[#0066b3]">지원하는 측 (상담사)</h3>
                   <MessageSquare className="text-[#0066b3]" size={24} />
                 </div>
-                <p className="text-[#666] text-[16px] mb-8">
+                <p className="text-[#666] text-[16px] mb-6">
                   전용 에이전트로 지원 시 필요한 설치 파일로,<br />
                   Windows에서 사용할 수 있습니다.
                 </p>
+                
+                <div className="border-t border-[#b8daf0] pt-6"></div>
 
-                <div className="space-y-4">
+                <div className="space-y-4 bg-white/50 rounded-xl p-4">
                   {/* 통합 에이전트 */}
                   <div className="bg-gradient-to-r from-[#0066b3]/20 to-[#0088cc]/10 rounded-xl p-5 border border-[#0066b3]/20">
                     <div className="flex items-center gap-2 mb-2">
@@ -94,11 +96,14 @@ export default function Download() {
                   <h3 className="text-2xl font-bold text-[#0066b3]">지원받는 측 (고객)</h3>
                   <User className="text-[#0066b3]" size={24} />
                 </div>
-                <p className="text-[#666] text-[16px] mb-8">
+                <p className="text-[#666] text-[16px] mb-6">
                   지원 환경별로 고객이 설치해야 하는<br />
                   필요 파일을 확인할 수 있습니다.
                 </p>
 
+                <div className="border-t border-slate-200 pt-6"></div>
+
+                <div className="bg-white rounded-xl p-4">
                 {/* 웹브라우저 */}
                 <div className="mb-6">
                   <h4 className="font-bold text-[#0066b3] mb-1 text-[18px]">웹브라우저</h4>
@@ -178,6 +183,7 @@ export default function Download() {
                       </Button>
                     </div>
                   </div>
+                </div>
                 </div>
               </div>
             </div>
