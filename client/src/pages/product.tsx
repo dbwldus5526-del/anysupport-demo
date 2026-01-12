@@ -94,6 +94,8 @@ export default function Product() {
             <h1 className="text-3xl md:text-6xl font-black mb-6 leading-tight">
               복잡한 설치 과정 없이
               <br />
+              인증번호 6자리로
+              <br />
               <span className="text-primary text-glow">10초 이내 연결</span>
             </h1>
             <p className="text-[14px] md:text-xl text-slate-300 mb-10 max-w-2xl leading-relaxed font-normal">
@@ -174,14 +176,19 @@ export default function Product() {
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary border border-primary/20 mb-6">
               <Zap size={16} />
-              <span className="text-xs font-bold tracking-wider uppercase">Desktop Edition</span>
+              <span className="text-xs font-bold tracking-wider uppercase">
+                Desktop Edition
+              </span>
             </div>
             <h2 className="text-[25px] md:text-4xl font-bold mb-4 text-[#333]">
               고성능 원격지원의 새로운 기준
             </h2>
             <p className="text-[#666] text-lg max-w-3xl mx-auto font-normal">
-              웹 기반 솔루션으로 복잡한 설치 없이 <span className="text-primary font-bold">10초 이내 연결</span>.<br className="hidden md:block" />
-              최첨단 보안과 무제한 파일 전송으로 가장 빠르게 목적지에 도달합니다.
+              웹 기반 솔루션으로 복잡한 설치 없이{" "}
+              <span className="text-primary font-bold">10초 이내 연결</span>.
+              <br className="hidden md:block" />
+              최첨단 보안과 무제한 파일 전송으로 가장 빠르게 목적지에
+              도달합니다.
             </p>
           </div>
 
@@ -190,21 +197,25 @@ export default function Product() {
             <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary via-primary to-primary/80 p-8 md:p-12 text-white">
               <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
               <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full blur-2xl translate-y-1/2 -translate-x-1/2" />
-              
+
               <div className="relative z-10 grid md:grid-cols-2 gap-8 items-center">
                 <div>
-                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/20 text-white text-xs font-bold mb-4">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/20 text-white font-bold mb-4 text-[16px]">
                     <Timer size={14} />
                     초고속 연결
                   </div>
                   <h3 className="text-3xl md:text-4xl mb-4 font-extrabold">
-                    6자리 인증번호로<br />
+                    6자리 인증번호로
+                    <br />
                     <span className="text-white/90">10초 이내 즉시 연결</span>
                   </h3>
                   <p className="text-white/80 text-lg leading-relaxed mb-6">
-                    고객이 복잡한 프로그램 설치 없이 6자리 접속번호만 입력하면 즉시 원격지원이 시작됩니다.
-                    마치 <span className="font-bold text-white">최첨단 보안 시스템을 갖춘 초고속 하이패스</span>처럼,
-                    가장 빠르게 문제 해결에 도달합니다.
+                    고객이 복잡한 프로그램 설치 없이 6자리 접속번호만 입력하면
+                    즉시 원격지원이 시작됩니다. 마치{" "}
+                    <span className="font-bold text-white">
+                      최첨단 보안 시스템을 갖춘 초고속 하이패스
+                    </span>
+                    처럼, 가장 빠르게 문제 해결에 도달합니다.
                   </p>
                   <div className="flex flex-wrap gap-3">
                     <div className="flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full text-sm font-medium">
@@ -212,25 +223,30 @@ export default function Product() {
                       설치 불필요
                     </div>
                     <div className="flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full text-sm font-medium">
-                      <CheckCircle2 size={16} />
-                      웹 기반 연결
+                      <CheckCircle2 size={16} />웹 기반 연결
                     </div>
                   </div>
                 </div>
                 <div className="flex justify-center">
                   <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
                     <div className="text-center mb-4">
-                      <span className="text-white/60 text-sm">접속 코드 입력</span>
+                      <span className="text-white/60 text-sm">
+                        접속 코드 입력
+                      </span>
                     </div>
                     <div className="flex gap-2 justify-center mb-6">
-                      {['1', '2', '3', '4', '5', '6'].map((num, i) => (
-                        <div key={i} className="w-12 h-14 bg-white/20 rounded-lg flex items-center justify-center text-2xl font-bold border border-white/30">
+                      {["1", "2", "3", "4", "5", "6"].map((num, i) => (
+                        <div
+                          key={i}
+                          className="w-12 h-14 bg-white/20 rounded-lg flex items-center justify-center text-2xl font-bold border border-white/30"
+                        >
                           {num}
                         </div>
                       ))}
                     </div>
                     <div className="text-center text-white/60 text-sm">
-                      연결 중... <span className="text-white font-bold">10초</span>
+                      연결 중...{" "}
+                      <span className="text-white font-bold">10초</span>
                     </div>
                   </div>
                 </div>
@@ -245,35 +261,40 @@ export default function Product() {
                 icon: Layers,
                 title: "최대 10개 동시 세션",
                 desc: "하나의 창에서 최대 10개의 세션을 동시에 관리. 상담원 업무 효율을 극대화합니다.",
-                highlight: "10개 세션"
+                highlight: "10개 세션",
               },
               {
                 icon: FileUp,
                 title: "무제한 파일 전송",
                 desc: "타사와 달리 용량 제한 없는 양방향 파일 전송. 드래그 앤 드롭으로 간편하게 공유합니다.",
-                highlight: "용량 무제한"
+                highlight: "용량 무제한",
               },
               {
                 icon: MessageCircle,
                 title: "통합 커뮤니케이션",
                 desc: "텍스트 채팅, 음성 통화, 화이트보드(그리기) 등 다양한 소통 도구가 내장되어 있습니다.",
-                highlight: "음성/채팅"
+                highlight: "음성/채팅",
               },
               {
                 icon: RefreshCw,
                 title: "재부팅 자동 재접속",
                 desc: "PC 재부팅 시 별도 인증 절차 없이 자동으로 연결이 복구됩니다.",
-                highlight: "자동 복구"
-              }
+                highlight: "자동 복구",
+              },
             ].map((feature, i) => (
-              <div key={i} className="group bg-white rounded-2xl p-6 border border-slate-200 hover:border-primary/30 hover:shadow-lg transition-all">
+              <div
+                key={i}
+                className="group bg-white rounded-2xl p-6 border border-slate-200 hover:border-primary/30 hover:shadow-lg transition-all"
+              >
                 <div className="w-14 h-14 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                   <feature.icon size={28} />
                 </div>
                 <div className="inline-block px-2 py-1 bg-primary/5 text-primary font-bold rounded mb-2 text-[14px]">
                   {feature.highlight}
                 </div>
-                <h3 className="text-lg font-bold text-slate-900 mb-2">{feature.title}</h3>
+                <h3 className="text-lg font-bold text-slate-900 mb-2">
+                  {feature.title}
+                </h3>
                 <p className="text-[18px] text-[#666]">{feature.desc}</p>
               </div>
             ))}
@@ -289,29 +310,41 @@ export default function Product() {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold mb-1">글로벌 보안 인증</h3>
-                  <p className="text-[#ffffff] text-[16px]">공공기관 및 대기업 요구사항 충족</p>
+                  <p className="text-[#ffffff] text-[16px]">
+                    공공기관 및 대기업 요구사항 충족
+                  </p>
                 </div>
               </div>
               <div className="space-y-3">
                 <div className="flex items-center gap-3 bg-white/5 rounded-xl p-4 border border-white/10">
                   <ShieldCheck size={20} className="text-primary shrink-0" />
                   <div>
-                    <div className="font-bold text-[18px]">ISO/IEC 27001 국제 인증</div>
-                    <div className="text-slate-400 text-[16px]">정보보안 관리체계 국제 표준</div>
+                    <div className="font-bold text-[18px]">
+                      ISO/IEC 27001 국제 인증
+                    </div>
+                    <div className="text-slate-400 text-[16px]">
+                      정보보안 관리체계 국제 표준
+                    </div>
                   </div>
                 </div>
                 <div className="flex items-center gap-3 bg-white/5 rounded-xl p-4 border border-white/10">
                   <Award size={20} className="text-primary shrink-0" />
                   <div>
                     <div className="font-bold text-[18px]">GS인증 1등급</div>
-                    <div className="text-slate-400 text-[16px]">국가정보보안 기본 지침 준수</div>
+                    <div className="text-slate-400 text-[16px]">
+                      국가정보보안 기본 지침 준수
+                    </div>
                   </div>
                 </div>
                 <div className="flex items-center gap-3 bg-white/5 rounded-xl p-4 border border-white/10">
                   <EyeOff size={20} className="text-primary shrink-0" />
                   <div>
-                    <div className="font-bold text-[18px]">12건 보안 특허 보유</div>
-                    <div className="text-slate-400 text-[16px]">화면 부분 차단 기술 등 독보적 보안</div>
+                    <div className="font-bold text-[18px]">
+                      12건 보안 특허 보유
+                    </div>
+                    <div className="text-slate-400 text-[16px]">
+                      화면 부분 차단 기술 등 독보적 보안
+                    </div>
                   </div>
                 </div>
               </div>
@@ -324,30 +357,46 @@ export default function Product() {
                   <Settings size={28} className="text-primary" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-1 text-[#333]">강력한 관리자 기능</h3>
-                  <p className="text-[16px] text-[#666]">대규모 조직 운영에 최적화</p>
+                  <h3 className="text-xl font-bold mb-1 text-[#333]">
+                    강력한 관리자 기능
+                  </h3>
+                  <p className="text-[16px] text-[#666]">
+                    대규모 조직 운영에 최적화
+                  </p>
                 </div>
               </div>
               <div className="space-y-3">
                 <div className="flex items-center gap-3 bg-slate-50 rounded-xl p-4 border border-slate-100">
                   <Users size={20} className="text-primary shrink-0" />
                   <div>
-                    <div className="font-bold text-[18px] text-[#333]">상담원별 권한 설정</div>
-                    <div className="text-[16px] text-[#666]">세분화된 접근 권한 관리</div>
+                    <div className="font-bold text-[18px] text-[#333]">
+                      상담원별 권한 설정
+                    </div>
+                    <div className="text-[16px] text-[#666]">
+                      세분화된 접근 권한 관리
+                    </div>
                   </div>
                 </div>
                 <div className="flex items-center gap-3 bg-slate-50 rounded-xl p-4 border border-slate-100">
                   <FileText size={20} className="text-primary shrink-0" />
                   <div>
-                    <div className="font-bold text-[18px] text-[#333]">지원 내역 통계</div>
-                    <div className="text-[#666] text-[16px]">상세 리포트 및 엑셀 저장</div>
+                    <div className="font-bold text-[18px] text-[#333]">
+                      지원 내역 통계
+                    </div>
+                    <div className="text-[#666] text-[16px]">
+                      상세 리포트 및 엑셀 저장
+                    </div>
                   </div>
                 </div>
                 <div className="flex items-center gap-3 bg-slate-50 rounded-xl p-4 border border-slate-100">
                   <Monitor size={20} className="text-primary shrink-0" />
                   <div>
-                    <div className="font-bold text-[#333] text-[18px]">체계적 DB 관리</div>
-                    <div className="text-[16px] text-[#666]">모든 상담 이력 자동 저장</div>
+                    <div className="font-bold text-[#333] text-[18px]">
+                      체계적 DB 관리
+                    </div>
+                    <div className="text-[16px] text-[#666]">
+                      모든 상담 이력 자동 저장
+                    </div>
                   </div>
                 </div>
               </div>
@@ -423,9 +472,7 @@ export default function Product() {
                     <h3 className="font-bold mb-4 text-[18px] text-[#333]">
                       {item.title}
                     </h3>
-                    <p className="mb-6 text-[#666] text-[18px]">
-                      {item.desc}
-                    </p>
+                    <p className="mb-6 text-[#666] text-[18px]">{item.desc}</p>
 
                     <div className="space-y-2">
                       {(item.points || item.types).map((point, idx) => (
