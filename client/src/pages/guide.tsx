@@ -200,7 +200,7 @@ export default function Guide() {
                   <div className="flex items-start gap-8 border-b border-slate-100 pb-8 mb-8">
                     <span className="text-6xl md:text-8xl font-black text-slate-200 leading-none">{step.id}</span>
                     <div>
-                      <h3 className="text-2xl md:text-3xl font-black text-slate-900 mb-2">{step.title}</h3>
+                      <h3 className="text-2xl md:text-3xl mb-2 font-bold text-[#333]">{step.title}</h3>
                       <p className="text-lg md:text-xl font-bold leading-snug text-[#666]">{step.summary}</p>
                     </div>
                   </div>
