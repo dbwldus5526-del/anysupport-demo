@@ -35,9 +35,7 @@ export default function SecurityPatents() {
               <ShieldCheck size={18} />
               <span>특허 기술 기반 보안</span>
             </div>
-            <h1 className="text-3xl md:text-5xl font-black mb-6 leading-tight">
-              보안 특허기술
-            </h1>
+            <h1 className="text-3xl md:text-5xl font-black mb-6 leading-tight">애니서포트의 강력한 보안 특허기술</h1>
             <p className="text-lg md:text-xl text-slate-300 mb-8 max-w-2xl mx-auto leading-relaxed">
               애니서포트의 독자적인 보안 특허기술로<br />
               안전하고 신뢰할 수 있는 원격지원을 제공합니다.
