@@ -194,7 +194,7 @@ export default function Security() {
           
           <div className="max-w-5xl mx-auto">
             <div className="bg-white/5 border border-white/10 p-8 md:p-12 rounded-[2rem] backdrop-blur-md">
-              <div className="text-center mb-12">
+              <div className="text-center mt-[12px] mb-[12px]">
                 <span className="inline-block px-4 py-1 rounded-full bg-primary/20 font-black tracking-widest uppercase mb-4 text-[#ffffff] text-[15px]">
                   3 STEP TRUST DESIGN
                 </span>
