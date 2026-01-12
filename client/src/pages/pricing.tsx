@@ -330,7 +330,7 @@ export default function Pricing() {
       <section className="py-24 bg-slate-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
-            <span className="text-primary font-bold tracking-widest uppercase mb-2 block text-xs">FAQ</span>
+            <span className="text-primary font-bold tracking-widest uppercase mb-2 block text-[18px]">FAQ</span>
             <h2 className="text-[25px] md:text-5xl font-black mb-4 text-slate-900">무엇을 도와드릴까요?</h2>
             <p className="text-slate-500 text-[14px] md:text-lg font-medium">자주 묻는 질문에 대한 답변을 확인하세요</p>
           </div>
