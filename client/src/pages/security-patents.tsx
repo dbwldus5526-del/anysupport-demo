@@ -86,7 +86,7 @@ export default function SecurityPatents() {
                         <span className="text-sm font-bold text-[#333]">고객페이지 접속</span>
                       </div>
                       <div className="flex-1 mx-4 space-y-2">
-                        <div className="flex items-center gap-2 text-sm text-[#666]">
+                        <div className="flex items-center gap-2 text-[#666] text-[16px]">
                           <CheckCircle2 size={14} className="text-green-500" />
                           데이터 암호화 전송
                         </div>
