@@ -438,7 +438,7 @@ export default function PricingComparison() {
             <table className="w-full bg-white rounded-2xl shadow-lg overflow-hidden">
               <thead>
                 <tr className="bg-slate-900 text-white">
-                  <th className="px-6 py-4 text-left font-bold">구분</th>
+                  <th className="px-6 py-4 text-left font-bold text-[18px]">구분</th>
                   <th className="px-6 py-4 text-center font-bold">
                     <div className="flex flex-col items-center gap-1">
                       <Cloud size={20} />
