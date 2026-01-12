@@ -92,7 +92,7 @@ export default function Download() {
               {/* 지원받는 측 (고객) */}
               <div className="rounded-2xl bg-[#f8fafc] p-8 border border-slate-200">
                 <div className="flex items-center gap-3 mb-2">
-                  <h3 className="text-2xl font-bold text-[#0066b3]">지원받는 측 (고객)</h3>
+                  <h3 className="font-bold text-[32px] text-[333]">지원받는 측 (고객)</h3>
                   <User className="text-[#0066b3]" size={24} />
                 </div>
                 <p className="text-[#666] text-[16px] mb-6">
