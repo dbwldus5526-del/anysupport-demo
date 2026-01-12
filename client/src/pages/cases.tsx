@@ -564,10 +564,10 @@ export default function Cases() {
                           size={28}
                           className="text-purple-500 mb-2"
                         />
-                        <span className="text-[10px] md:text-xs font-bold text-slate-700 text-center">
+                        <span className="md:text-xs font-bold text-center text-[#333] text-[18px]">
                           수강생/직원
                         </span>
-                        <span className="text-[10px] md:text-xs text-slate-400 text-center">
+                        <span className="md:text-xs text-slate-400 text-center text-[18px]">
                           전용 단말기
                         </span>
                       </div>
