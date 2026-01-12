@@ -389,7 +389,7 @@ export default function SecurityPatents() {
                       <ShieldCheck size={28} className="text-green-400" />
                     </div>
                     <div className="font-bold mb-1">백신 보호</div>
-                    <p className="text-sm text-slate-300">실시간 모니터링</p>
+                    <p className="text-slate-300 text-[16px]">실시간 모니터링</p>
                   </motion.div>
                 </div>
               </div>
