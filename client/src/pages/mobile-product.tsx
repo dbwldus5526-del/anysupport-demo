@@ -128,7 +128,7 @@ export default function MobileProduct() {
                 ))}
               </ul>
               <div className="mt-8 p-6 bg-slate-50 rounded-xl border border-slate-100">
-                <h4 className="font-bold text-slate-900 mb-3">활용 예</h4>
+                <h4 className="font-bold mb-3 text-[#2563eb]">활용 예</h4>
                 <div className="flex flex-wrap gap-2">
                   <span className="px-4 py-2 bg-white rounded-full font-semibold border border-slate-200 text-[18px] text-[#333]">금융 / 공공 / 교육 고객 상담</span>
                   <span className="px-4 py-2 bg-white rounded-full font-semibold border border-slate-200 text-[#333] text-[18px]">모바일 앱 사용 가이드</span>
