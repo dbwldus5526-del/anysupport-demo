@@ -48,31 +48,37 @@ const allCases = [
     company: "조달청",
     industry: ["public"],
     desc: "나라장터 이용기관 원격지원",
+    logo: "/attached_assets/조달청@2x_1768206613259.png",
   },
   {
     company: "법무부",
     industry: ["public"],
     desc: "통합사증정보시스템 고객 원격지원",
+    logo: "/attached_assets/법무부@2x_1768206628443.png",
   },
   {
     company: "KDB생명",
     industry: ["finance"],
     desc: "다이렉트 보험 고객 원격상담",
+    logo: "/attached_assets/KDB생명@2x_1768206638134.png",
   },
   {
     company: "한화생명",
     industry: ["finance"],
     desc: "사이트 이용 고객 원격지원",
+    logo: "/attached_assets/Hanwha@2x_1768206650889.png",
   },
   {
     company: "서울특별시",
     industry: ["public"],
     desc: "클린업시스템 이용 고객 원격지원",
+    logo: "/attached_assets/서울특별시@2x_1768206671468.png",
   },
   {
     company: "기획재정부",
     industry: ["public"],
     desc: "디브레인 시스템 이용 고객 원격지원",
+    logo: "/attached_assets/기획재정부@2x_1768206679624.png",
   },
   {
     company: "통계청",
@@ -857,11 +863,21 @@ export default function Cases() {
                 key={i}
                 className="bg-white p-6 rounded-xl border border-slate-100 hover:border-primary/30 hover:shadow-md transition-all text-center group cursor-pointer"
               >
-                <div className="w-12 h-12 bg-slate-100 rounded-lg mx-auto mb-3 flex items-center justify-center group-hover:bg-primary/10 transition-colors">
-                  <Building2
-                    size={24}
-                    className="text-slate-400 group-hover:text-primary"
-                  />
+                <div className="w-full h-12 mx-auto mb-3 flex items-center justify-center">
+                  {caseItem.logo ? (
+                    <img
+                      src={caseItem.logo}
+                      alt={caseItem.company}
+                      className="h-10 w-auto object-contain"
+                    />
+                  ) : (
+                    <div className="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center group-hover:bg-primary/10 transition-colors">
+                      <Building2
+                        size={24}
+                        className="text-slate-400 group-hover:text-primary"
+                      />
+                    </div>
+                  )}
                 </div>
                 <div className="font-bold text-sm text-slate-700">
                   {caseItem.company}
