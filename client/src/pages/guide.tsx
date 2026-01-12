@@ -211,7 +211,7 @@ export default function Guide() {
                 
                 {/* Image Content */}
                 <div className="flex-1">
-                  <div className="relative rounded-3xl overflow-hidden shadow-2xl group">
+                  <div className="relative rounded-3xl overflow-hidden group">
                     <img 
                       src={step.image} 
                       alt={step.title} 
