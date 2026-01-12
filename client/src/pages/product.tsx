@@ -197,7 +197,7 @@ export default function Product() {
                     <Timer size={14} />
                     초고속 연결
                   </div>
-                  <h3 className="text-3xl md:text-4xl font-black mb-4">
+                  <h3 className="text-3xl md:text-4xl mb-4 font-extrabold">
                     6자리 인증번호로<br />
                     <span className="text-white/90">10초 이내 즉시 연결</span>
                   </h3>
