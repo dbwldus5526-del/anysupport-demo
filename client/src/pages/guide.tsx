@@ -191,7 +191,7 @@ export default function Guide() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-7xl mx-auto space-y-32">
             {detailedSteps.map((step, i) => (
-              <div key={i} className={`flex flex-col lg:items-center gap-12 lg:gap-20 ${i % 2 === 1 ? 'lg:flex-row-reverse' : 'lg:flex-row'}`}>
+              <div key={i} className="flex flex-col lg:items-center gap-12 lg:gap-20 lg:flex-row mt-[45px] mb-[45px]">
                 {/* Text Content */}
                 <div className="flex-1">
                   <div className="inline-block px-3 py-1 bg-slate-800 text-white font-bold rounded mb-6 text-[18px]">
