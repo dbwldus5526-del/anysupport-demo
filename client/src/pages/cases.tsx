@@ -814,7 +814,7 @@ export default function Cases() {
                   {currentScenario.cases.slice(0, 8).map((caseItem, i) => (
                     <div
                       key={i}
-                      className="p-4 bg-slate-50 rounded-xl border border-slate-100 hover:border-primary/30 transition-colors text-[18px] text-[#333]"
+                      className="p-4 rounded-xl border border-slate-100 hover:border-primary/30 transition-colors text-[18px] text-[#333] bg-[#ffffff]"
                     >
                       <div className="font-bold mb-1 text-[18px] text-[#333]">
                         {caseItem.logo}
