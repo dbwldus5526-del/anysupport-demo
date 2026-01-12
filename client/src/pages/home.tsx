@@ -274,7 +274,7 @@ export function Home() {
               <br />
               <span className="block text-primary text-[67px]">애니서포트가 있습니다</span>
             </h1>
-            <p className="sm:text-lg md:text-xl mb-10 max-w-2xl text-[24px] font-normal text-[#333] mt-6">
+            <p className="sm:text-lg md:text-xl mb-10 max-w-2xl text-[#333] mt-6 text-[21px] font-normal">
               고객 상담·IT 지원·운영 지원을 하나로 연결하는
               <br className="hidden md:block" />
               기업용 원격지원 SaaS 애니서포트
