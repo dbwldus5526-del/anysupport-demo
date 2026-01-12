@@ -710,7 +710,7 @@ export default function Cases() {
                             </div>
                             <div className="flex items-center gap-2 p-2 bg-white rounded border border-slate-200">
                               <HardDrive size={16} className="text-slate-600" />
-                              <span className="text-[10px] text-slate-600">
+                              <span className="text-[#333] text-[16px]">
                                 원격지원 서버
                               </span>
                             </div>
