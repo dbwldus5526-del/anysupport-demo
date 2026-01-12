@@ -235,7 +235,7 @@ export default function FAQ() {
                   className="w-full p-6 flex items-center justify-between text-[18px] font-light bg-[#f2f2f2] text-[#0f172b]"
                 >
                   <div className="flex items-center gap-3">
-                    <FolderOpen size={24} className="text-white/80" />
+                    <FolderOpen size={24} className="text-[#666]" />
                     <span className="text-[20px] text-[#333] font-medium">
                       {category.title} ({category.count})
                     </span>
