@@ -88,7 +88,7 @@ export default function Download() {
                         애니서포트 상담원 매뉴얼(Ver10.0)
                       </Button>
                     </a>
-                    <a href="/attached_assets/anysupport_admin_manual_v10_(1)_1768200309495.pdf" target="_blank" rel="noopener noreferrer">
+                    <a href="/attached_assets/anysupport_admin_manual_v10_(1)_1768200769433.pdf" target="_blank" rel="noopener noreferrer">
                       <Button variant="ghost" className="w-full justify-start hover:bg-[#0066b3]/10 text-[15px] gap-2 text-[#0066b3]">
                         <BookOpen size={16} className="text-[#0066b3]" />
                         애니서포트 관리자 매뉴얼
