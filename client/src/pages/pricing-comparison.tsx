@@ -557,7 +557,7 @@ export default function PricingComparison() {
                 <span className="text-primary font-bold text-[18px]">왜?</span> {industries[activeIndustry].reason}
               </p>
               
-              <Button onClick={openModal} className="w-full h-12 font-bold">
+              <Button onClick={openModal} className="w-full h-12 font-bold text-[18px]">
                 맞춤 상담 받기 <ArrowRight className="ml-2" />
               </Button>
             </div>
