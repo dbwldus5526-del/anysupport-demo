@@ -298,7 +298,7 @@ export function Header() {
         <div className="container mx-auto px-4 md:px-6 flex items-center gap-4 h-9">
           <a
             href="/download"
-            className="text-[13px] hover:text-[#ff8500] hover:font-bold transition-colors"
+            className="text-[13px] hover:text-[#ff8500] hover:font-bold transition-colors text-[#2563eb]"
           >
             애니서포트 다운로드
           </a>
