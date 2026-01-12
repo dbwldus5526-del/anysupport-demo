@@ -93,7 +93,7 @@ export default function SecurityPatents() {
                         <div className="text-center font-bold text-blue-600 py-1 bg-blue-50 rounded text-[16px]">
                           원격지원
                         </div>
-                        <div className="flex items-center gap-2 text-sm text-[#666]">
+                        <div className="flex items-center gap-2 text-[#666] text-[16px]">
                           <CheckCircle2 size={14} className="text-green-500" />
                           로그인 데이터 암호화
                         </div>
