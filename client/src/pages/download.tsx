@@ -65,10 +65,12 @@ export default function Download() {
                         애니서포트 Mac용 상담원 프로그램(V10.0)
                       </Button>
                     </a>
-                    <Button variant="ghost" className="w-full justify-start hover:bg-[#0066b3]/10 text-[15px] gap-2 text-[#0066b3]">
-                      <DownloadIcon size={16} className="text-[#0066b3]" />
-                      애니서포트 윈도우즈용 상담원 프로그램(V6.0)
-                    </Button>
+                    <a href="/attached_assets/AnySupport_Setup_1768200189167.exe" download="AnySupport_Setup_V6.exe">
+                      <Button variant="ghost" className="w-full justify-start hover:bg-[#0066b3]/10 text-[15px] gap-2 text-[#0066b3]">
+                        <DownloadIcon size={16} className="text-[#0066b3]" />
+                        애니서포트 윈도우즈용 상담원 프로그램(V6.0)
+                      </Button>
+                    </a>
                   </div>
                 </div>
 
