@@ -17,6 +17,7 @@ import {
 } from "lucide-react";
 import samsungKnoxLogo from "@assets/image_1768207806783.png";
 import koinoLogo from "@assets/코이노로고_1768207913009.png";
+import seapLogo from "@assets/image-removebg-preview_(24)_1768208006965.png";
 import { motion } from "framer-motion";
 
 export default function SecurityPatents() {
@@ -229,12 +230,8 @@ export default function SecurityPatents() {
                     <div className="w-24 h-24 bg-slate-100 rounded-xl flex items-center justify-center p-2">
                       <img src={koinoLogo} alt="KOINO" className="h-12 w-auto object-contain" />
                     </div>
-                    <div className="w-24 h-24 bg-slate-100 rounded-xl flex items-center justify-center p-2">
-                      <div className="text-center">
-                        <div className="text-xs font-bold text-[#333]">SAMSUNG</div>
-                        <div className="text-xs text-[#666]">Enterprise Alliance</div>
-                        <div className="text-[10px] text-slate-500">SILVER TIER</div>
-                      </div>
+                    <div className="w-28 h-24 bg-slate-100 rounded-xl flex items-center justify-center p-2">
+                      <img src={seapLogo} alt="Samsung Enterprise Alliance Program" className="h-16 w-auto object-contain" />
                     </div>
                   </div>
                   <p className="text-[#666] text-sm">
