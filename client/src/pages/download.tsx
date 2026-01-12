@@ -49,7 +49,7 @@ export default function Download() {
                 
                 <div className="border-t border-[#b8daf0] pt-6"></div>
 
-                <div className="space-y-3 bg-white/50 rounded-xl p-4">
+                <div className="space-y-3 rounded-xl p-4 bg-[#f8fafc]">
                   <Button variant="ghost" className="w-full justify-start text-[#0066b3] hover:bg-[#0066b3]/10 text-[16px] gap-2">
                     <DownloadIcon size={18} />
                     애니서포트 Windows용 상담원 프로그램(V10.0)
