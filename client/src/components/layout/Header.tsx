@@ -298,25 +298,25 @@ export function Header() {
         <div className="container mx-auto px-4 md:px-6 flex items-center gap-4 h-9">
           <a
             href="/download"
-            className="text-[13px] hover:text-[#ff8500] hover:font-bold transition-colors text-[#2563eb]"
+            className="text-[14px] text-[#333] font-medium hover:text-[#2563eb] hover:font-bold active:text-[#2563eb] active:font-bold transition-colors"
           >
             애니서포트 다운로드
           </a>
-          <span className="text-white/30">|</span>
+          <span className="text-[#999]">|</span>
           <a
             href="https://988.co.kr/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[13px] hover:text-[#ff8500] hover:font-bold transition-colors"
+            className="text-[14px] text-[#333] font-medium hover:text-[#2563eb] hover:font-bold active:text-[#2563eb] active:font-bold transition-colors"
           >
             고객접속페이지
           </a>
-          <span className="text-white/30">|</span>
+          <span className="text-[#999]">|</span>
           <a
             href="https://anysupport.net/manage/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[13px] hover:text-[#ff8500] hover:font-bold transition-colors"
+            className="text-[14px] text-[#333] font-medium hover:text-[#2563eb] hover:font-bold active:text-[#2563eb] active:font-bold transition-colors"
           >
             관리자페이지
           </a>
