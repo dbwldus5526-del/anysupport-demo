@@ -25,7 +25,6 @@ export default function Download() {
           </p>
         </div>
       </section>
-
       {/* Two Column Download Section */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
@@ -35,7 +34,7 @@ export default function Download() {
               {/* 지원하는 측 (상담사) */}
               <div className="rounded-2xl bg-gradient-to-br from-[#e8f4fc] to-[#d0e8f7] p-8 border border-[#b8daf0]">
                 <div className="flex items-center gap-3 mb-2">
-                  <h3 className="text-2xl font-bold text-[#0066b3]">지원하는 측 (상담사)</h3>
+                  <h3 className="font-bold text-[32px] text-[#333]">지원하는 측 (상담사)</h3>
                   <MessageSquare className="text-[#0066b3]" size={24} />
                 </div>
                 <p className="text-[#666] text-[16px] mb-6">
