@@ -293,7 +293,36 @@ export function Header() {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 backdrop-blur-sm py-5 bg-[#ffffff] shadow-[0_2px_8px_rgba(0,0,0,0.06)]">
+    <>
+      <div className="fixed top-0 left-0 right-0 z-50 bg-[#333] text-white hidden md:block">
+        <div className="container mx-auto px-4 md:px-6 flex items-center gap-4 h-9">
+          <a
+            href="/download"
+            className="text-[13px] hover:text-primary transition-colors"
+          >
+            애니서포트 다운로드
+          </a>
+          <span className="text-white/30">|</span>
+          <a
+            href="https://988.co.kr/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[13px] hover:text-primary transition-colors"
+          >
+            고객접속페이지
+          </a>
+          <span className="text-white/30">|</span>
+          <a
+            href="https://anysupport.net/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[13px] hover:text-primary transition-colors"
+          >
+            관리자페이지
+          </a>
+        </div>
+      </div>
+      <header className="fixed top-0 md:top-9 left-0 right-0 z-50 transition-all duration-300 backdrop-blur-sm py-5 bg-[#ffffff] shadow-[0_2px_8px_rgba(0,0,0,0.06)]">
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         <Link
           href="/"
@@ -375,5 +404,6 @@ export function Header() {
         openModal={openModal}
       />
     </header>
+    </>
   );
 }
