@@ -292,7 +292,7 @@ export default function Pricing() {
                     </div>
                     <div className="grid-cols-4 gap-4 text-center min-w-[400px] hidden md:grid text-[19px] font-light">
                       {["BASIC", "PREMIUM", "MOBILE", "Video"].map((name) => (
-                        <span key={name} className="text-[10px] font-black tracking-widest opacity-80">{name}</span>
+                        <span key={name} className="tracking-widest opacity-80 text-[14px] font-normal">{name}</span>
                       ))}
                     </div>
                   </div>
