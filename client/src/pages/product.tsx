@@ -230,7 +230,7 @@ export default function Product() {
                 <div className="flex justify-center">
                   <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
                     <div className="text-center mb-4">
-                      <span className="text-white/60 text-sm">
+                      <span className="text-white/60 text-[18px]">
                         접속 코드 입력
                       </span>
                     </div>
