@@ -5,6 +5,7 @@ import googlePlayLogo from "@assets/image-removebg-preview_(20)_1768199099339.pn
 import appStoreLogo from "@assets/image-removebg-preview_(21)_1768199186426.png";
 import windowsLogo from "@assets/image-removebg-preview_(22)_1768199241860.png";
 import googlePlayFullLogo from "@assets/image_1768199304085.png";
+import appStoreFullLogo from "@assets/image-removebg-preview_(23)_1768199353224.png";
 
 export default function Download() {
   return (
@@ -214,12 +215,8 @@ export default function Download() {
                 <button className="h-14 px-6 bg-white rounded-xl border border-slate-200 flex items-center gap-3 transition-transform hover:scale-105 pl-[20px] pr-[20px]">
                   <img src={googlePlayFullLogo} alt="Google Play" className="h-8" />
                 </button>
-                <button className="h-14 px-6 bg-black rounded-xl border border-white/10 flex items-center gap-3 transition-transform hover:scale-105 pl-[55px] pr-[55px]">
-                  <Apple className="text-white" size={28} />
-                  <div className="text-white text-left">
-                    <p className="text-[10px] uppercase font-bold text-white/60">Download on the</p>
-                    <p className="text-lg font-black leading-none">App Store</p>
-                  </div>
+                <button className="h-14 px-6 bg-white rounded-xl border border-slate-200 flex items-center gap-3 transition-transform hover:scale-105 pl-[20px] pr-[20px]">
+                  <img src={appStoreFullLogo} alt="App Store" className="h-8" />
                 </button>
               </div>
             </div>
