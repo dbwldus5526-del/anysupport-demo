@@ -354,7 +354,7 @@ export default function Cases() {
                     <div className="flex justify-center gap-4 md:gap-8 mb-6">
                       {["A사", "B사", "C사"].map((company, i) => (
                         <div key={i} className="flex flex-col items-center">
-                          <div className="px-3 py-1 bg-primary text-white text-xs font-bold rounded-full mb-2">
+                          <div className="px-3 py-1 bg-primary text-white font-bold rounded-full mb-2 text-[18px]">
                             {company}
                           </div>
                           <div className="w-16 h-16 md:w-20 md:h-20 bg-blue-50 rounded-xl border-2 border-dashed border-blue-200 flex items-center justify-center">
