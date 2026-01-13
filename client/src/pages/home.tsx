@@ -629,7 +629,7 @@ export function Home() {
                       </div>
                       {hoveredSpot === spot.id && (
                         <div 
-                          className={`absolute z-50 bg-white rounded-xl shadow-2xl border border-slate-200 p-4 w-64 ${
+                          className={`absolute z-50 bg-white rounded-xl shadow-[0_10px_40px_rgba(0,0,0,0.25)] border border-slate-200 p-4 w-64 ${
                             showAbove ? 'bottom-full mb-2' : 'top-full mt-2'
                           } ${
                             alignLeft ? 'right-0' : alignRight ? 'left-0' : 'left-1/2 -translate-x-1/2'
