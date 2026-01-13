@@ -258,9 +258,7 @@ export default function PricingComparison() {
       <section id="quiz-section" className="py-24 bg-slate-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold mb-4">
-              2분 완성
-            </div>
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary font-bold mb-4 text-[16px]">1분 완성</div>
             <h2 className="text-2xl md:text-4xl font-bold mb-4 text-slate-900">
               도입 방식 진단
             </h2>
