@@ -30,6 +30,7 @@ import pcHeroImg from "@assets/generated_images/pc_remote_support_hero_backgroun
 import remoteControlImg from "@assets/generated_images/remote_control_mouse_and_keyboard_icon.png";
 import fileTransferImg from "@assets/generated_images/fast_file_transfer_progress_icon.png";
 import multiSessionImg from "@assets/generated_images/multiple_monitor_session_management_icon.png";
+import sessionManagementGif from "@assets/session_management_flow_b8c4d5e3_1768276499357.gif";
 
 export default function Product() {
   const { openModal } = useModal();
@@ -249,16 +250,12 @@ export default function Product() {
               viewport={{ once: true }}
               className="relative lg:mt-[140px]"
             >
-              <div className="aspect-[4/3] bg-gradient-to-br from-primary/10 to-blue-100 rounded-3xl overflow-hidden border border-slate-200 flex items-center justify-center">
-                <div className="text-center p-8">
-                  <div className="w-24 h-24 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-6">
-                    <Video size={48} className="text-primary" />
-                  </div>
-                  <p className="text-[#666] text-lg">GIF 이미지 영역</p>
-                  <p className="text-slate-400 text-sm mt-2">
-                    PC 원격지원 활용 사례
-                  </p>
-                </div>
+              <div className="rounded-3xl overflow-hidden border border-slate-200">
+                <img 
+                  src={sessionManagementGif} 
+                  alt="PC 원격지원 활용 사례" 
+                  className="w-full h-auto"
+                />
               </div>
             </motion.div>
           </div>
