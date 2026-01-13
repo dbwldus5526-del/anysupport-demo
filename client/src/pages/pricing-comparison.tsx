@@ -548,7 +548,7 @@ export default function PricingComparison() {
                 <div className="text-xl font-bold">{industries[activeIndustry].recommendation}</div>
               </div>
               
-              <p className="text-white/80 mb-6 text-[14px] sm:text-[16px] lg:text-[18px]">
+              <p className="mb-6 text-[14px] sm:text-[16px] lg:text-[18px] text-[#ffffff]">
                 <span className="font-bold text-[14px] sm:text-[16px] lg:text-[18px] text-[#a8c6ff]">왜?</span> {industries[activeIndustry].reason}
               </p>
               
