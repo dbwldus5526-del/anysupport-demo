@@ -607,7 +607,7 @@ export function Home() {
                     deviceViewItems.find((d) => d.id === activeDevice)?.image
                   }
                   alt="Device View"
-                  className="w-full h-full object-cover rounded-2xl border border-slate-200"
+                  className="w-full h-full object-cover rounded-2xl"
                 />
                 {deviceViewItems.find((d) => d.id === activeDevice)?.spots.map((spot) => {
                   const topPercent = parseInt(spot.top);
