@@ -264,7 +264,6 @@ function HeroCarousel({ openModal, scrollToSection }: { openModal: () => void; s
         ))}
         <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent lg:w-3/4" />
       </div>
-
       <div className="max-w-[1280px] w-full mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
         <div className="max-w-3xl">
           <h1 className="font-black mt-[0px] mb-[20px] text-[#333] text-[32px] sm:text-[48px] lg:text-[67px] leading-[1.1]">
@@ -285,14 +284,11 @@ function HeroCarousel({ openModal, scrollToSection }: { openModal: () => void; s
               variant="outline"
               size="lg"
               onClick={() => scrollToSection("features")}
-              className="h-12 px-6 sm:h-14 sm:px-10 text-base sm:text-lg font-bold bg-[#f7f8fc] border border-slate-200"
-            >
-              제품 자세히 보기
-            </Button>
+              className="h-12 px-6 sm:h-14 sm:px-10 text-base sm:text-lg font-bold bg-[#f7f8fc] border border-slate-200 text-[#333]"
+            >문의하기</Button>
           </div>
         </div>
       </div>
-
       {/* Navigation Arrows */}
       <button
         onClick={goToPrevSlide}
@@ -308,7 +304,6 @@ function HeroCarousel({ openModal, scrollToSection }: { openModal: () => void; s
       >
         <ChevronRight size={24} className="text-slate-700" />
       </button>
-
       {/* Slide Indicators */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-2">
         {heroSlides.map((_, index) => (
