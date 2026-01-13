@@ -429,7 +429,7 @@ export function Home() {
                 image: mobileSupportImgOriginal,
                 title: "Mobile 지원",
                 desc: "Android, iOS 실시간 제어",
-                hoverDesc: "Android, iOS 스마트폰과 태블릿을 실시간으로 원격 지원합니다. 고객의 모바일 화면을 직접 보면서 앱 설치, 설정 변경 등을 안내할 수 있습니다.",
+                hoverDesc: "상대방의 모바일 기기 화면을 원격으로 공유하여 같이 보면서 제어하여 문제를 해결하는 원격지원 방법입니다.",
                 href: "/product/mobile",
               },
               {
