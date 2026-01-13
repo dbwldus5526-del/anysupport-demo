@@ -256,9 +256,8 @@ export default function MobileProduct() {
           </div>
         </div>
       </section>
-
       {/* Mobile Experience Section */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-[#f8fafc]">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="font-bold mb-8 text-[25px] md:text-4xl text-[#333]">모바일에서도 애니서포트를 경험하세요</h2>
@@ -273,7 +272,6 @@ export default function MobileProduct() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-primary text-white">
         <div className="container mx-auto px-4 md:px-6 text-center">
