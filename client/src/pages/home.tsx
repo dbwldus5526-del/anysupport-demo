@@ -376,8 +376,8 @@ export function Home() {
       image: videoSupportImg,
       spots: [
         { id: 1, top: "20%", left: "25%", title: "실시간 영상", description: "고객의 카메라를 통해 현장 상황을 실시간으로 확인합니다." },
-        { id: 2, top: "45%", left: "70%", title: "음성 통화", description: "영상과 함께 음성으로 소통하며 문제를 해결합니다." },
-        { id: 3, top: "70%", left: "35%", title: "화면 캡처", description: "중요한 순간을 캡처하여 기록으로 남깁니다." },
+        { id: 2, top: "45%", left: "70%", title: "비디오 전용 퀵메뉴", description: "모바일 화면 상으로 제어 되지않는 플래시. 초점 조정 등의 기능을 사용하기 편리하도록 퀵 메뉴바로 배치하여 상담원이 현장을 더 빠르게 파악 할 수있습니다." },
+        { id: 3, top: "70%", left: "35%", title: "애니서포트 비디오 에디션", description: "카메라를 통해 고객과 같은 화면을 보면서 현장상황의 문제를 현장 방문없이 생생하게 해결할 수 있습니다." },
       ],
     },
     {
