@@ -21,9 +21,9 @@ import {
 } from "lucide-react";
 import { motion } from "framer-motion";
 import videoHeroImg from "@assets/generated_images/video_remote_support_hero_background_with_video_call_interface_and_support_agent.png";
-import webrtcImg from "@assets/generated_images/webrtc_based_real-time_video_connection_icon.png";
-import voiceSyncImg from "@assets/generated_images/voice_and_screen_sharing_synchronization_icon.png";
-import seniorFriendlyImg from "@assets/generated_images/user_friendly_remote_support_for_seniors_icon.png";
+import webrtcImg from "@assets/generated_images/webrtc_video_connection_concept.png";
+import voiceSyncImg from "@assets/generated_images/voice_and_screen_sharing.png";
+import emergencyMonitoringImg from "@assets/generated_images/emergency_real-time_monitoring.png";
 import videoRemoteSupportGif from "@assets/remote_support_animation_a7b3c9d2_1768268118726.gif";
 import videoMainImg from "@assets/video_main_1768270822179.png";
 
@@ -44,7 +44,7 @@ export default function VideoProduct() {
     {
       title: "비대면 긴급상황 실시간확인",
       desc: "긴급한 상황에서 빠르게 현장의 문제를 파악하고 필요한 조치를 즉시 전달하여 골든 타임을 놓치지 않아 후속 조치를 취할 수 있습니다.",
-      image: seniorFriendlyImg,
+      image: emergencyMonitoringImg,
     },
   ];
 
