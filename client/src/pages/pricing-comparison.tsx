@@ -580,7 +580,7 @@ export default function PricingComparison() {
             <Button
               size="lg"
               onClick={scrollToQuiz}
-              className="h-12 px-6 sm:h-14 sm:px-10 text-base sm:text-lg font-bold bg-white/20 hover:bg-white/30 border-2 border-white/30"
+              className="h-12 px-6 sm:h-14 sm:px-10 text-base sm:text-lg font-bold hover:bg-white/30 border-2 border-white/30 bg-[#ffffff21]"
             >
               다시 진단하기
             </Button>
