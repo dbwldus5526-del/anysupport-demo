@@ -207,7 +207,7 @@ export default function VideoProduct() {
                       <item.icon size={28} />
                     </div>
                     <div>
-                      <h3 className="text-lg font-bold text-slate-900 mb-2">{item.title}</h3>
+                      <h3 className="mb-2 text-[20px] font-bold text-[#2563eb]">{item.title}</h3>
                       <p className="text-[#666] text-[14px] sm:text-[16px] lg:text-[18px] font-normal leading-relaxed">{item.desc}</p>
                     </div>
                   </motion.div>
