@@ -23,6 +23,8 @@ import {
   Database,
   ChevronLeft,
   ChevronRight,
+  Phone,
+  Mail,
 } from "lucide-react";
 import { motion, useInView } from "framer-motion";
 import heroImage1 from "@assets/hero1_1767765900169.png";
@@ -954,40 +956,58 @@ export function Home() {
         </div>
       </section>
       {/* 11. 무료체험 CTA (마무리 섹션) */}
-      <section className="py-24 bg-primary text-white overflow-hidden relative">
-        <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
-        <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full blur-2xl translate-y-1/2 -translate-x-1/2" />
-        <div className="absolute top-1/4 left-1/6 w-20 h-20 border-2 border-white/10 rounded-lg rotate-45" />
-        <div className="absolute bottom-1/3 right-1/5 w-16 h-16 border-2 border-white/10 rounded-full" />
-        <div className="absolute top-1/2 right-1/4 w-24 h-24 bg-white/5 rounded-xl rotate-12" />
-        <div className="absolute bottom-1/4 left-1/3 w-12 h-12 border border-white/10 rotate-45" />
-        <div className="absolute top-1/3 left-1/2 w-8 h-8 bg-white/5 rounded-full" />
-        <div className="max-w-[1280px] w-full mx-auto px-4 sm:px-6 lg:px-10 text-center relative z-10">
-          <h2 className="text-3xl lg:text-4xl font-bold mb-8">
-            지금 14일간 무료로 사용해보세요
-          </h2>
-          <p className="text-[14px] sm:text-[16px] lg:text-[18px] opacity-90 mb-12 max-w-2xl mx-auto font-medium">
-            별도의 결제 정보 입력 없이 즉시 무료 체험이 가능합니다.
-            <br />
-            최고의 원격 지원 기술을 직접 경험해보세요.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              size="lg"
-              variant="secondary"
-              onClick={openModal}
-              className="h-16 px-12 text-xl font-bold bg-[#f7f8fc] text-primary hover:bg-slate-100 border border-slate-200"
-            >
-              무료체험 시작하기
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              onClick={() => setContactModalOpen(true)}
-              className="h-16 px-12 text-xl font-bold bg-transparent text-white border-white hover:bg-white/10"
-            >
-              문의하기
-            </Button>
+      <section className="py-20 bg-[#f8fafc]">
+        <div className="max-w-[1280px] w-full mx-auto px-4 sm:px-6 lg:px-10">
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-16">
+            {/* 왼쪽: 무료체험 */}
+            <div className="text-left">
+              <h2 className="text-2xl lg:text-3xl font-bold mb-4 text-[#333]">
+                애니서포트를 지금 사용해보세요.
+              </h2>
+              <p className="text-[14px] sm:text-[16px] lg:text-[18px] text-[#666] mb-8">
+                어디서나 무엇이든 쉽게 지원해줄 수 있는 애니서포트 원격 지원을 14일 동안 무료로 사용해 볼 수 있습니다.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <Button
+                  size="lg"
+                  onClick={openModal}
+                  className="h-14 px-8 text-lg font-bold"
+                >
+                  원격 지원 무료 체험
+                </Button>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  onClick={openModal}
+                  className="h-14 px-8 text-lg font-bold border-slate-300 text-[#333] hover:border-primary hover:text-primary"
+                >
+                  구매하기
+                </Button>
+              </div>
+            </div>
+            {/* 오른쪽: 도입 상담 */}
+            <div className="text-left border-l-0 md:border-l border-slate-200 md:pl-16">
+              <h2 className="text-2xl lg:text-3xl font-bold mb-4 text-[#333]">
+                도입 상담이 필요하신가요?
+              </h2>
+              <p className="text-[14px] sm:text-[16px] lg:text-[18px] text-[#666] mb-6">
+                전문 컨설턴트가 귀사에 적합한 제품을 맞춤 제안해 드립니다.
+              </p>
+              <div className="space-y-3">
+                <div className="flex items-center gap-3 text-[#333]">
+                  <Phone size={20} className="text-primary" />
+                  <span className="text-lg font-medium">02-839-7500</span>
+                </div>
+                <div className="flex items-center gap-3 text-[#333]">
+                  <Mail size={20} className="text-primary" />
+                  <span className="text-[14px] sm:text-[16px]">온라인 문의 &nbsp;&nbsp;<a href="mailto:anysupport@koino.co.kr" className="text-primary hover:underline">anysupport@koino.co.kr</a></span>
+                </div>
+                <div className="flex items-center gap-3 text-[#666] text-[14px] sm:text-[16px]">
+                  <Clock size={20} className="text-primary" />
+                  <span>월~금 오전 9시 ~ 오후 6시</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
