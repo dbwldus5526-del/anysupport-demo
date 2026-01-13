@@ -250,7 +250,7 @@ export default function Product() {
               viewport={{ once: true }}
               className="relative lg:mt-[140px]"
             >
-              <div className="rounded-3xl overflow-hidden border border-slate-200">
+              <div className="rounded-3xl overflow-hidden">
                 <img 
                   src={sessionManagementGif} 
                   alt="PC 원격지원 활용 사례" 
