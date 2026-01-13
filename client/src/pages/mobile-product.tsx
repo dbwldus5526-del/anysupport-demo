@@ -28,8 +28,8 @@ export default function MobileProduct() {
 
   const specialFeatures = [
     {
-      title: "터치 포인터 및 가이드",
-      desc: "터치 포인터와 강조 표시 기능을 지원하여 고객의 모바일 화면에서 직접 가이드를 제공할 수 있습니다.",
+      title: "모바일 기기에서도 지원",
+      desc: "애니서포트 모바일 지원은 PC없이 모바일 기기에서도 언제 어디서나 사용 지원이 가능합니다.",
       image: touchPointerImg
     },
     {

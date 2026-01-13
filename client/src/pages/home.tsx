@@ -474,16 +474,6 @@ export function Home() {
               </div>
             ))}
           </div>
-          <div className="text-center">
-            <Button
-              variant="outline"
-              size="lg"
-              onClick={() => scrollToSection("features")}
-              className="text-[14px] sm:text-[16px] lg:text-[18px] font-bold border-primary text-primary hover:bg-primary/5"
-            >
-              제품 자세히 보기
-            </Button>
-          </div>
         </div>
       </section>
       {/* 5. 애니서포트 핵심 기능 */}
