@@ -236,7 +236,6 @@ export default function VideoProduct() {
           </div>
         </div>
       </section>
-      
       {/* 어떻게 동작하나요? 3-step 플로우 */}
       <section className="py-24 bg-white">
         <div className="max-w-[1280px] w-full mx-auto px-4 sm:px-6 lg:px-10">
@@ -294,13 +293,12 @@ export default function VideoProduct() {
           </div>
         </div>
       </section>
-      
       {/* ROI 강조 스트립 */}
       <section className="py-16 bg-gradient-to-r from-primary to-blue-600 text-white">
         <div className="max-w-[1280px] w-full mx-auto px-4 sm:px-6 lg:px-10">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             <div className="text-center md:text-left">
-              <h3 className="text-2xl md:text-3xl font-black mb-2">
+              <h3 className="text-2xl md:text-3xl mb-2 font-bold">
                 현장 방문을 줄여 <span className="text-yellow-300">출장비용 80% 이상</span> 절감
               </h3>
               <p className="text-white/80 text-lg font-normal">
@@ -320,7 +318,6 @@ export default function VideoProduct() {
           </div>
         </div>
       </section>
-
       {/* Video Special Features Section */}
       <section className="py-24 bg-slate-50">
         <div className="container mx-auto px-4 md:px-6">
