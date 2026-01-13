@@ -19,6 +19,7 @@ import {
 import mobileHeroImg from "@assets/generated_images/mobile_remote_support_hero_background_with_smartphones_and_professional_support_agent_silhouette.png";
 import touchPointerImg from "@assets/generated_images/touch_pointer_and_gesture_guide_icon_for_mobile_support.png";
 import appLessImg from "@assets/generated_images/app-less_connection_and_minimalist_setup_icon.png";
+import smsRemoteImg from "@assets/generated_images/sms_remote_support_connection.png";
 import realTimeImg from "@assets/generated_images/real-time_mobile_screen_sharing_and_interaction_icon.png";
 import googlePlayFullLogo from "@assets/image_1768199304085.png";
 import appStoreFullLogo from "@assets/image-removebg-preview_(23)_1768199353224.png";
@@ -33,9 +34,9 @@ export default function MobileProduct() {
       image: touchPointerImg
     },
     {
-      title: "앱 설치 최소화 설계",
-      desc: "복잡한 앱 설치 과정 없이 브라우저나 최소한의 권한으로 즉각적인 연결이 가능한 설계를 지향합니다.",
-      image: appLessImg
+      title: "SMS전송으로 빠른 원격접속 연결",
+      desc: "지원받을 대상에게 SMS로 접속주소를 발송하면, 상대방이 별도의 앱 없이도 원격접속으로 이어집니다.",
+      image: smsRemoteImg
     },
     {
       title: "실시간 화면 공유",
