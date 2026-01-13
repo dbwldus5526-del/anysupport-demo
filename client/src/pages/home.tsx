@@ -594,7 +594,7 @@ export function Home() {
           </div>
 
           <div className="max-w-5xl mx-auto">
-            <div className="relative overflow-hidden aspect-[16/10] flex items-center justify-center">
+            <div className="relative aspect-[16/10] flex items-center justify-center">
               <motion.div
                 key={activeDevice}
                 initial={{ opacity: 0 }}
@@ -609,26 +609,48 @@ export function Home() {
                   alt="Device View"
                   className="w-full h-full object-cover rounded-2xl border border-slate-200"
                 />
-                {deviceViewItems.find((d) => d.id === activeDevice)?.spots.map((spot) => (
-                  <div
-                    key={spot.id}
-                    className="absolute"
-                    style={{ top: spot.top, left: spot.left, transform: 'translate(-50%, -50%)' }}
-                    onMouseEnter={() => setHoveredSpot(spot.id)}
-                    onMouseLeave={() => setHoveredSpot(null)}
-                  >
-                    <div className="w-8 h-8 sm:w-10 sm:h-10 bg-primary text-white rounded-full flex items-center justify-center font-bold text-sm sm:text-base cursor-pointer shadow-lg border-2 border-white hover:scale-110 transition-transform z-10 relative">
-                      {spot.id}
-                    </div>
-                    {hoveredSpot === spot.id && (
-                      <div className="absolute z-20 bg-white rounded-xl shadow-2xl border border-slate-200 p-4 w-64 left-1/2 -translate-x-1/2 mt-2">
-                        <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-white border-l border-t border-slate-200 rotate-45" />
-                        <h4 className="font-bold text-[#333] mb-2 text-sm">{spot.title}</h4>
-                        <p className="text-[#666] text-xs leading-relaxed">{spot.description}</p>
+                {deviceViewItems.find((d) => d.id === activeDevice)?.spots.map((spot) => {
+                  const topPercent = parseInt(spot.top);
+                  const leftPercent = parseInt(spot.left);
+                  const showAbove = topPercent > 60;
+                  const alignLeft = leftPercent > 70;
+                  const alignRight = leftPercent < 30;
+                  
+                  return (
+                    <div
+                      key={spot.id}
+                      className="absolute"
+                      style={{ top: spot.top, left: spot.left, transform: 'translate(-50%, -50%)' }}
+                      onMouseEnter={() => setHoveredSpot(spot.id)}
+                      onMouseLeave={() => setHoveredSpot(null)}
+                    >
+                      <div className="w-8 h-8 sm:w-10 sm:h-10 bg-primary text-white rounded-full flex items-center justify-center font-bold text-sm sm:text-base cursor-pointer shadow-lg border-2 border-white hover:scale-110 transition-transform z-10 relative">
+                        {spot.id}
                       </div>
-                    )}
-                  </div>
-                ))}
+                      {hoveredSpot === spot.id && (
+                        <div 
+                          className={`absolute z-50 bg-white rounded-xl shadow-2xl border border-slate-200 p-4 w-64 ${
+                            showAbove ? 'bottom-full mb-2' : 'top-full mt-2'
+                          } ${
+                            alignLeft ? 'right-0' : alignRight ? 'left-0' : 'left-1/2 -translate-x-1/2'
+                          }`}
+                        >
+                          <div 
+                            className={`absolute w-4 h-4 bg-white border-slate-200 rotate-45 ${
+                              showAbove 
+                                ? 'bottom-[-8px] border-r border-b' 
+                                : 'top-[-8px] border-l border-t'
+                            } ${
+                              alignLeft ? 'right-4' : alignRight ? 'left-4' : 'left-1/2 -translate-x-1/2'
+                            }`} 
+                          />
+                          <h4 className="font-bold text-[#333] mb-2 text-sm">{spot.title}</h4>
+                          <p className="text-[#666] text-xs leading-relaxed">{spot.description}</p>
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
               </motion.div>
             </div>
             <p className="mt-8 text-center flex items-center justify-center gap-2 text-[14px] sm:text-[16px] lg:text-[18px] text-[#888]">
