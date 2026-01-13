@@ -21,6 +21,8 @@ import {
   Activity,
   Building2,
   Database,
+  ChevronLeft,
+  ChevronRight,
 } from "lucide-react";
 import { motion, useInView } from "framer-motion";
 import heroImage1 from "@assets/hero1_1767765900169.png";
@@ -232,6 +234,14 @@ function HeroCarousel({ openModal, scrollToSection }: { openModal: () => void; s
     return () => clearInterval(interval);
   }, []);
 
+  const goToPrevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
+  };
+
+  const goToNextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
+  };
+
   return (
     <section className="relative min-h-[90vh] flex items-center pt-20 pb-20 overflow-hidden bg-white">
       <div className="absolute inset-0 z-0">
@@ -275,6 +285,22 @@ function HeroCarousel({ openModal, scrollToSection }: { openModal: () => void; s
           </div>
         </div>
       </div>
+
+      {/* Navigation Arrows */}
+      <button
+        onClick={goToPrevSlide}
+        className="absolute left-4 lg:left-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white/80 hover:bg-white border border-slate-200 flex items-center justify-center shadow-lg transition-all hover:scale-110"
+        aria-label="이전 슬라이드"
+      >
+        <ChevronLeft size={24} className="text-slate-700" />
+      </button>
+      <button
+        onClick={goToNextSlide}
+        className="absolute right-4 lg:right-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white/80 hover:bg-white border border-slate-200 flex items-center justify-center shadow-lg transition-all hover:scale-110"
+        aria-label="다음 슬라이드"
+      >
+        <ChevronRight size={24} className="text-slate-700" />
+      </button>
 
       {/* Slide Indicators */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-2">
