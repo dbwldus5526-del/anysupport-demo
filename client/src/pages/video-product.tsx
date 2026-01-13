@@ -222,7 +222,7 @@ export default function VideoProduct() {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
-              className="relative"
+              className="relative lg:mt-5"
             >
               <div className="aspect-[4/3] bg-gradient-to-br from-primary/10 to-blue-100 rounded-3xl overflow-hidden border border-slate-200">
                 <img 
