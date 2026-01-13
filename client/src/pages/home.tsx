@@ -947,7 +947,7 @@ export function Home() {
                 size="lg"
                 variant="outline"
                 onClick={openModal}
-                className="w-full text-[14px] sm:text-[16px] lg:text-[18px] font-semibold border-primary text-primary"
+                className="w-full text-[14px] sm:text-[16px] lg:text-[18px] font-semibold border-[#333] text-[#333] hover:border-primary hover:text-primary"
               >
                 솔루션 문의하기
               </Button>
