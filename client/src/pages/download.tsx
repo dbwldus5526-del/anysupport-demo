@@ -56,7 +56,7 @@ export default function Download() {
                 <div className="bg-white p-6">
                   {/* 상담원 프로그램 */}
                   <div className="mb-4">
-                    <h4 className="font-bold text-[#333] mb-3 text-[14px] uppercase tracking-wide">상담원 프로그램</h4>
+                    <h4 className="font-bold text-[#333] mb-3 uppercase tracking-wide text-[16px]">상담원 프로그램</h4>
                     <div className="divide-y divide-slate-100">
                       <a href="/attached_assets/AnySupport_Setup_10_(5)_1768199980822.exe" download="AnySupport_Setup_10.exe" className="flex items-center justify-between py-3 hover:bg-slate-50 px-2 -mx-2 rounded transition-colors group">
                         <span className="text-[15px] text-[#333]">애니서포트 Windows용 상담원 프로그램(V10.0)</span>
