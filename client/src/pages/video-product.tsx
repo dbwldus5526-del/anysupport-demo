@@ -292,6 +292,80 @@ export default function VideoProduct() {
           </div>
         </div>
       </section>
+      
+      {/* 추가 섹션 - 다양한 활용 사례 */}
+      <section className="py-24 bg-slate-50">
+        <div className="max-w-[1280px] w-full mx-auto px-4 sm:px-6 lg:px-10">
+          <div className="grid lg:grid-cols-2 gap-12 lg:items-center">
+            <div>
+              <h2 className="text-[28px] md:text-4xl font-bold text-slate-900 mb-4 leading-tight">
+                다양한 산업에서 <span className="text-primary">활용</span>되는 영상 원격지원
+              </h2>
+              <p className="text-lg text-[#666] font-normal mb-10 leading-relaxed">
+                제조, 건설, 설비, 유통, 공공 등 <strong className="text-[#333]">장소와 대상의 제한 없이</strong> 현장 문제를 실시간으로 해결합니다.
+              </p>
+              
+              {/* 3개 핵심 가치 카드 */}
+              <div className="space-y-6">
+                {[
+                  {
+                    icon: Monitor,
+                    title: "제조/설비 현장 지원",
+                    desc: "복잡한 기계 장비의 고장 진단과 수리 과정을 원격으로 안내하여 다운타임을 최소화"
+                  },
+                  {
+                    icon: Users,
+                    title: "건설/현장 안전 관리",
+                    desc: "건설 현장의 진행 상황을 실시간 확인하고 안전 점검 및 기술 지도 수행"
+                  },
+                  {
+                    icon: HeartHandshake,
+                    title: "고객 서비스 품질 향상",
+                    desc: "AS 방문 전 사전 진단으로 불필요한 출장을 줄이고 고객 만족도 향상"
+                  }
+                ].map((item, i) => (
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ delay: i * 0.1 }}
+                    viewport={{ once: true }}
+                    className="flex gap-5 p-6 bg-white rounded-2xl border border-slate-200 hover:border-primary/30 hover:shadow-lg transition-all"
+                  >
+                    <div className="w-14 h-14 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
+                      <item.icon size={28} />
+                    </div>
+                    <div>
+                      <h3 className="mb-2 text-[20px] font-bold text-[#0f4ed9]">{item.title}</h3>
+                      <p className="text-[#666] text-[14px] sm:text-[16px] lg:text-[18px] font-normal leading-relaxed">{item.desc}</p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+            
+            {/* GIF 이미지 영역 */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+              className="relative lg:mt-[140px]"
+            >
+              <div className="aspect-[4/3] bg-gradient-to-br from-primary/10 to-blue-100 rounded-3xl overflow-hidden border border-slate-200 flex items-center justify-center">
+                <div className="text-center p-8">
+                  <div className="w-24 h-24 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-6">
+                    <Video size={48} className="text-primary" />
+                  </div>
+                  <p className="text-[#666] text-lg">GIF 이미지 영역</p>
+                  <p className="text-slate-400 text-sm mt-2">영상 원격지원 활용 사례</p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* ROI 강조 스트립 */}
       <section className="py-16 bg-gradient-to-r from-primary to-blue-600 text-white">
         <div className="max-w-[1280px] w-full mx-auto px-4 sm:px-6 lg:px-10">
