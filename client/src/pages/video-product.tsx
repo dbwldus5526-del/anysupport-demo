@@ -13,7 +13,13 @@ import {
   Mic,
   Monitor,
   HeartHandshake,
+  Eye,
+  Wrench,
+  AlertTriangle,
+  Smartphone,
+  UserPlus,
 } from "lucide-react";
+import { motion } from "framer-motion";
 import videoHeroImg from "@assets/generated_images/video_remote_support_hero_background_with_video_call_interface_and_support_agent.png";
 import webrtcImg from "@assets/generated_images/webrtc_based_real-time_video_connection_icon.png";
 import voiceSyncImg from "@assets/generated_images/voice_and_screen_sharing_synchronization_icon.png";
@@ -158,6 +164,163 @@ export default function VideoProduct() {
           </div>
         </div>
       </section>
+      {/* 현장을 보면서 해결하는 원격지원 섹션 */}
+      <section className="py-24 bg-slate-50">
+        <div className="max-w-[1280px] w-full mx-auto px-4 sm:px-6 lg:px-10">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-[28px] md:text-4xl font-bold text-slate-900 mb-4 leading-tight">
+                현장을 <span className="text-primary">'보면서'</span> 해결하는 원격지원
+              </h2>
+              <p className="text-lg text-[#666] font-normal mb-10 leading-relaxed">
+                스마트폰 카메라 영상 공유로, <strong className="text-[#333]">현장 방문 없이도</strong> 문제를 진단하고 조치 방법을 즉시 안내합니다.
+              </p>
+              
+              {/* 3개 핵심 가치 카드 */}
+              <div className="space-y-6">
+                {[
+                  {
+                    icon: Eye,
+                    title: "보이는 원격상담",
+                    desc: "말로 설명하지 않아도, 화면 위에 캡처·그리기·화살표 표시로 옆에서 같이 보는 것처럼 안내"
+                  },
+                  {
+                    icon: Wrench,
+                    title: "다양한 현장 원격기술 지원",
+                    desc: "사무실에서 현장 진행상태를 실시간 확인, 필요 시 전문가를 초대해 협업 지원"
+                  },
+                  {
+                    icon: AlertTriangle,
+                    title: "긴급상황 실시간 확인",
+                    desc: "골든타임을 놓치지 않도록 현장 상황을 즉시 확인하고 필요한 조치를 바로 전달"
+                  }
+                ].map((item, i) => (
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ delay: i * 0.1 }}
+                    viewport={{ once: true }}
+                    className="flex gap-5 p-6 bg-white rounded-2xl border border-slate-200 hover:border-primary/30 hover:shadow-lg transition-all"
+                  >
+                    <div className="w-14 h-14 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
+                      <item.icon size={28} />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-bold text-slate-900 mb-2">{item.title}</h3>
+                      <p className="text-[#666] text-[14px] sm:text-[16px] lg:text-[18px] font-normal leading-relaxed">{item.desc}</p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+            
+            {/* 비주얼 이미지 */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+              className="relative"
+            >
+              <div className="aspect-[4/3] bg-gradient-to-br from-primary/10 to-blue-100 rounded-3xl overflow-hidden border border-slate-200 flex items-center justify-center">
+                <div className="text-center p-8">
+                  <div className="w-24 h-24 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-6">
+                    <Video size={48} className="text-primary" />
+                  </div>
+                  <p className="text-[#666] text-lg">영상 원격지원 예시 이미지</p>
+                  <p className="text-slate-400 text-sm mt-2">/images/video-hero.png</p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+      
+      {/* 어떻게 동작하나요? 3-step 플로우 */}
+      <section className="py-24 bg-white">
+        <div className="max-w-[1280px] w-full mx-auto px-4 sm:px-6 lg:px-10">
+          <div className="text-center mb-16">
+            <h2 className="text-[28px] md:text-4xl font-bold text-slate-900 mb-4">
+              어떻게 동작하나요?
+            </h2>
+            <p className="text-lg text-[#666] font-normal max-w-2xl mx-auto">
+              3단계로 간편하게 현장 영상 원격지원을 시작할 수 있습니다.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 relative">
+            {/* 연결선 (데스크탑만) */}
+            <div className="hidden md:block absolute top-16 left-1/6 right-1/6 h-0.5 bg-slate-200 z-0" />
+            
+            {[
+              {
+                step: "1",
+                icon: Smartphone,
+                title: "영상 공유 시작",
+                desc: "현장 담당자가 스마트폰으로 영상 공유 시작"
+              },
+              {
+                step: "2",
+                icon: Eye,
+                title: "실시간 진단/안내",
+                desc: "상담원이 실시간으로 보며 진단/안내 (표시 도구 활용)"
+              },
+              {
+                step: "3",
+                icon: UserPlus,
+                title: "협업으로 해결",
+                desc: "필요 시 전문가 초대/협업으로 문제 해결까지"
+              }
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: i * 0.15 }}
+                viewport={{ once: true }}
+                className="relative z-10 text-center"
+              >
+                <div className="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center mx-auto mb-6 text-2xl font-black shadow-lg shadow-primary/30">
+                  {item.step}
+                </div>
+                <div className="w-14 h-14 rounded-xl bg-slate-100 flex items-center justify-center mx-auto mb-4">
+                  <item.icon size={28} className="text-slate-600" />
+                </div>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">{item.title}</h3>
+                <p className="text-[#666] text-[14px] sm:text-[16px] lg:text-[18px] font-normal leading-relaxed max-w-xs mx-auto">{item.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+      
+      {/* ROI 강조 스트립 */}
+      <section className="py-16 bg-gradient-to-r from-primary to-blue-600 text-white">
+        <div className="max-w-[1280px] w-full mx-auto px-4 sm:px-6 lg:px-10">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+            <div className="text-center md:text-left">
+              <h3 className="text-2xl md:text-3xl font-black mb-2">
+                현장 방문을 줄여 <span className="text-yellow-300">출장비용 80% 이상</span> 절감
+              </h3>
+              <p className="text-white/80 text-lg font-normal">
+                긴급 대응 속도 향상 + 문제 재발 감소
+              </p>
+              <p className="text-white/60 text-sm mt-3">
+                * 실제 운영 사례 기준 (상담 시 상세 제공)
+              </p>
+            </div>
+            <Button
+              size="lg"
+              onClick={openModal}
+              className="bg-white text-primary hover:bg-slate-100 font-bold px-8 h-14 text-lg shadow-xl shrink-0"
+            >
+              도입 효과 상담받기 <ArrowRight className="ml-2" />
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* Video Special Features Section */}
       <section className="py-24 bg-slate-50">
         <div className="container mx-auto px-4 md:px-6">
