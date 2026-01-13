@@ -17,10 +17,9 @@ import {
   MessageSquare
 } from "lucide-react";
 import mobileHeroImg from "@assets/generated_images/mobile_remote_support_hero_background_with_smartphones_and_professional_support_agent_silhouette.png";
-import touchPointerImg from "@assets/generated_images/touch_pointer_and_gesture_guide_icon_for_mobile_support.png";
-import appLessImg from "@assets/generated_images/app-less_connection_and_minimalist_setup_icon.png";
-import smsRemoteImg from "@assets/generated_images/sms_remote_connection_icon_style.png";
-import realTimeImg from "@assets/generated_images/real-time_mobile_screen_sharing_and_interaction_icon.png";
+import mobileDeviceSupportImg from "@assets/generated_images/mobile_device_remote_support.png";
+import smsRemoteImg from "@assets/generated_images/sms_remote_connection_concept.png";
+import realTimeImg from "@assets/generated_images/real-time_screen_sharing.png";
 import googlePlayFullLogo from "@assets/image_1768199304085.png";
 import appStoreFullLogo from "@assets/image-removebg-preview_(23)_1768199353224.png";
 
@@ -31,7 +30,7 @@ export default function MobileProduct() {
     {
       title: "모바일 기기에서도 지원",
       desc: "애니서포트 모바일 지원은 PC없이 모바일 기기에서도 언제 어디서나 사용 지원이 가능합니다.",
-      image: touchPointerImg
+      image: mobileDeviceSupportImg
     },
     {
       title: "SMS전송으로 빠른 원격접속 연결",
