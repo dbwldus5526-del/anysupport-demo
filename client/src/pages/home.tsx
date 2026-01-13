@@ -27,7 +27,7 @@ import {
 import { motion, useInView } from "framer-motion";
 import heroImage1 from "@assets/hero1_1767765900169.png";
 import heroImage2 from "@assets/190508_bg_-_복사본_1768208662176.jpg";
-import heroImage3 from "@assets/HEAD_IMG3_1768279018773.png";
+import heroImage3 from "@assets/HEAD_IMG3_1768279344021.png";
 import pcSupportImgOriginal from "@assets/generated_images/pc_remote_support_professional_image.png";
 import mobileSupportImgOriginal from "@assets/generated_images/mobile_remote_support_app_interface.png";
 import videoSupportImgOriginal from "@assets/generated_images/video-based_remote_support_concept.png";
