@@ -125,7 +125,7 @@ export default function VideoProduct() {
                 <br />
                 <span className="text-primary">가장 획기적인 기술 지원</span>
               </h2>
-              <p className="md:text-lg mb-8 text-[#333] text-[16px]">텍스트와 화면 제어만으로는 부족한 경우가 있습니다. 애니서포트 Video 원격지원은 상담원과 고객이 실시간으로 현장의 진행상태를 마주하며 소통함으로써 기술 지원을 넘어선 고객 감동을 실현합니다.</p>
+              <p className="md:text-lg mb-8 text-[#333] text-[16px]">텍스트와 화면 제어만으로는 부족한 경우가 있습니다.<br /> 애니서포트 Video 원격지원은 상담원과 고객이 실시간으로 현장의 진행상태를 마주하며 소통함으로써<br />기술 지원을 넘어선 고객 감동을 실현합니다.</p>
               <ul className="space-y-4">
                 {[
                   "WebRTC 기반 실시간 영상 연결",
