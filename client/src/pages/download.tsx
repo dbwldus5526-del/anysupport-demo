@@ -254,9 +254,9 @@ export default function Download() {
             <div className="mt-24 text-center">
               <h4 className="font-bold mb-8 text-[36px] text-[#333]">모바일에서도 애니서포트를 경험하세요</h4>
               <div className="flex justify-center gap-4">
-                <button className="h-20 px-8 bg-white rounded-xl border border-slate-200 flex items-center gap-3 transition-transform hover:scale-105">
+                <a href="https://play.google.com/store/apps/details?id=net.koino.anysupportMobile&pcampaignid=web_share" target="_blank" rel="noopener noreferrer" className="h-20 px-8 bg-white rounded-xl border border-slate-200 flex items-center gap-3 transition-transform hover:scale-105">
                   <img src={googlePlayFullLogo} alt="Google Play" className="h-12" />
-                </button>
+                </a>
                 <a href="https://apps.apple.com/us/app/%EB%AA%A8%EB%B0%94%EC%9D%BC%EC%A7%80%EC%9B%90/id993614818?l=ko" target="_blank" rel="noopener noreferrer" className="h-20 px-8 bg-white rounded-xl border border-slate-200 flex items-center gap-3 transition-transform hover:scale-105">
                   <img src={appStoreFullLogo} alt="App Store" className="h-12" />
                 </a>
