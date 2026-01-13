@@ -422,45 +422,56 @@ export function Home() {
                 image: pcSupportImgOriginal,
                 title: "PC 지원",
                 desc: "Windows, macOS, Linux 지원",
+                hoverDesc: "Windows, macOS, Linux 등 다양한 운영체제에서 고객의 PC를 원격으로 제어하고 문제를 해결합니다. 파일 전송, 화면 공유, 시스템 진단까지 한 번에 가능합니다.",
                 href: "/product/pc",
               },
               {
                 image: mobileSupportImgOriginal,
                 title: "Mobile 지원",
                 desc: "Android, iOS 실시간 제어",
+                hoverDesc: "Android, iOS 스마트폰과 태블릿을 실시간으로 원격 지원합니다. 고객의 모바일 화면을 직접 보면서 앱 설치, 설정 변경 등을 안내할 수 있습니다.",
                 href: "/product/mobile",
               },
               {
                 image: videoSupportImgOriginal,
                 title: "Video 지원",
                 desc: "현장 영상 기반 원격 가이드",
+                hoverDesc: "고객의 카메라를 통해 현장 상황을 실시간으로 확인하며 음성과 영상으로 문제 해결을 안내합니다. 현장 방문 없이도 생생한 지원이 가능합니다.",
                 href: "/product/video",
               },
             ].map((item, i) => (
-              <Link
+              <div
                 key={i}
-                href={item.href}
+                className="overflow-hidden rounded-2xl border border-slate-200 bg-[#f7f8fc] flex flex-col group hover:border-primary/30 transition-colors cursor-pointer h-full"
                 data-testid={`link-solution-${item.title}`}
               >
-                <div className="overflow-hidden rounded-2xl border border-slate-200 bg-[#f7f8fc] flex flex-col group hover:border-primary/30 transition-colors cursor-pointer h-full">
-                  <div className="h-56 sm:h-64 overflow-hidden relative">
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent opacity-60" />
-                  </div>
-                  <div className="p-6 sm:p-8 text-center border-t border-slate-50 flex-1">
-                    <h3 className="text-lg lg:text-2xl font-bold mb-1 sm:mb-2 group-hover:text-primary transition-colors">
-                      {item.title}
-                    </h3>
-                    <p className="text-[#666] text-[14px] sm:text-[16px] lg:text-[18px]">
-                      {item.desc}
+                <div className="h-56 sm:h-64 overflow-hidden relative">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent opacity-60 group-hover:opacity-0 transition-opacity duration-300" />
+                  <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-6 text-center">
+                    <p className="text-white text-[14px] sm:text-[16px] leading-relaxed mb-4">
+                      {item.hoverDesc}
                     </p>
+                    <Link href={item.href}>
+                      <Button size="sm" className="font-bold bg-white text-primary hover:bg-slate-100">
+                        제품 자세히보기 <ArrowRight className="ml-1 w-4 h-4" />
+                      </Button>
+                    </Link>
                   </div>
                 </div>
-              </Link>
+                <div className="p-6 sm:p-8 text-center border-t border-slate-50 flex-1">
+                  <h3 className="text-lg lg:text-2xl font-bold mb-1 sm:mb-2 group-hover:text-primary transition-colors">
+                    {item.title}
+                  </h3>
+                  <p className="text-[#666] text-[14px] sm:text-[16px] lg:text-[18px]">
+                    {item.desc}
+                  </p>
+                </div>
+              </div>
             ))}
           </div>
           <div className="text-center">
