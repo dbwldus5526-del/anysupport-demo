@@ -936,7 +936,7 @@ export function Home() {
                 </Button>
               </Link>
             </div>
-            <div className="p-10 rounded-2xl border border-slate-200 hover:border-primary transition-all bg-[#f7f8fc] flex flex-col">
+            <div className="p-10 rounded-2xl border border-slate-200 hover:border-primary transition-all flex flex-col bg-[#ffffff] text-[#333]">
               <h3 className="text-xl lg:text-2xl font-bold mb-4 text-[#333]">솔루션 / 연동형 제품</h3>
               <p className="text-[#666] mb-8 flex-1 text-[14px] sm:text-[16px] lg:text-[18px]">
                 기존 상담 시스템(CRM/KMS)과 연계 가능한 맞춤형 솔루션입니다.
