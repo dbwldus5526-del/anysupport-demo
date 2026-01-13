@@ -42,8 +42,8 @@ export default function VideoProduct() {
       image: voiceSyncImg,
     },
     {
-      title: "비IT 사용자 최적화",
-      desc: "복잡한 조작 없이 클릭 한 번으로 연결되어, 고령자나 기기 조작에 서툰 사용자도 쉽고 편안하게 지원을 받을 수 있습니다.",
+      title: "비대면 긴급상황 실시간확인",
+      desc: "긴급한 상황에서 빠르게 현장의 문제를 파악하고 필요한 조치를 즉시 전달하여 골든 타임을 놓치지 않아 후속 조치를 취할 수 있습니다.",
       image: seniorFriendlyImg,
     },
   ];
