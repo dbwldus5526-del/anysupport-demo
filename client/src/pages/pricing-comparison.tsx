@@ -544,7 +544,7 @@ export default function PricingComparison() {
               </div>
               
               <div className="bg-white/5 rounded-xl p-6 mb-6">
-                <div className="text-primary font-bold mb-2 text-[14px] sm:text-[16px] lg:text-[18px]">추천 도입 방식</div>
+                <div className="font-bold mb-2 text-[14px] sm:text-[16px] lg:text-[18px] text-[#a8c6ff]">추천 도입 방식</div>
                 <div className="text-xl font-bold">{industries[activeIndustry].recommendation}</div>
               </div>
               
