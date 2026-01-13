@@ -341,7 +341,7 @@ export function Home() {
       spots: [
         { id: 1, top: "15%", left: "10%", title: "고객 접속 인증번호 생성", description: "고객에게 6자리 접속 인증번호를 안내하여 언제 어디서든 간편하고 빠르게 연결하여 지원을 시작할 수 있습니다." },
         { id: 2, top: "40%", left: "50%", title: "다중 모니터링", description: "국내 유일 다중 모니터링 지원 기능으로 실시간으로 유지보수 및 패치작업시 진행상황을 파악하여 처리할 수 있습니다." },
-        { id: 3, top: "70%", left: "85%", title: "채팅 및 파일 전송", description: "고객과 실시간 채팅 및 파일 전송이 가능합니다." },
+        { id: 3, top: "70%", left: "85%", title: "웹브라우저로 바로 연결", description: "PC,스마트폰,태블릿 등 어떤 기기에서도 고객에게 원격지원 요청 URL페이지를 제공하여 컴퓨터를 모르는 고객도 단한번의 클릭으로 지원 받을 수 있습니다." },
       ],
     },
     {
@@ -352,8 +352,8 @@ export function Home() {
       image: pcSupportImg,
       spots: [
         { id: 1, top: "20%", left: "15%", title: "화면 제어 도구", description: "마우스와 키보드를 통해 고객 PC를 직접 제어할 수 있습니다." },
-        { id: 2, top: "50%", left: "50%", title: "멀티 세션 관리", description: "여러 고객을 동시에 지원하며 세션 간 전환이 가능합니다." },
-        { id: 3, top: "75%", left: "80%", title: "시스템 정보", description: "고객 PC의 하드웨어 및 소프트웨어 정보를 확인합니다." },
+        { id: 2, top: "50%", left: "50%", title: "양방향 파일전송", description: "제한된 용량만 허용하는 타사와 달리 무제한 용량의 양방향 파일전송을 지원하며 '드래그드롭'/'Cntrl+C/V' 기능으로 편의성을 더했습니다." },
+        { id: 3, top: "75%", left: "80%", title: "툴바 설정", description: "스스로 만드는 퀵 메뉴로써 사용자에 따라 필요한 메뉴를 따로 선택하고, 뷰어창 상단에 구성해 빠르고 쉽게 사용할 수 있습니다." },
       ],
     },
     {
@@ -364,8 +364,8 @@ export function Home() {
       image: mobileSupportImg,
       spots: [
         { id: 1, top: "25%", left: "30%", title: "터치 포인터", description: "화면에 포인터를 표시하여 고객에게 조작 위치를 안내합니다." },
-        { id: 2, top: "50%", left: "60%", title: "화면 공유", description: "고객의 모바일 화면을 실시간으로 확인할 수 있습니다." },
-        { id: 3, top: "75%", left: "40%", title: "드로잉 도구", description: "화면에 직접 그림을 그려 시각적으로 안내합니다." },
+        { id: 2, top: "45%", left: "63%", title: "퀵메뉴설정", description: "화면 상단에 모바일 제어용 메뉴바를 배치하여 화면만으로는 제어되지 않는 기능이나 편리한 기능을 빠르게 확인할 수 있습니다." },
+        { id: 3, top: "75%", left: "25%", title: "실시간채팅", description: "원격지원 중 전화가 끊기더라도 고객과 채팅으로 소통이 가능하며 실시간으로 작업내역이 채팅을 통해 안내되고 기록저장이 가능합니다." },
       ],
     },
     {
