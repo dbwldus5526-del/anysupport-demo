@@ -349,8 +349,12 @@ export default function Solution() {
         </div>
       </section>
       {/* Final CTA */}
-      <section className="py-20 bg-primary text-white text-center">
-        <div className="container mx-auto px-4">
+      <section className="py-20 bg-primary text-white text-center relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+        <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full blur-2xl translate-y-1/2 -translate-x-1/2" />
+        <div className="absolute top-1/2 left-1/4 w-32 h-32 bg-white/5 rounded-full blur-xl" />
+        <div className="absolute bottom-1/4 right-1/4 w-24 h-24 bg-white/10 rounded-full blur-lg" />
+        <div className="container mx-auto px-4 relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold mb-8">
             성공적인 디지털 전환, 애니서포트와 시작하세요.
           </h2>
