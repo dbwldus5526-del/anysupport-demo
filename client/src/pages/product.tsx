@@ -20,7 +20,12 @@ import {
   Award,
   RefreshCw,
   EyeOff,
+  Eye,
+  Wrench,
+  AlertTriangle,
+  Video,
 } from "lucide-react";
+import { motion } from "framer-motion";
 import pcHeroImg from "@assets/generated_images/pc_remote_support_hero_background_with_desk_setup.png";
 import remoteControlImg from "@assets/generated_images/remote_control_mouse_and_keyboard_icon.png";
 import fileTransferImg from "@assets/generated_images/fast_file_transfer_progress_icon.png";
@@ -170,6 +175,85 @@ export default function Product() {
           </div>
         </div>
       </section>
+
+      {/* 현장을 보면서 해결하는 원격지원 섹션 */}
+      <section className="py-24 bg-gradient-to-br from-slate-50 to-blue-50/30">
+        <div className="max-w-[1280px] w-full mx-auto px-4 sm:px-6 lg:px-10">
+          <div className="grid lg:grid-cols-2 gap-12 lg:items-center">
+            {/* 좌측 - 제목 및 카드 */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-[25px] md:text-4xl font-bold mb-4 leading-tight text-[#333]">
+                현장을 <span className="text-primary">'보면서'</span> 해결하는 원격지원
+              </h2>
+              <p className="text-lg text-[#666] mb-10 leading-relaxed font-normal">
+                스마트폰 카메라 영상 공유로, <span className="font-bold text-[#333]">현장 방문 없이도</span> 문제를 진단하고 조치 방법을 즉시 안내합니다.
+              </p>
+
+              <div className="space-y-4">
+                {[
+                  {
+                    icon: Eye,
+                    title: "보이는 원격상담",
+                    desc: "말로 설명하지 않아도, 화면 위에 캡처·그리기·화살표 표시로 옆에서 같이 보는 것처럼 안내",
+                  },
+                  {
+                    icon: Wrench,
+                    title: "다양한 현장 원격기술 지원",
+                    desc: "사무실에서 현장 진행상태를 실시간 확인, 필요 시 전문가를 초대해 협업 지원",
+                  },
+                  {
+                    icon: AlertTriangle,
+                    title: "긴급상황 실시간 확인",
+                    desc: "골든타임을 놓치지 않도록 현장 상황을 즉시 확인하고 필요한 조치를 바로 전달",
+                  },
+                ].map((item, idx) => (
+                  <motion.div
+                    key={idx}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.4, delay: idx * 0.1 }}
+                    viewport={{ once: true }}
+                    className="flex items-start gap-4 p-5 bg-white rounded-2xl border border-slate-100 hover:border-primary/20 hover:shadow-md transition-all"
+                  >
+                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
+                      <item.icon size={24} className="text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-primary mb-1 text-[16px] md:text-[18px]">{item.title}</h3>
+                      <p className="text-[#666] text-[14px] md:text-[16px] leading-relaxed">{item.desc}</p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+
+            {/* 우측 - GIF 영역 */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+              className="relative lg:mt-[140px]"
+            >
+              <div className="aspect-[4/3] bg-gradient-to-br from-primary/10 to-blue-100 rounded-3xl overflow-hidden border border-slate-200 flex items-center justify-center">
+                <div className="text-center p-8">
+                  <div className="w-24 h-24 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-6">
+                    <Video size={48} className="text-primary" />
+                  </div>
+                  <p className="text-[#666] text-lg">GIF 이미지 영역</p>
+                  <p className="text-slate-400 text-sm mt-2">PC 원격지원 활용 사례</p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Desktop Edition Core Features */}
       <section className="py-24 bg-slate-50">
         <div className="container mx-auto px-4 md:px-6">
