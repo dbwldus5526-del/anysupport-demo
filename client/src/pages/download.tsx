@@ -15,7 +15,7 @@ export default function Download() {
   return (
     <div className="flex flex-col min-h-screen bg-slate-50/50">
       {/* Hero Header Section */}
-      <section className="relative pt-32 pb-24 overflow-hidden bg-slate-900 text-white text-center">
+      <section className="relative pt-40 pb-24 overflow-hidden bg-slate-900 text-white text-center">
         <div className="absolute inset-0 z-0">
           <img 
             src={downloadHeroImg} 

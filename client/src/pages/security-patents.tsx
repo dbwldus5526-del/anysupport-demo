@@ -26,7 +26,7 @@ export default function SecurityPatents() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
+      <section className="relative pt-40 pb-20 overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
         <div className="absolute inset-0 z-0 opacity-20">
           <div className="absolute top-20 left-20 w-64 h-64 bg-blue-500 rounded-full blur-3xl" />
           <div className="absolute bottom-20 right-20 w-96 h-96 bg-purple-500 rounded-full blur-3xl" />

@@ -77,7 +77,7 @@ export default function Pricing() {
   return (
     <div className="flex flex-col min-h-screen bg-slate-50/50">
       {/* Hero Section - Matching Product Header Style */}
-      <section className="relative pt-32 pb-20 overflow-hidden bg-slate-900 text-white">
+      <section className="relative pt-40 pb-20 overflow-hidden bg-slate-900 text-white">
         <div className="absolute inset-0 z-0">
           <img 
             src={pricingHeroImg} 

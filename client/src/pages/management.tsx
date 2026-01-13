@@ -59,7 +59,7 @@ export default function Management() {
   return (
     <div className="flex flex-col">
       {/* 1. Hero Section */}
-      <section className="relative pt-32 pb-24 overflow-hidden bg-slate-900 text-white">
+      <section className="relative pt-40 pb-24 overflow-hidden bg-slate-900 text-white">
         <div className="absolute inset-0 z-0">
           <img 
             src={heroImage} 

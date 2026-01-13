@@ -311,7 +311,7 @@ export default function Notice() {
 
   return (
     <div className="flex flex-col min-h-screen bg-slate-50/50">
-      <section className="relative pt-32 pb-16 overflow-hidden bg-slate-900 text-white text-center">
+      <section className="relative pt-40 pb-16 overflow-hidden bg-slate-900 text-white text-center">
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
           <h1 className="text-[40px] font-bold mb-4">공지사항</h1>
           <p className="text-[14px] sm:text-[16px] lg:text-[18px] text-white/80">

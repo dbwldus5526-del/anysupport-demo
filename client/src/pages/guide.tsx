@@ -134,7 +134,7 @@ export default function Guide() {
   return (
     <div className="flex flex-col min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative min-h-[40vh] flex items-center pt-32 pb-20 overflow-hidden bg-slate-900 text-white">
+      <section className="relative min-h-[40vh] flex items-center pt-40 pb-20 overflow-hidden bg-slate-900 text-white">
         <div className="absolute inset-0 z-0">
           <img 
             src={solutionHeroImg} 

@@ -29,7 +29,7 @@ export default function Solution() {
   return (
     <div className="flex flex-col">
       {/* 1. 애니서포트 소개 Hero */}
-      <section className="relative min-h-[80vh] flex items-center pt-32 pb-20 overflow-hidden bg-slate-900 text-white">
+      <section className="relative min-h-[80vh] flex items-center pt-40 pb-20 overflow-hidden bg-slate-900 text-white">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <img
