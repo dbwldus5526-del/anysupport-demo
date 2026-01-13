@@ -406,7 +406,7 @@ export function Home() {
       {/* 1. Hero Section with Carousel */}
       <HeroCarousel openModal={openModal} scrollToSection={scrollToSection} />
       {/* 다양한 환경과 기기 지원 */}
-      <section className="py-24 bg-white pt-[154px] pb-[154px]">
+      <section className="py-24 bg-white pt-[130px] pb-[130px]">
         <div className="max-w-[1280px] w-full mx-auto px-4 sm:px-6 lg:px-10">
           <div className="text-center mb-16">
             <h2 className="font-bold mb-4 text-[24px] sm:text-[32px] lg:text-[40px] text-[#333]">
@@ -990,7 +990,6 @@ export function Home() {
           </div>
         </div>
       </section>
-
       {/* Contact Modal */}
       {contactModalOpen && (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
