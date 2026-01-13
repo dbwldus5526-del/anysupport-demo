@@ -20,6 +20,8 @@ import mobileHeroImg from "@assets/generated_images/mobile_remote_support_hero_b
 import touchPointerImg from "@assets/generated_images/touch_pointer_and_gesture_guide_icon_for_mobile_support.png";
 import appLessImg from "@assets/generated_images/app-less_connection_and_minimalist_setup_icon.png";
 import realTimeImg from "@assets/generated_images/real-time_mobile_screen_sharing_and_interaction_icon.png";
+import googlePlayFullLogo from "@assets/image_1768199304085.png";
+import appStoreFullLogo from "@assets/image-removebg-preview_(23)_1768199353224.png";
 
 export default function MobileProduct() {
   const { openModal } = useModal();
@@ -254,6 +256,24 @@ export default function MobileProduct() {
           </div>
         </div>
       </section>
+
+      {/* Mobile Experience Section */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="font-bold mb-8 text-[25px] md:text-4xl text-[#333]">모바일에서도 애니서포트를 경험하세요</h2>
+            <div className="flex justify-center gap-4">
+              <a href="https://play.google.com/store/apps/details?id=net.koino.anysupportMobile&pcampaignid=web_share" target="_blank" rel="noopener noreferrer" className="h-20 px-8 bg-white rounded-xl border border-slate-200 flex items-center gap-3 transition-transform hover:scale-105">
+                <img src={googlePlayFullLogo} alt="Google Play" className="h-12" />
+              </a>
+              <a href="https://apps.apple.com/us/app/%EB%AA%A8%EB%B0%94%EC%9D%BC%EC%A7%80%EC%9B%90/id993614818?l=ko" target="_blank" rel="noopener noreferrer" className="h-20 px-8 bg-white rounded-xl border border-slate-200 flex items-center gap-3 transition-transform hover:scale-105">
+                <img src={appStoreFullLogo} alt="App Store" className="h-12" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-primary text-white">
         <div className="container mx-auto px-4 md:px-6 text-center">
