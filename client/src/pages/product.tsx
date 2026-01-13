@@ -188,10 +188,15 @@ export default function Product() {
               viewport={{ once: true }}
             >
               <h2 className="text-[25px] md:text-4xl font-bold mb-4 leading-tight text-[#333]">
-                현장을 <span className="text-primary">'보면서'</span> 해결하는 원격지원
+                고객의 문제를 <span className="text-primary">'원클릭으로'</span>{" "}
+                함께 해결하는 원격지원
               </h2>
               <p className="text-lg text-[#666] mb-10 leading-relaxed font-normal">
-                스마트폰 카메라 영상 공유로, <span className="font-bold text-[#333]">현장 방문 없이도</span> 문제를 진단하고 조치 방법을 즉시 안내합니다.
+                별도의 복잡한 설정 없이,{" "}
+                <span className="font-bold text-[#333]">
+                  PC에 즉시 연결하여
+                </span>{" "}
+                고객의 문제를 실시간으로 진단하고 해결합니다.
               </p>
 
               <div className="space-y-4">
@@ -224,8 +229,12 @@ export default function Product() {
                       <item.icon size={24} className="text-primary" />
                     </div>
                     <div>
-                      <h3 className="font-bold text-primary mb-1 text-[16px] md:text-[18px]">{item.title}</h3>
-                      <p className="text-[#666] text-[14px] md:text-[16px] leading-relaxed">{item.desc}</p>
+                      <h3 className="font-bold text-primary mb-1 text-[16px] md:text-[18px]">
+                        {item.title}
+                      </h3>
+                      <p className="text-[#666] text-[14px] md:text-[16px] leading-relaxed">
+                        {item.desc}
+                      </p>
                     </div>
                   </motion.div>
                 ))}
@@ -246,7 +255,9 @@ export default function Product() {
                     <Video size={48} className="text-primary" />
                   </div>
                   <p className="text-[#666] text-lg">GIF 이미지 영역</p>
-                  <p className="text-slate-400 text-sm mt-2">PC 원격지원 활용 사례</p>
+                  <p className="text-slate-400 text-sm mt-2">
+                    PC 원격지원 활용 사례
+                  </p>
                 </div>
               </div>
             </motion.div>
@@ -379,7 +390,9 @@ export default function Product() {
                 <h3 className="text-lg font-bold text-slate-900 mb-2">
                   {feature.title}
                 </h3>
-                <p className="text-[14px] sm:text-[16px] lg:text-[18px] text-[#666]">{feature.desc}</p>
+                <p className="text-[14px] sm:text-[16px] lg:text-[18px] text-[#666]">
+                  {feature.desc}
+                </p>
               </div>
             ))}
           </div>
@@ -414,7 +427,9 @@ export default function Product() {
                 <div className="flex items-center gap-3 bg-white/5 rounded-xl p-4 border border-white/10">
                   <Award size={20} className="text-primary shrink-0" />
                   <div>
-                    <div className="font-bold text-[14px] sm:text-[16px] lg:text-[18px]">GS인증 1등급</div>
+                    <div className="font-bold text-[14px] sm:text-[16px] lg:text-[18px]">
+                      GS인증 1등급
+                    </div>
                     <div className="text-slate-400 text-[16px]">
                       국가정보보안 기본 지침 준수
                     </div>
@@ -556,7 +571,9 @@ export default function Product() {
                     <h3 className="font-bold mb-4 text-[14px] sm:text-[16px] lg:text-[18px] text-[#333]">
                       {item.title}
                     </h3>
-                    <p className="mb-6 text-[#666] text-[14px] sm:text-[16px] lg:text-[18px] min-h-[120px]">{item.desc}</p>
+                    <p className="mb-6 text-[#666] text-[14px] sm:text-[16px] lg:text-[18px] min-h-[120px]">
+                      {item.desc}
+                    </p>
 
                     <div className="space-y-2">
                       {(item.points || item.types).map((point, idx) => (
