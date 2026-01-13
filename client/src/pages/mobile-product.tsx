@@ -19,7 +19,7 @@ import {
 import mobileHeroImg from "@assets/generated_images/mobile_remote_support_hero_background_with_smartphones_and_professional_support_agent_silhouette.png";
 import touchPointerImg from "@assets/generated_images/touch_pointer_and_gesture_guide_icon_for_mobile_support.png";
 import appLessImg from "@assets/generated_images/app-less_connection_and_minimalist_setup_icon.png";
-import smsRemoteImg from "@assets/generated_images/sms_remote_support_connection.png";
+import smsRemoteImg from "@assets/generated_images/sms_remote_connection_icon_style.png";
 import realTimeImg from "@assets/generated_images/real-time_mobile_screen_sharing_and_interaction_icon.png";
 import googlePlayFullLogo from "@assets/image_1768199304085.png";
 import appStoreFullLogo from "@assets/image-removebg-preview_(23)_1768199353224.png";
