@@ -340,7 +340,7 @@ export function Home() {
       image: sessionImg,
       spots: [
         { id: 1, top: "15%", left: "10%", title: "고객 접속 인증번호 생성", description: "고객에게 6자리 접속 인증번호를 안내하여 언제 어디서든 간편하고 빠르게 연결하여 지원을 시작할 수 있습니다." },
-        { id: 2, top: "40%", left: "50%", title: "원격 화면 뷰어", description: "고객의 PC 화면을 실시간으로 공유받아 직접 조작할 수 있습니다." },
+        { id: 2, top: "40%", left: "50%", title: "다중 모니터링", description: "국내 유일 다중 모니터링 지원 기능으로 실시간으로 유지보수 및 패치작업시 진행상황을 파악하여 처리할 수 있습니다." },
         { id: 3, top: "70%", left: "85%", title: "채팅 및 파일 전송", description: "고객과 실시간 채팅 및 파일 전송이 가능합니다." },
       ],
     },
@@ -644,8 +644,8 @@ export function Home() {
                               alignLeft ? 'right-4' : alignRight ? 'left-4' : 'left-1/2 -translate-x-1/2'
                             }`} 
                           />
-                          <h4 className="font-bold text-[#333] mb-2 text-sm">{spot.title}</h4>
-                          <p className="text-[#666] text-xs leading-relaxed">{spot.description}</p>
+                          <h4 className="font-bold text-[#333] mb-2 text-[16px]">{spot.title}</h4>
+                          <p className="text-[#666] text-[16px] leading-relaxed">{spot.description}</p>
                         </div>
                       )}
                     </div>
