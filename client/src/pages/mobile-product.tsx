@@ -17,9 +17,9 @@ import {
   MessageSquare
 } from "lucide-react";
 import mobileHeroImg from "@assets/generated_images/mobile_remote_support_hero_background_with_smartphones_and_professional_support_agent_silhouette.png";
-import mobileDeviceSupportImg from "@assets/generated_images/mobile_device_remote_support.png";
-import smsRemoteImg from "@assets/generated_images/sms_remote_connection_concept.png";
-import realTimeImg from "@assets/generated_images/real-time_screen_sharing.png";
+import mobileDeviceSupportImg from "@assets/generated_images/mobile_devices_business_support.png";
+import smsRemoteImg from "@assets/generated_images/sms_notification_on_smartphone.png";
+import realTimeImg from "@assets/generated_images/screen_sharing_between_phones.png";
 import googlePlayFullLogo from "@assets/image_1768199304085.png";
 import appStoreFullLogo from "@assets/image-removebg-preview_(23)_1768199353224.png";
 
