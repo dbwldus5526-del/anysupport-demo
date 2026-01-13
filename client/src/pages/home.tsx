@@ -644,7 +644,7 @@ export function Home() {
                               alignLeft ? 'right-4' : alignRight ? 'left-4' : 'left-1/2 -translate-x-1/2'
                             }`} 
                           />
-                          <h4 className="font-bold text-[#333] mb-2 text-[16px]">{spot.title}</h4>
+                          <h2 className="font-bold text-[#4785f4] mb-2 text-[18px]">{spot.title}</h2>
                           <p className="text-[#666] text-[16px] leading-relaxed">{spot.description}</p>
                         </div>
                       )}
