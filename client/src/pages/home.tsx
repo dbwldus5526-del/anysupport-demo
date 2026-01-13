@@ -389,7 +389,7 @@ export function Home() {
       spots: [
         { id: 1, top: "30%", left: "50%", title: "접속 번호 입력", description: "상담원이 안내한 6자리 접속 번호를 입력합니다." },
         { id: 2, top: "55%", left: "50%", title: "연결 버튼", description: "번호 입력 후 클릭 한 번으로 즉시 연결됩니다." },
-        { id: 3, top: "80%", left: "50%", title: "안내 문구", description: "처음 사용하는 고객을 위한 간단한 사용 안내입니다." },
+        { id: 3, top: "80%", left: "50%", title: "고객사 맞춤 접속페이지 변경", description: "고객사에 맞는 페이지로 변경이 가능합니다." },
       ],
     },
   ];
