@@ -517,12 +517,7 @@ export default function PricingComparison() {
               <button
                 key={i}
                 onClick={() => setActiveIndustry(i)}
-                className={cn(
-                  "flex items-center gap-2 px-6 py-3 rounded-full font-medium transition-all",
-                  activeIndustry === i
-                    ? "bg-primary text-white"
-                    : "bg-white/10 text-white/70 hover:bg-white/20"
-                )}
+                className="flex items-center gap-2 px-6 py-3 rounded-full font-medium transition-all bg-white/10 text-white/70 hover:bg-white/20 text-[18px]"
               >
                 <industry.icon size={18} />
                 {industry.title}
