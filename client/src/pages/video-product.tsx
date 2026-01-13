@@ -298,7 +298,7 @@ export default function VideoProduct() {
         <div className="max-w-[1280px] w-full mx-auto px-4 sm:px-6 lg:px-10">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             <div className="text-center md:text-left">
-              <h3 className="text-2xl md:text-3xl mb-2 font-bold">
+              <h3 className="md:text-3xl mb-2 font-bold text-[34px]">
                 현장 방문을 줄여 <span className="text-yellow-300">출장비용 80% 이상</span> 절감
               </h3>
               <p className="text-white/80 text-lg font-normal">
