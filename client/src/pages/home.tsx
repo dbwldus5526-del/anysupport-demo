@@ -955,7 +955,13 @@ export function Home() {
       </section>
       {/* 11. 무료체험 CTA (마무리 섹션) */}
       <section className="py-24 bg-primary text-white overflow-hidden relative">
-        <div className="absolute top-0 right-0 w-1/3 h-full bg-white/5 skew-x-12 transform translate-x-1/2" />
+        <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+        <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full blur-2xl translate-y-1/2 -translate-x-1/2" />
+        <div className="absolute top-1/4 left-1/6 w-20 h-20 border-2 border-white/10 rounded-lg rotate-45" />
+        <div className="absolute bottom-1/3 right-1/5 w-16 h-16 border-2 border-white/10 rounded-full" />
+        <div className="absolute top-1/2 right-1/4 w-24 h-24 bg-white/5 rounded-xl rotate-12" />
+        <div className="absolute bottom-1/4 left-1/3 w-12 h-12 border border-white/10 rotate-45" />
+        <div className="absolute top-1/3 left-1/2 w-8 h-8 bg-white/5 rounded-full" />
         <div className="max-w-[1280px] w-full mx-auto px-4 sm:px-6 lg:px-10 text-center relative z-10">
           <h2 className="text-3xl lg:text-4xl font-bold mb-8">
             지금 14일간 무료로 사용해보세요
