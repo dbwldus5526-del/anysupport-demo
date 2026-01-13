@@ -409,10 +409,10 @@ export default function PricingComparison() {
                     ))}
                   </ul>
                   <div className="flex gap-3">
-                    <Button variant="outline" size="sm" className="flex-1 text-[14px] sm:text-[16px] lg:text-[18px] text-[#333]" onClick={openModal}>
+                    <Button variant="outline" size="sm" className="flex-1 text-[14px] sm:text-[16px] lg:text-[18px] text-[#333] pt-[10px] pb-[10px]" onClick={openModal}>
                       자세히
                     </Button>
-                    <Button size="sm" className="flex-1 text-[14px] sm:text-[16px] lg:text-[18px]" onClick={openModal}>
+                    <Button size="sm" className="flex-1 text-[14px] sm:text-[16px] lg:text-[18px] pt-[10px] pb-[10px]" onClick={openModal}>
                       상담
                     </Button>
                   </div>
@@ -492,7 +492,7 @@ export default function PricingComparison() {
                 <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
                   <feature.icon size={24} className="text-primary" />
                 </div>
-                <h4 className="font-bold text-slate-900 mb-1">{feature.title}</h4>
+                <h4 className="font-bold text-slate-900 mb-1 text-[18px]">{feature.title}</h4>
                 <p className="text-lg text-[#666] font-normal">{feature.desc}</p>
               </div>
             ))}
