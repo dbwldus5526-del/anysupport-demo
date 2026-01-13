@@ -75,7 +75,7 @@ export default function Download() {
 
                   {/* 매뉴얼 */}
                   <div className="mb-4">
-                    <h4 className="font-bold text-[#333] mb-3 text-[14px] uppercase tracking-wide">매뉴얼</h4>
+                    <h4 className="font-bold text-[#333] mb-3 text-[16px] uppercase tracking-wide">매뉴얼</h4>
                     <div className="divide-y divide-slate-100">
                       <a href="/attached_assets/anysupport_agent_manual_v10_(1)_1768200734361.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between py-3 hover:bg-slate-50 px-2 -mx-2 rounded transition-colors group">
                         <span className="text-[15px] text-[#333]">애니서포트 상담원 매뉴얼(Ver10.0)</span>
@@ -94,7 +94,7 @@ export default function Download() {
 
                   {/* 기타 */}
                   <div>
-                    <h4 className="font-bold text-[#333] mb-3 text-[14px] uppercase tracking-wide">기타</h4>
+                    <h4 className="font-bold text-[#333] mb-3 text-[16px] uppercase tracking-wide">기타</h4>
                     <div className="divide-y divide-slate-100">
                       <div>
                         <button 
@@ -165,7 +165,7 @@ export default function Download() {
                 <div className="bg-white p-6">
                   {/* 고객 설치파일 */}
                   <div className="mb-4">
-                    <h4 className="font-bold text-[#333] mb-3 text-[14px] uppercase tracking-wide">고객 설치파일</h4>
+                    <h4 className="font-bold text-[#333] mb-3 text-[16px] uppercase tracking-wide">고객 설치파일</h4>
                     <div className="divide-y divide-slate-100">
                       <a href="/attached_assets/ManualLauncher_(1)_1768200897859.exe" download="AnySupport_Windows_V10.0.exe" className="flex items-center justify-between py-3 hover:bg-slate-50 px-2 -mx-2 rounded transition-colors group">
                         <span className="text-[15px] text-[#333]">애니서포트 Windows용 고객 설치파일(V10.0)</span>
@@ -184,7 +184,7 @@ export default function Download() {
 
                   {/* 모바일 설치파일 */}
                   <div className="mb-4">
-                    <h4 className="font-bold text-[#333] mb-3 text-[14px] uppercase tracking-wide">모바일 설치파일</h4>
+                    <h4 className="font-bold text-[#333] mb-3 text-[16px] uppercase tracking-wide">모바일 설치파일</h4>
                     <div className="divide-y divide-slate-100">
                       <a href="/attached_assets/AnySupport_(4)_1768201031671.apk" download="AnySupport_Mobile_Android.apk" className="flex items-center justify-between py-3 hover:bg-slate-50 px-2 -mx-2 rounded transition-colors group">
                         <span className="text-[15px] text-[#333]">애니서포트 모바일 설치파일(Android)</span>
@@ -203,7 +203,7 @@ export default function Download() {
 
                   {/* 비디오 설치파일 */}
                   <div className="mb-4">
-                    <h4 className="font-bold text-[#333] mb-3 text-[14px] uppercase tracking-wide">비디오 설치파일</h4>
+                    <h4 className="font-bold text-[#333] mb-3 text-[16px] uppercase tracking-wide">비디오 설치파일</h4>
                     <div className="divide-y divide-slate-100">
                       <a href="/attached_assets/AnySupportVideo_(1)_1768201137522.apk" download="AnySupport_Video_Android.apk" className="flex items-center justify-between py-3 hover:bg-slate-50 px-2 -mx-2 rounded transition-colors group">
                         <span className="text-[15px] text-[#333]">애니서포트 비디오 설치파일(Android)</span>
@@ -222,7 +222,7 @@ export default function Download() {
 
                   {/* 고객 매뉴얼 */}
                   <div>
-                    <h4 className="font-bold text-[#333] mb-3 text-[14px] uppercase tracking-wide">매뉴얼</h4>
+                    <h4 className="font-bold text-[#333] mb-3 text-[16px] uppercase tracking-wide">매뉴얼</h4>
                     <div className="divide-y divide-slate-100">
                       <a href="/attached_assets/anysupport_customer_manual_v10_1768201272472.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between py-3 hover:bg-slate-50 px-2 -mx-2 rounded transition-colors group">
                         <span className="text-[15px] text-[#333]">애니서포트 고객 매뉴얼</span>
