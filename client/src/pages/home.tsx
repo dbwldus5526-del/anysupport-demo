@@ -322,6 +322,7 @@ export function Home() {
   const { openModal } = useModal();
   const [activeDevice, setActiveDevice] = useState("agent");
   const [contactModalOpen, setContactModalOpen] = useState(false);
+  const [hoveredSpot, setHoveredSpot] = useState<number | null>(null);
 
   const deviceViewItems = [
     {
@@ -330,6 +331,11 @@ export function Home() {
       title: "전용 상담원 프로그램",
       desc: "전문 상담원을 위한 통합 제어 도구로 업무 효율성을 극대화합니다.",
       image: sessionImg,
+      spots: [
+        { id: 1, top: "15%", left: "10%", title: "고객 접속 현황", description: "현재 접속 중인 고객 목록을 한눈에 확인하고 관리할 수 있습니다." },
+        { id: 2, top: "40%", left: "50%", title: "원격 화면 뷰어", description: "고객의 PC 화면을 실시간으로 공유받아 직접 조작할 수 있습니다." },
+        { id: 3, top: "70%", left: "85%", title: "채팅 및 파일 전송", description: "고객과 실시간 채팅 및 파일 전송이 가능합니다." },
+      ],
     },
     {
       id: "pc",
@@ -337,6 +343,11 @@ export function Home() {
       title: "PC 원격지원",
       desc: "강력한 원격 제어와 파일 전송 기능을 PC 환경에서 경험하세요.",
       image: pcSupportImg,
+      spots: [
+        { id: 1, top: "20%", left: "15%", title: "화면 제어 도구", description: "마우스와 키보드를 통해 고객 PC를 직접 제어할 수 있습니다." },
+        { id: 2, top: "50%", left: "50%", title: "멀티 세션 관리", description: "여러 고객을 동시에 지원하며 세션 간 전환이 가능합니다." },
+        { id: 3, top: "75%", left: "80%", title: "시스템 정보", description: "고객 PC의 하드웨어 및 소프트웨어 정보를 확인합니다." },
+      ],
     },
     {
       id: "mobile",
@@ -344,6 +355,11 @@ export function Home() {
       title: "Mobile 원격지원",
       desc: "스마트폰 화면 공유와 실시간 가이드를 통해 모바일 이슈를 즉각 해결합니다.",
       image: mobileSupportImg,
+      spots: [
+        { id: 1, top: "25%", left: "30%", title: "터치 포인터", description: "화면에 포인터를 표시하여 고객에게 조작 위치를 안내합니다." },
+        { id: 2, top: "50%", left: "60%", title: "화면 공유", description: "고객의 모바일 화면을 실시간으로 확인할 수 있습니다." },
+        { id: 3, top: "75%", left: "40%", title: "드로잉 도구", description: "화면에 직접 그림을 그려 시각적으로 안내합니다." },
+      ],
     },
     {
       id: "video",
@@ -351,6 +367,11 @@ export function Home() {
       title: "Video 원격지원",
       desc: "현장 상황을 영상으로 공유하며 실시간 화상 가이드를 제공합니다.",
       image: videoSupportImg,
+      spots: [
+        { id: 1, top: "20%", left: "25%", title: "실시간 영상", description: "고객의 카메라를 통해 현장 상황을 실시간으로 확인합니다." },
+        { id: 2, top: "45%", left: "70%", title: "음성 통화", description: "영상과 함께 음성으로 소통하며 문제를 해결합니다." },
+        { id: 3, top: "70%", left: "35%", title: "화면 캡처", description: "중요한 순간을 캡처하여 기록으로 남깁니다." },
+      ],
     },
     {
       id: "customer",
@@ -358,6 +379,11 @@ export function Home() {
       title: "심플한 고객 접속",
       desc: "복잡한 설치 없이 브라우저에서 바로 접속 번호만으로 지원을 받습니다.",
       image: customerImg,
+      spots: [
+        { id: 1, top: "30%", left: "50%", title: "접속 번호 입력", description: "상담원이 안내한 6자리 접속 번호를 입력합니다." },
+        { id: 2, top: "55%", left: "50%", title: "연결 버튼", description: "번호 입력 후 클릭 한 번으로 즉시 연결됩니다." },
+        { id: 3, top: "80%", left: "50%", title: "안내 문구", description: "처음 사용하는 고객을 위한 간단한 사용 안내입니다." },
+      ],
     },
   ];
 
@@ -567,7 +593,7 @@ export function Home() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5 }}
-                className="w-full h-full"
+                className="w-full h-full relative"
               >
                 <img
                   src={
@@ -576,14 +602,33 @@ export function Home() {
                   alt="Device View"
                   className="w-full h-full object-cover rounded-2xl border border-slate-200"
                 />
+                {deviceViewItems.find((d) => d.id === activeDevice)?.spots.map((spot) => (
+                  <div
+                    key={spot.id}
+                    className="absolute"
+                    style={{ top: spot.top, left: spot.left, transform: 'translate(-50%, -50%)' }}
+                    onMouseEnter={() => setHoveredSpot(spot.id)}
+                    onMouseLeave={() => setHoveredSpot(null)}
+                  >
+                    <div className="w-8 h-8 sm:w-10 sm:h-10 bg-primary text-white rounded-full flex items-center justify-center font-bold text-sm sm:text-base cursor-pointer shadow-lg border-2 border-white hover:scale-110 transition-transform z-10 relative">
+                      {spot.id}
+                    </div>
+                    {hoveredSpot === spot.id && (
+                      <div className="absolute z-20 bg-white rounded-xl shadow-2xl border border-slate-200 p-4 w-64 left-1/2 -translate-x-1/2 mt-2">
+                        <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-white border-l border-t border-slate-200 rotate-45" />
+                        <h4 className="font-bold text-[#333] mb-2 text-sm">{spot.title}</h4>
+                        <p className="text-[#666] text-xs leading-relaxed">{spot.description}</p>
+                      </div>
+                    )}
+                  </div>
+                ))}
               </motion.div>
             </div>
             <p className="mt-8 text-center flex items-center justify-center gap-2 text-[14px] sm:text-[16px] lg:text-[18px] text-[#888]">
               <span className="inline-block w-4 h-4 bg-yellow-400 rounded-full flex items-center justify-center text-[10px] text-white">
                 💡
               </span>
-              이미지 상단의 버튼을 클릭하여 각 환경에 대한 상세 화면을
-              확인하세요
+              이미지의 번호 위에 마우스를 올려 기능 설명을 확인하세요
             </p>
           </div>
         </div>
