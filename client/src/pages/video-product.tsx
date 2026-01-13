@@ -93,7 +93,7 @@ export default function VideoProduct() {
               </span>
             </h1>
             <p className="text-[14px] md:text-xl text-slate-300 mb-10 max-w-2xl font-medium leading-relaxed">
-              복잡한 설명이 필요 없는 직관적인 영상 상담으로
+              복잡한 설명이 필요 없는 직관적인 영상 상담으로 현장에 있는것처럼
               <br className="hidden md:block" />
               고객의 문제를 더욱 따뜻하고 신속하게 해결하세요.
             </p>
@@ -117,7 +117,7 @@ export default function VideoProduct() {
               <h2 className="text-[25px] md:text-4xl font-bold text-slate-900 mb-6 leading-tight">
                 음성과 화면을 동시에 연결하는
                 <br />
-                <span className="text-primary">가장 인간적인 기술 지원</span>
+                <span className="text-primary">가장 획기적인 기술 지원</span>
               </h2>
               <p className="text-[14px] md:text-lg mb-8 leading-relaxed text-[#333]">
                 텍스트와 화면 제어만으로는 부족한 경우가 있습니다. 애니서포트
