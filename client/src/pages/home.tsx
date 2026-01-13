@@ -339,7 +339,7 @@ export function Home() {
       desc: "전문 상담원을 위한 통합 제어 도구로 업무 효율성을 극대화합니다.",
       image: sessionImg,
       spots: [
-        { id: 1, top: "15%", left: "10%", title: "고객 접속 현황", description: "현재 접속 중인 고객 목록을 한눈에 확인하고 관리할 수 있습니다." },
+        { id: 1, top: "15%", left: "10%", title: "고객 접속 인증번호 생성", description: "고객에게 6자리 접속 인증번호를 안내하여 언제 어디서든 간편하고 빠르게 연결하여 지원을 시작할 수 있습니다." },
         { id: 2, top: "40%", left: "50%", title: "원격 화면 뷰어", description: "고객의 PC 화면을 실시간으로 공유받아 직접 조작할 수 있습니다." },
         { id: 3, top: "70%", left: "85%", title: "채팅 및 파일 전송", description: "고객과 실시간 채팅 및 파일 전송이 가능합니다." },
       ],
