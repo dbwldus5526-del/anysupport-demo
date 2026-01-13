@@ -227,7 +227,7 @@ const heroSlides = [
     image: heroImage3,
     objectPosition: "object-right-bottom",
     title: <>다양한 원격지원 방식으로<br /><span className="block text-primary text-[32px] sm:text-[48px] lg:text-[67px]">편리하고 쉽게 지원하세요</span></>,
-    subtitle: <>고객 상담·IT 지원·운영 지원을 하나로 연결하는<br className="hidden md:block" />기업용 원격지원 SaaS 애니서포트</>
+    subtitle: <>지원이 필요한 순간 복잡한 설치 없이 다양한 기기에서<br className="hidden md:block" />빠르고 안전하게 문제를 해결하세요.</>
   }
 ];
 
