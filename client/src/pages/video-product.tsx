@@ -23,7 +23,7 @@ import { motion } from "framer-motion";
 import videoHeroImg from "@assets/generated_images/video_remote_support_hero_background_with_video_call_interface_and_support_agent.png";
 import webrtcImg from "@assets/generated_images/professional_video_conference_setup.png";
 import voiceSyncImg from "@assets/generated_images/voice_and_screen_sharing_setup.png";
-import emergencyMonitoringImg from "@assets/generated_images/emergency_monitoring_station.png";
+import emergencyMonitoringImg from "@assets/generated_images/smartphone_filming_emergency_scene.png";
 import videoRemoteSupportGif from "@assets/remote_support_animation_a7b3c9d2_1768268118726.gif";
 import videoMainImg from "@assets/video_main_1768270822179.png";
 
