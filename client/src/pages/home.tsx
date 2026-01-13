@@ -31,7 +31,7 @@ import heroImage3 from "@assets/HEAD_IMG3_1768279344021.png";
 import pcSupportImgOriginal from "@assets/generated_images/pc_remote_support_professional_image.png";
 import mobileSupportImgOriginal from "@assets/generated_images/mobile_remote_support_app_interface.png";
 import videoSupportImgOriginal from "@assets/generated_images/video-based_remote_support_concept.png";
-import pcSupportImg from "@assets/uibg-pc_new_1767775521573.png";
+import pcSupportImg from "@assets/PC_에디션_이미지_1768282727248.png";
 import mobileSupportImg from "@assets/uibg-mobile_NEW_1767775657450.png";
 import videoSupportImg from "@assets/uibg-video_new_1767775875384.png";
 import customerImg from "@assets/uibg-customer_new_1767776369054.png";
