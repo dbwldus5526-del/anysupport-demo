@@ -27,7 +27,6 @@ const NAV_ITEMS = [
     href: "/solution",
     subItems: [
       { label: "원격지원이란", href: "/solution/intro" },
-      { label: "산업별 맞춤 솔루션", href: "/solution/industry" },
       { label: "주요 도입 사례", href: "/solution/cases" },
       { label: "사용방법", href: "/solution/guide" },
     ],
