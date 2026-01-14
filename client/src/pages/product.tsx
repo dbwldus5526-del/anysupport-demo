@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useModal } from "@/context/ModalContext";
+import { Link } from "wouter";
 import {
   Monitor,
   ShieldCheck,
@@ -24,6 +25,8 @@ import {
   Wrench,
   AlertTriangle,
   Video,
+  Pencil,
+  Mic,
 } from "lucide-react";
 import { motion } from "framer-motion";
 import pcHeroImg from "@assets/generated_images/pc_remote_support_hero_background_with_desk_setup.png";
@@ -631,6 +634,93 @@ export default function Product() {
           </div>
         </div>
       </section>
+
+      {/* 애니서포트 데스크탑버전 주요기능 Section */}
+      <section className="py-24 bg-slate-50">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-[25px] md:text-4xl font-bold mb-4 text-[#333]">
+              애니서포트 데스크탑버전 주요기능
+            </h2>
+            <p className="text-[#666] text-lg max-w-2xl mx-auto font-normal">
+              강력하고 다양한 기능으로 효율적인 원격지원을 제공합니다.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            {[
+              {
+                icon: Monitor,
+                title: "원격 제어 기능",
+                desc: "키보드와 마우스 제어를 통해 원격지 PC의 모든 기능을 사용할 수 있도록 합니다.",
+              },
+              {
+                icon: FileUp,
+                title: "파일전송 기능",
+                desc: "애니서포트는 원격제어 중 일 때 쉽고 편리하게 파일을 주고 받을 수 있습니다. (Drag&Drop)",
+              },
+              {
+                icon: RefreshCw,
+                title: "재부팅 후 자동재접속",
+                desc: "원격 지원 중 고객 PC를 재부팅할 경우에도 자동으로 상담원과 재연결되어 무인PC를 제어할 때 편리합니다.",
+              },
+              {
+                icon: MessageCircle,
+                title: "실시간 채팅기능",
+                desc: "고객과 상담원 간에 실시간으로 채팅을 지원합니다. 채팅 내용은 저장하여 관리 가능합니다.",
+              },
+              {
+                icon: Pencil,
+                title: "그리기 기능",
+                desc: "그리기 기능은 상담원이 원격지 PC를 직접 제어하지 않고 안내할 수 있도록 도와줍니다.",
+              },
+              {
+                icon: Layers,
+                title: "멀티모니터 지원기능",
+                desc: "복수의 디스플레이 장치를 사용하는 고객의 환경에 대해서도 상담원이 모든 화면을 쉽게 자신의 PC처럼 볼 수 있습니다.",
+              },
+              {
+                icon: Lock,
+                title: "마우스/키보드 잠금",
+                desc: "효율적인 상담을 위해 고객의 마우스 키보드 ON/OFF를 설정할 수 있습니다.",
+              },
+              {
+                icon: Mic,
+                title: "음성/화상 통화",
+                desc: "원격지원 중 음성 및 화상 통화로 고객과 실시간 소통하며 문제를 신속하게 해결할 수 있습니다.",
+              },
+            ].map((feature, i) => (
+              <div
+                key={i}
+                className="group bg-white rounded-2xl p-6 border border-slate-200 hover:border-primary/30 hover:shadow-lg transition-all text-center"
+              >
+                <div className="w-16 h-16 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform">
+                  <feature.icon size={32} />
+                </div>
+                <h3 className="text-lg font-bold text-[#333] mb-3">
+                  {feature.title}
+                </h3>
+                <p className="text-[14px] sm:text-[16px] text-[#666] leading-relaxed">
+                  {feature.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <Link href="/solution/features">
+              <Button
+                size="lg"
+                variant="outline"
+                className="font-bold border-primary text-primary hover:bg-primary/5 px-8"
+              >
+                다양한 기능 더보기 <ArrowRight className="ml-2" size={18} />
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-primary text-white">
         <div className="container mx-auto px-4 md:px-6 text-center">
