@@ -162,7 +162,7 @@ export default function Product() {
                   <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                     <feature.icon size={24} />
                   </div>
-                  <h3 className="text-lg font-bold mb-2 text-slate-900">
+                  <h3 className="text-lg font-bold mb-2 text-[#333]">
                     {feature.title}
                   </h3>
                   <p className="text-[#666] font-normal text-[18px]">
