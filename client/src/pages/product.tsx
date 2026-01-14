@@ -711,7 +711,7 @@ export default function Product() {
               <Button
                 size="lg"
                 variant="outline"
-                className="font-bold border-primary text-primary hover:bg-primary/5 px-8"
+                className="font-bold border-primary text-primary hover:bg-primary/5 px-8 text-[18px]"
               >
                 다양한 기능 더보기 <ArrowRight className="ml-2" size={18} />
               </Button>
