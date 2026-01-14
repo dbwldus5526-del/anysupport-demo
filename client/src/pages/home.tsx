@@ -527,96 +527,6 @@ export function Home() {
           </div>
         </div>
       </section>
-      {/* 5. 애니서포트 핵심 기능 */}
-      <section id="features" className="py-24 bg-[#f8fafc]">
-        <div className="max-w-[1280px] w-full mx-auto px-4 sm:px-6 lg:px-10">
-          <div className="text-center mb-16">
-            <h2 className="font-bold mb-4 text-[#333] text-[24px] sm:text-[32px] lg:text-[40px]">
-              효율적인 지원을 위한 핵심적인 기능
-            </h2>
-            <p className="text-[#666] max-w-2xl mx-auto text-[14px] sm:text-[16px] lg:text-[18px]"></p>
-          </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 mb-12 max-w-6xl mx-auto">
-            {[
-              {
-                type: "chat",
-                title: "채팅/메시지",
-                desc: "실시간 양방향 채팅 지원",
-              },
-              {
-                type: "control",
-                title: "화면 제어",
-                desc: "빠르고 끊김없는 원격 제어",
-              },
-              {
-                type: "file",
-                title: "파일 전송",
-                desc: "드래그 앤 드롭 대용량 전송",
-              },
-              {
-                type: "record",
-                title: "상담 기록",
-                desc: "전 과정 자동 녹화 및 저장",
-              },
-              {
-                type: "multi",
-                title: "다중 접속",
-                desc: "동시 여러 대의 PC 지원",
-              },
-              {
-                type: "monitor",
-                title: "듀얼 모니터",
-                desc: "다중 모니터 완벽 대응",
-              },
-              {
-                type: "lock",
-                title: "권한 관리",
-                desc: "상세한 사용자 접근 제어",
-              },
-              {
-                type: "diag",
-                title: "시스템 진단",
-                desc: "하드웨어 및 프로세스 분석",
-              },
-              {
-                type: "browser",
-                title: "브라우저 제어",
-                desc: "특정 웹페이지 원격 지원",
-              },
-              {
-                type: "log",
-                title: "로그 분석",
-                desc: "상세 세션 로그 리포트",
-              },
-            ].map((item, i) => (
-              <div
-                key={i}
-                className="p-6 rounded-xl border border-slate-300 flex flex-col items-center text-center gap-3 transition-colors bg-[#ffffff]"
-              >
-                <div className="mb-2">
-                  <DesignIcon type={item.type} />
-                </div>
-                <div className="flex flex-col gap-1">
-                  <span className="text-[14px] sm:text-[16px] lg:text-[18px] text-[#333] font-semibold">
-                    {item.title}
-                  </span>
-                  <p className="text-slate-500 text-[14px] sm:text-[16px] lg:text-[18px] font-normal">
-                    {item.desc}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center">
-            <Link href="/solution/features">
-              <Button size="lg" className="text-[14px] sm:text-[16px] lg:text-[18px] font-semibold">
-                애니서포트 기능 자세히 보기
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
       {/* 5.1 Device Support Toggle Section */}
       <section className="py-24 bg-white border-y border-slate-50">
         <div className="max-w-[1280px] w-full mx-auto px-4 sm:px-6 lg:px-10">
@@ -875,6 +785,96 @@ export function Home() {
               애니서포트, 14일간 제한 없이 써보세요
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
+          </div>
+        </div>
+      </section>
+      {/* 5. 애니서포트 핵심 기능 */}
+      <section id="features" className="py-24 bg-[#f8fafc]">
+        <div className="max-w-[1280px] w-full mx-auto px-4 sm:px-6 lg:px-10">
+          <div className="text-center mb-16">
+            <h2 className="font-bold mb-4 text-[#333] text-[24px] sm:text-[32px] lg:text-[40px]">
+              효율적인 지원을 위한 핵심적인 기능
+            </h2>
+            <p className="text-[#666] max-w-2xl mx-auto text-[14px] sm:text-[16px] lg:text-[18px]"></p>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 mb-12 max-w-6xl mx-auto">
+            {[
+              {
+                type: "chat",
+                title: "채팅/메시지",
+                desc: "실시간 양방향 채팅 지원",
+              },
+              {
+                type: "control",
+                title: "화면 제어",
+                desc: "빠르고 끊김없는 원격 제어",
+              },
+              {
+                type: "file",
+                title: "파일 전송",
+                desc: "드래그 앤 드롭 대용량 전송",
+              },
+              {
+                type: "record",
+                title: "상담 기록",
+                desc: "전 과정 자동 녹화 및 저장",
+              },
+              {
+                type: "multi",
+                title: "다중 접속",
+                desc: "동시 여러 대의 PC 지원",
+              },
+              {
+                type: "monitor",
+                title: "듀얼 모니터",
+                desc: "다중 모니터 완벽 대응",
+              },
+              {
+                type: "lock",
+                title: "권한 관리",
+                desc: "상세한 사용자 접근 제어",
+              },
+              {
+                type: "diag",
+                title: "시스템 진단",
+                desc: "하드웨어 및 프로세스 분석",
+              },
+              {
+                type: "browser",
+                title: "브라우저 제어",
+                desc: "특정 웹페이지 원격 지원",
+              },
+              {
+                type: "log",
+                title: "로그 분석",
+                desc: "상세 세션 로그 리포트",
+              },
+            ].map((item, i) => (
+              <div
+                key={i}
+                className="p-6 rounded-xl border border-slate-300 flex flex-col items-center text-center gap-3 transition-colors bg-[#ffffff]"
+              >
+                <div className="mb-2">
+                  <DesignIcon type={item.type} />
+                </div>
+                <div className="flex flex-col gap-1">
+                  <span className="text-[14px] sm:text-[16px] lg:text-[18px] text-[#333] font-semibold">
+                    {item.title}
+                  </span>
+                  <p className="text-slate-500 text-[14px] sm:text-[16px] lg:text-[18px] font-normal">
+                    {item.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <Link href="/solution/features">
+              <Button size="lg" className="text-[14px] sm:text-[16px] lg:text-[18px] font-semibold">
+                애니서포트 기능 자세히 보기
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
