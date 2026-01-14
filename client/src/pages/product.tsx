@@ -201,45 +201,86 @@ export default function Product() {
                 고객의 문제를 실시간으로 진단하고 해결합니다.
               </p>
 
-              <div className="space-y-4">
-                {[
-                  {
-                    icon: Eye,
-                    title: "보이는 원격상담",
-                    desc: "말로 설명하지 않아도, 화면 위에 캡처·그리기·화살표 표시로 옆에서 같이 보는 것처럼 안내",
-                  },
-                  {
-                    icon: Wrench,
-                    title: "다양한 현장 원격기술 지원",
-                    desc: "사무실에서 현장 진행상태를 실시간 확인, 필요 시 전문가를 초대해 협업 지원",
-                  },
-                  {
-                    icon: AlertTriangle,
-                    title: "긴급상황 실시간 확인",
-                    desc: "골든타임을 놓치지 않도록 현장 상황을 즉시 확인하고 필요한 조치를 바로 전달",
-                  },
-                ].map((item, idx) => (
+              <div className="relative">
+                {/* Vertical Timeline Line */}
+                <div className="absolute left-[15px] top-8 bottom-8 w-[2px] bg-slate-200" />
+                
+                <div className="space-y-8">
+                  {/* Step 1 */}
                   <motion.div
-                    key={idx}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.4, delay: idx * 0.1 }}
+                    transition={{ duration: 0.4, delay: 0 }}
                     viewport={{ once: true }}
-                    className="flex items-start gap-4 p-5 bg-white rounded-2xl border border-slate-100 hover:border-primary/20 hover:shadow-md transition-all"
+                    className="flex items-start gap-5"
                   >
-                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
-                      <item.icon size={24} className="text-primary" />
+                    <div className="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center text-sm font-bold shrink-0 z-10">
+                      1
                     </div>
                     <div>
-                      <h3 className="font-bold text-primary mb-1 text-[16px] md:text-[18px]">
-                        {item.title}
+                      <h3 className="font-bold text-[#333] mb-2 text-[18px] md:text-[20px]">
+                        접속 준비
                       </h3>
-                      <p className="text-[#666] md:text-[16px] text-[18px]">
-                        {item.desc}
+                      <p className="text-[#666] text-[14px] md:text-[16px] mb-4 leading-relaxed">
+                        PC에서 에이전트 실행 후 로그인하거나
+                        <br />
+                        PC · 모바일에서 웹브라우저로 접속해 로그인하세요.
+                      </p>
+                      <Button size="sm" className="font-bold">
+                        원격지원 바로시작
+                      </Button>
+                    </div>
+                  </motion.div>
+
+                  {/* Step 2 */}
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.4, delay: 0.1 }}
+                    viewport={{ once: true }}
+                    className="flex items-start gap-5"
+                  >
+                    <div className="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center text-sm font-bold shrink-0 z-10">
+                      2
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-[#333] mb-2 text-[18px] md:text-[20px]">
+                        접속번호 생성
+                      </h3>
+                      <p className="text-[#666] text-[14px] md:text-[16px] leading-relaxed">
+                        [원격지원 시작하기] 클릭하면
+                        <br />
+                        접속번호와 URL이 자동 생성됩니다.
                       </p>
                     </div>
                   </motion.div>
-                ))}
+
+                  {/* Step 3 */}
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.4, delay: 0.2 }}
+                    viewport={{ once: true }}
+                    className="flex items-start gap-5"
+                  >
+                    <div className="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center text-sm font-bold shrink-0 z-10">
+                      3
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-[#333] mb-2 text-[18px] md:text-[20px]">
+                        원격지원 연결
+                      </h3>
+                      <p className="text-[#666] text-[14px] md:text-[16px] mb-4 leading-relaxed">
+                        고객이 안내받은 번호를 입력하면
+                        <br />
+                        즉시 연결되어 지원을 시작할 수 있습니다.
+                      </p>
+                      <a href="#" className="text-primary font-bold text-[14px] md:text-[16px] hover:underline inline-flex items-center gap-1">
+                        리모트콜 매뉴얼 보기 <ArrowRight size={16} />
+                      </a>
+                    </div>
+                  </motion.div>
+                </div>
               </div>
             </motion.div>
 
