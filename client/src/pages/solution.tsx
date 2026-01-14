@@ -24,7 +24,7 @@ import solutionHeroImg from "@assets/generated_images/professional_enterprise_re
 import { Link } from "wouter";
 
 export default function Solution() {
-  const { openModal } = useModal();
+  const { openModal, openContactModal } = useModal();
 
   return (
     <div className="flex flex-col">
@@ -72,7 +72,7 @@ export default function Solution() {
               </div>
               <Button
                 size="lg"
-                onClick={openModal}
+                onClick={openContactModal}
                 className="h-16 px-10 font-black text-xl shadow-2xl shadow-primary/20 group"
               >
                 도입 문의하기{" "}
