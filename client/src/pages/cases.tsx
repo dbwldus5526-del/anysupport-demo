@@ -976,7 +976,7 @@ export default function Cases() {
             </div>
             <div className="text-center mt-10">
               <a href="/attached_assets/anysupport_customer_access_page_1768356267317.pdf" target="_blank" rel="noopener noreferrer">
-                <Button size="lg" className="bg-[#f0f0f0] text-[#333] font-medium border-slate-300">
+                <Button size="lg" className="bg-[#f0f0f0] text-[#333] font-medium border-slate-300 hover:bg-slate-200 text-[18px]">
                   전용페이지 자세히 보기 <ArrowRight className="ml-2 w-4 h-4" />
                 </Button>
               </a>
@@ -1071,12 +1071,12 @@ export default function Cases() {
       {/* Section G: Bottom CTA */}
       <section className="py-20 bg-slate-50">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            <div className="bg-white rounded-2xl p-10 border border-slate-200 text-center">
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto items-stretch">
+            <div className="bg-white rounded-2xl p-10 border border-slate-200 text-center flex flex-col">
               <h3 className="text-xl font-bold mb-4">
                 보안망/내부망 환경 상담이 필요하신가요?
               </h3>
-              <p className="text-slate-500 mb-6">
+              <p className="text-slate-500 mb-6 flex-1">
                 귀사의 네트워크 환경에 맞는
                 <br />최적의 구축 방안을 제안드립니다
               </p>
@@ -1089,11 +1089,11 @@ export default function Cases() {
               </Button>
             </div>
 
-            <div className="bg-white rounded-2xl p-10 border border-slate-200 text-center">
+            <div className="bg-white rounded-2xl p-10 border border-slate-200 text-center flex flex-col">
               <h3 className="text-xl font-bold mb-4">
                 보안·인증 자료가 필요하신가요?
               </h3>
-              <p className="text-slate-500 mb-6">
+              <p className="text-slate-500 mb-6 flex-1">
                 구축 방식 비교표, 보안 인증 자료를 제공해 드립니다
               </p>
               <Button
