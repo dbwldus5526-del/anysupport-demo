@@ -113,7 +113,7 @@ export default function Security() {
               기업이 요구하는 보안 기준을 기본으로 적용합니다.
             </p>
             <div className="inline-block p-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm">
-              <p className="text-slate-400 font-medium italic">
+              <p className="font-medium italic text-[18px] text-[#ccdcf0]">
                 "원격지원은 편리해야 하지만, 그보다 먼저 안전해야 합니다."
               </p>
             </div>
