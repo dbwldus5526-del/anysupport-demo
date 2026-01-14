@@ -222,7 +222,7 @@ const heroSlides = [
   {
     image: heroImage2,
     objectPosition: "object-[70%_center]",
-    title: <>6,000고객사가 선택한<br /><span className="block text-primary text-[32px] sm:text-[48px] lg:text-[67px]">검증된 원격지원</span></>,
+    title: <>6,000고객사가 선택한<br /><span className="block text-primary text-[32px] sm:text-[48px] lg:text-[67px]">편리하고 쉽게 지원하세요</span></>,
     subtitle: <>국내외 6,000여개 다양한 공공기관·대기업 도입으로 검증된<br className="hidden md:block" />애니서포트로 안전하게 원격지원을 시작하세요.</>
   },
   {
