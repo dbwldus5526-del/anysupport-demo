@@ -135,12 +135,7 @@ export default function Product() {
                 <span className="text-primary">단 한 번의 연결</span>로
                 해결됩니다.
               </h2>
-              <p className="text-lg text-[#666] mb-8 leading-relaxed font-normal">
-                기업 환경에서는 사소한 PC 장애도 생산성 저하로 이어집니다.
-                애니서포트는 현장 방문 없이도 상담원이 고객의 PC 화면을 직접
-                제어하며 문제를 진단하고 해결할 수 있는 최적의 환경을
-                제공합니다.
-              </p>
+              <p className="text-lg text-[#666] mb-8 leading-relaxed font-normal">애니서포트는 현장 방문 없이도 상담원이 고객의 PC 화면을 직접 제어하며 문제를 진단하고 해결할 수 있는 최적의 환경을 제공합니다.</p>
               <ul className="space-y-4">
                 {[
                   "사내 PC / 외부 PC 원격 접속 지원",
@@ -634,7 +629,6 @@ export default function Product() {
           </div>
         </div>
       </section>
-
       {/* 애니서포트 데스크탑버전 주요기능 Section */}
       <section className="py-24 bg-slate-50">
         <div className="container mx-auto px-4 md:px-6">
@@ -720,7 +714,6 @@ export default function Product() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-primary text-white">
         <div className="container mx-auto px-4 md:px-6 text-center">
