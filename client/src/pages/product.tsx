@@ -293,9 +293,9 @@ export default function Product() {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
-              className="relative"
+              className="relative flex items-start justify-end"
             >
-              <div className="rounded-3xl overflow-hidden max-w-md mx-auto">
+              <div className="rounded-2xl overflow-hidden w-full max-w-[520px] shadow-lg border border-slate-200">
                 <img
                   src={sessionManagementGif}
                   alt="PC 원격지원 활용 사례"
