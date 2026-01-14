@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { useModal } from "@/context/ModalContext";
 import { Link } from "wouter";
@@ -31,7 +31,37 @@ import {
   Smartphone,
   Video,
 } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
+
+function CountUpNumber({ end, suffix = "", duration = 2000 }: { end: number; suffix?: string; duration?: number }) {
+  const [count, setCount] = useState(0);
+  const ref = useRef<HTMLSpanElement>(null);
+  const isInView = useInView(ref, { once: true });
+
+  useEffect(() => {
+    if (!isInView) return;
+    
+    let startTime: number;
+    const animate = (currentTime: number) => {
+      if (!startTime) startTime = currentTime;
+      const progress = Math.min((currentTime - startTime) / duration, 1);
+      const easeOut = 1 - Math.pow(1 - progress, 3);
+      setCount(Math.floor(easeOut * end));
+      
+      if (progress < 1) {
+        requestAnimationFrame(animate);
+      }
+    };
+    requestAnimationFrame(animate);
+  }, [isInView, end, duration]);
+
+  return (
+    <span ref={ref} className="text-5xl md:text-6xl font-black text-[#333]">
+      {count}{suffix}
+    </span>
+  );
+}
+
 import logo조달청 from "@assets/조달청@2x_1768206613259.png";
 import logo법무부 from "@assets/법무부@2x_1768206628443.png";
 import logoKDB생명 from "@assets/KDB생명@2x_1768206638134.png";
@@ -359,8 +389,8 @@ export default function Cases() {
               <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
                 <Clock size={32} className="text-primary" />
               </div>
-              <div className="text-5xl md:text-6xl font-black mb-2 text-[#333]">
-                3분
+              <div className="mb-2">
+                <CountUpNumber end={3} suffix="분" />
               </div>
               <div className="text-xl font-bold text-slate-700 mb-2">
                 내 해결
@@ -372,8 +402,8 @@ export default function Cases() {
               <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
                 <TrendingUp size={32} className="text-primary" />
               </div>
-              <div className="text-5xl md:text-6xl font-black mb-2 text-[#333]">
-                175<span className="text-3xl">억원</span>
+              <div className="mb-2">
+                <CountUpNumber end={175} suffix="억원" />
               </div>
               <div className="text-xl font-bold text-slate-700 mb-2">
                 연간 절감
@@ -385,8 +415,8 @@ export default function Cases() {
               <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
                 <Users size={32} className="text-primary" />
               </div>
-              <div className="text-5xl md:text-6xl font-black mb-2 text-[#333]">
-                95<span className="text-3xl">%</span>
+              <div className="mb-2">
+                <CountUpNumber end={95} suffix="%" />
               </div>
               <div className="text-xl font-bold text-slate-700 mb-2">
                 고객만족도
@@ -400,8 +430,8 @@ export default function Cases() {
               <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
                 <CheckCircle size={32} className="text-primary" />
               </div>
-              <div className="text-5xl md:text-6xl font-black mb-2 text-[#333]">
-                75<span className="text-3xl">%</span>
+              <div className="mb-2">
+                <CountUpNumber end={75} suffix="%" />
               </div>
               <div className="text-xl font-bold text-slate-700 mb-2">
                 FCR 비율 증가

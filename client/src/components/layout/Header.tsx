@@ -20,12 +20,6 @@ const NAV_ITEMS = [
       { label: "PC 원격지원", href: "/product/pc" },
       { label: "Mobile 원격지원", href: "/product/mobile" },
       { label: "Video 원격지원", href: "/product/video" },
-    ],
-  },
-  {
-    label: "솔루션",
-    href: "/solution",
-    subItems: [
       { label: "원격지원이란", href: "/solution/intro" },
       { label: "주요 도입 사례", href: "/solution/cases" },
       { label: "사용방법", href: "/solution/guide" },
