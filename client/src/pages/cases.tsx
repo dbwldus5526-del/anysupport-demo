@@ -930,7 +930,7 @@ export default function Cases() {
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-12">
-            <h2 className="text-2xl md:text-4xl font-bold mb-4">
+            <h2 className="text-2xl md:text-4xl font-bold mb-4 text-[#333]">
               기업 특성에 맞춘 접속페이지를 만들 수 있습니다
             </h2>
             <p className="text-[#666] text-lg font-normal">
