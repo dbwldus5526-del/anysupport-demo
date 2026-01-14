@@ -729,9 +729,7 @@ export default function Product() {
               variant="secondary"
               onClick={openModal}
               className="h-16 px-12 text-xl font-bold bg-white text-primary hover:bg-slate-100 shadow-2xl"
-            >
-              PC 원격지원 자세히 보기
-            </Button>
+            >모바일 원격지원 자세히 보기</Button>
             <Button
               size="lg"
               onClick={openModal}
