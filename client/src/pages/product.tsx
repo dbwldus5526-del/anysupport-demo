@@ -178,7 +178,7 @@ export default function Product() {
       </section>
       {/* 현장을 보면서 해결하는 원격지원 섹션 */}
       <section className="py-24 bg-gradient-to-br from-slate-50 to-blue-50/30">
-        <div className="container mx-auto px-4 md:px-6">
+        <div className="max-w-[1280px] w-full mx-auto px-4 sm:px-6 lg:px-10">
           <div className="grid lg:grid-cols-2 gap-12 lg:items-center">
             {/* 좌측 - 제목 및 카드 */}
             <motion.div
