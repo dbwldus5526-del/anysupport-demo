@@ -474,55 +474,6 @@ export function Home() {
           </div>
         </div>
       </section>
-      {/* 사용자와 고객 모두 안전합니다 섹션 */}
-      <section className="py-24 bg-[#f8fafc]">
-        <div className="max-w-[1280px] w-full mx-auto px-4 sm:px-6 lg:px-10">
-          <div className="text-center mb-16">
-            <h2 className="font-bold mb-4 text-[24px] sm:text-[32px] lg:text-[40px] text-[#333]">
-              사용자와 고객 모두 안전합니다
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              {
-                icon: Lock,
-                title: "데이터 암호화 및 네트워크 보안",
-                desc: "국제 암호화 표준 AES-256 bit 알고리즘과 SSL(Secure Socket Layer) 적용을 통한 End-to-end 보호 방식으로 모든 원격 데이터를 안전하게 관리합니다.",
-              },
-              {
-                icon: Database,
-                title: "안정적인 서버(IDC) 운영",
-                desc: "데이터 센터 내 방화벽 구축, 서버 다중화를 통해 장애 및 해킹에 완벽 대비하였으며 24시간 365일 전문 인력이 안정적인 서비스 운영에 힘쓰고 있습니다.",
-              },
-              {
-                icon: ShieldCheck,
-                title: "사용자/고객 다양한 보안 옵션",
-                desc: "원격 연결 시 일회성 접속번호 방식으로 임의 재접속을 원천 차단하며 제어권 및 원격 모듈 자동 삭제 등 다양한 보안 옵션을 제공합니다.",
-              },
-              {
-                icon: Smartphone,
-                title: "삼성 Knox 보안 파트너",
-                desc: "애니서포트는 원격제어 분야 내에서 유일하게 삼성전자의 글로벌 모바일 솔루션 파트너십 프로그램(SEAP) 실버 파트너이며 증가하는 모바일 보안이슈에 완벽히 대응할 수 있습니다.",
-              },
-            ].map((item, i) => (
-              <div
-                key={i}
-                className="p-8 rounded-2xl bg-white border border-slate-200 hover:border-primary/30 hover:shadow-lg transition-all duration-300"
-              >
-                <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-5">
-                  <item.icon className="text-primary" size={28} />
-                </div>
-                <h3 className="text-lg lg:text-xl font-bold mb-3 text-[#333]">
-                  {item.title}
-                </h3>
-                <p className="text-[#666] text-[14px] sm:text-[16px] leading-relaxed">
-                  {item.desc}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
       {/* 얼마나 간단한가요? 섹션 */}
       <section className="py-24 bg-white">
         <div className="max-w-[1280px] w-full mx-auto px-4 sm:px-6 lg:px-10">
