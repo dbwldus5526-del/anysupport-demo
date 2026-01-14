@@ -18,7 +18,37 @@ import {
 import samsungKnoxLogo from "@assets/image_1768207806783.png";
 import koinoLogo from "@assets/코이노로고_1768207913009.png";
 import seapLogo from "@assets/image-removebg-preview_(25)_1768208039940.png";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
+import { useEffect, useState, useRef } from "react";
+
+function CountUpNumber({ end, suffix = "", duration = 2000 }: { end: number; suffix?: string; duration?: number }) {
+  const [count, setCount] = useState(0);
+  const ref = useRef<HTMLSpanElement>(null);
+  const isInView = useInView(ref, { once: true });
+
+  useEffect(() => {
+    if (!isInView) return;
+    
+    let startTime: number;
+    const animate = (currentTime: number) => {
+      if (!startTime) startTime = currentTime;
+      const progress = Math.min((currentTime - startTime) / duration, 1);
+      const easeOut = 1 - Math.pow(1 - progress, 3);
+      setCount(Math.floor(easeOut * end));
+      
+      if (progress < 1) {
+        requestAnimationFrame(animate);
+      }
+    };
+    requestAnimationFrame(animate);
+  }, [isInView, end, duration]);
+
+  return (
+    <span ref={ref} className="text-5xl md:text-6xl font-black text-primary">
+      {count}{suffix}
+    </span>
+  );
+}
 
 export default function SecurityPatents() {
   const { openModal, openContactModal } = useModal();
@@ -46,6 +76,62 @@ export default function SecurityPatents() {
           </div>
         </div>
       </section>
+
+      {/* Stats Section with Count Up Animation */}
+      <section className="py-16 bg-slate-50">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0 }}
+              viewport={{ once: true }}
+              className="text-center"
+            >
+              <CountUpNumber end={3} suffix="분" />
+              <div className="text-lg font-bold text-[#333] mt-3">내 해결</div>
+              <p className="text-[#666] text-sm mt-1">평균 장애 해결 시간</p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="text-center"
+            >
+              <CountUpNumber end={175} suffix="억원" />
+              <div className="text-lg font-bold text-[#333] mt-3">연간 절감</div>
+              <p className="text-[#666] text-sm mt-1">* 보안업체 OOO사 사례</p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="text-center"
+            >
+              <CountUpNumber end={95} suffix="%" />
+              <div className="text-lg font-bold text-[#333] mt-3">고객만족도</div>
+              <p className="text-[#666] text-sm mt-1">원격지원 AnySupport를<br />사용했을 때</p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="text-center"
+            >
+              <CountUpNumber end={75} suffix="%" />
+              <div className="text-lg font-bold text-[#333] mt-3">FCR 비율 증가</div>
+              <p className="text-[#666] text-sm mt-1">첫 고객 대응으로<br />문제해결, 재문의 전화비율 감소</p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Section 1: 공통 보안 프로세스 */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 md:px-6">
