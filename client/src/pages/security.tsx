@@ -161,7 +161,7 @@ export default function Security() {
                 <h3 className="text-[15px] xl:text-[17px] font-bold mb-3 text-[#333] whitespace-nowrap">
                   {item.title}
                 </h3>
-                <p className="text-[#666] text-[14px] leading-relaxed flex-1">
+                <p className="text-[#666] flex-1 text-[18px]">
                   {item.desc}
                 </p>
               </div>
