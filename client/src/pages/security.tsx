@@ -158,7 +158,7 @@ export default function Security() {
                 <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4 shrink-0">
                   <item.icon className="text-primary" size={24} />
                 </div>
-                <h3 className="text-[15px] xl:text-[17px] font-bold mb-3 text-[#333] whitespace-nowrap">
+                <h3 className="xl:text-[17px] font-bold mb-3 text-[#333] whitespace-nowrap text-[18px]">
                   {item.title}
                 </h3>
                 <p className="text-[#666] flex-1 text-[18px]">
