@@ -25,6 +25,7 @@ import {
   ChevronRight,
   Phone,
   Mail,
+  MousePointer2,
 } from "lucide-react";
 import { motion, useInView } from "framer-motion";
 import heroImage1 from "@assets/hero1_1767765900169.png";
@@ -468,6 +469,59 @@ export function Home() {
                     {item.desc}
                   </p>
                 </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* 얼마나 간단한가요? 섹션 */}
+      <section className="py-24 bg-[#f8fafc]">
+        <div className="max-w-[1280px] w-full mx-auto px-4 sm:px-6 lg:px-10">
+          <div className="text-center mb-16">
+            <h2 className="font-bold mb-4 text-[24px] sm:text-[32px] lg:text-[40px] text-[#333]">
+              얼마나 간단한가요?
+            </h2>
+            <p className="text-[#666] max-w-3xl mx-auto text-[14px] sm:text-[16px] lg:text-[18px] leading-relaxed">
+              간단함을 너머 친숙한 사용을 목표로 언제 어디서나 누구나 쉽고 편리하게<br className="hidden md:block" />
+              원격지원으로 필요한 서비스를 받는것이 애니서포트의 목표입니다
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                icon: MousePointer2,
+                title: "원클릭(ONE-Click) 접속",
+                desc: "복잡한 설치 없이 클릭 한 번으로 즉시 원격지원에 접속할 수 있습니다.",
+              },
+              {
+                icon: Globe,
+                title: "직관적인 페이지 주소",
+                desc: "기억하기 쉬운 간단한 URL로 누구나 빠르게 접속할 수 있습니다.",
+              },
+              {
+                icon: Monitor,
+                title: "모든 웹브라우저 지원",
+                desc: "Chrome, Edge, Safari 등 모든 브라우저에서 동일하게 사용 가능합니다.",
+              },
+              {
+                icon: Smartphone,
+                title: "PC,모바일,태블릿 모두지원",
+                desc: "어떤 기기에서도 동일한 경험으로 원격지원을 받을 수 있습니다.",
+              },
+            ].map((item, i) => (
+              <div
+                key={i}
+                className="p-8 rounded-2xl bg-white border border-slate-200 hover:border-primary/30 hover:shadow-lg transition-all duration-300"
+              >
+                <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-5">
+                  <item.icon className="text-primary" size={28} />
+                </div>
+                <h3 className="text-lg lg:text-xl font-bold mb-3 text-[#333]">
+                  {item.title}
+                </h3>
+                <p className="text-[#666] text-[14px] sm:text-[16px] leading-relaxed">
+                  {item.desc}
+                </p>
               </div>
             ))}
           </div>
