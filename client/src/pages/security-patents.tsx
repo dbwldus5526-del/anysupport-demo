@@ -44,7 +44,7 @@ function CountUpNumber({ end, suffix = "", duration = 2000 }: { end: number; suf
   }, [isInView, end, duration]);
 
   return (
-    <span ref={ref} className="text-5xl md:text-6xl text-[#464659] font-bold">
+    <span ref={ref} className="md:text-6xl font-bold text-[48px] text-[#333]">
       {count}{suffix}
     </span>
   );
@@ -76,7 +76,6 @@ export default function SecurityPatents() {
           </div>
         </div>
       </section>
-
       {/* Stats Section with Count Up Animation */}
       <section className="py-16 bg-slate-50">
         <div className="container mx-auto px-4 md:px-6">
@@ -100,7 +99,7 @@ export default function SecurityPatents() {
               viewport={{ once: true }}
               className="text-center"
             >
-              <span className="text-4xl md:text-5xl text-[#464659] font-bold">SEAP</span>
+              <span className="text-4xl md:text-5xl font-bold text-[#333]">SEAP</span>
               <div className="text-lg font-bold text-[#333] mt-3">삼성 파트너</div>
               <p className="text-[#666] text-sm mt-1">삼성전자 공식 파트너십</p>
             </motion.div>
@@ -114,7 +113,7 @@ export default function SecurityPatents() {
             >
               <CountUpNumber end={96} suffix=".5%" />
               <div className="text-lg font-bold text-[#333] mt-3">고객만족도</div>
-              <p className="text-[#666] text-sm mt-1">원격지원 AnySupport를<br />사용했을 때</p>
+              <p className="text-[#666] text-sm mt-1">도입고객 1년이상 유지비율</p>
             </motion.div>
 
             <motion.div
@@ -131,7 +130,6 @@ export default function SecurityPatents() {
           </div>
         </div>
       </section>
-
       {/* Section 1: 공통 보안 프로세스 */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 md:px-6">
