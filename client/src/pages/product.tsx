@@ -219,7 +219,7 @@ export default function Product() {
                       <h3 className="font-bold text-[#333] mb-2 text-[18px] md:text-[20px]">
                         접속 준비
                       </h3>
-                      <p className="text-[#666] text-[14px] md:text-[16px] mb-4 leading-relaxed">
+                      <p className="text-[#666] md:text-[16px] mb-4 text-[18px]">
                         PC에서 에이전트 실행 후 로그인하거나
                         <br />
                         PC · 모바일에서 웹브라우저로 접속해 로그인하세요.
