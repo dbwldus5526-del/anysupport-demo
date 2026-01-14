@@ -724,12 +724,15 @@ export default function Product() {
         <div className="container mx-auto px-4 md:px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-10">고객의 스마트폰,태블릿 기기를 지원해야하나요?</h2>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Button
-              size="lg"
-              variant="secondary"
-              onClick={openModal}
-              className="h-16 px-12 text-xl font-bold bg-white text-primary hover:bg-slate-100 shadow-2xl"
-            >모바일 원격지원 자세히 보기</Button>
+            <Link href="/mobile-product">
+              <Button
+                size="lg"
+                variant="secondary"
+                className="h-16 px-12 text-xl font-bold bg-white text-primary hover:bg-slate-100 shadow-2xl"
+              >
+                모바일 원격지원 자세히 보기
+              </Button>
+            </Link>
             <Button
               size="lg"
               onClick={openModal}
