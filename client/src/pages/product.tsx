@@ -165,7 +165,7 @@ export default function Product() {
                   <h3 className="text-lg font-bold mb-2 text-slate-900">
                     {feature.title}
                   </h3>
-                  <p className="text-[#666] text-[16px] font-normal">
+                  <p className="text-[#666] font-normal text-[18px]">
                     {feature.desc}
                   </p>
                 </div>
