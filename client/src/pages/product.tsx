@@ -176,7 +176,6 @@ export default function Product() {
           </div>
         </div>
       </section>
-
       {/* 현장을 보면서 해결하는 원격지원 섹션 */}
       <section className="py-24 bg-gradient-to-br from-slate-50 to-blue-50/30">
         <div className="container mx-auto px-4 md:px-6">
@@ -190,8 +189,9 @@ export default function Product() {
             >
               <h2 className="text-[25px] md:text-4xl font-bold mb-4 leading-tight text-[#333]">
                 고객의 문제를 <span className="text-primary">'원클릭으로'</span>
+                함께
                 <br />
-                함께 해결하는 원격지원
+                해결하는 원격지원
               </h2>
               <p className="text-lg text-[#666] mb-10 leading-relaxed font-normal">
                 별도의 복잡한 설정 없이,{" "}
@@ -234,7 +234,7 @@ export default function Product() {
                       <h3 className="font-bold text-primary mb-1 text-[16px] md:text-[18px]">
                         {item.title}
                       </h3>
-                      <p className="text-[#666] text-[14px] md:text-[16px] leading-relaxed">
+                      <p className="text-[#666] md:text-[16px] text-[18px]">
                         {item.desc}
                       </p>
                     </div>
@@ -252,9 +252,9 @@ export default function Product() {
               className="relative"
             >
               <div className="rounded-3xl overflow-hidden">
-                <img 
-                  src={sessionManagementGif} 
-                  alt="PC 원격지원 활용 사례" 
+                <img
+                  src={sessionManagementGif}
+                  alt="PC 원격지원 활용 사례"
                   className="w-full h-auto"
                 />
               </div>
@@ -262,7 +262,6 @@ export default function Product() {
           </div>
         </div>
       </section>
-
       {/* Desktop Edition Core Features */}
       <section className="py-24 bg-slate-50">
         <div className="container mx-auto px-4 md:px-6">
