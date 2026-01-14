@@ -519,7 +519,7 @@ export function Home() {
                 <h3 className="text-lg lg:text-xl font-bold mb-3 text-[#333]">
                   {item.title}
                 </h3>
-                <p className="text-[#666] text-[14px] sm:text-[16px] leading-relaxed">
+                <p className="text-[#666] sm:text-[16px] text-[18px]">
                   {item.desc}
                 </p>
               </div>
