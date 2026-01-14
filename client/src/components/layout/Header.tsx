@@ -48,13 +48,13 @@ const NAV_ITEMS = [
       { label: "요금제 안내(SaaS)", href: "/pricing" },
     ],
   },
-  { label: "다운로드", href: "/download" },
   {
     label: "고객지원",
     href: "/support",
     subItems: [
       { label: "FAQ", href: "/support/faq" },
       { label: "공지사항", href: "/support/notice" },
+      { label: "다운로드", href: "/download" },
     ],
   },
 ];
@@ -293,12 +293,12 @@ export function Header() {
     <>
       <div className="fixed top-0 left-0 right-0 z-50 text-white hidden md:block border-b border-[#ccc] bg-[#ffffff]">
         <div className="container mx-auto px-4 md:px-6 flex items-center gap-4 h-9">
-          <a
+          <Link
             href="/download"
             className="text-[14px] hover:text-[#2563eb] hover:font-bold active:text-[#2563eb] active:font-bold transition-colors text-[#333] font-medium"
           >
             애니서포트 다운로드
-          </a>
+          </Link>
           <span className="text-[#999]">|</span>
           <a
             href="https://988.co.kr/"
