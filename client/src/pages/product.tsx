@@ -135,7 +135,11 @@ export default function Product() {
                 <span className="text-primary">단 한 번의 연결</span>로
                 해결됩니다.
               </h2>
-              <p className="text-lg text-[#666] mb-8 leading-relaxed font-normal">애니서포트는 현장 방문 없이도 상담원이 고객의 PC 화면을 직접 제어하며 문제를 진단하고 해결할 수 있는 최적의 환경을 제공합니다.</p>
+              <p className="text-lg text-[#666] mb-8 leading-relaxed font-normal">
+                애니서포트는 현장 방문 없이도 상담원이 고객의 PC 화면을 직접
+                제어하며 문제를 진단하고 해결할 수 있는 최적의 환경을
+                제공합니다.
+              </p>
               <ul className="space-y-4">
                 {[
                   "사내 PC / 외부 PC 원격 접속 지원",
@@ -202,7 +206,7 @@ export default function Product() {
               <div className="relative">
                 {/* Vertical Timeline Line */}
                 <div className="absolute left-[15px] top-8 bottom-8 w-[2px] bg-slate-200" />
-                
+
                 <div className="space-y-8">
                   {/* Step 1 */}
                   <motion.div
@@ -273,9 +277,12 @@ export default function Product() {
                         <br />
                         즉시 연결되어 지원을 시작할 수 있습니다.
                       </p>
-                      <a href="#" className="text-primary font-bold text-[14px] md:text-[16px] hover:underline inline-flex items-center gap-1">
-                        리모트콜 매뉴얼 보기 <ArrowRight size={16} />
-                      </a>
+                      <Link
+                        href="/solution/usage"
+                        className="text-primary font-bold text-[14px] md:text-[16px] hover:underline inline-flex items-center gap-1"
+                      >
+                        애니서포트 원격지원순서 보기 <ArrowRight size={16} />
+                      </Link>
                     </div>
                   </motion.div>
                 </div>
