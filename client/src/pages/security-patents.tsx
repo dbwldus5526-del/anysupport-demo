@@ -100,7 +100,7 @@ export default function SecurityPatents() {
               className="text-center"
             >
               <span className="text-4xl md:text-5xl font-bold text-[#333]">SEAP</span>
-              <div className="text-lg font-bold text-[#333] mt-3">삼성 파트너</div>
+              <div className="text-lg font-bold text-[#333] mt-3">삼성전자 SEAP</div>
               <p className="text-[#666] text-sm mt-1">삼성전자 공식 파트너십</p>
             </motion.div>
 
