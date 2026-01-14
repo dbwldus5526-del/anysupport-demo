@@ -121,7 +121,7 @@ export default function Security() {
         </div>
       </section>
       {/* 사용자와 고객 모두 안전합니다 섹션 */}
-      <section className="py-24 bg-[#f8fafc]">
+      <section className="py-24 bg-[#f8fafc] pt-[116px] pb-[116px]">
         <div className="max-w-[1280px] w-full mx-auto px-4 sm:px-6 lg:px-10">
           <div className="text-center mb-16">
             <h2 className="font-bold mb-4 text-[24px] sm:text-[32px] lg:text-[40px] text-[#333]">
