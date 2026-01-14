@@ -172,9 +172,7 @@ export default function Solution() {
                 variant="outline"
                 size="lg"
                 className="font-bold border-slate-200 hover:bg-slate-50 text-[14px] sm:text-[16px] lg:text-[18px] text-[#333]"
-              >
-                원격지원 작동 방식 자세히 보기
-              </Button>
+              >원격지원 작동순서 자세히 보기</Button>
             </Link>
           </div>
         </div>

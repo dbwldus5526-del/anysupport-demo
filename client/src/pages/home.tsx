@@ -234,7 +234,7 @@ const heroSlides = [
   }
 ];
 
-function HeroCarousel({ openModal, scrollToSection }: { openModal: () => void; scrollToSection: (id: string) => void }) {
+function HeroCarousel({ openModal, openContactModal }: { openModal: () => void; openContactModal: () => void }) {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
@@ -286,7 +286,7 @@ function HeroCarousel({ openModal, scrollToSection }: { openModal: () => void; s
             <Button
               variant="outline"
               size="lg"
-              onClick={() => scrollToSection("features")}
+              onClick={openContactModal}
               className="h-12 px-6 sm:h-14 sm:px-10 text-base sm:text-lg font-bold bg-[#f7f8fc] border border-slate-200 text-[#333]"
             >문의하기</Button>
           </div>
@@ -324,9 +324,8 @@ function HeroCarousel({ openModal, scrollToSection }: { openModal: () => void; s
 }
 
 export function Home() {
-  const { openModal } = useModal();
+  const { openModal, openContactModal } = useModal();
   const [activeDevice, setActiveDevice] = useState("agent");
-  const [contactModalOpen, setContactModalOpen] = useState(false);
   const [hoveredSpot, setHoveredSpot] = useState<number | null>(null);
 
   const deviceViewItems = [
@@ -402,7 +401,7 @@ export function Home() {
   return (
     <div className="flex flex-col">
       {/* 1. Hero Section with Carousel */}
-      <HeroCarousel openModal={openModal} scrollToSection={scrollToSection} />
+      <HeroCarousel openModal={openModal} openContactModal={openContactModal} />
       {/* 다양한 환경과 기기 지원 */}
       <section className="py-24 bg-white pt-[98px] pb-[98px]">
         <div className="max-w-[1280px] w-full mx-auto px-4 sm:px-6 lg:px-10">
@@ -1065,40 +1064,6 @@ export function Home() {
           </div>
         </div>
       </section>
-      {/* Contact Modal */}
-      {contactModalOpen && (
-        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
-          <div className="bg-white rounded-2xl p-8 max-w-md w-full mx-4 relative">
-            <button
-              onClick={() => setContactModalOpen(false)}
-              className="absolute top-4 right-4 text-slate-400 hover:text-slate-600 text-2xl font-bold"
-            >
-              ×
-            </button>
-            <h2 className="text-2xl font-bold text-[#333] mb-6">애니서포트 문의하기</h2>
-            <div className="space-y-4 text-[#666]">
-              <div className="flex items-start gap-3">
-                <span className="font-semibold text-[#333] min-w-[70px]">대표전화</span>
-                <span>02-839-7500</span>
-              </div>
-              <div className="flex items-start gap-3">
-                <span className="font-semibold text-[#333] min-w-[70px]">팩스</span>
-                <span>02-857-0054</span>
-              </div>
-              <div className="flex items-start gap-3">
-                <span className="font-semibold text-[#333] min-w-[70px]">Email</span>
-                <span>anysupport@koino.co.kr</span>
-              </div>
-            </div>
-            <Button
-              onClick={() => setContactModalOpen(false)}
-              className="w-full mt-8 h-12 font-bold"
-            >
-              닫기
-            </Button>
-          </div>
-        </div>
-      )}
     </div>
   );
 }
