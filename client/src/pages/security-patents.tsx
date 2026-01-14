@@ -44,7 +44,7 @@ function CountUpNumber({ end, suffix = "", duration = 2000 }: { end: number; suf
   }, [isInView, end, duration]);
 
   return (
-    <span ref={ref} className="text-5xl md:text-6xl font-black text-primary">
+    <span ref={ref} className="text-5xl md:text-6xl text-[#464659] font-bold">
       {count}{suffix}
     </span>
   );
