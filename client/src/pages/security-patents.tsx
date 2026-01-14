@@ -21,7 +21,7 @@ import seapLogo from "@assets/image-removebg-preview_(25)_1768208039940.png";
 import { motion } from "framer-motion";
 
 export default function SecurityPatents() {
-  const { openModal } = useModal();
+  const { openModal, openContactModal } = useModal();
 
   return (
     <div className="flex flex-col">
@@ -436,7 +436,7 @@ export default function SecurityPatents() {
                 size="lg"
                 variant="outline"
                 className="border-2 border-primary text-primary hover:bg-primary/5 font-bold px-8 py-6 text-lg"
-                onClick={openModal}
+                onClick={openContactModal}
               >
                 도입 문의하기
               </Button>
