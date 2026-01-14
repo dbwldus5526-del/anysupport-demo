@@ -189,7 +189,8 @@ export default function Product() {
               viewport={{ once: true }}
             >
               <h2 className="text-[25px] md:text-4xl font-bold mb-4 leading-tight text-[#333]">
-                고객의 문제를 <span className="text-primary">'원클릭으로'</span>{" "}
+                고객의 문제를 <span className="text-primary">'원클릭으로'</span>
+                <br />
                 함께 해결하는 원격지원
               </h2>
               <p className="text-lg text-[#666] mb-10 leading-relaxed font-normal">
