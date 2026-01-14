@@ -978,7 +978,7 @@ export function Home() {
                 <Button
                   size="lg"
                   variant="outline"
-                  onClick={openModal}
+                  onClick={() => window.location.href = '/pricing'}
                   className="h-14 px-8 text-lg font-bold border-slate-300 text-[#333] hover:border-primary hover:text-primary"
                 >
                   구매하기
