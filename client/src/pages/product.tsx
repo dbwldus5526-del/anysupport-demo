@@ -246,9 +246,7 @@ export default function Product() {
                       2
                     </div>
                     <div>
-                      <h3 className="font-bold text-[#333] mb-2 text-[18px] md:text-[20px]">
-                        접속번호 생성
-                      </h3>
+                      <h3 className="font-bold text-[#333] mb-2 text-[18px] md:text-[20px]">인증번호 생성/인증번호 안내</h3>
                       <p className="text-[#666] text-[14px] md:text-[16px] leading-relaxed">
                         [원격지원 시작하기] 클릭하면
                         <br />
