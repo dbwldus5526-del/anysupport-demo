@@ -278,7 +278,7 @@ export default function Cases() {
   const [activeScenario, setActiveScenario] = useState("internet");
   const [activeIndustry, setActiveIndustry] = useState("all");
   const [customPageIndex, setCustomPageIndex] = useState(0);
-  const customPageImages = [customPage1, customPage2, customPage3];
+  const customPageImages = [customPage2, customPage1, customPage3];
 
   const currentScenario = scenarios.find((s) => s.id === activeScenario);
 
