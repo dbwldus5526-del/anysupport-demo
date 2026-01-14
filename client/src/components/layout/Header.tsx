@@ -20,6 +20,7 @@ const NAV_ITEMS = [
       { label: "PC 원격지원", href: "/product/pc" },
       { label: "Mobile 원격지원", href: "/product/mobile" },
       { label: "Video 원격지원", href: "/product/video" },
+      { label: "divider", href: "#", isDivider: true },
       { label: "원격지원이란", href: "/solution/intro" },
       { label: "주요 도입 사례", href: "/solution/cases" },
       { label: "사용방법", href: "/solution/guide" },
@@ -154,15 +155,19 @@ function MobileMenuSheet({
                             : "max-h-0 opacity-0",
                         )}
                       >
-                        {item.subItems.map((sub: any) => (
-                          <Link
-                            key={sub.href}
-                            href={sub.href}
-                            onClick={onClose}
-                            className="block py-3 px-6 text-slate-600 text-sm font-semibold hover:text-primary transition-colors"
-                          >
-                            {sub.label}
-                          </Link>
+                        {item.subItems.map((sub: any, index: number) => (
+                          sub.isDivider ? (
+                            <div key={`divider-${index}`} className="my-2 mx-6 border-t border-slate-200" />
+                          ) : (
+                            <Link
+                              key={sub.href}
+                              href={sub.href}
+                              onClick={onClose}
+                              className="block py-3 px-6 text-slate-600 text-sm font-semibold hover:text-primary transition-colors"
+                            >
+                              {sub.label}
+                            </Link>
+                          )
                         ))}
                       </div>
                     )}
@@ -339,15 +344,19 @@ export function Header() {
                     </button>
                     <div className="absolute left-0 top-full pt-2 z-50 hidden group-hover:block">
                       <ul className="w-[200px] rounded-md border bg-white shadow-lg p-2">
-                        {item.subItems.map((sub) => (
-                          <li key={sub.href}>
-                            <Link
-                              href={sub.href}
-                              className="block select-none rounded-md p-3 no-underline outline-none transition-colors hover:bg-slate-50 hover:text-primary text-slate-700 text-[18px] font-normal"
-                            >
-                              {sub.label}
-                            </Link>
-                          </li>
+                        {item.subItems.map((sub: any, index: number) => (
+                          sub.isDivider ? (
+                            <li key={`divider-${index}`} className="my-2 border-t border-slate-200" />
+                          ) : (
+                            <li key={sub.href}>
+                              <Link
+                                href={sub.href}
+                                className="block select-none rounded-md p-3 no-underline outline-none transition-colors hover:bg-slate-50 hover:text-primary text-slate-700 text-[18px] font-normal"
+                              >
+                                {sub.label}
+                              </Link>
+                            </li>
+                          )
                         ))}
                       </ul>
                     </div>
