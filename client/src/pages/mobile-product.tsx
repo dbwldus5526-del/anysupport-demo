@@ -175,9 +175,12 @@ export default function MobileProduct() {
                     {feature.desc}
                   </p>
                 </div>
-                <div className="absolute bottom-6 left-6 right-6 group-hover:hidden transition-all">
-                  <div className="bg-white/90 backdrop-blur-sm px-4 py-2 rounded-lg inline-block border border-slate-100">
+                <div className="absolute bottom-6 left-6 right-6 group-hover:opacity-0 transition-all">
+                  <div className="bg-white/90 backdrop-blur-sm px-4 py-3 rounded-lg border border-slate-100 flex items-center justify-between">
                     <span className="font-bold text-slate-900">{feature.title}</span>
+                    <span className="text-primary text-sm font-medium flex items-center gap-1">
+                      자세히 보기 <ArrowRight size={14} />
+                    </span>
                   </div>
                 </div>
               </div>
