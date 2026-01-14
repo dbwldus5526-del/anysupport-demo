@@ -145,7 +145,7 @@ export default function Product() {
                 ].map((item, i) => (
                   <li
                     key={i}
-                    className="flex items-center gap-3 text-slate-700 font-medium"
+                    className="flex items-center gap-3 text-slate-700 font-medium text-[18px]"
                   >
                     <CheckCircle2 className="text-primary shrink-0" size={24} />
                     {item}
