@@ -88,9 +88,9 @@ export default function SecurityPatents() {
               viewport={{ once: true }}
               className="text-center"
             >
-              <CountUpNumber end={3} suffix="분" />
-              <div className="text-lg font-bold text-[#333] mt-3">내 해결</div>
-              <p className="text-[#666] text-sm mt-1">평균 장애 해결 시간</p>
+              <span className="text-4xl md:text-5xl text-[#464659] font-bold">AES-256 bit</span>
+              <div className="text-lg font-bold text-[#333] mt-3">암호화 표준</div>
+              <p className="text-[#666] text-sm mt-1">국제 암호화 알고리즘</p>
             </motion.div>
 
             <motion.div
@@ -100,9 +100,9 @@ export default function SecurityPatents() {
               viewport={{ once: true }}
               className="text-center"
             >
-              <CountUpNumber end={175} suffix="억원" />
-              <div className="text-lg font-bold text-[#333] mt-3">연간 절감</div>
-              <p className="text-[#666] text-sm mt-1">* 보안업체 OOO사 사례</p>
+              <span className="text-4xl md:text-5xl text-[#464659] font-bold">SEAP</span>
+              <div className="text-lg font-bold text-[#333] mt-3">삼성 파트너</div>
+              <p className="text-[#666] text-sm mt-1">삼성전자 공식 파트너십</p>
             </motion.div>
 
             <motion.div
@@ -112,7 +112,7 @@ export default function SecurityPatents() {
               viewport={{ once: true }}
               className="text-center"
             >
-              <CountUpNumber end={95} suffix="%" />
+              <CountUpNumber end={96} suffix=".5%" />
               <div className="text-lg font-bold text-[#333] mt-3">고객만족도</div>
               <p className="text-[#666] text-sm mt-1">원격지원 AnySupport를<br />사용했을 때</p>
             </motion.div>
@@ -124,9 +124,9 @@ export default function SecurityPatents() {
               viewport={{ once: true }}
               className="text-center"
             >
-              <CountUpNumber end={75} suffix="%" />
-              <div className="text-lg font-bold text-[#333] mt-3">FCR 비율 증가</div>
-              <p className="text-[#666] text-sm mt-1">첫 고객 대응으로<br />문제해결, 재문의 전화비율 감소</p>
+              <span className="text-4xl md:text-5xl text-[#464659] font-bold">24/365</span>
+              <div className="text-lg font-bold text-[#333] mt-3">운영 체계</div>
+              <p className="text-[#666] text-sm mt-1">24시간 365일<br />전문 인력 운영</p>
             </motion.div>
           </div>
         </div>
