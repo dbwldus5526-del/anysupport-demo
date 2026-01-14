@@ -1083,7 +1083,7 @@ export default function Cases() {
               <Button
                 size="lg"
                 onClick={openModal}
-                className="w-full font-bold"
+                className="w-full font-bold text-[18px]"
               >
                 도입 상담 문의 <ArrowRight className="ml-2" />
               </Button>
@@ -1100,7 +1100,7 @@ export default function Cases() {
                 size="lg"
                 variant="outline"
                 onClick={openModal}
-                className="w-full font-bold border-primary text-primary"
+                className="w-full font-bold border-primary text-primary text-[18px]"
               >
                 자료 요청
               </Button>
