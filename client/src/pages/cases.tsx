@@ -937,30 +937,32 @@ export default function Cases() {
               귀사의 브랜드 아이덴티티에 맞는 맞춤형 고객 접속 페이지를 제공합니다
             </p>
           </div>
-          <div className="max-w-4xl mx-auto relative">
-            <div className="relative overflow-hidden rounded-2xl shadow-xl">
-              <motion.img
-                key={customPageIndex}
-                src={customPageImages[customPageIndex]}
-                alt={`접속페이지 예시 ${customPageIndex + 1}`}
-                className="w-full h-auto"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.5 }}
-              />
+          <div className="max-w-5xl mx-auto">
+            <div className="flex items-center gap-4">
+              <button
+                onClick={() => setCustomPageIndex((prev) => (prev === 0 ? customPageImages.length - 1 : prev - 1))}
+                className="shrink-0 w-12 h-12 bg-white hover:bg-slate-50 rounded-full shadow-lg border border-slate-200 flex items-center justify-center transition-all"
+              >
+                <ChevronLeft size={24} className="text-slate-700" />
+              </button>
+              <div className="flex-1 overflow-hidden rounded-2xl shadow-xl">
+                <motion.img
+                  key={customPageIndex}
+                  src={customPageImages[customPageIndex]}
+                  alt={`접속페이지 예시 ${customPageIndex + 1}`}
+                  className="w-full h-auto"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.5 }}
+                />
+              </div>
+              <button
+                onClick={() => setCustomPageIndex((prev) => (prev === customPageImages.length - 1 ? 0 : prev + 1))}
+                className="shrink-0 w-12 h-12 bg-white hover:bg-slate-50 rounded-full shadow-lg border border-slate-200 flex items-center justify-center transition-all"
+              >
+                <ChevronRight size={24} className="text-slate-700" />
+              </button>
             </div>
-            <button
-              onClick={() => setCustomPageIndex((prev) => (prev === 0 ? customPageImages.length - 1 : prev - 1))}
-              className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/90 hover:bg-white rounded-full shadow-lg flex items-center justify-center transition-all"
-            >
-              <ChevronLeft size={24} className="text-slate-700" />
-            </button>
-            <button
-              onClick={() => setCustomPageIndex((prev) => (prev === customPageImages.length - 1 ? 0 : prev + 1))}
-              className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/90 hover:bg-white rounded-full shadow-lg flex items-center justify-center transition-all"
-            >
-              <ChevronRight size={24} className="text-slate-700" />
-            </button>
             <div className="flex justify-center gap-2 mt-6">
               {customPageImages.map((_, i) => (
                 <button
