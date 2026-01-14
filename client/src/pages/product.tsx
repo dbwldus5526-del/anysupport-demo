@@ -722,9 +722,7 @@ export default function Product() {
       {/* CTA Section */}
       <section className="py-20 bg-primary text-white">
         <div className="container mx-auto px-4 md:px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-10">
-            복잡한 IT 기술 지원, 지금 바로 시작하세요
-          </h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-10">고객의 스마트폰,태블릿 기기를 지원해야하나요?</h2>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Button
               size="lg"
