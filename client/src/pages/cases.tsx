@@ -38,6 +38,10 @@ import logoKDB생명 from "@assets/KDB생명@2x_1768206638134.png";
 import logo한화생명 from "@assets/Hanwha@2x_1768206650889.png";
 import logo서울특별시 from "@assets/서울특별시@2x_1768206671468.png";
 import logo기획재정부 from "@assets/기획재정부@2x_1768206679624.png";
+import customPage1 from "@assets/2_1768355858073.jpg";
+import customPage2 from "@assets/img-isc03-01-kr_1768355858074.jpg";
+import customPage3 from "@assets/img-isc03-01-kr_1768355858075.png";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const industryFilters = [
   { id: "all", label: "전체", icon: Building2 },
@@ -273,6 +277,8 @@ export default function Cases() {
   const { openModal } = useModal();
   const [activeScenario, setActiveScenario] = useState("internet");
   const [activeIndustry, setActiveIndustry] = useState("all");
+  const [customPageIndex, setCustomPageIndex] = useState(0);
+  const customPageImages = [customPage1, customPage2, customPage3];
 
   const currentScenario = scenarios.find((s) => s.id === activeScenario);
 
@@ -920,8 +926,57 @@ export default function Cases() {
           </div>
         </div>
       </section>
-      {/* Section E: Implementation Effects */}
+      {/* Section: Custom Connection Page Carousel */}
       <section className="py-24 bg-white">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl md:text-4xl font-bold mb-4">
+              기업 특성에 맞춘 접속페이지를 만들 수 있습니다
+            </h2>
+            <p className="text-[#666] text-lg font-normal">
+              귀사의 브랜드 아이덴티티에 맞는 맞춤형 고객 접속 페이지를 제공합니다
+            </p>
+          </div>
+          <div className="max-w-4xl mx-auto relative">
+            <div className="relative overflow-hidden rounded-2xl shadow-xl">
+              <motion.img
+                key={customPageIndex}
+                src={customPageImages[customPageIndex]}
+                alt={`접속페이지 예시 ${customPageIndex + 1}`}
+                className="w-full h-auto"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5 }}
+              />
+            </div>
+            <button
+              onClick={() => setCustomPageIndex((prev) => (prev === 0 ? customPageImages.length - 1 : prev - 1))}
+              className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/90 hover:bg-white rounded-full shadow-lg flex items-center justify-center transition-all"
+            >
+              <ChevronLeft size={24} className="text-slate-700" />
+            </button>
+            <button
+              onClick={() => setCustomPageIndex((prev) => (prev === customPageImages.length - 1 ? 0 : prev + 1))}
+              className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/90 hover:bg-white rounded-full shadow-lg flex items-center justify-center transition-all"
+            >
+              <ChevronRight size={24} className="text-slate-700" />
+            </button>
+            <div className="flex justify-center gap-2 mt-6">
+              {customPageImages.map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => setCustomPageIndex(i)}
+                  className={`w-3 h-3 rounded-full transition-all ${
+                    customPageIndex === i ? "bg-primary w-8" : "bg-slate-300 hover:bg-slate-400"
+                  }`}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* Section E: Implementation Effects */}
+      <section className="py-24 bg-slate-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-4xl font-bold mb-4">
