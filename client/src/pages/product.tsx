@@ -179,7 +179,7 @@ export default function Product() {
 
       {/* 현장을 보면서 해결하는 원격지원 섹션 */}
       <section className="py-24 bg-gradient-to-br from-slate-50 to-blue-50/30">
-        <div className="max-w-[1280px] w-full mx-auto px-4 sm:px-6 lg:px-10">
+        <div className="container mx-auto px-4 md:px-6">
           <div className="grid lg:grid-cols-2 gap-12 lg:items-center">
             {/* 좌측 - 제목 및 카드 */}
             <motion.div
@@ -248,13 +248,13 @@ export default function Product() {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
-              className="relative lg:mt-[140px]"
+              className="relative"
             >
-              <div className="rounded-3xl overflow-hidden">
+              <div className="rounded-3xl overflow-hidden shadow-2xl">
                 <img 
                   src={sessionManagementGif} 
                   alt="PC 원격지원 활용 사례" 
-                  className="w-full h-auto"
+                  className="w-full h-auto scale-110 origin-center"
                 />
               </div>
             </motion.div>
