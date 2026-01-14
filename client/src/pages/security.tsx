@@ -128,7 +128,7 @@ export default function Security() {
               사용자와 고객 모두 안전합니다
             </h2>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
             {[
               {
                 icon: Lock,
@@ -153,15 +153,15 @@ export default function Security() {
             ].map((item, i) => (
               <div
                 key={i}
-                className="p-8 rounded-2xl bg-white border border-slate-200 hover:border-primary/30 hover:shadow-lg transition-all duration-300"
+                className="p-6 rounded-2xl bg-white border border-slate-200 hover:border-primary/30 hover:shadow-lg transition-all duration-300 flex flex-col h-full"
               >
-                <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-5">
-                  <item.icon className="text-primary" size={28} />
+                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4 shrink-0">
+                  <item.icon className="text-primary" size={24} />
                 </div>
-                <h3 className="text-lg lg:text-xl font-bold mb-3 text-[#333]">
+                <h3 className="text-[15px] xl:text-[17px] font-bold mb-3 text-[#333] whitespace-nowrap">
                   {item.title}
                 </h3>
-                <p className="text-[#666] text-[14px] sm:text-[16px] leading-relaxed">
+                <p className="text-[#666] text-[14px] leading-relaxed flex-1">
                   {item.desc}
                 </p>
               </div>
