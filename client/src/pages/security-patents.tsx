@@ -87,7 +87,7 @@ export default function SecurityPatents() {
               viewport={{ once: true }}
               className="text-center"
             >
-              <span className="text-4xl md:text-5xl text-[#464659] font-bold">AES-256 bit</span>
+              <span className="text-4xl md:text-5xl font-bold text-[#333]">AES-256 bit</span>
               <div className="text-lg font-bold text-[#333] mt-3">암호화 표준</div>
               <p className="text-[#666] text-sm mt-1">국제 암호화 알고리즘</p>
             </motion.div>
@@ -125,7 +125,7 @@ export default function SecurityPatents() {
             >
               <span className="text-4xl md:text-5xl font-bold text-[#333]">24/365</span>
               <div className="text-lg font-bold text-[#333] mt-3">운영 체계</div>
-              <p className="text-[#666] text-sm mt-1">24시간 365일<br />전문 인력 운영</p>
+              <p className="text-[#666] text-sm mt-1">24시간 365일 전문 인력 운영</p>
             </motion.div>
           </div>
         </div>
