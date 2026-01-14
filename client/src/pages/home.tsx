@@ -516,7 +516,7 @@ export function Home() {
                 <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-5">
                   <item.icon className="text-primary" size={28} />
                 </div>
-                <h3 className="text-lg lg:text-xl font-bold mb-3 text-[#333]">
+                <h3 className="lg:text-xl font-bold mb-3 text-[#333] text-[18px]">
                   {item.title}
                 </h3>
                 <p className="text-[#666] sm:text-[16px] text-[18px]">
