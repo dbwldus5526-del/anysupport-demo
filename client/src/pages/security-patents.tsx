@@ -123,7 +123,7 @@ export default function SecurityPatents() {
               viewport={{ once: true }}
               className="text-center"
             >
-              <span className="text-4xl md:text-5xl text-[#464659] font-bold">24/365</span>
+              <span className="text-4xl md:text-5xl font-bold text-[#333]">24/365</span>
               <div className="text-lg font-bold text-[#333] mt-3">운영 체계</div>
               <p className="text-[#666] text-sm mt-1">24시간 365일<br />전문 인력 운영</p>
             </motion.div>
