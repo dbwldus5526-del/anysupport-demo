@@ -304,7 +304,7 @@ const securityFeatures = [
 ];
 
 export default function Cases() {
-  const { openModal } = useModal();
+  const { openModal, openContactModal } = useModal();
   const [activeScenario, setActiveScenario] = useState("internet");
   const [activeIndustry, setActiveIndustry] = useState("all");
   const [customPageIndex, setCustomPageIndex] = useState(0);
@@ -349,7 +349,7 @@ export default function Cases() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Button
                 size="lg"
-                onClick={openModal}
+                onClick={openContactModal}
                 className="h-14 px-8 text-lg font-bold shadow-xl"
               >
                 도입 상담 문의 <ArrowRight className="ml-2" />
@@ -357,7 +357,7 @@ export default function Cases() {
               <Button
                 size="lg"
                 variant="outline"
-                onClick={openModal}
+                onClick={openContactModal}
                 className="h-14 px-8 text-lg font-bold border-white/30 text-white hover:bg-white/10"
               >
                 보안·인증 자료 요청
@@ -1112,7 +1112,7 @@ export default function Cases() {
               </p>
               <Button
                 size="lg"
-                onClick={openModal}
+                onClick={openContactModal}
                 className="w-full font-bold text-[18px]"
               >
                 도입 상담 문의 <ArrowRight className="ml-2" />
@@ -1129,7 +1129,7 @@ export default function Cases() {
               <Button
                 size="lg"
                 variant="outline"
-                onClick={openModal}
+                onClick={openContactModal}
                 className="w-full font-bold border-primary text-primary text-[18px]"
               >
                 자료 요청

@@ -17,7 +17,7 @@ import {
 import solutionHeroImg from "@assets/generated_images/professional_enterprise_remote_support_solution_hero_background.png";
 
 export default function Guide() {
-  const { openModal } = useModal();
+  const { openModal, openContactModal } = useModal();
 
   const usageSteps = [
     { title: "고객의 상담요청", icon: User },
@@ -251,7 +251,7 @@ export default function Guide() {
                     {section.items.map((item, i) => (
                       <button 
                         key={i}
-                        onClick={openModal}
+                        onClick={openContactModal}
                         className="flex items-center justify-between p-5 bg-white rounded-2xl border border-slate-100 hover:border-primary hover:shadow-md transition-all group text-left"
                       >
                         <span className="pr-4 text-[#333] text-[14px] sm:text-[16px] lg:text-[18px] font-medium">
@@ -271,7 +271,7 @@ export default function Guide() {
       <section className="py-20 bg-white border-t border-slate-100">
         <div className="container mx-auto px-4 text-center">
           <h2 className="md:text-3xl mb-6 text-[36px] text-[#333] font-bold">찾으시는 내용이 없나요?</h2>
-          <Button size="lg" onClick={openModal} className="h-12 px-6 sm:h-14 sm:px-10 rounded-2xl font-bold text-lg shadow-lg group">
+          <Button size="lg" onClick={openContactModal} className="h-12 px-6 sm:h-14 sm:px-10 rounded-2xl font-bold text-lg shadow-lg group">
             고객센터 문의하기 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
           </Button>
         </div>

@@ -359,7 +359,7 @@ export default function Solution() {
           <Button
             size="lg"
             variant="secondary"
-            onClick={openModal}
+            onClick={openContactModal}
             className="h-16 px-12 text-xl font-bold bg-white text-primary hover:bg-slate-100 shadow-2xl"
           >
             솔루션 문의하기

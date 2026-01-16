@@ -19,7 +19,7 @@ import pricingHeroImg from "@assets/generated_images/modern_b2b_saas_pricing_pag
 import LogoCarousel from "@/components/sections/LogoCarousel";
 
 export default function Pricing() {
-  const { openModal } = useModal();
+  const { openModal, openContactModal } = useModal();
   const [isAnnual, setIsAnnual] = useState(false);
 
   const pricingData = [
@@ -170,7 +170,7 @@ export default function Pricing() {
                   <Button 
                     size="lg" 
                     variant="outline" 
-                    onClick={openModal}
+                    onClick={openContactModal}
                     className="w-full h-14 rounded-2xl font-bold text-lg border-2 border-slate-200 hover:border-primary hover:text-primary transition-all"
                   >
                     문의하기

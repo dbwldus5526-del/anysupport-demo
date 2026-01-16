@@ -999,7 +999,7 @@ export function Home() {
               <Button
                 size="lg"
                 variant="outline"
-                onClick={openModal}
+                onClick={openContactModal}
                 className="w-full text-[14px] sm:text-[16px] lg:text-[18px] font-semibold border-[#333] text-[#333] hover:border-primary hover:text-primary"
               >
                 솔루션 문의하기

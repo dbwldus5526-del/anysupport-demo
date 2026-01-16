@@ -45,7 +45,7 @@ interface QuizAnswer {
 }
 
 export default function PricingComparison() {
-  const { openModal } = useModal();
+  const { openModal, openContactModal } = useModal();
   const [quizStep, setQuizStep] = useState<QuizStep>(0);
   const [answers, setAnswers] = useState<QuizAnswer>({});
   const [showResult, setShowResult] = useState(false);
@@ -285,7 +285,7 @@ export default function PricingComparison() {
               <Button
                 size="lg"
                 variant="outline"
-                onClick={openModal}
+                onClick={openContactModal}
                 className="h-14 px-8 text-lg font-bold border-white/30 text-white hover:bg-white/10"
               >
                 도입 상담 문의
@@ -400,7 +400,7 @@ export default function PricingComparison() {
                 <div className="flex flex-col sm:flex-row gap-4 mb-4">
                   <Button
                     size="lg"
-                    onClick={openModal}
+                    onClick={openContactModal}
                     className="flex-1 h-12 font-bold text-[14px] sm:text-[16px] lg:text-[18px]"
                   >
                     {getRecommendation().cta1.label}
@@ -470,10 +470,10 @@ export default function PricingComparison() {
                     ))}
                   </ul>
                   <div className="flex gap-3">
-                    <Button variant="outline" size="sm" className="flex-1 text-[14px] sm:text-[16px] lg:text-[18px] text-[#333] pt-[10px] pb-[10px]" onClick={openModal}>
+                    <Button variant="outline" size="sm" className="flex-1 text-[14px] sm:text-[16px] lg:text-[18px] text-[#333] pt-[10px] pb-[10px]" onClick={openContactModal}>
                       자세히
                     </Button>
-                    <Button size="sm" className="flex-1 text-[14px] sm:text-[16px] lg:text-[18px] pt-[10px] pb-[10px]" onClick={openModal}>
+                    <Button size="sm" className="flex-1 text-[14px] sm:text-[16px] lg:text-[18px] pt-[10px] pb-[10px]" onClick={openContactModal}>
                       상담
                     </Button>
                   </div>
@@ -566,7 +566,7 @@ export default function PricingComparison() {
                     </Link>
                   </td>
                   <td className="px-6 py-5 text-center bg-primary/5">
-                    <Button onClick={openModal} className="px-6 py-2 font-bold text-[14px] sm:text-[16px]">
+                    <Button onClick={openContactModal} className="px-6 py-2 font-bold text-[14px] sm:text-[16px]">
                       도입 문의하기 <ArrowRight className="ml-2" size={16} />
                     </Button>
                   </td>
@@ -654,7 +654,7 @@ export default function PricingComparison() {
                 <span className="font-bold text-[14px] sm:text-[16px] lg:text-[18px] text-[#a8c6ff]">왜?</span> {industries[activeIndustry].reason}
               </p>
               
-              <Button onClick={openModal} className="w-full h-12 font-bold text-[14px] sm:text-[16px] lg:text-[18px]">
+              <Button onClick={openContactModal} className="w-full h-12 font-bold text-[14px] sm:text-[16px] lg:text-[18px]">
                 맞춤 상담 받기 <ArrowRight className="ml-2" />
               </Button>
             </div>
@@ -674,7 +674,7 @@ export default function PricingComparison() {
             <Button
               size="lg"
               variant="secondary"
-              onClick={openModal}
+              onClick={openContactModal}
               className="h-12 px-6 sm:h-14 sm:px-10 text-base sm:text-lg font-bold"
             >
               무료 컨설팅 신청
