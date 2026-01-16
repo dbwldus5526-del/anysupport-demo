@@ -543,7 +543,7 @@ export default function PricingComparison() {
                             {row.onprem}
                           </span>
                         </HoverCardTrigger>
-                        <HoverCardContent side="left" className="w-80 p-4">
+                        <HoverCardContent side="right" className="w-80 p-4">
                           <div className="space-y-2">
                             <div className="flex items-center gap-2">
                               <Server size={18} className="text-slate-700" />
