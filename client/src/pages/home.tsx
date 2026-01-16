@@ -717,7 +717,7 @@ export function Home() {
                     <Button 
                       size="sm" 
                       variant="outline" 
-                      className="mt-3 font-bold border-slate-300 text-[#333] hover:border-primary hover:text-primary"
+                      className="mt-3 border-slate-300 text-[#333] hover:border-primary hover:text-primary text-[16px] font-medium"
                     >
                       원격지원 바로시작
                     </Button>
@@ -756,7 +756,7 @@ export function Home() {
                       <Button 
                         size="sm"
                         variant="outline" 
-                        className="font-bold border-slate-300 text-[#333] hover:border-primary hover:text-primary"
+                        className="border-slate-300 text-[#333] hover:border-primary hover:text-primary text-[16px] font-medium"
                       >
                         고객접속페이지 바로가기
                       </Button>
@@ -764,7 +764,7 @@ export function Home() {
                     <Link href="/solution/guide">
                       <Button 
                         variant="ghost" 
-                        className="text-primary font-bold hover:bg-primary/5 px-0"
+                        className="text-primary font-bold hover:bg-primary/5 px-0 text-[16px]"
                       >
                         애니서포트 매뉴얼 보기 <ArrowRight className="ml-1 w-4 h-4" />
                       </Button>
@@ -778,7 +778,7 @@ export function Home() {
             <Button 
               size="lg" 
               onClick={openModal}
-              className="h-12 px-6 sm:h-14 sm:px-10 text-base sm:text-lg font-bold shadow-xl shadow-primary/20"
+              className="h-12 px-6 sm:h-14 sm:px-10 text-base sm:text-lg shadow-xl shadow-primary/20 font-semibold"
             >
               <Clock className="mr-2 w-5 h-5" />
               애니서포트, 14일간 제한 없이 써보세요
