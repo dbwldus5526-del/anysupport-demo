@@ -112,7 +112,7 @@ export default function PricingComparison() {
         infrastructure === "own_server" || license === "permanent") {
       return {
         type: "solution",
-        title: "🛡️ 솔루션 구축 방식 (On-premise)",
+        title: "솔루션 구축 방식 (On-premise)",
         reason: "내부망/망분리 환경, 강화된 보안 정책 필요, 운영·접속 통제 중요",
         features: ["고객사 서버에 직접 설치", "영구 라이선스 구매", "내부망·외부망 통합 지원"],
         cta1: { label: "구축형 도입 상담 요청", action: "modal" },
