@@ -556,6 +556,21 @@ export default function PricingComparison() {
                     </td>
                   </tr>
                 ))}
+                <tr className="bg-slate-100">
+                  <td className="px-6 py-5 font-semibold text-[14px] sm:text-[16px] lg:text-[18px] text-[#333]"></td>
+                  <td className="px-6 py-5 text-center">
+                    <Link href="/pricing">
+                      <Button className="px-6 py-2 font-bold text-[14px] sm:text-[16px]">
+                        가격 자세히 보기 <ArrowRight className="ml-2" size={16} />
+                      </Button>
+                    </Link>
+                  </td>
+                  <td className="px-6 py-5 text-center bg-primary/5">
+                    <Button onClick={openModal} variant="outline" className="px-6 py-2 font-bold text-[14px] sm:text-[16px] border-primary text-primary hover:bg-primary hover:text-white">
+                      도입 문의하기 <ArrowRight className="ml-2" size={16} />
+                    </Button>
+                  </td>
+                </tr>
               </tbody>
             </table>
           </div>
