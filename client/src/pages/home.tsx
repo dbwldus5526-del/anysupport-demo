@@ -454,7 +454,7 @@ export function Home() {
                       {item.hoverDesc}
                     </p>
                     <Link href={item.href}>
-                      <Button size="sm" className="font-bold bg-white text-primary hover:bg-slate-100">
+                      <Button size="sm" className="bg-white text-primary hover:bg-slate-100 text-[16px] font-medium">
                         제품 자세히보기 <ArrowRight className="ml-1 w-4 h-4" />
                       </Button>
                     </Link>
