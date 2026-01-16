@@ -1043,7 +1043,7 @@ export default function Cases() {
                 key={i}
                 className="bg-slate-50 rounded-2xl p-6 border border-slate-100 hover:border-primary/30 transition-all pl-[20px] pr-[20px] pt-[21px] pb-[21px]"
               >
-                <div className="inline-block px-4 py-2 bg-gradient-to-r from-slate-200 to-slate-100 rounded-full text-sm font-bold mb-4">
+                <div className="inline-block px-4 py-2 bg-gradient-to-r from-slate-200 to-slate-100 rounded-full font-bold mb-4 text-[18px] text-[#333]">
                   {effect.title.replace(effect.highlight, "")}
                   <span className="text-primary">{effect.highlight}</span>
                 </div>
