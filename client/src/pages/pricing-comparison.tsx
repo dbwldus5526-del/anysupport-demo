@@ -237,7 +237,7 @@ export default function PricingComparison() {
             </h1>
             <p className="text-lg md:text-xl text-slate-300 mb-10 leading-relaxed">
               보안정책 / 망분리 / 운영 방식에 따라<br className="md:hidden" />
-              SaaS · 구축형 · 연동형 중 최적안을 안내합니다.
+              SaaS(ASP)방식과 솔루션구축 방식 중 최적안을 안내합니다.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
@@ -263,7 +263,7 @@ export default function PricingComparison() {
       <section id="quiz-section" className="py-24 bg-slate-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-12">
-            <h2 className="text-2xl md:text-4xl font-bold mb-4 text-slate-900">
+            <h2 className="text-2xl md:text-4xl font-bold mb-4 text-[#333]">
               도입 방식 진단
             </h2>
             <p className="text-[#666] text-lg max-w-2xl mx-auto font-normal">
@@ -289,7 +289,7 @@ export default function PricingComparison() {
                 </div>
 
                 <div className="mb-8">
-                  <span className="text-primary font-bold text-sm">
+                  <span className="text-primary font-bold text-[15px]">
                     질문 {quizStep + 1} / 5
                   </span>
                   <h3 className="text-xl md:text-2xl font-bold text-slate-900 mt-2">
