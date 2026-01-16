@@ -74,6 +74,12 @@ import logoSK텔레콤 from "@assets/sk-telecom@2x_1768529318340.png";
 import logo두산 from "@assets/Doosan@2x_1768529322407.png";
 import logo서울대학교 from "@assets/서울대학교_1768529406427.png";
 import logo한국투자공사 from "@assets/image_1768529945223.png";
+import logoABL생명 from "@assets/image_1768530581002.png";
+import logo하나은행 from "@assets/하나금융@2x_1768530613316.png";
+import logoBNK부산은행 from "@assets/BNK부산@2x_1768530619079.png";
+import logoSK건설 from "@assets/image_1768530644797.png";
+import logo파수닷컴 from "@assets/Fasoo@2x_1768530651384.png";
+import logo메가스터디 from "@assets/image_1768530669250.png";
 import customPage1 from "@assets/2_1768355858073.jpg";
 import customPage2 from "@assets/img-isc03-01-kr_1768355858074.jpg";
 import customPage3 from "@assets/img-isc03-01-kr_1768355858075.png";
@@ -151,19 +157,21 @@ const allCases = [
     desc: "서버군 유지보수 및 원격지원",
     logo: logo한국투자공사,
   },
-  { company: "ABL생명", industry: ["finance"], desc: "고객 원격지원" },
-  { company: "KEB하나은행", industry: ["finance"], desc: "고객 원격지원" },
-  { company: "BNK부산은행", industry: ["finance"], desc: "고객 원격지원" },
+  { company: "ABL생명", industry: ["finance"], desc: "고객 원격지원", logo: logoABL생명 },
+  { company: "KEB하나은행", industry: ["finance"], desc: "고객 원격지원", logo: logo하나은행 },
+  { company: "BNK부산은행", industry: ["finance"], desc: "고객 원격지원", logo: logoBNK부산은행 },
   {
     company: "SK건설",
     industry: ["manufacturing"],
     desc: "해외지사 및 건설현장 원격지원",
+    logo: logoSK건설,
   },
-  { company: "파수닷컴", industry: ["it"], desc: "솔루션 이용 고객 원격지원" },
+  { company: "파수닷컴", industry: ["it"], desc: "솔루션 이용 고객 원격지원", logo: logo파수닷컴 },
   {
     company: "메가스터디",
     industry: ["education"],
     desc: "수강생 단말기 지원",
+    logo: logo메가스터디,
   },
   { company: "천재교육", industry: ["education"], desc: "교육 시스템 지원" },
   { company: "SK텔레콤", industry: ["telecom"], desc: "통신 시스템 연계 지원", logo: logoSK텔레콤 },
