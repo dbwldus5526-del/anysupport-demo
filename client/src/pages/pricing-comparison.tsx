@@ -499,7 +499,7 @@ export default function PricingComparison() {
             <table className="w-full bg-white rounded-2xl shadow-lg overflow-hidden">
               <thead>
                 <tr className="bg-slate-900 text-white">
-                  <th className="px-6 py-4 text-left font-bold text-[14px] sm:text-[16px] lg:text-[18px]">구분</th>
+                  <th className="px-6 py-4 text-left font-bold text-[14px] sm:text-[16px] lg:text-[18px] border-r border-slate-700">구분</th>
                   <th className="px-6 py-4 text-center font-bold">
                     <div className="flex flex-col items-center gap-1">
                       <Cloud size={20} />
@@ -517,7 +517,7 @@ export default function PricingComparison() {
               <tbody>
                 {comparisonData.map((row, i) => (
                   <tr key={i} className={cn("border-b border-slate-100", i % 2 === 0 && "bg-slate-50/50")}>
-                    <td className="px-6 py-4 font-semibold text-[14px] sm:text-[16px] lg:text-[18px] text-[#333]">{row.label}</td>
+                    <td className="px-6 py-4 font-semibold text-[14px] sm:text-[16px] lg:text-[18px] text-[#333] border-r border-slate-200">{row.label}</td>
                     <td className="px-6 py-4 text-center text-[14px] sm:text-[16px] lg:text-[18px] text-[#666]">
                       <HoverCard openDelay={100} closeDelay={100}>
                         <HoverCardTrigger asChild>
@@ -557,7 +557,7 @@ export default function PricingComparison() {
                   </tr>
                 ))}
                 <tr className="bg-slate-100">
-                  <td className="px-6 py-5 font-semibold text-[14px] sm:text-[16px] lg:text-[18px] text-[#333]"></td>
+                  <td className="px-6 py-5 font-semibold text-[14px] sm:text-[16px] lg:text-[18px] text-[#333] border-r border-slate-200"></td>
                   <td className="px-6 py-5 text-center">
                     <Link href="/pricing">
                       <Button className="px-6 py-2 font-bold text-[14px] sm:text-[16px]">
