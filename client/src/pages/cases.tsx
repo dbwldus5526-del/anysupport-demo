@@ -959,7 +959,7 @@ export default function Cases() {
               <Button
                 variant="outline"
                 size="lg"
-                className="font-bold"
+                className="text-[18px] text-[#666] font-semibold"
               >
                 솔루션 구축방식 자세히보기 <ArrowRight className="ml-2 w-4 h-4" />
               </Button>
