@@ -68,16 +68,12 @@ export const logos: Logo[] = [
   { id: 45, name: "한화생명", category: "글로벌/대기업", path: logoHanwha },
   { id: 39, name: "DreamSecurity", category: "글로벌/대기업", path: logoDreamSec },
   { id: 50, name: "KORAIL", category: "글로벌/대기업", path: logoKorail },
-  { id: 53, name: "SK telecom", category: "글로벌/대기업", path: logoSkTel },
   { id: 61, name: "미래에셋", category: "글로벌/대기업", path: logoMiraeAsset },
-  { id: 71, name: "LG U+", category: "글로벌/대기업", path: logoLguPlus },
   { id: 62, name: "하나금융그룹", category: "글로벌/대기업", path: logoHanaFinancial },
   { id: 37, name: "11번가", category: "글로벌/대기업", path: logo11st },
 
   // 국내 주요 기업
-  { id: 37, name: "11번가", category: "국내 주요 기업", path: logo11st },
   { id: 38, name: "Fasoo", category: "국내 주요 기업", path: logoFasoo },
-  { id: 39, name: "DreamSecurity", category: "국내 주요 기업", path: logoDreamSec },
   { id: 40, name: "SGA", category: "국내 주요 기업", path: logoSga },
   { id: 41, name: "Waterwall", category: "국내 주요 기업", path: logoWaterwall },
   { id: 59, name: "우아한형제들", category: "국내 주요 기업", path: logoWoowa },
@@ -86,18 +82,14 @@ export const logos: Logo[] = [
   { id: 42, name: "BNK부산은행", category: "금융", path: logoBnkBusan },
   { id: 43, name: "DB금융투자", category: "금융", path: logoDbSec },
   { id: 44, name: "DGB대구은행", category: "금융", path: logoDgbDaegu },
-  { id: 45, name: "한화생명", category: "금융", path: logoHanwha },
-  { id: 46, name: "KDB산업은행", category: "금융", path: logoKdbBank },
   { id: 47, name: "KDB생명", category: "금융", path: logoKdbLife },
   { id: 48, name: "SC제일은행", category: "금융", path: logoScBank },
   { id: 49, name: "메리츠증권", category: "금융", path: logoMeritz },
   { id: 60, name: "금융감독원", category: "금융", path: logoFss },
-  { id: 61, name: "미래에셋", category: "금융", path: logoMiraeAsset },
-  { id: 62, name: "하나금융그룹", category: "금융", path: logoHanaFinancial },
-  { id: 75, name: "한국은행", category: "금융", path: logoBok },
+  { id: 77, name: "한국은행", category: "금융", path: logoBok },
+  { id: 76, name: "한국투자공사", category: "금융", path: logoKIC },
 
   // 공공
-  { id: 50, name: "KORAIL", category: "공공", path: logoKorail },
   { id: 51, name: "국가보훈처", category: "공공", path: logoBohun },
   { id: 52, name: "국방과학연구소", category: "공공", path: logoDefense },
   { id: 63, name: "기획재정부", category: "공공", path: logoMoef },
@@ -111,12 +103,9 @@ export const logos: Logo[] = [
   { id: 72, name: "한국교육개발원", category: "공공", path: logoKedi },
   { id: 73, name: "한국남부발전", category: "공공", path: logoKospo },
   { id: 74, name: "한국동서발전", category: "공공", path: logoEwp },
+  { id: 78, name: "서울대학교", category: "공공", path: logoSeoulUniv },
 
   // 통신
-  { id: 53, name: "SK telecom", category: "통신", path: logoSkTel },
-  { id: 71, name: "LG U+", category: "통신", path: logoLguPlus },
-
-  // 추가
-  { id: 75, name: "서울대학교", category: "공공", path: logoSeoulUniv },
-  { id: 76, name: "한국투자공사", category: "금융", path: logoKIC },
+  { id: 79, name: "SK telecom", category: "통신", path: logoSkTel },
+  { id: 80, name: "LG U+", category: "통신", path: logoLguPlus },
 ];
