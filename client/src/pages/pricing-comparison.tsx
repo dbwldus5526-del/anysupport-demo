@@ -495,7 +495,7 @@ export default function PricingComparison() {
             </p>
           </div>
 
-          <div className="max-w-5xl mx-auto overflow-x-auto">
+          <div className="max-w-6xl mx-auto overflow-x-auto">
             <table className="w-full bg-white rounded-2xl shadow-lg overflow-hidden">
               <thead>
                 <tr className="bg-slate-900 text-white">
