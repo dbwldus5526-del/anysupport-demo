@@ -44,6 +44,8 @@ import logoKedi from "@assets/한국교육개발@2x_1767763259885.png";
 import logoKospo from "@assets/한국남부발전@2x_1767763259885.png";
 import logoEwp from "@assets/한국동서발전@2x_1767763259886.png";
 import logoBok from "@assets/한국은행@2x_1767763259886.png";
+import logoSeoulUniv from "@assets/3-1-1_1768531337398.png";
+import logoKIC from "@assets/koreainvestmentcorp_logo_1768531344266.jpeg";
 
 export interface Logo {
   id: number;
@@ -114,4 +116,8 @@ export const logos: Logo[] = [
   // 통신
   { id: 53, name: "SK telecom", category: "통신", path: logoSkTel },
   { id: 71, name: "LG U+", category: "통신", path: logoLguPlus },
+
+  // 추가
+  { id: 75, name: "서울대학교", category: "공공", path: logoSeoulUniv },
+  { id: 76, name: "한국투자공사", category: "금융", path: logoKIC },
 ];
