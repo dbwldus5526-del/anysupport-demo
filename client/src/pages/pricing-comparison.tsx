@@ -406,7 +406,7 @@ export default function PricingComparison() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {deploymentOptions.map((option, i) => (
               <div
                 key={i}
