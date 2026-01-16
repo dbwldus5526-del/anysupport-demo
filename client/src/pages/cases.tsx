@@ -68,6 +68,12 @@ import logoKDB생명 from "@assets/KDB생명@2x_1768206638134.png";
 import logo한화생명 from "@assets/Hanwha@2x_1768206650889.png";
 import logo서울특별시 from "@assets/서울특별시@2x_1768206671468.png";
 import logo기획재정부 from "@assets/기획재정부@2x_1768206679624.png";
+import logo통계청 from "@assets/통계청@2x_1768529297259.png";
+import logo삼성SDS from "@assets/삼성sds@2x_1768529309501.png";
+import logoSK텔레콤 from "@assets/sk-telecom@2x_1768529318340.png";
+import logo두산 from "@assets/Doosan@2x_1768529322407.png";
+import logo서울대학교 from "@assets/서울대학교_1768529406427.png";
+import logo한국투자공사 from "@assets/image_1768529945223.png";
 import customPage1 from "@assets/2_1768355858073.jpg";
 import customPage2 from "@assets/img-isc03-01-kr_1768355858074.jpg";
 import customPage3 from "@assets/img-isc03-01-kr_1768355858075.png";
@@ -124,23 +130,26 @@ const allCases = [
     company: "통계청",
     industry: ["public"],
     desc: "나라통계시스템 이용 고객 원격지원",
+    logo: logo통계청,
   },
   {
-    company: "삼성전자",
-    industry: ["manufacturing", "it"],
+    company: "삼성SDS",
+    industry: ["it"],
     desc: "시스템 연계 지원",
+    logo: logo삼성SDS,
   },
   {
     company: "SK플래닛",
     industry: ["it", "telecom"],
     desc: "솔루션 연계 지원",
   },
-  { company: "두산", industry: ["manufacturing"], desc: "그룹 전산지원" },
-  { company: "서울대학교", industry: ["education"], desc: "내부 시스템 지원" },
+  { company: "두산", industry: ["manufacturing"], desc: "그룹 전산지원", logo: logo두산 },
+  { company: "서울대학교", industry: ["education"], desc: "내부 시스템 지원", logo: logo서울대학교 },
   {
     company: "한국투자공사",
     industry: ["finance"],
     desc: "서버군 유지보수 및 원격지원",
+    logo: logo한국투자공사,
   },
   { company: "ABL생명", industry: ["finance"], desc: "고객 원격지원" },
   { company: "KEB하나은행", industry: ["finance"], desc: "고객 원격지원" },
@@ -157,7 +166,7 @@ const allCases = [
     desc: "수강생 단말기 지원",
   },
   { company: "천재교육", industry: ["education"], desc: "교육 시스템 지원" },
-  { company: "SK텔레콤", industry: ["telecom"], desc: "통신 시스템 연계 지원" },
+  { company: "SK텔레콤", industry: ["telecom"], desc: "통신 시스템 연계 지원", logo: logoSK텔레콤 },
   { company: "KT", industry: ["telecom"], desc: "고객 서비스 지원" },
   { company: "LG유플러스", industry: ["telecom"], desc: "원격 고객 지원" },
   {
