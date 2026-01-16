@@ -57,7 +57,7 @@ export default function Pricing() {
         "PREMIUM의 모든기능",
         "Android, iOS 실시간 지원",
         "최신 네트워크 지원 (3G/4G/5G/Wi-Fi)",
-        "실시간 제빙 기능"
+        "실시간 채팅 기능"
       ]
     },
     {
