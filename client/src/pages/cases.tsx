@@ -363,14 +363,15 @@ export default function Cases() {
               >
                 도입 상담 문의 <ArrowRight className="ml-2" />
               </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                onClick={openContactModal}
-                className="h-14 px-8 text-lg font-bold border-white/30 text-white hover:bg-white/10"
-              >
-                보안·인증 자료 요청
-              </Button>
+              <Link href="/solution/security">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="h-14 px-8 text-lg font-bold border-white/30 text-white hover:bg-white/10"
+                >
+                  보안·인증 자료 요청
+                </Button>
+              </Link>
             </div>
 
             {/* Trust Badges */}
