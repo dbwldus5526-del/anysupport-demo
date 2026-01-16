@@ -90,7 +90,7 @@ export default function Pricing() {
         <div className="container mx-auto px-4 md:px-6 relative z-10 text-center">
           <div className="max-w-3xl mx-auto">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 text-primary border border-primary/30 mb-6">
-              <span className="font-bold tracking-wider text-[#ffffff] text-[16px]">애니서포트 구독형 [SaaS]</span>
+              <span className="tracking-wider text-[#ffffff] font-medium text-[18px]">애니서포트 구독형 [SaaS]</span>
             </div>
             <h1 className="text-3xl md:text-6xl font-black mb-6 leading-tight">
               합리적인 가격으로<br />
