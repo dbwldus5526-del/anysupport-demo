@@ -81,6 +81,7 @@ import logoSK건설 from "@assets/image_1768530644797.png";
 import logo파수닷컴 from "@assets/Fasoo@2x_1768530651384.png";
 import logo메가스터디 from "@assets/image_1768530669250.png";
 import logo천재교육 from "@assets/천재교육_1768530799031.png";
+import logoSK플래닛 from "@assets/image_1768530829853.png";
 import customPage1 from "@assets/2_1768355858073.jpg";
 import customPage2 from "@assets/img-isc03-01-kr_1768355858074.jpg";
 import customPage3 from "@assets/img-isc03-01-kr_1768355858075.png";
@@ -149,6 +150,7 @@ const allCases = [
     company: "SK플래닛",
     industry: ["it", "telecom"],
     desc: "솔루션 연계 지원",
+    logo: logoSK플래닛,
   },
   { company: "두산", industry: ["manufacturing"], desc: "그룹 전산지원", logo: logo두산 },
   { company: "서울대학교", industry: ["education"], desc: "내부 시스템 지원", logo: logo서울대학교 },
