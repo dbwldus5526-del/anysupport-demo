@@ -68,7 +68,6 @@ export const logos: Logo[] = [
   { id: 45, name: "한화생명", category: "글로벌/대기업", path: logoHanwha },
   { id: 39, name: "DreamSecurity", category: "글로벌/대기업", path: logoDreamSec },
   { id: 50, name: "KORAIL", category: "글로벌/대기업", path: logoKorail },
-  { id: 49, name: "메리츠증권", category: "글로벌/대기업", path: logoMeritz },
   { id: 53, name: "SK telecom", category: "글로벌/대기업", path: logoSkTel },
   { id: 61, name: "미래에셋", category: "글로벌/대기업", path: logoMiraeAsset },
   { id: 71, name: "LG U+", category: "글로벌/대기업", path: logoLguPlus },
