@@ -955,14 +955,15 @@ export default function Cases() {
           </motion.div>
 
           <div className="text-center mt-10">
-            <Button
-              variant="outline"
-              size="lg"
-              onClick={openModal}
-              className="font-bold"
-            >
-              전체 도입사례 보기 <ArrowRight className="ml-2 w-4 h-4" />
-            </Button>
+            <Link href="/pricing-comparison">
+              <Button
+                variant="outline"
+                size="lg"
+                className="font-bold"
+              >
+                솔루션 구축방식 자세히보기 <ArrowRight className="ml-2 w-4 h-4" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
