@@ -123,7 +123,7 @@ export default function PricingComparison() {
     // 기본값 -> SaaS
     return {
       type: "saas",
-      title: "✅ SaaS(ASP) 서비스 방식",
+      title: "SaaS(ASP) 서비스 방식",
       reason: "외부망 중심 환경, 빠른 도입과 낮은 초기 비용, 서버 구축 없이 즉시 사용 가능",
       features: ["코이노 IDC 인프라 사용", "상담원 ID 기준 구독형", "자동 업데이트 / 유지보수 무상"],
       cta1: { label: "무료 체험 신청", action: "modal" },
@@ -153,43 +153,30 @@ export default function PricingComparison() {
   const deploymentOptions = [
     {
       type: "saas",
-      title: "SaaS (구독형)",
+      title: "SaaS (서비스형)",
       tagline: "빠른 도입, 운영 부담 최소",
       icon: Cloud,
       color: "from-blue-500 to-blue-600",
       suitable: "중소기업, 스타트업, 빠른 도입이 필요한 조직",
-      features: ["즉시 사용 가능", "자동 업데이트/유지보수", "초기 비용 최소화"],
+      features: ["즉시 사용 가능 (별도 서버 불필요)", "자동 업데이트 및 유지보수 포함", "월 구독료 기반 초기 비용 최소화", "클라우드 기반 안정적 운영"],
     },
     {
       type: "onprem",
-      title: "구축형 (On-Premise)",
+      title: "구축형 (솔루션형)",
       tagline: "내부망/보안정책 최우선",
       icon: Server,
       color: "from-slate-700 to-slate-800",
       suitable: "금융, 공공기관, 대기업, 망분리 환경",
-      features: ["내부망 완벽 지원", "데이터 내부 저장", "최고 수준 보안"],
-    },
-    {
-      type: "sdk",
-      title: "연동형 (ASP/SDK)",
-      tagline: "기존 서비스에 내장",
-      icon: Code,
-      color: "from-primary to-primary/80",
-      suitable: "플랫폼 사업자, 자체 서비스 보유 기업",
-      features: ["SDK/API 제공", "화이트라벨 가능", "완전한 커스터마이징"],
+      features: ["고객사 서버에 직접 설치", "내부망/폐쇄망 완벽 지원", "데이터 내부 저장으로 최고 보안", "영구 라이선스 구매 가능"],
     },
   ];
 
   const comparisonData = [
-    { label: "도입 속도", saas: "빠름 (즉시)", onprem: "중간 (2-4주)", sdk: "맞춤 (프로젝트)" },
-    { label: "보안 정책 적합", saas: "표준", onprem: "최고", sdk: "맞춤" },
-    { label: "데이터/로그 저장", saas: "클라우드", onprem: "내부 서버", sdk: "선택 가능" },
-    { label: "망분리/내부망", saas: "제약 있음", onprem: "완벽 지원", sdk: "구성에 따라" },
-    { label: "커스터마이징", saas: "보통", onprem: "높음", sdk: "최고" },
-    { label: "운영/유지보수", saas: "낮음 (자동)", onprem: "중간~높음", sdk: "중간" },
-    { label: "시스템 연동", saas: "보통", onprem: "보통", sdk: "최고" },
-    { label: "권장 대상", saas: "중소~일반", onprem: "금융/공공", sdk: "플랫폼 사업자" },
-    { label: "비용 구조", saas: "월 구독료", onprem: "초기+유지비", sdk: "프로젝트+유지" },
+    { label: "운영 방식", saas: "코이노 클라우드에서 운영", onprem: "고객사 서버에 직접 설치·운영" },
+    { label: "보안", saas: "표준 보안 (암호화, 접근통제)", onprem: "최고 수준 (내부망, 데이터 내부 저장)" },
+    { label: "비용", saas: "월 구독료 (초기 비용 최소)", onprem: "초기 구축비 + 연간 유지보수비" },
+    { label: "도입 속도", saas: "즉시 사용 가능", onprem: "2~4주 (설치 및 구성)" },
+    { label: "적합 대상", saas: "중소기업, 스타트업, 빠른 도입 필요", onprem: "금융, 공공, 대기업, 망분리 환경" },
   ];
 
   const securityFeatures = [
@@ -481,20 +468,13 @@ export default function PricingComparison() {
                   <th className="px-6 py-4 text-center font-bold">
                     <div className="flex flex-col items-center gap-1">
                       <Cloud size={20} />
-                      <span className="text-[14px] sm:text-[16px] lg:text-[18px]">SaaS</span>
+                      <span className="text-[14px] sm:text-[16px] lg:text-[18px]">SaaS (서비스형)</span>
                     </div>
                   </th>
                   <th className="px-6 py-4 text-center font-bold bg-primary">
                     <div className="flex flex-col items-center gap-1">
                       <Server size={20} />
-                      <span className="text-[14px] sm:text-[16px] lg:text-[18px]">구축형</span>
-                      <span className="text-[10px] bg-white/20 px-2 py-0.5 rounded-full">추천</span>
-                    </div>
-                  </th>
-                  <th className="px-6 py-4 text-center font-bold">
-                    <div className="flex flex-col items-center gap-1">
-                      <Code size={20} />
-                      <span className="text-[14px] sm:text-[16px] lg:text-[18px]">연동형</span>
+                      <span className="text-[14px] sm:text-[16px] lg:text-[18px]">구축형 (솔루션형)</span>
                     </div>
                   </th>
                 </tr>
@@ -505,7 +485,6 @@ export default function PricingComparison() {
                     <td className="px-6 py-4 font-semibold text-[14px] sm:text-[16px] lg:text-[18px] text-[#333]">{row.label}</td>
                     <td className="px-6 py-4 text-center text-[14px] sm:text-[16px] lg:text-[18px] text-[#666]">{row.saas}</td>
                     <td className="px-6 py-4 text-center font-medium bg-primary/5 text-[14px] sm:text-[16px] lg:text-[18px] text-[#333]">{row.onprem}</td>
-                    <td className="px-6 py-4 text-center text-[14px] sm:text-[16px] lg:text-[18px] text-[#666]">{row.sdk}</td>
                   </tr>
                 ))}
               </tbody>
