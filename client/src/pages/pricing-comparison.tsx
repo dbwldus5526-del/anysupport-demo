@@ -3,6 +3,11 @@ import { Button } from "@/components/ui/button";
 import { useModal } from "@/context/ModalContext";
 import { Link } from "wouter";
 import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from "@/components/ui/hover-card";
+import {
   ArrowRight,
   CheckCircle2,
   Shield,
@@ -172,11 +177,41 @@ export default function PricingComparison() {
   ];
 
   const comparisonData = [
-    { label: "운영 방식", saas: "코이노 클라우드에서 운영", onprem: "고객사 서버에 직접 설치·운영" },
-    { label: "보안", saas: "표준 보안 (암호화, 접근통제)", onprem: "최고 수준 (내부망, 데이터 내부 저장)" },
-    { label: "비용", saas: "월 구독료 (초기 비용 최소)", onprem: "초기 구축비 + 연간 유지보수비" },
-    { label: "도입 속도", saas: "즉시 사용 가능", onprem: "2~4주 (설치 및 구성)" },
-    { label: "적합 대상", saas: "중소기업, 스타트업, 빠른 도입 필요", onprem: "금융, 공공, 대기업, 망분리 환경" },
+    { 
+      label: "운영 방식", 
+      saas: "코이노 클라우드에서 운영", 
+      saasDetail: "코이노가 운영하는 안전한 IDC 인프라에서 서비스가 운영됩니다. 별도 서버 구축 없이 계정만 생성하면 바로 사용할 수 있으며, 시스템 관리 부담이 없습니다.",
+      onprem: "고객사 서버에 직접 설치·운영",
+      onpremDetail: "고객사 내부 서버 또는 데이터센터에 직접 설치하여 운영합니다. IT팀에서 직접 시스템을 관리하며, 내부 정책에 맞게 커스터마이징이 가능합니다."
+    },
+    { 
+      label: "보안", 
+      saas: "표준 보안 (암호화, 접근통제)", 
+      saasDetail: "AES-256 암호화, 역할 기반 접근통제(RBAC), 감사 로그 등 엔터프라이즈급 보안이 기본 제공됩니다. ISO 27001 인증을 받은 환경에서 운영됩니다.",
+      onprem: "최고 수준 (내부망, 데이터 내부 저장)",
+      onpremDetail: "모든 데이터가 사내 서버에 저장되어 외부 유출 위험이 없습니다. 내부망/폐쇄망 환경을 완벽 지원하며, 금융감독원·ISMS 등 규제 요건을 충족합니다."
+    },
+    { 
+      label: "비용", 
+      saas: "월 구독료 (초기 비용 최소)", 
+      saasDetail: "사용자 수 기준 월정액 방식으로 초기 투자 비용이 거의 없습니다. 유지보수, 업데이트, 인프라 비용이 모두 포함되어 총소유비용(TCO)을 예측하기 쉽습니다.",
+      onprem: "초기 구축비 + 연간 유지보수비",
+      onpremDetail: "초기 라이선스 구매비와 설치 비용이 발생하며, 연간 유지보수 계약을 통해 업데이트와 기술지원을 받습니다. 장기 사용 시 비용 효율이 높아집니다."
+    },
+    { 
+      label: "도입 속도", 
+      saas: "즉시 사용 가능", 
+      saasDetail: "계약 후 계정 발급까지 1일 이내에 완료됩니다. 별도의 설치나 구성 작업 없이 웹 브라우저에서 바로 사용을 시작할 수 있습니다.",
+      onprem: "2~4주 (설치 및 구성)",
+      onpremDetail: "서버 준비, 네트워크 구성, 솔루션 설치, 연동 테스트 등의 과정이 필요합니다. 전담 엔지니어가 현장 방문하여 안정적인 구축을 지원합니다."
+    },
+    { 
+      label: "적합 대상", 
+      saas: "중소기업, 스타트업, 빠른 도입 필요", 
+      saasDetail: "IT 인력이 적거나 빠르게 원격지원을 시작해야 하는 조직에 적합합니다. 인원 변동에 따라 유연하게 라이선스를 조정할 수 있습니다.",
+      onprem: "금융, 공공, 대기업, 망분리 환경",
+      onpremDetail: "규제 준수가 필수인 금융/공공기관, 내부망 운영 기업, 대규모 사용자를 보유한 대기업에 적합합니다. 보안 감사 및 컴플라이언스 요구사항을 충족합니다."
+    },
   ];
 
   const securityFeatures = [
@@ -483,8 +518,42 @@ export default function PricingComparison() {
                 {comparisonData.map((row, i) => (
                   <tr key={i} className={cn("border-b border-slate-100", i % 2 === 0 && "bg-slate-50/50")}>
                     <td className="px-6 py-4 font-semibold text-[14px] sm:text-[16px] lg:text-[18px] text-[#333]">{row.label}</td>
-                    <td className="px-6 py-4 text-center text-[14px] sm:text-[16px] lg:text-[18px] text-[#666]">{row.saas}</td>
-                    <td className="px-6 py-4 text-center font-medium bg-primary/5 text-[14px] sm:text-[16px] lg:text-[18px] text-[#333]">{row.onprem}</td>
+                    <td className="px-6 py-4 text-center text-[14px] sm:text-[16px] lg:text-[18px] text-[#666]">
+                      <HoverCard openDelay={100} closeDelay={100}>
+                        <HoverCardTrigger asChild>
+                          <span className="cursor-help border-b border-dashed border-slate-400 hover:text-primary transition-colors">
+                            {row.saas}
+                          </span>
+                        </HoverCardTrigger>
+                        <HoverCardContent side="right" className="w-80 p-4">
+                          <div className="space-y-2">
+                            <div className="flex items-center gap-2">
+                              <Cloud size={18} className="text-blue-500" />
+                              <h4 className="font-bold text-slate-900">{row.label} - SaaS</h4>
+                            </div>
+                            <p className="text-sm text-slate-600 leading-relaxed">{row.saasDetail}</p>
+                          </div>
+                        </HoverCardContent>
+                      </HoverCard>
+                    </td>
+                    <td className="px-6 py-4 text-center font-medium bg-primary/5 text-[14px] sm:text-[16px] lg:text-[18px] text-[#333]">
+                      <HoverCard openDelay={100} closeDelay={100}>
+                        <HoverCardTrigger asChild>
+                          <span className="cursor-help border-b border-dashed border-slate-400 hover:text-primary transition-colors">
+                            {row.onprem}
+                          </span>
+                        </HoverCardTrigger>
+                        <HoverCardContent side="left" className="w-80 p-4">
+                          <div className="space-y-2">
+                            <div className="flex items-center gap-2">
+                              <Server size={18} className="text-slate-700" />
+                              <h4 className="font-bold text-slate-900">{row.label} - 구축형</h4>
+                            </div>
+                            <p className="text-sm text-slate-600 leading-relaxed">{row.onpremDetail}</p>
+                          </div>
+                        </HoverCardContent>
+                      </HoverCard>
+                    </td>
                   </tr>
                 ))}
               </tbody>
