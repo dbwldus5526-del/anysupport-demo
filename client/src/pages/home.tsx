@@ -327,6 +327,7 @@ export function Home() {
   const { openModal, openContactModal } = useModal();
   const [activeDevice, setActiveDevice] = useState("agent");
   const [hoveredSpot, setHoveredSpot] = useState<number | null>(null);
+  const [hoveredProductCard, setHoveredProductCard] = useState<number | null>(null);
 
   const deviceViewItems = [
     {
@@ -436,40 +437,45 @@ export function Home() {
                 hoverDesc: "고객의 카메라를 통해 현장 상황을 실시간으로 확인하며 음성과 영상으로 문제 해결을 안내합니다. 현장 방문 없이도 생생한 지원이 가능합니다.",
                 href: "/product/video",
               },
-            ].map((item, i) => (
-              <div
-                key={i}
-                className="overflow-hidden rounded-2xl border border-slate-200 bg-[#f7f8fc] flex flex-col group hover:border-primary/30 transition-colors cursor-pointer h-full"
-                data-testid={`link-solution-${item.title}`}
-              >
-                <div className="h-56 sm:h-64 overflow-hidden relative">
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent opacity-60 group-hover:opacity-0 transition-opacity duration-300" />
-                  <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-6 text-center">
-                    <p className="text-white text-[14px] sm:text-[16px] leading-relaxed mb-4">
-                      {item.hoverDesc}
+            ].map((item, i) => {
+              const isActive = hoveredProductCard === null ? i === 0 : hoveredProductCard === i;
+              return (
+                <div
+                  key={i}
+                  className={`overflow-hidden rounded-2xl border bg-[#f7f8fc] flex flex-col transition-colors cursor-pointer h-full ${isActive ? 'border-primary/30' : 'border-slate-200 hover:border-primary/30'}`}
+                  data-testid={`link-solution-${item.title}`}
+                  onMouseEnter={() => setHoveredProductCard(i)}
+                  onMouseLeave={() => setHoveredProductCard(null)}
+                >
+                  <div className="h-56 sm:h-64 overflow-hidden relative">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className={`w-full h-full object-cover transition-transform duration-500 ${isActive ? 'scale-105' : ''}`}
+                    />
+                    <div className={`absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent transition-opacity duration-300 ${isActive ? 'opacity-0' : 'opacity-60'}`} />
+                    <div className={`absolute inset-0 bg-black/60 transition-opacity duration-300 flex flex-col items-center justify-center p-6 text-center ${isActive ? 'opacity-100' : 'opacity-0'}`}>
+                      <p className="text-white text-[14px] sm:text-[16px] leading-relaxed mb-4">
+                        {item.hoverDesc}
+                      </p>
+                      <Link href={item.href}>
+                        <Button size="sm" className="bg-white text-primary hover:bg-slate-100 text-[16px] font-medium">
+                          제품 자세히보기 <ArrowRight className="ml-1 w-4 h-4" />
+                        </Button>
+                      </Link>
+                    </div>
+                  </div>
+                  <div className="p-6 sm:p-8 text-center border-t border-slate-50 flex-1">
+                    <h3 className={`text-lg lg:text-2xl font-bold mb-1 sm:mb-2 transition-colors ${isActive ? 'text-primary' : ''}`}>
+                      {item.title}
+                    </h3>
+                    <p className="text-[#666] text-[14px] sm:text-[16px] lg:text-[18px]">
+                      {item.desc}
                     </p>
-                    <Link href={item.href}>
-                      <Button size="sm" className="bg-white text-primary hover:bg-slate-100 text-[16px] font-medium">
-                        제품 자세히보기 <ArrowRight className="ml-1 w-4 h-4" />
-                      </Button>
-                    </Link>
                   </div>
                 </div>
-                <div className="p-6 sm:p-8 text-center border-t border-slate-50 flex-1">
-                  <h3 className="text-lg lg:text-2xl font-bold mb-1 sm:mb-2 group-hover:text-primary transition-colors">
-                    {item.title}
-                  </h3>
-                  <p className="text-[#666] text-[14px] sm:text-[16px] lg:text-[18px]">
-                    {item.desc}
-                  </p>
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
