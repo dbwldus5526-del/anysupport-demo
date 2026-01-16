@@ -92,7 +92,7 @@ export default function UseCasesLogos() {
                   <img
                     src={logo.path}
                     alt={`${logo.name} 로고`}
-                    className="max-h-16 w-full object-contain transition-all duration-300"
+                    className={`w-full object-contain transition-all duration-300 ${logo.name === "신한카드" ? "max-h-10" : "max-h-16"}`}
                     onError={(e) => {
                       const target = e.target as HTMLImageElement;
                       target.src = `https://placehold.co/200x80/f8fafc/64748b?text=${logo.name}`;
