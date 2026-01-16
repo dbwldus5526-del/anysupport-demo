@@ -784,7 +784,7 @@ export function Home() {
             <Button 
               size="lg" 
               onClick={openModal}
-              className="h-12 px-6 sm:h-14 sm:px-10 text-base sm:text-lg shadow-xl shadow-primary/20 font-semibold"
+              className="h-12 px-6 sm:h-14 sm:px-10 text-base sm:text-lg shadow-xl shadow-primary/20 font-semibold text-[#ffdd00]"
             >
               <Clock className="mr-2 w-5 h-5" />
               애니서포트, 14일간 제한 없이 써보세요
