@@ -1018,7 +1018,7 @@ export default function Cases() {
             <div className="text-center mt-10">
               <a href="/attached_assets/anysupport_customer_access_page_1768356267317.pdf" target="_blank" rel="noopener noreferrer">
                 <Button size="lg" className="bg-[#f0f0f0] text-[#333] font-medium border-slate-300 hover:bg-slate-200 text-[18px]">
-                  전용페이지 자세히 보기 <ArrowRight className="ml-2 w-4 h-4" />
+                  전용페이지 자세히 보기(PDF) <ArrowRight className="ml-2 w-4 h-4" />
                 </Button>
               </a>
             </div>
