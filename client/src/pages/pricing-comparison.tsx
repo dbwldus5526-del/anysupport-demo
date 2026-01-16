@@ -344,7 +344,7 @@ export default function PricingComparison() {
                   "rounded-2xl p-6 md:p-8 text-white mb-6",
                   getRecommendation().type === "saas" && "bg-gradient-to-br from-blue-500 to-blue-600",
                   getRecommendation().type === "solution" && "bg-gradient-to-br from-slate-700 to-slate-800",
-                  getRecommendation().type === "solution_security" && "bg-gradient-to-br from-red-600 to-red-700"
+                  getRecommendation().type === "solution_security" && "bg-gradient-to-br from-indigo-600 to-indigo-700"
                 )}>
                   <div className="text-white/70 font-medium mb-2 text-[14px] sm:text-[16px] lg:text-[18px]">
                     추천 도입 방식
