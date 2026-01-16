@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { useModal } from "@/context/ModalContext";
 import { Switch } from "@/components/ui/switch";
@@ -96,10 +97,28 @@ export default function Pricing() {
               합리적인 가격으로<br />
               <span className="text-primary text-glow">비즈니스 가치를 높이세요</span>
             </h1>
-            <p className="text-base md:text-xl text-slate-300 mb-4 font-medium leading-relaxed">
+            <p className="text-base md:text-xl text-slate-300 mb-8 font-medium leading-relaxed">
               귀사의 규모와 필요에 맞는 최적의 플랜을 선택하세요.<br className="hidden md:block" />
               모든 플랜은 14일 무료 체험이 가능합니다.
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button
+                size="lg"
+                onClick={openModal}
+                className="h-14 px-8 text-lg font-bold shadow-xl shadow-primary/20"
+              >
+                무료체험 하기 <ArrowRight className="ml-2" />
+              </Button>
+              <Link href="/pricing-comparison">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="h-14 px-8 text-lg font-bold border-white/30 text-white hover:bg-white/10"
+                >
+                  도입방식 비교하기
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
