@@ -80,6 +80,7 @@ import logoBNK부산은행 from "@assets/BNK부산@2x_1768530619079.png";
 import logoSK건설 from "@assets/image_1768530644797.png";
 import logo파수닷컴 from "@assets/Fasoo@2x_1768530651384.png";
 import logo메가스터디 from "@assets/image_1768530669250.png";
+import logo천재교육 from "@assets/천재교육_1768530799031.png";
 import customPage1 from "@assets/2_1768355858073.jpg";
 import customPage2 from "@assets/img-isc03-01-kr_1768355858074.jpg";
 import customPage3 from "@assets/img-isc03-01-kr_1768355858075.png";
@@ -173,7 +174,7 @@ const allCases = [
     desc: "수강생 단말기 지원",
     logo: logo메가스터디,
   },
-  { company: "천재교육", industry: ["education"], desc: "교육 시스템 지원" },
+  { company: "천재교육", industry: ["education"], desc: "교육 시스템 지원", logo: logo천재교육 },
   { company: "SK텔레콤", industry: ["telecom"], desc: "통신 시스템 연계 지원", logo: logoSK텔레콤 },
   { company: "KT", industry: ["telecom"], desc: "고객 서비스 지원" },
   { company: "LG유플러스", industry: ["telecom"], desc: "원격 고객 지원" },
@@ -943,7 +944,7 @@ export default function Cases() {
                     <img
                       src={caseItem.logo}
                       alt={caseItem.company}
-                      className="h-10 w-auto object-contain"
+                      className={`w-auto object-contain ${caseItem.company === "ABL생명" ? "h-7" : "h-10"}`}
                     />
                   ) : (
                     <div className="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center group-hover:bg-primary/10 transition-colors">
