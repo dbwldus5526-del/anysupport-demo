@@ -566,7 +566,7 @@ export default function PricingComparison() {
                     </Link>
                   </td>
                   <td className="px-6 py-5 text-center bg-primary/5">
-                    <Button onClick={openModal} variant="outline" className="px-6 py-2 font-bold text-[14px] sm:text-[16px] border-primary text-primary hover:bg-primary hover:text-white">
+                    <Button onClick={openModal} className="px-6 py-2 font-bold text-[14px] sm:text-[16px]">
                       도입 문의하기 <ArrowRight className="ml-2" size={16} />
                     </Button>
                   </td>
