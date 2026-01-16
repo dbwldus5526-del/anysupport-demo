@@ -26,6 +26,7 @@ import { ModalProvider } from "@/context/ModalContext";
 import { GetStartedModal } from "@/components/modals/GetStartedModal";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { ScrollToTopButton } from "@/components/ui/scroll-to-top-button";
 
 function ScrollToTop() {
   const [location] = useLocation();
@@ -69,6 +70,7 @@ function Router() {
       </main>
       <Footer />
       <GetStartedModal />
+      <ScrollToTopButton />
     </div>
   );
 }
