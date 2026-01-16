@@ -82,6 +82,10 @@ import logo파수닷컴 from "@assets/Fasoo@2x_1768530651384.png";
 import logo메가스터디 from "@assets/image_1768530669250.png";
 import logo천재교육 from "@assets/천재교육_1768530799031.png";
 import logoSK플래닛 from "@assets/image_1768530829853.png";
+import logoKT from "@assets/image_1768530931511.png";
+import logoLG유플러스 from "@assets/아트보드_17@2x_1768530937237.png";
+import logo현대건설 from "@assets/현대건설_1768530987594.png";
+import logo포스코 from "@assets/posco@2x_1768530992726.png";
 import customPage1 from "@assets/2_1768355858073.jpg";
 import customPage2 from "@assets/img-isc03-01-kr_1768355858074.jpg";
 import customPage3 from "@assets/img-isc03-01-kr_1768355858075.png";
@@ -178,14 +182,15 @@ const allCases = [
   },
   { company: "천재교육", industry: ["education"], desc: "교육 시스템 지원", logo: logo천재교육 },
   { company: "SK텔레콤", industry: ["telecom"], desc: "통신 시스템 연계 지원", logo: logoSK텔레콤 },
-  { company: "KT", industry: ["telecom"], desc: "고객 서비스 지원" },
-  { company: "LG유플러스", industry: ["telecom"], desc: "원격 고객 지원" },
+  { company: "KT", industry: ["telecom"], desc: "고객 서비스 지원", logo: logoKT },
+  { company: "LG유플러스", industry: ["telecom"], desc: "원격 고객 지원", logo: logoLG유플러스 },
   {
     company: "현대건설",
     industry: ["manufacturing"],
     desc: "건설현장 원격지원",
+    logo: logo현대건설,
   },
-  { company: "포스코", industry: ["manufacturing"], desc: "제조 시스템 지원" },
+  { company: "포스코", industry: ["manufacturing"], desc: "제조 시스템 지원", logo: logo포스코 },
 ];
 
 const scenarios = [
