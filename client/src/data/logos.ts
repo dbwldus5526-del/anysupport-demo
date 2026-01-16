@@ -46,6 +46,10 @@ import logoEwp from "@assets/한국동서발전@2x_1767763259886.png";
 import logoBok from "@assets/한국은행@2x_1767763259886.png";
 import logoSeoulUniv from "@assets/3-1-1_1768531337398.png";
 import logoKIC from "@assets/koreainvestmentcorp_logo_1768531344266.jpeg";
+import logoHyundaiEC from "@assets/현대건설_1768531646453.png";
+import logoMegastudy from "@assets/image_1768531691934.png";
+import logoShinhanCard from "@assets/image_1768531740791.png";
+import logoCJ from "@assets/image_1768531782011.png";
 
 export interface Logo {
   id: number;
@@ -108,4 +112,10 @@ export const logos: Logo[] = [
   // 통신
   { id: 79, name: "SK telecom", category: "통신", path: logoSkTel },
   { id: 80, name: "LG U+", category: "통신", path: logoLguPlus },
+
+  // 추가
+  { id: 81, name: "현대건설", category: "글로벌/대기업", path: logoHyundaiEC },
+  { id: 82, name: "메가스터디", category: "국내 주요 기업", path: logoMegastudy },
+  { id: 83, name: "신한카드", category: "금융", path: logoShinhanCard },
+  { id: 84, name: "CJ", category: "글로벌/대기업", path: logoCJ },
 ];
