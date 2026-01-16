@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { useModal } from "@/context/ModalContext";
+import { Link } from "wouter";
 import {
   ArrowRight,
   CheckCircle2,
@@ -19,17 +20,23 @@ import {
   Award,
   HelpCircle,
   ChevronRight,
+  Globe,
+  Zap,
+  Settings,
+  CreditCard,
+  Clock,
+  ShieldCheck,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-type QuizStep = 0 | 1 | 2 | 3 | 4 | 5;
+type QuizStep = 0 | 1 | 2 | 3 | 4;
 
 interface QuizAnswer {
-  environment?: "internal" | "external" | "hybrid";
-  security?: "high" | "normal";
-  dataLocation?: "cloud" | "internal";
-  scale?: "small" | "medium" | "large";
-  integration?: boolean;
+  environment?: "external" | "internal" | "hybrid";
+  security?: "standard" | "enhanced" | "highest";
+  priority?: "speed" | "control";
+  infrastructure?: "no_server" | "own_server";
+  license?: "subscription" | "permanent";
 }
 
 export default function PricingComparison() {
@@ -41,75 +48,86 @@ export default function PricingComparison() {
 
   const questions = [
     {
-      question: "원격지원 접속 환경은 어떻게 되나요?",
+      question: "원격지원 대상 시스템은 어떤 환경인가요?",
       options: [
-        { value: "internal", label: "내부망 (망분리 환경)", icon: Server },
-        { value: "external", label: "외부망 (인터넷)", icon: Cloud },
-        { value: "hybrid", label: "혼합 (내부+외부)", icon: Code },
+        { value: "external", label: "외부망(인터넷) PC 위주", icon: Globe },
+        { value: "internal", label: "내부망(망분리/폐쇄망) PC 포함", icon: Server },
+        { value: "hybrid", label: "내부망 + 외부망 혼합 환경", icon: Code },
       ],
       key: "environment" as const,
     },
     {
-      question: "보안 요구 수준은 어느 정도인가요?",
+      question: "조직의 보안 정책 수준은 어느 정도인가요?",
       options: [
-        { value: "high", label: "높음 (ISO/감사/접근통제 필수)", icon: Shield },
-        { value: "normal", label: "보통 (일반적인 보안 수준)", icon: Lock },
+        { value: "standard", label: "표준 보안 정책 (일반 기업 수준)", icon: Shield },
+        { value: "enhanced", label: "강화된 보안 정책 (접속 승인, 로그 필수)", icon: Lock },
+        { value: "highest", label: "최고 수준 보안 (금융/공공/국가기관)", icon: ShieldCheck },
       ],
       key: "security" as const,
     },
     {
-      question: "데이터/로그 저장 위치 정책은?",
+      question: "도입 시 가장 중요한 기준은 무엇인가요?",
       options: [
-        { value: "cloud", label: "클라우드 저장 가능", icon: Cloud },
-        { value: "internal", label: "내부 저장만 허용", icon: Server },
+        { value: "speed", label: "빠른 도입과 간편한 운영", icon: Zap },
+        { value: "control", label: "보안·운영 통제와 내부 정책 준수", icon: Settings },
       ],
-      key: "dataLocation" as const,
+      key: "priority" as const,
     },
     {
-      question: "운영 규모는 어느 정도인가요?",
+      question: "원격지원 시스템을 어떻게 운영하고 싶으신가요?",
       options: [
-        { value: "small", label: "소규모 (상담원 10명 이하)", icon: Users },
-        { value: "medium", label: "중규모 (10~50명)", icon: Users },
-        { value: "large", label: "대규모 (50명 이상)", icon: Building2 },
+        { value: "no_server", label: "별도 서버 없이 바로 사용하고 싶다", icon: Cloud },
+        { value: "own_server", label: "우리 회사 서버에 직접 설치·운영하고 싶다", icon: Server },
       ],
-      key: "scale" as const,
+      key: "infrastructure" as const,
     },
     {
-      question: "기존 시스템 연동이 필요한가요?",
+      question: "라이선스 사용 방식은 어떤 형태를 선호하시나요?",
       options: [
-        { value: true, label: "예 (헬프데스크/SSO/SDK 연동)", icon: Code },
-        { value: false, label: "아니오 (독립 운영)", icon: Server },
+        { value: "subscription", label: "필요한 기간만 사용하는 구독형", icon: Clock },
+        { value: "permanent", label: "한 번 구매 후 장기적으로 사용하는 영구형", icon: CreditCard },
       ],
-      key: "integration" as const,
+      key: "license" as const,
     },
   ];
 
   const getRecommendation = () => {
-    const { environment, security, dataLocation, integration } = answers;
+    const { environment, security, priority, infrastructure, license } = answers;
     
-    if (environment === "internal" || dataLocation === "internal" || security === "high") {
+    // 최고 수준 보안 또는 내부망+강화보안 조합 -> 솔루션+보안강화형
+    if (security === "highest" || (environment !== "external" && security === "enhanced")) {
       return {
-        type: "onprem",
-        title: "구축형 (On-Premise)",
-        reason: "망분리/내부 저장 정책/높은 보안 요구사항에 최적화",
-        features: ["내부 인증 연동", "접근통제 정책", "감사 로그 내부 저장"],
+        type: "solution_security",
+        title: "🔐 솔루션 구축 + 내부망 보안 강화형",
+        reason: "내부망 접속 승인 프로세스 필요, 외부 유지보수 시 보안 통제 필수",
+        features: ["DMZ 영역 원격지원 서버", "내부 승인 후 세션 연결", "제어권 이양 방식"],
+        cta1: { label: "보안 아키텍처 상담", action: "modal" },
+        cta2: { label: "공공/금융 도입 사례 보기", href: "/solution/cases" },
       };
     }
     
-    if (integration) {
+    // 내부망 포함 또는 강화보안 또는 자체서버 또는 영구라이선스 -> 솔루션 구축형
+    if (environment === "internal" || environment === "hybrid" || 
+        security === "enhanced" || priority === "control" || 
+        infrastructure === "own_server" || license === "permanent") {
       return {
-        type: "sdk",
-        title: "연동형 (ASP/SDK)",
-        reason: "기존 시스템과의 원활한 통합 및 커스터마이징",
-        features: ["SDK/API 연동", "화이트라벨링", "맞춤 개발 지원"],
+        type: "solution",
+        title: "🛡️ 솔루션 구축 방식 (On-premise)",
+        reason: "내부망/망분리 환경, 강화된 보안 정책 필요, 운영·접속 통제 중요",
+        features: ["고객사 서버에 직접 설치", "영구 라이선스 구매", "내부망·외부망 통합 지원"],
+        cta1: { label: "구축형 도입 상담 요청", action: "modal" },
+        cta2: { label: "보안 시나리오 보기", href: "/security/patents" },
       };
     }
     
+    // 기본값 -> SaaS
     return {
       type: "saas",
-      title: "SaaS (구독형)",
-      reason: "빠른 도입과 낮은 운영 부담으로 즉시 시작 가능",
-      features: ["즉시 도입", "자동 업데이트", "운영 부담 최소화"],
+      title: "✅ SaaS(ASP) 서비스 방식",
+      reason: "외부망 중심 환경, 빠른 도입과 낮은 초기 비용, 서버 구축 없이 즉시 사용 가능",
+      features: ["코이노 IDC 인프라 사용", "상담원 ID 기준 구독형", "자동 업데이트 / 유지보수 무상"],
+      cta1: { label: "무료 체험 신청", action: "modal" },
+      cta2: { label: "SaaS 방식 자세히 보기", href: "/pricing" },
     };
   };
 
@@ -258,12 +276,12 @@ export default function PricingComparison() {
       <section id="quiz-section" className="py-24 bg-slate-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary font-bold mb-4 text-[16px]">1분 완성</div>
             <h2 className="text-2xl md:text-4xl font-bold mb-4 text-slate-900">
               도입 방식 진단
             </h2>
             <p className="text-[#666] text-lg max-w-2xl mx-auto font-normal">
-              5가지 질문으로 우리 조직에 맞는 최적의 도입 방식을 찾아보세요.
+              5가지 질문으로 우리 조직에 맞는<br />
+              <strong className="text-primary">애니서포트 최적 도입 방식(서비스형 / 솔루션형)</strong>을 안내합니다.
             </p>
           </div>
 
@@ -322,45 +340,68 @@ export default function PricingComparison() {
                   </h3>
                 </div>
 
-                <div className="bg-gradient-to-br from-primary to-primary/80 rounded-2xl p-6 md:p-8 text-white mb-6">
-                  <div className="text-primary-foreground/70 font-medium mb-2 text-[14px] sm:text-[16px] lg:text-[18px]">
+                <div className={cn(
+                  "rounded-2xl p-6 md:p-8 text-white mb-6",
+                  getRecommendation().type === "saas" && "bg-gradient-to-br from-blue-500 to-blue-600",
+                  getRecommendation().type === "solution" && "bg-gradient-to-br from-slate-700 to-slate-800",
+                  getRecommendation().type === "solution_security" && "bg-gradient-to-br from-red-600 to-red-700"
+                )}>
+                  <div className="text-white/70 font-medium mb-2 text-[14px] sm:text-[16px] lg:text-[18px]">
                     추천 도입 방식
                   </div>
                   <h4 className="text-2xl md:text-3xl font-black mb-4">
                     {getRecommendation().title}
                   </h4>
-                  <p className="text-white/80 mb-6 text-[14px] sm:text-[16px] lg:text-[18px]">
-                    {getRecommendation().reason}
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    {getRecommendation().features.map((feature, i) => (
-                      <span
-                        key={i}
-                        className="px-3 py-1 bg-white/20 rounded-full font-medium text-[14px] sm:text-[16px] lg:text-[18px]"
-                      >
-                        {feature}
-                      </span>
-                    ))}
+                  
+                  <div className="bg-white/10 rounded-xl p-4 mb-4">
+                    <div className="text-white/70 font-medium mb-1 text-sm">이유</div>
+                    <p className="text-white text-[14px] sm:text-[16px] lg:text-[18px]">
+                      {getRecommendation().reason}
+                    </p>
+                  </div>
+
+                  <div className="mb-4">
+                    <div className="text-white/70 font-medium mb-2 text-sm">특징 요약</div>
+                    <div className="flex flex-wrap gap-2">
+                      {getRecommendation().features.map((feature, i) => (
+                        <span
+                          key={i}
+                          className="px-3 py-1.5 bg-white/20 rounded-full font-medium text-[14px] sm:text-[16px]"
+                        >
+                          {feature}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
 
-                <div className="flex flex-col sm:flex-row gap-4">
+                <div className="flex flex-col sm:flex-row gap-4 mb-4">
                   <Button
                     size="lg"
                     onClick={openModal}
                     className="flex-1 h-12 font-bold text-[14px] sm:text-[16px] lg:text-[18px]"
                   >
-                    상담 요청하기
+                    {getRecommendation().cta1.label}
                   </Button>
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    onClick={resetQuiz}
-                    className="flex-1 h-12 font-bold text-[14px] sm:text-[16px] lg:text-[18px] text-[#333]"
-                  >
-                    다시 진단하기
-                  </Button>
+                  <Link href={getRecommendation().cta2.href} className="flex-1">
+                    <Button
+                      size="lg"
+                      variant="outline"
+                      className="w-full h-12 font-bold text-[14px] sm:text-[16px] lg:text-[18px] text-[#333]"
+                    >
+                      {getRecommendation().cta2.label}
+                    </Button>
+                  </Link>
                 </div>
+
+                <Button
+                  size="lg"
+                  variant="ghost"
+                  onClick={resetQuiz}
+                  className="w-full h-10 font-medium text-[14px] sm:text-[16px] text-slate-500 hover:text-slate-700"
+                >
+                  다시 진단하기
+                </Button>
               </div>
             )}
           </div>
