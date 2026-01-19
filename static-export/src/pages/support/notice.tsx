@@ -1,0 +1,414 @@
+import { useState } from "react";
+import { FolderOpen, FileText, ChevronDown, ChevronUp, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
+
+interface NoticeItem {
+  title: string;
+  date?: string;
+  modalContent?: string;
+  modalImage?: string;
+  modalImageLink?: string;
+}
+
+interface NoticeCategory {
+  title: string;
+  count: number;
+  items: NoticeItem[];
+}
+
+const termsContent = `[애니서포트 서비스 약관]
+
+제1조 (목적)
+
+본 약관은 주식회사 코이노(이하 "회사"라 한다)가 운영하는 웹사이트(이하 "사이트"라 한다)에서 제공하는 인터넷 관련 서비스(이하 "애니서포트"라 한다)를 이용함에 있어 회사와 이용자간 이용조건 및 절차와 권리•의무 및 책임 사항을 규정함을 목적으로 합니다.
+
+제2조 (정의)
+
+1) "회원"이라 함은 회사가 운영하는 사이트에 접속하여 이 약관에 동의하고 아이디 및 비밀번호를 발급받아 회원등록을 하며 회사의 정보를 제공받고 서비스를 지속적으로 이용할 수 있는 자를 말하며 회사가 정한 회원의 구분에 따라 유료회원과 일반회원으로 구분됩니다.
+
+2) "서비스"란 회사의 사이트를 통하여 데스크톱, 모바일단말기기 등 유무선기기와 인터넷을 통해 접속하는 회원 또는 이용자에게 원격지원, 원격상담, 원격제어 등 원격 관련 비대면 서비스를 이용할 수 있도록 무료 또는 유료로 제공하는 행위 또는 그 행위의 대상인 유•무형의 제품 자체를 의미합니다.
+
+3) "이용계약"이라 함은 회사 서비스와 관련하여 회사와 회원간 체결하는 계약을 말합니다.
+
+4) "유료회원"이라 함은 회사에 유료서비스 가입신청서를 제출하고 이를 회사가 승인하여 이용요금의 납부의무를 가진 법인 또는 개인을 의미합니다.
+
+5) "일반회원"이라 함은 회사가 운영하는 사이트의 이용약관에 동의하고 '이용신청 및 승인' 절차에 의하여 회원으로 등록된 자를 의미합니다.
+
+6) "아이디"라 함은 회원식별과 서비스 이용을 위해 회원이 선정하고 회사가 승인하는 식별주체로 문자와 숫자의 조합 또는 회원의 이메일 주소를 의미합니다.
+
+7) "비밀번호(Password)"라 함은 회원이 부여받은 아이디에 대해 회원이 네트워크상에서 본인의 비밀보호를 위해 설정한 문자와 숫자 및 특수문자의 조합을 의미합니다.
+
+8) "계약해지"라 함은 회사 또는 회원(회원신청상태 포함)이 서비스 개통 후 서비스에 대한 이용계약을 해지하는 것을 말합니다.
+
+9) "계약취소"라 함은 회사 또는 서비스신청자가 서비스 개통 전 이용계약을 해지하는 것을 말합니다.
+
+10) "개통일"이라 함은 신청자가 서비스를 신청한 후 회사가 서비스를 이용할 수 있도록 승인 절차와 개통처리를 완료한 일자를 의미합니다.
+
+11) "해지일/취소일"은 회사 또는 신청자가 이미 신청한 서비스의 이용(및 이용 전) 종료를 요청하여 회사가 검토하여 종료키로 한 날짜를 의미합니다.
+
+12) "불법통신"은 국가기밀 침해, 청소년 보호법상 청소년 유해 매체물, 음란한 내용, 불법복제 등 지적재산권 침해, 비방 및 허위사실에 의한 타인 명예훼손 등이 포함된 통신구현형태를 의미합니다.
+
+13) "게시물"은 서비스를 이용할 때 회원이 여러 유형의 단말기기(데스크톱, 모바일기기, TV등 유무선기기 포함)를 통해 회사 사이트에 게시한 부호, 문자, 음성, 음향, 화상, 동영상 등의 정보를 전달하는 문장, 이미지, 동영상 등의 각종 파일과 그 링크를 말합니다.
+
+14) "결제대행업자"는 회원에게 결제수단을 선택하게 하려고 회사가 지정한 전자지불 서비스를 대행하는 업체를 말합니다.
+
+제3조 (약관의 효력과 개정)
+
+1) 회사는 서비스의 효율적인 제공을 위하여 본 약관을 수정 또는 변경할 수 있으며 변경된 약관은 회사의 사이트 홈페이지(https://www.anysupport.net)에 공지합니다.
+
+2) 약관에 동의하고 회원가입을 한 회원의 경우 약관 동의 시점부터 동의한 약관의 적용을 받되 약관의 변경이 있을 경우 변경의 효력이 발생한 시점부터 변경된 약관의 적용을 받습니다. 변경된 약관은 공시 또는 고지한 적용일로부터 효력을 발생합니다.
+
+3) 회사는 필요하다고 인정되는 경우 약관을 변경할 수 있습니다. 약관이 변경되는 경우 변경된 약관의 내용과 적용일을 정해 그 적용일로부터 7일전까지 홈페이지에 공지하거나 회원의 이메일로 전송하는 방법으로 고지합니다. 단, 변경내용이 회원에게 불리하거나 중대사항 변경에 해당할 경우 30일 전에 고지합니다.
+
+4) 회원이 본 약관의 변경에 동의하지 않을 경우 이용을 중단하고 이용계약 해지 및 회원탈퇴할 수 있습니다. 약관시행일까지 회원탈퇴를 하지 않은 경우 개정약관에 동의한 것으로 간주합니다.
+
+5) 본 약관에 명시되지 않는 사항에 대해 '전자상거래 등에서의 소비자보호에 관한 법률', '정보통신망이용촉진 및 정보보호 등에 관한 법률', 등 관계법령 및 회사 개별 서비스별 별도의 이용약관 및 규정이 있는 경우에 이를 따르도록 합니다.
+
+제4조 (서비스의 제공 및 계약의 성립)
+
+1) 회사가 제공하는 서비스 이용을 원하는 신청자가 본 약관에 동의를 한 후 회사가 제시하는 양식과 절차에 따라 신청한 내용에 대해 회사가 아이디 개통 후 사용허가를 함으로 회사와 신청자간 이용계약이 성립됩니다.
+
+2) 신청자가 이용약관을 동의한다는 의사표시는 서비스를 이용하고자 하는 대상이 이용신청시 약관에 대한 동의 체크를 하여 완료됩니다. 오프라인 이용신청의 경우 신청자의 가입신청서 및 관련서류 제출을 수반한 회사의 이용신청 기준에 의거 완료됩니다.
+
+3) 계약이 성립된 후 회사는 회원에게 본 약관이 정하는 기준에 의거 회원아이디를 이메일과 같은 온라인 매체를 통해 전달하며 서비스 이용기간 동안 회원아이디의 변경은 원칙적으로 불가합니다.
+
+4) 온라인 및 오프라인 양식에 제출하는 모든 정보는 허구가 없는 실데이터여야 하고 만약 실명 또는 실 정보를 입력하지 않은 회원의 경우 법적인 보호를 받을 수 없습니다.
+
+5) 이용신청을 위한 정보는 홈페이지 회원가입 화면에서 아래와 같은 내용을 정확히 포함하여야 합니다.
+- 아이디(ID), 비밀번호(Password), 회원명(Name), 회사이름(Company), 국적(Nationality), 연락처(Mobile phone, Telephone, Email)
+
+제5조 (서비스의 중단 및 게시물·내용물 삭제)
+
+1) 회사는 아래에 해당 시 서비스 전부 또는 일부를 제한하거나 중지할 수 있습니다.
+- 천재지변, 국가비상사태 등 불가항력적인 사유가 있는 경우
+- 전기통신사업법에 규정된 기간통신사업자가 전기통신서비스를 중지하였을 경우
+- 서비스용 설비 보수, 정기점검 등 공사로 인한 부득이한 경우
+- 정전, 제반 설비 장애나 이용량 폭주 등으로 정상적 서비스 이용에 지장이 있는 경우
+- 기타 회사 업무상 또는 기술상의 이유로 서비스 중지가 필요하다고 판단되는 경우
+
+2) 서비스 중단이 있는 경우에는 회사가 제8조에 기술된 회원에 대한 통지에 정한 방법으로 회원에게 사전 통지합니다.
+
+3) 회사가 통제할 수 없는 사유로 인한 서비스 중단으로 인해 사전 통지가 불가능한 경우에는 사후 이를 홈페이지 또는 개별 서비스 관련 홈페이지에 공지할 수 있습니다.
+
+제6조 (제공 서비스와 이용요금)
+
+1) 회사는 원거리에 있는 고객의 문제점을 원격으로 빠르게 진단하고 모니터링하여 해결해 줄 수 있는 애니서포트 원격지원제어 서비스를 회원에게 제공합니다.
+
+2) 이용요금은 애니서포트 홈페이지 (https://www.anysupport.net) 에 공시합니다.
+
+3) 회사는 상기 서비스 이외 새로운 서비스를 추가로 제공할 수 있으며, 신규 서비스는 본 약관에 의거하여 서비스를 제공합니다.`;
+
+const privacyContent = `[애니서포트 개인정보취급방침]
+
+(주)코이노(이하 '회사')에서 운영하는 모든 서비스는 이용자의 권리보호를 위해 적법하게 개인정보를 처리하고 안전하게 관리하고 있습니다. 회사는 『개인정보보호법』 제30조에 따라 회원의 개인정보 처리에 대한 절차 및 기준을 안내하여 관련업무를 신속하고 원활하게 처리할 수 있도록 고지하며 『개인정보보호법』등 모든 관련법규를 준수하고 있습니다.
+
+서비스 회원 개인정보보호정책은 관련법률 및 지침의 변경과 서비스 사이트(이하 '사이트') 내부 운영규칙이 변경됨에 따라 바뀔 수 있습니다. '사이트'의 회원 개인정보보호정책이 변경될 경우 변경사항은 '사이트'에 게시됩니다.
+
+1. 개인정보의 수집범위
+
+1) 회사는 회원가입 또는 서비스 이용 과정에서 홈페이지 또는 어플리케이션이나 프로그램 등을 통해 서비스 제공을 위하여 필요한 개인정보를 최소한으로 수집하고 있습니다.
+
+2) 이용자에게 서비스 제공을 위해 반드시 필요한 최소한의 정보를 필수항목으로, 그 외 특화된 서비스를 제공하기 위해 추가 수집하는 정보는 선택항목으로 동의를 받고 있으며, 선택항목에 동의하지 않은 경우에도 서비스 이용 제한은 없습니다.
+- 필수항목: 아이디, 이름, 생년월일, 이메일, 휴대폰번호, 회사명, 회사전화번호, 담당자명
+- 선택항목: 회사 홈페이지, 팩스번호, 부서명, 직책
+
+3) 그 외 서비스 페이지 내 이벤트 참여 및 경품 신청 과정에서 추가 개인정보 수집이 발생할 수 있으며 추가로 개인정보를 수집할 경우에는 해당 개인정보 수집 시점에서 이용자에게 '수집하는 개인정보 항목, 개인정보의 수집 및 이용목적, 개인정보의 보관기간'에 대해 안내하고 동의받는 절차를 가집니다.
+
+2. 개인정보 수집에 대한 동의
+
+'사이트'는 이용자가 '사이트'의 개인정보보호방침 또는 이용약관의 내용에 대해 「동의한다」 또는 「동의하지 않는다」를 선택할 수 있는 절차를 마련하여, 「동의한다」를 선택할 경우 개인정보 수집에 대해 동의한 것으로 봅니다.
+
+3. 개인정보의 처리목적
+
+회사는 아래 목적을 위해 개인정보를 처리하며 처리하고 있는 개인정보는 아래 목적 이외의 용도로는 이용되지 않습니다. 이용목적이 변경되는 경우에 「개인정보 보호법」 제18조에 따라 별도의 동의를 받는 등 필요한 조치를 이행할 예정입니다.
+
+가. 서비스 제공 관련 계약 이행
+- 서비스 및 콘텐츠의 제공, 유지 및 관리 보호, 구매 및 요금 결제
+
+나. 이용자 관리
+- 서비스 제공, 개인 식별, 불량사용자의 부정 이용방지와 비인가 사용방지, 분쟁 조정을 위한 기록보존, 기술지원 등 민원처리, 고지사항 전달, 서비스 탈퇴 의사 확인
+
+다. 서비스 개선 요소 파악 자료 활용
+- 서비스 개선 및 신규 서비스 개발, 이용자 경험 및 기능 개선, 신규 서비스/제품 개발 및 특화부분 파악, 접속 빈도 파악 또는 이용자의 서비스 이용에 대한 통계 분석
+
+라. 마케팅 및 광고 활용
+- 인구통계학적 특성에 따른 서비스 제공 및 광고게재, 서비스의 유효성 확인, 이벤트 및 광고성 정보 제공 및 참여기회 제공
+
+4. 개인정보의 제3자 제공 및 처리 위탁
+
+가. 회사는 이용자 개인정보를 개인정보 처리 목적에서 명시한 범위 내에서 처리하며, 이용자의 동의 및 법률의 특별한 규정 등 「개인정보 보호법」 제17조 및 제18조에 해당하는 경우에만 개인정보를 제3자에게 제공하고 그 이외에는 이용자 개인정보를 제3자에게 제공하지 않는 것을 원칙으로 합니다.
+
+나. 회사는 서비스와 관련하여 당사가 직접 취급이 어려운 결제 기능 등 전문업체가 필요한 경우 서비스 이행처리를 위해 개인정보를 위탁하고 있습니다.
+- 서비스 결제(PG) 위탁기관 : 토스페이먼츠(주)
+- 위탁업무 내용 : 구매 및 요금 결제, 금융거래 본인인증 및 금융 서비스
+
+5. 개인정보의 파기
+
+가. 회사는 개인정보 보유기간 경과, 처리목적 달성 등 개인정보가 불필요하게 되었을 때 지체없이 해당 개인정보를 파기합니다.
+
+나. 이용자에게 개인정보 보유기간에 대해 별도 동의를 얻은 경우에는 해당 기간 동안 개인정보를 안전하게 보관합니다. 개인정보 보유기간에 대해 개인정보 수집 시 동의를 얻은 경우 보관기한은 아래와 같습니다.
+- 여러 형태의 온라인 문의 창구로 수집된 개인정보 : 수집시점으로 1년 보관
+- 데모가입 및 무료체험 시 수집된 개인정보 : 수집시점으로 1년 보관
+- 서비스 이용기록 : 수집시점으로 1년 보관
+- 환불요청시 수집된 개인정보 : 환불처리 완료 후 지체없이 파기
+
+다. 동의된 개인정보 보유기간이 경과하거나 처리목적이 달성되었음에도 불구하고 다른 법령에 따라 개인정보를 계속 보존하여야 하는 경우에는, 해당 개인정보를 별도의 데이터베이스로 옮기거나 보관장소를 달리하여 보존합니다.
+
+6. 이용자 (법정 대리인 포함) 권리 의무 및 행사
+
+가. 서비스 이용자는 회사의 개인정보관리책임자에게 서면 및 이메일로 연락하여 개인정보의 열람·수정·탈퇴 등 권리를 행사할 수 있습니다.
+
+나. 이용자가 개인정보 오류에 대한 정정을 요청한 경우에는 정정을 완료하기 전까지 당해 개인정보를 이용하거나 제공하지 않는 것을 원칙으로 합니다.
+
+다. 회사는 이용자 요청에 의해 해지 또는 삭제된 개인정보는 개인정보 처리 및 보유기간에 명시된 바에 따라 처리하고 그 외 용도로 열람 또는 이용할 수 없게 처리하고 있습니다.
+
+7. 개인정보의 보안성 확보조치
+
+회사는 이용자의 개인정보를 처리함에 있어 개인정보가 분실, 도난, 유출, 변조 또는 훼손되지 않는 안전성 확보를 위하여 기술적인 부분과 관리적인 부분에서 아래와 같이 대비하고 있습니다.
+
+가. 해킹 대응 : 회사는 해킹이나 컴퓨터 바이러스 등에 의해 회원 개인정보가 유출되거나 훼손되는 것을 막기 위해 노력하고 있습니다. 주기적인 자료백업과 최신 백신프로그램을 이용하여 이용자들의 개인정보나 자료가 유출되거나 손상되지 않도록 방지하고 있으며, 암호화 기술을 활용하여 네트워크상에서 개인정보를 안전하게 전송할 수 있도록 하고 있습니다.
+
+나. 개인정보 처리 내부규칙 준수 : 회사의 개인정보관련 처리 직원은 담당자에게 한정시키며 별도의 비밀번호 및 정기적 갱신과 담당자 수시 교육을 통하여 개인정보 처리방침의 준수를 하기 위해 노력하고 있습니다.
+
+다. 개인정보보호교육 및 의식 고취 : 입사 시 전 직원의 보안서약서를 통하여 인력에 의한 정보유출을 사전에 방지하고 사내 개인정보보호교육 등을 통해 개인정보 처리방침의 이행사항 및 담당자의 준수여부를 확인하여 문제가 발견될 경우 즉시 수정하고 바로 잡을 수 있도록 하고 있습니다.
+
+8. 개인정보 자동 수집 장치 운영 및 거부 관련
+
+회사는 이용자에게 개별적인 맞춤 서비스를 제공하기 위해 이용정보를 저장하고 수시로 불러오는 '쿠키(cookie)'를 사용합니다.
+
+9. 개인정보 보호책임자
+
+회사는 개인정보 처리에 관한 업무를 총괄해서 책임지고, 개인정보 처리와 관련한 이용자의 불만처리 및 피해구제 등을 위하여 아래와 같이 개인정보 보호책임자를 지정하고 있습니다.
+
+개인정보 보호책임자
+- 성명: 김정훈
+- 직책: 이사
+- 연락처: 02-839-7500, Anysupport@koino.net`;
+
+const noticeCategories: NoticeCategory[] = [
+  {
+    title: "이용약관",
+    count: 1,
+    items: [
+      { title: "애니서포트 서비스 이용약관", modalContent: termsContent },
+    ],
+  },
+  {
+    title: "개인정보취급방침",
+    count: 1,
+    items: [
+      { title: "애니서포트 개인정보취급방침", modalContent: privacyContent },
+    ],
+  },
+  {
+    title: "시스템점검",
+    count: 2,
+    items: [
+      { title: "[시스템점검] 서버 증설 공지", date: "2024/03/15", modalContent: `안녕하세요, 애니서포트 관리자입니다.
+
+보다 안정적인 서비스를 제공하기 위해 서버 증설을 실시할 예정입니다.
+작업시간 내에는 서비스 이용이 원활하지 않을 수 있습니다.
+
+---------------------------------------------------------------------------
+- 내 용 : 서버 증설 및 분산을 위한 테스트 등
+- 일 시 : 2023년 5월 31일(수요일)
+- 시 간 : 오후 11:00 ~ 12:00
+
+* 서버이전이 되면 IP정보가 변경됩니다.
+- 원활한 시스템 사용을 위해 새롭게 증설된 서버 IP주소에 대한 방화벽 오픈이 추가적으로 필요합니다.
+- 서버 IP : 54.180.223.59
+- 서버 Port : 80, 443 (각 서버IP에 대하여 오픈)
+- 방화벽 정보 : https://anysupport.net/download/doc/kr/AnySupport_firewall.pdf
+
+문의사항은 대표번호(02-839-7500)로 연락 부탁드립니다.
+---------------------------------------------------------------------------
+
+감사합니다.` },
+      { title: "[시스템점검]서버 증설 공지(신규 방화벽 정보 포함)", date: "2024/01/22" },
+    ],
+  },
+  {
+    title: "이벤트",
+    count: 4,
+    items: [
+      { title: "2022년12월 프로모션 특가 이벤트!!!", date: "2022/12/01" },
+      { title: "코이노 마곡 신사옥 입주 감사 이벤트_20210901", date: "2021/09/01" },
+      { title: "2024년 구정이벤트_선물을 쏩니다", date: "2024/02/05" },
+      { title: "2024년 코이노 공식파트너 모집 설명회 개최", date: "2024/05/20" },
+    ],
+  },
+  {
+    title: "바우처 사업",
+    count: 1,
+    items: [
+      { 
+        title: "코이노, 2024년 클라우드서비스 바우처 공급기업 선정", 
+        date: "2024/04/10",
+        modalImage: "/attached_assets/0v9OyY_snR3S0Hg35wAM6xRJEOYhIzX9ZA_1768203636437.png",
+        modalImageLink: "https://docs.google.com/forms/d/16_mcDh2SKhMm_cWKmXlmQJbK1mDA61X8shyq1Vi0oUs/viewform?edit_requested=true",
+        modalContent: `코이노가 3년 연속으로 '클라우드서비스 바우처 공급기업'으로 선정 됐다.
+
+이 사업은 과학기술정보통신부와 정보통신산업진흥원이 주관하는 바우처 사업으로
+국내 클라우드 시장의 활성화와 중소기업의 경쟁력 강화를 목적으로 하는 사업으로 이번에 코이노가 공급기업으로 선정됨에 따라 중소기업에 
+'애니서포트', '피씨애니프로', '링크미마인'을 제공할 수 있다.
+
+2023년도에는 '애니서포트'와 '피씨애니프로'를 도입한 '이디비 주식회사가' 클라우드서비스 우수도입 기업으로 선정되어 우수사례집에 실리기도 하였다.
+
+수요기업으로 선정된 중소기업은 일반지원은 최대 1,550만원, 집중지원은 5,000만원까지 지원되며 정부 지원금액은
+80%까지 지원이 되어 수요기업(중소기업)은 20%만 부담하여 코이노 제품을 도입할 수 있다.
+
+수요기업(중소기업)모집은 4월5일까지 이며 코이노에서는 수요기업 지원기업에 대한 상담을 받고 있습니다.
+
+[상담신청 바로가기]
+
+1. 애니서포트 홈페이지 배너에서 상담신청
+
+2. 상담신청 바로가기` 
+      },
+    ],
+  },
+  {
+    title: "고객센터공지",
+    count: 2,
+    items: [
+      { title: "[공지]애니서포트 고객센터 6월 업무일 안내(2024.06.07)", date: "2024/06/07" },
+      { title: "[공지]애니서포트 고객센터 8월 업무일 안내(2024.08.16)", date: "2024/08/16" },
+    ],
+  },
+];
+
+export default function Notice() {
+  const [openCategories, setOpenCategories] = useState<number[]>([0, 1, 2, 3, 4, 5]);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalTitle, setModalTitle] = useState("");
+  const [modalContent, setModalContent] = useState("");
+  const [modalImage, setModalImage] = useState("");
+  const [modalImageLink, setModalImageLink] = useState("");
+
+  const toggleCategory = (index: number) => {
+    setOpenCategories(prev => 
+      prev.includes(index) 
+        ? prev.filter(i => i !== index)
+        : [...prev, index]
+    );
+  };
+
+  const openModalWithContent = (title: string, content: string, image?: string, imageLink?: string) => {
+    setModalTitle(title);
+    setModalContent(content);
+    setModalImage(image || "");
+    setModalImageLink(imageLink || "");
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+    setModalTitle("");
+    setModalContent("");
+    setModalImage("");
+    setModalImageLink("");
+  };
+
+  return (
+    <div className="flex flex-col min-h-screen bg-slate-50/50">
+      <section className="relative pt-40 pb-16 overflow-hidden bg-slate-900 text-white text-center">
+        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
+          <h1 className="text-[40px] font-bold mb-4">공지사항</h1>
+          <p className="text-[14px] sm:text-[16px] lg:text-[18px] text-white/80">
+            애니서포트의 새로운 소식과 공지를 확인하세요
+          </p>
+        </div>
+      </section>
+      <section className="py-16">
+        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+            {noticeCategories.map((category, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-2xl border border-slate-200 overflow-hidden"
+              >
+                <button
+                  onClick={() => toggleCategory(index)}
+                  className="w-full p-5 flex items-center justify-between text-[14px] sm:text-[16px] lg:text-[18px] font-light bg-[#f2f2f2] text-[#0f172b]"
+                >
+                  <div className="flex items-center gap-3">
+                    <FolderOpen size={22} className="text-[#666]" />
+                    <span className="text-[14px] sm:text-[16px] lg:text-[18px] font-medium text-[#333]">
+                      {category.title} ({category.count})
+                    </span>
+                  </div>
+                  {openCategories.includes(index) ? (
+                    <ChevronUp size={22} className="text-[#666]" />
+                  ) : (
+                    <ChevronDown size={22} className="text-[#666]" />
+                  )}
+                </button>
+                {openCategories.includes(index) && (
+                  <div className="p-5 space-y-3">
+                    {category.items.map((item, itemIndex) => (
+                      <div
+                        key={itemIndex}
+                        onClick={() => item.modalContent && openModalWithContent(item.title, item.modalContent, item.modalImage, item.modalImageLink)}
+                        className="flex items-start gap-3 text-[#0066b3] hover:text-primary cursor-pointer"
+                      >
+                        <FileText size={16} className="shrink-0 mt-0.5 text-[#666]" />
+                        <span className="text-[15px] flex-1 text-[#666]">{item.title}</span>
+                        {item.date && (
+                          <span className="text-[13px] text-[#999] shrink-0">{item.date}</span>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {modalOpen && (
+        <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
+          <div className="bg-white rounded-2xl max-w-3xl w-full max-h-[80vh] flex flex-col">
+            <div className="flex items-center justify-between p-6 border-b border-slate-200">
+              <h2 className="text-xl font-bold text-[#333]">{modalTitle}</h2>
+              <button
+                onClick={closeModal}
+                className="p-2 hover:bg-slate-100 rounded-full transition-colors"
+              >
+                <X size={24} className="text-[#666]" />
+              </button>
+            </div>
+            <div className="p-6 overflow-y-auto flex-1">
+              {modalImage && (
+                <div className="mb-6">
+                  {modalImageLink ? (
+                    <a href={modalImageLink} target="_blank" rel="noopener noreferrer">
+                      <img 
+                        src={modalImage} 
+                        alt={modalTitle}
+                        className="w-full rounded-lg cursor-pointer hover:opacity-90 transition-opacity"
+                      />
+                    </a>
+                  ) : (
+                    <img 
+                      src={modalImage} 
+                      alt={modalTitle}
+                      className="w-full rounded-lg"
+                    />
+                  )}
+                </div>
+              )}
+              <pre className="whitespace-pre-wrap text-[14px] text-[#333] font-sans leading-relaxed">
+                {modalContent}
+              </pre>
+            </div>
+            <div className="p-6 border-t border-slate-200 flex justify-end">
+              <Button onClick={closeModal} variant="outline">
+                닫기
+              </Button>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}

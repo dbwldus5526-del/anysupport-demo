@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 172 62">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#_무제_그라디언트_21);
+        fill-rule: evenodd;
+      }
+    </style>
+    <linearGradient id="_무제_그라디언트_21" data-name="무제 그라디언트 21" x1="-121.13" y1="1139.85" x2="-120.12" y2="1139.66" gradientTransform="translate(6833.13 27385.59) scale(55.92 -24)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ff5a2e"/>
+      <stop offset=".52" stop-color="#ff0038"/>
+      <stop offset="1" stop-color="#ff00ef"/>
+    </linearGradient>
+  </defs>
+  <path class="cls-1" d="M66.03,19.19l-6.58,5.15v2.88h2.89l3.2-2.49v18.21l.48.47h3.1l.47-.47v-23.27l-.47-.47h-3.08ZM103.74,19.19h-13.39l-.48.48v3.1l.48.47h11.72l8.08,8.06-8.09,8.07h-18.27v-19.7l-.48-.47h-3.08l-6.58,5.15v2.88h2.89l3.2-2.49v18.21l.47.47h0s23.53,0,23.53,0l12.14-12.11-12.14-12.11h0Z"/>
+</svg>
